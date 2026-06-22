@@ -1,0 +1,45 @@
+name: Daily AI Term Crawler
+
+on:
+  schedule:
+    # 每天 UTC 1:00 运行（北京时间 9:00）
+    - cron: '0 1 * * *'
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Copy glossary data for dedup
+        run: |
+          # 复制 glossary.json 供爬虫去重
+          if [ -f "ai-glossary/data/glossary.json" ]; then
+            mkdir -p ai-glossary/crawler/data
+            cp ai-glossary/data/glossary.json ai-glossary/crawler/data/glossary.json
+          fi
+          # 复制 hot-terms.json 供热度累加
+          if [ -f "ai-glossary/data/hot-terms.json" ]; then
+            cp ai-glossary/data/hot-terms.json ai-glossary/crawler/data/hot-terms.json
+          fi
+
+      - name: Run crawler
+        run: node ai-glossary/crawler/crawler.js
+
+      - name: Commit and push results
+        run: |
+          git config user.name "AI Glossary Bot"
+          git config user.email "bot@example.com"
+          git add ai-glossary/crawler/pending-terms.json ai-glossary/crawler/crawl-summary.json ai-glossary/data/hot-terms.json
+          git diff --staged --quiet || git commit -m "🤖 Auto crawl: $(date +%Y-%m-%d)"
+          git push

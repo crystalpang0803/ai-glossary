@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Glossary - 管理后台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+  <style>
+    :root{--color-accent:#6366F1;--color-accent-hover:#4F46E5;--color-surface:#FFF;--color-bg:#F8FAFC;--color-text:#0F172A;--color-text-secondary:#475569;--color-text-muted:#94A3B8;--color-border:#E2E8F0;--color-success:#10B981;--color-danger:#EF4444;--color-hot:#F97316;--radius-md:10px;--radius-lg:14px;--radius-full:9999px;--font-sans:'Inter','Noto Sans SC',sans-serif;--font-mono:'JetBrains Mono',monospace;--sidebar-width:240px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:var(--font-sans);background:var(--color-bg);color:var(--color-text);line-height:1.6}
+    .admin-layout{display:flex;min-height:100vh}
+    .sidebar{width:var(--sidebar-width);background:var(--color-surface);border-right:1px solid var(--color-border);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:100}
+    .sidebar-header{padding:24px 20px 20px;border-bottom:1px solid var(--color-border)}
+    .sidebar-header h1{font-size:1rem;font-weight:700;display:flex;align-items:center;gap:8px}
+    .sidebar-header h1 span{color:var(--color-accent)}
+    .sidebar-header .back-link{display:block;font-size:0.78rem;color:var(--color-text-muted);text-decoration:none;margin-top:8px}
+    .sidebar-header .back-link:hover{color:var(--color-accent)}
+    .sidebar-nav{flex:1;padding:16px 12px}
+    .sidebar-nav .nav-label{font-size:0.7rem;font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.5px;padding:0 8px;margin-bottom:8px}
+    .nav-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);font-size:0.88rem;font-weight:500;color:var(--color-text-secondary);cursor:pointer;transition:all 0.15s ease;border:none;background:none;width:100%;text-align:left;font-family:var(--font-sans)}
+    .nav-item:hover{background:rgba(99,102,241,0.05);color:var(--color-text)}
+    .nav-item.active{background:rgba(99,102,241,0.1);color:var(--color-accent);font-weight:600}
+    .nav-item .nav-icon{font-size:1.1rem;width:22px;text-align:center}
+    .nav-item .nav-badge{margin-left:auto;background:var(--color-accent);color:#fff;font-size:0.7rem;font-weight:700;padding:2px 7px;border-radius:var(--radius-full);min-width:20px;text-align:center}
+    .sidebar-footer{padding:16px 12px;border-top:1px solid var(--color-border)}
+    .sidebar-footer .nav-item{font-size:0.82rem;color:var(--color-text-muted)}
+    .main-content{flex:1;margin-left:var(--sidebar-width);padding:32px 40px}
+    .main-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    .main-header h2{font-size:1.3rem;font-weight:800}
+    .main-header .header-actions{display:flex;gap:10px}
+    .btn{padding:8px 16px;border:none;border-radius:var(--radius-md);font-size:0.85rem;font-weight:600;font-family:var(--font-sans);cursor:pointer;transition:all 0.15s ease;display:inline-flex;align-items:center;gap:6px}
+    .btn-primary{background:var(--color-accent);color:#fff}.btn-primary:hover{background:var(--color-accent-hover)}
+    .btn-outline{background:var(--color-surface);color:var(--color-text-secondary);border:1px solid var(--color-border)}.btn-outline:hover{border-color:var(--color-accent);color:var(--color-accent)}
+    .btn-success{background:var(--color-success);color:#fff}.btn-success:hover{background:#059669}
+    .btn-danger{background:var(--color-danger);color:#fff}.btn-danger:hover{background:#DC2626}
+    .btn-hot{background:var(--color-hot);color:#fff}.btn-hot:hover{background:#EA580C}
+    .btn-sm{padding:5px 10px;font-size:0.78rem}
+    .stats-bar{display:flex;gap:16px;margin-bottom:24px}
+    .stat-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:16px 20px;flex:1}
+    .stat-card .stat-num{font-size:1.6rem;font-weight:800;color:var(--color-accent)}
+    .stat-card .stat-label{font-size:0.78rem;color:var(--color-text-muted);margin-top:2px}
+    .sub-tabs{display:flex;gap:4px;margin-bottom:20px}
+    .sub-tab{padding:7px 14px;font-size:0.82rem;font-weight:500;border:none;background:transparent;color:var(--color-text-muted);cursor:pointer;border-radius:var(--radius-md);font-family:var(--font-sans);transition:all 0.15s ease}
+    .sub-tab:hover{color:var(--color-text);background:rgba(0,0,0,0.03)}
+    .sub-tab.active{background:var(--color-accent);color:#fff}
+    .term-list{display:flex;flex-direction:column;gap:12px}
+    .term-item{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:20px 24px;transition:all 0.15s ease}
+    .term-item:hover{box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    .term-item-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+    .term-item-title{font-size:1rem;font-weight:700}
+    .term-item-meta{font-size:0.82rem;color:var(--color-text-secondary);margin-bottom:6px}
+    .term-item-desc{font-size:0.88rem;color:var(--color-text-muted);line-height:1.7}
+    .term-item-actions{display:flex;gap:6px;flex-shrink:0}
+    .term-item-time{font-size:0.72rem;color:var(--color-text-muted);margin-top:8px}
+    .hot-badge{background:var(--color-hot);color:#fff;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:var(--radius-full);margin-left:8px}
+    .empty-state{text-align:center;padding:60px 20px;color:var(--color-text-muted)}
+    .empty-state h3{font-size:1rem;margin-bottom:6px;color:var(--color-text-secondary)}
+    .empty-state p{font-size:0.88rem}
+    .search-box{width:100%;padding:10px 14px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.88rem;font-family:var(--font-sans);outline:none;margin-bottom:16px;transition:border-color 0.15s ease}
+    .search-box:focus{border-color:var(--color-accent)}
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,0.5);z-index:1000;align-items:center;justify-content:center;padding:24px}
+    .modal-overlay.show{display:flex}
+    .modal-content{background:var(--color-surface);border-radius:var(--radius-lg);max-width:700px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column}
+    .modal-header{padding:20px 24px;border-bottom:1px solid var(--color-border);display:flex;justify-content:space-between;align-items:center}
+    .modal-header h3{font-size:1rem;font-weight:700}
+    .modal-body{padding:20px 24px;overflow-y:auto;flex:1}
+    .detail-modal{display:none;position:fixed;inset:0;background:rgba(15,23,42,0.5);z-index:1000;align-items:center;justify-content:center;padding:24px}
+    .detail-modal.show{display:flex}
+    .detail-content{background:var(--color-surface);border-radius:var(--radius-lg);max-width:680px;width:100%;max-height:85vh;overflow-y:auto;padding:28px;position:relative}
+    .detail-close{position:absolute;top:16px;right:16px}
+    .detail-title{font-size:1.3rem;font-weight:800;margin-bottom:4px}
+    .detail-subtitle{font-size:0.88rem;color:var(--color-text-muted);margin-bottom:20px}
+    .detail-section{margin-bottom:16px}
+    .detail-section label{display:block;font-size:0.75rem;font-weight:600;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+    .detail-section input,.detail-section textarea,.detail-section select{width:100%;padding:9px 12px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.88rem;font-family:var(--font-sans);outline:none;transition:border-color 0.15s ease;background:var(--color-surface);color:var(--color-text)}
+    .detail-section input:focus,.detail-section textarea:focus{border-color:var(--color-accent)}
+    .detail-section textarea{resize:vertical;min-height:60px}
+    .detail-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .detail-actions{margin-top:20px;display:flex;gap:10px;justify-content:flex-end;border-top:1px solid var(--color-border);padding-top:16px}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--color-text);color:#fff;padding:10px 20px;border-radius:var(--radius-full);font-size:0.85rem;font-weight:500;z-index:2000;animation:fadeUp 0.3s ease}
+    @keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+    .loading-state{text-align:center;padding:40px;color:var(--color-text-muted);font-size:0.88rem}
+  </style>
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1><span>◆</span> 管理后台</h1>
+        <a href="index.html" class="back-link">← 返回术语库</a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-label">管理</div>
+        <button class="nav-item active" data-section="glossary">
+          <span class="nav-icon">📚</span> 词库管理
+        </button>
+        <button class="nav-item" data-section="hot">
+          <span class="nav-icon">🔥</span> 热点词汇
+          <span class="nav-badge" id="hotBadge" style="display:none;">0</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="nav-item" id="exportBtn">
+          <span class="nav-icon">💾</span> 备份导出
+        </button>
+      </div>
+    </aside>
+    <div class="main-content">
+      <!-- 词库管理 -->
+      <div id="sectionGlossary">
+        <div class="main-header">
+          <h2>词库管理</h2>
+          <div class="header-actions">
+            <button class="btn btn-outline" id="importBtn">📥 导入Excel</button>
+            <button class="btn btn-primary" id="addNewBtn">+ 添加术语</button>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card"><div class="stat-num" id="statTotal">-</div><div class="stat-label">术语总数</div></div>
+          <div class="stat-card"><div class="stat-num" id="statHot">-</div><div class="stat-label">热点词汇</div></div>
+        </div>
+        <input type="text" class="search-box" id="glossarySearchInput" placeholder="搜索术语（英文、中文、缩写）...">
+        <div class="term-list" id="glossaryList"><div class="loading-state">正在加载...</div></div>
+      </div>
+      <!-- 热点词汇 -->
+      <div id="sectionHot" style="display:none;">
+        <div class="main-header">
+          <h2>热点词汇管理</h2>
+          <div class="header-actions">
+            <button class="btn btn-hot" id="autoPromoteBtn">⚡ 自动沉淀</button>
+          </div>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card"><div class="stat-num" id="statHotTotal">-</div><div class="stat-label">热点词汇总数</div></div>
+          <div class="stat-card"><div class="stat-num" id="statHotReady">-</div><div class="stat-label">可沉淀</div></div>
+        </div>
+        <div class="sub-tabs">
+          <button class="sub-tab active" data-subtab="all">全部</button>
+          <button class="sub-tab" data-subtab="ready">可沉淀</button>
+        </div>
+        <input type="text" class="search-box" id="hotSearchInput" placeholder="搜索热点词汇...">
+        <div class="term-list" id="hotList"><div class="loading-state">正在加载...</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Modal -->
+  <div class="modal-overlay" id="exportModal">
+    <div class="modal-content" style="max-width:420px;">
+      <div class="modal-header"><h3>备份导出</h3><button class="btn btn-sm btn-outline" id="exportClose">关闭</button></div>
+      <div class="modal-body" style="text-align:center;padding:32px 24px;">
+        <p style="font-size:0.88rem;color:var(--color-text-secondary);margin-bottom:24px;">选择导出格式</p>
+        <div style="display:flex;gap:16px;justify-content:center;">
+          <button class="btn btn-primary" onclick="exportAsExcel()" style="padding:14px 28px;">📊 导出 Excel</button>
+          <button class="btn btn-outline" onclick="exportAsPDF()" style="padding:14px 28px;">📄 导出 PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail/Edit Modal -->
+  <div class="detail-modal" id="detailModal">
+    <div class="detail-content">
+      <button class="btn btn-sm btn-outline detail-close" id="detailClose">关闭</button>
+      <div class="detail-title" id="detailTitle"></div>
+      <div class="detail-subtitle" id="detailSubtitle"></div>
+      <div class="detail-row">
+        <div class="detail-section"><label>英文术语</label><input type="text" id="detailTermEn"></div>
+        <div class="detail-section"><label>中文翻译</label><input type="text" id="detailTermZh"></div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section"><label>缩写</label><input type="text" id="detailAbbr"></div>
+        <div class="detail-section"><label>分类</label><select id="detailCategory"><option value="AI概念">AI概念</option><option value="AI技术">AI技术</option><option value="AI应用">AI应用</option><option value="AI安全">AI安全</option><option value="数据与训练">数据与训练</option><option value="AI工程">AI工程</option></select></div>
+      </div>
+      <div class="detail-section"><label>一句话描述</label><input type="text" id="detailOneliner"></div>
+      <div class="detail-section"><label>详细定义</label><textarea id="detailDefinition" rows="3"></textarea></div>
+      <div class="detail-section"><label>通俗解读</label><textarea id="detailExplanation" rows="3"></textarea></div>
+      <div class="detail-row">
+        <div class="detail-section"><label>来源</label><input type="text" id="detailSource"></div>
+        <div class="detail-section"><label>来源链接</label><input type="text" id="detailSourceUrl"></div>
+      </div>
+      <div class="detail-section"><label>关联术语（逗号分隔）</label><input type="text" id="detailRelated"></div>
+      <div class="detail-actions">
+        <button class="btn btn-outline" id="detailCancelBtn">取消</button>
+        <button class="btn btn-primary" id="detailSaveBtn">保存修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Term Modal -->
+  <div class="detail-modal" id="addModal">
+    <div class="detail-content">
+      <button class="btn btn-sm btn-outline detail-close" id="addModalClose">关闭</button>
+      <div class="detail-title">添加术语</div>
+      <div class="detail-subtitle">填写以下信息，直接添加到正式词库</div>
+      <div class="detail-row">
+        <div class="detail-section"><label>英文术语 *</label><input type="text" id="addTermEn" placeholder="如: Retrieval-Augmented Generation"></div>
+        <div class="detail-section"><label>中文翻译 *</label><input type="text" id="addTermZh" placeholder="如: 检索增强生成"></div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section"><label>缩写</label><input type="text" id="addTermAbbr" placeholder="如: RAG"></div>
+        <div class="detail-section"><label>分类 *</label><select id="addTermCategory"><option value="AI概念">AI概念</option><option value="AI技术">AI技术</option><option value="AI应用">AI应用</option><option value="AI安全">AI安全</option><option value="数据与训练">数据与训练</option><option value="AI工程">AI工程</option></select></div>
+      </div>
+      <div class="detail-section"><label>一句话描述 *</label><input type="text" id="addTermOneliner" placeholder="用一句话解释"></div>
+      <div class="detail-section"><label>详细定义 *</label><textarea id="addTermDef" rows="3" placeholder="完整的术语定义..."></textarea></div>
+      <div class="detail-section"><label>通俗解读 *</label><textarea id="addTermExplanation" rows="3" placeholder="日常例子来解释..."></textarea></div>
+      <div class="detail-row">
+        <div class="detail-section"><label>来源名称</label><input type="text" id="addTermSourceName" placeholder="如: Stanford HAI"></div>
+        <div class="detail-section"><label>来源链接</label><input type="text" id="addTermSourceUrl" placeholder="https://..."></div>
+      </div>
+      <div class="detail-section"><label>关联术语ID（逗号分隔）</label><input type="text" id="addTermRelated" placeholder="如: machine-learning"></div>
+      <div class="detail-actions">
+        <button class="btn btn-outline" id="addCancelBtn">取消</button>
+        <button class="btn btn-primary" id="addConfirmBtn">添加到术语库</button>
+      </div>
+    </div>
+  </div>
+
+  <input type="file" id="importFileInput" accept=".xlsx,.xls" style="display:none;">
+
+  <script>
+    // ===== API Helpers =====
+    const API = '/api';
+    async function apiGet(path) {
+      try { const r = await fetch(API + path); if (!r.ok) throw new Error(r.statusText); return await r.json(); }
+      catch (e) { console.error('GET', path, e); return null; }
+    }
+    async function apiPost(path, body) {
+      try { const r = await fetch(API + path, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) }); if (!r.ok) throw new Error(r.statusText); return await r.json(); }
+      catch (e) { console.error('POST', path, e); showToast('操作失败: ' + e.message); return null; }
+    }
+    async function apiPut(path, body) {
+      try { const r = await fetch(API + path, { method: 'PUT', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body) }); if (!r.ok) throw new Error(r.statusText); return await r.json(); }
+      catch (e) { console.error('PUT', path, e); showToast('操作失败: ' + e.message); return null; }
+    }
+    async function apiDelete(path) {
+      try { const r = await fetch(API + path, { method: 'DELETE' }); if (!r.ok) throw new Error(r.statusText); return true; }
+      catch (e) { console.error('DELETE', path, e); showToast('操作失败: ' + e.message); return false; }
+    }
+
+    // ===== Data =====
+    let glossaryTerms = [];
+    let hotTerms = [];
+    let currentSection = 'glossary';
+    let currentSubTab = 'all';
+    let glossarySearchQuery = '';
+    let hotSearchQuery = '';
+    let editingTermId = null;
+
+    // ===== Init =====
+    async function loadData() {
+      const [terms, hot] = await Promise.all([
+        apiGet('/terms?status=official'),
+        apiGet('/hot-terms')
+      ]);
+      glossaryTerms = terms || [];
+      hotTerms = hot || [];
+      updateStats();
+      renderGlossaryList();
+      renderHotList();
+    }
+    loadData();
+
+    // ===== Stats =====
+    function updateStats() {
+      document.getElementById('statTotal').textContent = glossaryTerms.length;
+      document.getElementById('statHot').textContent = hotTerms.length;
+      document.getElementById('statHotTotal').textContent = hotTerms.length;
+      const readyCount = hotTerms.filter(t => t.appear_count >= 3).length;
+      document.getElementById('statHotReady').textContent = readyCount;
+      const badge = document.getElementById('hotBadge');
+      if (hotTerms.length > 0) { badge.style.display = 'inline'; badge.textContent = hotTerms.length; }
+      else { badge.style.display = 'none'; }
+    }
+
+    // ===== Render: Glossary List =====
+    function renderGlossaryList() {
+      const list = document.getElementById('glossaryList');
+      let data = glossaryTerms;
+      if (glossarySearchQuery) {
+        const q = glossarySearchQuery.toLowerCase();
+        data = data.filter(t => t.term_en.toLowerCase().includes(q) || t.term_zh.includes(q) || (t.abbreviation && t.abbreviation.toLowerCase().includes(q)));
+      }
+      if (data.length === 0) { list.innerHTML = '<div class="empty-state"><h3>没有匹配的术语</h3><p>尝试其他搜索词</p></div>'; return; }
+      list.innerHTML = '<div style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:12px;">共 ' + data.length + ' 条术语</div>' +
+        data.map(term =>
+          '<div class="term-item"><div class="term-item-header"><div>' +
+          '<div class="term-item-title">' + term.term_en + ' · ' + term.term_zh + '</div>' +
+          '<div class="term-item-meta">' + (term.abbreviation ? term.abbreviation + ' · ' : '') + term.category + ' · 来源: ' + (term.source || '未知') + '</div>' +
+          '</div><div class="term-item-actions">' +
+          '<button class="btn btn-sm btn-outline" onclick="viewGlossaryItem(\'' + term.id + '\')">编辑</button>' +
+          '<button class="btn btn-sm btn-danger" onclick="deleteGlossaryItem(\'' + term.id + '\')">删除</button>' +
+          '</div></div><div class="term-item-desc">' + (term.one_liner || '') + '</div></div>'
+        ).join('');
+    }
+
+    // ===== Render: Hot Terms List =====
+    function renderHotList() {
+      const list = document.getElementById('hotList');
+      let data = hotTerms;
+      if (currentSubTab === 'ready') data = data.filter(t => t.appear_count >= 3);
+      if (hotSearchQuery) {
+        const q = hotSearchQuery.toLowerCase();
+        data = data.filter(t => (t.term_en || '').toLowerCase().includes(q) || (t.term_zh || '').includes(q));
+      }
+      if (data.length === 0) {
+        const label = currentSubTab === 'ready' ? '可沉淀' : '热点';
+        list.innerHTML = '<div class="empty-state"><h3>暂无' + label + '词汇</h3><p>用户提交的新术语会出现在这里</p></div>';
+        return;
+      }
+      list.innerHTML = data.map(term => {
+        const canPromote = term.appear_count >= 3;
+        return '<div class="term-item"><div class="term-item-header"><div>' +
+          '<div class="term-item-title">' + (term.term_en || '') + (term.term_zh ? ' · ' + term.term_zh : '') +
+          '<span class="hot-badge">🔥 ' + term.appear_count + '</span></div>' +
+          '<div class="term-item-meta">' + (term.category || '未分类') + '</div>' +
+          '</div><div class="term-item-actions">' +
+          (canPromote ? '<button class="btn btn-sm btn-success" onclick="promoteHotTerm(\'' + term.id + '\')">沉淀到词库</button>' : '') +
+          '<button class="btn btn-sm btn-danger" onclick="deleteHotTerm(\'' + term.id + '\')">删除</button>' +
+          '</div></div>' +
+          '<div class="term-item-desc">' + (term.one_liner || term.description || term.definition || '') + '</div>' +
+          (term.first_seen ? '<div class="term-item-time">首次: ' + new Date(term.first_seen).toLocaleDateString('zh-CN') + ' · 最近: ' + new Date(term.last_seen).toLocaleDateString('zh-CN') + '</div>' : '') +
+          '</div>';
+      }).join('');
+    }
+
+    // ===== Actions: Glossary =====
+    async function deleteGlossaryItem(id) {
+      if (!confirm('确定要从词库中删除这条术语吗？')) return;
+      const ok = await apiDelete('/terms/' + id);
+      if (ok) { glossaryTerms = glossaryTerms.filter(t => t.id !== id); updateStats(); renderGlossaryList(); showToast('已删除'); }
+    }
+
+    async function viewGlossaryItem(id) {
+      const term = glossaryTerms.find(t => t.id === id);
+      if (!term) return;
+      editingTermId = id;
+      document.getElementById('detailTitle').textContent = term.term_en;
+      document.getElementById('detailSubtitle').textContent = term.term_zh + ' · ' + term.category;
+      document.getElementById('detailTermEn').value = term.term_en;
+      document.getElementById('detailTermZh').value = term.term_zh;
+      document.getElementById('detailAbbr').value = term.abbreviation || '';
+      document.getElementById('detailCategory').value = term.category || 'AI概念';
+      document.getElementById('detailOneliner').value = term.one_liner || '';
+      document.getElementById('detailDefinition').value = term.definition || '';
+      document.getElementById('detailExplanation').value = term.explanation || '';
+      document.getElementById('detailSource').value = term.source || '';
+      document.getElementById('detailSourceUrl').value = term.source_url || '';
+      document.getElementById('detailRelated').value = (term.related || []).join(', ');
+      document.getElementById('detailModal').classList.add('show');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.remove('show');
+      editingTermId = null;
+    }
+    document.getElementById('detailClose').addEventListener('click', closeDetailModal);
+    document.getElementById('detailCancelBtn').addEventListener('click', closeDetailModal);
+    document.getElementById('detailModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeDetailModal(); });
+
+    document.getElementById('detailSaveBtn').addEventListener('click', async () => {
+      if (!editingTermId) return;
+      const updates = {
+        term_en: document.getElementById('detailTermEn').value.trim(),
+        term_zh: document.getElementById('detailTermZh').value.trim(),
+        abbreviation: document.getElementById('detailAbbr').value.trim(),
+        category: document.getElementById('detailCategory').value,
+        one_liner: document.getElementById('detailOneliner').value.trim(),
+        definition: document.getElementById('detailDefinition').value.trim(),
+        explanation: document.getElementById('detailExplanation').value.trim(),
+        source: document.getElementById('detailSource').value.trim(),
+        source_url: document.getElementById('detailSourceUrl').value.trim(),
+        related: document.getElementById('detailRelated').value.trim().split(',').map(s => s.trim()).filter(Boolean)
+      };
+      const result = await apiPut('/terms/' + editingTermId, updates);
+      if (result) {
+        const idx = glossaryTerms.findIndex(t => t.id === editingTermId);
+        if (idx >= 0) glossaryTerms[idx] = { ...glossaryTerms[idx], ...updates };
+        closeDetailModal();
+        renderGlossaryList();
+        showToast('已保存修改');
+      }
+    });
+
+    // ===== Actions: Hot Terms =====
+    async function promoteHotTerm(id) {
+      const result = await apiPost('/hot-terms/' + id + '/promote');
+      if (result) {
+        hotTerms = hotTerms.filter(t => t.id !== id);
+        glossaryTerms.push(result);
+        updateStats(); renderGlossaryList(); renderHotList();
+        showToast('已沉淀到正式词库');
+      }
+    }
+
+    async function deleteHotTerm(id) {
+      if (!confirm('确定删除这条热点词汇吗？')) return;
+      const ok = await apiDelete('/hot-terms/' + id);
+      if (ok) { hotTerms = hotTerms.filter(t => t.id !== id); updateStats(); renderHotList(); showToast('已删除'); }
+    }
+
+    // ===== Auto Promote =====
+    document.getElementById('autoPromoteBtn').addEventListener('click', async () => {
+      if (!confirm('执行自动沉淀规则？\n- 7天内出现3次以上 → 立即沉淀\n- 30天未出现 → 删除\n- 30天仍在 → 沉淀')) return;
+      const result = await apiPost('/auto-promote');
+      if (result) {
+        showToast('自动沉淀完成: ' + (result.promoted || 0) + ' 条沉淀, ' + (result.removed || 0) + ' 条清理');
+        loadData();
+      }
+    });
+
+    // ===== Add Term =====
+    function openAddModal() {
+      document.getElementById('addModal').classList.add('show');
+      document.getElementById('addTermEn').focus();
+    }
+    function closeAddModal() {
+      document.getElementById('addModal').classList.remove('show');
+      document.querySelectorAll('#addModal input, #addModal textarea, #addModal select').forEach(el => {
+        if (el.tagName === 'SELECT') el.selectedIndex = 0; else el.value = '';
+      });
+    }
+    document.getElementById('addNewBtn').addEventListener('click', openAddModal);
+    document.getElementById('addModalClose').addEventListener('click', closeAddModal);
+    document.getElementById('addCancelBtn').addEventListener('click', closeAddModal);
+    document.getElementById('addModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeAddModal(); });
+
+    document.getElementById('addConfirmBtn').addEventListener('click', async () => {
+      const en = document.getElementById('addTermEn').value.trim();
+      const zh = document.getElementById('addTermZh').value.trim();
+      const oneliner = document.getElementById('addTermOneliner').value.trim();
+      const def = document.getElementById('addTermDef').value.trim();
+      const explanation = document.getElementById('addTermExplanation').value.trim();
+      if (!en || !zh || !oneliner || !def || !explanation) { showToast('请填写所有必填字段'); return; }
+      const newTerm = {
+        id: en.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/(^-|-$)/g, ''),
+        term_en: en, term_zh: zh,
+        abbreviation: document.getElementById('addTermAbbr').value.trim(),
+        category: document.getElementById('addTermCategory').value,
+        one_liner: oneliner, definition: def, explanation: explanation,
+        source: document.getElementById('addTermSourceName').value.trim() || '',
+        source_url: document.getElementById('addTermSourceUrl').value.trim() || '',
+        related: document.getElementById('addTermRelated').value.trim().split(',').map(s => s.trim()).filter(Boolean)
+      };
+      const result = await apiPost('/terms', newTerm);
+      if (result) {
+        glossaryTerms.push(result);
+        updateStats(); renderGlossaryList();
+        showToast('已添加到术语库');
+        closeAddModal();
+      }
+    });
+
+    // ===== Export =====
+    function exportAsExcel() {
+      const rows = glossaryTerms.map(t => ({
+        '英文术语': t.term_en, '中文翻译': t.term_zh, '缩写': t.abbreviation || '',
+        '分类': t.category || '', '一句话描述': t.one_liner || '', '详细定义': t.definition || '',
+        '通俗解读': t.explanation || '', '来源': t.source || '', '来源链接': t.source_url || '',
+        '关联术语': (t.related || []).join(', ')
+      }));
+      const ws = XLSX.utils.json_to_sheet(rows);
+      ws['!cols'] = [{wch:30},{wch:15},{wch:8},{wch:12},{wch:40},{wch:50},{wch:50},{wch:15},{wch:40},{wch:30}];
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'AI术语库');
+      XLSX.writeFile(wb, 'AI_Glossary_' + new Date().toISOString().slice(0,10) + '.xlsx');
+      showToast('已导出 Excel（' + glossaryTerms.length + ' 条术语）');
+      closeExportModal();
+    }
+
+    function exportAsPDF() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF('l', 'mm', 'a4');
+      doc.setFontSize(16); doc.text('AI Glossary', 14, 15);
+      doc.setFontSize(9); doc.setTextColor(100);
+      doc.text('Exported: ' + new Date().toLocaleDateString('zh-CN') + ' | Total: ' + glossaryTerms.length + ' terms', 14, 22);
+      const headers = [['English', 'Chinese', 'Abbr', 'Category', 'Description']];
+      const body = glossaryTerms.map(t => [t.term_en||'', t.term_zh||'', t.abbreviation||'', t.category||'', (t.one_liner||'').substring(0,60)]);
+      doc.autoTable({ head: headers, body: body, startY: 28, styles: { fontSize: 8, cellPadding: 2 }, headStyles: { fillColor: [99,102,241] }, columnStyles: { 0:{cellWidth:55}, 1:{cellWidth:35}, 2:{cellWidth:20}, 3:{cellWidth:25}, 4:{cellWidth:'auto'} } });
+      doc.save('AI_Glossary_' + new Date().toISOString().slice(0,10) + '.pdf');
+      showToast('已导出 PDF（' + glossaryTerms.length + ' 条术语）');
+      closeExportModal();
+    }
+
+    function closeExportModal() { document.getElementById('exportModal').classList.remove('show'); }
+    document.getElementById('exportBtn').addEventListener('click', () => document.getElementById('exportModal').classList.add('show'));
+    document.getElementById('exportClose').addEventListener('click', closeExportModal);
+    document.getElementById('exportModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeExportModal(); });
+
+    // ===== Import Excel =====
+    document.getElementById('importBtn').addEventListener('click', () => document.getElementById('importFileInput').click());
+    document.getElementById('importFileInput').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = async (evt) => {
+        try {
+          const workbook = XLSX.read(evt.target.result, { type: 'array' });
+          const rows = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
+          if (rows.length === 0) { showToast('Excel文件为空'); return; }
+          let imported = 0;
+          for (const row of rows) {
+            const termEn = row['英文术语'] || row['term_en'] || row['English'] || '';
+            const termZh = row['中文翻译'] || row['term_zh'] || row['Chinese'] || '';
+            if (!termEn && !termZh) continue;
+            const id = (termEn || termZh).toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/(^-|-$)/g, '');
+            if (glossaryTerms.find(t => t.id === id)) continue;
+            const newTerm = {
+              id, term_en: termEn, term_zh: termZh,
+              abbreviation: row['缩写'] || row['abbreviation'] || '',
+              category: row['分类'] || row['category'] || 'AI概念',
+              one_liner: row['一句话描述'] || row['one_liner'] || '',
+              definition: row['详细定义'] || row['definition'] || '',
+              explanation: row['通俗解读'] || row['explanation'] || '',
+              source: row['来源'] || row['source'] || '',
+              source_url: row['来源链接'] || row['source_url'] || '',
+              related: (row['关联术语'] || row['related'] || '').split(',').map(s => s.trim()).filter(Boolean)
+            };
+            const result = await apiPost('/terms', newTerm);
+            if (result) { glossaryTerms.push(result); imported++; }
+          }
+          if (imported > 0) { updateStats(); renderGlossaryList(); showToast('成功导入 ' + imported + ' 条术语'); }
+          else { showToast('没有新术语可导入（可能全部重复）'); }
+        } catch (err) { showToast('解析Excel失败: ' + err.message); }
+      };
+      reader.readAsArrayBuffer(file);
+      e.target.value = '';
+    });
+
+    // ===== Section Navigation =====
+    document.querySelectorAll('.nav-item[data-section]').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.nav-item[data-section]').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        currentSection = item.dataset.section;
+        document.getElementById('sectionGlossary').style.display = currentSection === 'glossary' ? 'block' : 'none';
+        document.getElementById('sectionHot').style.display = currentSection === 'hot' ? 'block' : 'none';
+        if (currentSection === 'hot') renderHotList();
+      });
+    });
+
+    // ===== Sub tabs =====
+    document.querySelectorAll('.sub-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentSubTab = tab.dataset.subtab;
+        renderHotList();
+      });
+    });
+
+    // ===== Search =====
+    document.getElementById('glossarySearchInput').addEventListener('input', e => { glossarySearchQuery = e.target.value.trim(); renderGlossaryList(); });
+    document.getElementById('hotSearchInput').addEventListener('input', e => { hotSearchQuery = e.target.value.trim(); renderHotList(); });
+
+    // ===== Toast =====
+    function showToast(msg) {
+      const existing = document.querySelector('.toast');
+      if (existing) existing.remove();
+      const t = document.createElement('div');
+      t.className = 'toast'; t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 2500);
+    }
+  </script>
+</body>
+</html>

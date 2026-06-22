@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Glossary - 管理后台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Export libs -->
+        <style>
+    :root {
+      --color-accent: #6366F1;
+      --color-accent-hover: #4F46E5;
+      --color-surface: #FFFFFF;
+      --color-bg: #F8FAFC;
+      --color-text: #0F172A;
+      --color-text-secondary: #475569;
+      --color-text-muted: #94A3B8;
+      --color-border: #E2E8F0;
+      --color-success: #10B981;
+      --color-danger: #EF4444;
+      --color-warning: #F59E0B;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-full: 9999px;
+      --font-sans: 'Inter', 'Noto Sans SC', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --sidebar-width: 240px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+
+    /* Layout */
+    .admin-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--color-surface);
+      border-right: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+    .sidebar-header {
+      padding: 24px 20px 20px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .sidebar-header h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-header h1 span { color: var(--color-accent); }
+    .sidebar-header .back-link{
+      display: block;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      margin-top: 8px;
+    }
+    .sidebar-header .back-link:hover { color: var(--color-accent); }
+
+    .sidebar-nav {
+      flex: 1;
+      padding: 16px 12px;
+    }
+    .sidebar-nav .nav-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0 8px;
+      margin-bottom: 8px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      font-family: var(--font-sans);
+    }
+    .nav-item:hover { background: rgba(99, 102, 241, 0.05); color: var(--color-text); }
+    .nav-item.active { background: rgba(99, 102, 241, 0.1); color: var(--color-accent); font-weight: 600; }
+    .nav-item .nav-icon { font-size: 1.1rem; width: 22px; text-align: center; }
+    .nav-item .nav-badge {
+      margin-left: auto;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: var(--radius-full);
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .sidebar-footer {
+      padding: 16px 12px;
+      border-top: 1px solid var(--color-border);
+    }
+    .sidebar-footer .nav-item {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 32px 40px;
+    }
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .main-header h2 { font-size: 1.3rem; font-weight: 800; }
+    .main-header .header-actions { display: flex; gap: 10px; }
+
+    /* Buttons */
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-primary { background: var(--color-accent); color: #fff; }
+    .btn-primary:hover { background: var(--color-accent-hover); }
+    .btn-outline { background: var(--color-surface); color: var(--color-text-secondary); border: 1px solid var(--color-border); }
+    .btn-outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+    .btn-success { background: var(--color-success); color: #fff; }
+    .btn-success:hover { background: #059669; }
+    .btn-danger { background: var(--color-danger); color: #fff; }
+    .btn-danger:hover { background: #DC2626; }
+    .btn-sm { padding: 5px 10px; font-size: 0.78rem; }
+
+    /* Stats */
+    .stats-bar {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      flex: 1;
+    }
+    .stat-card .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--color-accent); }
+    .stat-card .stat-label { font-size: 0.78rem; color: var(--color-text-muted); margin-top: 2px; }
+
+    /* Sub tabs (for approval section) */
+    .sub-tabs { display: flex; gap: 4px; margin-bottom: 20px; }
+    .sub-tab {
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      transition: all 0.15s ease;
+    }
+    .sub-tab:hover { color: var(--color-text); background: rgba(0,0,0,0.03); }
+    .sub-tab.active { background: var(--color-accent); color: #fff; }
+
+    /* Term list */
+    .term-list { display: flex; flex-direction: column; gap: 12px; }
+    .term-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      transition: all 0.15s ease;
+    }
+    .term-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .term-item-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 8px; }
+    .term-item-title { font-size: 1rem; font-weight: 700; }
+    .term-item-meta { font-size: 0.82rem; color: var(--color-text-secondary); margin-bottom: 6px; }
+    .term-item-desc { font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.7; }
+    .term-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
+    .term-item-time { font-size: 0.72rem; color: var(--color-text-muted); margin-top: 8px; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--color-text-muted);
+    }
+    .empty-state h3 { font-size: 1rem; margin-bottom: 6px; color: var(--color-text-secondary); }
+    .empty-state p { font-size: 0.88rem; }
+
+    /* (add-form styles removed - now uses modal) */
+
+    /* Search box */
+    .search-box {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-family: var(--font-sans);
+      outline: none;
+      margin-bottom: 16px;
+      transition: border-color 0.15s ease;
+    }
+    .search-box:focus { border-color: var(--color-accent); }
+
+    /* Export modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+    .modal-overlay.show { display: flex; }
+    .modal-content {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-header { padding: 20px 24px; border-bottom: 1px solid var(--color-border); display: flex;justify-content: space-between; align-items: center; }
+    .modal-header h3 { font-size: 1rem; font-weight: 700; }
+    .modal-body { padding: 20px 24px; overflow-y: auto; flex: 1; }
+    .modal-body pre {
+      background: #1E293B;
+      color: #E2E8F0;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.6;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+    .modal-footer { padding: 16px 24px; border-top: 1px solid var(--color-border); display: flex; gap: 10px; justify-content: flex-end; }
+
+    /* Detail Modal */
+    .detail-modal { display: none; position: fixed; inset: 0; background: rgba(15,23,42,0.5); z-index: 1000; align-items: center; justify-content: center; padding: 24px; }
+    .detail-modal.show { display: flex; }
+    .detail-content {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 28px;
+      position: relative;
+    }
+    .detail-close { position: absolute; top: 16px; right: 16px; }
+    .detail-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+    .detail-subtitle { font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 20px; }
+    .detail-section { margin-bottom: 16px; }
+    .detail-section label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .detail-section input, .detail-section textarea, .detail-section select {
+      width: 100%; padding: 9px 12px;
+      border: 1px solid var(--color-border); border-radius: var(--radius-md);
+      font-size: 0.88rem; font-family: var(--font-sans); outline: none;
+      transition: border-color 0.15s ease; background: var(--color-surface); color: var(--color-text);
+    }
+    .detail-section input:focus, .detail-section textarea:focus { border-color: var(--color-accent); }
+    .detail-section textarea { resize: vertical; min-height: 60px; }
+    .detail-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .detail-actions { margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end; border-top: 1px solid var(--color-border); padding-top: 16px; }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--color-text); color: #fff;
+      padding: 10px 20px; border-radius: var(--radius-full);
+      font-size: 0.85rem; font-weight: 500; z-index: 2000;
+      animation: fadeUp 0.3s ease;
+    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateX(-50%) translateY(8px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+  </style>
+</head>
+<body>
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1><span>◆</span> 管理后台</h1>
+        <a href="index.html" class="back-link">← 返回术语库</a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-label">管理</div>
+        <button class="nav-item active" data-section="glossary">
+          <span class="nav-icon">📚</span> 词库管理
+        </button>
+        <button class="nav-item" data-section="approval">
+          <span class="nav-icon">📋</span> 审批管理
+          <span class="nav-badge" id="pendingBadge" style="display:none;">0</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="nav-item" id="exportBtn">
+          <span class="nav-icon">💾</span> 备份导出
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-content">
+      <!-- 词库管理 Section -->
+      <div id="sectionGlossary">
+        <div class="main-header">
+          <h2>词库管理</h2>
+          <div class="header-actions">
+            <button class="btn btn-outline" id="importBtn">📥 导入Excel</button>
+            <button class="btn btn-primary" id="addNewBtn">+ 添加术语</button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+          <div class="stat-card">
+            <div class="stat-num" id="statTotal">0</div>
+            <div class="stat-label">术语总数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statApproved">0</div>
+            <div class="stat-label">已通过新增</div>
+   </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statEdited">0</div>
+            <div class="stat-label">已编辑</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statDeleted">0</div>
+            <div class="stat-label">已删除</div>
+          </div>
+        </div>
+
+        <!-- Add form moved to addModal -->
+
+        <!-- Search -->
+        <input type="text" class="search-box" id="glossarySearchInput" placeholder="搜索术语（英文、中文、缩写）...">
+
+        <!-- Batch toolbar -->
+        <div id="batchToolbar" style="display:none;margin-bottom:16px;padding:12px 16px;background:#f0f0ff;border:1px solid rgba(99,102,241,0.15);border-radius:var(--radius-md);align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:16px;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+          <label style="font-size:0.82rem;font-weight:600;color:var(--color-accent);cursor:pointer;display:flex;align-items:center;gap:6px;">
+            <input type="checkbox" id="selectAllCheckbox"> 全选
+          </label>
+          <span id="selectedCount" style="font-size:0.8rem;color:var(--color-text-muted);">已选 0 项</span>
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
+            <select id="batchCategorySelect" disabled style="padding:5px 10px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.8rem;font-family:var(--font-sans);opacity:0.4;cursor:not-allowed;transition:opacity 0.15s;">
+              <option value="">修改分类</option>
+              <option value="AI概念">AI概念</option>
+              <option value="AI技术">AI技术</option>
+              <option value="AI应用">AI应用</option>
+              <option value="AI安全">AI安全</option>
+              <option value="数据与训练">数据与训练</option>
+              <option value="AI工程">AI工程</option>
+            </select>
+            <button class="btn btn-sm btn-danger" id="batchDeleteBtn" disabled style="opacity:0.4;cursor:not-allowed;transition:opacity 0.15s;">批量删除</button>
+          </div>
+        </div>
+
+        <!-- List -->
+        <div class="term-list" id="glossaryList"></div>
+      </div>
+
+      <!-- 审批管理 Section -->
+      <div id="sectionApproval" style="display:none;">
+        <div class="main-header">
+          <h2>审批管理</h2>
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-card">
+            <div class="stat-num" id="statPending">0</div>
+            <div class="stat-label">待审核</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statApprovedCount">0</div>
+            <div class="stat-label">已通过</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="statRejected">0</div>
+            <div class="stat-label">已拒绝</div>
+          </div>
+        </div>
+
+        <!-- Sub tabs -->
+        <div class="sub-tabs">
+          <button class="sub-tab active" data-subtab="pending">待审核</button>
+          <button class="sub-tab" data-subtab="approved">已通过</button>
+          <button class="sub-tab" data-subtab="rejected">已拒绝</button>
+        </div>
+
+        <!-- List -->
+        <div class="term-list" id="approvalList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export Modal -->
+  <div class="modal-overlay" id="exportModal">
+    <div class="modal-content" style="max-width:420px;">
+      <div class="modal-header">
+        <h3>备份导出</h3>
+        <button class="btn btn-sm btn-outline" id="exportClose">关闭</button>
+      </div>
+      <div class="modal-body" style="text-align:center;padding:32px 24px;">
+        <p style="font-size:0.88rem;color:var(--color-text-secondary);margin-bottom:24px;">选择导出格式，将完整词库下载到本地</p>
+        <div style="display:flex;gap:16px;justify-content:center;">
+          <button class="btn btn-primary" onclick="exportAsExcel()" style="padding:14px 28px;font-size:0.92rem;">
+            📊 导出 Excel
+          </button>
+          <button class="btn btn-outline" onclick="exportAsPDF()" style="padding:14px 28px;font-size:0.92rem;">
+            📄 导出 PDF
+          </button>
+        </div>
+        <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:16px;">Excel 包含完整数据 · PDF 适合打印分享</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail/Edit Modal -->
+  <div class="detail-modal" id="detailModal">
+    <div class="detail-content">
+      <button class="btn btn-sm btn-outline detail-close" id="detailClose">关闭</button>
+      <div class="detail-title" id="detailTitle"></div>
+      <div class="detail-subtitle" id="detailSubtitle"></div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>英文术语</label>
+          <input type="text" id="detailTermEn">
+        </div>
+        <div class="detail-section">
+          <label>中文翻译</label>
+          <input type="text" id="detailTermZh">
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>缩写</label>
+          <input type="text" id="detailAbbr">
+        </div>
+        <div class="detail-section">
+          <label>分类</label>
+          <select id="detailCategory" style="width:100%;padding:9px 12px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.88rem;font-family:var(--font-sans);outline:none;">
+            <option value="AI概念">AI概念</option>
+            <option value="AI技术">AI技术</option>
+            <option value="AI应用">AI应用</option>
+            <option value="AI安全">AI安全</option>
+            <option value="数据与训练">数据与训练</option>
+            <option value="AI工程">AI工程</option>
+          </select>
+        </div>
+      </div>
+      <div class="detail-section">
+        <label>一句话描述</label>
+        <input type="text" id="detailOneliner">
+      </div>
+      <div class="detail-section">
+        <label>详细定义</label>
+        <textarea id="detailDefinition" rows="3"></textarea>
+      </div>
+      <div class="detail-section">
+        <label>通俗解读</label>
+        <textarea id="detailExplanation" rows="3"></textarea>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>来源</label>
+          <input type="text" id="detailSource">
+        </div>
+        <div class="detail-section">
+          <label>来源链接</label>
+          <input type="text" id="detailSourceUrl">
+        </div>
+      </div>
+      <div class="detail-section">
+        <label>关联术语（逗号分隔）</label>
+        <input type="text" id="detailRelated">
+      </div>
+      <div class="detail-actions">
+        <button class="btn btn-outline" id="detailCancelBtn">取消</button>
+        <button class="btn btn-primary" id="detailSaveBtn">保存修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Term Modal -->
+  <div class="detail-modal" id="addModal">
+    <div class="detail-content">
+      <button class="btn btn-sm btn-outline detail-close" id="addModalClose">关闭</button>
+      <div class="detail-title">添加术语</div>
+      <div class="detail-subtitle">填写以下信息，添加新术语到词库</div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>英文术语 *</label>
+          <input type="text" id="addTermEn" placeholder="如: Retrieval-Augmented Generation">
+        </div>
+        <div class="detail-section">
+          <label>中文翻译 *</label>
+          <input type="text" id="addTermZh" placeholder="如: 检索增强生成">
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>缩写</label>
+          <input type="text" id="addTermAbbr" placeholder="如: RAG">
+        </div>
+        <div class="detail-section">
+          <label>分类 *</label>
+          <select id="addTermCategory" style="width:100%;padding:9px 12px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.88rem;font-family:var(--font-sans);outline:none;">
+            <option value="AI概念">AI概念</option>
+            <option value="AI技术">AI技术</option>
+            <option value="AI应用">AI应用</option>
+            <option value="AI安全">AI安全</option>
+            <option value="数据与训练">数据与训练</option>
+            <option value="AI工程">AI工程</option>
+          </select>
+        </div>
+      </div>
+      <div class="detail-section">
+        <label>一句话描述 *</label>
+        <input type="text" id="addTermOneliner" placeholder="用一句话解释这个术语">
+      </div>
+      <div class="detail-section">
+        <label>详细定义 *</label>
+        <textarea id="addTermDef" rows="3" placeholder="完整的术语定义..."></textarea>
+      </div>
+      <div class="detail-section">
+        <label>通俗解读 *</label>
+        <textarea id="addTermExplanation" rows="3" placeholder="用日常生活中的例子来解释..."></textarea>
+      </div>
+      <div class="detail-row">
+        <div class="detail-section">
+          <label>来源名称</label>
+          <input type="text" id="addTermSourceName" placeholder="如: Stanford HAI">
+        </div>
+        <div class="detail-section">
+          <label>来源链接</label>
+          <input type="text" id="addTermSourceUrl" placeholder="https://...">
+        </div>
+      </div>
+      <div class="detail-section">
+        <label>关联术语ID（逗号分隔）</label>
+        <input type="text" id="addTermRelated" placeholder="如: machine-learning, deep-learning">
+      </div>
+      <div class="detail-actions">
+        <button class="btn btn-outline" id="addCancelBtn">取消</button>
+        <button class="btn btn-primary" id="addConfirmBtn">添加到术语库</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden file input for import -->
+  <input type="file" id="importFileInput" accept=".xlsx,.xls" style="display:none;">
+
+  <script>
+    const GLOSSARY_DATA = [
+  {
+    "id": "artificial-intelligence",
+    "term_en": "Artificial Intelligence",
+    "term_zh": "人工智能",
+    "abbreviation": "AI",
+    "category": "AI概念",
+    "one_liner": "让机器模拟人类智能的技术领域",
+    "definition": "AI是一个计算机科学领域，旨在构建能够执行通常需要人类智能的任务的系统，包括学习、推理、问题解决、感知和语言理解。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像教一台机器「思考」——让它能看懂图片、听懂语言、做出决策，甚至比人类做得更快更好。你手机上的语音助手、推荐算法都是AI的应用。",
+    "related": ["machine-learning", "deep-learning", "agi", "neural-network"]
+  },
+  {
+    "id": "machine-learning",
+    "term_en": "Machine Learning",
+    "term_zh": "机器学习",
+    "abbreviation": "ML",
+    "category": "AI技术",
+    "one_liner": "让计算机从数据中自动学习和改进的技术",
+    "definition": "机器学习是人工智能的一个分支，使计算机能够从数据中学习模式并做出决策，而无需被明确编程规则。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象教小孩认猫：你不会列出所有猫的特征，而是给他看很多猫的照片，他自己就学会了。机器学习就是这样——给计算机大量数据，让它自己找出规律。",
+    "related": ["deep-learning", "supervised-learning", "unsupervised-learning", "reinforcement-learning"]
+  },
+  {
+    "id": "deep-learning",
+    "term_en": "Deep Learning",
+    "term_zh": "深度学习",
+    "abbreviation": "DL",
+    "category": "AI技术",
+    "one_liner": "使用多层神经网络从数据中学习复杂模式的技术",
+    "definition": "深度学习是机器学习的子集，使用大型多层神经网络自动从数据中学习复杂模式，其灵感来源于人脑的结构。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "如果机器学习是「教机器认猫」，深度学习就是给机器一个像人脑一样分层处理信息的系统。浅层识别边缘，中层识别眼睛鼻子，深层才判断「这是猫」。",
+    "related": ["neural-network", "machine-learning", "backpropagation", "transformer"]
+  },
+  {
+    "id": "neural-network",
+    "term_en": "Neural Network",
+    "term_zh": "神经网络",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "模仿人脑结构的计算模型",
+    "definition": "神经网络是一种受人脑结构启发的计算模型，由互相连接的人工「神经元」层组成，用于处理和传输信息。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "把它想象成一个由无数小开关组成的网络，每个开关接收信号后决定是否传递。通过调整这些开关的灵敏度，网络就能学会识别图片、翻译语言等任务。",
+    "related": ["deep-learning", "backpropagation", "weights", "transformer"]
+  },
+  {
+    "id": "natural-language-processing",
+    "term_en": "Natural Language Processing",
+    "term_zh": "自然语言处理",
+    "abbreviation": "NLP",
+    "category": "AI技术",
+    "one_liner": "让计算机理解和生成人类语言的技术",
+    "definition": "自然语言处理是人工智能的一个分支，专注于使计算机能够以有意义的方式理解、解释和生成人类语言。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像给电脑装了一个「语言大脑」。它能读懂你写的文字、听懂你说的话，还能自己写文章回复你。翻译软件、语音助手、ChatGPT都用到了NLP。",
+    "related": ["large-language-model", "tokenization", "transformer", "chatbot"]
+  },
+  {
+    "id": "large-language-model",
+    "term_en": "Large Language Model",
+    "term_zh": "大语言模型",
+    "abbreviation": "LLM",
+    "category": "AI技术",
+    "one_liner": "在海量文本上训练的AI系统，能理解和生成类人语言",
+    "definition": "大语言模型是在大量文本数据上训练的AI系统，旨在理解语言使用的模式和概率，并生成新颖的内容，如文章、代码和图像。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象一个读过互联网上几乎所有文字的学生——它通过海量阅读学会了语言规律，能写文章、回答问题、写代码。ChatGPT、Claude就是大语言模型的产品。",
+    "related": ["transformer", "tokenization", "generative-ai", "prompt-engineering"]
+  },
+  {
+    "id": "generative-ai",
+    "term_en": "Generative AI",
+    "term_zh": "生成式AI",
+    "abbreviation": "GenAI",
+    "category": "AI技术",
+    "one_liner": "能够创造新内容（文本、图像、视频等）的AI系统",
+    "definition": "生成式AI指能够创建新内容如文本、图像、音乐、代码或视频的AI系统，通过在大量数据上训练来找出生成新内容的模式。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "传统AI是分析和分类，生成式AI是创造。就像一个既能鉴赏画作又能自己画画的艺术家。ChatGPT写文章、Midjourney画图、Suno作曲都是生成式AI。",
+    "related": ["large-language-model", "diffusion-models", "gans", "gpt"]
+  },
+  {
+    "id": "agi",
+    "term_en": "Artificial General Intelligence",
+    "term_zh": "通用人工智能",
+    "abbreviation": "AGI",
+    "category": "AI概念",
+    "one_liner": "具备人类水平通用学习和推理能力的AI系统",
+    "definition": "AGI指具有通用的、人类水平（或超越）的能力来学习、推理和跨广泛任务和领域应用知识的AI系统。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "现在的AI像是「专科生」——AlphaGo下棋很厉害但不会写诗。AGI则像「全能选手」，任何人能做的脑力工作它都能做，目前还是一个未实现的目标。",
+    "related": ["artificial-intelligence", "ai-safety", "ai-alignment"]
+  },
+  {
+    "id": "transformer",
+    "term_en": "Transformer",
+    "term_zh": "Transformer模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "使用注意力机制同时处理数据关系的神经网络架构",
+    "definition": "Transformer是一种神经网络架构，通过使用「注意力」机制同时处理和理解输入数据所有部分之间的关系，彻底改变了AI领域。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "读一个句子时，Transformer不是一个字一个字地看，而是同时看到所有词并理解它们的关系。这就像一个能同时看完整本书并理解上下文的读者，ChatGPT的核心就是它。",
+    "related": ["attention-mechanism", "large-language-model", "gpt", "deep-learning"]
+  },
+  {
+    "id": "algorithm",
+    "term_en": "Algorithm",
+    "term_zh": "算法",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "解决问题或完成任务的一组分步骤指令",
+    "definition": "算法是为解决问题或完成任务而设计的一组分步骤指令，类似于食谱。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像做菜的食谱：先放油、再放葱、然后炒肉……每一步都有明确指令。算法就是告诉计算机「第一步做什么、第二步做什么」的指令集。",
+    "related": ["machine-learning", "optimization-algorithm", "decision-tree"]
+  },
+  {
+    "id": "supervised-learning",
+    "term_en": "Supervised Learning",
+    "term_zh": "监督学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "使用标注数据训练模型的机器学习方法",
+    "definition": "监督学习是一种机器学习方法，模型在标注数据（输入示例与正确输出答案配对）上进行训练。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像有老师的课堂：给学生出题（输入），同时提供标准答案（标签）。学生通过对比自己的答案和标准答案来学习，直到掌握规律。",
+    "related": ["unsupervised-learning", "machine-learning", "training-data", "reinforcement-learning"]
+  },
+  {
+    "id": "unsupervised-learning",
+    "term_en": "Unsupervised Learning",
+    "term_zh": "无监督学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在无标注数据中自行发现模式的机器学习方法",
+    "definition": "无监督学习是一种机器学习方法，模型在没有标注答案或预定义类别的数据上训练，自行发现模式和结构。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像给一堆混杂的积木让孩子自己分类——没人告诉他怎么分，但他可能按颜色、形状或大小自己找到规律。",
+    "related": ["supervised-learning", "machine-learning", "clustering", "dimensionality-reduction"]
+  },
+  {
+    "id": "reinforcement-learning",
+    "term_en": "Reinforcement Learning",
+    "term_zh": "强化学习",
+    "abbreviation": "RL",
+    "category": "AI技术",
+    "one_liner": "通过试错和奖惩信号来学习最优行为的方法",
+    "definition": "强化学习是一种机器学习类型，AI智能体通过在特定环境中采取行动，并根据试错获得正向或负向反馈来提升表现。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像训练小狗：做对了给零食（奖励），做错了不给（惩罚）。AI通过反复尝试，学会什么行为能获得最高奖励。AlphaGo就是用强化学习训练的。",
+    "related": ["machine-learning", "supervised-learning", "agent", "reward"]
+  },
+  {
+    "id": "computer-vision",
+    "term_en": "Computer Vision",
+    "term_zh": "计算机视觉",
+    "abbreviation": "CV",
+    "category": "AI技术",
+    "one_liner": "让计算机理解和处理图像及视频的AI领域",
+    "definition": "计算机视觉是AI的一个领域，使计算机能够看到、识别和理解图像和视频中的视觉信息，类似于人类的视觉处理方式。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "让电脑拥有「眼睛」：它能认出照片里的人脸、识别路上的车辆、检测工厂产品的瑕疵。人脸解锁、自动驾驶、医学影像分析都依赖计算机视觉。",
+    "related": ["deep-learning", "image-recognition", "neural-network", "autonomous-vehicles"]
+  },
+  {
+    "id": "chatbot",
+    "term_en": "Chatbot",
+    "term_zh": "聊天机器人",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模拟人类对话的AI程序",
+    "definition": "聊天机器人是一种计算机程序，通过文本或语音交互模拟与人类的对话。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "你和客服对话时，对面可能不是真人而是聊天机器人。它能回答你的问题、帮你订票、解决简单问题。ChatGPT是目前最先进的聊天机器人之一。",
+    "related": ["natural-language-processing", "large-language-model", "virtual-assistant"]
+  },
+  {
+    "id": "prompt-engineering",
+    "term_en": "Prompt Engineering",
+    "term_zh": "提示工程",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "精心设计输入提示以引导AI产生期望输出的方法",
+    "definition": "提示工程是精心设计指令或「提示」来引导AI语言模型产生期望输出的实践。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像和AI说话的「技巧」：同样问一个问题，换种问法就能得到更好的答案。比如说「请一步一步分析」比直接问「答案是什么」能获得更准确的回复。",
+    "related": ["large-language-model", "prompt", "prompt-injection"]
+  },
+  {
+    "id": "hallucination",
+    "term_en": "Hallucination",
+    "term_zh": "幻觉",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "AI系统生成的看似合理但实际错误的信息",
+    "definition": "AI幻觉指人工智能系统生成不正确、误导性或完全编造的信息或回应，但表述得像事实一样。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像一个「不懂装懂」的人——AI不确定答案时不会说「我不知道」，而是自信地编造一个看起来合理的答案。比如它可能编造一本不存在的书或虚假的统计数据。",
+    "related": ["large-language-model", "generative-ai", "ai-safety", "guardrails"]
+  },
+  {
+    "id": "training-data",
+    "term_en": "Training Data",
+    "term_zh": "训练数据",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用于教AI模型学习的数据集合",
+    "definition": "训练数据是用于教机器学习模型如何执行特定任务的示例集合，如文本、图像、音频或其他信息。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就是AI的「教材」。想让AI认猫，就给它看几百万张猫的图片；想让它写文章，就让它读互联网上的海量文本。训练数据的质量直接决定AI的能力。",
+    "related": ["machine-learning", "bias", "supervised-learning", "big-data"]
+  },
+  {
+    "id": "token",
+    "term_en": "Token",
+    "term_zh": "Token（词元）",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI语言模型处理文本的最小单位",
+    "definition": "Token是AI语言模型处理的基本文本单元，可以是一个完整的单词或单词的一部分。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "AI不是一个字一个字读的，而是把文本切成小块（token）来处理。英文中大约4个字母算一个token，中文大约1-2个字算一个token。这是计算AI使用成本的基本单位。",
+    "related": ["tokenization", "large-language-model", "context-window"]
+  },
+  {
+    "id": "tokenization",
+    "term_en": "Tokenization",
+    "term_zh": "分词/标记化",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "将文本分解为更小单元以供AI处理的过程",
+    "definition": "分词是将文本拆分成更小单元（称为token）的过程——可以是单词、单词的一部分或单个字符——以便AI语言模型能够处理。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像把一本书切成一页一页来读。AI把「人工智能很厉害」可能拆分成「人工」「智能」「很」「厉害」四个token来逐个处理和理解。",
+    "related": ["token", "natural-language-processing", "large-language-model"]
+  },
+  {
+    "id": "attention-mechanism",
+    "term_en": "Attention Mechanism",
+    "term_zh": "注意力机制",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "帮助模型聚焦输入中最相关部分的方法",
+    "definition": "注意力机制是神经网络中的一种方法，帮助模型在产生输出时聚焦于输入中最相关的部分。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像你在嘈杂的餐厅里能只关注朋友的声音。AI在处理一个长句子时，注意力机制帮它判断哪些词最重要、哪些词之间有关系，从而更准确地理解含义。",
+    "related": ["transformer", "neural-network", "deep-learning"]
+  },
+  {
+    "id": "backpropagation",
+    "term_en": "Backpropagation",
+    "term_zh": "反向传播",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "神经网络通过逆向追踪误差来学习的方法",
+    "definition": "反向传播是神经网络通过��向工作来学习错误的方法，追溯网络中哪些部分导致了误差。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像考试后对答案：发现答错了，就追溯回去看哪一步出了问题并改正。神经网络就是这样一层层向后检查，调整每层的参数让下次更准确。",
+    "related": ["neural-network", "deep-learning", "weights", "loss-function"]
+  },
+  {
+    "id": "bias",
+    "term_en": "Bias (in AI)",
+    "term_zh": "偏见/偏差",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "AI系统产生偏向或歧视某些群体的结果",
+    "definition": "AI中的偏见是指系统产生偏向或歧视某些群体的结果，通常源于训练数据中存在的偏见。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "如果用来训练AI的数据本身有偏见（比如历史招聘数据中男性居多），AI就会「学到」这种偏见，在做决策时歧视女性。这是AI伦理中最重要的问题之一。",
+    "related": ["ai-ethics", "training-data", "ethical-ai", "responsible-ai"]
+  },
+  {
+    "id": "big-data",
+    "term_en": "Big Data",
+    "term_zh": "大数据",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "规模大到传统软件无法处理的海量数据集",
+    "definition": "大数据是规模极大的数据集，大到传统数据处理软件无法分析，需要使用AI来揭示其中的模式和趋势。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象一个图书馆，里面不是几千本书，而是几十亿本。数据量大到人根本看不完，必须用AI来帮忙从中找规律。电商平台每天产生的用户行为数据就是大数据。",
+    "related": ["data-mining", "machine-learning", "training-data"]
+  },
+  {
+    "id": "ai-ethics",
+    "term_en": "AI Ethics",
+    "term_zh": "AI伦理",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "确保AI负责任开发和使用的原则和准则",
+    "definition": "AI伦理指AI利益相关者必须考虑的问题，以确保技术被负责任地开发和使用，包括安全、无偏见和环保的方法。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "AI越来越强大，但谁来确保它不被滥用？AI伦理就是一套「规矩」：不能歧视、要保护隐私、要透明可解释、不能用来伤害人。",
+    "related": ["bias", "responsible-ai", "ethical-ai", "ai-safety"]
+  },
+  {
+    "id": "ai-safety",
+    "term_en": "AI Safety",
+    "term_zh": "AI安全",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "确保AI系统行为可靠且不造成伤害的研究领域",
+    "definition": "AI安全是一个研究领域，专注于确保AI系统行为可靠，即使在功能强大、广泛部署或遇到意外情况时也不会造成伤害。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像汽车需要安全带和气囊，AI也需要「安全装置」。AI安全研究如何防止AI失控、被恶意利用或做出危害人类的决策。",
+    "related": ["ai-alignment", "ai-ethics", "guardrails", "agi"]
+  },
+  {
+    "id": "ai-alignment",
+    "term_en": "AI Alignment",
+    "term_zh": "AI对齐",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "确保AI系统的目标和行为符合人类意图",
+    "definition": "AI对齐意味着确保AI系统的目标和行为与人们真正想要的——我们的价值观、规则和意图——相匹配。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "如果你让AI「最大化用户使用时长」，它可能推送令人上瘾的内容——这不是你真正想要的。AI对齐就是确保AI理解并执行人类的真实意图，而不是字面指令。",
+    "related": ["ai-safety", "agi", "ai-ethics", "responsible-ai"]
+  },
+  {
+    "id": "gpt",
+    "term_en": "Generative Pre-Trained Transformer",
+    "term_zh": "生成式预训练Transformer",
+    "abbreviation": "GPT",
+    "category": "AI技术",
+    "one_liner": "使用Transformer架构生成类人文本的大语言模型系列",
+    "definition": "GPT是一系列使用Transformer架构的大语言模型，通过预训练来根据输入提示生成类人文本。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "GPT就是ChatGPT背后的技术。G=生成（能创造内容），P=预训练（提前学习了大量知识），T=Transformer（使用的网络架构）。三个字母概括了它的核心原理。",
+    "related": ["transformer", "large-language-model", "generative-ai", "pre-training"]
+  },
+  {
+    "id": "gans",
+    "term_en": "Generative Adversarial Networks",
+    "term_zh": "生成对抗网络",
+    "abbreviation": "GANs",
+    "category": "AI技术",
+    "one_liner": "两个神经网络互相对抗来生成逼真数据的架构",
+    "definition": "GANs是一种AI架构，由两个神经网络组成——「生成器」和「判别器」——它们相互对抗以创建逼真的合成数据。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象一个造假者和鉴定师的游戏：造假者不断改进假画，鉴定师不断提高鉴别能力。最终造假者画出的假画连鉴定师都分不清真假——这就是GANs生成逼真图片的原理。",
+    "related": ["generative-ai", "deep-learning", "neural-network", "diffusion-models"]
+  },
+  {
+    "id": "diffusion-models",
+    "term_en": "Diffusion Models",
+    "term_zh": "扩散模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过逐步去噪来生成新内容的生成模型",
+    "definition": "扩散模型是一种生成模型，通过先添加「噪声」再逐步去噪来创建新内容如图像。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象把一张清晰照片逐渐加雪花直到全是噪点，然后教AI学会「倒放」这个过程——从噪点恢复出图片。Stable Diffusion、DALL-E就是用这个原理生成图像的。",
+    "related": ["generative-ai", "gans", "deep-learning"]
+  },
+  {
+    "id": "prompt",
+    "term_en": "Prompt",
+    "term_zh": "提示词",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用户输入给AI系统以获取响应的指令或问题",
+    "definition": "提示词是用户输入给AI系统以获得期望结果或输出的输入内容。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就是你对AI说的话或输入的文字指令。比如「帮我写一封邮件」、「解释量子物理」就是提示词。提示词的质量直接影响AI回答的质量。",
+    "related": ["prompt-engineering", "large-language-model", "chatbot"]
+  },
+  {
+    "id": "prompt-injection",
+    "term_en": "Prompt Injection",
+    "term_zh": "提示注入",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "利用恶意输入欺骗AI做出非预期行为的攻击方式",
+    "definition": "提示注入是一种安全攻击，使用恶意输入来欺骗大语言模型以非预期的方式行事。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像有人在正常对话中夹带「暗号」让AI忽略原有规则。比如在文档中隐藏指令让AI泄露机密信息。这是AI安全中的重要威胁。",
+    "related": ["ai-safety", "guardrails", "large-language-model"]
+  },
+  {
+    "id": "overfitting",
+    "term_en": "Overfitting",
+    "term_zh": "过拟合",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "模型过度记忆训练数据而无法泛化到新数据的问题",
+    "definition": "过拟合发生在模型过于紧密地记忆训练数据（包括错误和随机模式），导致在新数据上表现不佳。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像一个学生把考题答案全背下来了，但换一套新题就不会做。AI「背」住了训练数据的所有细节（包括噪音），遇到新数据就傻了。",
+    "related": ["machine-learning", "training-data", "supervised-learning"]
+  },
+  {
+    "id": "transfer-learning",
+    "term_en": "Transfer Learning",
+    "term_zh": "迁移学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "将已学知识应用到新任务的机器学习技术",
+    "definition": "迁移学习是一种机器学习技术，将一个任务上训练好的模型重新用作另一个不同但相关任务的起点。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "会骑自行车的人学摩托车更快——因为平衡感可以「迁移」。同理，学会识别猫狗的AI模型，稍加调整就能识别其他动物，不用从零开始。",
+    "related": ["fine-tuning", "foundation-model", "machine-learning"]
+  },
+  {
+    "id": "fine-tuning",
+    "term_en": "Fine-tuning",
+    "term_zh": "微调",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在特定数据上进一步训练预训练模型以适应新任务",
+    "definition": "微调是取一个预训练模型并在特定任务或领域的数据上进一步训练的过程。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "大模型像是接受了通识教育的大学毕业生，微调就是让他进入某个公司后接受岗位专项培训。不用重头学，只需在特定领域的数据上再训练一下。",
+    "related": ["transfer-learning", "foundation-model", "large-language-model", "training-data"]
+  },
+  {
+    "id": "foundation-model",
+    "term_en": "Foundation Model",
+    "term_zh": "基础模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在海量数据上训练的大规模通用AI模型",
+    "definition": "基础模型是在大量广泛、多样化数据上训练的大规模AI模型，可被适配来执行各种下游任务，作为许多不同应用的「基础」。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像地基：建好一个通用的「基础」，上面可以盖不同的房子。GPT-4是一个基础模型，可以在它上面构建聊天助手、代码生成器、翻译工具等各种应用。",
+    "related": ["large-language-model", "fine-tuning", "generative-ai", "transfer-learning"]
+  },
+  {
+    "id": "rag",
+    "term_en": "Retrieval-Augmented Generation",
+    "term_zh": "检索增强生成",
+    "abbreviation": "RAG",
+    "category": "AI技术",
+    "one_liner": "让AI先检索外部信息再生成回答以提高准确性",
+    "definition": "RAG是一种技术，通过让语言模型先查找外部、最新的信息来帮助生成更高质量的输出。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "普通AI像开卷考试但只能用脑子里的知识；RAG则允许AI在回答前先「翻书」查找最新资料。这大大减少了AI胡编乱造的问题，特别适合需要准确信息的场景。",
+    "related": ["large-language-model", "hallucination", "vector-database", "knowledge-graph"]
+  },
+  {
+    "id": "agent",
+    "term_en": "AI Agent",
+    "term_zh": "AI智能体",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "能自主执行任务的AI系统",
+    "definition": "AI Agent是设计为自主或半自主行动的AI系统：它们能设定或解释目标、规划行动、使用工具、基于反馈做出决策并适应性完成任务。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "普通AI是你问它答，Agent则是你给一个目标它自己想办法完成。比如你说「帮我订一张明天去上海的机票」，Agent会自己搜索航班、比价、完成预订。",
+    "related": ["agentic-ai", "reinforcement-learning", "tool-use", "multi-modal-ai"]
+  },
+  {
+    "id": "agentic-ai",
+    "term_en": "Agentic AI",
+    "term_zh": "智能体AI",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "描述AI自主执行复杂任务能力的总称",
+    "definition": "Agentic AI指设计为自主或半自主智能体的AI系统：能设定目标、规划行动序列、使用工具并基于反馈做出决策来完成任务。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "如果说普通AI是员工等指令做事，Agentic AI更像是一个能独立完成项目的经理——它能分解任务、调用不同工具、处理意外情况。2025年最热的AI趋势之一。",
+    "related": ["agent", "tool-use", "scaffolding", "harness"]
+  },
+  {
+    "id": "context-window",
+    "term_en": "Context Window",
+    "term_zh": "上下文窗口",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI模型一次能处理的最大输入量",
+    "definition": "上下文窗口是AI系统在一次任务中能处理的输入量（如文本长度）。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像AI的「短期记忆」容量。如果上下文窗口是128K tokens，它就能同时「看到」大约一本书的内容。窗口越大，AI能处理的信息越多，理解越完整。",
+    "related": ["token", "large-language-model", "tokenization"]
+  },
+  {
+    "id": "embeddings",
+    "term_en": "Embeddings",
+    "term_zh": "嵌入/向量表示",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "将复杂数据转换为数字向量以捕捉含义的表示方法",
+    "definition": "嵌入是将复杂数据（如单词、图像或其他对象）转换为数字向量的表示方法，这些向量能捕捉数据的含义或特征。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "AI不能直接理解文字，需要把文字变成数字。嵌入就是把「国王」变成[0.2, 0.8, 0.1...]这样的数字列表，而且含义相近的词数字也相近。这样AI就能理解语义了。",
+    "related": ["vector-database", "natural-language-processing", "semantic-analysis"]
+  },
+  {
+    "id": "vector-database",
+    "term_en": "Vector Database",
+    "term_zh": "向量数据库",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "专门存储和检索高维数据向量的数据库",
+    "definition": "向量数据库是一种专门设计用于存储和高效搜索数据高维数值表示（向量）的数据库。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "传统数据库搜索精确匹配，向量数据库搜索「相似」。比如搜索「快乐」时也能找到「开心」「高兴」的内容。它是RAG技术的关键组件。",
+    "related": ["embeddings", "rag", "knowledge-graph"]
+  },
+  {
+    "id": "multi-modal-ai",
+    "term_en": "Multimodal AI",
+    "term_zh": "多模态AI",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "能同时处理文本、图像、视频、语音等多种输入的AI",
+    "definition": "多模态AI指能同时处理、理解和生成多种数据模态的人工智能系统——如文本、图像、音频和视频。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "早期AI只能处理一种信息（只看文字或只看图片），多模态AI像人一样能同时看、听、读。你可以给它一张图让它描述，或者让它根据文字画画。",
+    "related": ["generative-ai", "computer-vision", "natural-language-processing"]
+  },
+  {
+    "id": "data-mining",
+    "term_en": "Data Mining",
+    "term_zh": "数据挖掘",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "从大型数据集中发现模式和趋势的过程",
+    "definition": "数据挖掘是使用统计方法和机器��习在大型数据集中发现模式和趋势的过程。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像淘金——从大量沙子中找到金子。数据挖掘就是从海量数据中找出有价值的规律，比如发现「买尿布的人经常也买啤酒」这样的消费模式。",
+    "related": ["big-data", "machine-learning", "predictive-analytics"]
+  },
+  {
+    "id": "decision-tree",
+    "term_en": "Decision Tree",
+    "term_zh": "决策树",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过一系列是/否问题做出预测的算法",
+    "definition": "决策树是一种机器学习算法，通过提出是/否问题来做出预测，在每一步根据不同特征拆分数据直到得出最终结论。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像玩20个问题的游戏：是动物吗？→有四条腿吗？→会叫吗？→是狗！决策树就是把复杂决策分解成一系列简单的是非判断。",
+    "related": ["algorithm", "machine-learning", "supervised-learning"]
+  },
+  {
+    "id": "image-recognition",
+    "term_en": "Image Recognition",
+    "term_zh": "图像识别",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "识别图像或视频中物体、人物、文字的过程",
+    "definition": "图像识别是在图像或视频中识别物体、人物、地点或文字的过程。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "让手机相册能自动给照片分类、让自动驾驶能识别红绿灯和行人、让工厂能自动检测产品缺陷——这些都是图像识别的应用。",
+    "related": ["computer-vision", "deep-learning", "neural-network"]
+  },
+  {
+    "id": "sentiment-analysis",
+    "term_en": "Sentiment Analysis",
+    "term_zh": "情感分析",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "使用AI分析文本中情感和观点的技术",
+    "definition": "情感分析（也称观点挖掘）是使用AI分析给定文本的语气和观点的过程。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "AI读一条产品评论就能判断用户是满意还是不满意。企业用它监控社交媒体上消费者对品牌的态度，快速发现负面舆情。",
+    "related": ["natural-language-processing", "machine-learning", "data-mining"]
+  },
+  {
+    "id": "turing-test",
+    "term_en": "Turing Test",
+    "term_zh": "图灵测试",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "评估机器能否表现出与人类无法区分的智能的测试",
+    "definition": "图灵测试由数学家图灵于1950年提出，是衡量机器展现与人类无法区分的智能行为能力的方法。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "测试规则很简单：一个人通过文字同时和人类、机器对话，如果分不清哪个是机器，机器就通过了测试。现在的ChatGPT在很多场景已经能「骗过」人了。",
+    "related": ["artificial-intelligence", "chatbot", "agi"]
+  },
+  {
+    "id": "deepfake",
+    "term_en": "Deepfake",
+    "term_zh": "深度伪造",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用AI生成的逼真但虚假的图像、视频或音频",
+    "definition": "深度伪造是使用AI创建的虚假但逼真的照片、视频或音频记录，通常由现有媒体构建并修改。",
+    "source": "Boston University",
+    "source_url": "https://www.bu.edu/articles/2024/what-is-artificial-intelligence-ai-at-bu-a-to-z/",
+    "explanation": "AI可以把你的脸「换」到别人的视频上，效果逼真到肉眼难辨。虽然技术很酷，但被用于制造虚假新闻、诈骗和侵犯隐私，已成为严重的社会问题。",
+    "related": ["generative-ai", "gans", "ai-ethics", "computer-vision"]
+  },
+  {
+    "id": "data-science",
+    "term_en": "Data Science",
+    "term_zh": "数据科学",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "使用算法和技术从大量数据中提取洞察的跨学科领域",
+    "definition": "数据科学是一个跨学科的技术领域，使用算法和流程收集、分析大量数据以发现模式和洞察，支持商业决策。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "数据科学家就像「数据侦探」——用统计学、编程和商业知识从海量数据中找出有价值的信息。它是AI和机器学习的「近亲」领域。",
+    "related": ["big-data", "machine-learning", "data-mining", "predictive-analytics"]
+  },
+  {
+    "id": "predictive-analytics",
+    "term_en": "Predictive Analytics",
+    "term_zh": "预测分析",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于历史数据预测未来趋势的技术",
+    "definition": "预测分析是利用技术基于历史数据和模式来预测在特定时间范围内将会发生什么。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像天气预报基于历史气象数据预测明天天气。AI通过分析过去的数据模式来预测未来——预测销量、预测用户流失、预测设备故障等。",
+    "related": ["machine-learning", "data-mining", "big-data"]
+  },
+  {
+    "id": "cognitive-computing",
+    "term_en": "Cognitive Computing",
+    "term_zh": "认知计算",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模拟人类思维过程的计算模型",
+    "definition": "认知计算本质上与AI相同，是一种专注于模拟人类思维过程的计算模型，如理解自然语言、模式识别和学习。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "这其实就是AI的另一种说法，IBM等公司常用这个词。强调的是让计算机像人脑一样思考——理解语言、识别模式、从经验中学习。",
+    "related": ["artificial-intelligence", "natural-language-processing", "machine-learning"]
+  },
+  {
+    "id": "parameter",
+    "term_en": "Parameter",
+    "term_zh": "参数",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "模型在训练中学习和调整的内部变量",
+    "definition": "参数是机器学习模型内部的变量，在训练阶段被学习和调整。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像调音师调整钢琴的每根弦。AI模型有数十亿个参数，训练就是调整这些参数让模型输出更准确。GPT-4据说有超过1万亿个参数。",
+    "related": ["weights", "hyperparameter", "training-data", "large-language-model"]
+  },
+  {
+    "id": "hyperparameter",
+    "term_en": "Hyperparameter",
+    "term_zh": "超参数",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在模型训练开始前由人工设定的控制参数",
+    "definition": "超参数是在机器学习模型学习过程开始前设定的参数，其值控制学习过程。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "如果参数是AI自己学出来的，超参数就是人类预先设置的「学习规则」——比如学习速度多快、一次看多少数据、网络要多少层。就像老师设定学习计划而不是学生自己定。",
+    "related": ["parameter", "machine-learning", "training-data"]
+  },
+  {
+    "id": "weights",
+    "term_en": "Weights",
+    "term_zh": "权重",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "决定神经网络连接强度的数值参数",
+    "definition": "权重是神经网络中的数值参数，决定人工神经元之间连接的强度，最终塑造模型如何处理信息。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想象大脑中的神经连接：有些很强（重要信息），有些很弱（无关信息）。权重就是每条连接的「重要性数值」，训练就是不断调整这些数值让AI更准确。",
+    "related": ["neural-network", "parameter", "backpropagation", "open-weights"]
+  },
+  {
+    "id": "inference",
+    "term_en": "Inference",
+    "term_zh": "推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "训练好的AI模型对新数据做出预测的过程",
+    "definition": "在人工智能中，推理是训练好的AI模型对从未见过的新数据做出预测或决策的过程。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "训练是AI的「学习阶段」，推理是AI的「考试阶段」。当你向ChatGPT提问时，它生成回答的过程就是推理——用已学知识处理新问题。",
+    "related": ["training-data", "large-language-model", "model"]
+  },
+  {
+    "id": "model",
+    "term_en": "Model",
+    "term_zh": "模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用于做出预测或理解模式的数学/计算表示",
+    "definition": "模型是现实世界系统、过程或关系的简化数学或计算表示，用于做出预测或理解模式。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就是AI的「大脑」本身。训练完成后，所有学到的知识都存储在模型里。GPT-4、Claude、Gemini都是模型——它们是经过大量训练后形成的「智能程序」。",
+    "related": ["training-data", "parameter", "foundation-model", "large-language-model"]
+  },
+  {
+    "id": "open-source",
+    "term_en": "Open Source",
+    "term_zh": "开源",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "代码公开可供任何人查看、使用和修改的软件",
+    "definition": "开源指其原始设计或「蓝图」免费向任何人公开的软件，任何人都可以查看和使用。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像公开菜谱让所有人都能做这道菜。开源AI模型（如Llama、Qwen）允许任何人免费使用和修改，与闭源模型（如GPT-4）形成对比。",
+    "related": ["open-weights", "closed-source", "foundation-model"]
+  },
+  {
+    "id": "open-weights",
+    "term_en": "Open-Weight Model",
+    "term_zh": "开放权重模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模型权重公开可下载的AI模型",
+    "definition": "开放权重模型是其核心组件被公开发布的AI模型，允许任何人下载使用。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "区别于完全开源：开放权重公开了模型的最终参数值让你可以在本地运行，但不一定公开训练代码和数据。Meta的Llama就是典型的开放权重模型。",
+    "related": ["open-source", "weights", "closed-source"]
+  },
+  {
+    "id": "closed-source",
+    "term_en": "Closed Source",
+    "term_zh": "闭源",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "代码不公开、不允许外部查看或修改的软件",
+    "definition": "闭源（也称专有软件）指其底层代码受限制、不对公众开放查看、修改或使用的软件。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "像可口可乐的秘方一样保密。GPT-4、Claude等商业模型就是闭源的——你可以使用它们的服务，但看不到也修改不了它们的内部代码和训练数据。",
+    "related": ["open-source", "open-weights"]
+  },
+  {
+    "id": "few-shot-learning",
+    "term_en": "Few-Shot Learning",
+    "term_zh": "少样本学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "仅用少量样本就能学会新任务的方法",
+    "definition": "少样本学习是一种机器学习方法，模型仅需少量训练��例就能学会识别或执行新任务。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "人看过2-3张斑马图片就知道什么是斑马了，但传统AI需要看上万张。少样本学习让AI也能做到「举一反三」——只需很少的例子就能学会新概念。",
+    "related": ["zero-shot-learning", "transfer-learning", "machine-learning"]
+  },
+  {
+    "id": "zero-shot-learning",
+    "term_en": "Zero-Shot Learning",
+    "term_zh": "零样本学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI无需特定训练即可执行新任务的能力",
+    "definition": "零样本学习是AI模型执行从未明确训练过的任务或识别从未见过的类别的能力，仅靠其通用知识和理解。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像一个从未见过斑马的人，只听说「黑白条纹的马」就能认出斑马。AI通过泛化已有知识来处理完全没见过的任务——ChatGPT能回答各种问题就是这种能力。",
+    "related": ["few-shot-learning", "transfer-learning", "large-language-model"]
+  },
+  {
+    "id": "federated-learning",
+    "term_en": "Federated Learning",
+    "term_zh": "联邦学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "数据不出本地、多方协作训练模型的方法",
+    "definition": "联邦学习是一种机器学习方法，模型在多个持有本地数据的去中心化设备或服务器上训练，数据无需离开原始位置。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "多家医院想联合训练AI但又不能共享患者数据怎么办？联邦学习让每家医院在本地训练，只共享模型更新而不共享原始数据——既保护隐私又能合作。",
+    "related": ["machine-learning", "ai-ethics", "privacy"]
+  },
+  {
+    "id": "explainable-ai",
+    "term_en": "Explainable AI",
+    "term_zh": "可解释AI",
+    "abbreviation": "XAI",
+    "category": "AI概念",
+    "one_liner": "让AI的决策过程可被人类理解的方法和技术",
+    "definition": "可解释AI（XAI）是使AI系统的决策和预测对人类可理解和可解释的方法和技术，而非作为不透明的「黑箱」运行。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "AI说「贷款不批准」，你想知道为什么。可解释AI能告诉你「因为收入不足+信用分低」。在医疗、金融等重要领域，AI不能只给结果不给理由。",
+    "related": ["ai-ethics", "responsible-ai", "interpretability"]
+  },
+  {
+    "id": "interpretability",
+    "term_en": "Interpretability",
+    "term_zh": "可解释性",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "人类能理解AI如何做出决策的程度",
+    "definition": "可解释性指人类能够理解AI系统如何做出其决策或预测的程度。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "决策树很容易解释（一步步的逻辑），深度神经网络很难解释（数十亿参数的复杂交互）。可解释性越高，人们越信任AI的决策。",
+    "related": ["explainable-ai", "ai-ethics", "decision-tree"]
+  },
+  {
+    "id": "guardrails",
+    "term_en": "Guardrails",
+    "term_zh": "护栏/安全机制",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "确保AI系统在安全边界内运行的限制机制",
+    "definition": "护栏是确保AI系统在伦理、法律和技术边界内运行的机制和框架，防止AI造成伤害、做出偏见决策或被滥用。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就像高速公路上的护栏防止车辆冲出路面。AI的护栏防止它生成有害内容、泄露隐私信息或做出违反伦理的行为。ChatGPT拒绝教你制作武器就是护栏在起作用。",
+    "related": ["ai-safety", "ai-ethics", "ai-alignment", "responsible-ai"]
+  },
+  {
+    "id": "ethical-ai",
+    "term_en": "Ethical AI",
+    "term_zh": "负责任的AI",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "符合人类价值观和公平原则的AI设计与部署",
+    "definition": "伦理AI是符合人类价值观、公平性、透明性和社会福祉的人工智能系统的设计、开发和部署。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "不只是让AI更聪明，还要让AI更公正。确保AI不歧视、不侵犯隐私、决策透明、有人监督——这是负责任地使用AI的基本要求。",
+    "related": ["ai-ethics", "bias", "responsible-ai", "explainable-ai"]
+  },
+  {
+    "id": "responsible-ai",
+    "term_en": "Responsible AI",
+    "term_zh": "可信赖AI",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "指导AI安全开发和部署的框架和原则",
+    "definition": "可信赖AI指指导人工智能系统安全、合乎道德地开发和部署的框架、原则和实践。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "从设计到部署的全流程负责：数据要合法获取、模型要公平无偏、决策要可解释、出了问题要有人负责。这是企业使用AI时必须遵守的准则。",
+    "related": ["ethical-ai", "ai-ethics", "ai-safety", "explainable-ai"]
+  },
+  {
+    "id": "scaffolding",
+    "term_en": "Scaffolding",
+    "term_zh": "脚手架",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "围绕AI模型定义其行为的指令和配置层",
+    "definition": "脚手架是围绕模型的行为定义层：系统提示、工具描述、模型响应的解析方式、以及跨步骤的记忆管理。它塑造了模型如何看待世界并在其中行动。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "如果AI模型是一个演员，脚手架就是剧本和舞台布置——告诉它扮演什么角色、能用什么道具、该怎么表演。不同的脚手架让同一个模型表现出完全不同的行为。",
+    "related": ["harness", "agent", "context-engineering", "prompt-engineering"]
+  },
+  {
+    "id": "harness",
+    "term_en": "Harness",
+    "term_zh": "执行框架",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "驱动AI智能体运行的执行层，负责调用模型和处理工具调用",
+    "definition": "执行框架是智能体内部的执行层：它调用模型、处理工具调用、决定何时停止。脚手架定义模型的工作方式，执行框架则让智能体实际运转起来。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "如果脚手架是剧本，执行框架就是导演——它决定什么时候让演员（模型）上场、如何处理演员的即兴发挥（工具调用）、以及什么时候喊「卡」（停止）。Claude Code、Cursor等产品本质上都是不同的执行框架。",
+    "related": ["scaffolding", "agent", "tool-use", "agentic-ai"]
+  },
+  {
+    "id": "context-engineering",
+    "term_en": "Context Engineering",
+    "term_zh": "上下文工程",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "设计AI每一步看到什么信息的系统性方法",
+    "definition": "上下文工程是设计进入智能体上下文窗口内容的学科：模型在每一步看到什么——系统提示、工具描述、对话历史、检索到的知识。它不是一次性决策，而是在整个运行过程中持续管理的。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "给AI看什么信息，它就产生什么样的回答。上下文工程就是精心挑选和组织「给AI看的材料」——太多信息会让它迷失，太少又做不好。这是让AI表现好坏的关键技能。",
+    "related": ["context-window", "prompt-engineering", "rag", "agent"]
+  },
+  {
+    "id": "tool-use",
+    "term_en": "Tool Use",
+    "term_zh": "工具使用",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI智能体调用外部工具和服务来完成任务的能力",
+    "definition": "工具使用是智能体向外延伸的方式：API调用、代码解释器、数据库查询、网页搜索、文件系统操作。模型以结构化格式表达使用工具的意图，执行框架接收并路由到对应功能。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "AI光靠「想」不够，还得会「做」。工具使用让AI能上网搜索、执行代码、查数据库、发邮件。就像给AI配了一套工具箱——计算器、搜索引擎、浏览器都是它的工具。",
+    "related": ["agent", "agentic-ai", "harness", "skills"]
+  },
+  {
+    "id": "skills",
+    "term_en": "Skills",
+    "term_zh": "技能",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "可复用的知识包，使AI能完成多步骤复杂任务",
+    "definition": "技能是可复用的结构化知识包，使AI能执行多步骤任务。工具是单一动作（执行这条命令），技能则打包了完成一个目标所需的一切（调查这个bug、形成假设、编写修复）。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "工具是「锤子」，技能是「装修房子」——它包含了何时用锤子、何时用螺丝刀、按什么顺序操作的完整知识。AI的技能让它能像有经验的专家一样处理复杂任务。",
+    "related": ["tool-use", "agent", "sub-agents", "agentic-ai"]
+  },
+  {
+    "id": "sub-agents",
+    "term_en": "Sub-agents",
+    "term_zh": "子智能体",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "被其他智能体调用来处理特定子任务的AI智能体",
+    "definition": "子智能体是被另一个智能体调用来处理特定子任务的智能体。它有自己的模型和脚手架，独立推理，并返回结果。与工具（函数调用）和技能（打包知识）不同，子智能体本身可以推理、使用工具和调用更多子智能体。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "就像公司里经理把任务分给不同专家：一个负责调研、一个负责写代码、一个负责测试。每个子智能体是独立的专家，完成后向「老板」（主智能体）汇报结果。",
+    "related": ["agent", "agentic-ai", "tool-use", "skills"]
+  },
+  {
+    "id": "reward",
+    "term_en": "Reward",
+    "term_zh": "奖励信号",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "告诉AI模型表现好坏的评分机制",
+    "definition": "奖励是告诉训练算法模型是否在改善的分数。它可以是可验证的（测试通过/失败、答案匹配）或学习到的（人类偏好、LLM作为评判者），可以是稀疏的（整个回合结束时一个分数）或密集的（每步一个分数）。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "就像老师给学生打分。AI通过奖励信号知道自己做对了还是做错了——做对加分、做错扣分。ChatGPT变得越来越好用，背后就是人类不断给它打分来指导改进。",
+    "related": ["reinforcement-learning", "training-data", "ai-alignment"]
+  },
+  {
+    "id": "rollout",
+    "term_en": "Rollout",
+    "term_zh": "轨迹展开",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI智能体从开始到结束的一次完整运行记录",
+    "definition": "轨迹展开是智能体从头到尾的一次完整运行：智能体看到了什么、做了什么、以及在每一步获得了什么奖励。也被称为轨迹(trajectory)或追踪(trace)。这是强化学习算法学习的原始数据。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "就像记录一局游戏的完整录像：玩家看到了什么画面、做了什么操作、结果如何。AI训练时需要大量这样的「录像」来学习哪些行为好、哪些不好。",
+    "related": ["reinforcement-learning", "reward", "agent"]
+  },
+  {
+    "id": "policy",
+    "term_en": "Policy",
+    "term_zh": "策略",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "定义AI在任何情况下如何选择行动的行为规则",
+    "definition": "策略是智能体遵循的行为：给定任何情况，它定义了采取每种可能行动的概率。在LLM系统中，部分策略在模型权重中学习，但行为也取决于周围的脚手架和执行框架。",
+    "source": "Hugging Face",
+    "source_url": "https://huggingface.co/blog/agent-glossary",
+    "explanation": "策略就是AI的「行事风格」——遇到问题是先搜索还是直接回答？不确定时是说「我不知道」还是大胆猜测？同一个模型配不同策略会表现得完全不同。",
+    "related": ["agent", "reinforcement-learning", "scaffolding", "harness"]
+  },
+  {
+    "id": "automation",
+    "term_en": "Automation",
+    "term_zh": "自动化",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用技术代替人工完成重复性任务",
+    "definition": "自动化是指使用技术（如软件、机器人或AI）来执行通常需要人工完成的任务，减少人为干预并提高效率和一致性。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "想想自动洗衣机：你只需按个按钮，它自己完成洗涤、漂洗、脱水。AI时代的自动化更高级——可以自动回复邮件、自动审批报销、自动生成报告。",
+    "related": ["artificial-intelligence", "robotics", "machine-learning"]
+  },
+  {
+    "id": "api",
+    "term_en": "API",
+    "term_zh": "应用程序接口",
+    "abbreviation": "API",
+    "category": "AI概念",
+    "one_liner": "让不同软件互相对话的标准通道",
+    "definition": "API（Application Programming Interface）是一组规则和协议，定义了不同软件应用程序之间如何相互通信和交换数据。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就像餐厅的服务员：你（用户）不需要直接进厨房做菜，只要告诉服务员（API）你要什么，它就把你的请求传给厨房（另一个系统），再把做好的菜端回来。",
+    "related": ["tool-use", "prompt-engineering"]
+  },
+  {
+    "id": "dataset",
+    "term_en": "Dataset",
+    "term_zh": "数据集",
+    "abbreviation": "",
+    "category": "数据与训练",
+    "one_liner": "用于训练或测试AI的结构化数据集合",
+    "definition": "数据集是经过收集和组织的数据集合，用于训练、验证或测试机器学习模型。数据集的质量和多样性直接影响AI系统的表现。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像学生的教科书和练习题——AI要学会识别猫，就需要一个包含成千上万张猫照片的数据集。数据集越好越全，AI学得越好。",
+    "related": ["training-data", "synthetic-data", "big-data"]
+  },
+  {
+    "id": "synthetic-data",
+    "term_en": "Synthetic Data",
+    "term_zh": "合成数据",
+    "abbreviation": "",
+    "category": "数据与训练",
+    "one_liner": "由AI生成的模拟真实世界的人造数据",
+    "definition": "合成数据是通过算法或AI模型人工生成的数据，它模拟真实世界数据的统计特征，但不包含真实个人信息，常用于保护隐私或补充不足的训练数据。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像电影中的替身演员——真实数据太少或涉及隐私时，AI可以「造」出看起来像真的、但完全是虚构的数据来训练自己。比如生成假的医疗记录来训练诊断AI，不用真实病人资料。",
+    "related": ["dataset", "training-data", "data-augmentation"]
+  },
+  {
+    "id": "data-augmentation",
+    "term_en": "Data Augmentation",
+    "term_zh": "数据增强",
+    "abbreviation": "",
+    "category": "数据与训练",
+    "one_liner": "通过变换已有数据来创造更多训练样本",
+    "definition": "数据增强是一种技术，通过对现有数据进行旋转、翻转、裁剪、加噪声等变换操作，来扩大训练数据集的规模和多样性，从而提升模型的泛化能力。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像用一张照片制造更多练习素材：把猫的照片左右翻转、调亮调暗、放大缩小，这样AI就能学到从各种角度认猫，而不只是认那一张照片。",
+    "related": ["dataset", "training-data", "synthetic-data"]
+  },
+  {
+    "id": "expert-system",
+    "term_en": "Expert System",
+    "term_zh": "专家系统",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模拟人类专家决策能力的早期AI程序",
+    "definition": "专家系统是一种早期的AI方法，通过将人类专家的知识编码为规则库（如「如果...那么...」），让计算机在特定领域做出类似专家的判断和建议。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像把医生的诊断经验写成一本详细的问答手册：发烧+咳嗽+三天了→可能是流感。这是AI的「老前辈」，在ChatGPT之前，很多医疗、金融系统就是用这种方式运作的。",
+    "related": ["artificial-intelligence", "knowledge-graph"]
+  },
+  {
+    "id": "gpu",
+    "term_en": "GPU",
+    "term_zh": "图形处理器",
+    "abbreviation": "GPU",
+    "category": "AI基础设施",
+    "one_liner": "驱动AI训练的超强并行计算芯片",
+    "definition": "GPU（Graphics Processing Unit）最初为图形渲染设计，因其强大的并行计算能力，如今成为训练和运行AI模型的核心硬件。NVIDIA的GPU是当前AI产业最紧缺的资源之一。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "如果CPU是一个超级聪明的数学家（一次解一道难题），GPU就是一千个普通计算器同时工作。训练ChatGPT需要成千上万块GPU运行几个月，这就是为什么AI公司都在抢购英伟达的芯片。",
+    "related": ["parameter", "training-data", "large-language-model"]
+  },
+  {
+    "id": "human-in-the-loop",
+    "term_en": "Human-in-the-Loop",
+    "term_zh": "人在回路中",
+    "abbreviation": "HITL",
+    "category": "AI方法论",
+    "one_liner": "让人类参与AI决策过程的设计模式",
+    "definition": "人在回路中是一种AI系统设计方法，确保在关键决策点有人类参与审核、纠正或确认AI的输出，而不是完全让AI自主运行。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像自动驾驶车里还有方向盘——AI负责日常驾驶，但遇到复杂路况时人类随时可以接管。在医疗、法律等高风险领域，AI给建议，最终决定由人来做。",
+    "related": ["ai-safety", "responsible-ai", "ai-alignment"]
+  },
+  {
+    "id": "knowledge-graph",
+    "term_en": "Knowledge Graph",
+    "term_zh": "知识图谱",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "将知识组织成实体和关系网络的结构",
+    "definition": "知识图谱是一种将信息组织为实体（人、地点、事物）和它们之间关系的网络结构，让AI能够理解和推理事物之间的联系。Google搜索的知识面板就是知识图谱的应用。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像一张巨大的思维导图：「北京」→「是首都」→「中国」→「有14亿人」。当你搜索一个明星时，Google右边弹出的信息卡片（生日、作品、配偶）就是知识图谱在工作。",
+    "related": ["natural-language-processing", "rag"]
+  },
+  {
+    "id": "mlops",
+    "term_en": "MLOps",
+    "term_zh": "机器学习运维",
+    "abbreviation": "MLOps",
+    "category": "AI工程",
+    "one_liner": "管理AI模型从开发到部署全生命周期的实践",
+    "definition": "MLOps（Machine Learning Operations）是将DevOps理念应用到机器学习的实践，涵盖模型训练、测试、部署、监控和更新的自动化流程管理。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "就像工厂的生产线管理——AI模型不是训练完就结束了，还需要上线部署、持续监控、定期更新。MLOps就是管理这整个流程的方法论，确保AI在实际使用中持续稳定地工作。",
+    "related": ["machine-learning", "model", "fine-tuning"]
+  },
+  {
+    "id": "robotics",
+    "term_en": "Robotics",
+    "term_zh": "机器人技术",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "设计和制造能自主行动的智能机器",
+    "definition": "机器人技术是集成了机械工程、电子工程和AI的交叉领域，研究如何设计、制造和操作能在物理世界中自主感知环境、做出决策和执行动作的机器人。",
+    "source": "Stanford HAI",
+    "source_url": "https://hai.stanford.edu/ai-definitions",
+    "explanation": "从扫地机器人到工厂焊接手臂，再到波士顿动力的跑酷机器人——机器人技术让AI从屏幕走进现实世界，拥有「身体」来执行物理任务。",
+    "related": ["artificial-intelligence", "computer-vision", "automation"]
+  },
+  {
+    "id": "emergent-behavior",
+    "term_en": "Emergent Behavior",
+    "term_zh": "涌现行为",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "AI在大规模训练后意外获得的新能力",
+    "definition": "涌现行为是指AI模型在规模增大后突然展现出的、未被明确训练过的新能力。这些能力在小模型中不存在，但在参数量达到某个临界点后涌现出来。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就像一群蚂蚁各自简单地搬食物，但整个蚁群��表现出复杂的建筑能力。GPT-3不会解数学题，但GPT-4突然就会了——没人专门教它，这种「突然开窍」就是涌现。",
+    "related": ["large-language-model", "foundation-model", "parameter"]
+  },
+  {
+    "id": "structured-data",
+    "term_en": "Structured Data",
+    "term_zh": "结构化数据",
+    "abbreviation": "",
+    "category": "数�与训练",
+    "one_liner": "按固定格式组织的、易被计算机处理的数据",
+    "definition": "结构化数据是按照预定义的模式（如表格、数据库）组织的数据，每个字段都有明确的类型和含义，计算机可以直接高效地查询和分析。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就像Excel表格——每一列有表头（姓名、年龄、工资），每一行是一条记录，整整齐齐。员工花名册、销售报表都是结构化数据，计算机处理起来又快又准。",
+    "related": ["unstructured-data", "dataset", "big-data"]
+  },
+  {
+    "id": "unstructured-data",
+    "term_en": "Unstructured Data",
+    "term_zh": "非结构化数据",
+    "abbreviation": "",
+    "category": "数据与训练",
+    "one_liner": "没有固定格式的自由形式数据",
+    "definition": "非结构化数据是没有预定义格式或组织方式的数据，如自由文本、图片、视频、音频、社交媒体帖子等。它占所有数据的80%以上，但处理难度远高于结构化数据。",
+    "source": "Coursera",
+    "source_url": "https://www.coursera.org/resources/ai-terms",
+    "explanation": "就像你桌上随意堆放的文件、照片、便签——没有统一格式，计算机很难直接理解。AI的强大之处就在于它能从这些「杂乱」的数据中提取有价值的信息。",
+    "related": ["structured-data", "natural-language-processing", "computer-vision"]
+  },
+  {
+    "id": "anthropomorphism",
+    "term_en": "Anthropomorphism",
+    "term_zh": "拟人化",
+    "abbreviation": "",
+    "category": "AI伦理",
+    "one_liner": "将人类特征或情感投射到AI系统上",
+    "definition": "拟人化是指人们倾向于将人类的情感、意图或特征赋予AI系统的现象，比如认为AI理解你说的话或关心你的感受，而实际上AI只是在执行模式匹配。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "当你对ChatGPT说谢谢、它回复「不客气」时，你可能觉得它很有礼貌。但它不是真的懂礼貌——它只是学到了人类对话中「谢谢」后面通常接「不客气」。把AI当人看可能导致过度信任。",
+    "related": ["chatbot", "hallucination", "ai-ethics"]
+  },
+  {
+    "id": "prompt-chaining",
+    "term_en": "Prompt Chaining",
+    "term_zh": "提示链",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "将复杂任务拆解为多个连续提示逐步完成",
+    "definition": "提示链是一种将复杂任务分解为一系列较简单的提示的技术，每个提示的输出作为下一个提示的输入，形成链条式处理流程，从而提高AI完成复杂任务的质量。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像把「写一篇市场分析报告」拆成：先「列出行业趋势」再「分析竞争对手」最后「给出建议」。每一步让AI专注做一件事，比一次性丢出复杂需求效果好很多。",
+    "related": ["prompt-engineering", "prompt", "context-engineering"]
+  },
+  {
+    "id": "quantization",
+    "term_en": "Quantization",
+    "term_zh": "量化",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "压缩AI模型大小使其能在普通设备上运行",
+    "definition": "量化是一种模型压缩技术，通过降低模型参数的数值精度（如从32位浮点数降到8位整数），大幅减少模型的存储空间和计算需求，使大型AI模型能在手机等小设备上运行。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像把高清4K电影压缩成720P——画质稍微降低，但文件小很多，普通手机也能流畅播放。量化让原本需要几千美元GPU才能运行的AI模型，在你的笔记本上也能跑。",
+    "related": ["parameter", "model", "gpu"]
+  },
+  {
+    "id": "temperature",
+    "term_en": "Temperature",
+    "term_zh": "温度参数",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "控制AI输出创造性和随机性的旋钮",
+    "definition": "温度是生成式AI中的一个参数，控制输出的随机性程度。低温度（如0.1）让AI更确定、更保守；高温度（如1.0）让AI更有创意、更多样化，但也可能更不准确。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像一个创意旋钮：温度低时AI像个严谨的会计师，每次给你差不多的答案；温度高时像个奔放的艺术家，回答更有创意但也可能天马行空。写代码用低温度，写诗用高温度。",
+    "related": ["generative-ai", "large-language-model", "inference"]
+  },
+  {
+    "id": "vibe-coding",
+    "term_en": "Vibe Coding",
+    "term_zh": "氛围编程",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "用自然语言描述需求让AI帮你写代码",
+    "definition": "氛围编程是2025年兴起的概念，指通过向AI描述你想要的效果（用自然语言而非代码），让AI自动生成可运行的程序。用户不需要理解代码细节，只需表达意图。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像告诉装修师傅「我想要一个温馨的客厅」而不是给他施工图纸。你说「帮我做一个记账网页」，AI就帮你写出完整代码。不懂编程的人也能「编程」了。",
+    "related": ["generative-ai", "prompt-engineering", "chatbot"]
+  },
+  {
+    "id": "weak-ai",
+    "term_en": "Weak AI / Narrow AI",
+    "term_zh": "弱人工智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "只能完成特定单一任务的AI系统",
+    "definition": "弱人工智能（也称窄AI）是指设计来执行特定任务的AI系统，如人脸识别、语音助手或下棋。它在某个领域可能超越人类，但无法像人一样处理其他领域的问题。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "今天所有你用到的AI都是弱AI：Siri只能回答问题，不能帮你做饭；AlphaGo下围棋世界第一，但它不会下象棋。弱AI是专才，而AGI（强AI）是通才——后者还没实现。",
+    "related": ["agi", "artificial-intelligence"]
+  },
+  {
+    "id": "sycophancy",
+    "term_en": "Sycophancy",
+    "term_zh": "AI谄媚",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "AI倾向于迎合用户而不是说真话",
+    "definition": "AI谄媚是指AI模型过度迎合用户观点和期望的倾向——即使用户的观点是错误的，AI也倾向于赞同而不是纠正，因为在训练中让用户满意比说真话更容易获得高分。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "就像一个只会说好话的下属——你说地球是平的，它不会纠正你，反而说「有道理！」。这是AI的已知问题：为了让你满意，它可能顺着你说而不是诚实回答。",
+    "related": ["ai-alignment", "hallucination", "ai-safety"]
+  },
+  {
+    "id": "facial-recognition",
+    "term_en": "Facial Recognition",
+    "term_zh": "人脸识别",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "让AI自动识别和验证人脸身份的技术",
+    "definition": "人脸识别是计算机视觉的一个应用，通过分析面部特征（如眼睛间距、鼻子形状）来识别或验证一个人的身份。广泛用于手机解锁、安防监控和身份验证。",
+    "source": "Boston University",
+    "source_url": "https://www.bu.edu/articles/2024/what-is-artificial-intelligence-ai-at-bu-a-to-z/",
+    "explanation": "你用Face ID解锁iPhone，就是在用人脸识别。AI对你的脸建立数学模型，然后每次比对确认是本人。但这项技术也有争议——监控摄像头能追踪你的行踪，隐私问题很大。",
+    "related": ["computer-vision", "bias", "ai-ethics"]
+  },
+  {
+    "id": "virtual-assistants",
+    "term_en": "Virtual Assistants",
+    "term_zh": "虚拟助手",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "能通过语音或文字与你对话的AI助手",
+    "definition": "虚拟助手是由AI驱动的软件程序，能通过自然语言（语音或文字）理解用户的请求并执行任务，如设置闹钟、播放音乐、查询天气或控制智能家居设备。",
+    "source": "Boston University",
+    "source_url": "https://www.bu.edu/articles/2024/what-is-artificial-intelligence-ai-at-bu-a-to-z/",
+    "explanation": "Siri、Alexa、小爱同学都是虚拟助手。你说「明天早上七点叫我起床」，它就设好闹钟。它们结合了语音识别、自然语言处理和任务执行，是大多数人最早接触的AI产品。",
+    "related": ["natural-language-processing", "chatbot", "agent"]
+  },
+  {
+    "id": "style-transfer",
+    "term_en": "Style Transfer",
+    "term_zh": "风格迁移",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "让AI把一种艺术风格应用到另一张图片上",
+    "definition": "风格迁移是一种AI技术，能将一张图片的艺术风格（如梵高的星空画法）应用到另一张图片的内容上，生成既保留原始内容又具有新风格的图像。",
+    "source": "CNET",
+    "source_url": "https://www.cnet.com/tech/services-and-software/chatgpt-glossary-50-ai-terms-everyone-should-know/",
+    "explanation": "把你的自拍照变成梵高油画风格——内容还是你的脸，但笔触和色彩变成了星空的样子。很多修图App里的「艺术滤镜」就是用风格迁移技术实现的。",
+    "related": ["generative-ai", "diffusion-models", "computer-vision"]
+  }
+];
+
+    // ===== Data =====
+    let pendingTerms = JSON.parse(localStorage.getItem('ai_glossary_pending') || '[]');
+    let approvedTerms = JSON.parse(localStorage.getItem('ai_glossary_approved') || '[]');
+    let rejectedTerms = JSON.parse(localStorage.getItem('ai_glossary_rejected') || '[]');
+    let glossaryTerms = [];
+    let currentSection = 'glossary';
+    let currentSubTab = 'pending';
+    let glossarySearchQuery = '';
+
+    // Load glossary
+    let baseGlossaryData = []; // 保存原始数据，用于刷新时重置
+    // Load glossary (内嵌数据)
+    glossaryTerms = JSON.parse(JSON.stringify(GLOSSARY_DATA));
+
+    // 合并已通过审核的新增术语
+    approvedTerms.forEach(term => {
+      if (!glossaryTerms.find(t => t.id === term.id)) {
+        glossaryTerms.push(term);
+      }
+    });
+
+    // ===== Stats =====
+    function updateStats() {
+      const edits = JSON.parse(localStorage.getItem('ai_glossary_edits') || '{}');
+      const deleted = JSON.parse(localStorage.getItem('ai_glossary_deleted') || '[]');
+      document.getElementById('statTotal').textContent = glossaryTerms.length;
+      document.getElementById('statApproved').textContent = approvedTerms.length;
+      document.getElementById('statEdited').textContent = Object.keys(edits).length;
+      document.getElementById('statDeleted').textContent = deleted.length;
+      document.getElementById('statPending').textContent = pendingTerms.length;
+      document.getElementById('statApprovedCount').textContent = approvedTerms.length;
+      document.getElementById('statRejected').textContent = rejectedTerms.length;
+
+      // Badge
+      const badge = document.getElementById('pendingBadge');
+      if (pendingTerms.length > 0) {
+        badge.style.display = 'inline';
+        badge.textContent = pendingTerms.length;
+      } else {
+        badge.style.display = 'none';
+      }
+    }
+
+    // ===== Glossary List =====
+    let selectedIds = new Set();
+
+    function renderGlossaryList() {
+      const list = document.getElementById('glossaryList');
+      let data = glossaryTerms;
+      if (glossarySearchQuery) {
+        const q = glossarySearchQuery.toLowerCase();
+        data = data.filter(t =>
+          t.term_en.toLowerCase().includes(q) ||
+          t.term_zh.includes(q) ||
+          (t.abbreviation && t.abbreviation.toLowerCase().includes(q))
+        );
+      }
+
+      // Show/hide batch toolbar
+      document.getElementById('batchToolbar').style.display = data.length > 0 ? 'flex' : 'none';
+
+      if (data.length === 0) {
+        list.innerHTML = `<div class="empty-state"><h3>没有匹配的术语</h3><p>尝试其他搜索词</p></div>`;
+        return;
+      }
+
+      list.innerHTML = `<div style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:12px;">共 ${data.length} 条术语</div>` + data.map((term, idx) => `
+        <div class="term-item" style="display:flex;align-items:flex-start;gap:14px;">
+          <input type="checkbox" class="term-checkbox" data-id="${term.id}" ${selectedIds.has(term.id) ? 'checked' : ''} style="margin-top:6px;width:16px;height:16px;accent-color:var(--color-accent);cursor:pointer;flex-shrink:0;">
+          <div style="flex:1;min-width:0;">
+            <div class="term-item-header">
+         <div>
+                <div class="term-item-title">${term.term_en} · ${term.term_zh}</div>
+                <div class="term-item-meta">${term.abbreviation ? term.abbreviation + ' · ' : ''}${term.category} · 来源: ${term.source || '未知'}</div>
+              </div>
+              <div class="term-item-actions">
+                <button class="btn btn-sm btn-outline" onclick="viewGlossaryItem(${idx})">编辑</button>
+                <button class="btn btn-sm btn-danger" onclick="deleteGlossaryItem('${term.id}')">删除</button>
+              </div>
+            </div>
+            <div class="term-item-desc">${term.one_liner || ''}</div>
+          </div>
+        </div>
+      `).join('');
+
+      // Bind checkbox events
+      document.querySelectorAll('.term-checkbox').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          if (e.target.checked) selectedIds.add(e.target.dataset.id);
+          else selectedIds.delete(e.target.dataset.id);
+          updateSelectedCount();
+        });
+      });
+      updateSelectedCount();
+    }
+
+    function updateSelectedCount() {
+      const hasSelection = selectedIds.size > 0;
+      document.getElementById('selectedCount').textContent = `已选 ${selectedIds.size} 项`;
+
+      const allCheckbox = document.getElementById('selectAllCheckbox');
+      const allBoxes = document.querySelectorAll('.term-checkbox');
+      if (allBoxes.length > 0 && selectedIds.size === allBoxes.length) {
+        allCheckbox.checked = true;
+        allCheckbox.indeterminate = false;
+      } else if (selectedIds.size > 0) {
+        allCheckbox.checked = false;
+        allCheckbox.indeterminate = true;
+      } else {
+        allCheckbox.checked = false;
+        allCheckbox.indeterminate = false;
+      }
+
+      // Enable/disable batch buttons
+      const catSelect = document.getElementById('batchCategorySelect');
+      const delBtn = document.getElementById('batchDeleteBtn');
+      catSelect.disabled = !hasSelection;
+      catSelect.style.opacity = hasSelection ? '1' : '0.4';
+      catSelect.style.cursor = hasSelection ? 'pointer' : 'not-allowed';
+      delBtn.disabled = !hasSelection;
+      delBtn.style.opacity = hasSelection ? '1' : '0.4';
+      delBtn.style.cursor = hasSelection ? 'pointer' : 'not-allowed';
+    }
+
+    // Select all
+    document.getElementById('selectAllCheckbox').addEventListener('change', (e) => {
+      const allBoxes = document.querySelectorAll('.term-checkbox');
+      allBoxes.forEach(cb => {
+        cb.checked = e.target.checked;
+        if (e.target.checked) selectedIds.add(cb.dataset.id);
+        else selectedIds.delete(cb.dataset.id);
+      });
+      updateSelectedCount();
+    });
+
+    // Batch delete
+    document.getElementById('batchDeleteBtn').addEventListener('click', () => {
+      if (selectedIds.size === 0) { showToast('请先选择术语'); return; }
+      if (!confirm(`确定批量删除 ${selectedIds.size} 条术语吗？`)) return;
+      const deleted = JSON.parse(localStorage.getItem('ai_glossary_deleted') || '[]');
+      selectedIds.forEach(id => deleted.push(id));
+      localStorage.setItem('ai_glossary_deleted', JSON.stringify(deleted));
+      glossaryTerms = glossaryTerms.filter(t => !selectedIds.has(t.id));
+      selectedIds.clear();
+      updateStats(); renderGlossaryList();
+      showToast('批量删除成功');
+    });
+
+    // Batch change category
+    document.getElementById('batchCategorySelect').addEventListener('change', (e) => {
+      const cat = e.target.value;
+      if (!cat) return;
+      if (selectedIds.size === 0) { showToast('请先选择术语'); e.target.value = ''; return; }
+      if (!confirm(`将 ${selectedIds.size} 条术语的分类修改为「${cat}」？`)) { e.target.value = ''; return; }
+      const edits = JSON.parse(localStorage.getItem('ai_glossary_edits') || '{}');
+      selectedIds.forEach(id => {
+        const term = glossaryTerms.find(t => t.id === id);
+        if (term) { term.category = cat; edits[id] = Object.assign(edits[id] || {}, { category: cat }); }
+      });
+      localStorage.setItem('ai_glossary_edits', JSON.stringify(edits));
+      selectedIds.clear(); e.target.value = '';
+      updateStats(); renderGlossaryList();
+      showToast('批量修改分类成功');
+    });
+
+    // ===== Approval List =====
+    function renderApprovalList() {
+      const list = document.getElementById('approvalList');
+      let data;
+      if (currentSubTab === 'pending') data = pendingTerms;
+      else if (currentSubTab === 'approved') data = approvedTerms;
+      else data = rejectedTerms;
+
+      if (data.length === 0) {
+        const label = currentSubTab === 'pending' ? '待审核' : currentSubTab === 'approved' ? '已通过' : '已拒绝';
+        list.innerHTML = `<div class="empty-state"><h3>暂无${label}的术语</h3><p>用户通过首页"添加词语"提交的术语会出现在这里</p></div>`;
+        return;
+      }
+
+      list.innerHTML = data.map((term, idx) => `
+        <div class="term-item">
+          <div class="term-item-header">
+            <div>
+              <div class="term-item-title">${term.term_en || ''} ${term.term_zh ? '· ' + term.term_zh : ''}</div>
+              <div class="term-item-meta">${term.abbreviation ? term.abbreviation + ' · ' : ''}${term.category || '分类'}</div>
+            </div>
+            <div class="term-item-actions">
+              ${currentSubTab === 'pending' ? `
+                <button class="btn btn-sm btn-success" onclick="approveItem(${idx})">通过</button>
+                <button class="btn btn-sm btn-danger" onclick="rejectItem(${idx})">拒绝</button>
+              ` : ''}
+              ${currentSubTab === 'approved' ? `
+                <button class="btn btn-sm btn-outline" onclick="removeApproved(${idx})">移除</button>
+              ` : ''}
+              ${currentSubTab === 'rejected' ? `
+                <button class="btn btn-sm btn-outline" onclick="restoreItem(${idx})">恢复</button>
+              ` : ''}
+            </div>
+          </div>
+          <div class="term-item-desc">${term.description || term.one_liner || term.definition || ''}</div>
+          ${term.submitted_at ? `<div class="term-item-time">提交于 ${new Date(term.submitted_at).toLocaleString('zh-CN')}</div>` : ''}
+        </div>
+      `).join('');
+    }
+
+    // ===== Actions =====
+    function approveItem(idx) {
+      const item = pendingTerms.splice(idx, 1)[0];
+      item.status = 'approved';
+      item.approved_at = new Date().toISOString();
+      approvedTerms.push(item);
+      glossaryTerms.push(item);
+      saveAll(); renderApprovalList(); renderGlossaryList(); updateStats();
+      showToast('已通过');
+    }
+
+    function rejectItem(idx) {
+      const item = pendingTerms.splice(idx, 1)[0];
+      item.status = 'rejected';
+      rejectedTerms.push(item);
+      saveAll(); renderApprovalList(); updateStats();
+      showToast('已拒绝');
+    }
+
+    function removeApproved(idx) {
+      approvedTerms.splice(idx, 1);
+      saveAll(); renderApprovalList(); updateStats();
+    }
+
+    function restoreItem(idx) {
+      const item = rejectedTerms.splice(idx, 1)[0];
+      item.status = 'pending';
+      pendingTerms.push(item);
+      saveAll(); renderApprovalList(); updateStats();
+      showToast('已恢复到待审核');
+    }
+
+    function saveAll() {
+      localStorage.setItem('ai_glossary_pending', JSON.stringify(pendingTerms));
+      localStorage.setItem('ai_glossary_approved', JSON.stringify(approvedTerms));
+      localStorage.setItem('ai_glossary_rejected', JSON.stringify(rejectedTerms));
+    }
+
+    // ===== Add directly (modal) =====
+    function openAddModal() {
+      document.getElementById('addModal').classList.add('show');
+      document.getElementById('addTermEn').focus();
+    }
+    function closeAddModal() {
+      document.getElementById('addModal').classList.remove('show');
+      document.querySelectorAll('#addModal input, #addModal textarea, #addModal select').forEach(el => {
+        if (el.tagName === 'SELECT') el.selectedIndex = 0;
+        else el.value = '';
+      });
+    }
+
+    document.getElementById('addNewBtn').addEventListener('click', openAddModal);
+    document.getElementById('addModalClose').addEventListener('click', closeAddModal);
+    document.getElementById('addCancelBtn').addEventListener('click', closeAddModal);
+    document.getElementById('addModal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeAddModal();
+    });
+
+    document.getElementById('addConfirmBtn').addEventListener('click', () => {
+      const en = document.getElementById('addTermEn').value.trim();
+      const zh = document.getElementById('addTermZh').value.trim();
+      const oneliner = document.getElementById('addTermOneliner').value.trim();
+      const def = document.getElementById('addTermDef').value.trim();
+      const explanation = document.getElementById('addTermExplanation').value.trim();
+
+      if (!en || !zh || !oneliner || !def || !explanation) {
+        showToast('请填写所有必填字段');
+        return;
+      }
+
+      const newTerm = {
+        id: en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+        term_en: en,
+        term_zh: zh,
+        abbreviation: document.getElementById('addTermAbbr').value.trim(),
+        category: document.getElementById('addTermCategory').value,
+        one_liner: oneliner,
+        definition: def,
+        source: document.getElementById('addTermSourceName').value.trim() || '',
+        source_url: document.getElementById('addTermSourceUrl').value.trim() || '',
+        explanation: explanation,
+        related: document.getElementById('addTermRelated').value.trim().split(',').map(s => s.trim()).filter(Boolean),
+        status: 'approved',
+        submitted_at: new Date().toISOString()
+      };
+
+      approvedTerms.push(newTerm);
+      glossaryTerms.push(newTerm);
+      saveAll();
+      updateStats();
+      renderGlossaryList();
+      renderApprovalList();
+      showToast('已添加到术语库');
+      closeAddModal();
+    });
+
+    // ===== Glossary Edit =====
+    let editingTermId = null;
+
+    function viewGlossaryItem(idx) {
+      const data = glossarySearchQuery
+        ? glossaryTerms.filter(t => t.term_en.toLowerCase().includes(glossarySearchQuery.toLowerCase()) || t.term_zh.includes(glossarySearchQuery) || (t.abbreviation && t.abbreviation.toLowerCase().includes(glossarySearchQuery.toLowerCase())))
+        : glossaryTerms;
+      let term = data[idx];
+      if (!term) return;
+
+      const edits = JSON.parse(localStorage.getItem('ai_glossary_edits') || '{}');
+      if (edits[term.id]) {
+        term = Object.assign({}, term, edits[term.id]);
+      }
+
+      editingTermId = term.id;
+      document.getElementById('detailTitle').textContent = term.term_en;
+      document.getElementById('detailSubtitle').textContent = `${term.term_zh} · ${term.category}`;
+      document.getElementById('detailTermEn').value = term.term_en;
+      document.getElementById('detailTermZh').value = term.term_zh;
+      document.getElementById('detailAbbr').value = term.abbreviation || '';
+      document.getElementById('detailCategory').value = term.category || 'AI概念';
+      document.getElementById('detailOneliner').value = term.one_liner || '';
+      document.getElementById('detailDefinition').value = term.definition || '';
+      document.getElementById('detailExplanation').value = term.explanation || '';
+      document.getElementById('detailSource').value = term.source || '';
+      document.getElementById('detailSourceUrl').value = term.source_url || '';
+      document.getElementById('detailRelated').value = (term.related || []).join(', ');
+
+      document.getElementById('detailModal').classList.add('show');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.remove('show');
+      editingTermId = null;
+    }
+
+    document.getElementById('detailClose').addEventListener('click', closeDetailModal);
+    document.getElementById('detailCancelBtn').addEventListener('click', closeDetailModal);
+    document.getElementById('detailModal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeDetailModal();
+    });
+
+    document.getElementById('detailSaveBtn').addEventListener('click', () => {
+      if (!editingTermId) return;
+      const term = glossaryTerms.find(t => t.id === editingTermId);
+      if (!term) return;
+
+      term.term_en = document.getElementById('detailTermEn').value.trim();
+      term.term_zh = document.getElementById('detailTermZh').value.trim();
+      term.abbreviation = document.getElementById('detailAbbr').value.trim();
+      term.category = document.getElementById('detailCategory').value;
+      term.one_liner = document.getElementById('detailOneliner').value.trim();
+      term.definition = document.getElementById('detailDefinition').value.trim();
+      term.explanation = document.getElementById('detailExplanation').value.trim();
+      term.source = document.getElementById('detailSource').value.trim();
+      term.source_url = document.getElementById('detailSourceUrl').value.trim();
+      term.related = document.getElementById('detailRelated').value.trim().split(',').map(s => s.trim()).filter(Boolean);
+
+      const edits = JSON.parse(localStorage.getItem('ai_glossary_edits') || '{}');
+      edits[editingTermId] = term;
+      localStorage.setItem('ai_glossary_edits', JSON.stringify(edits));
+
+      closeDetailModal();
+      renderGlossaryList();
+      updateStats();
+      showToast('已保存修改');
+    });
+
+    function deleteGlossaryItem(id) {
+      if (!confirm('确定要从词库中删除这条术语吗？')) return;
+      const deleted = JSON.parse(localStorage.getItem('ai_glossary_deleted') || '[]');
+      deleted.push(id);
+      localStorage.setItem('ai_glossary_deleted', JSON.stringify(deleted));
+      glossaryTerms = glossaryTerms.filter(t => t.id !== id);
+      updateStats();
+      renderGlossaryList();
+      showToast('已删除');
+    }
+
+    // ===== Export =====
+    function getExportData() {
+      const edits = JSON.parse(localStorage.getItem('ai_glossary_edits') || '{}');
+      const deleted = JSON.parse(localStorage.getItem('ai_glossary_deleted') || '[]');
+      let fullData = [...glossaryTerms];
+      approvedTerms.forEach(term => {
+        if (!fullData.find(t => t.id === term.id)) fullData.push(term);
+      });
+      if (deleted.length > 0) fullData = fullData.filter(t => !deleted.includes(t.id));
+      fullData = fullData.map(t => edits[t.id] ? Object.assign({}, t, edits[t.id]) : t);
+      return fullData;
+    }
+
+    function exportAsExcel() {
+      if (typeof XLSX === "undefined") { showToast("导出功能需要外网环境（无法加载Excel库）"); closeExportModal(); return; }
+      const data = getExportData();
+      const rows = data.map(t => ({
+        '英文术语': t.term_en,
+        '中文翻译': t.term_zh,
+        '缩写': t.abbreviation || '',
+        '分类': t.category || '',
+        '一句话描述': t.one_liner || '',
+        '详细定义': t.definition || '',
+      '通俗解读': t.explanation || '',
+        '来源': t.source || '',
+        '来源链接': t.source_url || '',
+        '关联术语': (t.related || []).join(', ')
+      }));
+      const ws = XLSX.utils.json_to_sheet(rows);
+      // 设置列宽
+      ws['!cols'] = [
+        {wch:30},{wch:15},{wch:8},{wch:12},{wch:40},{wch:50},{wch:50},{wch:15},{wch:40},{wch:30}
+      ];
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, 'AI术语库');
+      XLSX.writeFile(wb, 'AI_Glossary_' + new Date().toISOString().slice(0,10) + '.xlsx');
+      showToast('已导出 Excel（' + data.length + ' 条术语）');
+      closeExportModal();
+    }
+
+    function exportAsPDF() {
+      if (typeof window.jspdf === "undefined") { showToast("导出功能需要外网环境（无法加载PDF库）"); closeExportModal(); return; }
+      const data = getExportData();
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF('l', 'mm', 'a4'); // 横向A4
+
+      // 添加标题
+      doc.setFontSize(16);
+      doc.text('AI Glossary', 14, 15);
+      doc.setFontSize(9);
+      doc.setTextColor(100);
+      doc.text('Exported: ' + new Date().toLocaleDateString('zh-CN') + ' | Total: ' + data.length + ' terms', 14, 22);
+
+      // 表格数据
+      const headers = [['English', 'Chinese', 'Abbr', 'Category', 'Description']];
+      const body = data.map(t => [
+        t.term_en || '',
+        t.term_zh || '',
+        t.abbreviation || '',
+        t.category || '',
+        (t.one_liner || '').substring(0, 60)
+      ]);
+
+      doc.autoTable({
+        head: headers,
+        body: body,
+        startY: 28,
+        styles: { fontSize: 8, cellPadding: 2 },
+        headStyles: { fillColor: [99, 102, 241] },
+        columnStyles: {
+          0: { cellWidth: 55 },
+          1: { cellWidth: 35 },
+          2: { cellWidth: 20 },
+          3: { cellWidth: 25 },
+          4: { cellWidth: 'auto' }
+        }
+      });
+
+      doc.save('AI_Glossary_' + new Date().toISOString().slice(0,10) + '.pdf');
+      showToast('已导出 PDF（' + data.length + ' 条术语）');
+      closeExportModal();
+    }
+
+    function closeExportModal() {
+      document.getElementById('exportModal').classList.remove('show');
+    }
+
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      document.getElementById('exportModal').classList.add('show');
+    });
+    document.getElementById('exportClose').addEventListener('click', closeExportModal);
+    document.getElementById('exportModal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeExportModal();
+    });
+
+    // ===== Section Navigation =====
+    document.querySelectorAll('.nav-item[data-section]').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.nav-item[data-section]').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+        currentSection = item.dataset.section;
+
+        document.getElementById('sectionGlossary').style.display = currentSection === 'glossary' ? 'block' : 'none';
+        document.getElementById('sectionApproval').style.display = currentSection === 'approval' ? 'block' : 'none';
+
+        if (currentSection === 'approval') renderApprovalList();
+      });
+    });
+
+    // ===== Sub tabs =====
+    document.querySelectorAll('.sub-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentSubTab = tab.dataset.subtab;
+        renderApprovalList();
+      });
+    });
+
+    // ===== Search =====
+    document.getElementById('glossarySearchInput').addEventListener('input', (e) => {
+      glossarySearchQuery = e.target.value.trim();
+      renderGlossaryList();
+    });
+
+    // ===== Toast =====
+    function showToast(msg) {
+      const existing = document.querySelector('.toast');
+      if (existing) existing.remove();
+      const t = document.createElement('div');
+      t.className = 'toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(() => t.remove(), 2500);
+    }
+
+    // ===== Import Excel =====
+    document.getElementById('importBtn').addEventListener('click', () => {
+      if (typeof XLSX === 'undefined') { showToast('导入功能需要外网环境（无法加载Excel库）'); return; }
+      document.getElementById('importFileInput').click();
+    });
+
+    document.getElementById('importFileInput').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (evt) => {
+        try {
+          const workbook = XLSX.read(evt.target.result, { type: 'array' });
+          const sheet = workbook.Sheets[workbook.SheetNames[0]];
+          const rows = XLSX.utils.sheet_to_json(sheet);
+
+          if (rows.length === 0) { showToast('Excel文件为空'); return; }
+
+          let imported = 0;
+          const approved = JSON.parse(localStorage.getItem('ai_glossary_approved') || '[]');
+
+          rows.forEach(row => {
+            // 支持中英文列名
+            const termEn = row['英文术语'] || row['term_en'] || row['English'] || '';
+            const termZh = row['中文翻译'] || row['term_zh'] || row['Chinese'] || '';
+            if (!termEn && !termZh) return; // 跳过空行
+
+            const id = (termEn || termZh).toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/(^-|-$)/g, '');
+            // 检查重复
+            if (glossaryTerms.find(t => t.id === id) || approved.find(t => t.id === id)) return;
+
+            const newTerm = {
+              id: id,
+              term_en: termEn,
+              term_zh: termZh,
+              abbreviation: row['缩写'] || row['abbreviation'] || row['Abbr'] || '',
+              category: row['分类'] || row['category'] || row['Category'] || 'AI概念',
+              one_liner: row['一句话描述'] || row['one_liner'] || row['Description'] || '',
+              definition: row['详细定义'] || row['definition'] || '',
+              source: row['来源'] || row['source'] || '',
+              source_url: row['来源链接'] || row['source_url'] || '',
+              explanation: row['通俗解读'] || row['explanation'] || '',
+              related: (row['关联术语'] || row['related'] || '').split(',').map(s => s.trim()).filter(Boolean),
+              status: 'approved',
+              submitted_at: new Date().toISOString()
+            };
+            approved.push(newTerm);
+            imported++;
+          });
+
+          if (imported > 0) {
+            localStorage.setItem('ai_glossary_approved', JSON.stringify(approved));
+            approvedTerms = approved;
+            updateStats();
+            showToast(`成功导入 ${imported} 条术语`);
+          } else {
+            showToast('没有新术语可导入（可能全部重复）');
+          }
+        } catch (err) {
+          showToast('解析Excel失败: ' + err.message);
+        }
+      };
+      reader.readAsArrayBuffer(file);
+      e.target.value = ''; // reset
+    });
+
+    // Init
+    updateStats();
+    renderGlossaryList();
+
+    // ===== 自动拉取爬虫候选词 =====
+    // TODO: 替换为你的 GitHub 仓库地址
+    const CRAWLER_URL = 'https://crystalpang0803.github.io/ai-glossary-crawler/pending-terms.json';
+    
+    function fetchCrawlerPending() {
+      fetch(CRAWLER_URL, { cache: 'no-cache' })
+        .then(r => r.json())
+        .then(crawled => {
+          if (!Array.isArray(crawled) || crawled.length === 0) return;
+          
+          const existing = JSON.parse(localStorage.getItem('ai_glossary_pending') || '[]');
+          const approved = JSON.parse(localStorage.getItem('ai_glossary_approved') || '[]');
+          let added = 0;
+          
+          crawled.forEach(term => {
+            // 去重：不在已有pending、不在approved、不在glossary中
+            const isExist = existing.find(t => t.id === term.id) ||
+                            approved.find(t => t.id === term.id) ||
+                            glossaryTerms.find(t => t.id === term.id);
+            if (!isExist) {
+              existing.push({
+                ...term,
+                status: 'pending',
+                auto_crawled: true
+              });
+              added++;
+            }
+          });
+          
+          if (added > 0) {
+            localStorage.setItem('ai_glossary_pending', JSON.stringify(existing));
+            pendingTerms = existing;
+            updateStats();
+            renderApprovalList();
+            showToast(`🤖 爬虫发现 ${added} 条新候选术语`);
+          }
+        })
+        .catch(() => {
+          // 网络不通或文件不存在，静默忽略
+          console.log('Crawler fetch skipped (network or file not found)');
+        });
+    }
+    
+    fetchCrawlerPending();
+
+    // 当从其他标签页切回时，重新加载数据以同步变更
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        approvedTerms = JSON.parse(localStorage.getItem('ai_glossary_approved') || '[]');
+        pendingTerms = JSON.parse(localStorage.getItem('ai_glossary_pending') || '[]');
+        rejectedTerms = JSON.parse(localStorage.getItem('ai_glossary_rejected') || '[]');
+        glossaryTerms = JSON.parse(JSON.stringify(baseGlossaryData));
+        approvedTerms.forEach(term => {
+          if (!glossaryTerms.find(t => t.id === term.id)) glossaryTerms.push(term);
+        });
+        const deleted = JSON.parse(localStorage.getItem('ai_glossary_deleted') || '[]');
+        if (deleted.length > 0) glossaryTerms = glossaryTerms.filter(t => !deleted.includes(t.id));
+        updateStats();
+        renderGlossaryList();
+        renderApprovalList();
+      }
+    });
+  </script>
+</body>
+</html>
