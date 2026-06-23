@@ -49,13 +49,13 @@ async function loadGlossary() {
 
   // 独立加载，一个失败不影响另一个
   try {
-    official = await fetchJSON('/glossary', 'data/glossary.json');
+    official = await fetchJSON('/terms?status=official', '/data/glossary.json');
   } catch (e) {
     console.warn('加载词库失败:', e.message);
   }
 
   try {
-    hot = await fetchJSON('/hot-terms', 'data/hot-terms.json');
+    hot = await fetchJSON('/hot-terms', '/data/hot-terms.json');
   } catch (e) {
     console.warn('加载热门术语失败:', e.message);
   }
