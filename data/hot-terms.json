@@ -1,74 +1,466 @@
 [
   {
-    "id": "mixture-of-experts",
-    "term_en": "Mixture of Experts",
-    "term_zh": "混合专家模型",
-    "abbreviation": "MoE",
-    "category": "模型架构",
-    "one_liner": "把大模型拆成多个\"小专家\"，每次只激活最擅长的那几个",
-    "definition": "MoE是一种模型架构，将大模型分解为多个专门的子网络（专家），通过路由机制动态选择最相关的专家来处理输入，从而在保持模型容量的同时降低计算成本。",
-    "source": "arXiv, Hugging Face",
-    "source_url": "",
-    "explanation": "想象一个大公司有很多部门，每次客户来只需要调动最相关的2-3个部门处理，而不是让所有部门都开工。这样效率高、成本低。",
-    "related": ["transformer", "scaling-law"],
+    "id": "artificial-intelligence",
+    "rank": 1,
+    "term_en": "Artificial Intelligence",
+    "term_zh": "人工智能",
+    "abbreviation": "AI",
+    "category": "AI概念",
+    "one_liner": "让机器模拟人类智能的技术领域",
+    "appear_count": 53,
+    "sources": [
+      "量子位",
+      "Anthropic",
+      "GitHub Blog",
+      "DeepMind Blog",
+      "Anthropic News",
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/06/437425.html",
+      "https://www.qbitai.com/2026/06/437340.html",
+      "https://www.qbitai.com/2026/06/437308.html",
+      "https://github.blog/ai-and-ml/llms/accelerating-researchers-and-developers-building-multilingual-ai-with-a-new-open-dataset/",
+      "https://github.blog/news-insights/company-news/github-availability-report-may-2026/"
+    ],
+    "matched_articles": [
+      {
+        "title": "57场面试杀进OpenAI！华人博士开源「AI面经」，含泪推荐",
+        "link": "https://www.qbitai.com/2026/06/437425.html",
+        "source": "量子位"
+      },
+      {
+        "title": "马斯克又盯上AI基建：特斯拉要卖“算力积木”了",
+        "link": "https://www.qbitai.com/2026/06/437340.html",
+        "source": "量子位"
+      },
+      {
+        "title": "AI硬件席卷618，钉钉A1包揽天猫、抖音、京东销量冠军",
+        "link": "https://www.qbitai.com/2026/06/437308.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "inference",
+    "rank": 2,
+    "term_en": "Inference",
+    "term_zh": "推理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "使用训练好的模型对新数据进行预测的过程",
+    "appear_count": 7,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/not-lain/kv-caching",
+      "https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/",
+      "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/",
+      "https://developer.nvidia.com/blog/full-stack-optimizations-for-agentic-inference-with-nvidia-dynamo/",
+      "https://developer.nvidia.com/blog/deploying-disaggregated-llm-inference-workloads-on-kubernetes/"
+    ],
+    "matched_articles": [
+      {
+        "title": "KV Caching Explained: Optimizing Transformer Inference Efficiency    not-lain • Jan 30, 2025 •  351",
+        "link": "https://huggingface.co/blog/not-lain/kv-caching",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Model Quantization: Turn FP8 Checkpoints into High-Performance Inference Engines with NVIDIA TensorRT",
+        "link": "https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/",
+        "source": "NVIDIA Blog"
+      },
+      {
+        "title": "NVIDIA Blackwell Sets STAC-AI Record for LLM Inference in Finance",
+        "link": "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "large-language-model",
+    "rank": 3,
+    "term_en": "Large Language Model",
+    "term_zh": "大语言模型",
+    "abbreviation": "LLM",
+    "category": "AI技术",
+    "one_liner": "基于海量文本训练的大规模语言生成模型",
+    "appear_count": 6,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/danf/intel-xpu-kernels-skill",
+      "https://huggingface.co/blog/KingNish/openmythos",
+      "https://huggingface.co/blog/clefourrier/llm-evaluation",
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Intel XPU Kernel Skill: LLM-driven Triton kernel optimization for the Hugging Face Kernel Hub    danf • 6 days ago •  10",
+        "link": "https://huggingface.co/blog/danf/intel-xpu-kernels-skill",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "How We Built OpenMythos: A Cybersecurity LLM Trained from Scratch    KingNish • 8 days ago •  4",
+        "link": "https://huggingface.co/blog/KingNish/openmythos",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Let's talk about LLM evaluation    clefourrier • May 23, 2024 •  212",
+        "link": "https://huggingface.co/blog/clefourrier/llm-evaluation",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "ai-agent",
+    "rank": 4,
+    "term_en": "AI Agent",
+    "term_zh": "智能体",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "能自主感知环境并采取行动的AI系统",
     "appear_count": 5,
-    "first_appeared": "2026-06-19",
-    "status": "hot",
-    "submitted_at": "2026-06-19T00:00:00Z",
-    "auto_crawled": true
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai/",
+      "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/",
+      "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/",
+      "https://developer.nvidia.com/blog/build-a-secure-always-on-local-ai-agent-with-nvidia-nemoclaw-and-openclaw/",
+      "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI",
+        "link": "https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai/",
+        "source": "NVIDIA Blog"
+      },
+      {
+        "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA",
+        "link": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/",
+        "source": "NVIDIA Blog"
+      },
+      {
+        "title": "NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents",
+        "link": "https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "training",
+    "rank": 5,
+    "term_en": "Training",
+    "term_zh": "训练",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用数据调整模型参数使其学会特定任务的过程",
+    "appear_count": 4,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "https://developer.nvidia.com/blog/nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance/",
+      "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/",
+      "https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  30",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "NVIDIA Blackwell Tops MLPerf Training 6.0 with Industry-Leading Scale and Performance",
+        "link": "https://developer.nvidia.com/blog/nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance/",
+        "source": "NVIDIA Blog"
+      },
+      {
+        "title": "How to Optimize Transformer-Based Models for Low-Precision Training",
+        "link": "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
   },
   {
     "id": "retrieval-augmented-generation",
+    "rank": 6,
     "term_en": "Retrieval-Augmented Generation",
     "term_zh": "检索增强生成",
     "abbreviation": "RAG",
-    "category": "提示工程",
-    "one_liner": "让AI先查资料再回答，提高准确率减少幻觉",
-    "definition": "RAG是一种将信息检索与文本生成结合的技术框架，先从外部知识库检索相关文档，再基于检索结果生成回答，显著提高AI回答的准确性和可信度。",
-    "source": "机器之心, arXiv",
-    "source_url": "",
-    "explanation": "就像考试前先翻课本找答案，而不是纯凭记忆答题。有参考资料在手，回答更靠谱。",
-    "related": ["prompting", "fine-tuning"],
-    "appear_count": 4,
-    "first_appeared": "2026-06-20",
-    "status": "hot",
-    "submitted_at": "2026-06-20T00:00:00Z",
-    "auto_crawled": true
-  },
-  {
-    "id": "world-model",
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "模型架构",
-    "one_liner": "AI不仅能看懂画面，还能预测接下来会发生什么",
-    "definition": "世界模型是能够理解物理世界动态规律的AI模型，不仅能感知当前状态，还能预测未来可能的状态变化，被认为是通往通用智能的重要方向。",
-    "source": "DeepMind Blog",
-    "source_url": "",
-    "explanation": "就像人看一眼就知道\"球要滚下去了\"，世界模型让AI也能预判事物的走向，而不只是死板地识别画面。",
-    "related": ["reinforcement-learning", "agi"],
+    "category": "AI技术",
+    "one_liner": "结合外部知识检索增强生成质量的技术",
     "appear_count": 3,
-    "first_appeared": "2026-06-22",
-    "status": "hot",
-    "submitted_at": "2026-06-22T00:00:00Z",
-    "auto_crawled": true
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/ngxson/make-your-own-rag",
+      "https://huggingface.co/blog/peft-beyond-lora",
+      "https://developer.nvidia.com/blog/how-to-build-a-document-processing-pipeline-for-rag-with-nemotron/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Code a simple RAG from scratch    ngxson • Oct 29, 2024 •  349",
+        "link": "https://huggingface.co/blog/ngxson/make-your-own-rag",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "peftloraguide  Beyond LoRA: Can you beat the most popular fine-tuning technique?     47 June 18, 2026",
+        "link": "https://huggingface.co/blog/peft-beyond-lora",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "How to Build a Document Processing Pipeline for RAG with Nemotron",
+        "link": "https://developer.nvidia.com/blog/how-to-build-a-document-processing-pipeline-for-rag-with-nemotron/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
   },
   {
-    "id": "test-time-computation",
-    "term_en": "Test Time Computation",
-    "term_zh": "测试时计算",
-    "abbreviation": "TTC",
-    "category": "推理部署",
-    "one_liner": "让AI在回答问题时多想一会儿，而非秒回",
-    "definition": "TTC是指在推理阶段增加计算量来提升回答质量的策略，例如让模型生成多个候选答案后选最优的，或通过链式推理逐步验证。",
-    "source": "OpenAI Blog, Papers with Code",
-    "source_url": "",
-    "explanation": "就像考试遇到难题时不急着写答案，先多想几步再下笔。AI也可以\"慢思考\"来提高准确率。",
-    "related": ["reasoning", "chain-of-thought"],
+    "id": "transformer",
+    "rank": 7,
+    "term_en": "Transformer",
+    "term_zh": "Transformer",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于自注意力机制的序列处理架构",
+    "appear_count": 3,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/not-lain/kv-caching",
+      "https://huggingface.co/blog/is-it-agentic-enough",
+      "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/"
+    ],
+    "matched_articles": [
+      {
+        "title": "KV Caching Explained: Optimizing Transformer Inference Efficiency    not-lain • Jan 30, 2025 •  351",
+        "link": "https://huggingface.co/blog/not-lain/kv-caching",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "agentstransformersevaluation  Is it agentic enough? Benchmarking open models on your own tooling     19 June 18, 2026",
+        "link": "https://huggingface.co/blog/is-it-agentic-enough",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "How to Optimize Transformer-Based Models for Low-Precision Training",
+        "link": "https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "deep-learning",
+    "rank": 8,
+    "term_en": "Deep Learning",
+    "term_zh": "深度学习",
+    "abbreviation": "DL",
+    "category": "AI技术",
+    "one_liner": "基于多层神经网络的学习方法",
     "appear_count": 2,
-    "first_appeared": "2026-06-22",
-    "status": "hot",
-    "submitted_at": "2026-06-22T00:00:00Z",
-    "auto_crawled": true
+    "sources": [
+      "GitHub Blog"
+    ],
+    "source_urls": [
+      "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Getting more from each token: How Copilot improves context handling and model routing",
+        "link": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Getting more from each token: How Copilot improves context handling and model routing",
+        "link": "https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/",
+        "source": "GitHub Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "reinforcement-learning",
+    "rank": 9,
+    "term_en": "Reinforcement Learning",
+    "term_zh": "强化学习",
+    "abbreviation": "RL",
+    "category": "AI技术",
+    "one_liner": "通过奖励信号让智能体学习最优策略的方法",
+    "appear_count": 2,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  30",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
+        "link": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "lora",
+    "rank": 10,
+    "term_en": "LoRA",
+    "term_zh": "LoRA",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "低秩自适应微调方法，大幅减少训练参数",
+    "appear_count": 2,
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning",
+      "https://huggingface.co/blog/peft-beyond-lora"
+    ],
+    "matched_articles": [
+      {
+        "title": "QLORA SFT Distillation Effects on Qwen3.6 27B Agentic Coding Harness Fluency    bytkim • 8 days ago •  8",
+        "link": "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "peftloraguide  Beyond LoRA: Can you beat the most popular fine-tuning technique?     47 June 18, 2026",
+        "link": "https://huggingface.co/blog/peft-beyond-lora",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "ai-safety",
+    "rank": 11,
+    "term_en": "AI Safety",
+    "term_zh": "AI安全",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "确保AI系统可靠、可控、无危害的研究领域",
+    "appear_count": 2,
+    "sources": [
+      "Anthropic",
+      "Anthropic News"
+    ],
+    "source_urls": [],
+    "matched_articles": [
+      {
+        "title": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+        "link": "",
+        "source": "Anthropic"
+      },
+      {
+        "title": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+        "link": "",
+        "source": "Anthropic News"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "quantization",
+    "rank": 12,
+    "term_en": "Quantization",
+    "term_zh": "量化",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "降低模型参数精度以减少计算和存储开销的技术",
+    "appear_count": 2,
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/",
+      "https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Model Quantization: Turn FP8 Checkpoints into High-Performance Inference Engines with NVIDIA TensorRT",
+        "link": "https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/",
+        "source": "NVIDIA Blog"
+      },
+      {
+        "title": "Model Quantization: Post-Training Quantization Using NVIDIA Model Optimizer",
+        "link": "https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
+  },
+  {
+    "id": "distillation",
+    "rank": 13,
+    "term_en": "Distillation",
+    "term_zh": "蒸馏",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用大模型指导训练小模型以保持性能的技术",
+    "appear_count": 2,
+    "sources": [
+      "量子位",
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/06/437330.html",
+      "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning"
+    ],
+    "matched_articles": [
+      {
+        "title": "小扎「蒸馏员工」计划紧急喊停！私聊数据都泄露了…",
+        "link": "https://www.qbitai.com/2026/06/437330.html",
+        "source": "量子位"
+      },
+      {
+        "title": "QLORA SFT Distillation Effects on Qwen3.6 27B Agentic Coding Harness Fluency    bytkim • 8 days ago •  8",
+        "link": "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot"
   }
 ]

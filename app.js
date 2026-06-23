@@ -64,9 +64,12 @@ async function loadGlossary() {
   glossaryData = official;
   hotTermsData = hot;
 
-  // 过滤已沉淀的热点词（已存在于正式词库中的不在热点区展示）
+  // 过滤已沉淀的热点词（按ID + 名称双重匹配去重）
   const officialIds = new Set(glossaryData.map(t => t.id));
-  hotTermsData = hotTermsData.filter(t => !officialIds.has(t.id));
+  const officialNames = new Set(glossaryData.map(t => t.term_en.toLowerCase()));
+  hotTermsData = hotTermsData.filter(t =>
+    !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
+  );
 
   filteredData = [...glossaryData];
 
@@ -96,24 +99,38 @@ function renderHotTerms() {
   const list = document.getElementById('hotTermsGrid');
   const countEl = document.getElementById('hotCount');
   const section = document.getElementById('hotTermsSection');
+  const dateEl = document.getElementById('hotDate');
 
-  if (hotTermsData.length === 0) {
+  // 排序 + 过滤词库已有术语
+  const sorted = [...hotTermsData].sort((a, b) => (b.appear_count || 1) - (a.appear_count || 1));
+  const officialIds = new Set(glossaryData.map(t => t.id));
+  const officialNames = new Set(glossaryData.map(t => t.term_en.toLowerCase()));
+  const filteredHot = sorted.filter(t =>
+    !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
+  );
+
+  // 无热门词汇时隐藏排行榜和分隔线
+  const divider = document.querySelector('.section-divider');
+  if (filteredHot.length === 0) {
     section.style.display = 'none';
+    if (divider) divider.style.display = 'none';
     return;
   }
 
   section.style.display = '';
-  countEl.textContent = hotTermsData.length;
+  if (divider) divider.style.display = '';
+  countEl.textContent = filteredHot.length;
+  const topDate = filteredHot[0]?.date;
+  if (topDate && dateEl) dateEl.textContent = topDate;
 
-  // 按出现频次降序排列（热度排序）
-  const sorted = [...hotTermsData].sort((a, b) => (b.appear_count || 1) - (a.appear_count || 1));
-
-  list.innerHTML = sorted.map((term, idx) => {
+  list.innerHTML = filteredHot.map((term, idx) => {
     const daysSince = term.first_appeared
       ? Math.floor((Date.now() - new Date(term.first_appeared)) / (1000 * 60 * 60 * 24))
       : 0;
     const isNew = daysSince <= 3;
     const rank = idx + 1;
+    const sources = (term.sources || []).slice(0, 3).join('、');
+    const oneliner = term.one_liner || term.description || '';
     return `
       <div class="hot-term-row${isNew ? ' hot-new' : ''}" data-id="${term.id}" data-source="hot">
         <span class="hot-rank">${rank}</span>
@@ -123,12 +140,12 @@ function renderHotTerms() {
             ${term.abbreviation ? `<span class="hot-row-abbr">${term.abbreviation}</span>` : ''}
             ${isNew ? '<span class="hot-badge">NEW</span>' : ''}
           </div>
-          <div class="hot-row-zh">${term.term_zh}</div>
-          ${term.one_liner || term.description ? `<div class="hot-row-desc">${term.one_liner || term.description}</div>` : ''}
+          ${oneliner ? `<div class="hot-row-oneliner">${oneliner}</div>` : ''}
+          <div class="hot-row-zh">${term.term_zh}${sources ? ` · 来源: ${sources}${(term.sources || []).length > 3 ? ' 等' : ''}` : ''}</div>
         </div>
         <div class="hot-row-meta">
           <span class="hot-row-count">${term.appear_count || 1}次</span>
-          <span class="hot-row-category">${term.category}</span>
+          <span class="hot-row-category">${term.category || ''}</span>
         </div>
       </div>`;
   }).join('');
@@ -264,18 +281,33 @@ function openTermModal(termId, source) {
   document.getElementById('modalTitle').textContent = term.term_en;
   document.getElementById('modalSubtitle').textContent = `${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}`;
   document.getElementById('modalOneliner').textContent = term.one_liner || term.description || '';
-  document.getElementById('modalDefinition').textContent = term.definition || '暂无权威定义';
+  // 权威定义：热门术语用 one_liner 兜底
+  document.getElementById('modalDefinition').textContent = term.definition || term.one_liner || '暂无权威定义';
 
-  const sourceLink = document.getElementById('modalSourceLink');
+  // 来源链接：支持正式词库的 source_url 和热门术语的 matched_articles
+  const sourceLinksContainer = document.getElementById('modalSourceLinks');
+  let linksHtml = '';
   if (term.source_url) {
-    sourceLink.href = term.source_url;
-    sourceLink.textContent = `${term.source || '来源'} →`;
-    sourceLink.style.display = '';
-  } else {
-    sourceLink.style.display = 'none';
+    linksHtml += `<a href="${term.source_url}" target="_blank" class="source-link">${term.source || '来源'} →</a>`;
   }
+  if (term.matched_articles && term.matched_articles.length > 0) {
+    term.matched_articles.forEach(article => {
+      if (article.link) {
+        linksHtml += `<a href="${article.link}" target="_blank" class="source-link">${article.source}: ${article.title.substring(0, 40)}${article.title.length > 40 ? '...' : ''} →</a>`;
+      }
+    });
+  } else if (term.source_urls && term.source_urls.length > 0) {
+    term.source_urls.slice(0, 3).forEach(url => {
+      linksHtml += `<a href="${url}" target="_blank" class="source-link">相关报道 →</a>`;
+    });
+  }
+  sourceLinksContainer.innerHTML = linksHtml;
 
-  document.getElementById('modalExplanation').textContent = term.explanation || '暂无通俗解读';
+  // 通俗解读：热门术语生成描述性解读
+  const hotExplanation = source === 'hot' && !term.explanation
+    ? `${term.one_liner || ''}近期在${(term.sources || []).slice(0, 2).join('、')}等媒体中频繁出现，说明该领域正在快速发展。`
+    : null;
+  document.getElementById('modalExplanation').textContent = term.explanation || hotExplanation || '暂无通俗解读';
 
   // 渲染关联术语
   const allTerms = [...hotTermsData, ...glossaryData];

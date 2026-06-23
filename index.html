@@ -46,20 +46,27 @@
   </header>
 
   <main class="main">
-    <!-- 热点词汇区域 -->
+    <!-- 热门术语排行榜 -->
     <section class="hot-terms-section" id="hotTermsSection">
       <div class="hot-terms-header">
         <div class="hot-terms-title">
           <span class="hot-icon">🔥</span>
-          <h2>热点词汇</h2>
+          <h2>热门术语排行榜</h2>
           <span class="hot-count" id="hotCount">0</span>
         </div>
-        <p class="hot-terms-desc">近期新出现的AI相关词汇，持续关注的将沉淀到正式词库</p>
+        <p class="hot-terms-desc">每日自动从全球AI信息源抓取，按出现频次排行 <span id="hotDate" style="margin-left:8px;color:var(--color-accent);font-weight:500;"></span></p>
       </div>
       <div class="hot-terms-grid" id="hotTermsGrid">
         <!-- 动态渲染 -->
       </div>
     </section>
+
+    <!-- 排行榜与词库分隔 -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <span class="divider-text">词 库</span>
+      <div class="divider-line"></div>
+    </div>
 
     <!-- 工具栏 -->
     <section class="toolbar">
@@ -112,7 +119,7 @@
             权威定义
           </div>
           <p id="modalDefinition"></p>
-          <a id="modalSourceLink" href="#" target="_blank" class="source-link"></a>
+          <div id="modalSourceLinks"></div>
         </div>
         <div class="modal-section highlight-section">
           <div class="section-label">

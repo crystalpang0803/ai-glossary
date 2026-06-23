@@ -1,0 +1,39 @@
+{
+  "rss": {
+    "chinese": [
+      {"name": "机器之心", "url": "https://www.jiqizhixin.com/rss"},
+      {"name": "量子位", "url": "https://www.qbitai.com/feed"},
+      {"name": "InfoQ 中文站", "url": "https://www.infoq.cn/public/rss"}
+    ],
+    "english": [
+      {"name": "NVIDIA Technical Blog", "url": "https://developer.nvidia.com/blog/rss.xml"},
+      {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml"},
+      {"name": "arXiv AI", "url": "https://arxiv.org/rss/cs.AI"},
+      {"name": "arXiv CL", "url": "https://arxiv.org/rss/cs.CL"},
+      {"name": "arXiv CV", "url": "https://arxiv.org/rss/cs.CV"},
+      {"name": "arXiv LG", "url": "https://arxiv.org/rss/cs.LG"},
+      {"name": "InfoQ", "url": "https://www.infoq.com/feed"},
+      {"name": "Hugging Face", "url": "https://huggingface.co/blog/rss"},
+      {"name": "Papers with Code", "url": "https://paperswithcode.com/rss/latest"},
+      {"name": "MIT CSAIL", "url": "https://www.csail.mit.edu/rss/news"}
+    ]
+  },
+  "scrape": {
+    "chinese": [
+      {"name": "机器之心", "url": "https://www.jiqizhixin.com", "title_selector": "a.title, h3 a, .article-title a", "item_selector": ".article-item, .news-item"},
+      {"name": "Anthropic", "url": "https://www.anthropic.com/news", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post, .news-item"},
+      {"name": "Meta AI", "url": "https://ai.meta.com/blog", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-card, .post-item"},
+      {"name": "GitHub Blog", "url": "https://github.blog", "title_selector": "h2 a, h3 a, .post-title a", "item_selector": "article, .post, .blog-item"}
+    ],
+    "english": [
+      {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-post, .post-item"},
+      {"name": "OpenAI Blog", "url": "https://openai.com/blog", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post"},
+      {"name": "Anthropic News", "url": "https://www.anthropic.com/news", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post, .news-item"},
+      {"name": "Meta AI Blog", "url": "https://ai.meta.com/blog", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-card"},
+      {"name": "GitHub Blog", "url": "https://github.blog", "title_selector": "h2 a, h3 a, .post-title a", "item_selector": "article, .post"},
+      {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog", "title_selector": "h2 a, h3 a, .blog-title a", "item_selector": "article, .blog-item"},
+      {"name": "NVIDIA Blog", "url": "https://developer.nvidia.com/blog", "title_selector": "h2 a, h3 a, .blog-title a", "item_selector": "article, .blog-card"},
+      {"name": "InfoQ", "url": "https://www.infoq.com", "title_selector": "h2 a, h3 a, .article-title a", "item_selector": "article, .news-item"}
+    ]
+  }
+}
