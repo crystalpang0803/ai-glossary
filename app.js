@@ -1,11 +1,11 @@
-// ===== AI Glossary App v3.0 =====
+// ===== AI Glossary App v4.0 =====
 // 数据加载策略：API 优先（有后端时），JSON 文件降级（纯静态部署时）
 let glossaryData = [];
 let hotTermsData = [];
 let filteredData = [];
 let currentCategory = 'all';
 let currentSearch = '';
-let apiAvailable = false; // 标记后端 API 是否可用
+let apiAvailable = false;
 
 // ===== API 工具 =====
 const API_BASE = '/api';
@@ -36,7 +36,6 @@ async function fetchJSON(apiPath, staticPath) {
     apiAvailable = true;
     return data;
   } catch (e) {
-    // API 不可用，降级到静态文件
     const res = await fetch(staticPath);
     if (!res.ok) throw new Error(`加载 ${staticPath} 失败: ${res.status}`);
     return res.json();
@@ -45,233 +44,245 @@ async function fetchJSON(apiPath, staticPath) {
 
 // ===== 加载数据 =====
 async function loadGlossary() {
-  // 独立加载，一个失败不影响另一个
   let official = [];
   let hot = [];
 
+  // 独立加载，一个失败不影响另一个
   try {
-    official = await fetchJSON('/terms?status=official', 'data/glossary.json') || [];
+    official = await fetchJSON('/glossary', 'data/glossary.json');
   } catch (e) {
-    console.error('加载正式词库失败:', e);
+    console.warn('加载词库失败:', e.message);
   }
 
   try {
-    hot = await fetchJSON('/hot-terms', 'data/hot-terms.json') || [];
+    hot = await fetchJSON('/hot-terms', 'data/hot-terms.json');
   } catch (e) {
-    console.error('加载热点词汇失败:', e);
+    console.warn('加载热门术语失败:', e.message);
   }
 
   glossaryData = official;
-  hotTermsData = hot;
-
-  // 过滤已沉淀的热点词（按ID + 名称双重匹配去重）
+  // 去重：排除词库中已有的术语（ID + 名称双重匹配）
   const officialIds = new Set(glossaryData.map(t => t.id));
   const officialNames = new Set(glossaryData.map(t => t.term_en.toLowerCase()));
-  hotTermsData = hotTermsData.filter(t =>
+  hotTermsData = hot.filter(t =>
     !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
   );
 
   filteredData = [...glossaryData];
 
   if (glossaryData.length === 0 && hotTermsData.length === 0) {
-    document.getElementById('glossaryGrid').innerHTML = `
-      <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--color-text-muted);">
-        <p style="font-size:1.1rem;margin-bottom:8px;">数据加载失败</p>
-        <p style="font-size:0.85rem;">请刷新页面重试，或检查网络连接</p>
-      </div>`;
+    document.getElementById('emptyState').classList.remove('hidden');
     return;
   }
 
-  initApp();
-}
-
-// ===== 初始化 =====
-function initApp() {
   renderHotTerms();
-  updateStats();
+  renderGlossary();
   renderAlphaNav();
-  renderGrid();
-  bindEvents();
+  setupFilters();
+  setupSearch();
+  setupSubmit();
 }
 
-// ===== 热点词汇渲染（榜单列表形式） =====
+// ===== 渲染热门术语 =====
 function renderHotTerms() {
-  const list = document.getElementById('hotTermsGrid');
-  const countEl = document.getElementById('hotCount');
   const section = document.getElementById('hotTermsSection');
+  const divider = document.querySelector('.section-divider');
+  const grid = document.getElementById('hotTermsGrid');
+  const countEl = document.getElementById('hotCount');
   const dateEl = document.getElementById('hotDate');
 
-  // 排序 + 过滤词库已有术语
-  const sorted = [...hotTermsData].sort((a, b) => (b.appear_count || 1) - (a.appear_count || 1));
-  const officialIds = new Set(glossaryData.map(t => t.id));
-  const officialNames = new Set(glossaryData.map(t => t.term_en.toLowerCase()));
-  const filteredHot = sorted.filter(t =>
-    !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
-  );
-
-  // 无热门词汇时隐藏排行榜和分隔线
-  const divider = document.querySelector('.section-divider');
-  if (filteredHot.length === 0) {
+  if (hotTermsData.length === 0) {
     section.style.display = 'none';
-    if (divider) divider.style.display = 'none';
+    divider.style.display = 'none';
     return;
   }
 
   section.style.display = '';
-  if (divider) divider.style.display = '';
-  countEl.textContent = filteredHot.length;
-  const topDate = filteredHot[0]?.date;
-  if (topDate && dateEl) dateEl.textContent = topDate;
+  divider.style.display = '';
+  countEl.textContent = hotTermsData.length;
 
-  list.innerHTML = filteredHot.map((term, idx) => {
-    const daysSince = term.first_appeared
-      ? Math.floor((Date.now() - new Date(term.first_appeared)) / (1000 * 60 * 60 * 24))
-      : 0;
-    const isNew = daysSince <= 3;
-    const rank = idx + 1;
-    const sources = (term.sources || []).slice(0, 3).join('、');
-    const oneliner = term.one_liner || term.description || '';
-    return `
-      <div class="hot-term-row${isNew ? ' hot-new' : ''}" data-id="${term.id}" data-source="hot">
-        <span class="hot-rank">${rank}</span>
-        <div class="hot-row-main">
-          <div class="hot-row-title-line">
-            <span class="hot-row-en">${term.term_en}</span>
-            ${term.abbreviation ? `<span class="hot-row-abbr">${term.abbreviation}</span>` : ''}
-            ${isNew ? '<span class="hot-badge">NEW</span>' : ''}
-          </div>
-          ${oneliner ? `<div class="hot-row-oneliner">${oneliner}</div>` : ''}
-          <div class="hot-row-zh">${term.term_zh}${sources ? ` · 来源: ${sources}${(term.sources || []).length > 3 ? ' 等' : ''}` : ''}</div>
-        </div>
-        <div class="hot-row-meta">
-          <span class="hot-row-count">${term.appear_count || 1}次</span>
-          <span class="hot-row-category">${term.category || ''}</span>
-        </div>
-      </div>`;
-  }).join('');
-}
-
-// ===== 搜索 =====
-function handleSearch(query) {
-  currentSearch = query.toLowerCase().trim();
-  applyFilters();
-  renderGrid();
-  updateStats();
-  toggleEmptyState();
-  updateSuggestions(query);
-}
-
-function updateSuggestions(query) {
-  const container = document.getElementById('searchSuggestions');
-  if (!query.trim()) {
-    container.classList.add('hidden');
-    return;
-  }
-  const q = query.toLowerCase().trim();
-  // 搜索正式词库 + 热点词汇
-  const allTerms = [...hotTermsData.map(t => ({...t, _source: 'hot'})), ...glossaryData.map(t => ({...t, _source: 'official'}))];
-  const matches = allTerms.filter(t =>
-    t.term_en.toLowerCase().includes(q) ||
-    t.term_zh.includes(q) ||
-    (t.abbreviation && t.abbreviation.toLowerCase().includes(q))
-  ).slice(0, 6);
-
-  if (matches.length === 0) {
-    container.classList.add('hidden');
-    return;
+  // 显示日期
+  if (hotTermsData[0]?.date) {
+    dateEl.textContent = hotTermsData[0].date;
   }
 
-  container.innerHTML = matches.map(t => `
-    <div class="suggestion-item" data-id="${t.id}" data-source="${t._source}">
-      <span class="term-name">${highlightMatch(t.term_en, q)}</span>
-      <span class="term-zh">${t.term_zh}${t.abbreviation ? ' · ' + t.abbreviation : ''}${t._source === 'hot' ? ' 🔥' : ''}</span>
+  grid.innerHTML = hotTermsData.map(term => `
+    <div class="hot-term-card" data-id="${term.id}" data-source="hot">
+      <div class="hot-term-rank">#${term.rank}</div>
+      <div class="hot-term-name">${term.term_en}</div>
+      <div class="hot-term-zh">${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}</div>
+      <div class="hot-term-explanation">${term.explanation || term.one_liner || ''}</div>
+      <div class="hot-term-meta">
+        <span class="hot-term-count">${term.appear_count}次提及</span>
+        <span class="hot-term-sources">${(term.sources || []).slice(0, 3).join(' · ')}</span>
+      </div>
     </div>
   `).join('');
-  container.classList.remove('hidden');
+
+  // 绑定点击
+  grid.querySelectorAll('.hot-term-card').forEach(card => {
+    card.addEventListener('click', () => {
+      openTermModal(card.dataset.id, card.dataset.source);
+    });
+  });
 }
 
-function highlightMatch(text, query) {
-  const idx = text.toLowerCase().indexOf(query);
-  if (idx === -1) return text;
-  return text.slice(0, idx) + '<mark style="background:rgba(99,102,241,0.15);color:inherit;padding:0 1px;border-radius:2px;">' + text.slice(idx, idx + query.length) + '</mark>' + text.slice(idx + query.length);
+// ===== 渲染词库 =====
+function renderGlossary() {
+  const grid = document.getElementById('glossaryGrid');
+  const empty = document.getElementById('emptyState');
+
+  if (filteredData.length === 0) {
+    grid.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+
+  empty.classList.add('hidden');
+
+  grid.innerHTML = filteredData.map(term => `
+    <div class="glossary-card" data-id="${term.id}" data-source="official" data-category="${term.category || ''}">
+      <div class="card-category">${term.category || ''}</div>
+      <div class="card-term">${term.term_en}</div>
+      <div class="card-zh">${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}</div>
+      <div class="card-oneliner">${term.one_liner || ''}</div>
+    </div>
+  `).join('');
+
+  // 绑定点击
+  grid.querySelectorAll('.glossary-card').forEach(card => {
+    card.addEventListener('click', () => {
+      openTermModal(card.dataset.id, card.dataset.source);
+    });
+  });
 }
 
-// ===== 筛选 =====
+// ===== 字母导航 =====
+function renderAlphaNav() {
+  const nav = document.getElementById('alphaNav');
+  const activeLetters = new Set(glossaryData.map(t => t.term_en[0].toUpperCase()));
+
+  nav.innerHTML = [...activeLetters].sort().map(letter =>
+    `<span class="alpha-link" data-letter="${letter}">${letter}</span>`
+  ).join('');
+
+  nav.querySelectorAll('.alpha-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const letter = link.dataset.letter;
+      filteredData = glossaryData.filter(t => t.term_en[0].toUpperCase() === letter);
+      currentCategory = 'all';
+      updateFilterChips();
+      renderGlossary();
+      document.getElementById('filterInfo').textContent = `字母 ${letter} · ${filteredData.length} 条`;
+      document.querySelector('.grid-container').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
+// ===== 分类过滤 =====
+function setupFilters() {
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      currentCategory = chip.dataset.category;
+      updateFilterChips();
+      applyFilters();
+    });
+  });
+}
+
+function updateFilterChips() {
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.classList.toggle('active', chip.dataset.category === currentCategory);
+  });
+}
+
 function applyFilters() {
   filteredData = glossaryData.filter(term => {
     const matchCategory = currentCategory === 'all' || term.category === currentCategory;
     const matchSearch = !currentSearch ||
       term.term_en.toLowerCase().includes(currentSearch) ||
       term.term_zh.includes(currentSearch) ||
-      (term.abbreviation && term.abbreviation.toLowerCase().includes(currentSearch)) ||
-      term.one_liner.includes(currentSearch) ||
-      term.definition.toLowerCase().includes(currentSearch);
+      (term.abbreviation || '').toLowerCase().includes(currentSearch) ||
+      (term.one_liner || '').includes(currentSearch);
     return matchCategory && matchSearch;
   });
-}
 
-// ===== 渲染 =====
-function renderGrid() {
-  const grid = document.getElementById('glossaryGrid');
-  if (filteredData.length === 0) {
-    grid.innerHTML = '';
-    return;
+  renderGlossary();
+  const filterInfo = document.getElementById('filterInfo');
+  if (currentCategory === 'all' && !currentSearch) {
+    filterInfo.textContent = `显示全部 · ${glossaryData.length} 条`;
+  } else {
+    filterInfo.textContent = `${filteredData.length} 条结果`;
   }
+}
 
-  // 按首字母分组
-  const grouped = {};
-  filteredData.forEach(term => {
-    const letter = term.term_en[0].toUpperCase();
-    if (!grouped[letter]) grouped[letter] = [];
-    grouped[letter].push(term);
+// ===== 搜索 =====
+function setupSearch() {
+  const input = document.getElementById('searchInput');
+  const suggestions = document.getElementById('searchSuggestions');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    if (q.length < 1) {
+      suggestions.classList.add('hidden');
+      currentSearch = '';
+      applyFilters();
+      return;
+    }
+
+    const allTerms = [...hotTermsData.map(t => ({...t, _source: 'hot'})), ...glossaryData.map(t => ({...t, _source: 'official'}))];
+    const matches = allTerms.filter(t =>
+      t.term_en.toLowerCase().includes(q) ||
+      t.term_zh.includes(q) ||
+      (t.abbreviation || '').toLowerCase().includes(q)
+    ).slice(0, 8);
+
+    if (matches.length > 0) {
+      suggestions.innerHTML = matches.map(t => `
+        <div class="suggestion-item" data-id="${t.id}" data-source="${t._source}">
+          <span class="suggestion-term">${t.term_en}</span>
+          <span class="suggestion-zh">${t.term_zh}${t.abbreviation ? ' · ' + t.abbreviation : ''}</span>
+        </div>
+      `).join('');
+      suggestions.classList.remove('hidden');
+
+      suggestions.querySelectorAll('.suggestion-item').forEach(item => {
+        item.addEventListener('click', () => {
+          openTermModal(item.dataset.id, item.dataset.source);
+          input.value = '';
+          suggestions.classList.add('hidden');
+        });
+      });
+    } else {
+      suggestions.classList.add('hidden');
+    }
   });
 
-  const sortedLetters = Object.keys(grouped).sort();
-  let html = '';
-
-  sortedLetters.forEach(letter => {
-    html += `<div class="letter-section" id="section-${letter}"><span class="letter-heading">${letter}</span></div>`;
-    grouped[letter].sort((a, b) => a.term_en.localeCompare(b.term_en)).forEach(term => {
-      html += renderCard(term);
-    });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const q = input.value.trim();
+      if (q) {
+        currentSearch = q.toLowerCase();
+        applyFilters();
+        suggestions.classList.add('hidden');
+        document.querySelector('.grid-container').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   });
 
-  grid.innerHTML = html;
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-wrapper')) {
+      suggestions.classList.add('hidden');
+    }
+  });
 }
 
-function renderCard(term) {
-  return `
-    <div class="term-card" data-id="${term.id}" data-source="official">
-      <div class="card-header">
-        <span class="card-title">${term.term_en}</span>
-        ${term.abbreviation ? `<span class="card-abbr">${term.abbreviation}</span>` : ''}
-      </div>
-      <div class="card-zh">${term.term_zh}</div>
-      <div class="card-desc">${term.one_liner}</div>
-      <div class="card-category">${term.category}</div>
-    </div>
-  `;
-}
-
-function renderAlphaNav() {
-  const nav = document.getElementById('alphaNav');
-  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  const activeLetters = new Set(glossaryData.map(t => t.term_en[0].toUpperCase()));
-
-  nav.innerHTML = letters.map(l => {
-    const isActive = activeLetters.has(l);
-    return `<button class="alpha-btn ${isActive ? '' : 'disabled'}" data-letter="${l}" ${!isActive ? 'disabled' : ''}>${l}</button>`;
-  }).join('');
-}
-
-// ===== 弹窗 =====
+// ===== 词条详情弹窗 =====
 function openTermModal(termId, source) {
-  // 先在热点词汇中找，再在正式词库中找
   const term = source === 'hot'
     ? hotTermsData.find(t => t.id === termId)
     : glossaryData.find(t => t.id === termId);
   if (!term) {
-    // fallback: 两边都找
     const found = hotTermsData.find(t => t.id === termId) || glossaryData.find(t => t.id === termId);
     if (!found) return;
     return openTermModal(termId, found.status === 'hot' ? 'hot' : 'official');
@@ -281,10 +292,9 @@ function openTermModal(termId, source) {
   document.getElementById('modalTitle').textContent = term.term_en;
   document.getElementById('modalSubtitle').textContent = `${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}`;
   document.getElementById('modalOneliner').textContent = term.one_liner || term.description || '';
-  // 权威定义：热门术语用 one_liner 兜底
   document.getElementById('modalDefinition').textContent = term.definition || term.one_liner || '暂无权威定义';
 
-  // 来源链接：支持正式词库的 source_url 和热门术语的 matched_articles
+  // 来源链接
   const sourceLinksContainer = document.getElementById('modalSourceLinks');
   let linksHtml = '';
   if (term.source_url) {
@@ -303,13 +313,10 @@ function openTermModal(termId, source) {
   }
   sourceLinksContainer.innerHTML = linksHtml;
 
-  // 通俗解读：热门术语生成描述性解读
-  const hotExplanation = source === 'hot' && !term.explanation
-    ? `${term.one_liner || ''}近期在${(term.sources || []).slice(0, 2).join('、')}等媒体中频繁出现，说明该领域正在快速发展。`
-    : null;
-  document.getElementById('modalExplanation').textContent = term.explanation || hotExplanation || '暂无通俗解读';
+  // 通俗解读：使用AI生成的explanation，不再用模板拼接
+  document.getElementById('modalExplanation').textContent = term.explanation || '暂无通俗解读';
 
-  // 渲染关联术语
+  // 相关术语
   const allTerms = [...hotTermsData, ...glossaryData];
   const relatedContainer = document.getElementById('modalRelated');
   if (term.related && term.related.length > 0) {
@@ -328,197 +335,81 @@ function openTermModal(termId, source) {
   document.body.style.overflow = 'hidden';
 }
 
-function closeTermModal() {
+function closeModal() {
   document.getElementById('termModal').classList.add('hidden');
   document.body.style.overflow = '';
 }
 
-// ===== 统计 =====
-function updateStats() {
-  const termCountEl = document.getElementById('termCount');
-  if (termCountEl) termCountEl.textContent = `${filteredData.length} 术语`;
-  const filterInfo = document.getElementById('filterInfo');
-  if (currentSearch) {
-    filterInfo.textContent = `搜索 "${currentSearch}" · ${filteredData.length} 条结果`;
-  } else if (currentCategory !== 'all') {
-    filterInfo.textContent = `${currentCategory} · ${filteredData.length} 条`;
-  } else {
-    filterInfo.textContent = `显示全部 · ${glossaryData.length} 条`;
-  }
-}
+// ===== 提交新术语 =====
+function setupSubmit() {
+  const submitBtn = document.getElementById('navSubmitBtn');
+  const submitTermBtn = document.getElementById('submitTermBtn');
 
-function toggleEmptyState() {
-  const empty = document.getElementById('emptyState');
-  const grid = document.getElementById('glossaryGrid');
-  if (filteredData.length === 0) {
-    empty.classList.remove('hidden');
-    grid.style.display = 'none';
-  } else {
-    empty.classList.add('hidden');
-    grid.style.display = '';
-  }
-}
+  const openSubmit = () => {
+    document.getElementById('submitModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
 
-// ===== Toast =====
-function showToast(msg) {
-  const existing = document.querySelector('.toast');
-  if (existing) existing.remove();
+  submitBtn?.addEventListener('click', openSubmit);
+  submitTermBtn?.addEventListener('click', openSubmit);
 
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.textContent = msg;
-  document.body.appendChild(toast);
-  setTimeout(() => {
-    toast.classList.add('fade-out');
-    setTimeout(() => toast.remove(), 300);
-  }, 2500);
+  document.getElementById('submitModalClose')?.addEventListener('click', () => {
+    document.getElementById('submitModal').classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  document.getElementById('submitForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const term = {
+      term_en: document.getElementById('newTermEn').value.trim(),
+      term_zh: document.getElementById('newTermZh').value.trim(),
+      abbreviation: document.getElementById('newTermAbbr').value.trim(),
+      one_liner: document.getElementById('newTermDesc').value.trim(),
+      source_url: document.getElementById('newTermSource').value.trim(),
+      category: 'AI应用',
+      status: 'hot',
+      id: document.getElementById('newTermEn').value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+      date: new Date().toISOString().split('T')[0]
+    };
+
+    try {
+      if (apiAvailable) {
+        await apiPost('/hot-terms', term);
+      }
+      // 刷新数据
+      await loadGlossary();
+      document.getElementById('submitModal').classList.add('hidden');
+      document.body.style.overflow = '';
+      e.target.reset();
+    } catch (err) {
+      alert('提交失败: ' + err.message);
+    }
+  });
 }
 
 // ===== 事件绑定 =====
-function bindEvents() {
-  // 搜索
-  const searchInput = document.getElementById('searchInput');
-  let debounceTimer;
-  searchInput.addEventListener('input', (e) => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => handleSearch(e.target.value), 150);
-  });
+document.getElementById('modalClose')?.addEventListener('click', closeModal);
 
-  // ESC清空搜索
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      searchInput.value = '';
-      handleSearch('');
-      searchInput.blur();
-    }
-  });
+document.getElementById('termModal')?.addEventListener('click', (e) => {
+  if (e.target.id === 'termModal') closeModal();
+});
 
-  // 点击建议
-  document.getElementById('searchSuggestions').addEventListener('click', (e) => {
-    const item = e.target.closest('.suggestion-item');
-    if (item) {
-      openTermModal(item.dataset.id, item.dataset.source);
-      document.getElementById('searchSuggestions').classList.add('hidden');
-    }
-  });
+// 关联术语点击
+document.addEventListener('click', (e) => {
+  const tag = e.target.closest('.related-tag');
+  if (tag?.dataset.id) {
+    openTermModal(tag.dataset.id, tag.dataset.source || 'official');
+  }
+});
 
-  // 点击外部关闭建议
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.search-wrapper')) {
-      document.getElementById('searchSuggestions').classList.add('hidden');
-    }
-  });
-
-  // 筛选按钮
-  document.querySelectorAll('.filter-chip').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentCategory = btn.dataset.category;
-      applyFilters();
-      renderGrid();
-      updateStats();
-      toggleEmptyState();
-    });
-  });
-
-  // 字母导航
-  document.getElementById('alphaNav').addEventListener('click', (e) => {
-    const btn = e.target.closest('.alpha-btn');
-    if (!btn || btn.disabled) return;
-    const letter = btn.dataset.letter;
-    const section = document.getElementById(`section-${letter}`);
-    if (section) {
-      const offset = 130;
-      const top = section.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-
-  // 热点词汇行点击
-  document.getElementById('hotTermsGrid').addEventListener('click', (e) => {
-    const row = e.target.closest('.hot-term-row');
-    if (row) openTermModal(row.dataset.id, 'hot');
-  });
-
-  // 正式词库卡片点击
-  document.getElementById('glossaryGrid').addEventListener('click', (e) => {
-    const card = e.target.closest('.term-card');
-    if (card) openTermModal(card.dataset.id, card.dataset.source || 'official');
-  });
-
-  // 关联术语点击
-  document.getElementById('modalRelated').addEventListener('click', (e) => {
-    const tag = e.target.closest('.related-tag');
-    if (tag) {
-      closeTermModal();
-      setTimeout(() => openTermModal(tag.dataset.id, tag.dataset.source || 'official'), 280);
-    }
-  });
-
-  // 关闭弹窗
-  document.getElementById('modalClose').addEventListener('click', closeTermModal);
-  document.getElementById('termModal').addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) closeTermModal();
-  });
-
-  // 提交弹窗
-  const submitModal = document.getElementById('submitModal');
-  const openSubmitModal = () => {
-    submitModal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  };
-  document.getElementById('submitTermBtn')?.addEventListener('click', openSubmitModal);
-  document.getElementById('navSubmitBtn')?.addEventListener('click', openSubmitModal);
-  document.getElementById('submitModalClose').addEventListener('click', () => {
-    submitModal.classList.add('hidden');
+// ESC 关闭弹窗
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    document.getElementById('submitModal')?.classList.add('hidden');
     document.body.style.overflow = '';
-  });
-  submitModal.addEventListener('click', (e) => {
-    if (e.target === e.currentTarget) {
-      submitModal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  });
+  }
+});
 
-  // 提交表单 → 调用后端 API（需要后端支持）
-  document.getElementById('submitForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const term = {
-      term_en: document.getElementById('newTermEn').value,
-      term_zh: document.getElementById('newTermZh').value,
-      abbreviation: document.getElementById('newTermAbbr').value,
-      description: document.getElementById('newTermDesc').value,
-      source_url: document.getElementById('newTermSource').value
-    };
-
-    if (!apiAvailable) {
-      showToast('提交功能需要后端服务支持，当前为静态模式');
-      return;
-    }
-
-    try {
-      await apiPost('/submit', term);
-      document.getElementById('submitForm').reset();
-      submitModal.classList.add('hidden');
-      document.body.style.overflow = '';
-      showToast('术语已提交到热点词汇区');
-      // 重新加载数据
-      await loadGlossary();
-    } catch (err) {
-      showToast(err.message || '提交失败');
-    }
-  });
-
-  // 全局ESC关闭弹窗
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeTermModal();
-      submitModal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  });
-}
-
-// 启动
+// ===== 启动 =====
 document.addEventListener('DOMContentLoaded', loadGlossary);

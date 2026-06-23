@@ -1,7 +1,8 @@
 /**
- * AI术语热度抓取脚本 v2.0
+ * AI术语热度抓取脚本 v3.0
  * 双模式抓取：RSS + 网页抓取（scrape）
- * 用法: node crawler/fetch-terms.js
+ * AI生成通俗解读：智谱 GLM-4-Flash
+ * 用法: GLM_API_KEY=xxx node crawler/fetch-terms.js
  */
 
 const Parser = require('rss-parser');
@@ -15,10 +16,22 @@ const ROOT = path.join(__dirname, '..');
 const sources = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources.json'), 'utf8'));
 const keywords = JSON.parse(fs.readFileSync(path.join(__dirname, 'keywords.json'), 'utf8'));
 
+// 加载glossary数据，用于查找已有explanation
+let glossaryData = [];
+try {
+  glossaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'glossary.json'), 'utf8'));
+} catch { /* 文件不存在 */ }
+const glossaryMap = new Map(glossaryData.map(t => [t.id, t]));
+
 const REQUEST_TIMEOUT = 15000;
 const CONCURRENT_LIMIT = 5;
 const MAX_ITEMS_PER_FEED = 50;
 const HOURS_BACK = 48;
+
+// 智谱API配置
+const GLM_API_KEY = process.env.GLM_API_KEY || '';
+const GLM_API_URL = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+const GLM_MODEL = 'glm-4-flash';
 
 const parser = new Parser({ timeout: REQUEST_TIMEOUT });
 
@@ -143,6 +156,97 @@ async function fetchScrape(sourceConfig) {
     console.log(`[Scrape Skip] ${name}: ${err.message}`);
     return [];
   }
+}
+
+// ===== AI生成通俗解读 =====
+async function callGLM(prompt) {
+  if (!GLM_API_KEY) {
+    console.log('[AI] No GLM_API_KEY set, skipping AI generation');
+    return null;
+  }
+  
+  const body = JSON.stringify({
+    model: GLM_MODEL,
+    messages: [{ role: 'user', content: prompt }],
+    temperature: 0.7,
+    max_tokens: 200
+  });
+  
+  return new Promise((resolve, reject) => {
+    const req = https.request(GLM_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GLM_API_KEY}`
+      },
+      timeout: 30000
+    }, (res) => {
+      let data = '';
+      res.setEncoding('utf8');
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const json = JSON.parse(data);
+          const content = json.choices?.[0]?.message?.content?.trim() || null;
+          resolve(content);
+        } catch {
+          console.log(`[AI Error] Parse failed: ${data.substring(0, 200)}`);
+          resolve(null);
+        }
+      });
+    });
+    req.on('error', (err) => {
+      console.log(`[AI Error] Request failed: ${err.message}`);
+      resolve(null);
+    });
+    req.on('timeout', () => { req.destroy(); resolve(null); });
+    req.write(body);
+    req.end();
+  });
+}
+
+async function generateExplanations(hotTerms) {
+  if (!GLM_API_KEY || hotTerms.length === 0) return hotTerms;
+  
+  console.log(`\n--- AI生成通俗解读 (${hotTerms.length} terms) ---`);
+  
+  for (const term of hotTerms) {
+    // 检查glossary中是否已有explanation
+    const glossaryEntry = glossaryMap.get(term.id);
+    if (glossaryEntry?.explanation) {
+      term.explanation = glossaryEntry.explanation;
+      console.log(`[AI Skip] ${term.term_en}: 已有glossary解释`);
+      continue;
+    }
+    
+    // 构建AI prompt
+    const articleTitles = (term.matched_articles || [])
+      .slice(0, 3)
+      .map(a => a.title)
+      .join('；');
+    
+    const prompt = `请用通俗易懂的语言，为以下AI术语写一句简短的解读（1-2句话，不超过50字，让普通人也能看懂，不要用专业术语）：
+
+术语：${term.term_en}（${term.term_zh}${term.abbreviation ? '/' + term.abbreviation : ''}）
+一句话描述：${term.one_liner || '无'}
+近期相关文章标题：${articleTitles || '无'}
+
+只输出解读文字，不要输出任何其他内容。`;
+    
+    const explanation = await callGLM(prompt);
+    if (explanation) {
+      term.explanation = explanation;
+      console.log(`[AI OK] ${term.term_en}: ${explanation}`);
+    } else {
+      console.log(`[AI Fail] ${term.term_en}: AI生成失败，保留one_liner`);
+      term.explanation = term.one_liner || '';
+    }
+    
+    // 避免速率限制，每次请求间隔1秒
+    await new Promise(r => setTimeout(r, 1000));
+  }
+  
+  return hotTerms;
 }
 
 // ===== 并发抓取所有源 =====
@@ -274,7 +378,7 @@ function mergeWithExisting(newTerms) {
 
 // ===== 主流程 =====
 async function main() {
-  console.log('=== AI术语热度抓取 v2.0 ===');
+  console.log('=== AI术语热度抓取 v3.0 ===');
   console.log(`时间: ${new Date().toISOString()}`);
   console.log(`时间窗口: 最近${HOURS_BACK}小时\n`);
 
@@ -284,6 +388,9 @@ async function main() {
 
   const newTerms = generateOutput(ranked);
   console.log(`[Rank] Top ${newTerms.length} terms`);
+
+  // AI生成通俗解读
+  await generateExplanations(newTerms);
 
   if (newTerms.length > 0) {
     console.log('\n--- 今日热门 Top 10 ---');

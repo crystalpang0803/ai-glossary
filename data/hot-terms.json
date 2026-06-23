@@ -22,7 +22,7 @@
       "https://www.qbitai.com/2026/06/437340.html",
       "https://www.qbitai.com/2026/06/437308.html",
       "https://github.blog/ai-and-ml/llms/accelerating-researchers-and-developers-building-multilingual-ai-with-a-new-open-dataset/",
-      "https://github.blog/news-insights/company-news/github-availability-report-may-2026/"
+      "https://github.blog/news-insights/product-news/raising-the-bar-for-software-security-github-2fa-begins-march-13/"
     ],
     "matched_articles": [
       {
@@ -42,7 +42,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "就像教一台机器「思考」——让它能看懂图片、听懂语言、做出决策，甚至比人类做得更快更好。你手机上的语音助手、推荐算法都是AI的应用。"
   },
   {
     "id": "inference",
@@ -82,7 +83,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "训练是AI的「学习阶段」，推理是AI的「考试阶段」。当你向ChatGPT提问时，它生成回答的过程就是推理——用已学知识处理新问题。"
   },
   {
     "id": "large-language-model",
@@ -92,7 +94,7 @@
     "abbreviation": "LLM",
     "category": "AI技术",
     "one_liner": "基于海量文本训练的大规模语言生成模型",
-    "appear_count": 6,
+    "appear_count": 5,
     "sources": [
       "Hugging Face Blog",
       "NVIDIA Blog"
@@ -100,9 +102,9 @@
     "source_urls": [
       "https://huggingface.co/blog/danf/intel-xpu-kernels-skill",
       "https://huggingface.co/blog/KingNish/openmythos",
-      "https://huggingface.co/blog/clefourrier/llm-evaluation",
       "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-      "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/"
+      "https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/",
+      "https://developer.nvidia.com/blog/deploying-disaggregated-llm-inference-workloads-on-kubernetes/"
     ],
     "matched_articles": [
       {
@@ -116,13 +118,14 @@
         "source": "Hugging Face Blog"
       },
       {
-        "title": "Let's talk about LLM evaluation    clefourrier • May 23, 2024 •  212",
-        "link": "https://huggingface.co/blog/clefourrier/llm-evaluation",
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  30",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
         "source": "Hugging Face Blog"
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "想象一个读过互联网上几乎所有文字的学生——它通过海量阅读学会了语言规律，能写文章、回答问题、写代码。ChatGPT、Claude就是大语言模型的产品。"
   },
   {
     "id": "ai-agent",
@@ -161,7 +164,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "智能体就像一个会自己看环境和办事的AI小助手。"
   },
   {
     "id": "training",
@@ -200,11 +204,51 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "训练就是用大量数据让AI模型学会做特定事情的过程。"
+  },
+  {
+    "id": "reinforcement-learning",
+    "rank": 6,
+    "term_en": "Reinforcement Learning",
+    "term_zh": "强化学习",
+    "abbreviation": "RL",
+    "category": "AI技术",
+    "one_liner": "通过奖励信号让智能体学习最优策略的方法",
+    "appear_count": 3,
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+      "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  30",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 4 days ago •  3",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
+        "link": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "date": "2026-06-23",
+    "status": "hot",
+    "explanation": "就像训练小狗：做对了给零食（奖励），做错了不给（惩罚）。AI通过反复尝试，学会什么行为能获得最高奖励。AlphaGo就是用强化学习训练的。"
   },
   {
     "id": "retrieval-augmented-generation",
-    "rank": 6,
+    "rank": 7,
     "term_en": "Retrieval-Augmented Generation",
     "term_zh": "检索增强生成",
     "abbreviation": "RAG",
@@ -238,11 +282,12 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "检索增强生成就是利用外部信息来提升生成内容的质量。"
   },
   {
     "id": "transformer",
-    "rank": 7,
+    "rank": 8,
     "term_en": "Transformer",
     "term_zh": "Transformer",
     "abbreviation": "",
@@ -276,11 +321,12 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "读一个句子时，Transformer不是一个字一个字地看，而是同时看到所有词并理解它们的关系。这就像一个能同时看完整本书并理解上下文的读者，ChatGPT的核心就是它。"
   },
   {
     "id": "deep-learning",
-    "rank": 8,
+    "rank": 9,
     "term_en": "Deep Learning",
     "term_zh": "深度学习",
     "abbreviation": "DL",
@@ -306,39 +352,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
-  },
-  {
-    "id": "reinforcement-learning",
-    "rank": 9,
-    "term_en": "Reinforcement Learning",
-    "term_zh": "强化学习",
-    "abbreviation": "RL",
-    "category": "AI技术",
-    "one_liner": "通过奖励信号让智能体学习最优策略的方法",
-    "appear_count": 2,
-    "sources": [
-      "Hugging Face Blog",
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-      "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  30",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "How to Train an AI Agent for Command-Line Tasks with Synthetic Data and Reinforcement Learning",
-        "link": "https://developer.nvidia.com/blog/how-to-train-an-ai-agent-for-command-line-tasks-with-synthetic-data-and-reinforcement-learning/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "如果机器学习是「教机器认猫」，深度学习就是给机器一个像人脑一样分层处理信息的系统。浅层识别边缘，中层识别眼睛鼻子，深层才判断「这是猫」。"
   },
   {
     "id": "lora",
@@ -369,7 +384,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "LoRA是一种简化AI训练的方法，能减少训练时需要的参数，让AI学习更高效。"
   },
   {
     "id": "ai-safety",
@@ -398,7 +414,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "就像汽车需要安全带和气囊，AI也需要「安全装置」。AI安全研究如何防止AI失控、被恶意利用或做出危害人类的决策。"
   },
   {
     "id": "quantization",
@@ -429,7 +446,8 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "就像把高清4K电影压缩成720P——画质稍微降低，但文件小很多，普通手机也能流畅播放。量化让原本需要几千美元GPU才能运行的AI模型，在你的笔记本上也能跑。"
   },
   {
     "id": "distillation",
@@ -461,6 +479,7 @@
       }
     ],
     "date": "2026-06-23",
-    "status": "hot"
+    "status": "hot",
+    "explanation": "通过大模型训练小模型，让小模型也能干大事。"
   }
 ]

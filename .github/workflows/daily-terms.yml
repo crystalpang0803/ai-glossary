@@ -19,6 +19,8 @@ jobs:
         run: npm install rss-parser jsdom
 
       - name: Fetch hot terms
+        env:
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
         run: node crawler/fetch-terms.js
 
       - name: Commit and push if changed
