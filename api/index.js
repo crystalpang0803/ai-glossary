@@ -1,8 +1,9 @@
 // Vercel Serverless Function - API 入口
 // 处理所有 /api/* 请求
+const serverless = require('serverless-http');
 const app = require('../server.js');
 
-// Vercel 会将 rewrite 后的请求转发给此 handler
+// 使用 serverless-http 包装 Express app
 // vercel.json: source "/api/:match*" -> destination "/api/index"
-// 注意：Vercel 会保留原始请求路径在 req.url 中，Express 可以正常路由
-module.exports = app;
+// serverless-http 会正确处理 Vercel 的请求格式，保留路径和查询参数
+module.exports = serverless(app);

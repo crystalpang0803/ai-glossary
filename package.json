@@ -7,9 +7,11 @@
     "dev": "node server.js"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "jsdom": "^29.1.1",
-    "rss-parser": "^3.13.0"
+    "rss-parser": "^3.13.0",
+    "serverless-http": "^4.0.0"
   }
 }
