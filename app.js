@@ -45,30 +45,41 @@ async function fetchJSON(apiPath, staticPath) {
 
 // ===== 加载数据 =====
 async function loadGlossary() {
+  // 独立加载，一个失败不影响另一个
+  let official = [];
+  let hot = [];
+
   try {
-    // 并行加载正式词库和热点词汇
-    const [official, hot] = await Promise.all([
-      fetchJSON('/terms?status=official', 'data/glossary.json'),
-      fetchJSON('/hot-terms', 'data/hot-terms.json')
-    ]);
-
-    glossaryData = official || [];
-    hotTermsData = hot || [];
-
-    // 过滤已沉淀的热点词（已存在于正式词库中的不在热点区展示）
-    const officialIds = new Set(glossaryData.map(t => t.id));
-    hotTermsData = hotTermsData.filter(t => !officialIds.has(t.id));
-
-    filteredData = [...glossaryData];
-    initApp();
+    official = await fetchJSON('/terms?status=official', 'data/glossary.json') || [];
   } catch (e) {
-    console.error('加载术语数据失败:', e);
+    console.error('加载正式词库失败:', e);
+  }
+
+  try {
+    hot = await fetchJSON('/hot-terms', 'data/hot-terms.json') || [];
+  } catch (e) {
+    console.error('加载热点词汇失败:', e);
+  }
+
+  glossaryData = official;
+  hotTermsData = hot;
+
+  // 过滤已沉淀的热点词（已存在于正式词库中的不在热点区展示）
+  const officialIds = new Set(glossaryData.map(t => t.id));
+  hotTermsData = hotTermsData.filter(t => !officialIds.has(t.id));
+
+  filteredData = [...glossaryData];
+
+  if (glossaryData.length === 0 && hotTermsData.length === 0) {
     document.getElementById('glossaryGrid').innerHTML = `
       <div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--color-text-muted);">
         <p style="font-size:1.1rem;margin-bottom:8px;">数据加载失败</p>
-        <p style="font-size:0.85rem;">${e.message}</p>
+        <p style="font-size:0.85rem;">请刷新页面重试，或检查网络连接</p>
       </div>`;
+    return;
   }
+
+  initApp();
 }
 
 // ===== 初始化 =====

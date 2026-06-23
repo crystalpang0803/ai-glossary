@@ -13,6 +13,12 @@ app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));
 
+// 请求日志（Vercel 调试用）
+app.use((req, res, next) => {
+  console.log(`[REQ] ${req.method} ${req.url} path=${req.path}`);
+  next();
+});
+
 // ===== 数据文件路径 =====
 const DATA_DIR = path.join(__dirname, 'data');
 const GLOSSARY_FILE = path.join(DATA_DIR, 'glossary.json');
