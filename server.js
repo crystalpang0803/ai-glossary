@@ -33,10 +33,10 @@ function writeJSON(filePath, data) {
 }
 
 // ===== 初始化数据文件 =====
-// 如果 data/glossary.json 不存在，从内嵌数据创建
+// 如果 data/glossary.json 不存在，记录错误但不退出（Vercel 兼容）
 if (!fs.existsSync(GLOSSARY_FILE)) {
   console.error('[ERROR] data/glossary.json not found!');
-  process.exit(1);
+  if (require.main === module) process.exit(1); // 本地运行时退出
 }
 
 // 初始化 hot-terms.json（热点词汇）
@@ -373,31 +373,41 @@ app.get('/admin-inline.html', (req, res) => res.redirect('/admin.html'));
 
 // ===== 静态文件服务 =====
 // 必须放在 API 路由之后
-app.use(express.static(__dirname, {
-  setHeaders: (res, filePath) => {
-    // 禁止通过静态服务访问 data/ 目录
-    if (filePath.startsWith(path.join(__dirname, 'data'))) {
-      res.status(404).send('Not found');
-    }
-  }
-}));
+app.use(express.static(__dirname));
 
-// 特殊：data/glossary.json 和 data/hot-terms.json 不允许直接访问
-app.use('/data', (req, res, next) => {
+// 禁止通过静态服务直接访问 /data/ 目录下的 JSON 文件（使用 API 代替）
+// 但允许前端降级访问（当 API 不可用时，前端直接 fetch data/*.json）
+app.get('/data/:file', (req, res, next) => {
+  const file = req.params.file;
+  if (file === 'glossary.json' || file === 'hot-terms.json') {
+    // 允许前端降级读取数据文件
+    const filePath = path.join(DATA_DIR, file);
+    if (fs.existsSync(filePath)) {
+      return res.sendFile(filePath);
+    }
+    return res.status(404).json({ error: '数据文件不存在' });
+  }
+  // 其他 data 目录文件不允许访问
   res.status(404).json({ error: '直接访问数据文件已禁用，请使用 /api/terms' });
 });
 
 // ===== 启动服务器 =====
-app.listen(PORT, HOST, () => {
-  const glossary = readJSON(GLOSSARY_FILE) || [];
-  const hotTerms = readJSON(HOT_TERMS_FILE) || [];
-  console.log(``);
-  console.log(`  ╔══════════════════════════════════════╗`);
-  console.log(`  ║   AI Glossary Server v2.0            ║`);
-  console.log(`  ╠══════════════════════════════════════╣`);
-  console.log(`  ║   http://${HOST}:${PORT}              ║`);
-  console.log(`  ║   正式词汇: ${glossary.length.toString().padEnd(24)}║`);
-  console.log(`  ║   热点词汇: ${hotTerms.length.toString().padEnd(24)}║`);
-  console.log(`  ╚══════════════════════════════════════╝`);
-  console.log(``);
-});
+// 兼容 Vercel Serverless: 本地运行时才 listen，Vercel 环境导出 app
+if (require.main === module) {
+  app.listen(PORT, HOST, () => {
+    const glossary = readJSON(GLOSSARY_FILE) || [];
+    const hotTerms = readJSON(HOT_TERMS_FILE) || [];
+    console.log(``);
+    console.log(`  ╔══════════════════════════════════════╗`);
+    console.log(`  ║   AI Glossary Server v2.0            ║`);
+    console.log(`  ╠══════════════════════════════════════╣`);
+    console.log(`  ║   http://${HOST}:${PORT}              ║`);
+    console.log(`  ║   正式词汇: ${glossary.length.toString().padEnd(24)}║`);
+    console.log(`  ║   热点词汇: ${hotTerms.length.toString().padEnd(24)}║`);
+    console.log(`  ╚══════════════════════════════════════╝`);
+    console.log(``);
+  });
+}
+
+// 导出给 Vercel Serverless Functions
+module.exports = app;
