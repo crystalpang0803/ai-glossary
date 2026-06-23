@@ -147,7 +147,7 @@
       </button>
       <div class="submit-header">
         <h2>提交新术语</h2>
-        <p>发现了遗漏的AI术语？提交后将出现在热点词汇区。</p>
+        <p>发现了遗漏的AI术语？填写完整信息后，会出现在热点词汇区等待审核。</p>
       </div>
       <form id="submitForm">
         <div class="form-row">
@@ -160,17 +160,44 @@
             <input type="text" id="newTermZh" required placeholder="如: 检索增强生成">
           </div>
         </div>
-        <div class="form-group">
-          <label for="newTermAbbr">缩写（选填）</label>
-          <input type="text" id="newTermAbbr" placeholder="如: RAG">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="newTermAbbr">缩写（选填）</label>
+            <input type="text" id="newTermAbbr" placeholder="如: RAG">
+          </div>
+          <div class="form-group">
+            <label for="newTermCategory">分类 *</label>
+            <select id="newTermCategory" required>
+              <option value="AI概念">AI概念</option>
+              <option value="AI技术">AI技术</option>
+              <option value="AI应用">AI应用</option>
+              <option value="AI安全">AI安全</option>
+              <option value="数据与训练">数据与训练</option>
+              <option value="AI工程">AI工程</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
-          <label for="newTermDesc">简要描述 *</label>
-          <textarea id="newTermDesc" required placeholder="一句话描述该术语的含义..." rows="3"></textarea>
+          <label for="newTermOneliner">一句话描述 *</label>
+          <input type="text" id="newTermOneliner" required placeholder="用一句话解释该术语的含义">
         </div>
         <div class="form-group">
-          <label for="newTermSource">来源链接（选填）</label>
-          <input type="text" id="newTermSource" placeholder="https://...">
+          <label for="newTermDef">详细定义 *</label>
+          <textarea id="newTermDef" required placeholder="完整的术语定义..." rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="newTermExplanation">通俗解读 *</label>
+          <textarea id="newTermExplanation" required placeholder="用日常例子来解释，让非专业人士也能理解..." rows="3"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="newTermSource">来源名称（选填）</label>
+            <input type="text" id="newTermSource" placeholder="如: Stanford HAI">
+          </div>
+          <div class="form-group">
+            <label for="newTermSourceUrl">来源链接（选填）</label>
+            <input type="text" id="newTermSourceUrl" placeholder="https://...">
+          </div>
         </div>
         <button type="submit" class="submit-btn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>

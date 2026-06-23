@@ -68,6 +68,9 @@ async function loadGlossary() {
     !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
   );
 
+  // 按出现频次降序排序，排行才有意义
+  hotTermsData.sort((a, b) => (b.appear_count || 0) - (a.appear_count || 0));
+
   filteredData = [...glossaryData];
 
   if (glossaryData.length === 0 && hotTermsData.length === 0) {
@@ -106,9 +109,9 @@ function renderHotTerms() {
     dateEl.textContent = hotTermsData[0].date;
   }
 
-  grid.innerHTML = hotTermsData.map(term => `
+  grid.innerHTML = hotTermsData.map((term, i) => `
     <div class="hot-term-row" data-id="${term.id}" data-source="hot">
-      <div class="hot-rank">#${term.rank}</div>
+      <div class="hot-rank">${i + 1}</div>
       <div class="hot-row-main">
         <div class="hot-row-title-line">
           <span class="hot-row-en">${term.term_en}</span>
@@ -372,10 +375,12 @@ function setupSubmit() {
       term_en: document.getElementById('newTermEn').value.trim(),
       term_zh: document.getElementById('newTermZh').value.trim(),
       abbreviation: document.getElementById('newTermAbbr').value.trim(),
-      one_liner: document.getElementById('newTermDesc').value.trim(),
-      source_url: document.getElementById('newTermSource').value.trim(),
-      category: 'AI应用',
-      status: 'hot',
+      category: document.getElementById('newTermCategory').value,
+      one_liner: document.getElementById('newTermOneliner').value.trim(),
+      definition: document.getElementById('newTermDef').value.trim(),
+      explanation: document.getElementById('newTermExplanation').value.trim(),
+      source: document.getElementById('newTermSource').value.trim() || '用户提交',
+      source_url: document.getElementById('newTermSourceUrl').value.trim(),
       id: document.getElementById('newTermEn').value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
       date: new Date().toISOString().split('T')[0]
     };
