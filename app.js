@@ -107,20 +107,25 @@ function renderHotTerms() {
   }
 
   grid.innerHTML = hotTermsData.map(term => `
-    <div class="hot-term-card" data-id="${term.id}" data-source="hot">
-      <div class="hot-term-rank">#${term.rank}</div>
-      <div class="hot-term-name">${term.term_en}</div>
-      <div class="hot-term-zh">${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}</div>
-      <div class="hot-term-explanation">${term.explanation || term.one_liner || ''}</div>
-      <div class="hot-term-meta">
-        <span class="hot-term-count">${term.appear_count}次提及</span>
-        <span class="hot-term-sources">${(term.sources || []).slice(0, 3).join(' · ')}</span>
+    <div class="hot-term-row" data-id="${term.id}" data-source="hot">
+      <div class="hot-rank">#${term.rank}</div>
+      <div class="hot-row-main">
+        <div class="hot-row-title-line">
+          <span class="hot-row-en">${term.term_en}</span>
+          ${term.abbreviation ? `<span class="hot-row-abbr">${term.abbreviation}</span>` : ''}
+        </div>
+        <span class="hot-row-zh">${term.term_zh}</span>
+        <span class="hot-row-oneliner">${term.explanation || term.one_liner || ''}</span>
+      </div>
+      <div class="hot-row-meta">
+        <span class="hot-row-count">${term.appear_count}次提及</span>
+        <span class="hot-row-category">${(term.sources || []).slice(0, 3).join(' · ')}</span>
       </div>
     </div>
   `).join('');
 
   // 绑定点击
-  grid.querySelectorAll('.hot-term-card').forEach(card => {
+  grid.querySelectorAll('.hot-term-row').forEach(card => {
     card.addEventListener('click', () => {
       openTermModal(card.dataset.id, card.dataset.source);
     });
@@ -141,16 +146,19 @@ function renderGlossary() {
   empty.classList.add('hidden');
 
   grid.innerHTML = filteredData.map(term => `
-    <div class="glossary-card" data-id="${term.id}" data-source="official" data-category="${term.category || ''}">
+    <div class="term-card" data-id="${term.id}" data-source="official" data-category="${term.category || ''}">
+      <div class="card-header">
+        <span class="card-title">${term.term_en}</span>
+        ${term.abbreviation ? `<span class="card-abbr">${term.abbreviation}</span>` : ''}
+      </div>
+      <div class="card-zh">${term.term_zh}</div>
+      <div class="card-desc">${term.one_liner || ''}</div>
       <div class="card-category">${term.category || ''}</div>
-      <div class="card-term">${term.term_en}</div>
-      <div class="card-zh">${term.term_zh}${term.abbreviation ? ' · ' + term.abbreviation : ''}</div>
-      <div class="card-oneliner">${term.one_liner || ''}</div>
     </div>
   `).join('');
 
   // 绑定点击
-  grid.querySelectorAll('.glossary-card').forEach(card => {
+  grid.querySelectorAll('.term-card').forEach(card => {
     card.addEventListener('click', () => {
       openTermModal(card.dataset.id, card.dataset.source);
     });
@@ -163,10 +171,10 @@ function renderAlphaNav() {
   const activeLetters = new Set(glossaryData.map(t => t.term_en[0].toUpperCase()));
 
   nav.innerHTML = [...activeLetters].sort().map(letter =>
-    `<span class="alpha-link" data-letter="${letter}">${letter}</span>`
+    `<span class="alpha-btn" data-letter="${letter}">${letter}</span>`
   ).join('');
 
-  nav.querySelectorAll('.alpha-link').forEach(link => {
+  nav.querySelectorAll('.alpha-btn').forEach(link => {
     link.addEventListener('click', () => {
       const letter = link.dataset.letter;
       filteredData = glossaryData.filter(t => t.term_en[0].toUpperCase() === letter);
@@ -240,8 +248,8 @@ function setupSearch() {
     if (matches.length > 0) {
       suggestions.innerHTML = matches.map(t => `
         <div class="suggestion-item" data-id="${t.id}" data-source="${t._source}">
-          <span class="suggestion-term">${t.term_en}</span>
-          <span class="suggestion-zh">${t.term_zh}${t.abbreviation ? ' · ' + t.abbreviation : ''}</span>
+          <span class="term-name">${t.term_en}</span>
+          <span class="term-zh">${t.term_zh}${t.abbreviation ? ' · ' + t.abbreviation : ''}</span>
         </div>
       `).join('');
       suggestions.classList.remove('hidden');
