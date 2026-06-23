@@ -1,3 +1,6 @@
 {
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/:match*", "destination": "/api/index" }
+  ]
 }

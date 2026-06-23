@@ -1,9 +1,8 @@
-// Vercel Serverless Function 入口
-// Vercel 会将 /api/* 的所有请求路由到此文件
-// Express 收到的 req.url 是完整的原始路径（如 /api/terms）
-// 所以 Express 路由 app.get('/api/terms', ...) 可以正常匹配
+// Vercel Serverless Function - API 入口
+// 处理所有 /api/* 请求
 const app = require('../server.js');
 
-// 确保在 Vercel 环境下 Express 能正确处理请求路径
-// Vercel Serverless Function 中 req.url 包含完整路径
+// Vercel 会将 rewrite 后的请求转发给此 handler
+// vercel.json: source "/api/:match*" -> destination "/api/index"
+// 注意：Vercel 会保留原始请求路径在 req.url 中，Express 可以正常路由
 module.exports = app;
