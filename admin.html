@@ -86,6 +86,25 @@
     .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--color-text);color:#fff;padding:10px 20px;border-radius:var(--radius-full);font-size:0.85rem;font-weight:500;z-index:2000;animation:fadeUp 0.3s ease}
     @keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
     .loading-state{text-align:center;padding:40px;color:var(--color-text-muted);font-size:0.88rem}
+    .confirm-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,0.5);z-index:1100;align-items:center;justify-content:center;padding:24px}
+    .confirm-overlay.show{display:flex}
+    .confirm-box{background:var(--color-surface);border-radius:var(--radius-lg);max-width:400px;width:100%;padding:28px;text-align:center}
+    .confirm-box .confirm-icon{font-size:2.2rem;margin-bottom:12px}
+    .confirm-box .confirm-title{font-size:1rem;font-weight:700;margin-bottom:6px}
+    .confirm-box .confirm-msg{font-size:0.88rem;color:var(--color-text-secondary);margin-bottom:20px;line-height:1.5}
+    .confirm-box .confirm-actions{display:flex;gap:10px;justify-content:center}
+    .confirm-box .confirm-actions .btn{padding:10px 24px;font-size:0.88rem}
+    .auth-overlay{position:fixed;inset:0;background:var(--color-bg);z-index:2000;display:flex;align-items:center;justify-content:center;padding:24px}
+    .auth-overlay.hidden{display:none}
+    .auth-box{background:var(--color-surface);border-radius:var(--radius-lg);max-width:380px;width:100%;padding:36px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.08)}
+    .auth-box .auth-icon{font-size:2.6rem;margin-bottom:16px}
+    .auth-box .auth-title{font-size:1.2rem;font-weight:800;margin-bottom:6px}
+    .auth-box .auth-sub{font-size:0.88rem;color:var(--color-text-muted);margin-bottom:24px}
+    .auth-box input[type=password]{width:100%;padding:12px 14px;border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:0.88rem;font-family:var(--font-sans);outline:none;margin-bottom:8px;transition:border-color 0.15s ease}
+    .auth-box input[type=password]:focus{border-color:var(--color-accent)}
+    .auth-box .auth-error{font-size:0.82rem;color:var(--color-danger);margin-bottom:16px;display:none}
+    .auth-box .auth-error.show{display:block}
+    .auth-box .auth-btn{width:100%;padding:12px;font-size:0.88rem;font-weight:700}
   </style>
 </head>
 <body>
@@ -222,9 +241,82 @@
     </div>
   </div>
 
+  <!-- Confirm Modal -->
+  <div class="confirm-overlay" id="confirmOverlay">
+    <div class="confirm-box">
+      <div class="confirm-icon" id="confirmIcon">⚠️</div>
+      <div class="confirm-title" id="confirmTitle">确认操作</div>
+      <div class="confirm-msg" id="confirmMsg">确定要执行此操作吗？</div>
+      <div class="confirm-actions">
+        <button class="btn btn-outline" id="confirmCancel">取消</button>
+        <button class="btn btn-danger" id="confirmOk">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-box">
+      <div class="auth-icon">🔐</div>
+      <div class="auth-title">管理后台</div>
+      <div class="auth-sub">请输入管理员密码以继续</div>
+      <input type="password" id="authPassword" placeholder="输入密码" autocomplete="current-password">
+      <div class="auth-error" id="authError">密码错误，请重试</div>
+      <button class="btn btn-primary auth-btn" id="authSubmit">进入后台</button>
+    </div>
+  </div>
+
   <input type="file" id="importFileInput" accept=".xlsx,.xls" style="display:none;">
 
   <script>
+    // ===== Auth (Password Protection) =====
+    const ADMIN_PASSWORD = 'aiglossary2026';
+    const authOverlay = document.getElementById('authOverlay');
+    const authPassword = document.getElementById('authPassword');
+    const authError = document.getElementById('authError');
+    const authSubmit = document.getElementById('authSubmit');
+    const adminLayout = document.querySelector('.admin-layout');
+    adminLayout.style.display = 'none';
+
+    function checkAuth() {
+      const pwd = authPassword.value;
+      if (pwd === ADMIN_PASSWORD) {
+        authOverlay.classList.add('hidden');
+        adminLayout.style.display = 'flex';
+        authError.classList.remove('show');
+        loadData();
+      } else {
+        authError.classList.add('show');
+        authPassword.value = '';
+        authPassword.focus();
+      }
+    }
+    authSubmit.addEventListener('click', checkAuth);
+    authPassword.addEventListener('keydown', e => { if (e.key === 'Enter') checkAuth(); });
+    authPassword.focus();
+
+    // ===== Confirm Modal =====
+    let confirmResolve = null;
+    const confirmOverlay = document.getElementById('confirmOverlay');
+    const confirmIcon = document.getElementById('confirmIcon');
+    const confirmTitle = document.getElementById('confirmTitle');
+    const confirmMsg = document.getElementById('confirmMsg');
+    const confirmOk = document.getElementById('confirmOk');
+    const confirmCancel = document.getElementById('confirmCancel');
+
+    function showConfirm(msg, opts = {}) {
+      confirmIcon.textContent = opts.icon || '⚠️';
+      confirmTitle.textContent = opts.title || '确认操作';
+      confirmMsg.textContent = msg;
+      confirmOk.className = 'btn ' + (opts.btnClass || 'btn-danger');
+      confirmOk.textContent = opts.btnText || '确定';
+      confirmOverlay.classList.add('show');
+      return new Promise(resolve => { confirmResolve = resolve; });
+    }
+    confirmOk.addEventListener('click', () => { confirmOverlay.classList.remove('show'); if (confirmResolve) confirmResolve(true); confirmResolve = null; });
+    confirmCancel.addEventListener('click', () => { confirmOverlay.classList.remove('show'); if (confirmResolve) confirmResolve(false); confirmResolve = null; });
+    confirmOverlay.addEventListener('click', e => { if (e.target === e.currentTarget) { confirmOverlay.classList.remove('show'); if (confirmResolve) confirmResolve(false); confirmResolve = null; } });
+
     // ===== API Helpers =====
     const API = '/api';
     async function apiGet(path) {
@@ -332,7 +424,8 @@
 
     // ===== Actions: Glossary =====
     async function deleteGlossaryItem(id) {
-      if (!confirm('确定要从词库中删除这条术语吗？')) return;
+      const yes = await showConfirm('确定要从词库中删除这条术语吗？此操作不可恢复。', { title: '删除术语', icon: '🗑️', btnText: '删除' });
+      if (!yes) return;
       const ok = await apiDelete('/terms/' + id);
       if (ok) { glossaryTerms = glossaryTerms.filter(t => t.id !== id); updateStats(); renderGlossaryList(); showToast('已删除'); }
     }
@@ -393,21 +486,23 @@
       const result = await apiPost('/hot-terms/' + id + '/promote');
       if (result) {
         hotTerms = hotTerms.filter(t => t.id !== id);
-        glossaryTerms.push(result);
+        glossaryTerms.push(result.promoted || result);
         updateStats(); renderGlossaryList(); renderHotList();
         showToast('已沉淀到正式词库');
       }
     }
 
     async function deleteHotTerm(id) {
-      if (!confirm('确定删除这条热点词汇吗？')) return;
+      const yes = await showConfirm('确定删除这条热点词汇吗？', { title: '删除热点词汇', icon: '🗑️', btnText: '删除' });
+      if (!yes) return;
       const ok = await apiDelete('/hot-terms/' + id);
       if (ok) { hotTerms = hotTerms.filter(t => t.id !== id); updateStats(); renderHotList(); showToast('已删除'); }
     }
 
     // ===== Auto Promote =====
     document.getElementById('autoPromoteBtn').addEventListener('click', async () => {
-      if (!confirm('执行自动沉淀规则？\n- 7天内出现3次以上 → 立即沉淀\n- 30天未出现 → 删除\n- 30天仍在 → 沉淀')) return;
+      const yes = await showConfirm('7天内出现3次以上 → 立即沉淀\n30天未出现 → 删除\n30天仍在 → 沉淀', { title: '执行自动沉淀规则？', icon: '⚡', btnText: '执行', btnClass: 'btn-hot' });
+      if (!yes) return;
       const result = await apiPost('/auto-promote');
       if (result) {
         showToast('自动沉淀完成: ' + (result.promoted || 0) + ' 条沉淀, ' + (result.removed || 0) + ' 条清理');
@@ -450,7 +545,7 @@
       };
       const result = await apiPost('/terms', newTerm);
       if (result) {
-        glossaryTerms.push(result);
+        glossaryTerms.push(result.promoted || result);
         updateStats(); renderGlossaryList();
         showToast('已添加到术语库');
         closeAddModal();
