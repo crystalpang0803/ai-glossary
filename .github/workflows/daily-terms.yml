@@ -16,7 +16,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install rss-parser jsdom
+        run: npm install rss-parser jsdom @neondatabase/serverless
 
       - name: Fetch hot terms
         env:
@@ -30,3 +30,32 @@ jobs:
           git add data/hot-terms.json
           git diff --cached --quiet || git commit -m "chore: update hot terms $(date +%Y-%m-%d)"
           git push
+
+      - name: Sync hot terms to database
+        if: success()
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ -n "$DATABASE_URL" ]; then
+            node -e "
+            const { neon } = require('@neondatabase/serverless');
+            const fs = require('fs');
+            const path = require('path');
+            (async () => {
+              const sql = neon(process.env.DATABASE_URL);
+              // 清空旧热点数据
+              await sql\`DELETE FROM hot_terms\`;
+              // 读取新的热点数据
+              const hotData = JSON.parse(fs.readFileSync('data/hot-terms.json', 'utf8'));
+              console.log('Importing ' + hotData.length + ' hot terms...');
+              for (const term of hotData) {
+                await sql\`INSERT INTO hot_terms (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, appear_count, first_appeared, last_appeared, status, related, date, sources, source_urls, matched_articles)
+                  VALUES (\${term.id}, \${term.term_en}, \${term.term_zh}, \${term.abbreviation || ''}, \${term.category || 'AI概念'}, \${term.one_liner || ''}, \${term.definition || ''}, \${term.explanation || ''}, \${term.source || ''}, \${term.source_url || ''}, \${term.appear_count || 1}, \${term.first_appeared || NOW()}, \${term.last_appeared || NOW()}, 'hot', \${JSON.stringify(term.related || [])}, \${term.date || ''}, \${JSON.stringify(term.sources || [])}, \${JSON.stringify(term.source_urls || [])}, \${JSON.stringify(term.matched_articles || [])})
+                  ON CONFLICT (id) DO NOTHING\`;
+              }
+              console.log('Done!');
+            })().catch(e => { console.error(e); process.exit(1); });
+            "
+          else
+            echo "DATABASE_URL not set, skipping DB sync"
+          fi

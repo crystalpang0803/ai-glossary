@@ -63,24 +63,25 @@ module.exports = async function handler(req, res) {
     `;
     console.log('[INIT-DB] hot_terms 表创建成功');
 
-    // 检查是否已有数据
+    // 分别检查各表数据，独立导入
     const glossaryCount = await sql`SELECT COUNT(*) as count FROM glossary`;
     const hotCount = await sql`SELECT COUNT(*) as count FROM hot_terms`;
 
     const gCount = parseInt(glossaryCount[0].count);
     const hCount = parseInt(hotCount[0].count);
 
-    if (gCount > 0 || hCount > 0) {
+    // 如果两表都有数据，跳过
+    if (gCount > 0 && hCount > 0) {
       return res.status(200).json({
         success: true,
-        message: '数据库表已存在',
+        message: '数据库表已存在且有数据',
         glossary_count: gCount,
         hot_terms_count: hCount
       });
     }
 
-    // 如果表为空，从静态JSON文件导入初始数据
-    console.log('[INIT-DB] 表为空，尝试从JSON文件导入数据...');
+    // 从静态JSON文件导入初始数据（各表独立导入）
+    console.log('[INIT-DB] 导入数据...');
     
     try {
       const fs = require('fs');
@@ -88,7 +89,7 @@ module.exports = async function handler(req, res) {
       const glossaryPath = path.join(process.cwd(), 'data', 'glossary.json');
       const hotTermsPath = path.join(process.cwd(), 'data', 'hot-terms.json');
 
-      if (fs.existsSync(glossaryPath)) {
+      if (gCount === 0 && fs.existsSync(glossaryPath)) {
         const glossaryData = JSON.parse(fs.readFileSync(glossaryPath, 'utf8'));
         console.log(`[INIT-DB] 读取到 ${glossaryData.length} 条词库数据`);
         
@@ -100,7 +101,7 @@ module.exports = async function handler(req, res) {
         console.log(`[INIT-DB] 成功导入 ${glossaryData.length} 条词库数据`);
       }
 
-      if (fs.existsSync(hotTermsPath)) {
+      if (hCount === 0 && fs.existsSync(hotTermsPath)) {
         const hotData = JSON.parse(fs.readFileSync(hotTermsPath, 'utf8'));
         console.log(`[INIT-DB] 读取到 ${hotData.length} 条热点数据`);
         
@@ -113,7 +114,6 @@ module.exports = async function handler(req, res) {
       }
     } catch (importErr) {
       console.error('[INIT-DB] 导入数据失败:', importErr.message);
-      // 表已创建，只是数据没导入，不算失败
     }
 
     const finalGlossary = await sql`SELECT COUNT(*) as count FROM glossary`;
