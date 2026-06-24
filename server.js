@@ -77,6 +77,10 @@ async function getGlossary() {
     explanation: r.explanation || '', source: r.source || '',
     source_url: r.source_url || '',
     related: r.related ? (typeof r.related === 'string' ? JSON.parse(r.related) : r.related) : [],
+    sources: r.sources ? (typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources) : [],
+    source_urls: r.source_urls ? (typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls) : [],
+    matched_articles: r.matched_articles ? (typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles) : [],
+    date: r.date || '',
     created_at: r.created_at || '', updated_at: r.updated_at || ''
   }));
 }
@@ -116,7 +120,11 @@ async function findGlossaryTerm(id) {
     one_liner: r.one_liner || '', definition: r.definition || '',
     explanation: r.explanation || '', source: r.source || '',
     source_url: r.source_url || '',
-    related: r.related ? (typeof r.related === 'string' ? JSON.parse(r.related) : r.related) : []
+    related: r.related ? (typeof r.related === 'string' ? JSON.parse(r.related) : r.related) : [],
+    sources: r.sources ? (typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources) : [],
+    source_urls: r.source_urls ? (typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls) : [],
+    matched_articles: r.matched_articles ? (typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles) : [],
+    date: r.date || ''
   };
 }
 
@@ -192,8 +200,8 @@ app.post('/api/terms', async (req, res) => {
       const existing = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
       if (existing.length > 0) return res.status(409).json({ error: '术语ID已存在' });
       const now = new Date().toISOString();
-      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, created_at, updated_at)
-        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || '用户添加'}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${now}, ${now})`;
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date, created_at, updated_at)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || '用户添加'}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || now.split('T')[0]}, ${now}, ${now})`;
       console.log(`[API] 添加术语到DB: ${term.term_en}`);
       res.status(201).json(term);
     } else {
@@ -353,8 +361,8 @@ app.post('/api/hot-terms/:id/promote', async (req, res) => {
       const inGlossary = await sql`SELECT id FROM glossary WHERE id = ${req.params.id}`;
       if (inGlossary.length > 0) return res.status(409).json({ error: '该术语已在正式词库中' });
       const now = new Date().toISOString();
-      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, created_at, updated_at)
-        VALUES (${hotTerm.id}, ${hotTerm.term_en}, ${hotTerm.term_zh}, ${hotTerm.abbreviation || ''}, ${hotTerm.category || 'AI概念'}, ${hotTerm.one_liner || ''}, ${hotTerm.definition || ''}, ${hotTerm.explanation || ''}, ${hotTerm.source || ''}, ${hotTerm.source_url || ''}, ${toJsonStr(hotTerm.related)}, ${now}, ${now})`;
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date, created_at, updated_at)
+        VALUES (${hotTerm.id}, ${hotTerm.term_en}, ${hotTerm.term_zh}, ${hotTerm.abbreviation || ''}, ${hotTerm.category || 'AI概念'}, ${hotTerm.one_liner || ''}, ${hotTerm.definition || ''}, ${hotTerm.explanation || ''}, ${hotTerm.source || ''}, ${hotTerm.source_url || ''}, ${toJsonStr(hotTerm.related)}, ${toJsonStr(hotTerm.sources)}, ${toJsonStr(hotTerm.source_urls)}, ${toJsonStr(hotTerm.matched_articles)}, ${hotTerm.date || now.split('T')[0]}, ${now}, ${now})`;
       await sql`DELETE FROM hot_terms WHERE id = ${req.params.id}`;
       console.log(`[PROMOTE] 沉淀: ${hotTerm.term_en} → 正式词库`);
       res.json({ success: true, promoted: hotTerm });
@@ -418,8 +426,8 @@ app.post('/api/auto-promote', async (req, res) => {
       if (daysSinceFirst <= 7 && (term.appear_count || 0) >= 3) {
         if (useDatabase) {
           const dbNow = new Date().toISOString();
-          await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, created_at, updated_at)
-            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${dbNow}, ${dbNow})
+          await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date, created_at, updated_at)
+            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || dbNow.split('T')[0]}, ${dbNow}, ${dbNow})
             ON CONFLICT (id) DO NOTHING`;
           await sql`DELETE FROM hot_terms WHERE id = ${term.id}`;
         }
@@ -436,8 +444,8 @@ app.post('/api/auto-promote', async (req, res) => {
       if (daysSinceFirst >= 30 && daysSinceLast < 14) {
         if (useDatabase) {
           const dbNow = new Date().toISOString();
-          await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, created_at, updated_at)
-            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${dbNow}, ${dbNow})
+          await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date, created_at, updated_at)
+            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || dbNow.split('T')[0]}, ${dbNow}, ${dbNow})
             ON CONFLICT (id) DO NOTHING`;
           await sql`DELETE FROM hot_terms WHERE id = ${term.id}`;
         }
