@@ -100,8 +100,10 @@ function renderHotTerms() {
   const dateEl = document.getElementById('hotDate');
 
   if (hotTermsData.length === 0) {
-    section.style.display = 'none';
-    divider.style.display = 'none';
+    grid.innerHTML = '<div style="text-align:center;padding:24px;color:var(--color-text-muted);font-size:0.9rem;">暂无热门词汇，提交新术语后将显示在此处</div>';
+    section.style.display = '';
+    divider.style.display = '';
+    countEl.textContent = '0';
     return;
   }
 
