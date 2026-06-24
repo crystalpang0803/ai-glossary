@@ -29,6 +29,25 @@ module.exports = async function handler(req, res) {
 
   const sql = neon(process.env.DATABASE_URL);
 
+  // 解析请求体（Vercel 原生 handler 不自动解析 JSON body）
+  let body = req.body;
+  if (!body && method !== 'GET' && method !== 'DELETE') {
+    try {
+      // Vercel 可能把 body 放在 req.read() 或需要手动读取
+      if (typeof req.body === 'string') {
+        body = JSON.parse(req.body);
+      } else {
+        // 尝试从 Vercel 的 body 缓冲区获取
+        const chunks = [];
+        for await (const chunk of req) chunks.push(chunk);
+        const raw = Buffer.concat(chunks).toString();
+        if (raw) body = JSON.parse(raw);
+      }
+    } catch (e) {
+      // body 解析失败，保持 undefined
+    }
+  }
+
   // ===== 路由匹配 =====
 
   // GET /api/terms
@@ -73,7 +92,7 @@ module.exports = async function handler(req, res) {
   // POST /api/hot-terms (提交新术语)
   if (method === 'POST' && pathname === '/api/hot-terms') {
     try {
-      const term = req.body || {};
+      const term = body || {};
       if (!term.term_en || !term.term_zh) return res.status(400).json({ error: 'term_en 和 term_zh 为必填字段' });
       if (!term.id) term.id = term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
@@ -100,7 +119,7 @@ module.exports = async function handler(req, res) {
   // POST /api/hot-terms/batch (批量导入热门词汇)
   if (method === 'POST' && pathname === '/api/hot-terms/batch') {
     try {
-      const terms = req.body;
+      const terms = body;
       if (!Array.isArray(terms)) return res.status(400).json({ error: '需要数组格式的数据' });
       
       // 先清空旧数据
