@@ -57,7 +57,7 @@ module.exports = async function handler(req, res) {
       const glossary = await sql`SELECT * FROM glossary ORDER BY term_en`;
       const hotTerms = await sql`SELECT * FROM hot_terms ORDER BY appear_count DESC, term_en`;
       if (status === 'official') {
-        return res.json(glossary.map(r => ({ ...r, related: typeof r.related === 'string' ? JSON.parse(r.related) : r.related || [] })));
+        return res.json(glossary.map(r => ({ ...r, related: typeof r.related === 'string' ? JSON.parse(r.related) : r.related || [], sources: typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources || [], source_urls: typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls || [], matched_articles: typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles || [] })));
       }
       if (status === 'hot') {
         return res.json(hotTerms.map(r => ({ ...r, sources: typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources || [], source_urls: typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls || [], matched_articles: typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles || [], related: typeof r.related === 'string' ? JSON.parse(r.related) : r.related || [] })));
@@ -161,9 +161,10 @@ module.exports = async function handler(req, res) {
         await sql`DELETE FROM hot_terms WHERE id = ${id}`;
         return res.json({ promoted: { id, term_en: term.term_en, term_zh: term.term_zh }, message: '该术语已在词库中，已从热点词汇移除' });
       }
-      // 插入到glossary（只使用glossary表已有的列）
-      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related)
-        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)})`;
+      // 插入到glossary（保留来自hot_terms的来源信息）
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || ''})`;
+
 
       // 从hot_terms中删除
       await sql`DELETE FROM hot_terms WHERE id = ${id}`;
@@ -185,8 +186,8 @@ module.exports = async function handler(req, res) {
           // 沉淀到词库
           const existing = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
           if (existing.length === 0) {
-            await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related)
-              VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)})`;
+            await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date)
+              VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || ''})`;
           }
           await sql`DELETE FROM hot_terms WHERE id = ${term.id}`;
           promoted++;
@@ -230,8 +231,8 @@ module.exports = async function handler(req, res) {
       if (!term.term_en) return res.status(400).json({ error: 'term_en 为必填字段' });
       const existing = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
       if (existing.length > 0) return res.status(409).json({ error: '该术语ID已存在' });
-      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related)
-        VALUES (${term.id}, ${term.term_en}, ${term.term_zh || ''}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)})`;
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, sources, source_urls, matched_articles, date)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh || ''}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)}, ${term.date || ''})`;
       return res.status(201).json({ ...term, status: 'official' });
     } catch (e) {
       return res.status(500).json({ error: '添加失败: ' + e.message });

@@ -31,11 +31,26 @@ module.exports = async function handler(req, res) {
         source VARCHAR(500) DEFAULT '',
         source_url VARCHAR(1000) DEFAULT '',
         related JSONB DEFAULT '[]',
+        sources JSONB DEFAULT '[]',
+        source_urls JSONB DEFAULT '[]',
+        matched_articles JSONB DEFAULT '[]',
+        date VARCHAR(20) DEFAULT '',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `;
     console.log('[INIT-DB] glossary 表创建成功');
+
+    // 迁移：给glossary表添加hot_terms已有的来源字段
+    try {
+      await sql`ALTER TABLE glossary ADD COLUMN IF NOT EXISTS sources JSONB DEFAULT '[]'`;
+      await sql`ALTER TABLE glossary ADD COLUMN IF NOT EXISTS source_urls JSONB DEFAULT '[]'`;
+      await sql`ALTER TABLE glossary ADD COLUMN IF NOT EXISTS matched_articles JSONB DEFAULT '[]'`;
+      await sql`ALTER TABLE glossary ADD COLUMN IF NOT EXISTS date VARCHAR(20) DEFAULT ''`;
+      console.log('[INIT-DB] glossary 表迁移完成（添加来源字段）');
+    } catch (migrateErr) {
+      console.error('[INIT-DB] glossary 表迁移失败:', migrateErr.message);
+    }
 
     // 创建热点词汇表
     await sql`
