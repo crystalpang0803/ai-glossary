@@ -29,32 +29,24 @@ async function apiPost(path, body) {
   return res.json();
 }
 
-// 通用 JSON 获取：优先静态 JSON 文件（确保纯静态部署也能正常工作），API 作为增强
-async function fetchJSON(apiPath, staticPath) {
-  // 先尝试加载静态 JSON 文件（纯静态部署如 Vercel/GitHub Pages 必须能工作）
-  try {
-    const res = await fetch(staticPath);
-    if (res.ok) {
-      const data = await res.json();
-      // 静态文件加载成功后，再异步探测 API 是否可用（不阻塞渲染）
-      try {
-        await apiGet(apiPath);
-        apiAvailable = true;
-      } catch (_) {
-        apiAvailable = false;
-      }
-      return data;
-    }
-  } catch (_) {}
+// 加载静态 JSON 数据文件（纯前端，无 API 依赖）
+async function loadJSON(staticPath) {
+  const res = await fetch(staticPath);
+  if (!res.ok) throw new Error(`加载 ${staticPath} 失败: ${res.status}`);
+  return res.json();
+}
 
-  // 静态文件不可用时，才尝试 API
+// 异步探测 API 是否可用（不阻塞渲染）
+async function checkApiAvailable() {
   try {
-    const data = await apiGet(apiPath);
+    await apiGet('/stats');
     apiAvailable = true;
-    return data;
-  } catch (e) {
-    throw new Error(`数据加载失败: ${staticPath} 和 ${apiPath} 均不可用`);
+  } catch (_) {
+    apiAvailable = false;
   }
+  // 根据结果更新 UI（如隐藏"添加词语"按钮）
+  const submitBtn = document.getElementById('navSubmitBtn');
+  if (submitBtn) submitBtn.style.display = apiAvailable ? '' : 'none';
 }
 
 // ===== 加载数据 =====
@@ -62,18 +54,21 @@ async function loadGlossary() {
   let official = [];
   let hot = [];
 
-  // 独立加载，一个失败不影响另一个
+  // 直接加载静态 JSON 文件（确保 Vercel/GitHub Pages 纯静态部署也能显示数据）
   try {
-    official = await fetchJSON('/terms?status=official', '/data/glossary.json');
+    official = await loadJSON('/data/glossary.json');
   } catch (e) {
     console.warn('加载词库失败:', e.message);
   }
 
   try {
-    hot = await fetchJSON('/hot-terms', '/data/hot-terms.json');
+    hot = await loadJSON('/data/hot-terms.json');
   } catch (e) {
     console.warn('加载热门术语失败:', e.message);
   }
+
+  // 异步探测 API（不阻塞页面渲染）
+  checkApiAvailable();
 
   glossaryData = official;
   // 去重：排除词库中已有的术语（ID + 名称双重匹配）
