@@ -1,7 +1,8 @@
 /**
- * AI术语热度抓取脚本 v3.0
+ * AI术语热度抓取脚本 v4.0
  * 双模式抓取：RSS + 网页抓取（scrape）
- * AI生成通俗解读：智谱 GLM-4-Flash
+ * AI发现新术语：智谱 GLM-4-Flash
+ * 筛选条件：1.跟AI行业相关 2.是新词（不在词库中+近一周出现） 3.是有定义的术语/概念
  * 用法: GLM_API_KEY=xxx node crawler/fetch-terms.js
  */
 
@@ -158,8 +159,169 @@ async function fetchScrape(sourceConfig) {
   }
 }
 
+// ===== AI发现新术语 =====
+async function aiDiscoverNewTerms(articles) {
+  if (!GLM_API_KEY) {
+    console.log('[AI Discover] No GLM_API_KEY, falling back to keyword matching');
+    return null; // 返回null表示需要fallback
+  }
+
+  // 构建已有词库列表（用于去重）
+  const glossaryList = glossaryData.map(t => {
+    const parts = [t.term_en];
+    if (t.abbreviation) parts.push(`(${t.abbreviation})`);
+    return parts.join(' ');
+  }).join('、');
+
+  // 收集所有文章标题，去重
+  const allTitles = [];
+  const seenTitles = new Set();
+  for (const article of articles) {
+    const title = (article.title || '').trim();
+    if (title && title.length > 5 && !seenTitles.has(title)) {
+      seenTitles.add(title);
+      allTitles.push({ title, source: article.source || '', link: article.link || '' });
+    }
+  }
+
+  if (allTitles.length === 0) {
+    console.log('[AI Discover] No articles to analyze');
+    return [];
+  }
+
+  console.log(`\n--- AI发现新术语 (${allTitles.length} unique titles) ---`);
+
+  // 分批处理：每批最多30个标题
+  const BATCH_SIZE = 30;
+  const allDiscovered = [];
+
+  for (let i = 0; i < allTitles.length; i += BATCH_SIZE) {
+    const batch = allTitles.slice(i, i + BATCH_SIZE);
+    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+    const totalBatches = Math.ceil(allTitles.length / BATCH_SIZE);
+
+    const titleList = batch.map((a, idx) => `${i + idx + 1}. [${a.source}] ${a.title}`).join('\n');
+
+    const prompt = `以下是近一周AI领域的新闻标题，请从中提取满足以下条件的术语：
+
+1. 跟AI行业相关（算法、模型架构、训练方法、推理技术、部署工程、评测基准、对齐安全、AI硬件、AI工具等）
+2. 是新词（不在以下已有词库中，且是近一周才出现或才开始被广泛讨论的概念）
+3. 是有定义的术语或概念——必须能写出一句话解释它的含义
+
+排除以下类型：
+- 纯产品名（如Cursor、Devin、Claude Code）
+- 纯公司名或组织名
+- 纯数字指标或评测分数
+- 无法定义的模糊词或泛指词
+- 已在词库中的词的同义别名
+
+已有词库（${glossaryData.length}条）：${glossaryList}
+
+标题：
+${titleList}
+
+输出JSON数组，每个元素包含：
+- term_en: 英文术语名
+- term_zh: 中文翻译
+- abbreviation: 缩写（无则为空字符串）
+- one_liner: 一句话定义（清晰解释该术语的含义）
+- category: 分类（AI概念/AI技术/AI工程/AI应用/AI安全）
+
+如果没有找到符合条件的新术语，输出空数组 []
+只输出JSON，不要输出任何其他内容。`;
+
+    console.log(`[AI Discover] Batch ${batchNum}/${totalBatches} (${batch.length} titles)...`);
+    
+    const result = await callGLM(prompt, 1500);
+    
+    if (result) {
+      try {
+        // 提取JSON部分（可能被markdown代码块包裹）
+        let jsonStr = result;
+        const jsonMatch = result.match(/\[[\s\S]*\]/);
+        if (jsonMatch) {
+          jsonStr = jsonMatch[0];
+        }
+        
+        const terms = JSON.parse(jsonStr);
+        if (Array.isArray(terms)) {
+          for (const term of terms) {
+            if (term.term_en && term.one_liner) {
+              // 记录来源信息
+              const matchedArticles = batch.filter(a => {
+                const t = (a.title || '').toLowerCase();
+                const en = (term.term_en || '').toLowerCase();
+                const abbr = (term.abbreviation || '').toLowerCase();
+                return t.includes(en) || (abbr && abbr.length >= 2 && t.includes(abbr));
+              }).map(a => ({ title: a.title, link: a.link, source: a.source }));
+
+              const matchedSources = [...new Set(matchedArticles.map(a => a.source).filter(Boolean))];
+
+              allDiscovered.push({
+                term_en: term.term_en.trim(),
+                term_zh: term.term_zh?.trim() || '',
+                abbreviation: term.abbreviation?.trim() || '',
+                one_liner: term.one_liner.trim(),
+                category: term.category || 'AI概念',
+                appear_count: Math.max(1, matchedArticles.length),
+                sources: matchedSources,
+                source_urls: matchedArticles.slice(0, 5).map(a => a.link).filter(Boolean),
+                matched_articles: matchedArticles.slice(0, 3),
+                explanation: ''
+              });
+            }
+          }
+          console.log(`[AI Discover] Batch ${batchNum}: found ${terms.length} terms`);
+        }
+      } catch (e) {
+        console.log(`[AI Discover] Batch ${batchNum}: parse error - ${e.message}`);
+        console.log(`[AI Discover] Raw response: ${result.substring(0, 200)}`);
+      }
+    }
+
+    // 避免速率限制
+    if (i + BATCH_SIZE < allTitles.length) {
+      await new Promise(r => setTimeout(r, 2000));
+    }
+  }
+
+  // 第二轮：验证每个术语是否确实是"有定义的术语"
+  if (allDiscovered.length > 0) {
+    console.log(`\n[AI Verify] Verifying ${allDiscovered.length} discovered terms...`);
+    const verified = [];
+    
+    for (const term of allDiscovered) {
+      const verifyPrompt = `判断以下词汇是否是一个"有明确定义的AI术语或概念"：
+
+词汇：${term.term_en}（${term.term_zh}）
+定义：${term.one_liner}
+
+判断标准：
+- 是术语/概念/方法/架构/协议/技术 → 是
+- 是产品名/公司名/人名/项目名/模糊词 → 否
+
+只输出"是"或"否"。`;
+
+      const answer = await callGLM(verifyPrompt, 10);
+      if (answer && answer.includes('是') && !answer.includes('否')) {
+        verified.push(term);
+        console.log(`[AI Verify] ✓ ${term.term_en}`);
+      } else {
+        console.log(`[AI Verify] ✗ ${term.term_en} (not a defined term)`);
+      }
+      
+      await new Promise(r => setTimeout(r, 500));
+    }
+    
+    console.log(`[AI Verify] ${verified.length}/${allDiscovered.length} terms verified`);
+    return verified;
+  }
+
+  return allDiscovered;
+}
+
 // ===== AI生成通俗解读 =====
-async function callGLM(prompt) {
+async function callGLM(prompt, maxTokens = 200) {
   if (!GLM_API_KEY) {
     console.log('[AI] No GLM_API_KEY set, skipping AI generation');
     return null;
@@ -169,7 +331,7 @@ async function callGLM(prompt) {
     model: GLM_MODEL,
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.7,
-    max_tokens: 200
+    max_tokens: maxTokens
   });
   
   return new Promise((resolve, reject) => {
@@ -378,27 +540,57 @@ function mergeWithExisting(newTerms) {
 
 // ===== 主流程 =====
 async function main() {
-  console.log('=== AI术语热度抓取 v3.0 ===');
+  console.log('=== AI术语热度抓取 v4.0 ===');
   console.log(`时间: ${new Date().toISOString()}`);
   console.log(`时间窗口: 最近${HOURS_BACK}小时\n`);
 
   const articles = await fetchAll();
-  const ranked = matchKeywords(articles);
-  console.log(`\n[Match] ${ranked.length} terms matched (>1次)`);
+  let newTerms = [];
 
-  const newTerms = generateOutput(ranked);
-  console.log(`[Rank] Top ${newTerms.length} terms`);
+  // 优先使用AI发现新术语
+  const discovered = await aiDiscoverNewTerms(articles);
 
-  // AI生成通俗解读
+  if (discovered && discovered.length > 0) {
+    // AI发现模式：直接用AI结果
+    const today = new Date().toISOString().split('T')[0];
+    newTerms = discovered.map((term, idx) => ({
+      id: term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+      rank: idx + 1,
+      term_en: term.term_en,
+      term_zh: term.term_zh,
+      abbreviation: term.abbreviation,
+      category: term.category,
+      one_liner: term.one_liner,
+      appear_count: term.appear_count || 1,
+      sources: term.sources || [],
+      source_urls: term.source_urls || [],
+      matched_articles: term.matched_articles || [],
+      date: today,
+      status: 'hot',
+      explanation: term.explanation || ''
+    }));
+    console.log(`\n[AI Discover] ${newTerms.length} new terms found`);
+  } else if (discovered === null) {
+    // Fallback：无GLM_API_KEY时使用关键词匹配
+    console.log('\n[Fallback] Using keyword matching (no GLM_API_KEY)');
+    const ranked = matchKeywords(articles);
+    console.log(`[Match] ${ranked.length} terms matched (>1次)`);
+    newTerms = generateOutput(ranked);
+    console.log(`[Rank] Top ${newTerms.length} terms`);
+  } else {
+    console.log('\n[AI Discover] No new terms found');
+  }
+
+  // AI生成通俗解读（对没有explanation的词补充）
   await generateExplanations(newTerms);
 
   if (newTerms.length > 0) {
-    console.log('\n--- 今日热门 Top 10 ---');
-    newTerms.slice(0, 10).forEach(t => {
-      console.log(`  ${t.rank}. ${t.term_en} (${t.term_zh}) - ${t.appear_count}次 [${t.sources.join(', ')}]`);
+    console.log('\n--- 今日新发现术语 ---');
+    newTerms.forEach((t, i) => {
+      console.log(`  ${i + 1}. ${t.term_en} (${t.term_zh}) - ${t.one_liner}`);
     });
   } else {
-    console.log('\n--- 无热门术语（48hr内匹配次数均<=1）---');
+    console.log('\n--- 无新术语发现 ---');
   }
 
   const merged = mergeWithExisting(newTerms);

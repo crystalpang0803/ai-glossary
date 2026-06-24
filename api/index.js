@@ -68,11 +68,10 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  // GET /api/hot-terms (排除已入库词)
+  // GET /api/hot-terms (排除已入库词，只展示新概念)
   if (method === 'GET' && pathname === '/api/hot-terms') {
     try {
       const rows = await sql`SELECT * FROM hot_terms ORDER BY appear_count DESC, term_en`;
-      // 获取已入库词的ID和英文名，用于去重
       const glossaryIds = await sql`SELECT id, term_en FROM glossary`;
       const officialIdSet = new Set(glossaryIds.map(r => r.id));
       const officialNameSet = new Set(glossaryIds.map(r => r.term_en.toLowerCase()));
