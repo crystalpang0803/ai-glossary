@@ -123,13 +123,15 @@ function renderHotTerms() {
         <div class="hot-row-title-line">
           <span class="hot-row-en">${term.term_en}</span>
           ${term.abbreviation ? `<span class="hot-row-abbr">${term.abbreviation}</span>` : ''}
+          ${term.category ? `<span class="hot-row-cat-badge">${term.category}</span>` : ''}
         </div>
         <span class="hot-row-zh">${term.term_zh}</span>
-        <span class="hot-row-oneliner">${term.explanation || term.one_liner || ''}</span>
+        ${term.explanation || term.one_liner ? `<span class="hot-row-oneliner">${term.explanation || term.one_liner}</span>` : ''}
+        ${(term.sources && term.sources.length > 0) ? `<span class="hot-row-source">${term.sources.slice(0, 3).join(' · ')}</span>` : ''}
       </div>
       <div class="hot-row-meta">
         <span class="hot-row-count">${term.appear_count}次提及</span>
-        <span class="hot-row-category">${(term.sources || []).slice(0, 3).join(' · ')}</span>
+        ${term.date ? `<span class="hot-row-date">${term.date}</span>` : ''}
       </div>
     </div>
   `).join('');

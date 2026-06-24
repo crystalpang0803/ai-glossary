@@ -68,11 +68,16 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  // GET /api/hot-terms
+  // GET /api/hot-terms (排除已入库词)
   if (method === 'GET' && pathname === '/api/hot-terms') {
     try {
       const rows = await sql`SELECT * FROM hot_terms ORDER BY appear_count DESC, term_en`;
-      return res.json(rows.map(r => ({ ...r, sources: typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources || [], source_urls: typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls || [], matched_articles: typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles || [], related: typeof r.related === 'string' ? JSON.parse(r.related) : r.related || [] })));
+      // 获取已入库词的ID和英文名，用于去重
+      const glossaryIds = await sql`SELECT id, term_en FROM glossary`;
+      const officialIdSet = new Set(glossaryIds.map(r => r.id));
+      const officialNameSet = new Set(glossaryIds.map(r => r.term_en.toLowerCase()));
+      const filtered = rows.filter(r => !officialIdSet.has(r.id) && !officialNameSet.has(r.term_en.toLowerCase()));
+      return res.json(filtered.map(r => ({ ...r, sources: typeof r.sources === 'string' ? JSON.parse(r.sources) : r.sources || [], source_urls: typeof r.source_urls === 'string' ? JSON.parse(r.source_urls) : r.source_urls || [], matched_articles: typeof r.matched_articles === 'string' ? JSON.parse(r.matched_articles) : r.matched_articles || [], related: typeof r.related === 'string' ? JSON.parse(r.related) : r.related || [] })));
     } catch (e) {
       return res.status(500).json({ error: '数据库错误: ' + e.message });
     }
@@ -138,6 +143,126 @@ module.exports = async function handler(req, res) {
       return res.json({ success: true, imported, total: terms.length });
     } catch (e) {
       return res.status(500).json({ error: '批量导入失败: ' + e.message });
+    }
+  }
+
+  // POST /api/hot-terms/:id/promote (沉淀到词库)
+  const promoteMatch = pathname.match(/^\/api\/hot-terms\/([^/]+)\/promote$/);
+  if (method === 'POST' && promoteMatch) {
+    try {
+      const id = promoteMatch[1];
+      const rows = await sql`SELECT * FROM hot_terms WHERE id = ${id}`;
+      if (rows.length === 0) return res.status(404).json({ error: '热点词汇不存在' });
+      const term = rows[0];
+      // 检查是否已在词库
+      const existing = await sql`SELECT id FROM glossary WHERE id = ${id}`;
+      if (existing.length > 0) {
+        // 已在词库，从hot_terms中删除即可
+        await sql`DELETE FROM hot_terms WHERE id = ${id}`;
+        return res.json({ promoted: { id, term_en: term.term_en, term_zh: term.term_zh }, message: '该术语已在词库中，已从热点词汇移除' });
+      }
+      // 插入到glossary
+      const now = new Date().toISOString();
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, date, sources, source_urls, matched_articles)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${term.date || now.split('T')[0]}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)})`;
+      // 从hot_terms中删除
+      await sql`DELETE FROM hot_terms WHERE id = ${id}`;
+      const promoted = { ...term, related: typeof term.related === 'string' ? JSON.parse(term.related) : term.related || [], sources: typeof term.sources === 'string' ? JSON.parse(term.sources) : term.sources || [], source_urls: typeof term.source_urls === 'string' ? JSON.parse(term.source_urls) : term.source_urls || [], matched_articles: typeof term.matched_articles === 'string' ? JSON.parse(term.matched_articles) : term.matched_articles || [] };
+      return res.json({ promoted });
+    } catch (e) {
+      return res.status(500).json({ error: '沉淀失败: ' + e.message });
+    }
+  }
+
+  // POST /api/auto-promote (自动沉淀)
+  if (method === 'POST' && pathname === '/api/auto-promote') {
+    try {
+      let promoted = 0, removed = 0;
+      const hotRows = await sql`SELECT * FROM hot_terms`;
+      for (const term of hotRows) {
+        const daysSinceLast = term.last_appeared ? (Date.now() - new Date(term.last_appeared).getTime()) / 86400000 : 999;
+        if (term.appear_count >= 3 && daysSinceLast <= 30) {
+          // 沉淀到词库
+          const existing = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
+          if (existing.length === 0) {
+            const now = new Date().toISOString();
+            await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, date, sources, source_urls, matched_articles)
+              VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${term.date || now.split('T')[0]}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)})`;
+          }
+          await sql`DELETE FROM hot_terms WHERE id = ${term.id}`;
+          promoted++;
+        } else if (daysSinceLast > 30) {
+          await sql`DELETE FROM hot_terms WHERE id = ${term.id}`;
+          removed++;
+        }
+      }
+      return res.json({ promoted, removed });
+    } catch (e) {
+      return res.status(500).json({ error: '自动沉淀失败: ' + e.message });
+    }
+  }
+
+  // PUT /api/terms/:id (更新词库术语)
+  const putTermsMatch = pathname.match(/^\/api\/terms\/([^/]+)$/);
+  if (method === 'PUT' && putTermsMatch) {
+    try {
+      const id = putTermsMatch[1];
+      const updates = body || {};
+      const existing = await sql`SELECT id FROM glossary WHERE id = ${id}`;
+      if (existing.length === 0) return res.status(404).json({ error: '术语不存在' });
+      await sql`UPDATE glossary SET
+        term_en = ${updates.term_en || ''}, term_zh = ${updates.term_zh || ''},
+        abbreviation = ${updates.abbreviation || ''}, category = ${updates.category || 'AI概念'},
+        one_liner = ${updates.one_liner || ''}, definition = ${updates.definition || ''},
+        explanation = ${updates.explanation || ''}, source = ${updates.source || ''},
+        source_url = ${updates.source_url || ''}, related = ${toJsonStr(updates.related)}
+        WHERE id = ${id}`;
+      return res.json({ id, ...updates });
+    } catch (e) {
+      return res.status(500).json({ error: '更新失败: ' + e.message });
+    }
+  }
+
+  // POST /api/terms (添加术语到词库)
+  if (method === 'POST' && pathname === '/api/terms') {
+    try {
+      const term = body || {};
+      if (!term.id) term.id = term.term_en ? term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') : '';
+      if (!term.term_en) return res.status(400).json({ error: 'term_en 为必填字段' });
+      const existing = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
+      if (existing.length > 0) return res.status(409).json({ error: '该术语ID已存在' });
+      const now = new Date().toISOString();
+      await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, date, sources, source_urls, matched_articles)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh || ''}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${term.date || now.split('T')[0]}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)})`;
+      return res.status(201).json({ ...term, status: 'official' });
+    } catch (e) {
+      return res.status(500).json({ error: '添加失败: ' + e.message });
+    }
+  }
+
+  // DELETE /api/terms/:id (删除词库术语)
+  const deleteTermsMatch = pathname.match(/^\/api\/terms\/([^/]+)$/);
+  if (method === 'DELETE' && deleteTermsMatch) {
+    try {
+      const id = deleteTermsMatch[1];
+      const existing = await sql`SELECT id FROM glossary WHERE id = ${id}`;
+      if (existing.length === 0) return res.status(404).json({ error: '术语不存在' });
+      await sql`DELETE FROM glossary WHERE id = ${id}`;
+      return res.json({ deleted: id });
+    } catch (e) {
+      return res.status(500).json({ error: '删除失败: ' + e.message });
+    }
+  }
+
+  // DELETE /api/hot-terms/:id (删除热点词汇)
+  const deleteHotMatch = pathname.match(/^\/api\/hot-terms\/([^/]+)$/);
+  if (method === 'DELETE' && deleteHotMatch) {
+    try {
+      const id = deleteHotMatch[1];
+      await sql`DELETE FROM hot_terms WHERE id = ${id}`;
+      return res.json({ deleted: id });
+    } catch (e) {
+      return res.status(500).json({ error: '删除失败: ' + e.message });
     }
   }
 

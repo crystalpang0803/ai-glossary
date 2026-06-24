@@ -364,7 +364,7 @@
       document.getElementById('statTotal').textContent = glossaryTerms.length;
       document.getElementById('statHot').textContent = hotTerms.length;
       document.getElementById('statHotTotal').textContent = hotTerms.length;
-      const readyCount = hotTerms.filter(t => t.appear_count >= 3).length;
+      const readyCount = hotTerms.length; // 所有热点词汇都可沉淀
       document.getElementById('statHotReady').textContent = readyCount;
       const badge = document.getElementById('hotBadge');
       if (hotTerms.length > 0) { badge.style.display = 'inline'; badge.textContent = hotTerms.length; }
@@ -396,7 +396,7 @@
     function renderHotList() {
       const list = document.getElementById('hotList');
       let data = hotTerms;
-      if (currentSubTab === 'ready') data = data.filter(t => t.appear_count >= 3);
+      if (currentSubTab === 'ready') data = data.filter(t => t.appear_count >= 1); // 所有人工智能推荐词汇都可沉淀
       if (hotSearchQuery) {
         const q = hotSearchQuery.toLowerCase();
         data = data.filter(t => (t.term_en || '').toLowerCase().includes(q) || (t.term_zh || '').includes(q));
@@ -407,17 +407,17 @@
         return;
       }
       list.innerHTML = data.map(term => {
-        const canPromote = term.appear_count >= 3;
+        const canPromote = true; // 所有热点词汇都可以沉淀
         return '<div class="term-item"><div class="term-item-header"><div>' +
           '<div class="term-item-title">' + (term.term_en || '') + (term.term_zh ? ' · ' + term.term_zh : '') +
           '<span class="hot-badge">🔥 ' + term.appear_count + '</span></div>' +
-          '<div class="term-item-meta">' + (term.category || '未分类') + '</div>' +
+          '<div class="term-item-meta">' + (term.category || '未分类') + (term.source ? ' · 来源: ' + term.source : '') + '</div>' +
           '</div><div class="term-item-actions">' +
           (canPromote ? '<button class="btn btn-sm btn-success" onclick="promoteHotTerm(\'' + term.id + '\')">沉淀到词库</button>' : '') +
           '<button class="btn btn-sm btn-danger" onclick="deleteHotTerm(\'' + term.id + '\')">删除</button>' +
           '</div></div>' +
-          '<div class="term-item-desc">' + (term.one_liner || term.description || term.definition || '') + '</div>' +
-          (term.first_seen ? '<div class="term-item-time">首次: ' + new Date(term.first_seen).toLocaleDateString('zh-CN') + ' · 最近: ' + new Date(term.last_seen).toLocaleDateString('zh-CN') + '</div>' : '') +
+          '<div class="term-item-desc">' + (term.explanation || term.one_liner || term.description || term.definition || '') + '</div>' +
+          (term.first_appeared ? '<div class="term-item-time">首次: ' + new Date(term.first_appeared).toLocaleDateString('zh-CN') + ' · 最近: ' + new Date(term.last_appeared || term.last_seen).toLocaleDateString('zh-CN') + '</div>' : '') +
           '</div>';
       }).join('');
     }

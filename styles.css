@@ -1022,6 +1022,40 @@ body {
   letter-spacing: 0.5px;
 }
 
+.hot-row-cat-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.hot-row-oneliner {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 560px;
+}
+
+.hot-row-source {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.hot-row-date {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+}
+
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid var(--color-border);
