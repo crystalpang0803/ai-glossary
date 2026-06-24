@@ -97,6 +97,31 @@ module.exports = async function handler(req, res) {
     }
   }
 
+  // POST /api/hot-terms/batch (批量导入热门词汇)
+  if (method === 'POST' && pathname === '/api/hot-terms/batch') {
+    try {
+      const terms = req.body;
+      if (!Array.isArray(terms)) return res.status(400).json({ error: '需要数组格式的数据' });
+      
+      // 先清空旧数据
+      await sql`DELETE FROM hot_terms`;
+      
+      let imported = 0;
+      for (const term of terms) {
+        if (!term.term_en || !term.term_zh) continue;
+        if (!term.id) term.id = term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        const now = new Date().toISOString();
+        await sql`INSERT INTO hot_terms (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, appear_count, first_appeared, last_appeared, status, related, date, sources, source_urls, matched_articles)
+          VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${term.appear_count || 1}, ${term.first_appeared || now}, ${term.last_appeared || now}, ${term.status || 'hot'}, ${toJsonStr(term.related)}, ${term.date || ''}, ${toJsonStr(term.sources)}, ${toJsonStr(term.source_urls)}, ${toJsonStr(term.matched_articles)})
+          ON CONFLICT (id) DO NOTHING`;
+        imported++;
+      }
+      return res.json({ success: true, imported, total: terms.length });
+    } catch (e) {
+      return res.status(500).json({ error: '批量导入失败: ' + e.message });
+    }
+  }
+
   // 未匹配的路由
   return res.status(404).json({ error: `未知 API 路径: ${pathname}` });
 };
