@@ -81,15 +81,40 @@ module.exports = async function handler(req, res) {
     }
 
     // 从静态JSON文件导入初始数据（各表独立导入）
-    console.log('[INIT-DB] 导入数据...');
+    console.log('[INIT-DB] 导入数据... pwd=' + process.cwd() + ' __dirname=' + __dirname);
     
     try {
       const fs = require('fs');
       const path = require('path');
-      const glossaryPath = path.join(process.cwd(), 'data', 'glossary.json');
-      const hotTermsPath = path.join(process.cwd(), 'data', 'hot-terms.json');
+      
+      // Vercel Serverless 中，__dirname 是 /var/task/api/
+      // 需要往上找 data 目录
+      const possibleRoots = [
+        process.cwd(),                                          // 本地运行
+        path.join(__dirname, '..'),                             // Vercel Serverless: /var/task
+        path.join(__dirname, '..', '..'),                       // 备选
+      ];
+      
+      let dataDir = null;
+      for (const root of possibleRoots) {
+        const candidate = path.join(root, 'data');
+        if (fs.existsSync(candidate)) {
+          dataDir = candidate;
+          console.log('[INIT-DB] 找到 data 目录: ' + candidate);
+          break;
+        }
+      }
+      
+      if (!dataDir) {
+        console.log('[INIT-DB] 未找到 data 目录，跳过文件导入');
+      }
 
-      if (gCount === 0 && fs.existsSync(glossaryPath)) {
+      const glossaryPath = dataDir ? path.join(dataDir, 'glossary.json') : '';
+      const hotTermsPath = dataDir ? path.join(dataDir, 'hot-terms.json') : '';
+      
+      const debugInfo = { pwd: process.cwd(), dirname: __dirname, dataDir, glossaryExists: glossaryPath ? fs.existsSync(glossaryPath) : false, hotTermsExists: hotTermsPath ? fs.existsSync(hotTermsPath) : false };
+
+      if (gCount === 0 && glossaryPath && fs.existsSync(glossaryPath)) {
         const glossaryData = JSON.parse(fs.readFileSync(glossaryPath, 'utf8'));
         console.log(`[INIT-DB] 读取到 ${glossaryData.length} 条词库数据`);
         
@@ -99,9 +124,11 @@ module.exports = async function handler(req, res) {
             ON CONFLICT (id) DO NOTHING`;
         }
         console.log(`[INIT-DB] 成功导入 ${glossaryData.length} 条词库数据`);
+      } else if (gCount === 0) {
+        console.log('[INIT-DB] glossary.json 未找到，跳过词库导入');
       }
 
-      if (hCount === 0 && fs.existsSync(hotTermsPath)) {
+      if (hCount === 0 && hotTermsPath && fs.existsSync(hotTermsPath)) {
         const hotData = JSON.parse(fs.readFileSync(hotTermsPath, 'utf8'));
         console.log(`[INIT-DB] 读取到 ${hotData.length} 条热点数据`);
         
@@ -111,6 +138,8 @@ module.exports = async function handler(req, res) {
             ON CONFLICT (id) DO NOTHING`;
         }
         console.log(`[INIT-DB] 成功导入 ${hotData.length} 条热点数据`);
+      } else if (hCount === 0) {
+        console.log('[INIT-DB] hot-terms.json 未找到，跳过热点导入');
       }
     } catch (importErr) {
       console.error('[INIT-DB] 导入数据失败:', importErr.message);
