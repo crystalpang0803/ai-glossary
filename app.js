@@ -29,16 +29,31 @@ async function apiPost(path, body) {
   return res.json();
 }
 
-// 通用 JSON 获取：先尝试 API，失败则 fetch 静态文件
+// 通用 JSON 获取：优先静态 JSON 文件（确保纯静态部署也能正常工作），API 作为增强
 async function fetchJSON(apiPath, staticPath) {
+  // 先尝试加载静态 JSON 文件（纯静态部署如 Vercel/GitHub Pages 必须能工作）
+  try {
+    const res = await fetch(staticPath);
+    if (res.ok) {
+      const data = await res.json();
+      // 静态文件加载成功后，再异步探测 API 是否可用（不阻塞渲染）
+      try {
+        await apiGet(apiPath);
+        apiAvailable = true;
+      } catch (_) {
+        apiAvailable = false;
+      }
+      return data;
+    }
+  } catch (_) {}
+
+  // 静态文件不可用时，才尝试 API
   try {
     const data = await apiGet(apiPath);
     apiAvailable = true;
     return data;
   } catch (e) {
-    const res = await fetch(staticPath);
-    if (!res.ok) throw new Error(`加载 ${staticPath} 失败: ${res.status}`);
-    return res.json();
+    throw new Error(`数据加载失败: ${staticPath} 和 ${apiPath} 均不可用`);
   }
 }
 

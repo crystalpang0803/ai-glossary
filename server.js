@@ -56,7 +56,8 @@ function writeJSON(filePath, data) {
 // 初始化JSON文件（本地运行时）
 if (!useDatabase) {
   if (!fs.existsSync(GLOSSARY_FILE)) {
-    console.error('[ERROR] data/glossary.json not found!');
+    console.error('[ERROR] data/glossary.json not found at:', GLOSSARY_FILE);
+    // Vercel serverless 环境下不能 process.exit，但本地运行可以
     if (require.main === module) process.exit(1);
   }
   if (!fs.existsSync(HOT_TERMS_FILE)) {
