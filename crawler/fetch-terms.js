@@ -604,23 +604,9 @@ async function main() {
   // 每日归档 + 7/30天累计榜（支撑前端"时间范围切换 / 日期回看"）
   try { writeHistoryAndAggregates(selected, today); } catch (e) { console.log('[History] 跳过: ' + e.message); }
 
-  // 7. git 提交+推送（仅在有变化时；失败不影响）
-  try {
-    execSync('git config user.name "github-actions[bot]"');
-    execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
-    execSync('git add data/hot-terms.json data/hot-7d.json data/hot-30d.json data/hot-history');
-    let hasChanges = false;
-    try { execSync('git diff --cached --quiet'); } catch { hasChanges = true; }
-    if (hasChanges) {
-      execSync(`git commit -m "chore: update hot terms ${today}"`);
-      execSync('git push');
-      console.log('[Git] Pushed to remote');
-    } else {
-      console.log('[Git] No changes to push');
-    }
-  } catch (gitErr) {
-    console.log(`[Git] ${gitErr.message}`);
-  }
+  // 7. 不在脚本内提交/推送：交由 GitHub Actions workflow 统一处理，
+  //    避免每次运行都从脚本里 push 而与人工推送"赛跑"导致分叉。
+  console.log('[Done] 数据已写入本地；提交与推送由 workflow 步骤负责');
 }
 
 // 导出供测试使用

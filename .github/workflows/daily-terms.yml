@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # rebase 需要完整历史
 
       - uses: actions/setup-node@v4
         with:
@@ -55,3 +57,22 @@ jobs:
           else
             echo "DATABASE_URL not set, skipping DB sync"
           fi
+
+
+      - name: Commit & push updated data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/hot-terms.json data/hot-7d.json data/hot-30d.json data/hot-history 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "无数据变更，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore: update hot terms $(date -u +%F)"
+          for i in 1 2 3; do
+            git push origin HEAD:${GITHUB_REF_NAME} && exit 0
+            echo "push 被拒(远程有新提交)，拉取 rebase 后重试 $i ..."
+            git pull --rebase --autostash origin ${GITHUB_REF_NAME} || true
+          done
+          echo "push 最终未成功(数据已同步到数据库，不影响线上)"
