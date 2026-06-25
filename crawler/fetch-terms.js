@@ -28,6 +28,7 @@ const REQUEST_TIMEOUT = 15000;
 const CONCURRENT_LIMIT = 5;
 const MAX_ITEMS_PER_FEED = 50;
 const HOURS_BACK = 48;
+const GLOBAL_TIMEOUT_MS = 10 * 60 * 1000; // 全局超时10分钟
 
 // 智谱API配置
 const GLM_API_KEY = process.env.GLM_API_KEY || '';
@@ -285,12 +286,13 @@ ${titleList}
     }
   }
 
-  // 第二轮：验证每个术语是否确实是"有定义的术语"
+  // 第二轮：验证每个术语是否确实是"有定义的术语"（最多验证20个，避免耗时过长）
   if (allDiscovered.length > 0) {
-    console.log(`\n[AI Verify] Verifying ${allDiscovered.length} discovered terms...`);
+    const toVerify = allDiscovered.slice(0, 20);
+    console.log(`\n[AI Verify] Verifying ${toVerify.length}/${allDiscovered.length} discovered terms...`);
     const verified = [];
     
-    for (const term of allDiscovered) {
+    for (const term of toVerify) {
       const verifyPrompt = `判断以下词汇是否是一个"有明确定义的AI术语或概念"：
 
 词汇：${term.term_en}（${term.term_zh}）
@@ -341,7 +343,8 @@ async function callGLM(prompt, maxTokens = 200) {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${GLM_API_KEY}`
       },
-      timeout: 30000
+      timeout: 30000,
+      agent: false  // 避免agent池化导致连接不释放
     }, (res) => {
       let data = '';
       res.setEncoding('utf8');
@@ -540,6 +543,12 @@ function mergeWithExisting(newTerms) {
 
 // ===== 主流程 =====
 async function main() {
+  // 全局超时保护
+  const globalTimer = setTimeout(() => {
+    console.error('[Global Timeout] Script exceeded 10 minutes, forcing exit');
+    process.exit(2);
+  }, GLOBAL_TIMEOUT_MS);
+
   console.log('=== AI术语热度抓取 v4.0 ===');
   console.log(`时间: ${new Date().toISOString()}`);
   console.log(`时间窗口: 最近${HOURS_BACK}小时\n`);
@@ -597,6 +606,8 @@ async function main() {
   const outFile = path.join(ROOT, 'data', 'hot-terms.json');
   fs.writeFileSync(outFile, JSON.stringify(merged, null, 2), 'utf8');
   console.log(`\n[Done] Written ${merged.length} terms to data/hot-terms.json`);
+
+  clearTimeout(globalTimer);
 }
 
 main().catch(err => {
