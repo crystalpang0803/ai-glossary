@@ -495,7 +495,7 @@ function setupSubmit() {
 
     try {
       if (apiAvailable) {
-        await apiPost('/hot-terms', term);
+        await apiPost('/submitted-terms', term);
       }
       // 刷新数据
       await loadGlossary();

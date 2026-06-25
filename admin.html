@@ -105,6 +105,8 @@
     .auth-box .auth-error{font-size:0.82rem;color:var(--color-danger);margin-bottom:16px;display:none}
     .auth-box .auth-error.show{display:block}
     .auth-box .auth-btn{width:100%;padding:12px;font-size:0.88rem;font-weight:700}
+    mark.hl{background:rgba(99,102,241,0.22);color:var(--color-accent);padding:0 1px;border-radius:3px;font-weight:700}
+    .submitted-badge{background:#0EA5E9;color:#fff;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:var(--radius-full);margin-left:8px}
   </style>
 </head>
 <body>
@@ -122,6 +124,10 @@
         <button class="nav-item" data-section="hot">
           <span class="nav-icon">🔥</span> 热点词汇
           <span class="nav-badge" id="hotBadge" style="display:none;">0</span>
+        </button>
+        <button class="nav-item" data-section="submitted">
+          <span class="nav-icon">📥</span> 新增词汇
+          <span class="nav-badge" id="submittedBadge" style="display:none;">0</span>
         </button>
       </nav>
       <div class="sidebar-footer">
@@ -165,6 +171,17 @@
         </div>
         <input type="text" class="search-box" id="hotSearchInput" placeholder="搜索热点词汇...">
         <div class="term-list" id="hotList"><div class="loading-state">正在加载...</div></div>
+      </div>
+      <!-- 新增词汇（用户提交，待审核） -->
+      <div id="sectionSubmitted" style="display:none;">
+        <div class="main-header">
+          <h2>新增词汇 · 用户提交</h2>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-card"><div class="stat-num" id="statSubmitted">-</div><div class="stat-label">待审核新增词汇</div></div>
+        </div>
+        <input type="text" class="search-box" id="submittedSearchInput" placeholder="搜索新增词汇（英文、中文、缩写）...">
+        <div class="term-list" id="submittedList"><div class="loading-state">正在加载...</div></div>
       </div>
     </div>
   </div>
@@ -344,18 +361,24 @@
     let glossarySearchQuery = '';
     let hotSearchQuery = '';
     let editingTermId = null;
+    let editingMode = 'glossary';
+    let submittedTerms = [];
+    let submittedSearchQuery = '';
 
     // ===== Init =====
     async function loadData() {
-      const [terms, hot] = await Promise.all([
+      const [terms, hot, submitted] = await Promise.all([
         apiGet('/terms?status=official'),
-        apiGet('/hot-terms')
+        apiGet('/hot-terms'),
+        apiGet('/submitted-terms')
       ]);
       glossaryTerms = terms || [];
       hotTerms = hot || [];
+      submittedTerms = submitted || [];
       updateStats();
       renderGlossaryList();
       renderHotList();
+      renderSubmittedList();
     }
     loadData();
 
@@ -369,6 +392,82 @@
       const badge = document.getElementById('hotBadge');
       if (hotTerms.length > 0) { badge.style.display = 'inline'; badge.textContent = hotTerms.length; }
       else { badge.style.display = 'none'; }
+      const sEl = document.getElementById('statSubmitted'); if (sEl) sEl.textContent = submittedTerms.length;
+      const sBadge = document.getElementById('submittedBadge');
+      if (sBadge) { if (submittedTerms.length > 0) { sBadge.style.display = 'inline'; sBadge.textContent = submittedTerms.length; } else { sBadge.style.display = 'none'; } }
+    }
+
+    // ===== 搜索高亮 =====
+    function escapeHtml(str){return String(str==null?'':str).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+    function hl(text, q){
+      const t = escapeHtml(text);
+      if(!q) return t;
+      const safe = String(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      try { return t.replace(new RegExp('('+safe+')','gi'), '<mark class="hl">$1</mark>'); } catch(e){ return t; }
+    }
+
+    // ===== Render: 新增词汇 =====
+    function renderSubmittedList() {
+      const list = document.getElementById('submittedList');
+      if (!list) return;
+      let data = submittedTerms;
+      if (submittedSearchQuery) {
+        const q = submittedSearchQuery.toLowerCase();
+        data = data.filter(t => (t.term_en||'').toLowerCase().includes(q) || (t.term_zh||'').includes(q) || (t.abbreviation||'').toLowerCase().includes(q));
+      }
+      if (data.length === 0) { list.innerHTML = '<div class="empty-state"><h3>暂无新增词汇</h3><p>用户在前台提交的新术语会出现在这里，待你审核</p></div>'; return; }
+      list.innerHTML = '<div style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:12px;">共 ' + data.length + ' 条待审核</div>' +
+        data.map(term =>
+          '<div class="term-item"><div class="term-item-header"><div>' +
+          '<div class="term-item-title">' + hl(term.term_en, submittedSearchQuery) + (term.term_zh ? ' · ' + hl(term.term_zh, submittedSearchQuery) : '') +
+          '<span class="submitted-badge">📥 新增</span></div>' +
+          '<div class="term-item-meta">' + (term.abbreviation ? hl(term.abbreviation, submittedSearchQuery) + ' · ' : '') + (term.category||'未分类') + ' · 来源: ' + (term.source||'用户提交') + '</div>' +
+          '</div><div class="term-item-actions">' +
+          '<button class="btn btn-sm btn-outline" onclick="editSubmittedItem(\'' + term.id + '\')">编辑</button>' +
+          '<button class="btn btn-sm btn-success" onclick="promoteSubmittedItem(\'' + term.id + '\')">通过并入库</button>' +
+          '<button class="btn btn-sm btn-danger" onclick="deleteSubmittedItem(\'' + term.id + '\')">删除</button>' +
+          '</div></div>' +
+          '<div class="term-item-desc">' + (term.one_liner || term.definition || term.explanation || '') + '</div>' +
+          (term.submitted_at ? '<div class="term-item-time">提交于: ' + new Date(term.submitted_at).toLocaleString('zh-CN') + '</div>' : '') +
+          '</div>'
+        ).join('');
+    }
+
+    async function promoteSubmittedItem(id) {
+      const yes = await showConfirm('确定通过审核并加入正式词库吗？', { title: '通过新增词汇', icon: '✅', btnText: '通过', btnClass: 'btn-success' });
+      if (!yes) return;
+      const result = await apiPost('/submitted-terms/' + id + '/promote');
+      if (result) {
+        const t = submittedTerms.find(x => x.id === id);
+        submittedTerms = submittedTerms.filter(x => x.id !== id);
+        if (t) glossaryTerms.push(result.promoted || t);
+        updateStats(); renderSubmittedList(); renderGlossaryList();
+        showToast('已通过并加入词库');
+      }
+    }
+    async function deleteSubmittedItem(id) {
+      const yes = await showConfirm('确定删除这条新增词汇吗？', { title: '删除新增词汇', icon: '🗑️', btnText: '删除' });
+      if (!yes) return;
+      const ok = await apiDelete('/submitted-terms/' + id);
+      if (ok) { submittedTerms = submittedTerms.filter(x => x.id !== id); updateStats(); renderSubmittedList(); showToast('已删除'); }
+    }
+    function editSubmittedItem(id) {
+      const term = submittedTerms.find(t => t.id === id);
+      if (!term) return;
+      editingTermId = id; editingMode = 'submitted';
+      document.getElementById('detailTitle').textContent = term.term_en;
+      document.getElementById('detailSubtitle').textContent = (term.term_zh||'') + ' · 新增词汇（编辑后可入库）';
+      document.getElementById('detailTermEn').value = term.term_en || '';
+      document.getElementById('detailTermZh').value = term.term_zh || '';
+      document.getElementById('detailAbbr').value = term.abbreviation || '';
+      document.getElementById('detailCategory').value = term.category || 'AI概念';
+      document.getElementById('detailOneliner').value = term.one_liner || '';
+      document.getElementById('detailDefinition').value = term.definition || '';
+      document.getElementById('detailExplanation').value = term.explanation || '';
+      document.getElementById('detailSource').value = term.source || '';
+      document.getElementById('detailSourceUrl').value = term.source_url || '';
+      document.getElementById('detailRelated').value = (term.related || []).join(', ');
+      document.getElementById('detailModal').classList.add('show');
     }
 
     // ===== Render: Glossary List =====
@@ -383,8 +482,8 @@
       list.innerHTML = '<div style="font-size:0.8rem;color:var(--color-text-muted);margin-bottom:12px;">共 ' + data.length + ' 条术语</div>' +
         data.map(term =>
           '<div class="term-item"><div class="term-item-header"><div>' +
-          '<div class="term-item-title">' + term.term_en + ' · ' + term.term_zh + '</div>' +
-          '<div class="term-item-meta">' + (term.abbreviation ? term.abbreviation + ' · ' : '') + term.category + ' · 来源: ' + (term.source || '未知') + '</div>' +
+          '<div class="term-item-title">' + hl(term.term_en, glossarySearchQuery) + ' · ' + hl(term.term_zh, glossarySearchQuery) + '</div>' +
+          '<div class="term-item-meta">' + (term.abbreviation ? hl(term.abbreviation, glossarySearchQuery) + ' · ' : '') + term.category + ' · 来源: ' + (term.source || '未知') + '</div>' +
           '</div><div class="term-item-actions">' +
           '<button class="btn btn-sm btn-outline" onclick="viewGlossaryItem(\'' + term.id + '\')">编辑</button>' +
           '<button class="btn btn-sm btn-danger" onclick="deleteGlossaryItem(\'' + term.id + '\')">删除</button>' +
@@ -409,7 +508,7 @@
       list.innerHTML = data.map(term => {
         const canPromote = true; // 所有热点词汇都可以沉淀
         return '<div class="term-item"><div class="term-item-header"><div>' +
-          '<div class="term-item-title">' + (term.term_en || '') + (term.term_zh ? ' · ' + term.term_zh : '') +
+          '<div class="term-item-title">' + hl(term.term_en || '', hotSearchQuery) + (term.term_zh ? ' · ' + hl(term.term_zh, hotSearchQuery) : '') +
           '<span class="hot-badge">🔥 ' + term.appear_count + '</span></div>' +
           '<div class="term-item-meta">' + (term.category || '未分类') + (term.source ? ' · 来源: ' + term.source : '') + '</div>' +
           '</div><div class="term-item-actions">' +
@@ -433,7 +532,7 @@
     async function viewGlossaryItem(id) {
       const term = glossaryTerms.find(t => t.id === id);
       if (!term) return;
-      editingTermId = id;
+      editingTermId = id; editingMode = 'glossary';
       document.getElementById('detailTitle').textContent = term.term_en;
       document.getElementById('detailSubtitle').textContent = term.term_zh + ' · ' + term.category;
       document.getElementById('detailTermEn').value = term.term_en;
@@ -452,6 +551,7 @@
     function closeDetailModal() {
       document.getElementById('detailModal').classList.remove('show');
       editingTermId = null;
+      editingMode = 'glossary';
     }
     document.getElementById('detailClose').addEventListener('click', closeDetailModal);
     document.getElementById('detailCancelBtn').addEventListener('click', closeDetailModal);
@@ -471,12 +571,22 @@
         source_url: document.getElementById('detailSourceUrl').value.trim(),
         related: document.getElementById('detailRelated').value.trim().split(',').map(s => s.trim()).filter(Boolean)
       };
-      const result = await apiPut('/terms/' + editingTermId, updates);
+      const endpoint = editingMode === 'submitted' ? '/submitted-terms/' : '/terms/';
+      const targetId = editingTermId;
+      const mode = editingMode;
+      const result = await apiPut(endpoint + targetId, updates);
       if (result) {
-        const idx = glossaryTerms.findIndex(t => t.id === editingTermId);
-        if (idx >= 0) glossaryTerms[idx] = { ...glossaryTerms[idx], ...updates };
-        closeDetailModal();
-        renderGlossaryList();
+        if (mode === 'submitted') {
+          const i = submittedTerms.findIndex(t => t.id === targetId);
+          if (i >= 0) submittedTerms[i] = { ...submittedTerms[i], ...updates };
+          closeDetailModal();
+          renderSubmittedList();
+        } else {
+          const idx = glossaryTerms.findIndex(t => t.id === targetId);
+          if (idx >= 0) glossaryTerms[idx] = { ...glossaryTerms[idx], ...updates };
+          closeDetailModal();
+          renderGlossaryList();
+        }
         showToast('已保存修改');
       }
     });
@@ -636,7 +746,9 @@
         currentSection = item.dataset.section;
         document.getElementById('sectionGlossary').style.display = currentSection === 'glossary' ? 'block' : 'none';
         document.getElementById('sectionHot').style.display = currentSection === 'hot' ? 'block' : 'none';
+        document.getElementById('sectionSubmitted').style.display = currentSection === 'submitted' ? 'block' : 'none';
         if (currentSection === 'hot') renderHotList();
+        if (currentSection === 'submitted') renderSubmittedList();
       });
     });
 
@@ -653,6 +765,7 @@
     // ===== Search =====
     document.getElementById('glossarySearchInput').addEventListener('input', e => { glossarySearchQuery = e.target.value.trim(); renderGlossaryList(); });
     document.getElementById('hotSearchInput').addEventListener('input', e => { hotSearchQuery = e.target.value.trim(); renderHotList(); });
+    document.getElementById('submittedSearchInput').addEventListener('input', e => { submittedSearchQuery = e.target.value.trim(); renderSubmittedList(); });
 
     // ===== Toast =====
     function showToast(msg) {

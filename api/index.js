@@ -264,6 +264,80 @@ module.exports = async function handler(req, res) {
     }
   }
 
+  // ===== 新增词汇(用户提交, 独立于热门词汇; 不会被每日同步清空) =====
+  const ensureSubmitted = () => sql`CREATE TABLE IF NOT EXISTS submitted_terms (
+    id VARCHAR(255) PRIMARY KEY, term_en VARCHAR(500) NOT NULL, term_zh VARCHAR(500) NOT NULL,
+    abbreviation VARCHAR(100) DEFAULT '', category VARCHAR(100) DEFAULT 'AI概念',
+    one_liner TEXT DEFAULT '', definition TEXT DEFAULT '', explanation TEXT DEFAULT '',
+    source VARCHAR(500) DEFAULT '', source_url VARCHAR(1000) DEFAULT '', related JSONB DEFAULT '[]',
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, status VARCHAR(50) DEFAULT 'pending')`;
+
+  // GET 列表
+  if (method === 'GET' && pathname === '/api/submitted-terms') {
+    try {
+      await ensureSubmitted();
+      const rows = await sql`SELECT * FROM submitted_terms ORDER BY submitted_at DESC`;
+      return res.json(rows.map(r => ({ ...r, related: typeof r.related === 'string' ? JSON.parse(r.related) : (r.related || []) })));
+    } catch (e) { return res.status(500).json({ error: '数据库错误: ' + e.message }); }
+  }
+
+  // POST 用户提交新增词汇
+  if (method === 'POST' && pathname === '/api/submitted-terms') {
+    try {
+      await ensureSubmitted();
+      const term = body || {};
+      if (!term.term_en || !term.term_zh) return res.status(400).json({ error: 'term_en 和 term_zh 为必填字段' });
+      if (!term.id) term.id = term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      const inGloss = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
+      if (inGloss.length > 0) return res.status(409).json({ error: '该术语已在正式词库中' });
+      const now = new Date().toISOString();
+      await sql`INSERT INTO submitted_terms (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, submitted_at, status)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || '用户提交'}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${now}, 'pending')
+        ON CONFLICT (id) DO UPDATE SET term_zh = EXCLUDED.term_zh, abbreviation = EXCLUDED.abbreviation, category = EXCLUDED.category, one_liner = EXCLUDED.one_liner, definition = EXCLUDED.definition, explanation = EXCLUDED.explanation, source_url = EXCLUDED.source_url, submitted_at = EXCLUDED.submitted_at`;
+      return res.status(201).json({ ...term, status: 'pending' });
+    } catch (e) { return res.status(500).json({ error: '提交失败: ' + e.message }); }
+  }
+
+  // PUT 编辑新增词汇
+  const putSubMatch = pathname.match(/^\/api\/submitted-terms\/([^/]+)$/);
+  if (method === 'PUT' && putSubMatch) {
+    try {
+      await ensureSubmitted();
+      const id = putSubMatch[1]; const u = body || {};
+      await sql`UPDATE submitted_terms SET term_en = ${u.term_en || ''}, term_zh = ${u.term_zh || ''}, abbreviation = ${u.abbreviation || ''}, category = ${u.category || 'AI概念'}, one_liner = ${u.one_liner || ''}, definition = ${u.definition || ''}, explanation = ${u.explanation || ''}, source = ${u.source || ''}, source_url = ${u.source_url || ''}, related = ${toJsonStr(u.related)} WHERE id = ${id}`;
+      return res.json({ id, ...u });
+    } catch (e) { return res.status(500).json({ error: '更新失败: ' + e.message }); }
+  }
+
+  // POST 通过审核 → 沉淀到正式词库
+  const promoteSubMatch = pathname.match(/^\/api\/submitted-terms\/([^/]+)\/promote$/);
+  if (method === 'POST' && promoteSubMatch) {
+    try {
+      await ensureSubmitted();
+      const id = promoteSubMatch[1];
+      const rows = await sql`SELECT * FROM submitted_terms WHERE id = ${id}`;
+      if (rows.length === 0) return res.status(404).json({ error: '新增词汇不存在' });
+      const t = rows[0];
+      const exists = await sql`SELECT id FROM glossary WHERE id = ${id}`;
+      if (exists.length === 0) {
+        await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, date)
+          VALUES (${t.id}, ${t.term_en}, ${t.term_zh}, ${t.abbreviation || ''}, ${t.category || 'AI概念'}, ${t.one_liner || ''}, ${t.definition || ''}, ${t.explanation || ''}, ${t.source || ''}, ${t.source_url || ''}, ${toJsonStr(t.related)}, ${''})`;
+      }
+      await sql`DELETE FROM submitted_terms WHERE id = ${id}`;
+      return res.json({ promoted: { id: t.id, term_en: t.term_en, term_zh: t.term_zh } });
+    } catch (e) { return res.status(500).json({ error: '审核通过失败: ' + e.message }); }
+  }
+
+  // DELETE 删除新增词汇
+  const delSubMatch = pathname.match(/^\/api\/submitted-terms\/([^/]+)$/);
+  if (method === 'DELETE' && delSubMatch) {
+    try {
+      await ensureSubmitted();
+      await sql`DELETE FROM submitted_terms WHERE id = ${delSubMatch[1]}`;
+      return res.json({ deleted: delSubMatch[1] });
+    } catch (e) { return res.status(500).json({ error: '删除失败: ' + e.message }); }
+  }
+
   // 未匹配的路由
   return res.status(404).json({ error: `未知 API 路径: ${pathname}` });
 };

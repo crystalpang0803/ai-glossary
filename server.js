@@ -484,6 +484,123 @@ app.get('/api/stats', async (req, res) => {
   }
 });
 
+// ===== API: 新增词汇(用户提交, 独立于热点; 不会被每日同步清空) =====
+const SUBMITTED_FILE = path.join(DATA_DIR, 'submitted-terms.json');
+async function ensureSubmittedTable() {
+  if (!useDatabase) return;
+  await sql`CREATE TABLE IF NOT EXISTS submitted_terms (
+    id VARCHAR(255) PRIMARY KEY, term_en VARCHAR(500) NOT NULL, term_zh VARCHAR(500) NOT NULL,
+    abbreviation VARCHAR(100) DEFAULT '', category VARCHAR(100) DEFAULT 'AI概念',
+    one_liner TEXT DEFAULT '', definition TEXT DEFAULT '', explanation TEXT DEFAULT '',
+    source VARCHAR(500) DEFAULT '', source_url VARCHAR(1000) DEFAULT '', related JSONB DEFAULT '[]',
+    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, status VARCHAR(50) DEFAULT 'pending')`;
+}
+
+app.get('/api/submitted-terms', async (req, res) => {
+  try {
+    if (useDatabase) {
+      await ensureSubmittedTable();
+      const rows = await sql`SELECT * FROM submitted_terms ORDER BY submitted_at DESC`;
+      return res.json(rows.map(r => ({ ...r, related: r.related ? (typeof r.related === 'string' ? JSON.parse(r.related) : r.related) : [] })));
+    }
+    return res.json(readJSON(SUBMITTED_FILE) || []);
+  } catch (e) { res.status(500).json({ error: '数据库错误: ' + e.message }); }
+});
+
+app.post('/api/submitted-terms', async (req, res) => {
+  try {
+    const term = req.body;
+    if (!term.term_en || !term.term_zh) return res.status(400).json({ error: 'term_en 和 term_zh 为必填字段' });
+    if (!term.id) term.id = term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    term.status = 'pending';
+    term.submitted_at = new Date().toISOString();
+    term.source = term.source || '用户提交';
+    if (useDatabase) {
+      await ensureSubmittedTable();
+      const inGloss = await sql`SELECT id FROM glossary WHERE id = ${term.id}`;
+      if (inGloss.length > 0) return res.status(409).json({ error: '该术语已在正式词库中' });
+      await sql`INSERT INTO submitted_terms (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, submitted_at, status)
+        VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source}, ${term.source_url || ''}, ${toJsonStr(term.related)}, ${term.submitted_at}, 'pending')
+        ON CONFLICT (id) DO UPDATE SET term_zh = EXCLUDED.term_zh, one_liner = EXCLUDED.one_liner, submitted_at = EXCLUDED.submitted_at`;
+      return res.status(201).json(term);
+    } else {
+      const glossary = readJSON(GLOSSARY_FILE) || [];
+      if (glossary.find(t => t.id === term.id)) return res.status(409).json({ error: '该术语已在正式词库中' });
+      const list = readJSON(SUBMITTED_FILE) || [];
+      const idx = list.findIndex(t => t.id === term.id);
+      term.related = term.related || [];
+      if (idx >= 0) list[idx] = { ...list[idx], ...term }; else list.push(term);
+      writeJSON(SUBMITTED_FILE, list);
+      return res.status(201).json(term);
+    }
+  } catch (e) { res.status(500).json({ error: '提交失败: ' + e.message }); }
+});
+
+app.put('/api/submitted-terms/:id', async (req, res) => {
+  try {
+    const u = req.body; delete u.id;
+    if (useDatabase) {
+      await ensureSubmittedTable();
+      await sql`UPDATE submitted_terms SET term_en = ${u.term_en || ''}, term_zh = ${u.term_zh || ''}, abbreviation = ${u.abbreviation || ''}, category = ${u.category || 'AI概念'}, one_liner = ${u.one_liner || ''}, definition = ${u.definition || ''}, explanation = ${u.explanation || ''}, source = ${u.source || ''}, source_url = ${u.source_url || ''}, related = ${toJsonStr(u.related)} WHERE id = ${req.params.id}`;
+      return res.json({ id: req.params.id, ...u });
+    } else {
+      const list = readJSON(SUBMITTED_FILE) || [];
+      const idx = list.findIndex(t => t.id === req.params.id);
+      if (idx === -1) return res.status(404).json({ error: '新增词汇不存在' });
+      list[idx] = { ...list[idx], ...u };
+      writeJSON(SUBMITTED_FILE, list);
+      return res.json(list[idx]);
+    }
+  } catch (e) { res.status(500).json({ error: '更新失败: ' + e.message }); }
+});
+
+app.post('/api/submitted-terms/:id/promote', async (req, res) => {
+  try {
+    if (useDatabase) {
+      await ensureSubmittedTable();
+      const rows = await sql`SELECT * FROM submitted_terms WHERE id = ${req.params.id}`;
+      if (rows.length === 0) return res.status(404).json({ error: '新增词汇不存在' });
+      const t = rows[0];
+      const exists = await sql`SELECT id FROM glossary WHERE id = ${req.params.id}`;
+      if (exists.length === 0) {
+        const now = new Date().toISOString();
+        await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, date, created_at, updated_at)
+          VALUES (${t.id}, ${t.term_en}, ${t.term_zh}, ${t.abbreviation || ''}, ${t.category || 'AI概念'}, ${t.one_liner || ''}, ${t.definition || ''}, ${t.explanation || ''}, ${t.source || ''}, ${t.source_url || ''}, ${toJsonStr(t.related)}, ${now.split('T')[0]}, ${now}, ${now})`;
+      }
+      await sql`DELETE FROM submitted_terms WHERE id = ${req.params.id}`;
+      return res.json({ promoted: { id: t.id, term_en: t.term_en, term_zh: t.term_zh } });
+    } else {
+      const list = readJSON(SUBMITTED_FILE) || [];
+      const idx = list.findIndex(t => t.id === req.params.id);
+      if (idx === -1) return res.status(404).json({ error: '新增词汇不存在' });
+      const t = list[idx];
+      const glossary = readJSON(GLOSSARY_FILE) || [];
+      if (!glossary.find(g => g.id === t.id)) {
+        delete t.status; delete t.submitted_at;
+        t.created_at = new Date().toISOString(); t.updated_at = t.created_at;
+        glossary.push(t); writeJSON(GLOSSARY_FILE, glossary);
+      }
+      list.splice(idx, 1); writeJSON(SUBMITTED_FILE, list);
+      return res.json({ promoted: t });
+    }
+  } catch (e) { res.status(500).json({ error: '审核通过失败: ' + e.message }); }
+});
+
+app.delete('/api/submitted-terms/:id', async (req, res) => {
+  try {
+    if (useDatabase) {
+      await ensureSubmittedTable();
+      await sql`DELETE FROM submitted_terms WHERE id = ${req.params.id}`;
+      return res.json({ success: true });
+    } else {
+      let list = readJSON(SUBMITTED_FILE) || [];
+      list = list.filter(t => t.id !== req.params.id);
+      writeJSON(SUBMITTED_FILE, list);
+      return res.json({ success: true });
+    }
+  } catch (e) { res.status(500).json({ error: '删除失败: ' + e.message }); }
+});
+
 // ===== 旧链接重定向 =====
 app.get('/admin-inline.html', (req, res) => res.redirect('/admin.html'));
 

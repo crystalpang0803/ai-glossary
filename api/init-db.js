@@ -78,6 +78,26 @@ module.exports = async function handler(req, res) {
     `;
     console.log('[INIT-DB] hot_terms 表创建成功');
 
+    // 创建新增词汇表（用户提交，待审核）
+    await sql`
+      CREATE TABLE IF NOT EXISTS submitted_terms (
+        id VARCHAR(255) PRIMARY KEY,
+        term_en VARCHAR(500) NOT NULL,
+        term_zh VARCHAR(500) NOT NULL,
+        abbreviation VARCHAR(100) DEFAULT '',
+        category VARCHAR(100) DEFAULT 'AI概念',
+        one_liner TEXT DEFAULT '',
+        definition TEXT DEFAULT '',
+        explanation TEXT DEFAULT '',
+        source VARCHAR(500) DEFAULT '',
+        source_url VARCHAR(1000) DEFAULT '',
+        related JSONB DEFAULT '[]',
+        submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        status VARCHAR(50) DEFAULT 'pending'
+      )
+    `;
+    console.log('[INIT-DB] submitted_terms 表创建成功');
+
     // 分别检查各表数据，独立导入
     const glossaryCount = await sql`SELECT COUNT(*) as count FROM glossary`;
     const hotCount = await sql`SELECT COUNT(*) as count FROM hot_terms`;
