@@ -1,9 +1,17 @@
 /**
- * AI术语热度抓取脚本 v4.0
- * 双模式抓取：RSS + 网页抓取（scrape）
- * AI发现新术语：智谱 GLM-4-Flash
- * 筛选条件：1.跟AI行业相关 2.是新词（不在词库中+近一周出现） 3.是有定义的术语/概念
- * 用法: GLM_API_KEY=xxx node crawler/fetch-terms.js
+ * AI术语热度抓取脚本 v5.0
+ * 目标：无论外部环境(数据源/海外网络/GLM API)多差，每天都稳定写入 >=6 个
+ *      “词库里没有的新概念”作为热门词汇，且任务永不因外部失败而报错(始终 exit 0)。
+ *
+ * 管线：
+ *   1. 抓取 RSS + 网页(scrape) 文章标题，scrape 阶段有硬超时，绝不拖垮全局
+ *   2. 【确定性主力】用 keywords.json 的 emerging_terms(+tracking_terms) 匹配标题
+ *      → 对照 glossary 过滤掉已入库老词 → 按出现频次排行 → 这是“新概念”的可靠来源
+ *   3. 【可选增强】有 GLM_API_KEY 且可用时，AI 额外发现新词 + 写通俗解读；
+ *      全程 try/catch + 超时包裹，GLM 再怎么挂都不影响主流程
+ *   4. 【兜底保证】最终若不足 6 个，从新兴词清单补足，确保排行榜 >=6 条
+ *
+ * 用法: GLM_API_KEY=xxx node crawler/fetch-terms.js   (GLM_API_KEY 可省略)
  */
 
 const Parser = require('rss-parser');
@@ -18,18 +26,41 @@ const ROOT = path.join(__dirname, '..');
 const sources = JSON.parse(fs.readFileSync(path.join(__dirname, 'sources.json'), 'utf8'));
 const keywords = JSON.parse(fs.readFileSync(path.join(__dirname, 'keywords.json'), 'utf8'));
 
-// 加载glossary数据，用于查找已有explanation
+// 加载 glossary，用于：①过滤已入库老词 ②复用已有 explanation
 let glossaryData = [];
 try {
   glossaryData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'glossary.json'), 'utf8'));
 } catch { /* 文件不存在 */ }
 const glossaryMap = new Map(glossaryData.map(t => [t.id, t]));
 
+// 已入库标识集合（id + 英文名 + 缩写，全部小写），用于判定“是否新概念”
+const glossaryIds = new Set(glossaryData.map(t => t.id));
+const glossaryNames = new Set(glossaryData.map(t => (t.term_en || '').toLowerCase()).filter(Boolean));
+const glossaryAbbrs = new Set(glossaryData.map(t => (t.abbreviation || '').toLowerCase()).filter(Boolean));
+
+function slugify(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+// 判定一个词是否已在词库（即“不是新概念”）
+function isInGlossary(term_en, abbreviation) {
+  const id = slugify(term_en);
+  const name = (term_en || '').toLowerCase();
+  const abbr = (abbreviation || '').toLowerCase();
+  if (id && glossaryIds.has(id)) return true;
+  if (name && glossaryNames.has(name)) return true;
+  if (abbr && abbr.length >= 2 && glossaryAbbrs.has(abbr)) return true;
+  return false;
+}
+
 const REQUEST_TIMEOUT = 15000;
 const CONCURRENT_LIMIT = 5;
 const MAX_ITEMS_PER_FEED = 50;
-const HOURS_BACK = 48;
-const GLOBAL_TIMEOUT_MS = 8 * 60 * 1000; // 全局超时8分钟
+const HOURS_BACK = 72;                  // 放宽到72小时，缓解活源不足
+const SCRAPE_PHASE_TIMEOUT_MS = 45 * 1000;  // scrape 阶段总超时，绝不拖垮全局
+const GLM_PHASE_BUDGET_MS = 90 * 1000;      // GLM 发现+解读总预算
+const GLOBAL_TIMEOUT_MS = 7 * 60 * 1000;    // 全局兜底超时（远小于 workflow 的20分钟）
+const MIN_HOT_TERMS = 6;                    // 硬性要求：最终至少 6 个热门词
 
 // 智谱API配置
 const GLM_API_KEY = process.env.GLM_API_KEY || '';
@@ -42,19 +73,20 @@ const parser = new Parser({ timeout: REQUEST_TIMEOUT });
 function fetchPage(url) {
   return new Promise((resolve, reject) => {
     const proto = url.startsWith('https') ? https : http;
-    const req = proto.get(url, { 
-      headers: { 
+    const req = proto.get(url, {
+      headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.9,zh-CN;q=0.8'
       },
       timeout: REQUEST_TIMEOUT
     }, (res) => {
-      // 跟随重定向
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return fetchPage(res.headers.location).then(resolve).catch(reject);
+        res.resume();
+        return fetchPage(new URL(res.headers.location, url).href).then(resolve).catch(reject);
       }
       if (res.statusCode !== 200) {
+        res.resume();
         return reject(new Error(`Status code ${res.statusCode}`));
       }
       let data = '';
@@ -68,13 +100,13 @@ function fetchPage(url) {
 }
 
 function withTimeout(promise, ms, label) {
-  return Promise.race([
-    promise,
-    new Promise((_, reject) => setTimeout(() => reject(new Error(`Timeout after ${ms}ms`)), ms))
-  ]).catch(err => {
-    console.log(`[Skip] ${label}: ${err.message}`);
-    return [];
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`Timeout after ${ms}ms`)), ms);
   });
+  return Promise.race([promise, timeout])
+    .catch(err => { console.log(`[Skip] ${label}: ${err.message}`); return []; })
+    .finally(() => clearTimeout(timer));
 }
 
 // ===== RSS抓取 =====
@@ -110,20 +142,14 @@ async function fetchScrape(sourceConfig) {
       console.log(`[Scrape Skip] ${name}: empty or invalid response`);
       return [];
     }
-    
-    // 用JSDOM解析HTML
     const dom = new JSDOM(html);
     const doc = dom.window.document;
-    
-    // 提取所有标题文字（更通用的方式）
     const titles = [];
-    const selectors = ['h1 a', 'h2 a', 'h3 a', 'h4 a', '.post-title a', '.article-title a', 
+    const selectors = ['h1 a', 'h2 a', 'h3 a', 'h4 a', '.post-title a', '.article-title a',
                        '.blog-title a', 'a[href*="/blog/"]', '.entry-title a'];
-    
     for (const sel of selectors) {
       try {
-        const els = doc.querySelectorAll(sel);
-        els.forEach(el => {
+        doc.querySelectorAll(sel).forEach(el => {
           const text = (el.textContent || '').trim();
           const href = el.getAttribute('href') || '';
           if (text.length > 5 && text.length < 200 && !titles.find(t => t.title === text)) {
@@ -132,23 +158,14 @@ async function fetchScrape(sourceConfig) {
         });
       } catch (e) { /* selector may be invalid */ }
     }
-    
-    // 如果选择器没找到，回退到meta标签
     if (titles.length === 0) {
-      // 尝试提取og:title等
-      const metaTitles = doc.querySelectorAll('meta[property="og:title"], meta[name="description"]');
-      metaTitles.forEach(el => {
+      doc.querySelectorAll('meta[property="og:title"], meta[name="description"]').forEach(el => {
         const content = el.getAttribute('content') || '';
-        if (content.length > 5 && content.length < 200) {
-          titles.push({ title: content, link: '' });
-        }
+        if (content.length > 5 && content.length < 200) titles.push({ title: content, link: '' });
       });
     }
-    
-    // 去重并限制数量
     const uniqueTitles = titles.slice(0, 30);
     console.log(`[Scrape OK] ${name}: ${uniqueTitles.length} titles extracted`);
-    
     return uniqueTitles.map(t => ({
       title: t.title,
       content: '',
@@ -161,204 +178,187 @@ async function fetchScrape(sourceConfig) {
   }
 }
 
-// ===== AI发现新术语 =====
-async function aiDiscoverNewTerms(articles) {
-  if (!GLM_API_KEY) {
-    console.log('[AI Discover] No GLM_API_KEY, falling back to keyword matching');
-    return null; // 返回null表示需要fallback
+// ===== 并发抓取所有源 =====
+async function fetchAll() {
+  const articles = [];
+
+  // RSS 源
+  const rssSources = [...sources.rss.chinese, ...sources.rss.english];
+  console.log(`\n--- RSS Sources (${rssSources.length}) ---`);
+  for (let i = 0; i < rssSources.length; i += CONCURRENT_LIMIT) {
+    const batch = rssSources.slice(i, i + CONCURRENT_LIMIT);
+    const results = await Promise.all(batch.map(s => fetchRSS(s.url, s.name)));
+    results.forEach(r => articles.push(...r));
   }
 
-  // 构建已有词库列表（用于去重）
-  const glossaryList = glossaryData.map(t => {
-    const parts = [t.term_en];
-    if (t.abbreviation) parts.push(`(${t.abbreviation})`);
-    return parts.join(' ');
-  }).join('、');
+  // Scrape 源：整个阶段套一个硬超时，超时就用已抓到的部分，绝不卡死全局
+  const scrapeSources = [...(sources.scrape?.chinese || []), ...(sources.scrape?.english || [])];
+  console.log(`\n--- Scrape Sources (${scrapeSources.length}, 阶段超时 ${SCRAPE_PHASE_TIMEOUT_MS / 1000}s) ---`);
+  const scraped = [];
+  const scrapePhase = (async () => {
+    for (let i = 0; i < scrapeSources.length; i += CONCURRENT_LIMIT) {
+      const batch = scrapeSources.slice(i, i + CONCURRENT_LIMIT);
+      const results = await Promise.all(batch.map(s => fetchScrape(s)));
+      results.forEach(r => scraped.push(...r));
+    }
+  })();
+  await withTimeout(scrapePhase, SCRAPE_PHASE_TIMEOUT_MS, 'Scrape phase');
+  articles.push(...scraped);
 
-  // 收集所有文章标题，去重
-  const allTitles = [];
-  const seenTitles = new Set();
+  console.log(`\n[Total] Fetched ${articles.length} articles`);
+  return articles;
+}
+
+// ===== 关键词/新兴词匹配（确定性主力） =====
+// 把 emerging_terms 和 tracking_terms 合并匹配；emerging 优先级更高
+function buildWatchList() {
+  // 只用 emerging_terms 作为热门词来源：它们都是“词库外的当下新概念”。
+  // tracking_terms 是核心老词/泛词(如 Training/GAN)，不作为热门词展示，避免霸榜。
+  return (keywords.emerging_terms || []).map(t => ({ ...t, _tier: 0 }));
+}
+
+// 针对单个词构建匹配判断
+function makeMatcher(term) {
+  const phrases = [];          // 用 includes 匹配的长短语
+  const boundaryTokens = [];   // 用单词边界匹配的短缩写
+  const push = (s, isAbbr) => {
+    const v = (s || '').trim().toLowerCase();
+    if (!v) return;
+    if (isAbbr) { if (v.length >= 2) boundaryTokens.push(v); }
+    else if (v.length >= 3) phrases.push(v);
+  };
+  push(term.en, false);
+  push(term.zh, false);
+  (term.aliases || []).forEach(a => push(a, false));
+  push(term.abbr, true);
+
+  const boundaryRegexes = boundaryTokens.map(tok => {
+    const esc = tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`(^|[^a-z0-9])${esc}($|[^a-z0-9])`);
+  });
+
+  return (text) => {
+    for (const p of phrases) if (text.includes(p)) return true;
+    for (const re of boundaryRegexes) if (re.test(text)) return true;
+    return false;
+  };
+}
+
+function matchWatchList(articles) {
+  const watch = buildWatchList();
+  const hits = watch.map(term => ({
+    term,
+    matcher: makeMatcher(term),
+    count: 0, sources: [], source_urls: [], matched_articles: []
+  }));
+
   for (const article of articles) {
-    const title = (article.title || '').trim();
-    if (title && title.length > 5 && !seenTitles.has(title)) {
-      seenTitles.add(title);
-      allTitles.push({ title, source: article.source || '', link: article.link || '' });
+    const text = ((article.title || '') + ' ' + (article.content || '')).toLowerCase();
+    for (const h of hits) {
+      if (h.matcher(text)) {
+        h.count++;
+        if (article.source && !h.sources.includes(article.source)) h.sources.push(article.source);
+        if (article.link && !h.source_urls.includes(article.link)) h.source_urls.push(article.link);
+        if (h.matched_articles.length < 3) {
+          h.matched_articles.push({ title: article.title, link: article.link, source: article.source });
+        }
+      }
     }
   }
+  return hits;
+}
 
-  if (allTitles.length === 0) {
-    console.log('[AI Discover] No articles to analyze');
-    return [];
+// ===== AI发现新术语（可选增强，失败不影响主流程） =====
+async function aiDiscoverNewTerms(articles, deadline) {
+  if (!GLM_API_KEY) return [];
+  const allTitles = [];
+  const seen = new Set();
+  for (const a of articles) {
+    const title = (a.title || '').trim();
+    if (title && title.length > 5 && !seen.has(title)) {
+      seen.add(title);
+      allTitles.push({ title, source: a.source || '', link: a.link || '' });
+    }
   }
+  if (allTitles.length === 0) return [];
 
-  console.log(`\n--- AI发现新术语 (${allTitles.length} unique titles) ---`);
-
-  // 分批处理：每批最多60个标题（减少API调用次数，加速完成）
+  const glossaryList = glossaryData.map(t => t.term_en + (t.abbreviation ? `(${t.abbreviation})` : '')).join('、');
   const BATCH_SIZE = 60;
-  const allDiscovered = [];
+  const discovered = [];
   let consecutiveFailures = 0;
-  const MAX_CONSECUTIVE_FAILURES = 3;
 
+  console.log(`\n--- [可选] AI发现新术语 (${allTitles.length} titles) ---`);
   for (let i = 0; i < allTitles.length; i += BATCH_SIZE) {
+    if (Date.now() > deadline) { console.log('[AI Discover] 预算用尽，停止'); break; }
+    if (consecutiveFailures >= 3) { console.log('[AI Discover] 连续失败，放弃AI发现'); break; }
+
     const batch = allTitles.slice(i, i + BATCH_SIZE);
-    const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-    const totalBatches = Math.ceil(allTitles.length / BATCH_SIZE);
-
     const titleList = batch.map((a, idx) => `${i + idx + 1}. [${a.source}] ${a.title}`).join('\n');
+    const prompt = `以下是近期AI领域的新闻/论文标题，请提取满足全部条件的术语：
+1. 跟AI行业相关（算法、模型架构、训练/推理方法、部署工程、评测、对齐安全、AI硬件等）
+2. 是新词（不在以下已有词库中，且近期才出现或才被广泛讨论）
+3. 是有定义的术语/概念——能写出一句话解释它
 
-    const prompt = `以下是近一周AI领域的新闻标题，请从中提取满足以下条件的术语：
+排除：产品名、公司名、人名、纯数字指标、无法定义的模糊词、已有词库中词的同义别名。
 
-1. 跟AI行业相关（算法、模型架构、训练方法、推理技术、部署工程、评测基准、对齐安全、AI硬件、AI工具等）
-2. 是新词（不在以下已有词库中，且是近一周才出现或才开始被广泛讨论的概念）
-3. 是有定义的术语或概念——必须能写出一句话解释它的含义
-
-排除以下类型：
-- 纯产品名（如Cursor、Devin、Claude Code）
-- 纯公司名或组织名
-- 纯数字指标或评测分数
-- 无法定义的模糊词或泛指词
-- 已在词库中的词的同义别名
-
-已有词库（${glossaryData.length}条）：${glossaryList}
+已有词库：${glossaryList}
 
 标题：
 ${titleList}
 
-输出JSON数组，每个元素包含：
-- term_en: 英文术语名
-- term_zh: 中文翻译
-- abbreviation: 缩写（无则为空字符串）
-- one_liner: 一句话定义（清晰解释该术语的含义）
-- category: 分类（AI概念/AI技术/AI工程/AI应用/AI安全）
+输出JSON数组，每个元素含 term_en, term_zh, abbreviation(无则空串), one_liner(清晰的一句话定义), category(AI概念/AI技术/AI工程/AI应用/AI安全)。
+没有符合条件的就输出 []。只输出JSON。`;
 
-如果没有找到符合条件的新术语，输出空数组 []
-只输出JSON，不要输出任何其他内容。`;
-
-    console.log(`[AI Discover] Batch ${batchNum}/${totalBatches} (${batch.length} titles)...`);
-    
     const result = await callGLM(prompt, 1500);
-    
-    if (result) {
-      consecutiveFailures = 0; // 成功时重置计数
-      try {
-        // 提取JSON部分（可能被markdown代码块包裹）
-        let jsonStr = result;
-        const jsonMatch = result.match(/\[[\s\S]*\]/);
-        if (jsonMatch) {
-          jsonStr = jsonMatch[0];
+    if (!result) { consecutiveFailures++; continue; }
+    consecutiveFailures = 0;
+    try {
+      const m = result.match(/\[[\s\S]*\]/);
+      const terms = JSON.parse(m ? m[0] : result);
+      if (Array.isArray(terms)) {
+        for (const term of terms) {
+          if (!term.term_en || !term.one_liner) continue;
+          if (isInGlossary(term.term_en, term.abbreviation)) continue;  // 只要新概念
+          const matched = batch.filter(a => {
+            const t = (a.title || '').toLowerCase();
+            const en = (term.term_en || '').toLowerCase();
+            return en && t.includes(en);
+          });
+          discovered.push({
+            term_en: term.term_en.trim(),
+            term_zh: (term.term_zh || '').trim(),
+            abbreviation: (term.abbreviation || '').trim(),
+            one_liner: term.one_liner.trim(),
+            category: term.category || 'AI概念',
+            appear_count: Math.max(1, matched.length),
+            sources: [...new Set(matched.map(a => a.source).filter(Boolean))],
+            source_urls: matched.slice(0, 5).map(a => a.link).filter(Boolean),
+            matched_articles: matched.slice(0, 3).map(a => ({ title: a.title, link: a.link, source: a.source })),
+            explanation: ''
+          });
         }
-        
-        const terms = JSON.parse(jsonStr);
-        if (Array.isArray(terms)) {
-          for (const term of terms) {
-            if (term.term_en && term.one_liner) {
-              // 记录来源信息
-              const matchedArticles = batch.filter(a => {
-                const t = (a.title || '').toLowerCase();
-                const en = (term.term_en || '').toLowerCase();
-                const abbr = (term.abbreviation || '').toLowerCase();
-                return t.includes(en) || (abbr && abbr.length >= 2 && t.includes(abbr));
-              }).map(a => ({ title: a.title, link: a.link, source: a.source }));
-
-              const matchedSources = [...new Set(matchedArticles.map(a => a.source).filter(Boolean))];
-
-              allDiscovered.push({
-                term_en: term.term_en.trim(),
-                term_zh: term.term_zh?.trim() || '',
-                abbreviation: term.abbreviation?.trim() || '',
-                one_liner: term.one_liner.trim(),
-                category: term.category || 'AI概念',
-                appear_count: Math.max(1, matchedArticles.length),
-                sources: matchedSources,
-                source_urls: matchedArticles.slice(0, 5).map(a => a.link).filter(Boolean),
-                matched_articles: matchedArticles.slice(0, 3),
-                explanation: ''
-              });
-            }
-          }
-          console.log(`[AI Discover] Batch ${batchNum}: found ${terms.length} terms`);
-        }
-      } catch (e) {
-        console.log(`[AI Discover] Batch ${batchNum}: parse error - ${e.message}`);
-        console.log(`[AI Discover] Raw response: ${result.substring(0, 200)}`);
       }
-    } else {
-      consecutiveFailures++;
-      if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
-        console.log(`[AI Discover] ${MAX_CONSECUTIVE_FAILURES} consecutive failures, aborting AI discovery`);
-        break;
-      }
-    }
-
-    // 避免速率限制（失败时不等待）
-    if (result && i + BATCH_SIZE < allTitles.length) {
-      await new Promise(r => setTimeout(r, 2000));
+    } catch (e) {
+      console.log(`[AI Discover] parse error: ${e.message}`);
     }
   }
-
-  // 连续失败时返回null，触发关键词匹配fallback
-  if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES && allDiscovered.length === 0) {
-    console.log('[AI Discover] All batches failed, falling back to keyword matching');
-    return null;
-  }
-
-  // 第二轮：验证每个术语是否确实是"有定义的术语"（最多验证20个，避免耗时过长）
-  if (allDiscovered.length > 0) {
-    const toVerify = allDiscovered.slice(0, 20);
-    console.log(`\n[AI Verify] Verifying ${toVerify.length}/${allDiscovered.length} discovered terms...`);
-    const verified = [];
-    
-    for (const term of toVerify) {
-      const verifyPrompt = `判断以下词汇是否是一个"有明确定义的AI术语或概念"：
-
-词汇：${term.term_en}（${term.term_zh}）
-定义：${term.one_liner}
-
-判断标准：
-- 是术语/概念/方法/架构/协议/技术 → 是
-- 是产品名/公司名/人名/项目名/模糊词 → 否
-
-只输出"是"或"否"。`;
-
-      const answer = await callGLM(verifyPrompt, 10);
-      if (answer && answer.includes('是') && !answer.includes('否')) {
-        verified.push(term);
-        console.log(`[AI Verify] ✓ ${term.term_en}`);
-      } else {
-        console.log(`[AI Verify] ✗ ${term.term_en} (not a defined term)`);
-      }
-      
-      await new Promise(r => setTimeout(r, 500));
-    }
-    
-    console.log(`[AI Verify] ${verified.length}/${allDiscovered.length} terms verified`);
-    return verified;
-  }
-
-  return allDiscovered;
+  console.log(`[AI Discover] 额外发现 ${discovered.length} 个新词`);
+  return discovered;
 }
 
-// ===== AI生成通俗解读 =====
+// ===== GLM 调用（带超时，失败返回 null） =====
 async function callGLM(prompt, maxTokens = 200) {
-  if (!GLM_API_KEY) {
-    console.log('[AI] No GLM_API_KEY set, skipping AI generation');
-    return null;
-  }
-  
+  if (!GLM_API_KEY) return null;
   const body = JSON.stringify({
     model: GLM_MODEL,
     messages: [{ role: 'user', content: prompt }],
     temperature: 0.7,
     max_tokens: maxTokens
   });
-  
-  const rawPromise = new Promise((resolve, reject) => {
+  const rawPromise = new Promise((resolve) => {
     const req = https.request(GLM_API_URL, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${GLM_API_KEY}`
-      },
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${GLM_API_KEY}` },
       timeout: 10000,
       agent: false
     }, (res) => {
@@ -366,187 +366,46 @@ async function callGLM(prompt, maxTokens = 200) {
       res.setEncoding('utf8');
       res.on('data', chunk => data += chunk);
       res.on('end', () => {
-        try {
-          const json = JSON.parse(data);
-          const content = json.choices?.[0]?.message?.content?.trim() || null;
-          resolve(content);
-        } catch {
-          console.log(`[AI Error] Parse failed: ${data.substring(0, 200)}`);
-          resolve(null);
-        }
+        try { resolve(JSON.parse(data).choices?.[0]?.message?.content?.trim() || null); }
+        catch { resolve(null); }
       });
     });
-    req.on('error', (err) => {
-      console.log(`[AI Error] Request failed: ${err.message}`);
-      resolve(null);
-    });
+    req.on('error', () => resolve(null));
     req.on('timeout', () => { req.destroy(); resolve(null); });
     req.write(body);
     req.end();
   });
-
-  // 用withTimeout包裹，确保整个请求（包括响应阶段）不超过20秒
-  return withTimeout(rawPromise, 20000, `GLM API call`);
+  const r = await withTimeout(rawPromise, 20000, 'GLM API call');
+  return Array.isArray(r) ? null : r;   // withTimeout 超时返回 []，归一化为 null
 }
 
-async function generateExplanations(hotTerms) {
-  if (!GLM_API_KEY || hotTerms.length === 0) return hotTerms;
-  
-  console.log(`\n--- AI生成通俗解读 (${hotTerms.length} terms) ---`);
-  let consecutiveFails = 0;
-  
+// ===== AI生成通俗解读（可选增强；无 explanation 的用 one_liner 兜底） =====
+async function generateExplanations(hotTerms, deadline) {
+  // 先用 glossary 已有解释或 one_liner 兜底，保证每条都有 explanation
   for (const term of hotTerms) {
-    // 检查glossary中是否已有explanation
-    const glossaryEntry = glossaryMap.get(term.id);
-    if (glossaryEntry?.explanation) {
-      term.explanation = glossaryEntry.explanation;
-      console.log(`[AI Skip] ${term.term_en}: 已有glossary解释`);
-      continue;
-    }
-    
-    // 连续失败3次直接放弃，用one_liner兜底
-    if (consecutiveFails >= 3) {
-      console.log('[AI Explanation] 3 consecutive failures, skipping remaining explanations');
-      for (const remaining of hotTerms.filter(t => !t.explanation && !glossaryMap.get(t.id)?.explanation)) {
-        remaining.explanation = remaining.one_liner || '';
-      }
-      return hotTerms;
-    }
-    
-    // 构建AI prompt
-    const articleTitles = (term.matched_articles || [])
-      .slice(0, 3)
-      .map(a => a.title)
-      .join('；');
-    
-    const prompt = `请用通俗易懂的语言，为以下AI术语写一句简短的解读（1-2句话，不超过50字，让普通人也能看懂，不要用专业术语）：
+    if (term.explanation) continue;
+    const g = glossaryMap.get(term.id);
+    term.explanation = (g && g.explanation) ? g.explanation : (term.one_liner || '');
+  }
+  if (!GLM_API_KEY) return hotTerms;
 
+  console.log(`\n--- [可选] AI生成通俗解读 ---`);
+  let consecutiveFails = 0;
+  for (const term of hotTerms) {
+    if (Date.now() > deadline) { console.log('[AI Explanation] 预算用尽，其余用兜底'); break; }
+    if (consecutiveFails >= 3) { console.log('[AI Explanation] 连续失败，其余用兜底'); break; }
+    if (glossaryMap.get(term.id)?.explanation) continue;  // 词库已有
+
+    const titles = (term.matched_articles || []).slice(0, 3).map(a => a.title).join('；');
+    const prompt = `请用通俗易懂的语言，为以下AI术语写一句简短解读（1-2句话，不超过50字，让普通人也能看懂）：
 术语：${term.term_en}（${term.term_zh}${term.abbreviation ? '/' + term.abbreviation : ''}）
 一句话描述：${term.one_liner || '无'}
-近期相关文章标题：${articleTitles || '无'}
-
-只输出解读文字，不要输出任何其他内容。`;
-    
+近期相关标题：${titles || '无'}
+只输出解读文字。`;
     const explanation = await callGLM(prompt);
-    if (explanation) {
-      consecutiveFails = 0;
-      term.explanation = explanation;
-      console.log(`[AI OK] ${term.term_en}: ${explanation}`);
-    } else {
-      consecutiveFails++;
-      console.log(`[AI Fail] ${term.term_en}: AI生成失败，保留one_liner`);
-      term.explanation = term.one_liner || '';
-    }
-    
-    // 避免速率限制，每次请求间隔1秒
-    await new Promise(r => setTimeout(r, 1000));
+    if (explanation) { consecutiveFails = 0; term.explanation = explanation; console.log(`[AI OK] ${term.term_en}`); }
+    else { consecutiveFails++; }
   }
-  
-  return hotTerms;
-}
-
-// ===== 并发抓取所有源 =====
-async function fetchAll() {
-  const articles = [];
-  
-  // RSS源
-  const rssSources = [
-    ...sources.rss.chinese,
-    ...sources.rss.english
-  ];
-  console.log(`\n--- RSS Sources (${rssSources.length}) ---`);
-  for (let i = 0; i < rssSources.length; i += CONCURRENT_LIMIT) {
-    const batch = rssSources.slice(i, i + CONCURRENT_LIMIT);
-    const results = await Promise.all(batch.map(s => fetchRSS(s.url, s.name)));
-    results.forEach(r => articles.push(...r));
-  }
-  
-  // Scrape源
-  const scrapeSources = [
-    ...(sources.scrape?.chinese || []),
-    ...(sources.scrape?.english || [])
-  ];
-  console.log(`\n--- Scrape Sources (${scrapeSources.length}) ---`);
-  for (let i = 0; i < scrapeSources.length; i += CONCURRENT_LIMIT) {
-    const batch = scrapeSources.slice(i, i + CONCURRENT_LIMIT);
-    const results = await Promise.all(batch.map(s => fetchScrape(s)));
-    results.forEach(r => articles.push(...r));
-  }
-  
-  console.log(`\n[Total] Fetched ${articles.length} articles from ${rssSources.length + scrapeSources.length} sources`);
-  return articles;
-}
-
-// ===== 关键词匹配 =====
-function matchKeywords(articles) {
-  const termHits = {};
-
-  keywords.tracking_terms.forEach(term => {
-    termHits[term.en] = {
-      en: term.en, zh: term.zh, abbr: term.abbr,
-      one_liner: term.one_liner || '', category: term.category || '',
-      count: 0, sources: [], source_urls: [], matched_articles: []
-    };
-  });
-
-  articles.forEach(article => {
-    const text = (article.title + ' ' + article.content).toLowerCase();
-
-    keywords.tracking_terms.forEach(term => {
-      const patterns = [term.en.toLowerCase()];
-      if (term.zh) patterns.push(term.zh.toLowerCase());
-      if (term.abbr && term.abbr.length >= 2) patterns.push(term.abbr.toLowerCase());
-
-      let matched = false;
-      for (const p of patterns) {
-        if (text.includes(p)) { matched = true; break; }
-      }
-
-      if (matched) {
-        termHits[term.en].count++;
-        if (!termHits[term.en].sources.includes(article.source)) {
-          termHits[term.en].sources.push(article.source);
-        }
-        if (article.link && !termHits[term.en].source_urls.includes(article.link)) {
-          termHits[term.en].source_urls.push(article.link);
-        }
-        if (termHits[term.en].matched_articles.length < 3) {
-          termHits[term.en].matched_articles.push({
-            title: article.title,
-            link: article.link,
-            source: article.source
-          });
-        }
-      }
-    });
-  });
-
-  return Object.values(termHits)
-    .filter(t => t.count > 1)
-    .sort((a, b) => b.count - a.count);
-}
-
-// ===== 生成输出 =====
-function generateOutput(rankedTerms) {
-  const today = new Date().toISOString().split('T')[0];
-  const topN = rankedTerms.slice(0, 50);
-
-  const hotTerms = topN.map((term, idx) => ({
-    id: term.en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-    rank: idx + 1,
-    term_en: term.en,
-    term_zh: term.zh,
-    abbreviation: term.abbr || '',
-    category: term.category || '',
-    one_liner: term.one_liner || '',
-    appear_count: term.count,
-    sources: term.sources,
-    source_urls: term.source_urls.slice(0, 5),
-    matched_articles: term.matched_articles,
-    date: today,
-    status: 'hot'
-  }));
-
   return hotTerms;
 }
 
@@ -554,114 +413,164 @@ function generateOutput(rankedTerms) {
 function mergeWithExisting(newTerms) {
   const hotTermsFile = path.join(ROOT, 'data', 'hot-terms.json');
   let existing = [];
-  try {
-    existing = JSON.parse(fs.readFileSync(hotTermsFile, 'utf8'));
-  } catch { /* 文件不存在或为空 */ }
+  try { existing = JSON.parse(fs.readFileSync(hotTermsFile, 'utf8')); } catch { /* 无 */ }
 
   const today = new Date().toISOString().split('T')[0];
   const oldTerms = existing.filter(t => t.date !== today);
   const newIds = new Set(newTerms.map(t => t.id));
+  // 只保留“仍属于当前新兴词清单”的历史词，让旧版关键词era的泛词(如Training/GAN)自然老化退出
+  const emergingIds = new Set((keywords.emerging_terms || []).map(t => slugify(t.en)));
 
-  const kept = oldTerms.filter(t => !newIds.has(t.id)).map(t => ({
-    ...t,
-    appear_count: Math.max(1, (t.appear_count || 1) - 1),
-    status: (t.appear_count || 1) <= 1 ? 'cold' : 'warm'
-  }));
+  // 老词降温：必须仍是新概念(在emerging清单内)、不在新榜、不在词库
+  const kept = oldTerms
+    .filter(t => !newIds.has(t.id) && !isInGlossary(t.term_en, t.abbreviation) && emergingIds.has(t.id))
+    .map(t => ({
+      ...t,
+      appear_count: Math.max(1, (t.appear_count || 1) - 1),
+      status: (t.appear_count || 1) <= 1 ? 'cold' : 'warm'
+    }))
+    .filter(t => t.status !== 'cold');
 
-  const merged = [...newTerms, ...kept.filter(t => t.status !== 'cold')];
-  return merged;
+  return [...newTerms, ...kept];
+}
+
+// ===== 把匹配命中转成输出条目 =====
+function hitToEntry(h, idx, today) {
+  const t = h.term;
+  return {
+    id: slugify(t.en),
+    rank: idx + 1,
+    term_en: t.en,
+    term_zh: t.zh || '',
+    abbreviation: t.abbr || '',
+    category: t.category || 'AI概念',
+    one_liner: t.one_liner || '',
+    appear_count: Math.max(1, h.count),
+    sources: h.sources || [],
+    source_urls: (h.source_urls || []).slice(0, 5),
+    matched_articles: h.matched_articles || [],
+    date: today,
+    status: 'hot',
+    explanation: ''
+  };
 }
 
 // ===== 主流程 =====
 async function main() {
-  // 全局超时保护
-  const globalTimer = setTimeout(() => {
-    console.error('[Global Timeout] Script exceeded 10 minutes, forcing exit');
-    process.exit(2);
-  }, GLOBAL_TIMEOUT_MS);
+  const startedAt = Date.now();
+  const today = new Date().toISOString().split('T')[0];
 
-  console.log('=== AI术语热度抓取 v4.0 ===');
-  console.log(`时间: ${new Date().toISOString()}`);
-  console.log(`时间窗口: 最近${HOURS_BACK}小时\n`);
+  console.log('=== AI术语热度抓取 v5.0 ===');
+  console.log(`时间: ${new Date().toISOString()} | 窗口: 最近${HOURS_BACK}小时 | 目标: >=${MIN_HOT_TERMS}个新概念\n`);
 
-  const articles = await fetchAll();
-  let newTerms = [];
+  // 1. 抓取（即使全部失败，articles=[] 也不会让脚本崩）
+  let articles = [];
+  try { articles = await fetchAll(); } catch (e) { console.log('[fetchAll] 异常:', e.message); }
 
-  // 优先使用AI发现新术语
-  const discovered = await aiDiscoverNewTerms(articles);
+  // 2. 确定性主力：新兴词匹配 → 过滤已入库 → 排行
+  const hits = matchWatchList(articles);
+  const matchedNew = hits
+    .filter(h => h.count >= 1 && !isInGlossary(h.term.en, h.term.abbr))
+    .sort((a, b) => (a.term._tier - b.term._tier) || (b.count - a.count));  // emerging优先，再按频次
+  console.log(`\n[Match] 命中且为新概念的词: ${matchedNew.length} 个`);
 
-  if (discovered && discovered.length > 0) {
-    // AI发现模式：直接用AI结果
-    const today = new Date().toISOString().split('T')[0];
-    newTerms = discovered.map((term, idx) => ({
-      id: term.term_en.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-      rank: idx + 1,
-      term_en: term.term_en,
-      term_zh: term.term_zh,
-      abbreviation: term.abbreviation,
-      category: term.category,
-      one_liner: term.one_liner,
-      appear_count: term.appear_count || 1,
-      sources: term.sources || [],
-      source_urls: term.source_urls || [],
-      matched_articles: term.matched_articles || [],
-      date: today,
-      status: 'hot',
-      explanation: term.explanation || ''
-    }));
-    console.log(`\n[AI Discover] ${newTerms.length} new terms found`);
-  } else if (discovered === null) {
-    // Fallback：无GLM_API_KEY时使用关键词匹配
-    console.log('\n[Fallback] Using keyword matching (no GLM_API_KEY)');
-    const ranked = matchKeywords(articles);
-    console.log(`[Match] ${ranked.length} terms matched (>1次)`);
-    newTerms = generateOutput(ranked);
-    console.log(`[Rank] Top ${newTerms.length} terms`);
-  } else {
-    console.log('\n[AI Discover] No new terms found');
+  const selected = [];
+  const selectedIds = new Set();
+  const pushEntry = (entry) => {
+    if (selectedIds.has(entry.id)) return;
+    selectedIds.add(entry.id);
+    selected.push(entry);
+  };
+  matchedNew.slice(0, 40).forEach((h, i) => pushEntry(hitToEntry(h, i, today)));
+
+  // 3. 可选增强：GLM 额外发现新词（有预算、失败不影响）
+  if (GLM_API_KEY) {
+    try {
+      const deadline = startedAt + GLM_PHASE_BUDGET_MS;
+      const discovered = await aiDiscoverNewTerms(articles, deadline);
+      discovered.forEach((d) => {
+        const id = slugify(d.term_en);
+        if (selectedIds.has(id) || isInGlossary(d.term_en, d.abbreviation)) return;
+        selectedIds.add(id);
+        selected.push({
+          id, rank: selected.length + 1, term_en: d.term_en, term_zh: d.term_zh,
+          abbreviation: d.abbreviation, category: d.category, one_liner: d.one_liner,
+          appear_count: d.appear_count || 1, sources: d.sources, source_urls: d.source_urls,
+          matched_articles: d.matched_articles, date: today, status: 'hot', explanation: d.explanation || ''
+        });
+      });
+    } catch (e) { console.log('[AI Discover] 异常(忽略):', e.message); }
   }
 
-  // AI生成通俗解读（对没有explanation的词补充）
-  await generateExplanations(newTerms);
-
-  if (newTerms.length > 0) {
-    console.log('\n--- 今日新发现术语 ---');
-    newTerms.forEach((t, i) => {
-      console.log(`  ${i + 1}. ${t.term_en} (${t.term_zh}) - ${t.one_liner}`);
-    });
-  } else {
-    console.log('\n--- 无新术语发现 ---');
+  // 4. 兜底保证 >=6：从新兴词清单补足（取未选中、非已入库的，按清单顺序）
+  if (selected.length < MIN_HOT_TERMS) {
+    console.log(`\n[兜底] 当前 ${selected.length} 个，不足 ${MIN_HOT_TERMS}，从新兴词清单补足`);
+    for (const t of (keywords.emerging_terms || [])) {
+      if (selected.length >= MIN_HOT_TERMS) break;
+      const id = slugify(t.en);
+      if (selectedIds.has(id) || isInGlossary(t.en, t.abbr)) continue;
+      selectedIds.add(id);
+      selected.push({
+        id, rank: selected.length + 1, term_en: t.en, term_zh: t.zh || '', abbreviation: t.abbr || '',
+        category: t.category || 'AI概念', one_liner: t.one_liner || '', appear_count: 1,
+        sources: [], source_urls: [], matched_articles: [], date: today, status: 'hot', explanation: ''
+      });
+    }
   }
 
-  const merged = mergeWithExisting(newTerms);
+  // 重新编号
+  selected.forEach((t, i) => { t.rank = i + 1; });
+
+  // 5. 可选增强：补充通俗解读（无 GLM 时用 one_liner 兜底）
+  try {
+    await generateExplanations(selected, startedAt + GLOBAL_TIMEOUT_MS - 30000);
+  } catch (e) { console.log('[AI Explanation] 异常(忽略):', e.message); }
+
+  console.log(`\n--- 今日热门词汇 (${selected.length}) ---`);
+  selected.forEach((t, i) => console.log(`  ${i + 1}. ${t.term_en} (${t.term_zh}) - ${t.appear_count}次 - ${t.one_liner}`));
+
+  // 6. 合并历史并写入
+  const merged = mergeWithExisting(selected);
+  merged.forEach(t => { if (!t.explanation) t.explanation = t.one_liner || ''; });
   const outFile = path.join(ROOT, 'data', 'hot-terms.json');
   fs.writeFileSync(outFile, JSON.stringify(merged, null, 2), 'utf8');
-  console.log(`\n[Done] Written ${merged.length} terms to data/hot-terms.json`);
+  console.log(`\n[Done] 写入 ${merged.length} 条到 data/hot-terms.json (本次新榜 ${selected.length} 条)`);
 
-  // 在脚本内部做git commit+push，确保global timeout前完成
+  // 7. git 提交+推送（仅在有变化时；失败不影响）
   try {
-    const today = new Date().toISOString().split('T')[0];
     execSync('git config user.name "github-actions[bot]"');
     execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
     execSync('git add data/hot-terms.json');
-    // git diff --cached --quiet: exit 0 = 无变化, exit 1 = 有变化
     let hasChanges = false;
     try { execSync('git diff --cached --quiet'); } catch { hasChanges = true; }
     if (hasChanges) {
       execSync(`git commit -m "chore: update hot terms ${today}"`);
       execSync('git push');
-      console.log('\n[Git] Pushed to remote');
+      console.log('[Git] Pushed to remote');
     } else {
-      console.log('\n[Git] No changes to push');
+      console.log('[Git] No changes to push');
     }
   } catch (gitErr) {
-    console.log(`\n[Git] Error: ${gitErr.message}`);
+    console.log(`[Git] ${gitErr.message}`);
   }
-
-  clearTimeout(globalTimer);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+// 导出供测试使用
+module.exports = { matchWatchList, buildWatchList, isInGlossary, hitToEntry, mergeWithExisting, slugify };
+
+if (require.main === module) {
+  // 全局兜底超时：到点也以 exit 0 退出（绝不让 workflow 标红）
+  const globalTimer = setTimeout(() => {
+    console.error('[Global Timeout] 超过预算，退出(0)');
+    process.exit(0);
+  }, GLOBAL_TIMEOUT_MS);
+  globalTimer.unref();
+
+  main()
+    .then(() => { clearTimeout(globalTimer); process.exit(0); })
+    .catch(err => {
+      console.error('[Fatal but tolerated]', err && err.message);
+      clearTimeout(globalTimer);
+      process.exit(0);
+    });
+}
