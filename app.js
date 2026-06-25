@@ -6,6 +6,10 @@ let filteredData = [];
 let currentCategory = 'all';
 let currentSearch = '';
 let apiAvailable = false;
+let todayHotRaw = [];          // 今日原始热门数据(API/json)
+let currentHotData = [];       // 当前展示的榜单(随视图切换)
+let currentHotView = 'today';  // today | 7d | 30d | date
+let availableHotDates = [];    // 可回看的历史日期
 
 // ===== API 工具 =====
 const API_BASE = '/api';
@@ -66,17 +70,17 @@ async function loadGlossary() {
   if (submitBtn) submitBtn.style.display = apiAvailable ? '' : 'none';
 
   glossaryData = official;
-  // 去重：排除词库中已有的术语（ID + 名称双重匹配）
-  const officialIds = new Set(glossaryData.map(t => t.id));
-  const officialNames = new Set(glossaryData.map(t => t.term_en.toLowerCase()));
-  hotTermsData = hot.filter(t =>
-    !officialIds.has(t.id) && !officialNames.has(t.term_en.toLowerCase())
-  );
-
-  // 按出现频次降序排序，排行才有意义
-  hotTermsData.sort((a, b) => (b.appear_count || 0) - (a.appear_count || 0));
+  todayHotRaw = hot || [];
+  hotTermsData = prepareHot(todayHotRaw);   // 今日榜(也用于搜索/弹窗查找)
+  currentHotData = hotTermsData;
 
   filteredData = [...glossaryData];
+  const _glossaryCountEl = document.getElementById('glossaryCount');
+  if (_glossaryCountEl) _glossaryCountEl.textContent = glossaryData.length;
+  const _heroStat = document.getElementById('heroStatTotal');
+  if (_heroStat) _heroStat.textContent = glossaryData.length;
+  const _heroHot = document.getElementById('heroStatHot');
+  if (_heroHot) _heroHot.textContent = hotTermsData.length;
 
   if (glossaryData.length === 0 && hotTermsData.length === 0) {
     document.getElementById('emptyState').classList.remove('hidden');
@@ -84,6 +88,9 @@ async function loadGlossary() {
   }
 
   renderHotTerms();
+  renderHeroHot();
+  setupHotControls();
+  setupScrollSpy();
   renderGlossary();
   renderAlphaNav();
   setupFilters();
@@ -92,59 +99,142 @@ async function loadGlossary() {
 }
 
 // ===== 渲染热门术语 =====
+// 去重(排除已入库)+按频次排序
+function prepareHot(arr) {
+  const officialIds = new Set(glossaryData.map(t => t.id));
+  const officialNames = new Set(glossaryData.map(t => (t.term_en || '').toLowerCase()));
+  return (arr || [])
+    .filter(t => t && t.term_en && !officialIds.has(t.id) && !officialNames.has((t.term_en || '').toLowerCase()))
+    .sort((a, b) => (b.appear_count || 0) - (a.appear_count || 0));
+}
+function findHot(id) { return currentHotData.find(t => t.id === id) || hotTermsData.find(t => t.id === id); }
+
+function rankFlagHtml(term) {
+  if (term.is_new) return '<span class="hot-flag new">NEW</span>';
+  if (typeof term.rank_change === 'number' && term.rank_change > 0) return `<span class="hot-flag up">▲${term.rank_change}</span>`;
+  if (typeof term.rank_change === 'number' && term.rank_change < 0) return `<span class="hot-flag down">▼${Math.abs(term.rank_change)}</span>`;
+  return '';
+}
+
+function renderHeroHot() {
+  const el = document.getElementById('heroHotList');
+  if (!el) return;
+  const top = hotTermsData.slice(0, 5);
+  if (top.length === 0) { el.innerHTML = '<div style="padding:8px 0;color:var(--color-text-muted);font-size:0.85rem;">暂无数据</div>'; return; }
+  el.innerHTML = top.map((t, i) => `
+    <div class="hero-hot-item" data-id="${t.id}">
+      <span class="hero-hot-rank${i < 3 ? ' top' : ''}">${i + 1}</span>
+      <span class="hero-hot-en">${t.term_en}</span>
+      <span class="hero-hot-zh">${t.term_zh || ''}</span>
+    </div>`).join('');
+  el.querySelectorAll('.hero-hot-item').forEach(it => {
+    it.addEventListener('click', () => openTermModal(it.dataset.id, 'hot'));
+  });
+}
+
 function renderHotTerms() {
   const section = document.getElementById('hotTermsSection');
-  const divider = document.querySelector('.section-divider');
   const grid = document.getElementById('hotTermsGrid');
   const countEl = document.getElementById('hotCount');
   const dateEl = document.getElementById('hotDate');
+  section.style.display = '';
+  const data = currentHotData;
+  if (countEl) countEl.textContent = data.length;
+  if (dateEl) dateEl.textContent = (currentHotView === 'today' && data[0] && data[0].date) ? data[0].date : '';
 
-  if (hotTermsData.length === 0) {
-    grid.innerHTML = '<div style="text-align:center;padding:24px;color:var(--color-text-muted);font-size:0.9rem;">暂无热门词汇，提交新术语后将显示在此处</div>';
-    section.style.display = '';
-    divider.style.display = '';
-    countEl.textContent = '0';
+  if (data.length === 0) {
+    grid.innerHTML = '<div style="text-align:center;padding:24px;color:var(--color-text-muted);font-size:0.9rem;">该范围暂无热门词汇</div>';
     return;
   }
 
-  section.style.display = '';
-  divider.style.display = '';
-  countEl.textContent = hotTermsData.length;
-
-  // 显示日期
-  if (hotTermsData[0]?.date) {
-    dateEl.textContent = hotTermsData[0].date;
-  }
-
-  grid.innerHTML = hotTermsData.map((term, i) => `
+  grid.innerHTML = data.map((term, i) => `
     <div class="hot-term-row" data-id="${term.id}" data-source="hot">
       <div class="hot-rank">${i + 1}</div>
       <div class="hot-row-main">
         <div class="hot-row-title-line">
           <span class="hot-row-en">${term.term_en}</span>
           ${term.abbreviation ? `<span class="hot-row-abbr">${term.abbreviation}</span>` : ''}
-          ${term.category ? `<span class="hot-row-cat-badge">${term.category}</span>` : ''}
+          ${rankFlagHtml(term)}
         </div>
-        <span class="hot-row-zh">${term.term_zh}</span>
+        <span class="hot-row-zh">${term.term_zh || ''}</span>
         ${term.explanation || term.one_liner ? `<span class="hot-row-oneliner">${term.explanation || term.one_liner}</span>` : ''}
-        ${(term.sources && term.sources.length > 0) ? `<span class="hot-row-source">${term.sources.slice(0, 3).join(' · ')}</span>` : ''}
       </div>
       <div class="hot-row-meta">
-        <span class="hot-row-count">${term.appear_count}次提及</span>
-        ${term.date ? `<span class="hot-row-date">${term.date}</span>` : ''}
+        <span class="hot-row-count">${term.appear_count} 次</span>
       </div>
     </div>
   `).join('');
 
-  // 绑定点击
   grid.querySelectorAll('.hot-term-row').forEach(card => {
-    card.addEventListener('click', () => {
-      openTermModal(card.dataset.id, card.dataset.source);
-    });
+    card.addEventListener('click', () => openTermModal(card.dataset.id, card.dataset.source));
   });
 }
 
+async function loadHotJSON(p) {
+  try { const r = await fetch(p); if (r.ok) return await r.json(); } catch (e) {}
+  return null;
+}
+
+async function setupHotControls() {
+  try {
+    const r = await fetch('/data/hot-history/index.json');
+    if (r.ok) availableHotDates = await r.json();
+  } catch (e) { availableHotDates = []; }
+
+  document.querySelectorAll('.range-tab').forEach(tab => {
+    tab.addEventListener('click', () => selectHotView(tab.dataset.range));
+  });
+  const picker = document.getElementById('hotDatePicker');
+  if (picker && availableHotDates.length) {
+    picker.min = availableHotDates[0];
+    picker.max = availableHotDates[availableHotDates.length - 1];
+  }
+  if (picker) picker.addEventListener('change', () => { if (picker.value) selectHotView('date', picker.value); });
+}
+
+async function selectHotView(view, date) {
+  currentHotView = (view === 'date') ? 'date' : view;
+  document.querySelectorAll('.range-tab').forEach(t => t.classList.toggle('active', view !== 'date' && t.dataset.range === view));
+  const picker = document.getElementById('hotDatePicker');
+
+  let data = null, fellBack = false;
+  if (view === 'today') { data = todayHotRaw; if (picker) picker.value = ''; }
+  else if (view === '7d') { data = await loadHotJSON('/data/hot-7d.json'); if (picker) picker.value = ''; }
+  else if (view === '30d') { data = await loadHotJSON('/data/hot-30d.json'); if (picker) picker.value = ''; }
+  else if (view === 'date') { data = await loadHotJSON('/data/hot-history/' + date + '.json'); }
+
+  if (!data) { data = todayHotRaw; fellBack = true; }
+  currentHotData = prepareHot(data);
+  renderHotTerms();
+  if (fellBack) {
+    const grid = document.getElementById('hotTermsGrid');
+    if (grid) grid.insertAdjacentHTML('afterbegin', '<div style="padding:10px 16px;font-size:0.78rem;color:var(--color-text-muted);background:var(--color-bg-alt);border-bottom:1px solid var(--color-border);">该时间范围的数据尚未积累，暂以今日榜单代替</div>');
+  }
+}
+
+// 滚动高亮顶栏导航
+function setupScrollSpy() {
+  const links = document.querySelectorAll('.nav-link');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  const map = {};
+  links.forEach(a => { const id = a.getAttribute('href').slice(1); if (id) map[id] = a; });
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.remove('active'));
+        if (map[e.target.id]) map[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(map).forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el); });
+}
+
 // ===== 渲染词库 =====
+function letterOf(term) {
+  const c = (term.term_en || '#')[0].toUpperCase();
+  return /[A-Z]/.test(c) ? c : '#';
+}
+
 function renderGlossary() {
   const grid = document.getElementById('glossaryGrid');
   const empty = document.getElementById('emptyState');
@@ -157,19 +247,31 @@ function renderGlossary() {
 
   empty.classList.add('hidden');
 
-  grid.innerHTML = filteredData.map(term => `
-    <div class="term-card" data-id="${term.id}" data-source="official" data-category="${term.category || ''}">
-      <div class="card-header">
-        <span class="card-title">${term.term_en}</span>
-        ${term.abbreviation ? `<span class="card-abbr">${term.abbreviation}</span>` : ''}
-      </div>
-      <div class="card-zh">${term.term_zh}</div>
-      <div class="card-desc">${term.one_liner || ''}</div>
-      <div class="card-category">${term.category || ''}</div>
-    </div>
-  `).join('');
+  // 按首字母 A-Z 分组（非字母归到 #，排在最后）
+  const sorted = [...filteredData].sort((a, b) =>
+    (a.term_en || '').localeCompare(b.term_en || '', 'en', { sensitivity: 'base' }));
+  const groups = {};
+  const order = [];
+  for (const t of sorted) {
+    const L = letterOf(t);
+    if (!groups[L]) { groups[L] = []; order.push(L); }
+    groups[L].push(t);
+  }
+  order.sort((a, b) => (a === '#') - (b === '#') || a.localeCompare(b));
 
-  // 绑定点击
+  const cardHtml = term => `
+    <div class="term-card" data-id="${term.id}" data-source="official" data-category="${term.category || ''}">
+      <span class="card-cat" data-cat="${term.category || ''}">${term.category || ''}</span>
+      <h3 class="card-title">${term.term_en}</h3>
+      <div class="card-zh">${term.term_zh}${term.abbreviation ? `<span class="card-abbr">${term.abbreviation}</span>` : ''}</div>
+      <div class="card-desc">${term.one_liner || ''}</div>
+    </div>`;
+
+  grid.innerHTML = order.map(L =>
+    `<div class="letter-section" id="letter-${L}"><span class="letter-heading">${L}</span></div>` +
+    groups[L].map(cardHtml).join('')
+  ).join('');
+
   grid.querySelectorAll('.term-card').forEach(card => {
     card.addEventListener('click', () => {
       openTermModal(card.dataset.id, card.dataset.source);
@@ -180,21 +282,18 @@ function renderGlossary() {
 // ===== 字母导航 =====
 function renderAlphaNav() {
   const nav = document.getElementById('alphaNav');
-  const activeLetters = new Set(glossaryData.map(t => t.term_en[0].toUpperCase()));
+  const activeLetters = new Set(glossaryData.map(t => letterOf(t)));
 
-  nav.innerHTML = [...activeLetters].sort().map(letter =>
-    `<span class="alpha-btn" data-letter="${letter}">${letter}</span>`
-  ).join('');
+  nav.innerHTML = [...activeLetters]
+    .sort((a, b) => (a === '#') - (b === '#') || a.localeCompare(b))
+    .map(letter => `<span class="alpha-btn" data-letter="${letter}">${letter}</span>`)
+    .join('');
 
   nav.querySelectorAll('.alpha-btn').forEach(link => {
     link.addEventListener('click', () => {
       const letter = link.dataset.letter;
-      filteredData = glossaryData.filter(t => t.term_en[0].toUpperCase() === letter);
-      currentCategory = 'all';
-      updateFilterChips();
-      renderGlossary();
-      document.getElementById('filterInfo').textContent = `字母 ${letter} · ${filteredData.length} 条`;
-      document.querySelector('.grid-container').scrollIntoView({ behavior: 'smooth' });
+      const target = document.getElementById('letter-' + letter);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 }
@@ -300,10 +399,10 @@ function setupSearch() {
 // ===== 词条详情弹窗 =====
 function openTermModal(termId, source) {
   const term = source === 'hot'
-    ? hotTermsData.find(t => t.id === termId)
+    ? findHot(termId)
     : glossaryData.find(t => t.id === termId);
   if (!term) {
-    const found = hotTermsData.find(t => t.id === termId) || glossaryData.find(t => t.id === termId);
+    const found = findHot(termId) || glossaryData.find(t => t.id === termId);
     if (!found) return;
     return openTermModal(termId, found.status === 'hot' ? 'hot' : 'official');
   }
@@ -337,7 +436,7 @@ function openTermModal(termId, source) {
   document.getElementById('modalExplanation').textContent = term.explanation || '暂无通俗解读';
 
   // 相关术语
-  const allTerms = [...hotTermsData, ...glossaryData];
+  const allTerms = [...currentHotData, ...hotTermsData, ...glossaryData];
   const relatedContainer = document.getElementById('modalRelated');
   if (term.related && term.related.length > 0) {
     relatedContainer.innerHTML = term.related.map(relId => {

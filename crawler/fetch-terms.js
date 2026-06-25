@@ -455,6 +455,63 @@ function hitToEntry(h, idx, today) {
   };
 }
 
+// ===== 历史归档 / 排名变化 / 区间累计 =====
+function readJSONsafe(p, def) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return def; } }
+
+// 对比最近一次归档，标注 rank_change(正=上升) 与 is_new
+function annotateRankChanges(selected, today) {
+  const histDir = path.join(ROOT, 'data', 'hot-history');
+  const prevRanks = new Map();
+  try {
+    const idx = readJSONsafe(path.join(histDir, 'index.json'), []) || [];
+    const prevDates = idx.filter(d => d < today).sort();
+    if (prevDates.length) {
+      const prev = readJSONsafe(path.join(histDir, prevDates[prevDates.length - 1] + '.json'), []) || [];
+      prev.forEach(t => prevRanks.set(t.id, t.rank));
+    }
+  } catch { /* 无历史 */ }
+  selected.forEach(t => {
+    if (prevRanks.has(t.id)) { t.rank_change = prevRanks.get(t.id) - t.rank; t.is_new = false; }
+    else { t.rank_change = null; t.is_new = true; }
+  });
+}
+
+// 写当日快照 + 日期索引 + 7/30天累计榜
+function writeHistoryAndAggregates(selected, today) {
+  const dataDir = path.join(ROOT, 'data');
+  const histDir = path.join(dataDir, 'hot-history');
+  fs.mkdirSync(histDir, { recursive: true });
+  fs.writeFileSync(path.join(histDir, today + '.json'), JSON.stringify(selected, null, 2), 'utf8');
+
+  const dates = fs.readdirSync(histDir)
+    .filter(fn => /^\d{4}-\d{2}-\d{2}\.json$/.test(fn))
+    .map(fn => fn.slice(0, 10)).sort();
+  fs.writeFileSync(path.join(histDir, 'index.json'), JSON.stringify(dates, null, 2), 'utf8');
+
+  for (const win of [7, 30]) {
+    const cutoff = new Date(Date.now() - (win - 1) * 86400000).toISOString().split('T')[0];
+    const useDates = dates.filter(d => d >= cutoff);
+    const agg = new Map();
+    for (const d of useDates) {
+      const snap = readJSONsafe(path.join(histDir, d + '.json'), []) || [];
+      for (const t of snap) {
+        const e = agg.get(t.id) || { id: t.id, appear_count: 0, days: 0 };
+        e.appear_count += (t.appear_count || 0);
+        e.days += 1;
+        e.term_en = t.term_en; e.term_zh = t.term_zh; e.abbreviation = t.abbreviation || '';
+        e.category = t.category || 'AI概念'; e.one_liner = t.one_liner || '';
+        e.explanation = t.explanation || t.one_liner || '';
+        e.sources = t.sources || []; e.source_urls = t.source_urls || []; e.matched_articles = t.matched_articles || [];
+        agg.set(t.id, e);
+      }
+    }
+    const ranked = [...agg.values()].sort((a, b) => b.appear_count - a.appear_count);
+    ranked.forEach((t, i) => { t.rank = i + 1; t.status = 'hot'; });
+    fs.writeFileSync(path.join(dataDir, win === 7 ? 'hot-7d.json' : 'hot-30d.json'), JSON.stringify(ranked, null, 2), 'utf8');
+  }
+  console.log(`[History] 归档 ${today}.json；7d/30d 累计榜已更新（共 ${dates.length} 天历史）`);
+}
+
 // ===== 主流程 =====
 async function main() {
   const startedAt = Date.now();
@@ -526,6 +583,9 @@ async function main() {
     t.last_appeared = nowIso;
   });
 
+  // 标注排名变化 / 新词（对比最近一次归档）
+  annotateRankChanges(selected, today);
+
   // 5. 可选增强：补充通俗解读（无 GLM 时用 one_liner 兜底）
   try {
     await generateExplanations(selected, startedAt + GLOBAL_TIMEOUT_MS - 30000);
@@ -541,11 +601,14 @@ async function main() {
   fs.writeFileSync(outFile, JSON.stringify(merged, null, 2), 'utf8');
   console.log(`\n[Done] 写入 ${merged.length} 条到 data/hot-terms.json (本次新榜 ${selected.length} 条)`);
 
+  // 每日归档 + 7/30天累计榜（支撑前端"时间范围切换 / 日期回看"）
+  try { writeHistoryAndAggregates(selected, today); } catch (e) { console.log('[History] 跳过: ' + e.message); }
+
   // 7. git 提交+推送（仅在有变化时；失败不影响）
   try {
     execSync('git config user.name "github-actions[bot]"');
     execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
-    execSync('git add data/hot-terms.json');
+    execSync('git add data/hot-terms.json data/hot-7d.json data/hot-30d.json data/hot-history');
     let hasChanges = false;
     try { execSync('git diff --cached --quiet'); } catch { hasChanges = true; }
     if (hasChanges) {
@@ -561,7 +624,7 @@ async function main() {
 }
 
 // 导出供测试使用
-module.exports = { matchWatchList, buildWatchList, isInGlossary, hitToEntry, mergeWithExisting, slugify };
+module.exports = { matchWatchList, buildWatchList, isInGlossary, hitToEntry, mergeWithExisting, slugify, annotateRankChanges, writeHistoryAndAggregates };
 
 if (require.main === module) {
   // 全局兜底超时：到点也以 exit 0 退出（绝不让 workflow 标红）

@@ -29,43 +29,77 @@
   <!-- Hero区域 -->
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-badge">人工智能术语库</div>
-      <h1 class="hero-title">快速掌握 AI 核心概念</h1>
-      <p class="hero-desc">从基础原理到前沿技术，精选术语库帮助你建立完整的AI知识体系</p>
-      <div class="search-wrapper">
-        <div class="search-box">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-          </svg>
-          <input type="text" id="searchInput" class="search-input" placeholder="搜索术语、缩写或中文名称" autocomplete="off">
-          <kbd class="search-kbd">Enter ↵</kbd>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <p class="hero-eyebrow">AI GLOSSARY · 人工智能术语库</p>
+          <h1 class="hero-title">AI 术语知识库</h1>
+          <p class="hero-desc">追踪前沿术语动态，沉淀核心概念词库，构建系统的 AI 知识体系。</p>
+          <div class="search-wrapper">
+            <div class="search-box">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+              </svg>
+              <input type="text" id="searchInput" class="search-input" placeholder="搜索术语、缩写或中文名称" autocomplete="off">
+              <kbd class="search-kbd">Enter ↵</kbd>
+            </div>
+            <div id="searchSuggestions" class="search-suggestions hidden"></div>
+          </div>
+          <div class="hero-jump">
+            <a href="#hotTermsSection" class="jump-btn primary">🔥 热门榜</a>
+            <a href="#glossarySection" class="jump-btn">📚 术语库</a>
+          </div>
+          <div class="hero-stats">
+            <span><strong id="heroStatTotal">—</strong> 核心术语</span>
+            <span class="hero-stats-dot">·</span>
+            <span><strong id="heroStatHot">—</strong> 热门新词</span>
+            <span class="hero-stats-dot">·</span>
+            <span>每日更新</span>
+          </div>
         </div>
-        <div id="searchSuggestions" class="search-suggestions hidden"></div>
+        <aside class="hero-aside">
+          <div class="hero-hot-card">
+            <h3 class="hero-hot-title">🔥 今日热门 TOP 5</h3>
+            <div id="heroHotList" class="hero-hot-list"></div>
+          </div>
+        </aside>
       </div>
     </div>
   </header>
 
   <main class="main">
     <!-- 热门术语排行榜 -->
-    <section class="hot-terms-section" id="hotTermsSection">
-      <div class="hot-terms-header">
-        <div class="hot-terms-title">
-          <span class="hot-icon">🔥</span>
-          <h2>热门术语排行榜</h2>
-          <span class="hot-count" id="hotCount">0</span>
+    <div class="hot-band">
+      <section class="hot-terms-section" id="hotTermsSection">
+        <div class="section-head">
+          <span class="section-icon hot">🔥</span>
+          <div class="section-head-text">
+            <h2>热门术语排行榜 <span class="hot-count" id="hotCount">0</span></h2>
+            <p class="section-head-desc">每日自动从全球 AI 信息源抓取的新概念，按出现频次排行<span id="hotDate" class="hot-date"></span></p>
+          </div>
         </div>
-        <p class="hot-terms-desc">每日自动从全球AI信息源抓取，按出现频次排行 <span id="hotDate" style="margin-left:8px;color:var(--color-accent);font-weight:500;"></span></p>
-      </div>
-      <div class="hot-terms-grid" id="hotTermsGrid">
-        <!-- 动态渲染 -->
-      </div>
-    </section>
+        <div class="hot-controls">
+          <div class="hot-range-tabs">
+            <button class="range-tab active" data-range="today">今日</button>
+            <button class="range-tab" data-range="7d">近 7 天</button>
+            <button class="range-tab" data-range="30d">近 30 天</button>
+          </div>
+          <input type="date" id="hotDatePicker" class="hot-date-picker" title="回看某一天的榜单">
+        </div>
+        <div class="hot-terms-grid" id="hotTermsGrid">
+          <!-- 动态渲染 -->
+        </div>
+      </section>
+    </div>
 
-    <!-- 排行榜与词库分隔 -->
-    <div class="section-divider">
-      <div class="divider-line"></div>
-      <span class="divider-text">词 库</span>
-      <div class="divider-line"></div>
+    <!-- 词库区标题 -->
+    <div class="glossary-head-wrap" id="glossarySection">
+      <div class="section-head">
+        <span class="section-icon glossary">📚</span>
+        <div class="section-head-text">
+          <h2>术语词库 <span class="glossary-count" id="glossaryCount">0</span></h2>
+          <p class="section-head-desc">已沉淀的 AI 核心术语，可按分类或首字母浏览</p>
+        </div>
+      </div>
     </div>
 
     <!-- 工具栏 -->
