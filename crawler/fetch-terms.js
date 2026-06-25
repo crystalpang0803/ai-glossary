@@ -192,9 +192,11 @@ async function aiDiscoverNewTerms(articles) {
 
   console.log(`\n--- AI发现新术语 (${allTitles.length} unique titles) ---`);
 
-  // 分批处理：每批最多30个标题
-  const BATCH_SIZE = 30;
+  // 分批处理：每批最多60个标题（减少API调用次数，加速完成）
+  const BATCH_SIZE = 60;
   const allDiscovered = [];
+  let consecutiveFailures = 0;
+  const MAX_CONSECUTIVE_FAILURES = 3;
 
   for (let i = 0; i < allTitles.length; i += BATCH_SIZE) {
     const batch = allTitles.slice(i, i + BATCH_SIZE);
@@ -236,6 +238,7 @@ ${titleList}
     const result = await callGLM(prompt, 1500);
     
     if (result) {
+      consecutiveFailures = 0; // 成功时重置计数
       try {
         // 提取JSON部分（可能被markdown代码块包裹）
         let jsonStr = result;
@@ -278,10 +281,16 @@ ${titleList}
         console.log(`[AI Discover] Batch ${batchNum}: parse error - ${e.message}`);
         console.log(`[AI Discover] Raw response: ${result.substring(0, 200)}`);
       }
+    } else {
+      consecutiveFailures++;
+      if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES) {
+        console.log(`[AI Discover] ${MAX_CONSECUTIVE_FAILURES} consecutive failures, aborting AI discovery`);
+        break;
+      }
     }
 
-    // 避免速率限制
-    if (i + BATCH_SIZE < allTitles.length) {
+    // 避免速率限制（失败时不等待）
+    if (result && i + BATCH_SIZE < allTitles.length) {
       await new Promise(r => setTimeout(r, 2000));
     }
   }
@@ -343,7 +352,7 @@ async function callGLM(prompt, maxTokens = 200) {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${GLM_API_KEY}`
       },
-      timeout: 30000,
+      timeout: 15000,
       agent: false  // 避免agent池化导致连接不释放
     }, (res) => {
       let data = '';
