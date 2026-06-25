@@ -389,6 +389,7 @@ async function generateExplanations(hotTerms) {
   if (!GLM_API_KEY || hotTerms.length === 0) return hotTerms;
   
   console.log(`\n--- AI生成通俗解读 (${hotTerms.length} terms) ---`);
+  let consecutiveFails = 0;
   
   for (const term of hotTerms) {
     // 检查glossary中是否已有explanation
@@ -397,6 +398,15 @@ async function generateExplanations(hotTerms) {
       term.explanation = glossaryEntry.explanation;
       console.log(`[AI Skip] ${term.term_en}: 已有glossary解释`);
       continue;
+    }
+    
+    // 连续失败3次直接放弃，用one_liner兜底
+    if (consecutiveFails >= 3) {
+      console.log('[AI Explanation] 3 consecutive failures, skipping remaining explanations');
+      for (const remaining of hotTerms.filter(t => !t.explanation && !glossaryMap.get(t.id)?.explanation)) {
+        remaining.explanation = remaining.one_liner || '';
+      }
+      return hotTerms;
     }
     
     // 构建AI prompt
@@ -415,9 +425,11 @@ async function generateExplanations(hotTerms) {
     
     const explanation = await callGLM(prompt);
     if (explanation) {
+      consecutiveFails = 0;
       term.explanation = explanation;
       console.log(`[AI OK] ${term.term_en}: ${explanation}`);
     } else {
+      consecutiveFails++;
       console.log(`[AI Fail] ${term.term_en}: AI生成失败，保留one_liner`);
       term.explanation = term.one_liner || '';
     }
