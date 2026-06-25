@@ -65,6 +65,16 @@ async function loadGlossary() {
     console.warn('加载热门术语失败:', e.message);
   }
 
+  // 排名变化/NEW 标记存在数据文件里，数据库不存；从静态文件把这些标记按 id 贴回今日榜，
+  // 保证"今日"无论数据来自 API(DB) 还是文件，都能显示 ▲▼/NEW 徽标。
+  try {
+    const staticHot = await (await fetch('/data/hot-terms.json')).json();
+    if (Array.isArray(staticHot)) {
+      const flagMap = new Map(staticHot.map(t => [t.id, { is_new: t.is_new, rank_change: t.rank_change }]));
+      hot = (hot || []).map(t => flagMap.has(t.id) ? { ...t, ...flagMap.get(t.id) } : t);
+    }
+  } catch (e) { /* 文件不可用则忽略，不影响主流程 */ }
+
   // 更新提交按钮可见性
   const submitBtn = document.getElementById('navSubmitBtn');
   if (submitBtn) submitBtn.style.display = apiAvailable ? '' : 'none';
