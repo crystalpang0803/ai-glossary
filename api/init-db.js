@@ -135,7 +135,7 @@ module.exports = async function handler(req, res) {
         
         for (const term of glossaryData) {
           await sql`INSERT INTO glossary (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, related, created_at, updated_at)
-            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${JSON.stringify(term.related || [])}, NOW(), NOW())
+            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${JSON.stringify(term.related || [])}, ${new Date().toISOString()}, ${new Date().toISOString()})
             ON CONFLICT (id) DO NOTHING`;
         }
         console.log(`[INIT-DB] 成功导入 ${glossaryData.length} 条词库数据`);
@@ -149,7 +149,7 @@ module.exports = async function handler(req, res) {
         
         for (const term of hotData) {
           await sql`INSERT INTO hot_terms (id, term_en, term_zh, abbreviation, category, one_liner, definition, explanation, source, source_url, appear_count, first_appeared, last_appeared, status, related, date, sources, source_urls, matched_articles)
-            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${term.appear_count || 1}, ${term.first_appeared || NOW()}, ${term.last_appeared || NOW()}, 'hot', ${JSON.stringify(term.related || [])}, ${term.date || ''}, ${JSON.stringify(term.sources || [])}, ${JSON.stringify(term.source_urls || [])}, ${JSON.stringify(term.matched_articles || [])})
+            VALUES (${term.id}, ${term.term_en}, ${term.term_zh}, ${term.abbreviation || ''}, ${term.category || 'AI概念'}, ${term.one_liner || ''}, ${term.definition || ''}, ${term.explanation || ''}, ${term.source || ''}, ${term.source_url || ''}, ${term.appear_count || 1}, ${term.first_appeared || new Date().toISOString()}, ${term.last_appeared || new Date().toISOString()}, 'hot', ${JSON.stringify(term.related || [])}, ${term.date || ''}, ${JSON.stringify(term.sources || [])}, ${JSON.stringify(term.source_urls || [])}, ${JSON.stringify(term.matched_articles || [])})
             ON CONFLICT (id) DO NOTHING`;
         }
         console.log(`[INIT-DB] 成功导入 ${hotData.length} 条热点数据`);

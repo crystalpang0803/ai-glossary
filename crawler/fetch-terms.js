@@ -518,8 +518,13 @@ async function main() {
     }
   }
 
-  // 重新编号
-  selected.forEach((t, i) => { t.rank = i + 1; });
+  // 重新编号 + 补充时间字段(供DB同步/自动沉淀使用)
+  const nowIso = new Date().toISOString();
+  selected.forEach((t, i) => {
+    t.rank = i + 1;
+    t.first_appeared = t.first_appeared || nowIso;
+    t.last_appeared = nowIso;
+  });
 
   // 5. 可选增强：补充通俗解读（无 GLM 时用 one_liner 兜底）
   try {
