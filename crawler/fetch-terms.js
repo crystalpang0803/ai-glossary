@@ -295,6 +295,12 @@ ${titleList}
     }
   }
 
+  // 连续失败时返回null，触发关键词匹配fallback
+  if (consecutiveFailures >= MAX_CONSECUTIVE_FAILURES && allDiscovered.length === 0) {
+    console.log('[AI Discover] All batches failed, falling back to keyword matching');
+    return null;
+  }
+
   // 第二轮：验证每个术语是否确实是"有定义的术语"（最多验证20个，避免耗时过长）
   if (allDiscovered.length > 0) {
     const toVerify = allDiscovered.slice(0, 20);
