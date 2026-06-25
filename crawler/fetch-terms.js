@@ -11,6 +11,7 @@ const https = require('https');
 const http = require('http');
 const { JSDOM } = require('jsdom');
 const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -28,7 +29,7 @@ const REQUEST_TIMEOUT = 15000;
 const CONCURRENT_LIMIT = 5;
 const MAX_ITEMS_PER_FEED = 50;
 const HOURS_BACK = 48;
-const GLOBAL_TIMEOUT_MS = 10 * 60 * 1000; // 全局超时10分钟
+const GLOBAL_TIMEOUT_MS = 8 * 60 * 1000; // 全局超时8分钟
 
 // 智谱API配置
 const GLM_API_KEY = process.env.GLM_API_KEY || '';
@@ -633,6 +634,26 @@ async function main() {
   const outFile = path.join(ROOT, 'data', 'hot-terms.json');
   fs.writeFileSync(outFile, JSON.stringify(merged, null, 2), 'utf8');
   console.log(`\n[Done] Written ${merged.length} terms to data/hot-terms.json`);
+
+  // 在脚本内部做git commit+push，确保global timeout前完成
+  try {
+    const today = new Date().toISOString().split('T')[0];
+    execSync('git config user.name "github-actions[bot]"');
+    execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
+    execSync('git add data/hot-terms.json');
+    // git diff --cached --quiet: exit 0 = 无变化, exit 1 = 有变化
+    let hasChanges = false;
+    try { execSync('git diff --cached --quiet'); } catch { hasChanges = true; }
+    if (hasChanges) {
+      execSync(`git commit -m "chore: update hot terms ${today}"`);
+      execSync('git push');
+      console.log('\n[Git] Pushed to remote');
+    } else {
+      console.log('\n[Git] No changes to push');
+    }
+  } catch (gitErr) {
+    console.log(`\n[Git] Error: ${gitErr.message}`);
+  }
 
   clearTimeout(globalTimer);
 }
