@@ -352,15 +352,15 @@ async function callGLM(prompt, maxTokens = 200) {
     max_tokens: maxTokens
   });
   
-  return new Promise((resolve, reject) => {
+  const rawPromise = new Promise((resolve, reject) => {
     const req = https.request(GLM_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${GLM_API_KEY}`
       },
-      timeout: 15000,
-      agent: false  // 避免agent池化导致连接不释放
+      timeout: 10000,
+      agent: false
     }, (res) => {
       let data = '';
       res.setEncoding('utf8');
@@ -384,6 +384,9 @@ async function callGLM(prompt, maxTokens = 200) {
     req.write(body);
     req.end();
   });
+
+  // 用withTimeout包裹，确保整个请求（包括响应阶段）不超过20秒
+  return withTimeout(rawPromise, 20000, `GLM API call`);
 }
 
 async function generateExplanations(hotTerms) {
