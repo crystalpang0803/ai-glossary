@@ -19,7 +19,6 @@ const https = require('https');
 const http = require('http');
 const { JSDOM } = require('jsdom');
 const fs = require('fs');
-const { execSync } = require('child_process');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
