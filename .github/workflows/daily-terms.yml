@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *'  # UTC 0:00 = 北京时间 8:00
   workflow_dispatch:  # 支持手动触发
 
+permissions:
+  contents: write  # 允许 bot push 代码
+
 jobs:
   fetch-terms:
     runs-on: ubuntu-latest
