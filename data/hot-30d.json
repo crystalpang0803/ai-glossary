@@ -1,45 +1,42 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 44,
-    "days": 2,
+    "appear_count": 55,
+    "days": 3,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体自动规划工作，像人一样完成任务。",
+    "explanation": "智能体工作流就像一个聪明的助手，能自己完成任务，不需要人指导。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.26203",
-      "https://arxiv.org/abs/2606.26205",
-      "https://arxiv.org/abs/2606.26346",
-      "https://arxiv.org/abs/2606.26356",
-      "https://arxiv.org/abs/2606.26400"
+      "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
+      "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+      "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning",
+      "https://huggingface.co/blog/ibm-research/cuga-apps",
+      "https://developer.nvidia.com/blog/category/generative-ai/"
     ],
     "matched_articles": [
       {
-        "title": "Agentic Analysis for Agentic Infrastructure: An LLM-Powered Pipeline for Comparative Governance of DAO and Corporate AI Protocols",
-        "link": "https://arxiv.org/abs/2606.26203",
-        "source": "arXiv AI"
+        "title": "Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks",
+        "link": "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "Knowledge-augmented Agentic AI for Mental Health Medication Information Seeking",
-        "link": "https://arxiv.org/abs/2606.26205",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "How Do Tool-Augmented LLM Agents Perform on Real-World Energy Analytics Tasks?",
-        "link": "https://arxiv.org/abs/2606.26346",
-        "source": "arXiv AI"
+        "title": "Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks",
+        "link": "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
+        "source": "GitHub Blog"
       }
     ],
     "rank": 1,
@@ -86,35 +83,21 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 9,
-    "days": 2,
+    "appear_count": 10,
+    "days": 3,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体一起工作，像团队一样完成任务。",
+    "explanation": "多个AI智能体像团队一样合作或竞争，自动优化大数据处理。",
     "sources": [
-      "arXiv AI",
-      "arXiv LG",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.26722",
-      "https://arxiv.org/abs/2606.26453",
       "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/"
     ],
     "matched_articles": [
-      {
-        "title": "Socratic agents for autonomous scientific discovery in high-dimensional physical systems",
-        "link": "https://arxiv.org/abs/2606.26722",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization",
-        "link": "https://arxiv.org/abs/2606.26453",
-        "source": "arXiv LG"
-      },
       {
         "title": "Autonomous Big Data Optimization: Multi-Agent Reinforcement Learning to Achieve Self-Tuning Apache Spark",
         "link": "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/",
@@ -205,35 +188,21 @@
   },
   {
     "id": "long-context",
-    "appear_count": 6,
-    "days": 2,
+    "appear_count": 7,
+    "days": 3,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能处理超长文本，就像看懂长篇大论。",
+    "explanation": "长上下文技术让AI能理解超长文本，如数十万词文章，更智能地处理复杂任务。",
     "sources": [
-      "arXiv CV",
-      "arXiv LG",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.26171",
-      "https://arxiv.org/abs/2606.26290",
       "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/"
     ],
     "matched_articles": [
-      {
-        "title": "LCG: Long-Context Consistent Image Generation with Sparse Relational Attention",
-        "link": "https://arxiv.org/abs/2606.26171",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "SSM Adapters via Hankel Reduced-order Modeling: Injection Site Determines Task Suitability in Long-Context Fine-Tuning",
-        "link": "https://arxiv.org/abs/2606.26290",
-        "source": "arXiv LG"
-      },
       {
         "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
         "link": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
@@ -245,30 +214,24 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 5,
-    "days": 2,
+    "appear_count": 6,
+    "days": 3,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种强化学习算法，它通过比较同一组内不同策略的相对表现来训练模型，就像比赛一样给表现好的策略加分。",
+    "explanation": "GRPO是一种强化学习算法，它通过比较组内模型表现来调整奖励，帮助模型学习得更好。",
     "sources": [
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
     ],
     "matched_articles": [
       {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 7 days ago •  5",
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 8 days ago •  6",
         "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  31",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
         "source": "Hugging Face Blog"
       }
     ],
@@ -317,6 +280,84 @@
     "status": "hot"
   },
   {
+    "id": "speculative-decoding",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型先快速生成文本，大模型再修正，提高文本生成速度。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-experts",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "MoE像多个专家一起工作，根据需要激活部分专家，让模型更高效。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/06/438703.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "英伟达MoE新开源：一行import，微调加速3.7倍",
+        "link": "https://www.qbitai.com/2026/06/438703.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
+    "category": "AI技术",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像一部追踪事物变化的侦探剧，擅长分析长篇连续数据，推理又快又准。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
+    ],
+    "matched_articles": [
+      {
+        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  231",
+        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
     "id": "reasoning-model",
     "appear_count": 4,
     "days": 1,
@@ -354,33 +395,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 9,
-    "status": "hot"
-  },
-  {
-    "id": "speculative-decoding",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "用小模型先猜文本，大模型再核对，提高文本生成速度的技术。",
-    "sources": [
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 10,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -406,7 +421,7 @@
         "source": "Hugging Face Blog"
       }
     ],
-    "rank": 11,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -432,7 +447,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 12,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -456,72 +471,6 @@
         "title": "Radical AI Interpretability",
         "link": "https://arxiv.org/abs/2606.26523",
         "source": "arXiv AI"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "mixture-of-experts",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
-    "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "专家混合模型就像多个小团队一起工作，根据任务需要，动态调用合适的团队来提高效率。",
-    "sources": [
-      "量子位",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/06/438703.html",
-      "https://arxiv.org/abs/2606.26287"
-    ],
-    "matched_articles": [
-      {
-        "title": "英伟达MoE新开源：一行import，微调加速3.7倍",
-        "link": "https://www.qbitai.com/2026/06/438703.html",
-        "source": "量子位"
-      },
-      {
-        "title": "GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models",
-        "link": "https://arxiv.org/abs/2606.26287",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一部侦探小说，追踪时间变化中的秘密，特别擅长处理长故事，推理又快又准。",
-    "sources": [
-      "arXiv LG",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.26290",
-      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
-    ],
-    "matched_articles": [
-      {
-        "title": "SSM Adapters via Hankel Reduced-order Modeling: Injection Site Determines Task Suitability in Long-Context Fine-Tuning",
-        "link": "https://arxiv.org/abs/2606.26290",
-        "source": "arXiv LG"
-      },
-      {
-        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  230",
-        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 15,
@@ -645,6 +594,32 @@
     "status": "hot"
   },
   {
+    "id": "continuous-batching",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理技术通过动态合并不同任务来提升GPU的利用率和处理速度。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+    ],
+    "matched_articles": [
+      {
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 8 days ago •  6",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 20,
+    "status": "hot"
+  },
+  {
     "id": "test-time-compute",
     "appear_count": 1,
     "days": 1,
@@ -667,7 +642,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 20,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -693,7 +668,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -719,7 +694,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 22,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -745,7 +720,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 23,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -769,32 +744,6 @@
         "title": "Is GraphRAG Needed? From Basic RAG to Graph-/Agentic Solutions with Context Optimization",
         "link": "https://arxiv.org/abs/2606.25656",
         "source": "arXiv CL"
-      }
-    ],
-    "rank": 24,
-    "status": "hot"
-  },
-  {
-    "id": "continuous-batching",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理是一种在推理过程中，自动将不同请求拼在一起，提高GPU使用效率和服务速度的技术。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 7 days ago •  5",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 25,
