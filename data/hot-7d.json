@@ -1,24 +1,23 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 55,
-    "days": 3,
+    "appear_count": 65,
+    "days": 4,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "智能体工作流就像一个聪明的助手，能自己完成任务，不需要人指导。",
+    "explanation": "智能体工作流就像让AI小助手自己规划、完成任务的流程。",
     "sources": [
       "GitHub Blog",
       "Hugging Face Blog",
-      "NVIDIA Blog",
-      "InfoQ"
+      "NVIDIA Blog"
     ],
     "source_urls": [
       "https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/",
       "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
-      "https://huggingface.co/blog/bytkim/qwen36-27b-reasoning",
+      "https://huggingface.co/blog/nvidia/nemotron-3-nano-efficient-open-intelligent-models",
       "https://huggingface.co/blog/ibm-research/cuga-apps",
       "https://developer.nvidia.com/blog/category/generative-ai/"
     ],
@@ -44,38 +43,32 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 10,
-    "days": 2,
+    "appear_count": 12,
+    "days": 3,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
     "category": "AI技术",
     "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "这种模型能看图又能读字，像人一样懂图片和文字。",
+    "explanation": "视觉语言模型就像一个聪明的翻译，能看懂图片和听懂文字，能同时处理这两种信息。",
     "sources": [
-      "arXiv CL",
-      "arXiv CV"
+      "量子位",
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.26923",
-      "https://arxiv.org/abs/2606.26287",
-      "https://arxiv.org/abs/2606.26535"
+      "https://www.qbitai.com/2026/06/439236.html",
+      "https://huggingface.co/blog/omlab/vlx-seek"
     ],
     "matched_articles": [
       {
-        "title": "GAVEL: Grounded Caption Error Verification and Localization",
-        "link": "https://arxiv.org/abs/2606.26923",
-        "source": "arXiv CL"
+        "title": "CVPR 2026最热方向，被一家杭州团队率先跑进了端侧！",
+        "link": "https://www.qbitai.com/2026/06/439236.html",
+        "source": "量子位"
       },
       {
-        "title": "GeMoE: Gating Entropy is All You Need for Uncertainty-aware Adaptive Routing in MoE-based Large Vision-Language Models",
-        "link": "https://arxiv.org/abs/2606.26287",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "From Hallucination to Grounding: Diagnosing Visual Spatial Intelligence via CRISP",
-        "link": "https://arxiv.org/abs/2606.26535",
-        "source": "arXiv CV"
+        "title": "VLX-Seek: Improving VLM Fine-Grained Perception via Region Reference Instead of Coordinate Generation    omlab • about 22 hours ago •  8",
+        "link": "https://huggingface.co/blog/omlab/vlx-seek",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 2,
@@ -83,14 +76,14 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 10,
-    "days": 3,
+    "appear_count": 11,
+    "days": 4,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队一样合作或竞争，自动优化大数据处理。",
+    "explanation": "多智能体系统就像一群机器人，彼此合作或竞争，共同完成复杂的任务。",
     "sources": [
       "InfoQ"
     ],
@@ -148,6 +141,70 @@
     "status": "hot"
   },
   {
+    "id": "group-relative-policy-optimization",
+    "appear_count": 9,
+    "days": 4,
+    "term_en": "Group Relative Policy Optimization",
+    "term_zh": "组相对策略优化",
+    "abbreviation": "GRPO",
+    "category": "AI技术",
+    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
+    "explanation": "GRPO是一种强化学习算法，通过比较组内成员表现优劣来训练模型，让机器学习更高效。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
+    ],
+    "matched_articles": [
+      {
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 9 days ago •  7",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  32",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  128",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 5,
+    "status": "hot"
+  },
+  {
+    "id": "long-context",
+    "appear_count": 8,
+    "days": 4,
+    "term_en": "Long Context",
+    "term_zh": "长上下文",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
+    "explanation": "长上下文技术让AI模型能处理超长文本，就像看懂长篇大论。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
+        "link": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "rank": 6,
+    "status": "hot"
+  },
+  {
     "id": "chain-of-thought",
     "appear_count": 7,
     "days": 2,
@@ -183,59 +240,59 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 5,
+    "rank": 7,
     "status": "hot"
   },
   {
-    "id": "long-context",
-    "appear_count": 7,
-    "days": 3,
-    "term_en": "Long Context",
-    "term_zh": "长上下文",
+    "id": "speculative-decoding",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
     "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能理解超长文本，如数十万词文章，更智能地处理复杂任务。",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型先试写，大模型再核对，让文本生成更快，效率提升15倍。",
     "sources": [
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/"
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
     ],
     "matched_articles": [
       {
-        "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
-        "link": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 6,
+    "rank": 8,
     "status": "hot"
   },
   {
-    "id": "group-relative-policy-optimization",
-    "appear_count": 6,
-    "days": 3,
-    "term_en": "Group Relative Policy Optimization",
-    "term_zh": "组相对策略优化",
-    "abbreviation": "GRPO",
+    "id": "state-space-model",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
     "category": "AI技术",
-    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种强化学习算法，它通过比较组内模型表现来调整奖励，帮助模型学习得更好。",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像一个时间旅行者，记录并预测数据随时间的变化。",
     "sources": [
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
     ],
     "matched_articles": [
       {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 8 days ago •  6",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  232",
+        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
         "source": "Hugging Face Blog"
       }
     ],
-    "rank": 7,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -276,33 +333,33 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 8,
+    "rank": 10,
     "status": "hot"
   },
   {
-    "id": "speculative-decoding",
+    "id": "direct-preference-optimization",
     "appear_count": 4,
     "days": 3,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型先快速生成文本，大模型再修正，提高文本生成速度。",
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化是一种训练大模型的方法，它不用额外奖励模型，直接用用户喜好来指导模型学习。",
     "sources": [
-      "NVIDIA Blog"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
     ],
     "matched_articles": [
       {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  32",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
       }
     ],
-    "rank": 9,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -328,33 +385,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 4,
-    "days": 3,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一部追踪事物变化的侦探剧，擅长分析长篇连续数据，推理又快又准。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
-    ],
-    "matched_articles": [
-      {
-        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  231",
-        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 11,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -393,32 +424,6 @@
         "title": "Epiphany-Aware KV Cache Eviction Without the Attention Matrix",
         "link": "https://arxiv.org/abs/2606.26472",
         "source": "arXiv LG"
-      }
-    ],
-    "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化是一种训练大模型的新方法，它不需要奖励模型，直接用用户偏好来调整模型。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  31",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 13,
@@ -510,6 +515,32 @@
     "status": "hot"
   },
   {
+    "id": "continuous-batching",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理是一种技术，能让GPU更高效地处理多个任务，提升计算机处理速度。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+    ],
+    "matched_articles": [
+      {
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 9 days ago •  7",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 17,
+    "status": "hot"
+  },
+  {
     "id": "in-context-learning",
     "appear_count": 2,
     "days": 1,
@@ -538,7 +569,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 17,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -564,7 +595,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 18,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -588,32 +619,6 @@
         "title": "LearniBridge: Learnable Calibration of Feature Caching for Diffusion Models Acceleration",
         "link": "https://arxiv.org/abs/2606.26778",
         "source": "arXiv CV"
-      }
-    ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "continuous-batching",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理技术通过动态合并不同任务来提升GPU的利用率和处理速度。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 8 days ago •  6",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 20,
@@ -747,6 +752,32 @@
       }
     ],
     "rank": 25,
+    "status": "hot"
+  },
+  {
+    "id": "multi-agent-reinforcement-learning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multi-Agent Reinforcement Learning",
+    "term_zh": "多智能体强化学习",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "多智能体强化学习是一种通过多个智能体之间的交互和合作来学习环境中的最优策略的机器学习方法。",
+    "explanation": "多智能体强化学习就像一群小机器人，它们互相学习、协作，共同找到最佳工作方式。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Autonomous Big Data Optimization: Multi-Agent Reinforcement Learning to Achieve Self-Tuning Apache Spark",
+        "link": "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 26,
     "status": "hot"
   }
 ]
