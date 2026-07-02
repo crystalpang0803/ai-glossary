@@ -1,43 +1,42 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 110,
+    "appear_count": 106,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体自动管理任务，像人一样思考和行动。",
+    "explanation": "AI智能体像助手一样，自动规划并完成工作流程。",
     "sources": [
       "arXiv AI",
       "arXiv CL",
-      "arXiv CV",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.30906",
-      "https://arxiv.org/abs/2606.30949",
-      "https://arxiv.org/abs/2606.31134",
-      "https://arxiv.org/abs/2606.31179",
-      "https://arxiv.org/abs/2606.31200"
+      "https://arxiv.org/abs/2607.00269",
+      "https://arxiv.org/abs/2607.00407",
+      "https://arxiv.org/abs/2607.00972",
+      "https://arxiv.org/abs/2607.01061",
+      "https://arxiv.org/abs/2606.31980"
     ],
     "matched_articles": [
       {
-        "title": "Investigating Multi-Agent Deliberation in Law",
-        "link": "https://arxiv.org/abs/2606.30906",
+        "title": "Mnemosyne: Agentic Transaction Processing for Validating and Repairing AI-generated Workflows",
+        "link": "https://arxiv.org/abs/2607.00269",
         "source": "arXiv AI"
       },
       {
-        "title": "AgRefactor: Self-Evolving Agentic Workflow for HLS Compatibility and Performance",
-        "link": "https://arxiv.org/abs/2606.30949",
+        "title": "Personalization as Inverse Planning: Learning Latent Design Intents for Agentic Slide Generation via Structural Denoising",
+        "link": "https://arxiv.org/abs/2607.00407",
         "source": "arXiv AI"
       },
       {
-        "title": "Beyond the Library: An Agentic Framework for Autoformalizing Research Mathematics",
-        "link": "https://arxiv.org/abs/2606.31134",
+        "title": "Bayesian Uncertainty Propagation for Agentic RAG Pipelines: A Proof-of-Concept Study on Multi-Hop Question Answering",
+        "link": "https://arxiv.org/abs/2607.00972",
         "source": "arXiv AI"
       }
     ],
@@ -46,42 +45,42 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 45,
+    "appear_count": 49,
     "days": 6,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
     "category": "AI技术",
     "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "视觉语言模型像个超级大脑，能看图又懂文字，帮助机器像人一样思考和操作。",
+    "explanation": "这种模型能看图又能识字，像人类一样理解图片和文字。",
     "sources": [
-      "arXiv AI",
       "arXiv CL",
       "arXiv CV",
+      "arXiv LG",
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.31200",
-      "https://arxiv.org/abs/2606.31392",
-      "https://arxiv.org/abs/2606.31410",
-      "https://arxiv.org/abs/2606.31719",
-      "https://arxiv.org/abs/2606.28396"
+      "https://arxiv.org/abs/2607.00159",
+      "https://arxiv.org/abs/2607.00423",
+      "https://arxiv.org/abs/2607.00174",
+      "https://arxiv.org/abs/2607.00218",
+      "https://arxiv.org/abs/2607.00338"
     ],
     "matched_articles": [
       {
-        "title": "Agentic RAG-VLM: Affordance-Aware Retrieval-Augmented Generation with Self-Reflective Planning for Robotic Grasping",
-        "link": "https://arxiv.org/abs/2606.31200",
-        "source": "arXiv AI"
+        "title": "Identifying and Resolving Pitfalls of Knowledge-Based VQA Benchmarks: Auditing, Repairing, and Augmenting",
+        "link": "https://arxiv.org/abs/2607.00159",
+        "source": "arXiv CL"
       },
       {
-        "title": "ReGRPO: Reflection-Augmented Policy Optimization for Tool-Using Agents",
-        "link": "https://arxiv.org/abs/2606.31392",
-        "source": "arXiv AI"
+        "title": "Selective Test-Time Debiasing for CLIP via Reward Gating",
+        "link": "https://arxiv.org/abs/2607.00423",
+        "source": "arXiv CL"
       },
       {
-        "title": "Xiaomi-GUI-0 Technical Report",
-        "link": "https://arxiv.org/abs/2606.31410",
-        "source": "arXiv AI"
+        "title": "Steal the Patch Size: Adversarially Manipulate Vision-Language Models",
+        "link": "https://arxiv.org/abs/2607.00174",
+        "source": "arXiv CV"
       }
     ],
     "rank": 2,
@@ -89,40 +88,38 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 35,
+    "appear_count": 33,
     "days": 7,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队成员一样，一起工作或比赛完成复杂任务。",
+    "explanation": "多智能体系统就像一群小机器人，它们可以一起工作或竞争，完成复杂任务。",
     "sources": [
       "arXiv AI",
-      "arXiv CL",
-      "arXiv CV"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.30906",
-      "https://arxiv.org/abs/2606.30911",
-      "https://arxiv.org/abs/2606.30966",
-      "https://arxiv.org/abs/2606.31085",
-      "https://arxiv.org/abs/2606.31174"
+      "https://arxiv.org/abs/2607.00334",
+      "https://arxiv.org/abs/2607.00454",
+      "https://arxiv.org/abs/2607.01061",
+      "https://arxiv.org/abs/2607.00918"
     ],
     "matched_articles": [
       {
-        "title": "Investigating Multi-Agent Deliberation in Law",
-        "link": "https://arxiv.org/abs/2606.30906",
+        "title": "Managed Autonomy at Runtime: Gear-Based Safety and Governance for Single- and Multi-Agent Cyber-Physical Systems",
+        "link": "https://arxiv.org/abs/2607.00334",
         "source": "arXiv AI"
       },
       {
-        "title": "Why Solve It Twice? Hierarchical Accumulation of Skills for Transfer-Efficient ML Engineering",
-        "link": "https://arxiv.org/abs/2606.30911",
+        "title": "Agri-SAGE: Simulation-Grounded Multi-Agent LLM for Context-Aware Agricultural Advisory Generation",
+        "link": "https://arxiv.org/abs/2607.00454",
         "source": "arXiv AI"
       },
       {
-        "title": "HyPOLE: Hyperproperty-Guided Multi-Agent Reinforcement Learning under Partial Observation",
-        "link": "https://arxiv.org/abs/2606.30966",
+        "title": "Agentic generation of verifiable rules for deterministic, self-expanding reaction classification",
+        "link": "https://arxiv.org/abs/2607.01061",
         "source": "arXiv AI"
       }
     ],
@@ -131,40 +128,40 @@
   },
   {
     "id": "world-model",
-    "appear_count": 29,
+    "appear_count": 28,
     "days": 5,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型是AI在头脑中构建一个虚拟世界，预测未来变化，帮助它做出决策。",
+    "explanation": "AI内部模拟环境变化，学习人类思考，预测未来。",
     "sources": [
       "量子位",
       "arXiv AI",
       "arXiv CV"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/07/441225.html",
-      "https://arxiv.org/abs/2606.31209",
-      "https://arxiv.org/abs/2606.31232",
-      "https://arxiv.org/abs/2606.31399",
-      "https://arxiv.org/abs/2606.31422"
+      "https://www.qbitai.com/2026/07/441725.html",
+      "https://www.qbitai.com/2026/07/441490.html",
+      "https://arxiv.org/abs/2607.00457",
+      "https://arxiv.org/abs/2607.00189",
+      "https://arxiv.org/abs/2607.00310"
     ],
     "matched_articles": [
       {
-        "title": "Loop世界模型论文登顶Hugging Face，来自中国一家初创，周鸿祎陆奇都投了",
-        "link": "https://www.qbitai.com/2026/07/441225.html",
+        "title": "训练世界模型，开始从人类的肌肉和脑子里偷师了",
+        "link": "https://www.qbitai.com/2026/07/441725.html",
         "source": "量子位"
       },
       {
-        "title": "Long-term Traffic Simulation via Structured Autoregressive Modeling",
-        "link": "https://arxiv.org/abs/2606.31209",
-        "source": "arXiv AI"
+        "title": "世界模型来了因果技术标杆！具身大脑真要长脑子了",
+        "link": "https://www.qbitai.com/2026/07/441490.html",
+        "source": "量子位"
       },
       {
-        "title": "Delta-JEPA: Learning Action-Sensitive World Models via Latent Difference Decoding",
-        "link": "https://arxiv.org/abs/2606.31232",
+        "title": "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments",
+        "link": "https://arxiv.org/abs/2607.00457",
         "source": "arXiv AI"
       }
     ],
@@ -173,39 +170,42 @@
   },
   {
     "id": "long-context",
-    "appear_count": 19,
+    "appear_count": 21,
     "days": 7,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI像人一样理解超长文本，即使几十万词也能轻松处理。",
+    "explanation": "长上下文技术让AI像人类一样，一次处理超长内容（比如数十万字），理解更准确。",
     "sources": [
       "arXiv CL",
+      "arXiv CV",
       "arXiv LG",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.31145",
-      "https://arxiv.org/abs/2606.30709",
+      "https://arxiv.org/abs/2607.00368",
+      "https://arxiv.org/abs/2607.01002",
+      "https://arxiv.org/abs/2607.00428",
+      "https://arxiv.org/abs/2607.00760",
       "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/"
     ],
     "matched_articles": [
       {
-        "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
-        "link": "https://arxiv.org/abs/2606.31145",
+        "title": "Beyond Perplexity: A Behavioral Evaluation Framework for Deployment-Memory Claims in LLM Test-Time Training",
+        "link": "https://arxiv.org/abs/2607.00368",
         "source": "arXiv CL"
       },
       {
-        "title": "Hierarchical Global Attention (HGA)",
-        "link": "https://arxiv.org/abs/2606.30709",
-        "source": "arXiv LG"
+        "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+        "link": "https://arxiv.org/abs/2607.01002",
+        "source": "arXiv CL"
       },
       {
-        "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
-        "link": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
-        "source": "NVIDIA Blog"
+        "title": "HyFL-CLIP: Hyperbolic Fine-Tuning of CLIP for Robust Long-Context Understanding",
+        "link": "https://arxiv.org/abs/2607.00428",
+        "source": "arXiv CV"
       }
     ],
     "rank": 5,
@@ -213,38 +213,40 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 18,
+    "appear_count": 20,
     "days": 7,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种强化学习算法，像玩游戏一样，根据组内表现给奖励，让模型更聪明。",
+    "explanation": "GRPO是一种算法，就像玩游戏，比较同一组里的表现，好的给奖励，让模型更聪明。",
     "sources": [
       "arXiv LG",
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.30789",
+      "https://arxiv.org/abs/2607.00152",
+      "https://arxiv.org/abs/2607.00531",
+      "https://arxiv.org/abs/2607.00535",
       "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
       "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
     ],
     "matched_articles": [
       {
-        "title": "Predictable GRPO: A Closed-Form Model of Training Dynamics",
-        "link": "https://arxiv.org/abs/2606.30789",
+        "title": "GRPO, Dr. GRPO, and DAPO Are Three Operations on One Number: The Group-Standard-Deviation Identity",
+        "link": "https://arxiv.org/abs/2607.00152",
         "source": "arXiv LG"
       },
       {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 12 days ago •  8",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
+        "title": "Active-GRPO: Adaptive Imitation and Self-Improving Reasoning for Molecular Optimization",
+        "link": "https://arxiv.org/abs/2607.00531",
+        "source": "arXiv LG"
       },
       {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  33",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
+        "title": "Flow-Map GRPO: Reinforcement Learning for Few-Step Flow-Map Generators via Anchored Stochastic Composition",
+        "link": "https://arxiv.org/abs/2607.00535",
+        "source": "arXiv LG"
       }
     ],
     "rank": 6,
@@ -252,107 +254,185 @@
   },
   {
     "id": "chain-of-thought",
-    "appear_count": 15,
+    "appear_count": 13,
     "days": 5,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
     "category": "AI技术",
     "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
-    "explanation": "思维链是教AI像人一样一步步思考，提高复杂任务准确率的方法。",
+    "explanation": "思维链是教AI像人一样，逐步推理，提高解题准确率的方法。",
     "sources": [
-      "arXiv CV",
-      "arXiv LG"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.28758",
-      "https://arxiv.org/abs/2606.31048"
+      "https://arxiv.org/abs/2607.00341",
+      "https://arxiv.org/abs/2607.00862"
     ],
     "matched_articles": [
       {
-        "title": "X-Mind: Efficient Visual Chain-of-Thought via Predictive World Model for End-to-End Driving",
-        "link": "https://arxiv.org/abs/2606.28758",
-        "source": "arXiv CV"
+        "title": "DiscoLoop: Looping Discrete Embeddings and Continuous Hidden States for Multi-hop Reasoning",
+        "link": "https://arxiv.org/abs/2607.00341",
+        "source": "arXiv CL"
       },
       {
-        "title": "Knowledge Distillation from Large Reasoning Models to Compact Student Models: A Case Study on the John O Bryan Mathematics Competition",
-        "link": "https://arxiv.org/abs/2606.31048",
-        "source": "arXiv LG"
+        "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models",
+        "link": "https://arxiv.org/abs/2607.00862",
+        "source": "arXiv CL"
       }
     ],
     "rank": 7,
     "status": "hot"
   },
   {
-    "id": "speculative-decoding",
-    "appear_count": 11,
-    "days": 7,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "推测解码就像先写个草稿，再让大编辑校对，这样写文章更快。",
-    "sources": [
-      "arXiv CL",
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.31315",
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
-    ],
-    "matched_articles": [
-      {
-        "title": "BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding",
-        "link": "https://arxiv.org/abs/2606.31315",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 8,
-    "status": "hot"
-  },
-  {
     "id": "mixture-of-experts",
-    "appear_count": 10,
+    "appear_count": 13,
     "days": 6,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "多个小智能帮手根据输入内容各自工作，效率更高。",
+    "explanation": "MoE像一群专家，根据问题动态挑选部分专家解答，提高效率。",
     "sources": [
       "arXiv AI",
-      "arXiv CV"
+      "arXiv CV",
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.31413",
-      "https://arxiv.org/abs/2606.28516"
+      "https://arxiv.org/abs/2607.00457",
+      "https://arxiv.org/abs/2607.00293",
+      "https://arxiv.org/abs/2607.00371",
+      "https://arxiv.org/abs/2607.00162"
     ],
     "matched_articles": [
       {
-        "title": "Learning to Select, Not Relearn: Hard-Routed Mixtures of Reasoning LoRAs",
-        "link": "https://arxiv.org/abs/2606.31413",
+        "title": "Multi-scale Mixture of World Models for Embodied Agents in Evolving Environments",
+        "link": "https://arxiv.org/abs/2607.00457",
         "source": "arXiv AI"
       },
       {
-        "title": "CLEAR-MoE: Shared-Basis Expert Extraction from Frozen Vision Transformers via Calibration-Driven Layer Selection",
-        "link": "https://arxiv.org/abs/2606.28516",
+        "title": "Rosetta: Composable Native Multimodal Pretraining",
+        "link": "https://arxiv.org/abs/2607.00293",
         "source": "arXiv CV"
+      },
+      {
+        "title": "MEPA: Multi-Scale Representation Alignment for Visual Autoregressive Modeling with Mixture of Experts",
+        "link": "https://arxiv.org/abs/2607.00371",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 8,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-model",
+    "appear_count": 11,
+    "days": 4,
+    "term_en": "Reasoning Model",
+    "term_zh": "推理模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
+    "explanation": "推理模型就像一个聪明的大脑，能通过一步步思考解决难题。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00924",
+      "https://arxiv.org/abs/2607.00485",
+      "https://arxiv.org/abs/2607.00862"
+    ],
+    "matched_articles": [
+      {
+        "title": "Graph-Native Reinforcement Learning Enables Traceable Scientific Hypothesis Generation through Conceptual Recombination",
+        "link": "https://arxiv.org/abs/2607.00924",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Efficient Multilingual Reasoning Transfer via Progressive Code-Switching",
+        "link": "https://arxiv.org/abs/2607.00485",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models",
+        "link": "https://arxiv.org/abs/2607.00862",
+        "source": "arXiv CL"
       }
     ],
     "rank": 9,
     "status": "hot"
   },
   {
-    "id": "state-space-model",
-    "appear_count": 9,
+    "id": "speculative-decoding",
+    "appear_count": 10,
     "days": 7,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型先试写，大模型再检查，快速生成文本的技术。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 9,
+    "days": 5,
+    "term_en": "Vision Transformer",
+    "term_zh": "视觉Transformer",
+    "abbreviation": "ViT",
+    "category": "AI技术",
+    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
+    "explanation": "视觉Transformer就像把图片切成小片，用类似语言处理的方法来识别图像。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00174",
+      "https://arxiv.org/abs/2607.00223",
+      "https://arxiv.org/abs/2607.00277",
+      "https://arxiv.org/abs/2607.00465"
+    ],
+    "matched_articles": [
+      {
+        "title": "Steal the Patch Size: Adversarially Manipulate Vision-Language Models",
+        "link": "https://arxiv.org/abs/2607.00174",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Does Your ViT Still Need U-Net for Segmentation?",
+        "link": "https://arxiv.org/abs/2607.00223",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "AEGIS: A Multi-Task Joint-Embedding Predictive Architecture for Mammography",
+        "link": "https://arxiv.org/abs/2607.00277",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 8,
+    "days": 6,
     "term_en": "State Space Model",
     "term_zh": "状态空间模型",
     "abbreviation": "SSM",
@@ -372,19 +452,19 @@
         "source": "Hugging Face Blog"
       }
     ],
-    "rank": 10,
+    "rank": 12,
     "status": "hot"
   },
   {
     "id": "direct-preference-optimization",
-    "appear_count": 8,
+    "appear_count": 7,
     "days": 6,
     "term_en": "Direct Preference Optimization",
     "term_zh": "直接偏好优化",
     "abbreviation": "DPO",
     "category": "AI技术",
     "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化是一种训练大模型的新方法，它不需要奖励模型，直接用用户喜好来调整模型，让模型更懂用户。",
+    "explanation": "直接偏好优化（DPO）是一种无需额外奖励模型，直接利用偏好数据训练大型语言模型的方法。",
     "sources": [
       "Hugging Face Blog"
     ],
@@ -398,129 +478,56 @@
         "source": "Hugging Face Blog"
       }
     ],
-    "rank": 11,
+    "rank": 13,
     "status": "hot"
   },
   {
     "id": "mechanistic-interpretability",
-    "appear_count": 8,
+    "appear_count": 7,
     "days": 4,
     "term_en": "Mechanistic Interpretability",
     "term_zh": "机制可解释性",
     "abbreviation": "",
     "category": "AI安全",
     "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
-    "explanation": "了解神经网络内部运作，解释大型语言模型如何塑造个性和行为。",
+    "explanation": "机制可解释性就是研究如何像拆玩具一样，弄懂神经网络内部怎么工作的。",
     "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.28770"
-    ],
-    "matched_articles": [
-      {
-        "title": "Mechanistic Personality Analysis of LLMs Steering Personality via Latent Feature Interventions",
-        "link": "https://arxiv.org/abs/2606.28770",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "reasoning-model",
-    "appear_count": 8,
-    "days": 3,
-    "term_en": "Reasoning Model",
-    "term_zh": "推理模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
-    "explanation": "推理模型就像一个聪明的大脑，能通过一步步思考解决难题。",
-    "sources": [
-      "arXiv AI",
       "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.30852",
-      "https://arxiv.org/abs/2606.31048"
+      "https://arxiv.org/abs/2607.00089"
     ],
     "matched_articles": [
       {
-        "title": "When Does Learning to Stop Help? A Cost-Aware Study of Early Exits in Reasoning Models",
-        "link": "https://arxiv.org/abs/2606.30852",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Knowledge Distillation from Large Reasoning Models to Compact Student Models: A Case Study on the John O Bryan Mathematics Competition",
-        "link": "https://arxiv.org/abs/2606.31048",
+        "title": "Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol",
+        "link": "https://arxiv.org/abs/2607.00089",
         "source": "arXiv LG"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "mixture-of-depths",
-    "appear_count": 7,
-    "days": 3,
-    "term_en": "Mixture of Depths",
-    "term_zh": "深度混合",
-    "abbreviation": "MoD",
-    "category": "AI技术",
-    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
-    "explanation": "深度混合就像给不同难度的单词请不同难度的老师，既省力又高效。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.29425",
-      "https://arxiv.org/abs/2606.29213"
-    ],
-    "matched_articles": [
-      {
-        "title": "Mixture of Debaters: Learn to Debate at Architectural Level in Multi-Agent Reasoning",
-        "link": "https://arxiv.org/abs/2606.29425",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Can OCR-VLMs Read Devanagari? A Stress-Test Benchmark and Post-Correction Study",
-        "link": "https://arxiv.org/abs/2606.29213",
-        "source": "arXiv CL"
       }
     ],
     "rank": 14,
     "status": "hot"
   },
   {
-    "id": "vision-transformer",
+    "id": "continuous-batching",
     "appear_count": 7,
-    "days": 5,
-    "term_en": "Vision Transformer",
-    "term_zh": "视觉Transformer",
-    "abbreviation": "ViT",
-    "category": "AI技术",
-    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
-    "explanation": "视觉Transformer像拼图一样处理图像，让机器看图更懂图。",
+    "days": 7,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理是一种在推理时，把多个请求动态组合起来，以更好地利用GPU资源和提高处理速度的技术。",
     "sources": [
-      "arXiv CV",
-      "arXiv LG"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.28516",
-      "https://arxiv.org/abs/2606.31290"
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
     ],
     "matched_articles": [
       {
-        "title": "CLEAR-MoE: Shared-Basis Expert Extraction from Frozen Vision Transformers via Calibration-Driven Layer Selection",
-        "link": "https://arxiv.org/abs/2606.28516",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Patch-PODiff-ViT: Structured Latent Diffusion with Patchwise POD for Super-Resolution and Uncertainty Quantification",
-        "link": "https://arxiv.org/abs/2606.31290",
-        "source": "arXiv LG"
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 13 days ago •  8",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 15,
@@ -528,8 +535,8 @@
   },
   {
     "id": "reward-model",
-    "appear_count": 7,
-    "days": 4,
+    "appear_count": 6,
+    "days": 3,
     "term_en": "Reward Model",
     "term_zh": "奖励模型",
     "abbreviation": "",
@@ -553,64 +560,6 @@
     "status": "hot"
   },
   {
-    "id": "continuous-batching",
-    "appear_count": 6,
-    "days": 6,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理是一种在推理过程中，将多个请求动态组合起来处理的技术，这样可以提高GPU的使用效率和整体的处理速度。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 12 days ago •  8",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
-    "id": "in-context-learning",
-    "appear_count": 5,
-    "days": 3,
-    "term_en": "In-Context Learning",
-    "term_zh": "上下文学习",
-    "abbreviation": "ICL",
-    "category": "AI技术",
-    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
-    "explanation": "上下文学习就是让AI根据少量提示信息就能学会新任务，就像教孩子一样，只教几个例子，孩子就能举一反三。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.31184",
-      "https://arxiv.org/abs/2606.31208"
-    ],
-    "matched_articles": [
-      {
-        "title": "Transformers as Bayesian In-Context Experimenters: Smoothness-Adaptive Efficient ATE Estimation",
-        "link": "https://arxiv.org/abs/2606.31184",
-        "source": "arXiv LG"
-      },
-      {
-        "title": "Probing Memorization of Tabular In-Context Learning",
-        "link": "https://arxiv.org/abs/2606.31208",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 18,
-    "status": "hot"
-  },
-  {
     "id": "kv-cache",
     "appear_count": 4,
     "days": 3,
@@ -619,21 +568,106 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "缓存注意力的键值对以避免重复计算、加速大模型推理的技术",
-    "explanation": "KV Cache是存储键值对的缓存，能快速处理大模型，避免重复计算。",
+    "explanation": "KV缓存是存储键值对的数据缓存，用于减少重复计算，加快大模型处理速度。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00760"
+    ],
+    "matched_articles": [
+      {
+        "title": "MosaicKV: Serving Long-Context LLM with Dynamic Two-D KV Cache Compression",
+        "link": "https://arxiv.org/abs/2607.00760",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "diffusion-transformer",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "Diffusion Transformer",
+    "term_zh": "扩散Transformer",
+    "abbreviation": "DiT",
+    "category": "AI技术",
+    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
+    "explanation": "扩散Transformer是利用Transformer技术，通过扩散模型生成高清图像和视频的AI工具。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2511.18050",
+      "https://arxiv.org/abs/2607.00382"
+    ],
+    "matched_articles": [
+      {
+        "title": "UltraFlux: Data-Model Co-Design for High-quality Native 4K Text-to-Image Generation across Diverse Aspect Ratios",
+        "link": "https://arxiv.org/abs/2511.18050",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Vitality-Aware Compression for Efficient Image-to-Shape Diffusion Transformers",
+        "link": "https://arxiv.org/abs/2607.00382",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 18,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-depths",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "Mixture of Depths",
+    "term_zh": "深度混合",
+    "abbreviation": "MoD",
+    "category": "AI技术",
+    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
+    "explanation": "深度混合让AI模型根据词难易度自动调整计算层数，节省计算资源。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.31145"
+      "https://arxiv.org/abs/2607.00714"
     ],
     "matched_articles": [
       {
-        "title": "SeKV: Resolution-Adaptive KV Cache with Hierarchical Semantic Memory for Long-Context LLM Inference",
-        "link": "https://arxiv.org/abs/2606.31145",
+        "title": "Self-conditioned Flow Map Language Models via Fixed-point Flows",
+        "link": "https://arxiv.org/abs/2607.00714",
         "source": "arXiv CL"
       }
     ],
     "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "in-context-learning",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "In-Context Learning",
+    "term_zh": "上下文学习",
+    "abbreviation": "ICL",
+    "category": "AI技术",
+    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
+    "explanation": "通过理解上下文，AI模型能快速掌握新任务，无需从头开始学习。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00479"
+    ],
+    "matched_articles": [
+      {
+        "title": "Ghost in the Kernel: In-Context Learning with Efficient Transformers via Domain Generalization",
+        "link": "https://arxiv.org/abs/2607.00479",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -645,132 +679,21 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "检索增强推理就像在思考时，可以随时翻书查资料，让推理更准确。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.31200",
-      "https://arxiv.org/abs/2606.28397"
-    ],
-    "matched_articles": [
-      {
-        "title": "Agentic RAG-VLM: Affordance-Aware Retrieval-Augmented Generation with Self-Reflective Planning for Robotic Grasping",
-        "link": "https://arxiv.org/abs/2606.31200",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "CLOSER-VLN: Closed-Loop Self-Verified Retrieval-Augmented Reasoning for Aerial Vision-Language Navigation",
-        "link": "https://arxiv.org/abs/2606.28397",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "test-time-compute",
-    "appear_count": 3,
-    "days": 3,
-    "term_en": "Test-Time Compute",
-    "term_zh": "测试时计算",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "测试时计算是一种让AI模型在回答问题时更用心思考，以获得更准确答案的技术。",
+    "explanation": "在多步推理时，AI会像翻书一样查资料，帮助它想得更清楚。",
     "sources": [
       "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.30774"
+      "https://arxiv.org/abs/2607.00972"
     ],
     "matched_articles": [
       {
-        "title": "What Drives Interactive Improvement from Feedback?",
-        "link": "https://arxiv.org/abs/2606.30774",
+        "title": "Bayesian Uncertainty Propagation for Agentic RAG Pipelines: A Proof-of-Concept Study on Multi-Hop Question Answering",
+        "link": "https://arxiv.org/abs/2607.00972",
         "source": "arXiv AI"
       }
     ],
     "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "diffusion-transformer",
-    "appear_count": 3,
-    "days": 3,
-    "term_en": "Diffusion Transformer",
-    "term_zh": "扩散Transformer",
-    "abbreviation": "DiT",
-    "category": "AI技术",
-    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
-    "explanation": "DiT是一种先进的图像生成模型，就像一个会画画的高手，用Transformers技术来创造出高质量图片。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.30934"
-    ],
-    "matched_articles": [
-      {
-        "title": "Quality-Aware Modulation for Diffusion Transformers",
-        "link": "https://arxiv.org/abs/2606.30934",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "model-context-protocol",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Model Context Protocol",
-    "term_zh": "模型上下文协议",
-    "abbreviation": "MCP",
-    "category": "AI工程",
-    "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
-    "explanation": "MCP是一种让大模型能像插件一样接入外部工具和数据的通用协议。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.26649"
-    ],
-    "matched_articles": [
-      {
-        "title": "Autoformalization of Agent Instructions into Policy-as-Code",
-        "link": "https://arxiv.org/abs/2606.26649",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 23,
-    "status": "hot"
-  },
-  {
-    "id": "rotary-position-embedding",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Rotary Position Embedding",
-    "term_zh": "旋转位置编码",
-    "abbreviation": "RoPE",
-    "category": "AI技术",
-    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
-    "explanation": "通过旋转给序列添加位置信息，帮助模型更好地理解长文本。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.27705"
-    ],
-    "matched_articles": [
-      {
-        "title": "Mitigating Position Bias in Transformers via Layer-Specific Positional Embedding Scaling",
-        "link": "https://arxiv.org/abs/2606.27705",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 24,
     "status": "hot"
   },
   {
@@ -796,7 +719,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 25,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -828,33 +751,59 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 26,
+    "rank": 23,
     "status": "hot"
   },
   {
-    "id": "self-consistency",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
+    "id": "test-time-compute",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Test-Time Compute",
+    "term_zh": "测试时计算",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
-    "explanation": "自洽性：AI模型通过多路径推理，选出最一致的答案。",
+    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
+    "explanation": "测试时计算是一种让AI模型在回答问题时更用心思考，以获得更准确答案的技术。",
     "sources": [
-      "arXiv CL"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.25552"
+      "https://arxiv.org/abs/2606.30774"
     ],
     "matched_articles": [
       {
-        "title": "SFL-MTSC: Leveraging Semantic Frame-Level Multi-Task Self-Consistency for Robust Multi-Intent Spoken Language Understanding",
-        "link": "https://arxiv.org/abs/2606.25552",
-        "source": "arXiv CL"
+        "title": "What Drives Interactive Improvement from Feedback?",
+        "link": "https://arxiv.org/abs/2606.30774",
+        "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 24,
+    "status": "hot"
+  },
+  {
+    "id": "model-context-protocol",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Model Context Protocol",
+    "term_zh": "模型上下文协议",
+    "abbreviation": "MCP",
+    "category": "AI工程",
+    "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
+    "explanation": "MCP是一种让大模型能像插件一样接入外部工具和数据的通用协议。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2606.26649"
+    ],
+    "matched_articles": [
+      {
+        "title": "Autoformalization of Agent Instructions into Policy-as-Code",
+        "link": "https://arxiv.org/abs/2606.26649",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -880,7 +829,33 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 28,
+    "rank": 26,
+    "status": "hot"
+  },
+  {
+    "id": "rotary-position-embedding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Rotary Position Embedding",
+    "term_zh": "旋转位置编码",
+    "abbreviation": "RoPE",
+    "category": "AI技术",
+    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
+    "explanation": "通过旋转给序列添加位置信息，帮助模型更好地理解长文本。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2606.27705"
+    ],
+    "matched_articles": [
+      {
+        "title": "Mitigating Position Bias in Transformers via Layer-Specific Positional Embedding Scaling",
+        "link": "https://arxiv.org/abs/2606.27705",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -906,7 +881,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 29,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -930,6 +905,32 @@
         "title": "Improving Patient Subtyping on Longitudinal Data using Representations from Mamba-based Architecture",
         "link": "https://arxiv.org/abs/2606.28623",
         "source": "arXiv LG"
+      }
+    ],
+    "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "reflexion",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reflexion",
+    "term_zh": "反思式自改进",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "让智能体根据失败反馈自我反思并改进后续行动的框架",
+    "explanation": "通过失败反馈让智能体自我检讨，学习减少过度思考。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00482"
+    ],
+    "matched_articles": [
+      {
+        "title": "Know When to Stop: Segment-Level Credit Assignment for Reducing Overthinking",
+        "link": "https://arxiv.org/abs/2607.00482",
+        "source": "arXiv CL"
       }
     ],
     "rank": 30,
