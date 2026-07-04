@@ -1,43 +1,41 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 98,
+    "appear_count": 95,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "智能体工作流就像一个会自己规划任务的机器人，它能自动完成各种复杂任务。",
+    "explanation": "AI智能体像机器人一样，自动完成复杂任务，就像有了一个能帮我们干活的助手。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
       "GitHub Blog",
-      "NVIDIA Blog"
+      "NVIDIA Blog",
+      "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.01366",
-      "https://arxiv.org/abs/2607.01507",
-      "https://arxiv.org/abs/2607.01510",
-      "https://arxiv.org/abs/2607.01709",
-      "https://arxiv.org/abs/2607.01874"
+      "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+      "https://developer.nvidia.com/blog/category/generative-ai/",
+      "https://developer.nvidia.com/blog/nvidia-achieves-leading-agentic-coding-performance-on-first-agentic-ai-benchmark/",
+      "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
+      "https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-reinforcement-learning/"
     ],
     "matched_articles": [
       {
-        "title": "Auto-FL-Research: Agentic Search for Federated Learning Algorithms",
-        "link": "https://arxiv.org/abs/2607.01366",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "The Agentic Garden of Forking Paths",
-        "link": "https://arxiv.org/abs/2607.01507",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "Janus: a Playground for User-Involved Agentic Permission Management",
-        "link": "https://arxiv.org/abs/2607.01510",
-        "source": "arXiv AI"
+        "title": "Agentic AI / Generative AI",
+        "link": "https://developer.nvidia.com/blog/category/generative-ai/",
+        "source": "NVIDIA Blog"
       }
     ],
     "rank": 1,
@@ -45,40 +43,25 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 54,
-    "days": 6,
+    "appear_count": 55,
+    "days": 7,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
     "category": "AI技术",
     "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "视觉语言模型像懂你说话的摄像头，能看图也能听懂你说的。",
+    "explanation": "能看图又懂文字的智能大脑，通过区域参考而非坐标生成提升理解力。",
     "sources": [
-      "arXiv CV",
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.01303",
-      "https://arxiv.org/abs/2607.01503",
-      "https://arxiv.org/abs/2607.01657",
-      "https://arxiv.org/abs/2607.01707",
-      "https://arxiv.org/abs/2607.01759"
+      "https://huggingface.co/blog/omlab/vlx-seek"
     ],
     "matched_articles": [
       {
-        "title": "CPG-PAD: Concept-Informed Prompts Guided Presentation Attack Detection",
-        "link": "https://arxiv.org/abs/2607.01303",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Disentangling Pictorial Cue Understanding from Language Bias in VLMs via Depth Ordering Task",
-        "link": "https://arxiv.org/abs/2607.01503",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Domain Generalization via Text-Anchored Information Bottleneck",
-        "link": "https://arxiv.org/abs/2607.01657",
-        "source": "arXiv CV"
+        "title": "VLX-Seek: Improving VLM Fine-Grained Perception via Region Reference Instead of Coordinate Generation    omlab • 7 days ago •  12",
+        "link": "https://huggingface.co/blog/omlab/vlx-seek",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 2,
@@ -86,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 36,
-    "days": 7,
+    "appear_count": 35,
+    "days": 6,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -129,41 +112,25 @@
   },
   {
     "id": "world-model",
-    "appear_count": 30,
-    "days": 5,
+    "appear_count": 31,
+    "days": 6,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "AI用这个模型像玩游戏一样模拟世界，预测未来，还能检查计划是否安全。",
+    "explanation": "世界模型就像AI的“思维沙盘”，能让它预测环境变化，模拟细胞内部运作。",
     "sources": [
-      "量子位",
-      "arXiv AI",
-      "arXiv LG"
+      "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/07/442138.html",
-      "https://arxiv.org/abs/2607.01531",
-      "https://arxiv.org/abs/2607.01595",
-      "https://arxiv.org/abs/2607.01537",
-      "https://arxiv.org/abs/2607.01736"
+      "https://www.qbitai.com/2026/07/442746.html"
     ],
     "matched_articles": [
       {
-        "title": "世界模型的新用途：不做选手，去当裁判",
-        "link": "https://www.qbitai.com/2026/07/442138.html",
+        "title": "从LLM到JEPA，中国团队正在把“世界模型”搬进细胞内部",
+        "link": "https://www.qbitai.com/2026/07/442746.html",
         "source": "量子位"
-      },
-      {
-        "title": "OPINE-World: Programmatic World Modeling with Ontology-error-Prioritized Interactive Exploration",
-        "link": "https://arxiv.org/abs/2607.01531",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Safe and Adaptive Cloud Healing: Verifying LLM-Generated Recovery Plans with a Neural-Symbolic World Model",
-        "link": "https://arxiv.org/abs/2607.01595",
-        "source": "arXiv AI"
       }
     ],
     "rank": 4,
@@ -178,28 +145,14 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "让AI一次看懂长篇内容的技术，如修复AI缺陷、多头记忆代理、长上下文推理和高效工作流程。",
+    "explanation": "长上下文技术让AI能处理超长文本，一次理解数十万字内容。",
     "sources": [
-      "arXiv AI",
-      "arXiv LG",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.01767",
-      "https://arxiv.org/abs/2607.01523",
       "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/"
     ],
     "matched_articles": [
-      {
-        "title": "Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts",
-        "link": "https://arxiv.org/abs/2607.01767",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Multi-Head Recurrent Memory Agents",
-        "link": "https://arxiv.org/abs/2607.01523",
-        "source": "arXiv LG"
-      },
       {
         "title": "Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure",
         "link": "https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/",
@@ -218,17 +171,17 @@
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种强化学习算法，通过比较组内模型表现来调整奖励，帮助模型学习更优策略。",
+    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的表现来训练模型，从而提升模型推理能力。",
     "sources": [
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
     ],
     "matched_articles": [
       {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  34",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
         "source": "Hugging Face Blog"
       }
     ],
@@ -280,8 +233,8 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 14,
-    "days": 6,
+    "appear_count": 13,
+    "days": 5,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
@@ -326,21 +279,14 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型先尝试，大模型再确认，更快生成文本的技术。",
+    "explanation": "通过先让小模型试写，再让大模型检查修改，提高文本生成速度的技巧。",
     "sources": [
-      "arXiv AI",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.01893",
       "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
     ],
     "matched_articles": [
-      {
-        "title": "Spec-AUF: Accept-Until-Fail Training under Train-Inference Misalignment for Masked Block Drafters",
-        "link": "https://arxiv.org/abs/2607.01893",
-        "source": "arXiv AI"
-      },
       {
         "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
         "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
@@ -377,6 +323,32 @@
     "status": "hot"
   },
   {
+    "id": "direct-preference-optimization",
+    "appear_count": 8,
+    "days": 7,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化是一种不需要额外奖励模型，直接用用户偏好数据来训练大型语言模型的方法。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  34",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
     "id": "reasoning-model",
     "appear_count": 8,
     "days": 4,
@@ -399,13 +371,13 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 11,
+    "rank": 12,
     "status": "hot"
   },
   {
     "id": "state-space-model",
-    "appear_count": 7,
-    "days": 6,
+    "appear_count": 6,
+    "days": 5,
     "term_en": "State Space Model",
     "term_zh": "状态空间模型",
     "abbreviation": "SSM",
@@ -425,13 +397,13 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 12,
+    "rank": 13,
     "status": "hot"
   },
   {
     "id": "continuous-batching",
-    "appear_count": 7,
-    "days": 7,
+    "appear_count": 6,
+    "days": 6,
     "term_en": "Continuous Batching",
     "term_zh": "连续批处理",
     "abbreviation": "",
@@ -449,32 +421,6 @@
         "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
         "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
         "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
-    "appear_count": 7,
-    "days": 6,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就像教电脑按你的喜好来调整，不需要单独的奖励模型，直接用你的喜好数据来训练。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.01392"
-    ],
-    "matched_articles": [
-      {
-        "title": "Multi-Objective Exploration and Preference Optimization via Mutual Information",
-        "link": "https://arxiv.org/abs/2607.01392",
-        "source": "arXiv CL"
       }
     ],
     "rank": 14,
@@ -888,6 +834,58 @@
       }
     ],
     "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "ml-model-poisoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ML Model Poisoning",
+    "term_zh": "机器学习模型中毒",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "在机器学习模型训练数据中故意插入错误或有害的数据，以破坏模型的性能和可靠性。",
+    "explanation": "故意在训练数据中加害信息，让AI模型出故障。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/understanding-ml-model-poisoning/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Understanding ML Model Poisoning: How it Happens and How to Detect it",
+        "link": "https://www.infoq.com/articles/understanding-ml-model-poisoning/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 30,
+    "status": "hot"
+  },
+  {
+    "id": "artificial-intelligence-driven-phishing",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Artificial Intelligence-Driven Phishing",
+    "term_zh": "人工智能驱动钓鱼",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "利用人工智能技术来创建和实施钓鱼攻击，以提高钓鱼活动的成功率。",
+    "explanation": "人工智能钓鱼，就像机器人帮你写诈骗信，成功率更高。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/artificial-intelligence-driven-phishing/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Artificial Intelligence-Driven Phishing: How Phishing Technique Is Evolving and Implemented",
+        "link": "https://www.infoq.com/articles/artificial-intelligence-driven-phishing/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 31,
     "status": "hot"
   }
 ]
