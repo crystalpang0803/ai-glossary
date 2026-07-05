@@ -1,14 +1,14 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 95,
+    "appear_count": 93,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像机器人一样，自动完成复杂任务，就像有了一个能帮我们干活的助手。",
+    "explanation": "AI智能体像员工一样，自己规划完成工作的步骤，用工具自动解决问题。",
     "sources": [
       "GitHub Blog",
       "NVIDIA Blog",
@@ -43,14 +43,14 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 55,
+    "appear_count": 54,
     "days": 7,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
     "category": "AI技术",
     "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "能看图又懂文字的智能大脑，通过区域参考而非坐标生成提升理解力。",
+    "explanation": "视觉语言模型就像一个能看图说话的超级大脑，能同时理解图片和文字。",
     "sources": [
       "Hugging Face Blog"
     ],
@@ -59,7 +59,7 @@
     ],
     "matched_articles": [
       {
-        "title": "VLX-Seek: Improving VLM Fine-Grained Perception via Region Reference Instead of Coordinate Generation    omlab • 7 days ago •  12",
+        "title": "VLX-Seek: Improving VLM Fine-Grained Perception via Region Reference Instead of Coordinate Generation    omlab • 8 days ago •  12",
         "link": "https://huggingface.co/blog/omlab/vlx-seek",
         "source": "Hugging Face Blog"
       }
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 35,
-    "days": 6,
+    "appear_count": 34,
+    "days": 5,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -112,21 +112,27 @@
   },
   {
     "id": "world-model",
-    "appear_count": 31,
-    "days": 6,
+    "appear_count": 33,
+    "days": 7,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的“思维沙盘”，能让它预测环境变化，模拟细胞内部运作。",
+    "explanation": "世界模型就像AI的大脑，它能模拟环境变化，帮助AI学习和预测未来。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
+      "https://www.qbitai.com/2026/07/442964.html",
       "https://www.qbitai.com/2026/07/442746.html"
     ],
     "matched_articles": [
+      {
+        "title": "刚刚，LeCun团队让世界模型学会持续学习！",
+        "link": "https://www.qbitai.com/2026/07/442964.html",
+        "source": "量子位"
+      },
       {
         "title": "从LLM到JEPA，中国团队正在把“世界模型”搬进细胞内部",
         "link": "https://www.qbitai.com/2026/07/442746.html",
@@ -145,7 +151,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能处理超长文本，一次理解数十万字内容。",
+    "explanation": "长上下文技术让AI能理解超长文本，一次处理数十万词。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -164,8 +170,8 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 19,
-    "days": 7,
+    "appear_count": 16,
+    "days": 6,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
@@ -233,40 +239,17 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 13,
-    "days": 5,
+    "appear_count": 14,
+    "days": 6,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "MoE像一群医生，根据问题找最合适的专家，提高诊断速度和准确度。",
-    "sources": [
-      "arXiv AI",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.01436",
-      "https://arxiv.org/abs/2607.01710",
-      "https://arxiv.org/abs/2607.01444"
-    ],
-    "matched_articles": [
-      {
-        "title": "Discrete Diffusion Language Models for Interactive Radiology Report Drafting",
-        "link": "https://arxiv.org/abs/2607.01436",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Generic Expert Coverage for Pruning SparseMixture-of-Experts Language Models",
-        "link": "https://arxiv.org/abs/2607.01710",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "On the Utility and Factual Reliability of Pruned Mixture-of-Experts Models in the Biomedical Domain",
-        "link": "https://arxiv.org/abs/2607.01444",
-        "source": "arXiv LG"
-      }
-    ],
+    "explanation": "Mixture of Experts像是一个团队，每个成员负责一项任务，根据问题不同，激活一部分成员更快解决。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
     "rank": 8,
     "status": "hot"
   },
@@ -279,7 +262,7 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过先让小模型试写，再让大模型检查修改，提高文本生成速度的技巧。",
+    "explanation": "推测解码是先让小模型快速生成文本，再由大模型检查并完善的技术，能大幅提升文本生成速度。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -323,32 +306,6 @@
     "status": "hot"
   },
   {
-    "id": "direct-preference-optimization",
-    "appear_count": 8,
-    "days": 7,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化是一种不需要额外奖励模型，直接用用户偏好数据来训练大型语言模型的方法。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  34",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
     "id": "reasoning-model",
     "appear_count": 8,
     "days": 4,
@@ -371,59 +328,33 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 12,
+    "rank": 11,
     "status": "hot"
   },
   {
-    "id": "state-space-model",
-    "appear_count": 6,
-    "days": 5,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像追踪一个物品随时间变化的路径，用于分析长序列数据，计算速度快。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.01502"
-    ],
-    "matched_articles": [
-      {
-        "title": "From Monolingual to Multilingual: Evaluating Mamba for ASR in South African Languages",
-        "link": "https://arxiv.org/abs/2607.01502",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "continuous-batching",
-    "appear_count": 6,
+    "id": "direct-preference-optimization",
+    "appear_count": 7,
     "days": 6,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理技术，像拼图一样实时组合不同任务，让GPU更高效地工作。",
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化是一种不需要额外奖励模型，直接用用户偏好数据来训练大型语言模型的方法。",
     "sources": [
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
     ],
     "matched_articles": [
       {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  34",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
         "source": "Hugging Face Blog"
       }
     ],
-    "rank": 14,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -449,7 +380,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 15,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -473,6 +404,58 @@
         "title": "Test-Time Verification for Text-to-SQL via Outcome Reward Models",
         "link": "https://arxiv.org/abs/2606.30851",
         "source": "arXiv CL"
+      }
+    ],
+    "rank": 14,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
+    "category": "AI技术",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像追踪一个物品随时间变化的路径，用于分析长序列数据，计算速度快。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.01502"
+    ],
+    "matched_articles": [
+      {
+        "title": "From Monolingual to Multilingual: Evaluating Mamba for ASR in South African Languages",
+        "link": "https://arxiv.org/abs/2607.01502",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 15,
+    "status": "hot"
+  },
+  {
+    "id": "continuous-batching",
+    "appear_count": 5,
+    "days": 5,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理技术，像拼图一样实时组合不同任务，让GPU更高效地工作。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
+    ],
+    "matched_articles": [
+      {
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 16,
@@ -733,32 +716,6 @@
     "status": "hot"
   },
   {
-    "id": "multi-agent-reinforcement-learning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Multi-Agent Reinforcement Learning",
-    "term_zh": "多智能体强化学习",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "多智能体强化学习是一种通过多个智能体之间的交互和合作来学习环境中的最优策略的机器学习方法。",
-    "explanation": "多智能体强化学习就像一群小机器人，它们互相学习、协作，共同找到最佳工作方式。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Autonomous Big Data Optimization: Multi-Agent Reinforcement Learning to Achieve Self-Tuning Apache Spark",
-        "link": "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 26,
-    "status": "hot"
-  },
-  {
     "id": "rotary-position-embedding",
     "appear_count": 1,
     "days": 1,
@@ -781,7 +738,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 27,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -807,7 +764,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 28,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -833,7 +790,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 29,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -859,7 +816,7 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 30,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -885,7 +842,7 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 31,
+    "rank": 30,
     "status": "hot"
   }
 ]
