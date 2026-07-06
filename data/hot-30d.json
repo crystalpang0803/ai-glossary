@@ -1,14 +1,14 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 158,
-    "days": 11,
+    "appear_count": 166,
+    "days": 12,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像员工一样，自己规划完成工作的步骤，用工具自动解决问题。",
+    "explanation": "智能体工作流就像一群AI小助手，自己规划任务，自动完成工作。",
     "sources": [
       "GitHub Blog",
       "NVIDIA Blog",
@@ -112,30 +112,24 @@
   },
   {
     "id": "world-model",
-    "appear_count": 42,
-    "days": 9,
+    "appear_count": 43,
+    "days": 10,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的大脑，它能模拟环境变化，帮助AI学习和预测未来。",
+    "explanation": "世界模型就像AI的“大脑”，模拟世界变化，帮助它规划未来。蔚来用OTA更新，让70万用户不用手动升级。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/07/442964.html",
-      "https://www.qbitai.com/2026/07/442746.html"
+      "https://www.qbitai.com/2026/07/443868.html"
     ],
     "matched_articles": [
       {
-        "title": "刚刚，LeCun团队让世界模型学会持续学习！",
-        "link": "https://www.qbitai.com/2026/07/442964.html",
-        "source": "量子位"
-      },
-      {
-        "title": "从LLM到JEPA，中国团队正在把“世界模型”搬进细胞内部",
-        "link": "https://www.qbitai.com/2026/07/442746.html",
+        "title": "蔚来世界模型OTA，70万用户没人被留在旧版本",
+        "link": "https://www.qbitai.com/2026/07/443868.html",
         "source": "量子位"
       }
     ],
@@ -144,14 +138,14 @@
   },
   {
     "id": "long-context",
-    "appear_count": 29,
-    "days": 11,
+    "appear_count": 30,
+    "days": 12,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能理解超长文本，一次处理数十万词。",
+    "explanation": "长上下文技术让AI能处理超长文本，像人类一样理解复杂内容。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -239,14 +233,14 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 18,
-    "days": 9,
+    "appear_count": 19,
+    "days": 10,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "Mixture of Experts像是一个团队，每个成员负责一项任务，根据问题不同，激活一部分成员更快解决。",
+    "explanation": "这是一种智能模型，通过多个小团队（专家）协同工作，根据输入信息动态选择合适的团队来提高处理速度。",
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
@@ -255,14 +249,14 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 16,
-    "days": 11,
+    "appear_count": 17,
+    "days": 12,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "推测解码是先让小模型快速生成文本，再由大模型检查并完善的技术，能大幅提升文本生成速度。",
+    "explanation": "通过小模型先快速写，大模型再检查修正，提高文本生成速度的技巧。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -633,25 +627,25 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 2,
-    "days": 2,
+    "appear_count": 3,
+    "days": 3,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
     "category": "AI工程",
     "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
-    "explanation": "MCP是一种让大模型能像插件一样接入外部工具和数据的通用协议。",
+    "explanation": "MCP协议让大模型能像插头一样，方便地连接到各种工具和数据，方便企业统一管理。",
     "sources": [
-      "arXiv AI"
+      "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2606.26649"
+      "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/"
     ],
     "matched_articles": [
       {
-        "title": "Autoformalization of Agent Instructions into Policy-as-Code",
-        "link": "https://arxiv.org/abs/2606.26649",
-        "source": "arXiv AI"
+        "title": "AI Model Context Protocol Adds Centralised Auth for Enterprise",
+        "link": "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/",
+        "source": "InfoQ"
       }
     ],
     "rank": 23,

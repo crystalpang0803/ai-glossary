@@ -1,14 +1,14 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 93,
+    "appear_count": 90,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像员工一样，自己规划完成工作的步骤，用工具自动解决问题。",
+    "explanation": "智能体工作流就像一群AI小助手，自己规划任务，自动完成工作。",
     "sources": [
       "GitHub Blog",
       "NVIDIA Blog",
@@ -43,8 +43,8 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 54,
-    "days": 7,
+    "appear_count": 44,
+    "days": 6,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 34,
-    "days": 5,
+    "appear_count": 27,
+    "days": 4,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -112,30 +112,24 @@
   },
   {
     "id": "world-model",
-    "appear_count": 33,
+    "appear_count": 24,
     "days": 7,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的大脑，它能模拟环境变化，帮助AI学习和预测未来。",
+    "explanation": "世界模型就像AI的“大脑”，模拟世界变化，帮助它规划未来。蔚来用OTA更新，让70万用户不用手动升级。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/07/442964.html",
-      "https://www.qbitai.com/2026/07/442746.html"
+      "https://www.qbitai.com/2026/07/443868.html"
     ],
     "matched_articles": [
       {
-        "title": "刚刚，LeCun团队让世界模型学会持续学习！",
-        "link": "https://www.qbitai.com/2026/07/442964.html",
-        "source": "量子位"
-      },
-      {
-        "title": "从LLM到JEPA，中国团队正在把“世界模型”搬进细胞内部",
-        "link": "https://www.qbitai.com/2026/07/442746.html",
+        "title": "蔚来世界模型OTA，70万用户没人被留在旧版本",
+        "link": "https://www.qbitai.com/2026/07/443868.html",
         "source": "量子位"
       }
     ],
@@ -144,14 +138,14 @@
   },
   {
     "id": "long-context",
-    "appear_count": 21,
+    "appear_count": 18,
     "days": 7,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能理解超长文本，一次处理数十万词。",
+    "explanation": "长上下文技术让AI能处理超长文本，像人类一样理解复杂内容。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -170,8 +164,8 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 16,
-    "days": 6,
+    "appear_count": 14,
+    "days": 5,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
@@ -195,9 +189,25 @@
     "status": "hot"
   },
   {
+    "id": "mixture-of-experts",
+    "appear_count": 14,
+    "days": 6,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "这是一种智能模型，通过多个小团队（专家）协同工作，根据输入信息动态选择合适的团队来提高处理速度。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
     "id": "chain-of-thought",
-    "appear_count": 15,
-    "days": 5,
+    "appear_count": 13,
+    "days": 4,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
@@ -234,35 +244,19 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "mixture-of-experts",
-    "appear_count": 14,
-    "days": 6,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
-    "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "Mixture of Experts像是一个团队，每个成员负责一项任务，根据问题不同，激活一部分成员更快解决。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
     "rank": 8,
     "status": "hot"
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 11,
+    "appear_count": 9,
     "days": 7,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "推测解码是先让小模型快速生成文本，再由大模型检查并完善的技术，能大幅提升文本生成速度。",
+    "explanation": "通过小模型先快速写，大模型再检查修正，提高文本生成速度的技巧。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -277,32 +271,6 @@
       }
     ],
     "rank": 9,
-    "status": "hot"
-  },
-  {
-    "id": "vision-transformer",
-    "appear_count": 9,
-    "days": 5,
-    "term_en": "Vision Transformer",
-    "term_zh": "视觉Transformer",
-    "abbreviation": "ViT",
-    "category": "AI技术",
-    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
-    "explanation": "视觉Transformer像拼图一样分析图像，让AI能像学语言一样学习图像。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.01630"
-    ],
-    "matched_articles": [
-      {
-        "title": "DRDN: Decoupled Representation Dynamic Network for From-Scratch ViT Class-Incremental Learning",
-        "link": "https://arxiv.org/abs/2607.01630",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 10,
     "status": "hot"
   },
   {
@@ -328,13 +296,39 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 8,
+    "days": 4,
+    "term_en": "Vision Transformer",
+    "term_zh": "视觉Transformer",
+    "abbreviation": "ViT",
+    "category": "AI技术",
+    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
+    "explanation": "视觉Transformer像拼图一样分析图像，让AI能像学语言一样学习图像。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.01630"
+    ],
+    "matched_articles": [
+      {
+        "title": "DRDN: Decoupled Representation Dynamic Network for From-Scratch ViT Class-Incremental Learning",
+        "link": "https://arxiv.org/abs/2607.01630",
+        "source": "arXiv CV"
+      }
+    ],
     "rank": 11,
     "status": "hot"
   },
   {
     "id": "direct-preference-optimization",
-    "appear_count": 7,
-    "days": 6,
+    "appear_count": 5,
+    "days": 5,
     "term_en": "Direct Preference Optimization",
     "term_zh": "直接偏好优化",
     "abbreviation": "DPO",
@@ -355,110 +349,6 @@
       }
     ],
     "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "mechanistic-interpretability",
-    "appear_count": 6,
-    "days": 3,
-    "term_en": "Mechanistic Interpretability",
-    "term_zh": "机制可解释性",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
-    "explanation": "机制可解释性就是研究如何像拆玩具一样，弄懂神经网络内部怎么工作的。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.00089"
-    ],
-    "matched_articles": [
-      {
-        "title": "Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol",
-        "link": "https://arxiv.org/abs/2607.00089",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "reward-model",
-    "appear_count": 6,
-    "days": 3,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型就像给AI做作业打分，帮助它学会人类喜欢什么。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.30851"
-    ],
-    "matched_articles": [
-      {
-        "title": "Test-Time Verification for Text-to-SQL via Outcome Reward Models",
-        "link": "https://arxiv.org/abs/2606.30851",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 5,
-    "days": 4,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像追踪一个物品随时间变化的路径，用于分析长序列数据，计算速度快。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.01502"
-    ],
-    "matched_articles": [
-      {
-        "title": "From Monolingual to Multilingual: Evaluating Mamba for ASR in South African Languages",
-        "link": "https://arxiv.org/abs/2607.01502",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 15,
-    "status": "hot"
-  },
-  {
-    "id": "continuous-batching",
-    "appear_count": 5,
-    "days": 5,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理技术，像拼图一样实时组合不同任务，让GPU更高效地工作。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
-        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 16,
     "status": "hot"
   },
   {
@@ -484,7 +374,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 17,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -510,33 +400,33 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 18,
+    "rank": 14,
     "status": "hot"
   },
   {
-    "id": "mixture-of-depths",
+    "id": "continuous-batching",
     "appear_count": 4,
-    "days": 3,
-    "term_en": "Mixture of Depths",
-    "term_zh": "深度混合",
-    "abbreviation": "MoD",
-    "category": "AI技术",
-    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
-    "explanation": "深度混合让AI模型根据词难易度自动调整计算层数，节省计算资源。",
+    "days": 4,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理技术，像拼图一样实时组合不同任务，让GPU更高效地工作。",
     "sources": [
-      "arXiv CL"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.00714"
+      "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo"
     ],
     "matched_articles": [
       {
-        "title": "Self-conditioned Flow Map Language Models via Fixed-point Flows",
-        "link": "https://arxiv.org/abs/2607.00714",
-        "source": "arXiv CL"
+        "title": "Continuous batching for GRPO, now in TRL    sergiopaniego • 14 days ago •  8",
+        "link": "https://huggingface.co/blog/sergiopaniego/cb-trl-grpo",
+        "source": "Hugging Face Blog"
       }
     ],
-    "rank": 19,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -569,7 +459,59 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 20,
+    "rank": 16,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-depths",
+    "appear_count": 3,
+    "days": 2,
+    "term_en": "Mixture of Depths",
+    "term_zh": "深度混合",
+    "abbreviation": "MoD",
+    "category": "AI技术",
+    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
+    "explanation": "深度混合让AI模型根据词难易度自动调整计算层数，节省计算资源。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00714"
+    ],
+    "matched_articles": [
+      {
+        "title": "Self-conditioned Flow Map Language Models via Fixed-point Flows",
+        "link": "https://arxiv.org/abs/2607.00714",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
+    "category": "AI技术",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像追踪一个物品随时间变化的路径，用于分析长序列数据，计算速度快。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.01502"
+    ],
+    "matched_articles": [
+      {
+        "title": "From Monolingual to Multilingual: Evaluating Mamba for ASR in South African Languages",
+        "link": "https://arxiv.org/abs/2607.01502",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -602,33 +544,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "process-reward-model",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Process Reward Model",
-    "term_zh": "过程奖励模型",
-    "abbreviation": "PRM",
-    "category": "AI技术",
-    "one_liner": "对推理过程的每一步而非只对最终答案打分的奖励模型",
-    "explanation": "PRM是一种AI模型，它不仅评价最终答案，还奖励推理过程中的每一步，帮助AI更好地学习。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.29296"
-    ],
-    "matched_articles": [
-      {
-        "title": "Process Advantage Signal Shaping: A Paradigm-Agnostic Middleware for Process-Supervised RL in LLM Reasoners",
-        "link": "https://arxiv.org/abs/2606.29296",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 22,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -660,7 +576,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 23,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -686,7 +602,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 24,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -712,59 +628,85 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 22,
+    "status": "hot"
+  },
+  {
+    "id": "mechanistic-interpretability",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Mechanistic Interpretability",
+    "term_zh": "机制可解释性",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
+    "explanation": "机制可解释性就是研究如何像拆玩具一样，弄懂神经网络内部怎么工作的。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.00089"
+    ],
+    "matched_articles": [
+      {
+        "title": "Representation as a Bottleneck for Mechanistic Interpretability: The Manifestation Unit Protocol",
+        "link": "https://arxiv.org/abs/2607.00089",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 23,
+    "status": "hot"
+  },
+  {
+    "id": "reward-model",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Reward Model",
+    "term_zh": "奖励模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
+    "explanation": "奖励模型就像给AI做作业打分，帮助它学会人类喜欢什么。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2606.30851"
+    ],
+    "matched_articles": [
+      {
+        "title": "Test-Time Verification for Text-to-SQL via Outcome Reward Models",
+        "link": "https://arxiv.org/abs/2606.30851",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 24,
+    "status": "hot"
+  },
+  {
+    "id": "process-reward-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Process Reward Model",
+    "term_zh": "过程奖励模型",
+    "abbreviation": "PRM",
+    "category": "AI技术",
+    "one_liner": "对推理过程的每一步而非只对最终答案打分的奖励模型",
+    "explanation": "PRM是一种AI模型，它不仅评价最终答案，还奖励推理过程中的每一步，帮助AI更好地学习。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2606.29296"
+    ],
+    "matched_articles": [
+      {
+        "title": "Process Advantage Signal Shaping: A Paradigm-Agnostic Middleware for Process-Supervised RL in LLM Reasoners",
+        "link": "https://arxiv.org/abs/2606.29296",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 25,
-    "status": "hot"
-  },
-  {
-    "id": "rotary-position-embedding",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Rotary Position Embedding",
-    "term_zh": "旋转位置编码",
-    "abbreviation": "RoPE",
-    "category": "AI技术",
-    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
-    "explanation": "通过旋转给序列添加位置信息，帮助模型更好地理解长文本。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.27705"
-    ],
-    "matched_articles": [
-      {
-        "title": "Mitigating Position Bias in Transformers via Layer-Specific Positional Embedding Scaling",
-        "link": "https://arxiv.org/abs/2606.27705",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 26,
-    "status": "hot"
-  },
-  {
-    "id": "tree-of-thoughts",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Tree of Thoughts",
-    "term_zh": "思维树",
-    "abbreviation": "ToT",
-    "category": "AI技术",
-    "one_liner": "让模型像搜索树一样探索多条推理路径再择优的提示方法",
-    "explanation": "思维树是一种让AI像人一样思考，通过探索多条思路来找到最佳答案的方法。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2606.28044"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Tree-of-Thoughts Inspired Hybrid Approach for Legal Case Judgement Summarization using LLMs",
-        "link": "https://arxiv.org/abs/2606.28044",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 27,
     "status": "hot"
   },
   {
@@ -790,7 +732,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 28,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -816,7 +758,7 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 29,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -842,7 +784,33 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 30,
+    "rank": 28,
+    "status": "hot"
+  },
+  {
+    "id": "model-context-protocol",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Model Context Protocol",
+    "term_zh": "模型上下文协议",
+    "abbreviation": "MCP",
+    "category": "AI工程",
+    "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
+    "explanation": "MCP协议让大模型能像插头一样，方便地连接到各种工具和数据，方便企业统一管理。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI Model Context Protocol Adds Centralised Auth for Enterprise",
+        "link": "https://www.infoq.com/news/2026/07/mcp-ema-enterprise-auth/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 29,
     "status": "hot"
   }
 ]
