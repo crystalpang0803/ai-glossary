@@ -1,54 +1,90 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 99,
+    "appear_count": 102,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "智能体工作流就像让AI小助手自己规划任务，用各种工具完成，不断改进。",
+    "explanation": "AI智能体像助手一样，自动完成拆分任务，规划步骤，不断优化工作流程。",
     "sources": [
-      "arXiv AI",
       "arXiv CL",
-      "arXiv LG",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.07721",
-      "https://arxiv.org/abs/2607.07858",
-      "https://arxiv.org/abs/2607.07984",
-      "https://arxiv.org/abs/2607.08177",
-      "https://arxiv.org/abs/2607.08681"
+      "https://arxiv.org/abs/2607.08010",
+      "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+      "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+      "https://huggingface.co/blog/huggingface/tito",
+      "https://developer.nvidia.com/blog/category/generative-ai/"
     ],
     "matched_articles": [
       {
-        "title": "Context Graphs for Proactive Enterprise Agents",
-        "link": "https://arxiv.org/abs/2607.07721",
-        "source": "arXiv AI"
+        "title": "Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems",
+        "link": "https://arxiv.org/abs/2607.08010",
+        "source": "arXiv CL"
       },
       {
-        "title": "Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting",
-        "link": "https://arxiv.org/abs/2607.07858",
-        "source": "arXiv AI"
+        "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
+        "link": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "Agentic Neural Architecture Search",
-        "link": "https://arxiv.org/abs/2607.07984",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       }
     ],
     "rank": 1,
     "status": "hot"
   },
   {
+    "id": "multi-agent-system",
+    "appear_count": 23,
+    "days": 5,
+    "term_en": "Multi-Agent System",
+    "term_zh": "多智能体系统",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
+    "explanation": "多个AI智能体像团队一样合作或比赛，一起完成复杂任务。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08080",
+      "https://arxiv.org/abs/2607.08662",
+      "https://arxiv.org/abs/2607.07729"
+    ],
+    "matched_articles": [
+      {
+        "title": "MASTE: A Multi-Agent Pipeline for Zero-Shot Aspect Sentiment Triplet Extraction",
+        "link": "https://arxiv.org/abs/2607.08080",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
+        "link": "https://arxiv.org/abs/2607.08662",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Collective Intelligence with Foundation Models",
+        "link": "https://arxiv.org/abs/2607.07729",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 2,
+    "status": "hot"
+  },
+  {
     "id": "vision-language-model",
-    "appear_count": 20,
-    "days": 6,
+    "appear_count": 19,
+    "days": 5,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -84,47 +120,6 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 2,
-    "status": "hot"
-  },
-  {
-    "id": "multi-agent-system",
-    "appear_count": 20,
-    "days": 4,
-    "term_en": "Multi-Agent System",
-    "term_zh": "多智能体系统",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多智能体系统就像一群机器人，它们要么一起工作要么相互竞争，来完成一些很复杂的事情。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.07858",
-      "https://arxiv.org/abs/2607.08403",
-      "https://arxiv.org/abs/2607.08652",
-      "https://arxiv.org/abs/2607.08080",
-      "https://arxiv.org/abs/2607.08662"
-    ],
-    "matched_articles": [
-      {
-        "title": "Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting",
-        "link": "https://arxiv.org/abs/2607.07858",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Game Theory Driven Multi-Agent Framework Mitigates Language Model Hallucination",
-        "link": "https://arxiv.org/abs/2607.08403",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study",
-        "link": "https://arxiv.org/abs/2607.08652",
-        "source": "arXiv AI"
-      }
-    ],
     "rank": 3,
     "status": "hot"
   },
@@ -137,33 +132,18 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能理解超长文本，就像人一样。",
+    "explanation": "长上下文技术让AI能处理超长文本，就像人一样理解整个故事。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.08284",
-      "https://arxiv.org/abs/2607.07724",
-      "https://arxiv.org/abs/2607.07740",
-      "https://arxiv.org/abs/2607.07953"
+      "https://arxiv.org/abs/2607.07724"
     ],
     "matched_articles": [
-      {
-        "title": "Understanding Axes of Difficulty For Long Context Tasks Via PredicateLongBench",
-        "link": "https://arxiv.org/abs/2607.08284",
-        "source": "arXiv AI"
-      },
       {
         "title": "Uncertainty-gated selection for block-sparse attention",
         "link": "https://arxiv.org/abs/2607.07724",
         "source": "arXiv CL"
-      },
-      {
-        "title": "Uncertainty-gated selection for block-sparse attention",
-        "link": "https://arxiv.org/abs/2607.07724",
-        "source": "arXiv LG"
       }
     ],
     "rank": 4,
@@ -171,42 +151,25 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 17,
-    "days": 5,
+    "appear_count": 18,
+    "days": 6,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "专家混合模型，就像多个助手合作，根据需要挑选合适的助手工作，让整体效率更高。",
+    "explanation": "用多个小AI（专家）分别处理不同任务，按需要调用部分专家，让整体工作更高效。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.08065",
-      "https://arxiv.org/abs/2607.08601",
-      "https://arxiv.org/abs/2607.08085",
-      "https://arxiv.org/abs/2607.08250",
-      "https://arxiv.org/abs/2607.07754"
+      "https://arxiv.org/abs/2607.08601"
     ],
     "matched_articles": [
-      {
-        "title": "When LLMs Agree, Are They Right? Auditing Self-Consistency and Cross-Model Agreement as Confidence Signals",
-        "link": "https://arxiv.org/abs/2607.08065",
-        "source": "arXiv AI"
-      },
       {
         "title": "It Takes a MAESTRO To Prune Bad Experts",
         "link": "https://arxiv.org/abs/2607.08601",
         "source": "arXiv CL"
-      },
-      {
-        "title": "Mixture of Enhanced-View Experts for Multi-Query Vehicle ReID and A Large-Scale Benchmark",
-        "link": "https://arxiv.org/abs/2607.08085",
-        "source": "arXiv CV"
       }
     ],
     "rank": 5,
@@ -214,8 +177,8 @@
   },
   {
     "id": "world-model",
-    "appear_count": 13,
-    "days": 7,
+    "appear_count": 12,
+    "days": 6,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
@@ -240,14 +203,14 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 11,
+    "appear_count": 12,
     "days": 7,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "用小模型先试写，大模型帮忙检查，提高生成文本速度的技巧。",
+    "explanation": "用小模型先写草稿，大模型校对，让生成文本更快更准。",
     "sources": [
       "arXiv CL",
       "NVIDIA Blog"
@@ -273,14 +236,14 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 8,
+    "appear_count": 9,
     "days": 4,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种智能算法，它通过比较同一组中的表现来训练模型，让模型在模仿合成语音时更加出色。",
+    "explanation": "GRPO是一种让AI通过模仿他人行为来学习的新方法，就像给模仿得好的AI发红包一样，鼓励它学习得更好。",
     "sources": [
       "arXiv CL",
       "Hugging Face Blog"
@@ -296,7 +259,7 @@
         "source": "arXiv CL"
       },
       {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  36",
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  37",
         "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
         "source": "Hugging Face Blog"
       }
@@ -337,6 +300,32 @@
     "status": "hot"
   },
   {
+    "id": "chain-of-thought",
+    "appear_count": 7,
+    "days": 5,
+    "term_en": "Chain of Thought",
+    "term_zh": "思维链",
+    "abbreviation": "CoT",
+    "category": "AI技术",
+    "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
+    "explanation": "思维链是AI在解决问题时，像人一样一步步思考，让推理过程更清晰，提高准确性。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08046"
+    ],
+    "matched_articles": [
+      {
+        "title": "What LLM Forecasters Know but Don't Say: Probing Internal Representations for Calibration and Faithfulness",
+        "link": "https://arxiv.org/abs/2607.08046",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
     "id": "vision-transformer",
     "appear_count": 6,
     "days": 3,
@@ -365,66 +354,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "chain-of-thought",
-    "appear_count": 6,
-    "days": 4,
-    "term_en": "Chain of Thought",
-    "term_zh": "思维链",
-    "abbreviation": "CoT",
-    "category": "AI技术",
-    "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
-    "explanation": "思维链是让AI像人一样，一步步推理，提高复杂任务准确率的方法。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08066",
-      "https://arxiv.org/abs/2607.08046"
-    ],
-    "matched_articles": [
-      {
-        "title": "Persuasion Attacks Can Decrease Effectiveness of CoT Monitoring",
-        "link": "https://arxiv.org/abs/2607.08066",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "What LLM Forecasters Know but Don't Say: Probing Internal Representations for Calibration and Faithfulness",
-        "link": "https://arxiv.org/abs/2607.08046",
-        "source": "arXiv CL"
-      }
-    ],
     "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
-    "appear_count": 5,
-    "days": 3,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就是不用额外奖励模型，直接用用户喜好来训练大型语言模型的方法。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  36",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 12,
     "status": "hot"
   },
   {
@@ -450,7 +380,85 @@
         "source": "arXiv LG"
       }
     ],
+    "rank": 12,
+    "status": "hot"
+  },
+  {
+    "id": "sparse-attention",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Sparse Attention",
+    "term_zh": "稀疏注意力",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
+    "explanation": "稀疏注意力就像只看重要的几个朋友，省时省力。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.07724"
+    ],
+    "matched_articles": [
+      {
+        "title": "Uncertainty-gated selection for block-sparse attention",
+        "link": "https://arxiv.org/abs/2607.07724",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 13,
+    "status": "hot"
+  },
+  {
+    "id": "self-consistency",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Self-Consistency",
+    "term_zh": "自洽性",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
+    "explanation": "自洽性：AI通过多路径推理，筛选出最统一的答案，确保结果可靠。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08017"
+    ],
+    "matched_articles": [
+      {
+        "title": "Can We Trust LLM's Logic? Quantifying Uncertainty, Coherence, and Robustness via a Graph-Based Framework",
+        "link": "https://arxiv.org/abs/2607.08017",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 14,
+    "status": "hot"
+  },
+  {
+    "id": "direct-preference-optimization",
+    "appear_count": 5,
+    "days": 3,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化，就是不用额外奖励模型，直接用人们偏好的数据来训练大模型的方法。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  37",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -476,39 +484,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "sparse-attention",
-    "appear_count": 4,
-    "days": 3,
-    "term_en": "Sparse Attention",
-    "term_zh": "稀疏注意力",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
-    "explanation": "只关注序列中一部分相关位置，降低计算成本，提升效率。",
-    "sources": [
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.07724"
-    ],
-    "matched_articles": [
-      {
-        "title": "Uncertainty-gated selection for block-sparse attention",
-        "link": "https://arxiv.org/abs/2607.07724",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Uncertainty-gated selection for block-sparse attention",
-        "link": "https://arxiv.org/abs/2607.07724",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 15,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -540,39 +516,6 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "self-consistency",
-    "appear_count": 4,
-    "days": 3,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
-    "explanation": "自洽性：AI模型通过比较不同推理结果，选出最一致的答案，来判断其正确性。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08065",
-      "https://arxiv.org/abs/2607.08017"
-    ],
-    "matched_articles": [
-      {
-        "title": "When LLMs Agree, Are They Right? Auditing Self-Consistency and Cross-Model Agreement as Confidence Signals",
-        "link": "https://arxiv.org/abs/2607.08065",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Can We Trust LLM's Logic? Quantifying Uncertainty, Coherence, and Robustness via a Graph-Based Framework",
-        "link": "https://arxiv.org/abs/2607.08017",
-        "source": "arXiv CL"
-      }
-    ],
     "rank": 17,
     "status": "hot"
   },
@@ -600,6 +543,58 @@
       }
     ],
     "rank": 18,
+    "status": "hot"
+  },
+  {
+    "id": "mechanistic-interpretability",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "Mechanistic Interpretability",
+    "term_zh": "机制可解释性",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
+    "explanation": "通过研究神经网络内部运作，解释模型为何做出特定决策的学问。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08499"
+    ],
+    "matched_articles": [
+      {
+        "title": "Cross-seed explainability using Procrustes-conditioned Joint End-to-end Top-K Sparse Autoencoders",
+        "link": "https://arxiv.org/abs/2607.08499",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "reward-model",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "Reward Model",
+    "term_zh": "奖励模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
+    "explanation": "奖励模型是教会AI如何通过评分来学习人类喜好，指导它如何改进学习过程。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08700"
+    ],
+    "matched_articles": [
+      {
+        "title": "Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution",
+        "link": "https://arxiv.org/abs/2607.08700",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -637,7 +632,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 19,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -661,58 +656,6 @@
         "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
         "link": "https://arxiv.org/abs/2607.07740",
         "source": "arXiv LG"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "mechanistic-interpretability",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Mechanistic Interpretability",
-    "term_zh": "机制可解释性",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
-    "explanation": "通过拆解神经网络内部机制，解释其决策过程的研究。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08499"
-    ],
-    "matched_articles": [
-      {
-        "title": "Cross-seed explainability using Procrustes-conditioned Joint End-to-end Top-K Sparse Autoencoders",
-        "link": "https://arxiv.org/abs/2607.08499",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "reward-model",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型就像是个评判员，根据人类喜好给模型训练打分，帮助它更好地学习。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08700"
-    ],
-    "matched_articles": [
-      {
-        "title": "Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution",
-        "link": "https://arxiv.org/abs/2607.08700",
-        "source": "arXiv CL"
       }
     ],
     "rank": 22,
@@ -751,58 +694,6 @@
     "status": "hot"
   },
   {
-    "id": "ml-model-poisoning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "ML Model Poisoning",
-    "term_zh": "机器学习模型中毒",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "在机器学习模型训练数据中故意插入错误或有害的数据，以破坏模型的性能和可靠性。",
-    "explanation": "故意在训练数据中加害信息，让AI模型出故障。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/understanding-ml-model-poisoning/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Understanding ML Model Poisoning: How it Happens and How to Detect it",
-        "link": "https://www.infoq.com/articles/understanding-ml-model-poisoning/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 24,
-    "status": "hot"
-  },
-  {
-    "id": "artificial-intelligence-driven-phishing",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Artificial Intelligence-Driven Phishing",
-    "term_zh": "人工智能驱动钓鱼",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "利用人工智能技术来创建和实施钓鱼攻击，以提高钓鱼活动的成功率。",
-    "explanation": "人工智能钓鱼，就像机器人帮你写诈骗信，成功率更高。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/artificial-intelligence-driven-phishing/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Artificial Intelligence-Driven Phishing: How Phishing Technique Is Evolving and Implemented",
-        "link": "https://www.infoq.com/articles/artificial-intelligence-driven-phishing/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 25,
-    "status": "hot"
-  },
-  {
     "id": "mamba",
     "appear_count": 1,
     "days": 1,
@@ -825,7 +716,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 26,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -851,7 +742,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 27,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -877,7 +768,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 28,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -903,7 +794,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 29,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -929,7 +820,85 @@
         "source": "arXiv CV"
       }
     ],
+    "rank": 28,
+    "status": "hot"
+  },
+  {
+    "id": "ebpf",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "eBPF",
+    "term_zh": "扩展伯克利包过滤",
+    "abbreviation": "eBPF",
+    "category": "AI技术",
+    "one_liner": "一种在Linux内核中提供高效网络和进程跟踪的虚拟机技术。",
+    "explanation": "eBPF是Linux内核里的超级助手，能快速追踪网络和程序，让GitHub部署更安全。",
+    "sources": [
+      "GitHub Blog"
+    ],
+    "source_urls": [
+      "https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/"
+    ],
+    "matched_articles": [
+      {
+        "title": "How GitHub uses eBPF to improve deployment safety",
+        "link": "https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/",
+        "source": "GitHub Blog"
+      }
+    ],
+    "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "cohere-transcribe-arabic",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cohere Transcribe Arabic",
+    "term_zh": "Cohere阿拉伯语转录",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种能够将阿拉伯语语音转录为文本的AI服务。",
+    "explanation": "这是一种AI服务，能将阿拉伯人说话的录音转写成文字。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/CohereLabs/cohere-transcribe-arabic-07-2026-release"
+    ],
+    "matched_articles": [
+      {
+        "title": "Meet Cohere Transcribe Arabic    CohereLabs • 4 days ago •  6",
+        "link": "https://huggingface.co/blog/CohereLabs/cohere-transcribe-arabic-07-2026-release",
+        "source": "Hugging Face Blog"
+      }
+    ],
     "rank": 30,
+    "status": "hot"
+  },
+  {
+    "id": "torchprofileflash",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "torchprofileflash",
+    "term_zh": "PyTorch性能分析工具",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用于在PyTorch中执行模型性能分析的Python包。",
+    "explanation": "torchprofileflash是PyTorch里分析模型运行效率的Python工具包。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/torch-attention-profile"
+    ],
+    "matched_articles": [
+      {
+        "title": "torchprofileflash  Profiling in PyTorch (Part 3): Attention is all you profile     11 July 10, 2026",
+        "link": "https://huggingface.co/blog/torch-attention-profile",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 31,
     "status": "hot"
   }
 ]
