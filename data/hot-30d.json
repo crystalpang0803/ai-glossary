@@ -1,14 +1,14 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 252,
-    "days": 17,
+    "appear_count": 263,
+    "days": 18,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像助手一样，自动完成拆分任务，规划步骤，不断优化工作流程。",
+    "explanation": "AI智能体像人一样工作，自己规划任务，用工具完成，还能不断进化。",
     "sources": [
       "arXiv CL",
       "GitHub Blog",
@@ -87,14 +87,14 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 68,
-    "days": 14,
+    "appear_count": 71,
+    "days": 15,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队一样合作或比赛，一起完成复杂任务。",
+    "explanation": "多智能体系统就像一群小机器人，它们要么一起合作完成工作，要么相互竞争，来完成复杂的任务。",
     "sources": [
       "arXiv CL"
     ],
@@ -151,14 +151,14 @@
   },
   {
     "id": "long-context",
-    "appear_count": 47,
-    "days": 16,
+    "appear_count": 48,
+    "days": 17,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能处理超长文本，就像人一样理解整个故事。",
+    "explanation": "长上下文技术让AI模型能一次性处理很长的文本（数十万字），提高理解和处理能力。",
     "sources": [
       "arXiv CL"
     ],
@@ -176,41 +176,15 @@
     "status": "hot"
   },
   {
-    "id": "mixture-of-experts",
-    "appear_count": 35,
-    "days": 14,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
-    "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "用多个小AI（专家）分别处理不同任务，按需要调用部分专家，让整体工作更高效。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08601"
-    ],
-    "matched_articles": [
-      {
-        "title": "It Takes a MAESTRO To Prune Bad Experts",
-        "link": "https://arxiv.org/abs/2607.08601",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 6,
-    "status": "hot"
-  },
-  {
     "id": "group-relative-policy-optimization",
-    "appear_count": 34,
-    "days": 14,
+    "appear_count": 36,
+    "days": 15,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种让AI通过模仿他人行为来学习的新方法，就像给模仿得好的AI发红包一样，鼓励它学习得更好。",
+    "explanation": "GRPO是一种AI算法，像玩游戏一样，让机器自己学习，通过比较组内表现来奖励优秀者。",
     "sources": [
       "arXiv CL",
       "Hugging Face Blog"
@@ -231,19 +205,45 @@
         "source": "Hugging Face Blog"
       }
     ],
+    "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-experts",
+    "appear_count": 36,
+    "days": 15,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "专家混合模型像多个音乐家合作演奏，根据音乐动态选择合适的乐手来提升演奏效果。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08601"
+    ],
+    "matched_articles": [
+      {
+        "title": "It Takes a MAESTRO To Prune Bad Experts",
+        "link": "https://arxiv.org/abs/2607.08601",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 7,
     "status": "hot"
   },
   {
     "id": "chain-of-thought",
-    "appear_count": 29,
-    "days": 12,
+    "appear_count": 30,
+    "days": 13,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
     "category": "AI技术",
     "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
-    "explanation": "思维链是AI在解决问题时，像人一样一步步思考，让推理过程更清晰，提高准确性。",
+    "explanation": "思维链是让AI像人一样一步步思考，提高解决复杂问题的准确性。",
     "sources": [
       "arXiv CL"
     ],
@@ -262,14 +262,14 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 27,
-    "days": 17,
+    "appear_count": 29,
+    "days": 18,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "用小模型先写草稿，大模型校对，让生成文本更快更准。",
+    "explanation": "通过小模型先快速写，大模型再检查，提高文本生成速度的技术。",
     "sources": [
       "arXiv CL",
       "NVIDIA Blog"
@@ -327,14 +327,14 @@
   },
   {
     "id": "direct-preference-optimization",
-    "appear_count": 16,
-    "days": 12,
+    "appear_count": 17,
+    "days": 13,
     "term_en": "Direct Preference Optimization",
     "term_zh": "直接偏好优化",
     "abbreviation": "DPO",
     "category": "AI技术",
     "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就是不用额外奖励模型，直接用人们偏好的数据来训练大模型的方法。",
+    "explanation": "直接偏好优化，就像教AI懂你的喜好，不另请教练，直接用你的喜好来训练它。",
     "sources": [
       "Hugging Face Blog"
     ],
@@ -417,14 +417,14 @@
   },
   {
     "id": "mechanistic-interpretability",
-    "appear_count": 12,
-    "days": 8,
+    "appear_count": 13,
+    "days": 9,
     "term_en": "Mechanistic Interpretability",
     "term_zh": "机制可解释性",
     "abbreviation": "",
     "category": "AI安全",
     "one_liner": "通过逆向理解神经网络内部回路来解释模型为何这么做的研究方向",
-    "explanation": "通过研究神经网络内部运作，解释模型为何做出特定决策的学问。",
+    "explanation": "理解神经网络“为什么这么做”，就像拆开黑盒看机器内部怎么运作。",
     "sources": [
       "arXiv CL"
     ],
@@ -533,14 +533,14 @@
   },
   {
     "id": "reward-model",
-    "appear_count": 10,
-    "days": 7,
+    "appear_count": 11,
+    "days": 8,
     "term_en": "Reward Model",
     "term_zh": "奖励模型",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型是教会AI如何通过评分来学习人类喜好，指导它如何改进学习过程。",
+    "explanation": "奖励模型：像人类一样评分，帮AI学得更好。",
     "sources": [
       "arXiv CL"
     ],
@@ -584,6 +584,32 @@
     "status": "hot"
   },
   {
+    "id": "sparse-attention",
+    "appear_count": 8,
+    "days": 6,
+    "term_en": "Sparse Attention",
+    "term_zh": "稀疏注意力",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
+    "explanation": "稀疏注意力就像只看重点，只关注和当前任务相关的部分，减少计算量，让机器学习更高效。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.07724"
+    ],
+    "matched_articles": [
+      {
+        "title": "Uncertainty-gated selection for block-sparse attention",
+        "link": "https://arxiv.org/abs/2607.07724",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 20,
+    "status": "hot"
+  },
+  {
     "id": "test-time-compute",
     "appear_count": 7,
     "days": 6,
@@ -606,33 +632,33 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 20,
+    "rank": 21,
     "status": "hot"
   },
   {
-    "id": "sparse-attention",
+    "id": "self-consistency",
     "appear_count": 7,
-    "days": 5,
-    "term_en": "Sparse Attention",
-    "term_zh": "稀疏注意力",
+    "days": 6,
+    "term_en": "Self-Consistency",
+    "term_zh": "自洽性",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
-    "explanation": "稀疏注意力就像只看重要的几个朋友，省时省力。",
+    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
+    "explanation": "自洽性是让AI模型像人一样，通过多路径思考，最终选出最靠谱的答案。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.07724"
+      "https://arxiv.org/abs/2607.08017"
     ],
     "matched_articles": [
       {
-        "title": "Uncertainty-gated selection for block-sparse attention",
-        "link": "https://arxiv.org/abs/2607.07724",
+        "title": "Can We Trust LLM's Logic? Quantifying Uncertainty, Coherence, and Robustness via a Graph-Based Framework",
+        "link": "https://arxiv.org/abs/2607.08017",
         "source": "arXiv CL"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -656,32 +682,6 @@
         "title": "RotateAttention: RoPE-Aware Rotation and Range Rectification for INT4 Quantized Attention in Video Generation",
         "link": "https://arxiv.org/abs/2607.02584",
         "source": "arXiv CV"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "self-consistency",
-    "appear_count": 6,
-    "days": 5,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
-    "explanation": "自洽性：AI通过多路径推理，筛选出最统一的答案，确保结果可靠。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08017"
-    ],
-    "matched_articles": [
-      {
-        "title": "Can We Trust LLM's Logic? Quantifying Uncertainty, Coherence, and Robustness via a Graph-Based Framework",
-        "link": "https://arxiv.org/abs/2607.08017",
-        "source": "arXiv CL"
       }
     ],
     "rank": 23,
