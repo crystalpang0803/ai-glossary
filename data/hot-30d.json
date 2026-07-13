@@ -1,34 +1,28 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 263,
-    "days": 18,
+    "appear_count": 273,
+    "days": 19,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像人一样工作，自己规划任务，用工具完成，还能不断进化。",
+    "explanation": "AI智能体像小助手一样，自动规划并完成复杂任务。",
     "sources": [
-      "arXiv CL",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.08010",
       "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
       "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
       "https://huggingface.co/blog/huggingface/tito",
-      "https://developer.nvidia.com/blog/category/generative-ai/"
+      "https://developer.nvidia.com/blog/category/generative-ai/",
+      "https://developer.nvidia.com/blog/nvidia-vera-cpu-boosts-ai-factory-throughput-to-accelerate-agentic-workloads/"
     ],
     "matched_articles": [
-      {
-        "title": "Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems",
-        "link": "https://arxiv.org/abs/2607.08010",
-        "source": "arXiv CL"
-      },
       {
         "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
         "link": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
@@ -37,6 +31,11 @@
       {
         "title": "GitHub Universe is back: All together now, in the agentic era",
         "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
+        "link": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
         "source": "GitHub Blog"
       }
     ],
@@ -125,25 +124,25 @@
   },
   {
     "id": "world-model",
-    "appear_count": 52,
-    "days": 14,
+    "appear_count": 53,
+    "days": 15,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的“沙盘”，它能模拟环境变化，帮助AI预测未来。",
+    "explanation": "世界模型是AI模拟现实世界变化的工具，帮助它预测未来并做出决策。",
     "sources": [
-      "arXiv LG"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.07763"
+      "https://www.qbitai.com/2026/07/448034.html"
     ],
     "matched_articles": [
       {
-        "title": "Unlocking Temporal Generalization in Hamiltonian Video Dynamics Models",
-        "link": "https://arxiv.org/abs/2607.07763",
-        "source": "arXiv LG"
+        "title": "98年哈工大教授创业，要做人形灵巧操作世界模型",
+        "link": "https://www.qbitai.com/2026/07/448034.html",
+        "source": "量子位"
       }
     ],
     "rank": 4,
@@ -177,28 +176,21 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 36,
-    "days": 15,
+    "appear_count": 37,
+    "days": 16,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种AI算法，像玩游戏一样，让机器自己学习，通过比较组内表现来奖励优秀者。",
+    "explanation": "GRPO是一种强化学习算法，通过比较组内表现优劣来训练模型，让机器学习更高效。",
     "sources": [
-      "arXiv CL",
       "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.08409",
       "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
     ],
     "matched_articles": [
-      {
-        "title": "When Synthetic Speech Is All You Have: Better Call GRPO",
-        "link": "https://arxiv.org/abs/2607.08409",
-        "source": "arXiv CL"
-      },
       {
         "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  37",
         "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
@@ -262,28 +254,21 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 29,
-    "days": 18,
+    "appear_count": 30,
+    "days": 19,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型先快速写，大模型再检查，提高文本生成速度的技术。",
+    "explanation": "通过小模型先试写，大模型再核对，快速生成文本的技术。",
     "sources": [
-      "arXiv CL",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.08642",
       "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
     ],
     "matched_articles": [
-      {
-        "title": "DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding",
-        "link": "https://arxiv.org/abs/2607.08642",
-        "source": "arXiv CL"
-      },
       {
         "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
         "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
@@ -291,6 +276,38 @@
       }
     ],
     "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "direct-preference-optimization",
+    "appear_count": 19,
+    "days": 14,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化是种新方法，不用奖励模型，直接用你对东西的喜好来教大模型。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/NormalUhr/rlhf-pipeline",
+      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
+    ],
+    "matched_articles": [
+      {
+        "title": "Navigating the RLHF Landscape: From Policy Gradients to PPO, GAE, and DPO for LLM Alignment    NormalUhr • Feb 11, 2025 •  129",
+        "link": "https://huggingface.co/blog/NormalUhr/rlhf-pipeline",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  37",
+        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -320,32 +337,6 @@
         "title": "Texture Representations in Deep Vision Models: Comparing CNNs, Vision Transformers, and Human Perception",
         "link": "https://arxiv.org/abs/2607.08321",
         "source": "arXiv CV"
-      }
-    ],
-    "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
-    "appear_count": 17,
-    "days": 13,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就像教AI懂你的喜好，不另请教练，直接用你的喜好来训练它。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Guide to Reinforcement Learning Post-Training for LLMs: PPO, DPO, GRPO, and Beyond    karina-zadorozhny • Jan 19 •  37",
-        "link": "https://huggingface.co/blog/karina-zadorozhny/guide-to-llm-post-training-algorithms",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 11,
@@ -876,6 +867,32 @@
     "status": "hot"
   },
   {
+    "id": "ml-model-poisoning",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "ML Model Poisoning",
+    "term_zh": "机器学习模型中毒",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "指在机器学习模型训练过程中，故意引入有害或误导性的数据，以破坏模型的准确性和可靠性。",
+    "explanation": "机器学习模型中毒就是给训练数据下毒，让模型学错东西。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/understanding-ml-model-poisoning/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Understanding ML Model Poisoning: How it Happens and How to Detect it",
+        "link": "https://www.infoq.com/articles/understanding-ml-model-poisoning/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 31,
+    "status": "hot"
+  },
+  {
     "id": "multi-agent-reinforcement-learning",
     "appear_count": 1,
     "days": 1,
@@ -895,32 +912,6 @@
       {
         "title": "Autonomous Big Data Optimization: Multi-Agent Reinforcement Learning to Achieve Self-Tuning Apache Spark",
         "link": "https://www.infoq.com/articles/agent-reinforcement-learning-apache-spark/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 31,
-    "status": "hot"
-  },
-  {
-    "id": "ml-model-poisoning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "ML Model Poisoning",
-    "term_zh": "机器学习模型中毒",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "在机器学习模型训练数据中故意插入错误或有害的数据，以破坏模型的性能和可靠性。",
-    "explanation": "故意在训练数据中加害信息，让AI模型出故障。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/understanding-ml-model-poisoning/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Understanding ML Model Poisoning: How it Happens and How to Detect it",
-        "link": "https://www.infoq.com/articles/understanding-ml-model-poisoning/",
         "source": "InfoQ"
       }
     ],
