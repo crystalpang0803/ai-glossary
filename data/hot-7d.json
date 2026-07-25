@@ -1,44 +1,44 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 128,
+    "appear_count": 124,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "智能体工作流就像一个自动化的助手，把复杂任务拆成小步骤，自己规划并完成。",
+    "explanation": "智能体工作流就像一群小助手，自动规划完成你的任务。",
     "sources": [
       "arXiv AI",
       "arXiv CL",
-      "arXiv LG",
+      "arXiv CV",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19409",
-      "https://arxiv.org/abs/2607.19433",
-      "https://arxiv.org/abs/2607.19767",
-      "https://arxiv.org/abs/2607.19793",
-      "https://arxiv.org/abs/2607.20019"
+      "https://arxiv.org/abs/2607.20452",
+      "https://arxiv.org/abs/2607.20495",
+      "https://arxiv.org/abs/2607.20507",
+      "https://arxiv.org/abs/2607.20527",
+      "https://arxiv.org/abs/2607.20872"
     ],
     "matched_articles": [
       {
-        "title": "FORCE-Bench: A Benchmark, Dataset, and Evaluation Harness for Agentic AI in Enterprise Finance",
-        "link": "https://arxiv.org/abs/2607.19409",
+        "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
+        "link": "https://arxiv.org/abs/2607.20452",
         "source": "arXiv AI"
       },
       {
-        "title": "The Chronos Vulnerability: A Taxonomy of Temporal Persistence and Memory-Based Deception in Agentic AI",
-        "link": "https://arxiv.org/abs/2607.19433",
+        "title": "Workload-Aware Caching for Multi-Agent Systems",
+        "link": "https://arxiv.org/abs/2607.20495",
         "source": "arXiv AI"
       },
       {
-        "title": "Symbol and Footprint Database for Electronic Components by Agentic Recognition and Generation",
-        "link": "https://arxiv.org/abs/2607.19767",
+        "title": "MiniCache: Reusable Program Caching with Small Model Interfaces for Efficient LLM Inference",
+        "link": "https://arxiv.org/abs/2607.20507",
         "source": "arXiv AI"
       }
     ],
@@ -47,38 +47,38 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 44,
+    "appear_count": 41,
     "days": 6,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
     "category": "AI技术",
     "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "视觉语言模型能看图说话，懂视频，帮自动驾驶安全导航。",
+    "explanation": "视觉语言模型像个超级大脑，能看图又能读字，懂图像和文字的奥秘。",
     "sources": [
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19476",
-      "https://arxiv.org/abs/2607.19547",
-      "https://arxiv.org/abs/2607.19701",
-      "https://arxiv.org/abs/2607.19790",
-      "https://arxiv.org/abs/2607.19889"
+      "https://arxiv.org/abs/2607.20900",
+      "https://arxiv.org/abs/2607.20993",
+      "https://arxiv.org/abs/2607.21022",
+      "https://arxiv.org/abs/2607.21036",
+      "https://arxiv.org/abs/2607.21065"
     ],
     "matched_articles": [
       {
-        "title": "Detect Early, Escalate Rarely: Anytime Detection of AI-Generated Video from the Compressed Bitstream",
-        "link": "https://arxiv.org/abs/2607.19476",
+        "title": "DINO-VPT: Hierarchical Visual Prompt Tuning for Joint Physical-Digital Face Anti-Spoofing",
+        "link": "https://arxiv.org/abs/2607.20900",
         "source": "arXiv CV"
       },
       {
-        "title": "ChronoStitch: Training-Free Composition of Visual KV Memories for Long-Horizon Temporal Reasoning",
-        "link": "https://arxiv.org/abs/2607.19547",
+        "title": "Sparse Concept Channels in Frozen 3D CT Vision Encoders",
+        "link": "https://arxiv.org/abs/2607.20993",
         "source": "arXiv CV"
       },
       {
-        "title": "SafeGen: Goal-Conditioned Video Diffusion of Safety-Critical Scenarios for VLM-Based Autonomous Driving",
-        "link": "https://arxiv.org/abs/2607.19701",
+        "title": "ProCap: Prominence-guided Object Rectification for Faithful and Comprehensive Video Captioning",
+        "link": "https://arxiv.org/abs/2607.21022",
         "source": "arXiv CV"
       }
     ],
@@ -87,41 +87,42 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 36,
+    "appear_count": 39,
     "days": 7,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队一样一起工作或比赛，完成复杂的任务。",
+    "explanation": "多个AI智能体像团队一样一起工作或竞争，完成复杂任务。",
     "sources": [
       "arXiv AI",
       "arXiv CL",
       "arXiv CV",
+      "arXiv LG",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19351",
-      "https://arxiv.org/abs/2607.19913",
-      "https://arxiv.org/abs/2607.19985",
-      "https://arxiv.org/abs/2607.19794",
-      "https://arxiv.org/abs/2607.19947"
+      "https://arxiv.org/abs/2607.20452",
+      "https://arxiv.org/abs/2607.20486",
+      "https://arxiv.org/abs/2607.20488",
+      "https://arxiv.org/abs/2607.20495",
+      "https://arxiv.org/abs/2607.20499"
     ],
     "matched_articles": [
       {
-        "title": "OpenEvoShield: Dual Non-Stationary Continual Defense for Open-World Multi-Agent System Attacks",
-        "link": "https://arxiv.org/abs/2607.19351",
+        "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
+        "link": "https://arxiv.org/abs/2607.20452",
         "source": "arXiv AI"
       },
       {
-        "title": "JANUS: Foreseeing Latent Risk for Long-Horizon Agent Safety",
-        "link": "https://arxiv.org/abs/2607.19913",
+        "title": "OPTScientist: Multi-Agent Discovery of Typed Optimizer Programs for Transformer Pretraining",
+        "link": "https://arxiv.org/abs/2607.20486",
         "source": "arXiv AI"
       },
       {
-        "title": "Coordinating from Memory: Graph-Structured Experience Reuse for Multi-Agent Adaptation in Dynamic Manufacturing",
-        "link": "https://arxiv.org/abs/2607.19985",
+        "title": "Autonomous Topology Mutation: Safe Runtime Restructuring for Multi-Agent LLM Systems with Capability, State, and Shadow Invariants",
+        "link": "https://arxiv.org/abs/2607.20488",
         "source": "arXiv AI"
       }
     ],
@@ -137,18 +138,33 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "AI用这个模型在想象中模拟世界变化，预测未来。",
+    "explanation": "世界模型就像AI的大脑，模拟外部世界变化，帮它做决策和预测。",
     "sources": [
-      "arXiv LG"
+      "量子位",
+      "arXiv CL",
+      "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19719"
+      "https://www.qbitai.com/2026/07/460041.html",
+      "https://www.qbitai.com/2026/07/458617.html",
+      "https://arxiv.org/abs/2607.20441",
+      "https://arxiv.org/abs/2607.20988"
     ],
     "matched_articles": [
       {
-        "title": "Koopman Dreamer: Spectrally Constrained Latent Dynamics for Stable World-Model Imagination",
-        "link": "https://arxiv.org/abs/2607.19719",
-        "source": "arXiv LG"
+        "title": "国产世界模型登顶李飞飞团队榜单！适配国产昇腾算力、代码权重全开源",
+        "link": "https://www.qbitai.com/2026/07/460041.html",
+        "source": "量子位"
+      },
+      {
+        "title": "世界模型“六小龙”在WAIC吵起来了！行业红利就在非共识里",
+        "link": "https://www.qbitai.com/2026/07/458617.html",
+        "source": "量子位"
+      },
+      {
+        "title": "Belief Propagation in LLM World Models: Measuring Strategic Information Bias with Prediction Markets",
+        "link": "https://arxiv.org/abs/2607.20441",
+        "source": "arXiv CL"
       }
     ],
     "rank": 4,
@@ -156,38 +172,41 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 15,
+    "appear_count": 19,
     "days": 7,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "专家混合模型像一群专家分工合作，根据任务需要激活部分专家，让计算更高效。",
+    "explanation": "专家混合模型就像一个团队，根据任务需要，动态调用擅长不同领域的专家来解决问题，提高效率。",
     "sources": [
+      "arXiv AI",
       "arXiv CL",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20062",
-      "https://arxiv.org/abs/2607.20145",
+      "https://arxiv.org/abs/2607.20511",
+      "https://arxiv.org/abs/2607.20426",
+      "https://arxiv.org/abs/2607.20427",
+      "https://arxiv.org/abs/2607.20443",
       "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
     ],
     "matched_articles": [
       {
-        "title": "Solar Open 2 Technical Report",
-        "link": "https://arxiv.org/abs/2607.20062",
+        "title": "SiGMA: Sign-Guided Merging and Adaptation for Multimodal Continual Instruction Tuning",
+        "link": "https://arxiv.org/abs/2607.20511",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Knowledge Injection Exists in MoE? Exploring Expert-Aware Contrast Decoding in MoE for Mitigating LLMs'Hallucinations",
+        "link": "https://arxiv.org/abs/2607.20426",
         "source": "arXiv CL"
       },
       {
-        "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
-        "link": "https://arxiv.org/abs/2607.20145",
+        "title": "Is MoE Routing a Huffman Code? Discovering the Frequency-Diversity Law in Chain-of-Thought",
+        "link": "https://arxiv.org/abs/2607.20427",
         "source": "arXiv CL"
-      },
-      {
-        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
-        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
-        "source": "NVIDIA Blog"
       }
     ],
     "rank": 5,
@@ -195,21 +214,21 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 14,
+    "appear_count": 15,
     "days": 7,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
     "category": "AI工程",
     "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
-    "explanation": "MCP是一种让大模型能像插头一样，方便地连接外部工具和数据的通用规则。",
+    "explanation": "MCP就像一个大模型的好帮手，它能帮大模型顺畅地连接外部的工具和数据，让模型工作更高效。",
     "sources": [
       "GitHub Blog",
       "InfoQ"
     ],
     "source_urls": [
       "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
-      "https://www.infoq.com/articles/multi-agent-security-operations",
+      "https://www.infoq.com/articles/multi-agent-security-operations/",
       "https://www.infoq.com/articles/mcp-java-architectural-strategy-llm-integrations/"
     ],
     "matched_articles": [
@@ -225,7 +244,7 @@
       },
       {
         "title": "Multi-Agent AI for Production Security Operations: An A2A and MCP Architecture in a 5G Core",
-        "link": "https://www.infoq.com/articles/multi-agent-security-operations",
+        "link": "https://www.infoq.com/articles/multi-agent-security-operations/",
         "source": "InfoQ"
       }
     ],
@@ -234,39 +253,31 @@
   },
   {
     "id": "chain-of-thought",
-    "appear_count": 12,
+    "appear_count": 13,
     "days": 5,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
     "category": "AI技术",
     "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
-    "explanation": "思维链是让AI像人一样一步步思考，提高解决复杂问题的能力。",
+    "explanation": "思维链是让AI像人一样一步步推理，提高解决复杂问题的准确性。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19358",
-      "https://arxiv.org/abs/2607.19691",
-      "https://arxiv.org/abs/2607.19405"
+      "https://arxiv.org/abs/2607.20427",
+      "https://arxiv.org/abs/2607.20833"
     ],
     "matched_articles": [
       {
-        "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
-        "link": "https://arxiv.org/abs/2607.19358",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
-        "link": "https://arxiv.org/abs/2607.19691",
+        "title": "Is MoE Routing a Huffman Code? Discovering the Frequency-Diversity Law in Chain-of-Thought",
+        "link": "https://arxiv.org/abs/2607.20427",
         "source": "arXiv CL"
       },
       {
-        "title": "Reproducing Recurrent Transformers: The CoTFormer",
-        "link": "https://arxiv.org/abs/2607.19405",
-        "source": "arXiv LG"
+        "title": "REFACT: Adaptive Fact Restatement for Compact and Faithful Chain-of-Thought Reasoning",
+        "link": "https://arxiv.org/abs/2607.20833",
+        "source": "arXiv CL"
       }
     ],
     "rank": 7,
@@ -274,25 +285,25 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 11,
+    "appear_count": 10,
     "days": 7,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
     "category": "AI技术",
     "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种AI算法，通过比较组内表现优劣来训练模型，类似游戏里按排名给奖励。",
+    "explanation": "GRPO是一种强化学习算法，像玩游戏一样，根据组内表现好坏给奖励，让模型越玩越聪明。",
     "sources": [
-      "arXiv LG"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19395"
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
     ],
     "matched_articles": [
       {
-        "title": "From Trajectories to Prefixes: Reusing Teacher Trajectories via Replayed Prefixes and Online Continuation",
-        "link": "https://arxiv.org/abs/2607.19395",
-        "source": "arXiv LG"
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  132",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 8,
@@ -307,14 +318,21 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "这种技术先让小模型快速生成文本，再由大模型修正，从而大大提高文本生成速度。",
+    "explanation": "通过小模型先试错，大模型后确认，提高文本生成速度的技巧。",
     "sources": [
+      "arXiv AI",
       "NVIDIA Blog"
     ],
     "source_urls": [
+      "https://arxiv.org/abs/2607.20475",
       "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
     ],
     "matched_articles": [
+      {
+        "title": "SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification",
+        "link": "https://arxiv.org/abs/2607.20475",
+        "source": "arXiv AI"
+      },
       {
         "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
         "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
@@ -333,25 +351,25 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能处理超长文本，提高理解和推理能力。",
+    "explanation": "长上下文技术让AI能处理超长文本，就像阅读整本书一样。",
     "sources": [
       "arXiv AI",
-      "arXiv CV"
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19358",
-      "https://arxiv.org/abs/2607.19947"
+      "https://arxiv.org/abs/2607.20484",
+      "https://arxiv.org/abs/2607.20538"
     ],
     "matched_articles": [
       {
-        "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
-        "link": "https://arxiv.org/abs/2607.19358",
+        "title": "The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path",
+        "link": "https://arxiv.org/abs/2607.20484",
         "source": "arXiv AI"
       },
       {
-        "title": "ETPDesigner: Multi-Agent Orchestration for Interactive Multimodal Electronic Theater Program",
-        "link": "https://arxiv.org/abs/2607.19947",
-        "source": "arXiv CV"
+        "title": "Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches",
+        "link": "https://arxiv.org/abs/2607.20538",
+        "source": "arXiv LG"
       }
     ],
     "rank": 10,
@@ -366,17 +384,24 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "缓存注意力的键值对以避免重复计算、加速大模型推理的技术",
-    "explanation": "将重要的信息存储起来，避免重复计算，让大模型推理更快。",
+    "explanation": "KV缓存是一种存储键值对的缓存技术，能快速查找数据，避免重复计算，提升大模型处理速度。",
     "sources": [
+      "arXiv AI",
       "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19456"
+      "https://arxiv.org/abs/2607.20469",
+      "https://arxiv.org/abs/2607.20538"
     ],
     "matched_articles": [
       {
-        "title": "MoA-Structured Decode Attention DNF Derivation, KV-Cache Accumulation, GQA/MQA, and OpenACC Kernel",
-        "link": "https://arxiv.org/abs/2607.19456",
+        "title": "DecodeShare: Tracing the Shared Subspace of LLM Decode-Time Decisions",
+        "link": "https://arxiv.org/abs/2607.20469",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches",
+        "link": "https://arxiv.org/abs/2607.20538",
         "source": "arXiv LG"
       }
     ],
@@ -385,103 +410,28 @@
   },
   {
     "id": "direct-preference-optimization",
-    "appear_count": 9,
+    "appear_count": 8,
     "days": 6,
     "term_en": "Direct Preference Optimization",
     "term_zh": "直接偏好优化",
     "abbreviation": "DPO",
     "category": "AI技术",
     "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化是一种训练AI模型的方法，它直接用用户喜好数据来调整模型，无需额外奖励模型。",
+    "explanation": "直接偏好优化是一种训练大模型的方法，它不需要独立的奖励模型，而是直接用人类偏好数据来调整模型。",
     "sources": [
-      "arXiv LG"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.18304"
+      "https://arxiv.org/abs/2607.20515"
     ],
     "matched_articles": [
       {
-        "title": "TD-DPO: Difference-Aware Preference Optimization for Mitigating Sycophancy in Clinical Autism Intervention Dialogue",
-        "link": "https://arxiv.org/abs/2607.18304",
-        "source": "arXiv LG"
+        "title": "Reliability-Aware LLM Alignment from Inconsistent Human Feedback",
+        "link": "https://arxiv.org/abs/2607.20515",
+        "source": "arXiv AI"
       }
     ],
     "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "mamba",
-    "appear_count": 7,
-    "days": 3,
-    "term_en": "Mamba",
-    "term_zh": "Mamba架构",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
-    "explanation": "Mamba架构：像蛇一样灵活的AI模型，擅长处理长序列数据，比其他模型更省电。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.18899",
-      "https://arxiv.org/abs/2607.19326",
-      "https://arxiv.org/abs/2607.18625",
-      "https://arxiv.org/abs/2607.18353"
-    ],
-    "matched_articles": [
-      {
-        "title": "Black-Mamba: Biologically-Inspired Leaky Accumulation for Conceptual Knowledge under Distribution Drift",
-        "link": "https://arxiv.org/abs/2607.18899",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
-        "link": "https://arxiv.org/abs/2607.19326",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Norm or Direction? Decoding Vision Mambas for High-Resolution Vision",
-        "link": "https://arxiv.org/abs/2607.18625",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 7,
-    "days": 4,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型像是一个时间序列的侦探，能高效追踪长序列变化。",
-    "sources": [
-      "arXiv CV",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.19787",
-      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
-    ],
-    "matched_articles": [
-      {
-        "title": "Physics-Aware Complex-Valued State Space Model with Scattering-Prior Feature Modulation for PolSAR Image Classification",
-        "link": "https://arxiv.org/abs/2607.19787",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  238",
-        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 14,
     "status": "hot"
   },
   {
@@ -493,7 +443,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过查找外部资料来辅助推理，让AI在复杂问题中更聪明地思考。",
+    "explanation": "通过检索外部信息来帮助推理，就像在思考时查阅资料一样。",
     "sources": [
       "InfoQ"
     ],
@@ -507,7 +457,7 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 15,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -545,52 +495,65 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 16,
+    "rank": 14,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 7,
+    "days": 4,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
+    "category": "AI技术",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像是一系列盒子，记录着时间变化下的状态，擅长处理长序列数据，计算又快又好。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
+    ],
+    "matched_articles": [
+      {
+        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  238",
+        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 15,
     "status": "hot"
   },
   {
     "id": "test-time-compute",
-    "appear_count": 6,
+    "appear_count": 5,
     "days": 3,
     "term_en": "Test-Time Compute",
     "term_zh": "测试时计算",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "测试时计算就是让AI模型在回答问题时多思考几步，以便给出更准确的答案。",
+    "explanation": "让AI模型推理时多思考，用更多计算换取更准确的答案。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL"
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19358",
-      "https://arxiv.org/abs/2607.20129",
-      "https://arxiv.org/abs/2607.19691"
+      "https://arxiv.org/abs/2607.20519"
     ],
     "matched_articles": [
       {
-        "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
-        "link": "https://arxiv.org/abs/2607.19358",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "CUSUM-Shaped Inference-Time Monitoring and Targeted Re-Decoding for Quantized Small Language Model Reasoning",
-        "link": "https://arxiv.org/abs/2607.20129",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
-        "link": "https://arxiv.org/abs/2607.19691",
-        "source": "arXiv CL"
+        "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+        "link": "https://arxiv.org/abs/2607.20519",
+        "source": "arXiv LG"
       }
     ],
-    "rank": 17,
+    "rank": 16,
     "status": "hot"
   },
   {
     "id": "in-context-learning",
-    "appear_count": 6,
-    "days": 4,
+    "appear_count": 5,
+    "days": 3,
     "term_en": "In-Context Learning",
     "term_zh": "上下文学习",
     "abbreviation": "ICL",
@@ -617,13 +580,107 @@
         "source": "arXiv LG"
       }
     ],
+    "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "diffusion-transformer",
+    "appear_count": 5,
+    "days": 3,
+    "term_en": "Diffusion Transformer",
+    "term_zh": "扩散Transformer",
+    "abbreviation": "DiT",
+    "category": "AI技术",
+    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
+    "explanation": "扩散Transformer是一种先进模型，像魔法一样，能制作出高质量、逼真的图像和视频，比如把一个人脸上的妆容变成另一个人。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.20924"
+    ],
+    "matched_articles": [
+      {
+        "title": "MagicMakeup: A Region-Controllable Diffusion Transformer for High-Fidelity Makeup-Transfer",
+        "link": "https://arxiv.org/abs/2607.20924",
+        "source": "arXiv CV"
+      }
+    ],
     "rank": 18,
     "status": "hot"
   },
   {
-    "id": "vision-transformer",
+    "id": "reward-model",
     "appear_count": 5,
-    "days": 3,
+    "days": 5,
+    "term_en": "Reward Model",
+    "term_zh": "奖励模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
+    "explanation": "奖励模型就像一个评分员，根据人类喜好给AI训练打分，帮助AI学习得更好。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.20862"
+    ],
+    "matched_articles": [
+      {
+        "title": "CSPF: A Constrained Shared-Private Fusion Method for Non-Verifiable Preference Evaluation",
+        "link": "https://arxiv.org/abs/2607.20862",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "mamba",
+    "appear_count": 5,
+    "days": 2,
+    "term_en": "Mamba",
+    "term_zh": "Mamba架构",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
+    "explanation": "Mamba架构：像蛇一样灵活的AI模型，擅长处理长序列数据，比其他模型更省电。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.18899",
+      "https://arxiv.org/abs/2607.19326",
+      "https://arxiv.org/abs/2607.18625",
+      "https://arxiv.org/abs/2607.18353"
+    ],
+    "matched_articles": [
+      {
+        "title": "Black-Mamba: Biologically-Inspired Leaky Accumulation for Conceptual Knowledge under Distribution Drift",
+        "link": "https://arxiv.org/abs/2607.18899",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Selective State-Space Adaptation and Retrieval for Language Model Reasoning",
+        "link": "https://arxiv.org/abs/2607.19326",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Norm or Direction? Decoding Vision Mambas for High-Resolution Vision",
+        "link": "https://arxiv.org/abs/2607.18625",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 20,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 4,
+    "days": 2,
     "term_en": "Vision Transformer",
     "term_zh": "视觉Transformer",
     "abbreviation": "ViT",
@@ -643,59 +700,39 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 19,
+    "rank": 21,
     "status": "hot"
   },
   {
-    "id": "reward-model",
-    "appear_count": 5,
-    "days": 5,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
+    "id": "self-consistency",
+    "appear_count": 4,
+    "days": 3,
+    "term_en": "Self-Consistency",
+    "term_zh": "自洽性",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型就像是一个评分员，它根据人类喜好给AI的输出打分，帮助AI学习得更好。",
+    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
+    "explanation": "自洽性：AI生成多个答案，然后选最一致的答案。",
     "sources": [
-      "arXiv LG"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19712"
+      "https://arxiv.org/abs/2607.20464",
+      "https://arxiv.org/abs/2607.20506"
     ],
     "matched_articles": [
       {
-        "title": "How Fast Can Reward Models Score? A Systems Study of C++ and PyTorch Inference Runtimes for RLHF",
-        "link": "https://arxiv.org/abs/2607.19712",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "diffusion-transformer",
-    "appear_count": 4,
-    "days": 2,
-    "term_en": "Diffusion Transformer",
-    "term_zh": "扩散Transformer",
-    "abbreviation": "DiT",
-    "category": "AI技术",
-    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
-    "explanation": "DiT是一种先进的图像生成模型，能创造出高分辨率的图片和视频。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.18510"
-    ],
-    "matched_articles": [
+        "title": "Stochastic Sampling is Epistemically Shallow: The Dimensionality Gap Between Temperature Variation and Model Diversity in LLMs",
+        "link": "https://arxiv.org/abs/2607.20464",
+        "source": "arXiv AI"
+      },
       {
-        "title": "DuSPiT: Dual-Branch Sub-Patch Pixel Diffusion Transformer",
-        "link": "https://arxiv.org/abs/2607.18510",
-        "source": "arXiv CV"
+        "title": "Optimizing Hypergraph-Based RAG: Toward Better Fact Extraction and Chunk Retrieval",
+        "link": "https://arxiv.org/abs/2607.20506",
+        "source": "arXiv AI"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -727,7 +764,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 22,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -758,32 +795,6 @@
         "title": "Emergent Hierarchical Monosemantic Neurons from the Group-Contrastive Forward-Forward Algorithm",
         "link": "https://arxiv.org/abs/2607.16295",
         "source": "arXiv CV"
-      }
-    ],
-    "rank": 23,
-    "status": "hot"
-  },
-  {
-    "id": "self-consistency",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
-    "explanation": "自洽性：让AI在多个角度思考问题，然后选择最一致的答案。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.18915"
-    ],
-    "matched_articles": [
-      {
-        "title": "Reasoning Error from Known Fact: Step-Level Self-Consistency Group Relative Policy Optimization for LLM",
-        "link": "https://arxiv.org/abs/2607.18915",
-        "source": "arXiv CL"
       }
     ],
     "rank": 24,
