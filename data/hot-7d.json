@@ -1,54 +1,83 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 124,
+    "appear_count": 116,
     "days": 7,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "智能体工作流就像一群小助手，自动规划完成你的任务。",
+    "explanation": "AI智能体像机器人一样，自动完成从规划到执行的任务流程。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
       "GitHub Blog",
       "Hugging Face Blog",
       "NVIDIA Blog",
       "InfoQ"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20452",
-      "https://arxiv.org/abs/2607.20495",
-      "https://arxiv.org/abs/2607.20507",
-      "https://arxiv.org/abs/2607.20527",
-      "https://arxiv.org/abs/2607.20872"
+      "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+      "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+      "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb",
+      "https://developer.nvidia.com/blog/category/generative-ai/",
+      "https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai/"
     ],
     "matched_articles": [
       {
-        "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
-        "link": "https://arxiv.org/abs/2607.20452",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "Workload-Aware Caching for Multi-Agent Systems",
-        "link": "https://arxiv.org/abs/2607.20495",
-        "source": "arXiv AI"
+        "title": "Automating cross-repo documentation with GitHub Agentic Workflows",
+        "link": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+        "source": "GitHub Blog"
       },
       {
-        "title": "MiniCache: Reusable Program Caching with Small Model Interfaces for Efficient LLM Inference",
-        "link": "https://arxiv.org/abs/2607.20507",
-        "source": "arXiv AI"
+        "title": "GitHub Universe is back: All together now, in the agentic era",
+        "link": "https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/",
+        "source": "GitHub Blog"
       }
     ],
     "rank": 1,
     "status": "hot"
   },
   {
+    "id": "multi-agent-system",
+    "appear_count": 37,
+    "days": 7,
+    "term_en": "Multi-Agent System",
+    "term_zh": "多智能体系统",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
+    "explanation": "多智能体系统就像一群AI小伙伴，一起合作或竞争，完成复杂任务。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/multi-agent-security-operations/",
+      "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941"
+    ],
+    "matched_articles": [
+      {
+        "title": "Multi-Agent AI for Production Security Operations: An A2A and MCP Architecture in a 5G Core",
+        "link": "https://www.infoq.com/articles/multi-agent-security-operations/",
+        "source": "InfoQ"
+      },
+      {
+        "title": "Vibecoding your Own Multi-Agent Workstation",
+        "link": "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 2,
+    "status": "hot"
+  },
+  {
     "id": "vision-language-model",
-    "appear_count": 41,
-    "days": 6,
+    "appear_count": 37,
+    "days": 5,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -82,89 +111,30 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 2,
-    "status": "hot"
-  },
-  {
-    "id": "multi-agent-system",
-    "appear_count": 39,
-    "days": 7,
-    "term_en": "Multi-Agent System",
-    "term_zh": "多智能体系统",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队一样一起工作或竞争，完成复杂任务。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG",
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.20452",
-      "https://arxiv.org/abs/2607.20486",
-      "https://arxiv.org/abs/2607.20488",
-      "https://arxiv.org/abs/2607.20495",
-      "https://arxiv.org/abs/2607.20499"
-    ],
-    "matched_articles": [
-      {
-        "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
-        "link": "https://arxiv.org/abs/2607.20452",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "OPTScientist: Multi-Agent Discovery of Typed Optimizer Programs for Transformer Pretraining",
-        "link": "https://arxiv.org/abs/2607.20486",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Autonomous Topology Mutation: Safe Runtime Restructuring for Multi-Agent LLM Systems with Capability, State, and Shadow Invariants",
-        "link": "https://arxiv.org/abs/2607.20488",
-        "source": "arXiv AI"
-      }
-    ],
     "rank": 3,
     "status": "hot"
   },
   {
     "id": "world-model",
-    "appear_count": 24,
+    "appear_count": 22,
     "days": 7,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的大脑，模拟外部世界变化，帮它做决策和预测。",
+    "explanation": "世界模型就像AI的“大脑”，它能模拟环境变化，帮助AI预测和规划。",
     "sources": [
-      "量子位",
-      "arXiv CL",
-      "arXiv CV"
+      "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/07/460041.html",
-      "https://www.qbitai.com/2026/07/458617.html",
-      "https://arxiv.org/abs/2607.20441",
-      "https://arxiv.org/abs/2607.20988"
+      "https://www.qbitai.com/2026/07/460041.html"
     ],
     "matched_articles": [
       {
         "title": "国产世界模型登顶李飞飞团队榜单！适配国产昇腾算力、代码权重全开源",
         "link": "https://www.qbitai.com/2026/07/460041.html",
         "source": "量子位"
-      },
-      {
-        "title": "世界模型“六小龙”在WAIC吵起来了！行业红利就在非共识里",
-        "link": "https://www.qbitai.com/2026/07/458617.html",
-        "source": "量子位"
-      },
-      {
-        "title": "Belief Propagation in LLM World Models: Measuring Strategic Information Bias with Prediction Markets",
-        "link": "https://arxiv.org/abs/2607.20441",
-        "source": "arXiv CL"
       }
     ],
     "rank": 4,
@@ -179,34 +149,18 @@
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "专家混合模型就像一个团队，根据任务需要，动态调用擅长不同领域的专家来解决问题，提高效率。",
+    "explanation": "专家混合模型就像一个团队，多个小团队（专家）根据任务需要，一个接一个地工作，提高了整体效率。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20511",
-      "https://arxiv.org/abs/2607.20426",
-      "https://arxiv.org/abs/2607.20427",
-      "https://arxiv.org/abs/2607.20443",
       "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
     ],
     "matched_articles": [
       {
-        "title": "SiGMA: Sign-Guided Merging and Adaptation for Multimodal Continual Instruction Tuning",
-        "link": "https://arxiv.org/abs/2607.20511",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Knowledge Injection Exists in MoE? Exploring Expert-Aware Contrast Decoding in MoE for Mitigating LLMs'Hallucinations",
-        "link": "https://arxiv.org/abs/2607.20426",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Is MoE Routing a Huffman Code? Discovering the Frequency-Diversity Law in Chain-of-Thought",
-        "link": "https://arxiv.org/abs/2607.20427",
-        "source": "arXiv CL"
+        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
+        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
+        "source": "NVIDIA Blog"
       }
     ],
     "rank": 5,
@@ -214,14 +168,14 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 15,
+    "appear_count": 16,
     "days": 7,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
     "category": "AI工程",
     "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
-    "explanation": "MCP就像一个大模型的好帮手，它能帮大模型顺畅地连接外部的工具和数据，让模型工作更高效。",
+    "explanation": "MCP就像是一座桥梁，让大模型能轻松连接各种工具和数据。",
     "sources": [
       "GitHub Blog",
       "InfoQ"
@@ -284,32 +238,6 @@
     "status": "hot"
   },
   {
-    "id": "group-relative-policy-optimization",
-    "appear_count": 10,
-    "days": 7,
-    "term_en": "Group Relative Policy Optimization",
-    "term_zh": "组相对策略优化",
-    "abbreviation": "GRPO",
-    "category": "AI技术",
-    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种强化学习算法，像玩游戏一样，根据组内表现好坏给奖励，让模型越玩越聪明。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
-    ],
-    "matched_articles": [
-      {
-        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  132",
-        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 8,
-    "status": "hot"
-  },
-  {
     "id": "speculative-decoding",
     "appear_count": 10,
     "days": 7,
@@ -318,28 +246,21 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型先试错，大模型后确认，提高文本生成速度的技巧。",
+    "explanation": "通过小模型先草拟，大模型再校验，让文本生成更快，就像写文章先打草稿再修改。",
     "sources": [
-      "arXiv AI",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20475",
       "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
     ],
     "matched_articles": [
-      {
-        "title": "SonicSampler: Unified Tile-Aware Kernels for LLM Sampling and Speculative Verification",
-        "link": "https://arxiv.org/abs/2607.20475",
-        "source": "arXiv AI"
-      },
       {
         "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
         "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 9,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -370,6 +291,32 @@
         "title": "Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches",
         "link": "https://arxiv.org/abs/2607.20538",
         "source": "arXiv LG"
+      }
+    ],
+    "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "group-relative-policy-optimization",
+    "appear_count": 9,
+    "days": 7,
+    "term_en": "Group Relative Policy Optimization",
+    "term_zh": "组相对策略优化",
+    "abbreviation": "GRPO",
+    "category": "AI技术",
+    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
+    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，就像比赛选冠军。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
+    ],
+    "matched_articles": [
+      {
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  132",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 10,
@@ -409,26 +356,26 @@
     "status": "hot"
   },
   {
-    "id": "direct-preference-optimization",
+    "id": "state-space-model",
     "appear_count": 8,
-    "days": 6,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
+    "days": 5,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
     "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化是一种训练大模型的方法，它不需要独立的奖励模型，而是直接用人类偏好数据来调整模型。",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像一个记录物品状态的日历，能高效地预测物品未来状态，特别适合处理时间长、信息多的序列数据。",
     "sources": [
-      "arXiv AI"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20515"
+      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
     ],
     "matched_articles": [
       {
-        "title": "Reliability-Aware LLM Alignment from Inconsistent Human Feedback",
-        "link": "https://arxiv.org/abs/2607.20515",
-        "source": "arXiv AI"
+        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  238",
+        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 12,
@@ -443,7 +390,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过检索外部信息来帮助推理，就像在思考时查阅资料一样。",
+    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题一样。",
     "sources": [
       "InfoQ"
     ],
@@ -499,88 +446,29 @@
     "status": "hot"
   },
   {
-    "id": "state-space-model",
-    "appear_count": 7,
-    "days": 4,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
+    "id": "direct-preference-optimization",
+    "appear_count": 6,
+    "days": 5,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
     "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像是一系列盒子，记录着时间变化下的状态，擅长处理长序列数据，计算又快又好。",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化是一种训练大模型的方法，它不需要独立的奖励模型，而是直接用人类偏好数据来调整模型。",
     "sources": [
-      "Hugging Face Blog"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train"
+      "https://arxiv.org/abs/2607.20515"
     ],
     "matched_articles": [
       {
-        "title": "Introduction to State Space Models (SSM)    lbourdois • Jul 19, 2024 •  238",
-        "link": "https://huggingface.co/blog/lbourdois/get-on-the-ssm-train",
-        "source": "Hugging Face Blog"
+        "title": "Reliability-Aware LLM Alignment from Inconsistent Human Feedback",
+        "link": "https://arxiv.org/abs/2607.20515",
+        "source": "arXiv AI"
       }
     ],
     "rank": 15,
-    "status": "hot"
-  },
-  {
-    "id": "test-time-compute",
-    "appear_count": 5,
-    "days": 3,
-    "term_en": "Test-Time Compute",
-    "term_zh": "测试时计算",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "让AI模型推理时多思考，用更多计算换取更准确的答案。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.20519"
-    ],
-    "matched_articles": [
-      {
-        "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
-        "link": "https://arxiv.org/abs/2607.20519",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "in-context-learning",
-    "appear_count": 5,
-    "days": 3,
-    "term_en": "In-Context Learning",
-    "term_zh": "上下文学习",
-    "abbreviation": "ICL",
-    "category": "AI技术",
-    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
-    "explanation": "上下文学习就像教孩子骑自行车，只给他几个示范，他就能学会，不用每次都从头开始教。",
-    "sources": [
-      "arXiv CV",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.18819",
-      "https://arxiv.org/abs/2607.18530"
-    ],
-    "matched_articles": [
-      {
-        "title": "In-Context Learning for Wound Classification with Small Multimodal Language Models",
-        "link": "https://arxiv.org/abs/2607.18819",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Censoring-Aware In-Context Learning for Generalized Supplier Lead Time Estimation in Supply Chain Planning",
-        "link": "https://arxiv.org/abs/2607.18530",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 17,
     "status": "hot"
   },
   {
@@ -606,7 +494,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 18,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -632,7 +520,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 19,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -674,7 +562,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 20,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -700,7 +588,40 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 21,
+    "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "in-context-learning",
+    "appear_count": 4,
+    "days": 2,
+    "term_en": "In-Context Learning",
+    "term_zh": "上下文学习",
+    "abbreviation": "ICL",
+    "category": "AI技术",
+    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
+    "explanation": "上下文学习就像教孩子骑自行车，只给他几个示范，他就能学会，不用每次都从头开始教。",
+    "sources": [
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.18819",
+      "https://arxiv.org/abs/2607.18530"
+    ],
+    "matched_articles": [
+      {
+        "title": "In-Context Learning for Wound Classification with Small Multimodal Language Models",
+        "link": "https://arxiv.org/abs/2607.18819",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Censoring-Aware In-Context Learning for Generalized Supplier Lead Time Estimation in Supply Chain Planning",
+        "link": "https://arxiv.org/abs/2607.18530",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -730,6 +651,32 @@
         "title": "Optimizing Hypergraph-Based RAG: Toward Better Fact Extraction and Chunk Retrieval",
         "link": "https://arxiv.org/abs/2607.20506",
         "source": "arXiv AI"
+      }
+    ],
+    "rank": 21,
+    "status": "hot"
+  },
+  {
+    "id": "test-time-compute",
+    "appear_count": 4,
+    "days": 2,
+    "term_en": "Test-Time Compute",
+    "term_zh": "测试时计算",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
+    "explanation": "让AI模型推理时多思考，用更多计算换取更准确的答案。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.20519"
+    ],
+    "matched_articles": [
+      {
+        "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+        "link": "https://arxiv.org/abs/2607.20519",
+        "source": "arXiv LG"
       }
     ],
     "rank": 22,
