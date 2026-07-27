@@ -1,14 +1,14 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 475,
+    "appear_count": 477,
     "days": 30,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "把任务拆成由AI智能体自主规划、调用工具、迭代完成的流程",
-    "explanation": "AI智能体像机器人一样，自动完成从规划到执行的任务流程。",
+    "explanation": "AI智能体像人一样规划工作，自动完成复杂任务。",
     "sources": [
       "GitHub Blog",
       "Hugging Face Blog",
@@ -84,14 +84,14 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 135,
+    "appear_count": 136,
     "days": 26,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多智能体系统就像一群AI小伙伴，一起合作或竞争，完成复杂任务。",
+    "explanation": "多智能体系统就是由多个AI小伙伴一起工作或比赛，来完成那些复杂任务的团队。",
     "sources": [
       "InfoQ"
     ],
@@ -116,14 +116,14 @@
   },
   {
     "id": "world-model",
-    "appear_count": 82,
-    "days": 26,
+    "appear_count": 83,
+    "days": 27,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "世界模型就像AI的“大脑”，它能模拟环境变化，帮助AI预测和规划。",
+    "explanation": "世界模型就像AI的“大脑”，模拟环境变化，帮助它预测未来。",
     "sources": [
       "量子位"
     ],
@@ -149,7 +149,7 @@
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "专家混合模型就像一个团队，多个小团队（专家）根据任务需要，一个接一个地工作，提高了整体效率。",
+    "explanation": "这个AI模型像一个团队，每个成员负责一部分任务，根据需要调动成员，提高效率。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -168,8 +168,8 @@
   },
   {
     "id": "long-context",
-    "appear_count": 64,
-    "days": 24,
+    "appear_count": 63,
+    "days": 23,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
@@ -200,6 +200,32 @@
     "status": "hot"
   },
   {
+    "id": "group-relative-policy-optimization",
+    "appear_count": 48,
+    "days": 26,
+    "term_en": "Group Relative Policy Optimization",
+    "term_zh": "组相对策略优化",
+    "abbreviation": "GRPO",
+    "category": "AI技术",
+    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
+    "explanation": "GRPO是一种训练智能算法的方法，它通过比较同一组内智能体的表现来给予奖励。",
+    "sources": [
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
+    ],
+    "matched_articles": [
+      {
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  133",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
+      }
+    ],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
     "id": "speculative-decoding",
     "appear_count": 48,
     "days": 30,
@@ -208,7 +234,7 @@
     "abbreviation": "",
     "category": "AI工程",
     "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型先草拟，大模型再校验，让文本生成更快，就像写文章先打草稿再修改。",
+    "explanation": "推测解码是一种先用小模型快速生成文本，再用大模型校对的技术，能大幅提升文本生成速度。",
     "sources": [
       "NVIDIA Blog"
     ],
@@ -220,32 +246,6 @@
         "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
         "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
         "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "group-relative-policy-optimization",
-    "appear_count": 48,
-    "days": 26,
-    "term_en": "Group Relative Policy Optimization",
-    "term_zh": "组相对策略优化",
-    "abbreviation": "GRPO",
-    "category": "AI技术",
-    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，就像比赛选冠军。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
-    ],
-    "matched_articles": [
-      {
-        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  132",
-        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
-        "source": "Hugging Face Blog"
       }
     ],
     "rank": 8,
@@ -284,6 +284,45 @@
     "status": "hot"
   },
   {
+    "id": "model-context-protocol",
+    "appear_count": 33,
+    "days": 17,
+    "term_en": "Model Context Protocol",
+    "term_zh": "模型上下文协议",
+    "abbreviation": "MCP",
+    "category": "AI工程",
+    "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
+    "explanation": "MCP协议就像一个通用接口，让大型AI模型能方便地与各种工具和数据“交流”。",
+    "sources": [
+      "GitHub Blog",
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
+      "https://www.infoq.com/articles/multi-agent-security-operations/",
+      "https://www.infoq.com/articles/mcp-java-architectural-strategy-llm-integrations/"
+    ],
+    "matched_articles": [
+      {
+        "title": "GitHub MCP Server supports the next MCP specification",
+        "link": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "GitHub MCP Server supports the next MCP specification",
+        "link": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Multi-Agent AI for Production Security Operations: An A2A and MCP Architecture in a 5G Core",
+        "link": "https://www.infoq.com/articles/multi-agent-security-operations/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
     "id": "direct-preference-optimization",
     "appear_count": 32,
     "days": 23,
@@ -306,7 +345,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 10,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -337,45 +376,6 @@
         "title": "Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches",
         "link": "https://arxiv.org/abs/2607.20538",
         "source": "arXiv LG"
-      }
-    ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "model-context-protocol",
-    "appear_count": 29,
-    "days": 16,
-    "term_en": "Model Context Protocol",
-    "term_zh": "模型上下文协议",
-    "abbreviation": "MCP",
-    "category": "AI工程",
-    "one_liner": "让大模型以标准方式连接外部工具和数据源的开放协议",
-    "explanation": "MCP就像是一座桥梁，让大模型能轻松连接各种工具和数据。",
-    "sources": [
-      "GitHub Blog",
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
-      "https://www.infoq.com/articles/multi-agent-security-operations/",
-      "https://www.infoq.com/articles/mcp-java-architectural-strategy-llm-integrations/"
-    ],
-    "matched_articles": [
-      {
-        "title": "GitHub MCP Server supports the next MCP specification",
-        "link": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub MCP Server supports the next MCP specification",
-        "link": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Multi-Agent AI for Production Security Operations: An A2A and MCP Architecture in a 5G Core",
-        "link": "https://www.infoq.com/articles/multi-agent-security-operations/",
-        "source": "InfoQ"
       }
     ],
     "rank": 12,
@@ -409,37 +409,25 @@
   },
   {
     "id": "reasoning-model",
-    "appear_count": 22,
-    "days": 12,
+    "appear_count": 23,
+    "days": 13,
     "term_en": "Reasoning Model",
     "term_zh": "推理模型",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
-    "explanation": "推理模型就像一个聪明的大脑，能一步步分析问题，找出解决办法。",
+    "explanation": "推理模型就像一个聪明的助手，能通过多步思考解决难题。",
     "sources": [
-      "arXiv AI"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.19358",
-      "https://arxiv.org/abs/2607.19962",
-      "https://arxiv.org/abs/2607.20129"
+      "https://www.qbitai.com/2026/07/461149.html"
     ],
     "matched_articles": [
       {
-        "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
-        "link": "https://arxiv.org/abs/2607.19358",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "EvoThink: Evolving Thinking in Large Reasoning Models via Self-Pruning and Aha-Moment Preference Optimization",
-        "link": "https://arxiv.org/abs/2607.19962",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "CUSUM-Shaped Inference-Time Monitoring and Targeted Re-Decoding for Quantized Small Language Model Reasoning",
-        "link": "https://arxiv.org/abs/2607.20129",
-        "source": "arXiv AI"
+        "title": "蚂蚁百灵发布新一代原生混合推理模型Ling-3.0-Flash",
+        "link": "https://www.qbitai.com/2026/07/461149.html",
+        "source": "量子位"
       }
     ],
     "rank": 14,
@@ -454,7 +442,7 @@
     "abbreviation": "SSM",
     "category": "AI技术",
     "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一个记录物品状态的日历，能高效地预测物品未来状态，特别适合处理时间长、信息多的序列数据。",
+    "explanation": "状态空间模型就像一个时间旅行者，记录并预测事物随时间的变化。",
     "sources": [
       "Hugging Face Blog"
     ],
@@ -499,28 +487,54 @@
   },
   {
     "id": "test-time-compute",
-    "appear_count": 18,
-    "days": 12,
+    "appear_count": 19,
+    "days": 13,
     "term_en": "Test-Time Compute",
     "term_zh": "测试时计算",
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "让AI模型推理时多思考，用更多计算换取更准确的答案。",
+    "explanation": "测试时计算就像让机器多思考一会儿，为了得到更准确的答案。",
     "sources": [
-      "arXiv LG"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.20519"
+      "https://huggingface.co/blog/Kseniase/testtimecompute"
     ],
     "matched_articles": [
       {
-        "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
-        "link": "https://arxiv.org/abs/2607.20519",
-        "source": "arXiv LG"
+        "title": "What is test-time compute and how to scale it?    Kseniase • Feb 6, 2025 •  125",
+        "link": "https://huggingface.co/blog/Kseniase/testtimecompute",
+        "source": "Hugging Face Blog"
       }
     ],
     "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "retrieval-augmented-reasoning",
+    "appear_count": 19,
+    "days": 18,
+    "term_en": "Retrieval-Augmented Reasoning",
+    "term_zh": "检索增强推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
+    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
+        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -551,32 +565,6 @@
         "title": "Censoring-Aware In-Context Learning for Generalized Supplier Lead Time Estimation in Supply Chain Planning",
         "link": "https://arxiv.org/abs/2607.18530",
         "source": "arXiv LG"
-      }
-    ],
-    "rank": 18,
-    "status": "hot"
-  },
-  {
-    "id": "retrieval-augmented-reasoning",
-    "appear_count": 18,
-    "days": 17,
-    "term_en": "Retrieval-Augmented Reasoning",
-    "term_zh": "检索增强推理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题一样。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
-        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
-        "source": "InfoQ"
       }
     ],
     "rank": 19,
@@ -774,32 +762,6 @@
     "status": "hot"
   },
   {
-    "id": "continuous-batching",
-    "appear_count": 8,
-    "days": 8,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理是让GPU更高效工作的技术，通过动态组合请求来提升服务速度。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08930"
-    ],
-    "matched_articles": [
-      {
-        "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
-        "link": "https://arxiv.org/abs/2607.08930",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 26,
-    "status": "hot"
-  },
-  {
     "id": "rotary-position-embedding",
     "appear_count": 8,
     "days": 7,
@@ -826,6 +788,32 @@
         "title": "AdaRoPE: Not All Attention Heads Should Rotate and Scale Equally",
         "link": "https://arxiv.org/abs/2607.19363",
         "source": "arXiv CL"
+      }
+    ],
+    "rank": 26,
+    "status": "hot"
+  },
+  {
+    "id": "continuous-batching",
+    "appear_count": 7,
+    "days": 7,
+    "term_en": "Continuous Batching",
+    "term_zh": "连续批处理",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
+    "explanation": "连续批处理是让GPU更高效工作的技术，通过动态组合请求来提升服务速度。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.08930"
+    ],
+    "matched_articles": [
+      {
+        "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
+        "link": "https://arxiv.org/abs/2607.08930",
+        "source": "arXiv LG"
       }
     ],
     "rank": 27,
