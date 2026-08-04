@@ -1,39 +1,15 @@
 {
-  "rss": {
-    "chinese": [
-      {"name": "机器之心", "url": "https://www.jiqizhixin.com/rss"},
-      {"name": "量子位", "url": "https://www.qbitai.com/feed"},
-      {"name": "InfoQ 中文站", "url": "https://www.infoq.cn/public/rss"}
-    ],
-    "english": [
-      {"name": "NVIDIA Technical Blog", "url": "https://developer.nvidia.com/blog/rss.xml"},
-      {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml"},
-      {"name": "arXiv AI", "url": "https://arxiv.org/rss/cs.AI"},
-      {"name": "arXiv CL", "url": "https://arxiv.org/rss/cs.CL"},
-      {"name": "arXiv CV", "url": "https://arxiv.org/rss/cs.CV"},
-      {"name": "arXiv LG", "url": "https://arxiv.org/rss/cs.LG"},
-      {"name": "InfoQ", "url": "https://www.infoq.com/feed"},
-      {"name": "Hugging Face", "url": "https://huggingface.co/blog/rss"},
-      {"name": "Papers with Code", "url": "https://paperswithcode.com/rss/latest"},
-      {"name": "MIT CSAIL", "url": "https://www.csail.mit.edu/rss/news"}
-    ]
-  },
-  "scrape": {
-    "chinese": [
-      {"name": "机器之心", "url": "https://www.jiqizhixin.com", "title_selector": "a.title, h3 a, .article-title a", "item_selector": ".article-item, .news-item"},
-      {"name": "Anthropic", "url": "https://www.anthropic.com/news", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post, .news-item"},
-      {"name": "Meta AI", "url": "https://ai.meta.com/blog", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-card, .post-item"},
-      {"name": "GitHub Blog", "url": "https://github.blog", "title_selector": "h2 a, h3 a, .post-title a", "item_selector": "article, .post, .blog-item"}
-    ],
-    "english": [
-      {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-post, .post-item"},
-      {"name": "OpenAI Blog", "url": "https://openai.com/blog", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post"},
-      {"name": "Anthropic News", "url": "https://www.anthropic.com/news", "title_selector": "a, h2 a, h3 a", "item_selector": "article, .post, .news-item"},
-      {"name": "Meta AI Blog", "url": "https://ai.meta.com/blog", "title_selector": "a[href*='/blog/'], h2 a, h3 a", "item_selector": "article, .blog-card"},
-      {"name": "GitHub Blog", "url": "https://github.blog", "title_selector": "h2 a, h3 a, .post-title a", "item_selector": "article, .post"},
-      {"name": "Hugging Face Blog", "url": "https://huggingface.co/blog", "title_selector": "h2 a, h3 a, .blog-title a", "item_selector": "article, .blog-item"},
-      {"name": "NVIDIA Blog", "url": "https://developer.nvidia.com/blog", "title_selector": "h2 a, h3 a, .blog-title a", "item_selector": "article, .blog-card"},
-      {"name": "InfoQ", "url": "https://www.infoq.com", "title_selector": "h2 a, h3 a, .article-title a", "item_selector": "article, .news-item"}
-    ]
+  "_comment": "v6数据源:content_rich=true的源RSS自带完整正文(如arXiv摘要),直接挖词;false的源RSS正文薄,爬虫会进文章页抓正文。已剔除失效源(机器之心/InfoQ/NVIDIA/HuggingFace/PapersWithCode/MIT RSS)。",
+  "feeds": [
+    {"name": "arXiv AI", "url": "https://arxiv.org/rss/cs.AI", "lang": "en", "content_rich": true, "always_recent": true},
+    {"name": "arXiv CL", "url": "https://arxiv.org/rss/cs.CL", "lang": "en", "content_rich": true, "always_recent": true},
+    {"name": "arXiv CV", "url": "https://arxiv.org/rss/cs.CV", "lang": "en", "content_rich": true, "always_recent": true},
+    {"name": "arXiv LG", "url": "https://arxiv.org/rss/cs.LG", "lang": "en", "content_rich": true, "always_recent": true},
+    {"name": "量子位", "url": "https://www.qbitai.com/feed", "lang": "zh", "content_rich": false, "always_recent": true},
+    {"name": "DeepMind Blog", "url": "https://deepmind.google/blog/rss.xml", "lang": "en", "content_rich": false, "always_recent": false}
+  ],
+  "_legacy_rss": {
+    "note": "以下源RSS已失效,保留备查;若日后恢复可移回feeds",
+    "dead": ["机器之心 jiqizhixin.com/rss (格式坏)", "InfoQ中文 infoq.cn/public/rss (451)", "InfoQ infoq.com/feed (405)", "NVIDIA developer.nvidia.com/blog/rss.xml (404)", "HuggingFace huggingface.co/blog/rss (404)", "PapersWithCode paperswithcode.com/rss/latest (格式坏)", "MIT CSAIL csail.mit.edu/rss/news (404)"]
   }
 }
