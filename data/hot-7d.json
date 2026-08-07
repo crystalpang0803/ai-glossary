@@ -1,8 +1,8 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 57,
-    "days": 4,
+    "appear_count": 39,
+    "days": 3,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
@@ -39,32 +39,6 @@
       }
     ],
     "rank": 1,
-    "status": "hot"
-  },
-  {
-    "id": "vision-language-model",
-    "appear_count": 18,
-    "days": 3,
-    "term_en": "Vision-Language Model",
-    "term_zh": "视觉语言模型",
-    "abbreviation": "VLM",
-    "category": "AI技术",
-    "one_liner": "能同时理解图像和文本的多模态大模型",
-    "explanation": "视觉语言模型是一种能同时看图和懂文字的大模型。",
-    "sources": [
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/qvac/visionpsy"
-    ],
-    "matched_articles": [
-      {
-        "title": "VisionPsy-Nano: State-of-the-Art On-Device Vision-Language Models    qvac • 5 days ago •  13",
-        "link": "https://huggingface.co/blog/qvac/visionpsy",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 2,
     "status": "hot"
   },
   {
@@ -107,13 +81,13 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 3,
+    "rank": 2,
     "status": "hot"
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 16,
-    "days": 4,
+    "appear_count": 12,
+    "days": 3,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
@@ -146,72 +120,7 @@
         "source": "InfoQ"
       }
     ],
-    "rank": 4,
-    "status": "hot"
-  },
-  {
-    "id": "long-context",
-    "appear_count": 15,
-    "days": 4,
-    "term_en": "Long Context",
-    "term_zh": "长上下文",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
-    "explanation": "长上下文技术让AI能处理超长文本，像阅读数十万字的小说一样流畅。",
-    "sources": [
-      "Hugging Face Blog",
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/lightonai/mdenseon-mlateon",
-      "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
-      "https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/"
-    ],
-    "matched_articles": [
-      {
-        "title": "mDenseOn with the mLateOn: Open Multilingual, Long-Context, and Code Retrieval Models    lightonai • 4 days ago •  27",
-        "link": "https://huggingface.co/blog/lightonai/mdenseon-mlateon",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU     60 July 28, 2026",
-        "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "Co-Designing AI Model Attention for Fast, Interactive Long-Context Inference",
-        "link": "https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
-    "id": "multi-agent-system",
-    "appear_count": 13,
-    "days": 4,
-    "term_en": "Multi-Agent System",
-    "term_zh": "多智能体系统",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
-    "explanation": "多个AI智能体像团队一样一起工作或比赛，完成复杂的任务。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941"
-    ],
-    "matched_articles": [
-      {
-        "title": "Vibecoding your Own Multi-Agent Workstation",
-        "link": "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 6,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -252,40 +161,33 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 7,
+    "rank": 4,
     "status": "hot"
   },
   {
-    "id": "mixture-of-experts",
-    "appear_count": 10,
-    "days": 4,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
+    "id": "vision-language-model",
+    "appear_count": 11,
+    "days": 2,
+    "term_en": "Vision-Language Model",
+    "term_zh": "视觉语言模型",
+    "abbreviation": "VLM",
     "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
+    "one_liner": "能同时理解图像和文本的多模态大模型",
+    "explanation": "视觉语言模型是一种能同时看图和懂文字的大模型。",
     "sources": [
-      "Hugging Face Blog",
-      "NVIDIA Blog"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
-      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
+      "https://huggingface.co/blog/qvac/visionpsy"
     ],
     "matched_articles": [
       {
-        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
-        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+        "title": "VisionPsy-Nano: State-of-the-Art On-Device Vision-Language Models    qvac • 5 days ago •  13",
+        "link": "https://huggingface.co/blog/qvac/visionpsy",
         "source": "Hugging Face Blog"
-      },
-      {
-        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
-        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
-        "source": "NVIDIA Blog"
       }
     ],
-    "rank": 8,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -327,7 +229,46 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 9,
+    "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "long-context",
+    "appear_count": 9,
+    "days": 3,
+    "term_en": "Long Context",
+    "term_zh": "长上下文",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让大模型一次处理超长输入(数十万词)的能力与相关技术",
+    "explanation": "长上下文技术让AI能处理超长文本，像阅读数十万字的小说一样流畅。",
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/lightonai/mdenseon-mlateon",
+      "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
+      "https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/"
+    ],
+    "matched_articles": [
+      {
+        "title": "mDenseOn with the mLateOn: Open Multilingual, Long-Context, and Code Retrieval Models    lightonai • 4 days ago •  27",
+        "link": "https://huggingface.co/blog/lightonai/mdenseon-mlateon",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU     60 July 28, 2026",
+        "link": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Co-Designing AI Model Attention for Fast, Interactive Long-Context Inference",
+        "link": "https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -367,92 +308,66 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 10,
+    "rank": 8,
     "status": "hot"
   },
   {
-    "id": "speculative-decoding",
+    "id": "multi-agent-system",
     "appear_count": 7,
-    "days": 4,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
+    "days": 3,
+    "term_en": "Multi-Agent System",
+    "term_zh": "多智能体系统",
     "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
+    "category": "AI应用",
+    "one_liner": "多个AI智能体协作或竞争以完成复杂任务的系统",
+    "explanation": "多个AI智能体像团队一样一起工作或比赛，完成复杂的任务。",
     "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941"
+    ],
+    "matched_articles": [
+      {
+        "title": "Vibecoding your Own Multi-Agent Workstation",
+        "link": "https://www.infoq.com/vendorcontent/show.action?vcr=fb74901d-d8f8-4924-b930-ad16a2db1941",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-experts",
+    "appear_count": 6,
+    "days": 3,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
+    "sources": [
+      "Hugging Face Blog",
       "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
     ],
     "matched_articles": [
       {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "world-model",
-    "appear_count": 6,
-    "days": 2,
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
-    "sources": [
-      "arXiv AI",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26452",
-      "https://huggingface.co/blog/barakor/pai"
-    ],
-    "matched_articles": [
-      {
-        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
-        "link": "https://arxiv.org/abs/2607.26452",
-        "source": "arXiv AI"
+        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
+        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+        "source": "Hugging Face Blog"
       },
       {
-        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
-        "link": "https://huggingface.co/blog/barakor/pai",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "in-context-learning",
-    "appear_count": 6,
-    "days": 4,
-    "term_en": "In-Context Learning",
-    "term_zh": "上下文学习",
-    "abbreviation": "ICL",
-    "category": "AI技术",
-    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
-    "explanation": "上下文学习让AI像魔法师一样，只需少量提示就能学会新技能，无需从头开始训练。",
-    "sources": [
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/"
-    ],
-    "matched_articles": [
-      {
-        "title": "NVIDIA Ising Enables Fully Automated Quantum Computer Calibration with Enhanced In-Context Learning",
-        "link": "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/",
+        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
+        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 13,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -491,13 +406,121 @@
         "source": "arXiv CV"
       }
     ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
+    "id": "fusion-model",
+    "appear_count": 6,
+    "days": 1,
+    "term_en": "Fusion Model",
+    "term_zh": "融合模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "结合多种模型或技术的模型，以提升性能。",
+    "explanation": "融合模型就像把多个专家的意见合在一起，让结果更准确。",
+    "sources": [
+      "arXiv CV",
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04394",
+      "https://arxiv.org/abs/2608.04327",
+      "https://www.qbitai.com/2026/08/467834.html",
+      "https://www.qbitai.com/2026/08/467478.html",
+      "https://www.qbitai.com/2026/08/467444.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Free-Lunch Augmentation by Revisiting Diffusion-Based Data Generation for Cross-Domain Few-Shot Object Detection",
+        "link": "https://arxiv.org/abs/2608.04394",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Real-time probabilistic tsunami forecasting via generative AI",
+        "link": "https://arxiv.org/abs/2608.04327",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "PPIO正式发布“Fusion融合模型”：用十分之一的价格超越顶级模型的智商",
+        "link": "https://www.qbitai.com/2026/08/467834.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 12,
+    "status": "hot"
+  },
+  {
+    "id": "minimax-h3",
+    "appear_count": 6,
+    "days": 1,
+    "term_en": "MiniMax H3",
+    "term_zh": "MiniMax H3",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "开源社区中定义视频模型领域性能“斩杀线”的模型。",
+    "explanation": "MiniMax H3是衡量视频模型性能的“斩杀线”，类似视频界的“及格线”。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467834.html",
+      "https://www.qbitai.com/2026/08/467730.html",
+      "https://www.qbitai.com/2026/08/467487.html",
+      "https://www.qbitai.com/2026/08/467478.html",
+      "https://www.qbitai.com/2026/08/467444.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "PPIO正式发布“Fusion融合模型”：用十分之一的价格超越顶级模型的智商",
+        "link": "https://www.qbitai.com/2026/08/467834.html",
+        "source": "量子位"
+      },
+      {
+        "title": "智元下架了首席科学家罗剑岚",
+        "link": "https://www.qbitai.com/2026/08/467730.html",
+        "source": "量子位"
+      },
+      {
+        "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
+        "link": "https://www.qbitai.com/2026/08/467487.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 13,
+    "status": "hot"
+  },
+  {
+    "id": "speculative-decoding",
+    "appear_count": 5,
+    "days": 3,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+        "source": "NVIDIA Blog"
+      }
+    ],
     "rank": 14,
     "status": "hot"
   },
   {
     "id": "chain-of-thought",
-    "appear_count": 5,
-    "days": 2,
+    "appear_count": 4,
+    "days": 1,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
@@ -536,33 +559,26 @@
     "status": "hot"
   },
   {
-    "id": "reasoning-model",
+    "id": "in-context-learning",
     "appear_count": 4,
-    "days": 2,
-    "term_en": "Reasoning Model",
-    "term_zh": "推理模型",
-    "abbreviation": "",
+    "days": 3,
+    "term_en": "In-Context Learning",
+    "term_zh": "上下文学习",
+    "abbreviation": "ICL",
     "category": "AI技术",
-    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
-    "explanation": "推理模型就像一个大侦探，能通过多步思考来解决复杂难题。",
+    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
+    "explanation": "上下文学习让AI像魔法师一样，只需少量提示就能学会新技能，无需从头开始训练。",
     "sources": [
-      "arXiv AI",
-      "arXiv LG"
+      "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26119",
-      "https://arxiv.org/abs/2607.27594"
+      "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/"
     ],
     "matched_articles": [
       {
-        "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
-        "link": "https://arxiv.org/abs/2607.26119",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Compliance2LoRA: On-Demand Safety Alignment on Arbitrary Policy Subsets via Hypernetwork-Generated LoRA Adapters",
-        "link": "https://arxiv.org/abs/2607.27594",
-        "source": "arXiv LG"
+        "title": "NVIDIA Ising Enables Fully Automated Quantum Computer Calibration with Enhanced In-Context Learning",
+        "link": "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/",
+        "source": "NVIDIA Blog"
       }
     ],
     "rank": 16,
@@ -634,94 +650,74 @@
     "status": "hot"
   },
   {
-    "id": "vision-transformer",
+    "id": "embodied-ai",
     "appear_count": 3,
-    "days": 2,
-    "term_en": "Vision Transformer",
-    "term_zh": "视觉Transformer",
-    "abbreviation": "ViT",
-    "category": "AI技术",
-    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
-    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
+    "days": 1,
+    "term_en": "Embodied AI",
+    "term_zh": "具身智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "使机器人具备人类智能和感知能力，实现与环境的交互。",
+    "explanation": "具身智能就是让机器人像人一样思考和感知，能和环境互动。",
     "sources": [
-      "arXiv CV"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.27763",
-      "https://arxiv.org/abs/2607.27835"
+      "https://www.qbitai.com/2026/08/467730.html",
+      "https://www.qbitai.com/2026/08/467486.html",
+      "https://www.qbitai.com/2026/08/467487.html"
     ],
     "matched_articles": [
       {
-        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
-        "link": "https://arxiv.org/abs/2607.27763",
-        "source": "arXiv CV"
+        "title": "智元下架了首席科学家罗剑岚",
+        "link": "https://www.qbitai.com/2026/08/467730.html",
+        "source": "量子位"
       },
       {
-        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
-        "link": "https://arxiv.org/abs/2607.27835",
-        "source": "arXiv CV"
+        "title": "冲刺全球首个100万小时具身数据！三家国产公司，联手了",
+        "link": "https://www.qbitai.com/2026/08/467486.html",
+        "source": "量子位"
+      },
+      {
+        "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
+        "link": "https://www.qbitai.com/2026/08/467487.html",
+        "source": "量子位"
       }
     ],
     "rank": 19,
     "status": "hot"
   },
   {
-    "id": "reward-model",
+    "id": "reasoning-model",
     "appear_count": 2,
     "days": 1,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
+    "term_en": "Reasoning Model",
+    "term_zh": "推理模型",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型是让AI学会喜欢什么、不喜欢什么，通过给AI的输出打分来帮助它学习。",
+    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
+    "explanation": "推理模型就像一个大侦探，能通过多步思考来解决复杂难题。",
     "sources": [
-      "arXiv CL",
+      "arXiv AI",
       "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26873",
-      "https://arxiv.org/abs/2607.26094"
+      "https://arxiv.org/abs/2607.26119",
+      "https://arxiv.org/abs/2607.27594"
     ],
     "matched_articles": [
       {
-        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
-        "link": "https://arxiv.org/abs/2607.26873",
-        "source": "arXiv CL"
+        "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
+        "link": "https://arxiv.org/abs/2607.26119",
+        "source": "arXiv AI"
       },
       {
-        "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
-        "link": "https://arxiv.org/abs/2607.26094",
+        "title": "Compliance2LoRA: On-Demand Safety Alignment on Arbitrary Policy Subsets via Hypernetwork-Generated LoRA Adapters",
+        "link": "https://arxiv.org/abs/2607.27594",
         "source": "arXiv LG"
       }
     ],
     "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "mamba",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Mamba",
-    "term_zh": "Mamba架构",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
-    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27811"
-    ],
-    "matched_articles": [
-      {
-        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
-        "link": "https://arxiv.org/abs/2607.27811",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 21,
     "status": "hot"
   },
   {
@@ -754,7 +750,72 @@
         "source": "arXiv LG"
       }
     ],
+    "rank": 21,
+    "status": "hot"
+  },
+  {
+    "id": "world-model",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "World Model",
+    "term_zh": "世界模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
+    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
+    "sources": [
+      "arXiv AI",
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26452",
+      "https://huggingface.co/blog/barakor/pai"
+    ],
+    "matched_articles": [
+      {
+        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
+        "link": "https://arxiv.org/abs/2607.26452",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
+        "link": "https://huggingface.co/blog/barakor/pai",
+        "source": "Hugging Face Blog"
+      }
+    ],
     "rank": 22,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Vision Transformer",
+    "term_zh": "视觉Transformer",
+    "abbreviation": "ViT",
+    "category": "AI技术",
+    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
+    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27763",
+      "https://arxiv.org/abs/2607.27835"
+    ],
+    "matched_articles": [
+      {
+        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
+        "link": "https://arxiv.org/abs/2607.27763",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
+        "link": "https://arxiv.org/abs/2607.27835",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -786,7 +847,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 23,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -812,7 +873,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -838,7 +899,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 25,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -864,7 +925,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -890,7 +951,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -916,7 +977,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 28,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -942,7 +1003,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 29,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -968,7 +1029,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 30,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -994,7 +1055,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 31,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1020,7 +1081,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 32,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1046,7 +1107,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1072,7 +1133,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 34,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1098,7 +1159,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1124,7 +1185,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 36,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1150,7 +1211,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 37,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1176,7 +1237,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 38,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1202,7 +1263,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 39,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1228,7 +1289,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 40,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1254,7 +1315,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 41,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1280,7 +1341,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 42,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1306,7 +1367,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 43,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1332,7 +1393,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 44,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1358,7 +1419,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 45,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1384,111 +1445,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 46,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一个时间旅行者，追踪序列数据的变化，特别擅长处理长序列，而且推理速度很快。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26751"
-    ],
-    "matched_articles": [
-      {
-        "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
-        "link": "https://arxiv.org/abs/2607.26751",
-        "source": "arXiv CL"
-      }
-    ],
     "rank": 47,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就是不用单独的奖励模型，直接用我们给出的偏好数据来调整大语言模型的训练，让模型更符合我们的喜好。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26891"
-    ],
-    "matched_articles": [
-      {
-        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
-        "link": "https://arxiv.org/abs/2607.26891",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 48,
-    "status": "hot"
-  },
-  {
-    "id": "rotary-position-embedding",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Rotary Position Embedding",
-    "term_zh": "旋转位置编码",
-    "abbreviation": "RoPE",
-    "category": "AI技术",
-    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
-    "explanation": "RoPE是一种给序列加上位置信息的编码方式，像给队伍排个队，方便预测未来的变化。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26369"
-    ],
-    "matched_articles": [
-      {
-        "title": "ClockRoPE: Random Fourier Rotations for Temporal Routine Modeling",
-        "link": "https://arxiv.org/abs/2607.26369",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 49,
-    "status": "hot"
-  },
-  {
-    "id": "reflexion",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Reflexion",
-    "term_zh": "反思式自改进",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "让智能体根据失败反馈自我反思并改进后续行动的框架",
-    "explanation": "AI像照镜子一样，根据对话中的问题自己改正，让聊天更友好。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.25057"
-    ],
-    "matched_articles": [
-      {
-        "title": "Psychological Influences of Conversational AI: Research and Design Directions for Reducing Harm and Promoting Well-Being",
-        "link": "https://arxiv.org/abs/2607.25057",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 50,
     "status": "hot"
   },
   {
@@ -1514,7 +1471,33 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 51,
+    "rank": 48,
+    "status": "hot"
+  },
+  {
+    "id": "mamba",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Mamba",
+    "term_zh": "Mamba架构",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
+    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27811"
+    ],
+    "matched_articles": [
+      {
+        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
+        "link": "https://arxiv.org/abs/2607.27811",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1540,7 +1523,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 52,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1566,7 +1549,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1592,7 +1575,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 54,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1618,7 +1601,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 55,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1644,7 +1627,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 56,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1670,7 +1653,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1696,7 +1679,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1722,7 +1705,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1748,7 +1731,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1774,7 +1757,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1800,7 +1783,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1826,7 +1809,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1852,7 +1835,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1878,7 +1861,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1904,7 +1887,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 66,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1930,7 +1913,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1956,7 +1939,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1982,7 +1965,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2008,7 +1991,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2034,7 +2017,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2060,7 +2043,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2086,7 +2069,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2112,7 +2095,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2138,7 +2121,595 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 73,
+    "status": "hot"
+  },
+  {
+    "id": "agentic-index",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Agentic Index",
+    "term_zh": "智能体能力指数",
+    "abbreviation": "",
+    "category": "AI评测基准",
+    "one_liner": "衡量AI智能体解决复杂问题的能力指数。",
+    "explanation": "智能体能力指数是衡量AI解决问题能力的评分，阿里Qwen3.8在榜单上得分全球第一。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467444.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Artificial Analysis榜单：阿里Qwen3.8Agentic能力得分全球第一",
+        "link": "https://www.qbitai.com/2026/08/467444.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 74,
+    "status": "hot"
+  },
+  {
+    "id": "deep-q-network",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Deep Q-Network",
+    "term_zh": "深度Q网络",
+    "abbreviation": "DQN",
+    "category": "AI技术",
+    "one_liner": "结合深度神经网络与强化学习，自动学习游戏策略的网络。",
+    "explanation": "深度Q网络是种智能算法，像玩游戏高手，能自己学会最佳策略。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467274.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "这人谁啊？哈萨比斯都让位了",
+        "link": "https://www.qbitai.com/2026/08/467274.html",
+        "source": "量子位"
+      }
+    ],
     "rank": 75,
+    "status": "hot"
+  },
+  {
+    "id": "redundancy-adjusted-artificial-age-score",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Redundancy-Adjusted Artificial Age Score",
+    "term_zh": "冗余调整的人工年龄评分",
+    "abbreviation": "RAAAS",
+    "category": "AI概念",
+    "one_liner": "评估AI系统长期持久性的指标。",
+    "explanation": "RAAAS是评估AI系统越老越稳不卡顿的指标。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04012"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Long-Run Persistence Theory for AI Systems under the Redundancy-Adjusted Artificial Age Score (AAS)",
+        "link": "https://arxiv.org/abs/2608.04012",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 76,
+    "status": "hot"
+  },
+  {
+    "id": "cycle-level-age",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cycle-Level Age",
+    "term_zh": "周期级年龄",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "在重复操作周期中定义的AI系统结构年龄。",
+    "explanation": "周期级年龄是AI系统结构随时间重复操作而增长的“年龄”。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04012"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Long-Run Persistence Theory for AI Systems under the Redundancy-Adjusted Artificial Age Score (AAS)",
+        "link": "https://arxiv.org/abs/2608.04012",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 77,
+    "status": "hot"
+  },
+  {
+    "id": "asymptotic-regimes",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Asymptotic Regimes",
+    "term_zh": "渐近状态",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "描述AI系统长期行为的不同渐近状态。",
+    "explanation": "渐近状态是AI长期运行后可能出现的稳定状态，就像火车开久了会进入平稳运行阶段。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04012"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Long-Run Persistence Theory for AI Systems under the Redundancy-Adjusted Artificial Age Score (AAS)",
+        "link": "https://arxiv.org/abs/2608.04012",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 78,
+    "status": "hot"
+  },
+  {
+    "id": "self-verifying-agent-instrument",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Self-Verifying Agent Instrument",
+    "term_zh": "自我验证代理工具",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种通过结构化验证而非事后验证来验证长期代理状态的工具。",
+    "explanation": "自我验证代理工具，就像一个智能的守门人，能实时检查自己是否还在正确的道路上，而不是事后才检查。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04066"
+    ],
+    "matched_articles": [
+      {
+        "title": "The LLM Proposes, the Executive Disposes: A Self-Verifying Agent Instrument that Dissociates Commitment Drift from Binding Drift in Long-Horizon Agents",
+        "link": "https://arxiv.org/abs/2608.04066",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 79,
+    "status": "hot"
+  },
+  {
+    "id": "monte-carlo-tree-search-mcts",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Monte Carlo Tree Search (MCTS)",
+    "term_zh": "蒙特卡洛树搜索",
+    "abbreviation": "MCTS",
+    "category": "AI技术",
+    "one_liner": "一种通过模拟树搜索来优化决策过程的算法。",
+    "explanation": "蒙特卡洛树搜索，像玩棋类游戏时模拟各种走法，找出最佳策略。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04071"
+    ],
+    "matched_articles": [
+      {
+        "title": "Monte Carlo Tree Search for Table-to-Multimodal Report Generation",
+        "link": "https://arxiv.org/abs/2608.04071",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 80,
+    "status": "hot"
+  },
+  {
+    "id": "role-grounded-rubric-construction-rgrc",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Role-Grounded Rubric Construction (RGRC)",
+    "term_zh": "基于角色的评分标准构建",
+    "abbreviation": "RGRC",
+    "category": "AI工程",
+    "one_liner": "一种从从业者交付物中提取评分标准的可重复使用流程。",
+    "explanation": "RGRC是一种从专业人士作品里提取评分标准的方法，方便重复评价。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04077"
+    ],
+    "matched_articles": [
+      {
+        "title": "FinProBench: Evaluating Financial AI Agents with Role-Grounded Rubrics Derived from Professional Deliverables",
+        "link": "https://arxiv.org/abs/2608.04077",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 81,
+    "status": "hot"
+  },
+  {
+    "id": "event-grounded-personalized-memory-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Event-Grounded Personalized-Memory Benchmark",
+    "term_zh": "基于事件的个性化记忆基准",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种评估大型语言模型代理个性化记忆能力的基准。",
+    "explanation": "评估AI记忆力的标准，看它能否记住并应用特定事件信息。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04095"
+    ],
+    "matched_articles": [
+      {
+        "title": "FinPerMA: A Theory-Informed, Event-Grounded Personalized-Memory Benchmark for LLM Agents",
+        "link": "https://arxiv.org/abs/2608.04095",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 82,
+    "status": "hot"
+  },
+  {
+    "id": "comprehensive-eeg-understanding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "comprehensive EEG understanding",
+    "term_zh": "全面脑电图理解",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "对脑电图信号进行自然语言指令、信号处理、定量证据和科学解释的综合能力。",
+    "explanation": "全面脑电图理解：像懂人话一样，看懂大脑电波，分析大脑活动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04156"
+    ],
+    "matched_articles": [
+      {
+        "title": "BrainBench: Benchmarking Large Language Models for Comprehensive EEG Understanding",
+        "link": "https://arxiv.org/abs/2608.04156",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 83,
+    "status": "hot"
+  },
+  {
+    "id": "benchmarkname",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "benchmarkname",
+    "term_zh": "基准名称",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "用于全面、指令条件下的脑电图理解的统一基准。",
+    "explanation": "基准名称是用于统一脑电图理解的参考标准。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04156"
+    ],
+    "matched_articles": [
+      {
+        "title": "BrainBench: Benchmarking Large Language Models for Comprehensive EEG Understanding",
+        "link": "https://arxiv.org/abs/2608.04156",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 84,
+    "status": "hot"
+  },
+  {
+    "id": "label-vector-pools-lvp",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Label Vector Pools (LVP)",
+    "term_zh": "标签向量池",
+    "abbreviation": "LVP",
+    "category": "AI技术",
+    "one_liner": "由每个模型的训练嵌入构建的标签向量池，用于检测错误。",
+    "explanation": "标签向量池是模型训练时构建的，用来发现错误和提升模型准确性的工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04190"
+    ],
+    "matched_articles": [
+      {
+        "title": "Adversarially Robust Abductive Fusion of Pre-trained Transformer-based Perception Models",
+        "link": "https://arxiv.org/abs/2608.04190",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 85,
+    "status": "hot"
+  },
+  {
+    "id": "abductive-fusion",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "abductive fusion",
+    "term_zh": "归因融合",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于一致性归因问题，在测试时通过整数规划求解器解决多个不完美检测器的融合问题。",
+    "explanation": "归因融合是一种方法，能将多个不太完美的检测器结合，提高检测准确度。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04190"
+    ],
+    "matched_articles": [
+      {
+        "title": "Adversarially Robust Abductive Fusion of Pre-trained Transformer-based Perception Models",
+        "link": "https://arxiv.org/abs/2608.04190",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 86,
+    "status": "hot"
+  },
+  {
+    "id": "persona-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Persona Agents",
+    "term_zh": "角色代理",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "代表不同用户背景的虚拟用户，用于评估AI系统和数字产品。",
+    "explanation": "Persona Agents就像模拟不同用户的虚拟人，帮我们测试AI和数字产品。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04205"
+    ],
+    "matched_articles": [
+      {
+        "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+        "link": "https://arxiv.org/abs/2608.04205",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 87,
+    "status": "hot"
+  },
+  {
+    "id": "active-inference",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "active inference",
+    "term_zh": "主动推断",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种用于模拟生物系统如何调节竞争需求的方法。",
+    "explanation": "主动推断就像生物体在寻找食物时，自动判断哪些需求更重要。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04232"
+    ],
+    "matched_articles": [
+      {
+        "title": "Interoceptive Attention as Dynamic Homeostatic Prioritization in a Foraging Agent",
+        "link": "https://arxiv.org/abs/2608.04232",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 88,
+    "status": "hot"
+  },
+  {
+    "id": "interoceptive-attention",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "interoceptive attention",
+    "term_zh": "内省注意力",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "在有限感知带宽下，对内部身体状态信念进行选择性关注的能力。",
+    "explanation": "内省注意力是指我们关注自己身体内部状态的能力，就像我们关注外部世界一样。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04232"
+    ],
+    "matched_articles": [
+      {
+        "title": "Interoceptive Attention as Dynamic Homeostatic Prioritization in a Foraging Agent",
+        "link": "https://arxiv.org/abs/2608.04232",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 89,
+    "status": "hot"
+  },
+  {
+    "id": "neurosymbolic-ai",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Neurosymbolic AI",
+    "term_zh": "神经符号AI",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "结合机器学习和符号推理的AI系统，用于处理高风险领域或低数据环境。",
+    "explanation": "神经符号AI是结合机器学习和逻辑推理的AI，擅长处理复杂任务和数据稀缺的情况。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04285"
+    ],
+    "matched_articles": [
+      {
+        "title": "The RAIL Principles for Neurosymbolic AI: Reasoning, Assurances, Interfacing and Learning",
+        "link": "https://arxiv.org/abs/2608.04285",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 90,
+    "status": "hot"
+  },
+  {
+    "id": "safecommit",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "SafeCommit",
+    "term_zh": "SafeCommit",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "一种风险控制层，用于在记忆不确定的情况下确保智能体安全行动。",
+    "explanation": "SafeCommit是一种保护措施，确保智能体在不确定的记忆中也能安全行动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04289"
+    ],
+    "matched_articles": [
+      {
+        "title": "SafeCommit: Certifying When Memory-Grounded Agents May Safely Act",
+        "link": "https://arxiv.org/abs/2608.04289",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 91,
+    "status": "hot"
+  },
+  {
+    "id": "neuromodulatory-control",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Neuromodulatory Control",
+    "term_zh": "神经调节控制",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过动态、神经元特定的调节增强深度神经网络的可塑性和适应性。",
+    "explanation": "神经调节控制就像给神经网络装上“学习开关”，让它在不断学习时更灵活适应。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04358"
+    ],
+    "matched_articles": [
+      {
+        "title": "NeuMoSync: End-to-End Neuromodulatory Control for Plasticity and Adaptability in Continual Learning",
+        "link": "https://arxiv.org/abs/2608.04358",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 92,
+    "status": "hot"
+  },
+  {
+    "id": "neumosync",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "NeuMoSync",
+    "term_zh": "NeuMoSync",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种新型架构，通过集成动态、神经元特定的调节来增强神经网络的可塑性和适应性。",
+    "explanation": "NeuMoSync是一种让神经网络更灵活、适应力更强的技术。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04358"
+    ],
+    "matched_articles": [
+      {
+        "title": "NeuMoSync: End-to-End Neuromodulatory Control for Plasticity and Adaptability in Continual Learning",
+        "link": "https://arxiv.org/abs/2608.04358",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 93,
+    "status": "hot"
+  },
+  {
+    "id": "neural-pde-solver-auto-design",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Neural PDE solver auto-design",
+    "term_zh": "神经PDE求解器自动设计",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "使用特定领域语言改进神经PDE求解器的自动设计过程。",
+    "explanation": "用特定领域的语言，让AI自动设计神经PDE求解器更高效。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04384"
+    ],
+    "matched_articles": [
+      {
+        "title": "Improving Auto-Design of Neural PDE Solvers with a Domain-Specific Language",
+        "link": "https://arxiv.org/abs/2608.04384",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 94,
+    "status": "hot"
+  },
+  {
+    "id": "adsl-pde",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ADSL-PDE",
+    "term_zh": "ADSL-PDE",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一种结构化搜索状态，用于在求解器概念和可执行代码之间进行映射。",
+    "explanation": "ADSL-PDE是一种搜索方法，能将数学问题转换成计算机程序，让AI更高效地解决复杂问题。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.04384"
+    ],
+    "matched_articles": [
+      {
+        "title": "Improving Auto-Design of Neural PDE Solvers with a Domain-Specific Language",
+        "link": "https://arxiv.org/abs/2608.04384",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "generative-multi-modal-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Generative Multi-modal Model",
+    "term_zh": "生成多模态模型",
+    "abbreviation": "GenMM",
+    "category": "AI技术",
+    "one_liner": "能够生成多种模态数据的模型。",
+    "explanation": "这种模型能创造多种类型的数据，比如图片、文字和声音。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 96,
     "status": "hot"
   }
 ]
