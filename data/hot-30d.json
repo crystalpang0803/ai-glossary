@@ -1,8 +1,8 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 445,
-    "days": 26,
+    "appear_count": 426,
+    "days": 25,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
@@ -43,8 +43,8 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 122,
-    "days": 19,
+    "appear_count": 118,
+    "days": 18,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 119,
-    "days": 25,
+    "appear_count": 114,
+    "days": 24,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -95,8 +95,8 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 68,
-    "days": 25,
+    "appear_count": 60,
+    "days": 24,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
@@ -124,39 +124,6 @@
       }
     ],
     "rank": 4,
-    "status": "hot"
-  },
-  {
-    "id": "world-model",
-    "appear_count": 56,
-    "days": 22,
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
-    "sources": [
-      "arXiv AI",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26452",
-      "https://huggingface.co/blog/barakor/pai"
-    ],
-    "matched_articles": [
-      {
-        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
-        "link": "https://arxiv.org/abs/2607.26452",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
-        "link": "https://huggingface.co/blog/barakor/pai",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 5,
     "status": "hot"
   },
   {
@@ -195,7 +162,7 @@
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 6,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -234,39 +201,46 @@
         "source": "InfoQ"
       }
     ],
+    "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "world-model",
+    "appear_count": 53,
+    "days": 21,
+    "term_en": "World Model",
+    "term_zh": "世界模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
+    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
+    "sources": [
+      "arXiv AI",
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26452",
+      "https://huggingface.co/blog/barakor/pai"
+    ],
+    "matched_articles": [
+      {
+        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
+        "link": "https://arxiv.org/abs/2607.26452",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
+        "link": "https://huggingface.co/blog/barakor/pai",
+        "source": "Hugging Face Blog"
+      }
+    ],
     "rank": 7,
     "status": "hot"
   },
   {
-    "id": "speculative-decoding",
-    "appear_count": 46,
-    "days": 26,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
-    "sources": [
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 8,
-    "status": "hot"
-  },
-  {
     "id": "chain-of-thought",
-    "appear_count": 45,
-    "days": 18,
+    "appear_count": 43,
+    "days": 17,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
@@ -301,13 +275,39 @@
         "source": "arXiv CV"
       }
     ],
+    "rank": 8,
+    "status": "hot"
+  },
+  {
+    "id": "speculative-decoding",
+    "appear_count": 42,
+    "days": 25,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+        "source": "NVIDIA Blog"
+      }
+    ],
     "rank": 9,
     "status": "hot"
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 31,
-    "days": 20,
+    "appear_count": 28,
+    "days": 19,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
@@ -338,9 +338,41 @@
     "status": "hot"
   },
   {
+    "id": "kv-cache",
+    "appear_count": 25,
+    "days": 14,
+    "term_en": "KV Cache",
+    "term_zh": "KV Cache",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于存储键值对的缓存机制，用于优化AI推理过程。",
+    "explanation": "KV Cache是一种存储键值对的缓存工具，能加快AI处理速度。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/468305.html",
+      "https://www.qbitai.com/2026/08/467840.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "openJiuwen发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
+        "link": "https://www.qbitai.com/2026/08/468305.html",
+        "source": "量子位"
+      },
+      {
+        "title": "AI SSD：大模型推理的存储范式转移",
+        "link": "https://www.qbitai.com/2026/08/467840.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
     "id": "direct-preference-optimization",
-    "appear_count": 26,
-    "days": 18,
+    "appear_count": 23,
+    "days": 17,
     "term_en": "Direct Preference Optimization",
     "term_zh": "直接偏好优化",
     "abbreviation": "DPO",
@@ -360,46 +392,13 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "kv-cache",
-    "appear_count": 25,
-    "days": 14,
-    "term_en": "KV Cache",
-    "term_zh": "KV缓存",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "缓存注意力的键值对以避免重复计算、加速大模型推理的技术",
-    "explanation": "KV缓存是一种存储键值对的技术，能快速查找信息，避免重复计算，让大模型推理更快。",
-    "sources": [
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27692",
-      "https://arxiv.org/abs/2607.27600"
-    ],
-    "matched_articles": [
-      {
-        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
-        "link": "https://arxiv.org/abs/2607.27692",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
-        "link": "https://arxiv.org/abs/2607.27600",
-        "source": "arXiv LG"
-      }
-    ],
     "rank": 12,
     "status": "hot"
   },
   {
     "id": "reasoning-model",
-    "appear_count": 22,
-    "days": 12,
+    "appear_count": 21,
+    "days": 11,
     "term_en": "Reasoning Model",
     "term_zh": "推理模型",
     "abbreviation": "",
@@ -431,8 +430,8 @@
   },
   {
     "id": "vision-transformer",
-    "appear_count": 20,
-    "days": 12,
+    "appear_count": 19,
+    "days": 11,
     "term_en": "Vision Transformer",
     "term_zh": "视觉Transformer",
     "abbreviation": "ViT",
@@ -463,8 +462,8 @@
   },
   {
     "id": "in-context-learning",
-    "appear_count": 20,
-    "days": 15,
+    "appear_count": 19,
+    "days": 14,
     "term_en": "In-Context Learning",
     "term_zh": "上下文学习",
     "abbreviation": "ICL",
@@ -489,8 +488,8 @@
   },
   {
     "id": "test-time-compute",
-    "appear_count": 19,
-    "days": 12,
+    "appear_count": 18,
+    "days": 11,
     "term_en": "Test-Time Compute",
     "term_zh": "测试时计算",
     "abbreviation": "",
@@ -590,32 +589,6 @@
     "status": "hot"
   },
   {
-    "id": "sparse-attention",
-    "appear_count": 15,
-    "days": 10,
-    "term_en": "Sparse Attention",
-    "term_zh": "稀疏注意力",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
-    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27692"
-    ],
-    "matched_articles": [
-      {
-        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
-        "link": "https://arxiv.org/abs/2607.27692",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
     "id": "state-space-model",
     "appear_count": 15,
     "days": 12,
@@ -635,6 +608,32 @@
       {
         "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
         "link": "https://arxiv.org/abs/2607.26751",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "sparse-attention",
+    "appear_count": 14,
+    "days": 9,
+    "term_en": "Sparse Attention",
+    "term_zh": "稀疏注意力",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
+    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27692"
+    ],
+    "matched_articles": [
+      {
+        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
+        "link": "https://arxiv.org/abs/2607.27692",
         "source": "arXiv CL"
       }
     ],
@@ -767,38 +766,6 @@
     "status": "hot"
   },
   {
-    "id": "self-consistency",
-    "appear_count": 10,
-    "days": 8,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
-    "explanation": "自洽性：AI生成多个答案，然后选最一致的答案。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.20464",
-      "https://arxiv.org/abs/2607.20506"
-    ],
-    "matched_articles": [
-      {
-        "title": "Stochastic Sampling is Epistemically Shallow: The Dimensionality Gap Between Temperature Variation and Model Diversity in LLMs",
-        "link": "https://arxiv.org/abs/2607.20464",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Optimizing Hypergraph-Based RAG: Toward Better Fact Extraction and Chunk Retrieval",
-        "link": "https://arxiv.org/abs/2607.20506",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 25,
-    "status": "hot"
-  },
-  {
     "id": "mechanistic-interpretability",
     "appear_count": 10,
     "days": 8,
@@ -821,7 +788,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 26,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -863,33 +830,39 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 26,
     "status": "hot"
   },
   {
-    "id": "mixture-of-depths",
+    "id": "self-consistency",
     "appear_count": 9,
-    "days": 6,
-    "term_en": "Mixture of Depths",
-    "term_zh": "深度混合",
-    "abbreviation": "MoD",
+    "days": 7,
+    "term_en": "Self-Consistency",
+    "term_zh": "自洽性",
+    "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
-    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
+    "one_liner": "让模型生成多条推理路径再投票选出最一致答案的方法",
+    "explanation": "自洽性：AI生成多个答案，然后选最一致的答案。",
     "sources": [
       "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26068"
+      "https://arxiv.org/abs/2607.20464",
+      "https://arxiv.org/abs/2607.20506"
     ],
     "matched_articles": [
       {
-        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
-        "link": "https://arxiv.org/abs/2607.26068",
+        "title": "Stochastic Sampling is Epistemically Shallow: The Dimensionality Gap Between Temperature Variation and Model Diversity in LLMs",
+        "link": "https://arxiv.org/abs/2607.20464",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Optimizing Hypergraph-Based RAG: Toward Better Fact Extraction and Chunk Retrieval",
+        "link": "https://arxiv.org/abs/2607.20506",
         "source": "arXiv AI"
       }
     ],
-    "rank": 28,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -929,33 +902,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 29,
-    "status": "hot"
-  },
-  {
-    "id": "reflexion",
-    "appear_count": 7,
-    "days": 5,
-    "term_en": "Reflexion",
-    "term_zh": "反思式自改进",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "让智能体根据失败反馈自我反思并改进后续行动的框架",
-    "explanation": "AI像照镜子一样，根据对话中的问题自己改正，让聊天更友好。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.25057"
-    ],
-    "matched_articles": [
-      {
-        "title": "Psychological Influences of Conversational AI: Research and Design Directions for Reducing Harm and Promoting Well-Being",
-        "link": "https://arxiv.org/abs/2607.25057",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 30,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -981,7 +928,33 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 31,
+    "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-depths",
+    "appear_count": 6,
+    "days": 5,
+    "term_en": "Mixture of Depths",
+    "term_zh": "深度混合",
+    "abbreviation": "MoD",
+    "category": "AI技术",
+    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
+    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26068"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
+        "link": "https://arxiv.org/abs/2607.26068",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1020,7 +993,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 32,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1062,7 +1035,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 33,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1100,6 +1073,32 @@
         "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
         "link": "https://www.qbitai.com/2026/08/467487.html",
         "source": "量子位"
+      }
+    ],
+    "rank": 33,
+    "status": "hot"
+  },
+  {
+    "id": "reflexion",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Reflexion",
+    "term_zh": "反思式自改进",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "让智能体根据失败反馈自我反思并改进后续行动的框架",
+    "explanation": "AI像照镜子一样，根据对话中的问题自己改正，让聊天更友好。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.25057"
+    ],
+    "matched_articles": [
+      {
+        "title": "Psychological Influences of Conversational AI: Research and Design Directions for Reducing Harm and Promoting Well-Being",
+        "link": "https://arxiv.org/abs/2607.25057",
+        "source": "arXiv AI"
       }
     ],
     "rank": 34,
@@ -1209,32 +1208,6 @@
     "status": "hot"
   },
   {
-    "id": "tree-of-thoughts",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Tree of Thoughts",
-    "term_zh": "思维树",
-    "abbreviation": "ToT",
-    "category": "AI技术",
-    "one_liner": "让模型像搜索树一样探索多条推理路径再择优的提示方法",
-    "explanation": "思维树是一种让AI像树一样探索各种想法，然后选择最好的方法来预测零售销售和定价。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.09956"
-    ],
-    "matched_articles": [
-      {
-        "title": "Optimizing ARDL Models for Retail Sales Forecasting and Fair Pricing",
-        "link": "https://arxiv.org/abs/2607.09956",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
     "id": "process-reward-model",
     "appear_count": 2,
     "days": 1,
@@ -1264,7 +1237,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 39,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1290,7 +1263,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 40,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1316,7 +1289,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 41,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1342,7 +1315,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 42,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1368,7 +1341,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1394,7 +1367,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1420,7 +1393,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 45,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1446,7 +1419,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1472,7 +1445,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1498,7 +1471,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 48,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1524,7 +1497,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 49,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1550,7 +1523,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 50,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1576,7 +1549,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 51,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1602,7 +1575,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 52,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1628,7 +1601,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 53,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1654,7 +1627,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 54,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1680,7 +1653,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 55,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1706,7 +1679,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 56,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1732,7 +1705,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 57,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1758,7 +1731,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 58,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1784,7 +1757,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 59,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1810,7 +1783,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 60,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1836,7 +1809,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 61,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1860,6 +1833,39 @@
         "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
         "link": "https://arxiv.org/abs/2608.00528",
         "source": "arXiv CL"
+      }
+    ],
+    "rank": 61,
+    "status": "hot"
+  },
+  {
+    "id": "chatgpt",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "ChatGPT",
+    "term_zh": "ChatGPT",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种基于GPT-3.5的聊天机器人，能够进行自然语言对话。",
+    "explanation": "ChatGPT是一个能聊天的机器人，能像人一样对话，最近升级了免费版。",
+    "sources": [
+      "arXiv AI",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05411",
+      "https://www.qbitai.com/2026/08/467879.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Evaluating and Improving Pedagogical Fit in LLM-Based AI Tutors with the Pedagogical Suitability Index",
+        "link": "https://arxiv.org/abs/2608.05411",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "刚刚，ChatGPT免费版史诗升级！GPT-5.6可以无限白嫖了",
+        "link": "https://www.qbitai.com/2026/08/467879.html",
+        "source": "量子位"
       }
     ],
     "rank": 62,
@@ -1996,6 +2002,32 @@
     "status": "hot"
   },
   {
+    "id": "tree-of-thoughts",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Tree of Thoughts",
+    "term_zh": "思维树",
+    "abbreviation": "ToT",
+    "category": "AI技术",
+    "one_liner": "让模型像搜索树一样探索多条推理路径再择优的提示方法",
+    "explanation": "思维树是一种让AI像树一样探索各种想法，然后选择最好的方法来预测零售销售和定价。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.09956"
+    ],
+    "matched_articles": [
+      {
+        "title": "Optimizing ARDL Models for Retail Sales Forecasting and Fair Pricing",
+        "link": "https://arxiv.org/abs/2607.09956",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 68,
+    "status": "hot"
+  },
+  {
     "id": "onramp-sequence-cross-distillation",
     "appear_count": 1,
     "days": 1,
@@ -2018,7 +2050,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 68,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2044,7 +2076,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 69,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2070,7 +2102,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 70,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2096,7 +2128,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2122,7 +2154,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2148,7 +2180,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2174,7 +2206,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2200,7 +2232,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2226,7 +2258,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2252,7 +2284,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 77,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2278,7 +2310,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 78,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2304,7 +2336,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2330,7 +2362,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2356,7 +2388,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2382,7 +2414,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 82,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2408,7 +2440,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 83,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2434,7 +2466,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 84,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2460,7 +2492,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2486,7 +2518,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2512,7 +2544,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 87,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2538,7 +2570,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 88,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2564,7 +2596,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2590,7 +2622,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 90,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2616,7 +2648,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 91,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2642,7 +2674,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 92,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2668,7 +2700,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 93,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2694,7 +2726,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 94,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2720,7 +2752,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 95,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2746,7 +2778,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 96,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -2772,7 +2804,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -2798,7 +2830,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 98,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -2824,7 +2856,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 99,
+    "rank": 100,
     "status": "hot"
   },
   {
@@ -2850,7 +2882,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 100,
+    "rank": 101,
     "status": "hot"
   },
   {
@@ -2876,7 +2908,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 102,
     "status": "hot"
   },
   {
@@ -2902,7 +2934,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 103,
     "status": "hot"
   },
   {
@@ -2928,7 +2960,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 104,
     "status": "hot"
   },
   {
@@ -2954,7 +2986,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 105,
     "status": "hot"
   },
   {
@@ -2980,7 +3012,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 106,
     "status": "hot"
   },
   {
@@ -3006,7 +3038,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 107,
     "status": "hot"
   },
   {
@@ -3032,7 +3064,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 108,
     "status": "hot"
   },
   {
@@ -3058,7 +3090,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 108,
+    "rank": 109,
     "status": "hot"
   },
   {
@@ -3084,7 +3116,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 109,
+    "rank": 110,
     "status": "hot"
   },
   {
@@ -3110,7 +3142,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 110,
+    "rank": 111,
     "status": "hot"
   },
   {
@@ -3136,7 +3168,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 111,
+    "rank": 112,
     "status": "hot"
   },
   {
@@ -3152,7 +3184,361 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 112,
+    "rank": 113,
+    "status": "hot"
+  },
+  {
+    "id": "gpt-5-6-luna",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GPT-5.6 Luna",
+    "term_zh": "GPT-5.6 Luna",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "ChatGPT的默认模型，专注于事实准确性和回答质量。",
+    "explanation": "GPT-5.6 Luna是ChatGPT升级后的新模型，更准确回答问题。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467879.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "刚刚，ChatGPT免费版史诗升级！GPT-5.6可以无限白嫖了",
+        "link": "https://www.qbitai.com/2026/08/467879.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 114,
+    "status": "hot"
+  },
+  {
+    "id": "gpt-5-6-sol",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GPT-5.6 Sol",
+    "term_zh": "GPT-5.6 Sol",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "ChatGPT的聊天优化版，针对特定场景进行优化。",
+    "explanation": "GPT-5.6 Sol是升级版的ChatGPT，更擅长特定聊天场景，现在免费使用。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467879.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "刚刚，ChatGPT免费版史诗升级！GPT-5.6可以无限白嫖了",
+        "link": "https://www.qbitai.com/2026/08/467879.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 115,
+    "status": "hot"
+  },
+  {
+    "id": "ai-coding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "AI Coding",
+    "term_zh": "AI编码",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "利用AI技术自动生成代码的过程。",
+    "explanation": "AI编码就是用人工智能自动写代码，就像蚂蚁建巢一样高效。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467871.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "蚂蚁集团开源Avernet，让人与智能体像组织一样高效协作",
+        "link": "https://www.qbitai.com/2026/08/467871.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 116,
+    "status": "hot"
+  },
+  {
+    "id": "avernet",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Avernet",
+    "term_zh": "Avernet",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "蚂蚁集团开源的多智能体协作基础设施，支持智能体之间的协作。",
+    "explanation": "Avernet是蚂蚁集团开发的，让智能体像人一样协作的工具，让它们一起工作更高效。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467871.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "蚂蚁集团开源Avernet，让人与智能体像组织一样高效协作",
+        "link": "https://www.qbitai.com/2026/08/467871.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 117,
+    "status": "hot"
+  },
+  {
+    "id": "mooncake",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Mooncake",
+    "term_zh": "Mooncake",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "Moonshot AI开发的推理服务系统，通过KV Cache优化推理过程。",
+    "explanation": "这是一种AI推理系统，能快速处理数据，像吃月饼一样简单。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/467840.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI SSD：大模型推理的存储范式转移",
+        "link": "https://www.qbitai.com/2026/08/467840.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 118,
+    "status": "hot"
+  },
+  {
+    "id": "ignition-index",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Ignition Index",
+    "term_zh": "点火指数",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用于衡量语言模型全局工作空间动态的指标，通过拟合S形曲线来评估模型在输入信号强度下的线性探针准确度。",
+    "explanation": "点火指数是衡量语言模型动态变化的指标，通过曲线看模型对输入信号的反应准确度。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05160"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+        "link": "https://arxiv.org/abs/2608.05160",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 119,
+    "status": "hot"
+  },
+  {
+    "id": "woodpecker-distillation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Woodpecker Distillation",
+    "term_zh": "啄木鸟蒸馏",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种弱模型到强模型的训练框架，通过对比局部干预来提升强模型的推理能力。",
+    "explanation": "啄木鸟蒸馏：像啄木鸟一样，弱模型发现强模型的推理问题，提升其推理能力。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05168"
+    ],
+    "matched_articles": [
+      {
+        "title": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+        "link": "https://arxiv.org/abs/2608.05168",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 120,
+    "status": "hot"
+  },
+  {
+    "id": "skill-operational-graph-sog",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Skill Operational Graph (SOG)",
+    "term_zh": "技能操作图",
+    "abbreviation": "SOG",
+    "category": "AI概念",
+    "one_liner": "用于表示技能操作流程的图，捕获激活、过程和资源流动结构。",
+    "explanation": "技能操作图就像一张地图，展示技能如何一步步完成，包括激活、过程和资源流动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05204"
+    ],
+    "matched_articles": [
+      {
+        "title": "SkillTrace: Multi-Trace Provenance Auditing for LLM-Agent Skill Reuse",
+        "link": "https://arxiv.org/abs/2608.05204",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 121,
+    "status": "hot"
+  },
+  {
+    "id": "guideline-based-categorisation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Guideline-based Categorisation",
+    "term_zh": "基于指南的分类",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "将连续预测因子替换为临床信息指导的类别编码，以适应临床指南。",
+    "explanation": "根据临床指南，把连续的预测数据变成类别编码，方便医生使用。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05203"
+    ],
+    "matched_articles": [
+      {
+        "title": "From Continuous Predictors to Clinical Thresholds: Early Evidence on Performance Trade-offs of Guideline-Based Categorisation for Ischaemic Stroke Outcome Prediction",
+        "link": "https://arxiv.org/abs/2608.05203",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 122,
+    "status": "hot"
+  },
+  {
+    "id": "dream-scene-visualiser",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Dream Scene Visualiser",
+    "term_zh": "梦境场景可视化器",
+    "abbreviation": "DSV",
+    "category": "AI应用",
+    "one_liner": "将书面梦境描述转换为可视化图像序列的系统。",
+    "explanation": "将梦中场景变成图片的系统，帮你把梦画出来。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05233"
+    ],
+    "matched_articles": [
+      {
+        "title": "Coherence-Oriented Dream Scene Visualisation",
+        "link": "https://arxiv.org/abs/2608.05233",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 123,
+    "status": "hot"
+  },
+  {
+    "id": "search2skill",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Search2Skill",
+    "term_zh": "搜索至技能",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过基于评分的强化学习，将外部知识蒸馏为可重用技能的框架。",
+    "explanation": "Search2Skill是一种AI技术，能将外部知识转化为可重复使用的技能。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05245"
+    ],
+    "matched_articles": [
+      {
+        "title": "Search2Skill: Skill Distillation Beyond Knowledge Boundaries Via Rubric-Based Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2608.05245",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 124,
+    "status": "hot"
+  },
+  {
+    "id": "lunar",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LUNAR",
+    "term_zh": "LUNAR基准",
+    "abbreviation": "",
+    "category": "AI评测基准",
+    "one_liner": "用于评估个性化大型语言模型在通用用户行为日志上的表现的基准。",
+    "explanation": "LUNAR基准是衡量个性化大型语言模型在用户行为日志上表现好坏的标尺。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05246"
+    ],
+    "matched_articles": [
+      {
+        "title": "LUNAR: Benchmarking Personalized Large Language Models on UNiversal User BehAvioR Logs",
+        "link": "https://arxiv.org/abs/2608.05246",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 125,
+    "status": "hot"
+  },
+  {
+    "id": "worldclaw",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "WorldClaw",
+    "term_zh": "WorldClaw",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于大规模开放世界3D场景生成的完全自主的框架。",
+    "explanation": "WorldClaw是一个能自动生成大型3D开放世界场景的框架。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05248"
+    ],
+    "matched_articles": [
+      {
+        "title": "WorldClaw: Agentic 3D Open-World Generation at Scale",
+        "link": "https://arxiv.org/abs/2608.05248",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 126,
+    "status": "hot"
+  },
+  {
+    "id": "video-generation-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Video Generation Model",
+    "term_zh": "视频生成模型",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "能够将文本、文档或PPT等输入转换为视频内容的AI模型。",
+    "explanation": "视频生成模型：AI模型，能将文字、文档变视频。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 127,
     "status": "hot"
   }
 ]
