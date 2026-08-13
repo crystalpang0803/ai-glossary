@@ -1,8 +1,8 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 376,
-    "days": 21,
+    "appear_count": 355,
+    "days": 20,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
@@ -43,8 +43,8 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 112,
-    "days": 17,
+    "appear_count": 105,
+    "days": 16,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 102,
-    "days": 21,
+    "appear_count": 96,
+    "days": 20,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -95,8 +95,8 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 55,
-    "days": 21,
+    "appear_count": 54,
+    "days": 20,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
@@ -133,42 +133,9 @@
     "status": "hot"
   },
   {
-    "id": "mixture-of-experts",
-    "appear_count": 53,
-    "days": 21,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
-    "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
-    "sources": [
-      "Hugging Face Blog",
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
-      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
-        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
-        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
     "id": "world-model",
-    "appear_count": 51,
-    "days": 19,
+    "appear_count": 49,
+    "days": 18,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
@@ -195,13 +162,46 @@
         "source": "Hugging Face Blog"
       }
     ],
+    "rank": 5,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-experts",
+    "appear_count": 44,
+    "days": 20,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
+        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
+        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
+        "source": "NVIDIA Blog"
+      }
+    ],
     "rank": 6,
     "status": "hot"
   },
   {
     "id": "long-context",
-    "appear_count": 48,
-    "days": 16,
+    "appear_count": 43,
+    "days": 15,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
@@ -280,8 +280,8 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 35,
-    "days": 21,
+    "appear_count": 34,
+    "days": 20,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
@@ -306,8 +306,8 @@
   },
   {
     "id": "kv-cache",
-    "appear_count": 23,
-    "days": 13,
+    "appear_count": 21,
+    "days": 12,
     "term_en": "KV Cache",
     "term_zh": "KV Cache",
     "abbreviation": "",
@@ -338,8 +338,8 @@
   },
   {
     "id": "group-relative-policy-optimization",
-    "appear_count": 21,
-    "days": 15,
+    "appear_count": 20,
+    "days": 14,
     "term_en": "Group Relative Policy Optimization",
     "term_zh": "组相对策略优化",
     "abbreviation": "GRPO",
@@ -403,32 +403,6 @@
     "status": "hot"
   },
   {
-    "id": "direct-preference-optimization",
-    "appear_count": 18,
-    "days": 13,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
-    "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就是不用单独的奖励模型，直接用我们给出的偏好数据来调整大语言模型的训练，让模型更符合我们的喜好。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26891"
-    ],
-    "matched_articles": [
-      {
-        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
-        "link": "https://arxiv.org/abs/2607.26891",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
     "id": "in-context-learning",
     "appear_count": 18,
     "days": 13,
@@ -451,7 +425,7 @@
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 14,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -494,45 +468,39 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 14,
+    "status": "hot"
+  },
+  {
+    "id": "direct-preference-optimization",
+    "appear_count": 17,
+    "days": 12,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
+    "category": "AI技术",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化，就是不用单独的奖励模型，直接用我们给出的偏好数据来调整大语言模型的训练，让模型更符合我们的喜好。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26891"
+    ],
+    "matched_articles": [
+      {
+        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
+        "link": "https://arxiv.org/abs/2607.26891",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 15,
     "status": "hot"
   },
   {
-    "id": "vision-transformer",
-    "appear_count": 17,
-    "days": 10,
-    "term_en": "Vision Transformer",
-    "term_zh": "视觉Transformer",
-    "abbreviation": "ViT",
-    "category": "AI技术",
-    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
-    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27763",
-      "https://arxiv.org/abs/2607.27835"
-    ],
-    "matched_articles": [
-      {
-        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
-        "link": "https://arxiv.org/abs/2607.27763",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
-        "link": "https://arxiv.org/abs/2607.27835",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
     "id": "test-time-compute",
-    "appear_count": 17,
-    "days": 10,
+    "appear_count": 15,
+    "days": 9,
     "term_en": "Test-Time Compute",
     "term_zh": "测试时计算",
     "abbreviation": "",
@@ -552,7 +520,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 17,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -578,13 +546,97 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 14,
+    "days": 9,
+    "term_en": "Vision Transformer",
+    "term_zh": "视觉Transformer",
+    "abbreviation": "ViT",
+    "category": "AI技术",
+    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
+    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27763",
+      "https://arxiv.org/abs/2607.27835"
+    ],
+    "matched_articles": [
+      {
+        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
+        "link": "https://arxiv.org/abs/2607.27763",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
+        "link": "https://arxiv.org/abs/2607.27835",
+        "source": "arXiv CV"
+      }
+    ],
     "rank": 18,
     "status": "hot"
   },
   {
+    "id": "retrieval-augmented-reasoning",
+    "appear_count": 13,
+    "days": 13,
+    "term_en": "Retrieval-Augmented Reasoning",
+    "term_zh": "检索增强推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
+    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
+        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 19,
+    "status": "hot"
+  },
+  {
+    "id": "mamba",
+    "appear_count": 12,
+    "days": 8,
+    "term_en": "Mamba",
+    "term_zh": "Mamba架构",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
+    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27811"
+    ],
+    "matched_articles": [
+      {
+        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
+        "link": "https://arxiv.org/abs/2607.27811",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 20,
+    "status": "hot"
+  },
+  {
     "id": "reward-model",
-    "appear_count": 14,
-    "days": 12,
+    "appear_count": 12,
+    "days": 11,
     "term_en": "Reward Model",
     "term_zh": "奖励模型",
     "abbreviation": "",
@@ -611,91 +663,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "retrieval-augmented-reasoning",
-    "appear_count": 14,
-    "days": 14,
-    "term_en": "Retrieval-Augmented Reasoning",
-    "term_zh": "检索增强推理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
-        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "mamba",
-    "appear_count": 13,
-    "days": 9,
-    "term_en": "Mamba",
-    "term_zh": "Mamba架构",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
-    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27811"
-    ],
-    "matched_articles": [
-      {
-        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
-        "link": "https://arxiv.org/abs/2607.27811",
-        "source": "arXiv CV"
-      }
-    ],
     "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "diffusion-transformer",
-    "appear_count": 12,
-    "days": 9,
-    "term_en": "Diffusion Transformer",
-    "term_zh": "扩散Transformer",
-    "abbreviation": "DiT",
-    "category": "AI技术",
-    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
-    "explanation": "扩散Transformer是一种先进的技术，能像魔法一样生成高清图像和视频。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27537",
-      "https://arxiv.org/abs/2607.27974"
-    ],
-    "matched_articles": [
-      {
-        "title": "ProgFormer: Hierarchical Voxel Diffusion Transformer for Longitudinal Brain MRI Prediction",
-        "link": "https://arxiv.org/abs/2607.27537",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Now You Have My Healthy Attention: A U-DiT for Brain-MRI Inpainting",
-        "link": "https://arxiv.org/abs/2607.27974",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 22,
     "status": "hot"
   },
   {
@@ -736,33 +704,39 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 23,
+    "rank": 22,
     "status": "hot"
   },
   {
-    "id": "sparse-attention",
-    "appear_count": 10,
-    "days": 6,
-    "term_en": "Sparse Attention",
-    "term_zh": "稀疏注意力",
-    "abbreviation": "",
+    "id": "diffusion-transformer",
+    "appear_count": 11,
+    "days": 8,
+    "term_en": "Diffusion Transformer",
+    "term_zh": "扩散Transformer",
+    "abbreviation": "DiT",
     "category": "AI技术",
-    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
-    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
+    "one_liner": "用Transformer作骨干的扩散生成模型,常用于高质量图像和视频生成",
+    "explanation": "扩散Transformer是一种先进的技术，能像魔法一样生成高清图像和视频。",
     "sources": [
-      "arXiv CL"
+      "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.27692"
+      "https://arxiv.org/abs/2607.27537",
+      "https://arxiv.org/abs/2607.27974"
     ],
     "matched_articles": [
       {
-        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
-        "link": "https://arxiv.org/abs/2607.27692",
-        "source": "arXiv CL"
+        "title": "ProgFormer: Hierarchical Voxel Diffusion Transformer for Longitudinal Brain MRI Prediction",
+        "link": "https://arxiv.org/abs/2607.27537",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Now You Have My Healthy Attention: A U-DiT for Brain-MRI Inpainting",
+        "link": "https://arxiv.org/abs/2607.27974",
+        "source": "arXiv CV"
       }
     ],
-    "rank": 24,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -802,6 +776,32 @@
         "title": "CAGE: Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents",
         "link": "https://arxiv.org/abs/2607.29190",
         "source": "arXiv AI"
+      }
+    ],
+    "rank": 24,
+    "status": "hot"
+  },
+  {
+    "id": "sparse-attention",
+    "appear_count": 9,
+    "days": 5,
+    "term_en": "Sparse Attention",
+    "term_zh": "稀疏注意力",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
+    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27692"
+    ],
+    "matched_articles": [
+      {
+        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
+        "link": "https://arxiv.org/abs/2607.27692",
+        "source": "arXiv CL"
       }
     ],
     "rank": 25,
@@ -874,58 +874,6 @@
     "status": "hot"
   },
   {
-    "id": "self-consistency",
-    "appear_count": 6,
-    "days": 5,
-    "term_en": "Self-Consistency",
-    "term_zh": "自洽性",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "模型输出之间的一致性，用于评估和优化语言模型的行为。",
-    "explanation": "自洽性就是模型输出的信息不矛盾，确保语言模型输出的连贯性。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.05188"
-    ],
-    "matched_articles": [
-      {
-        "title": "Position: It's Time to Optimize LLMs for Self-Consistency",
-        "link": "https://arxiv.org/abs/2608.05188",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 28,
-    "status": "hot"
-  },
-  {
-    "id": "mixture-of-depths",
-    "appear_count": 6,
-    "days": 5,
-    "term_en": "Mixture of Depths",
-    "term_zh": "深度混合",
-    "abbreviation": "MoD",
-    "category": "AI技术",
-    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
-    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26068"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
-        "link": "https://arxiv.org/abs/2607.26068",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 29,
-    "status": "hot"
-  },
-  {
     "id": "rotary-position-embedding",
     "appear_count": 6,
     "days": 5,
@@ -948,7 +896,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 30,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -987,7 +935,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 31,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1029,7 +977,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 32,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1069,7 +1017,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 33,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1107,7 +1055,102 @@
         "source": "量子位"
       }
     ],
+    "rank": 32,
+    "status": "hot"
+  },
+  {
+    "id": "retrieval-augmented-conversational-engine",
+    "appear_count": 6,
+    "days": 1,
+    "term_en": "Retrieval-Augmented Conversational Engine",
+    "term_zh": "检索增强对话引擎",
+    "abbreviation": "TRACE",
+    "category": "AI技术",
+    "one_liner": "一种基于检索的、具有约束意识的框架，用于构建在噪声和异构服务目录上的公共服务对话系统。",
+    "explanation": "TRACE是一种智能对话系统，能理解复杂问题，从大量信息中找到答案。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10153",
+      "https://arxiv.org/abs/2608.10176",
+      "https://arxiv.org/abs/2608.10420",
+      "https://arxiv.org/abs/2608.10444",
+      "https://arxiv.org/abs/2608.10286"
+    ],
+    "matched_articles": [
+      {
+        "title": "The CASE Framework: A Multi-Disciplinary Control Architecture for Governing Enterprise Agentic AI",
+        "link": "https://arxiv.org/abs/2608.10153",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "TRACE: Trustworthy Retrieval-Augmented Conversational Engine",
+        "link": "https://arxiv.org/abs/2608.10176",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Reasoning Shortcuts and Value Symmetries: What Symmetry Permits, Architecture Realizes, and Optimization Selects",
+        "link": "https://arxiv.org/abs/2608.10420",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 33,
+    "status": "hot"
+  },
+  {
+    "id": "self-consistency",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Self-Consistency",
+    "term_zh": "自洽性",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模型输出之间的一致性，用于评估和优化语言模型的行为。",
+    "explanation": "自洽性就是模型输出的信息不矛盾，确保语言模型输出的连贯性。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.05188"
+    ],
+    "matched_articles": [
+      {
+        "title": "Position: It's Time to Optimize LLMs for Self-Consistency",
+        "link": "https://arxiv.org/abs/2608.05188",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 34,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-depths",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Mixture of Depths",
+    "term_zh": "深度混合",
+    "abbreviation": "MoD",
+    "category": "AI技术",
+    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
+    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26068"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
+        "link": "https://arxiv.org/abs/2607.26068",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1133,7 +1176,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1166,7 +1209,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 36,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1198,7 +1241,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 37,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1235,39 +1278,6 @@
         "title": "墨芯成立稀疏计算产学研联盟，以生态协同突破产业化壁垒",
         "link": "https://www.qbitai.com/2026/08/469454.html",
         "source": "量子位"
-      }
-    ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
-    "id": "process-reward-model",
-    "appear_count": 2,
-    "days": 1,
-    "term_en": "Process Reward Model",
-    "term_zh": "过程奖励模型",
-    "abbreviation": "PRM",
-    "category": "AI技术",
-    "one_liner": "对推理过程的每一步而非只对最终答案打分的奖励模型",
-    "explanation": "PRM是一种评估推理过程的模型，奖励推理过程中的每一步，而不仅是最终答案。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.09153",
-      "https://arxiv.org/abs/2607.09438"
-    ],
-    "matched_articles": [
-      {
-        "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
-        "link": "https://arxiv.org/abs/2607.09153",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Test-Time Scaling for Small VLMs on Multilingual Visual MCQ",
-        "link": "https://arxiv.org/abs/2607.09438",
-        "source": "arXiv CL"
       }
     ],
     "rank": 39,
@@ -2028,32 +2038,6 @@
     "status": "hot"
   },
   {
-    "id": "continuous-batching",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Continuous Batching",
-    "term_zh": "连续批处理",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "推理时动态拼接不同请求以提升GPU利用率和吞吐的服务技术",
-    "explanation": "连续批处理是让GPU更高效工作的技术，通过动态组合请求来提升服务速度。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.08930"
-    ],
-    "matched_articles": [
-      {
-        "title": "BlockServe: Block-Grained Continuous Batching for High-Throughput Diffusion LLM Serving",
-        "link": "https://arxiv.org/abs/2607.08930",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 68,
-    "status": "hot"
-  },
-  {
     "id": "tree-of-thoughts",
     "appear_count": 1,
     "days": 1,
@@ -2076,7 +2060,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 69,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2102,7 +2086,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 70,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2128,7 +2112,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 71,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2154,7 +2138,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 72,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2180,7 +2164,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2206,7 +2190,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2232,7 +2216,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2258,7 +2242,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2284,7 +2268,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 77,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2310,7 +2294,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 78,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2336,7 +2320,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2362,7 +2346,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2388,7 +2372,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2414,7 +2398,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 82,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2440,7 +2424,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 83,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2466,7 +2450,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 84,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2492,7 +2476,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2518,7 +2502,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2544,7 +2528,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 87,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2570,7 +2554,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 88,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2596,7 +2580,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2622,7 +2606,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2648,7 +2632,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2674,7 +2658,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 92,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2700,7 +2684,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 93,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2726,7 +2710,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 94,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2752,7 +2736,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 95,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2778,7 +2762,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 96,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2804,7 +2788,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2830,7 +2814,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 98,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -2856,7 +2840,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 99,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -2882,7 +2866,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 100,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -2908,7 +2892,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 100,
     "status": "hot"
   },
   {
@@ -2934,7 +2918,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 101,
     "status": "hot"
   },
   {
@@ -2960,7 +2944,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 102,
     "status": "hot"
   },
   {
@@ -2986,7 +2970,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 103,
     "status": "hot"
   },
   {
@@ -3012,7 +2996,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 104,
     "status": "hot"
   },
   {
@@ -3038,7 +3022,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 105,
     "status": "hot"
   },
   {
@@ -3064,7 +3048,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 106,
     "status": "hot"
   },
   {
@@ -3090,7 +3074,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 108,
+    "rank": 107,
     "status": "hot"
   },
   {
@@ -3116,7 +3100,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 109,
+    "rank": 108,
     "status": "hot"
   },
   {
@@ -3142,7 +3126,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 110,
+    "rank": 109,
     "status": "hot"
   },
   {
@@ -3168,7 +3152,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 111,
+    "rank": 110,
     "status": "hot"
   },
   {
@@ -3194,7 +3178,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 112,
+    "rank": 111,
     "status": "hot"
   },
   {
@@ -3210,7 +3194,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 113,
+    "rank": 112,
     "status": "hot"
   },
   {
@@ -3236,7 +3220,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 114,
+    "rank": 113,
     "status": "hot"
   },
   {
@@ -3262,7 +3246,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 115,
+    "rank": 114,
     "status": "hot"
   },
   {
@@ -3288,7 +3272,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 116,
+    "rank": 115,
     "status": "hot"
   },
   {
@@ -3314,7 +3298,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 117,
+    "rank": 116,
     "status": "hot"
   },
   {
@@ -3340,7 +3324,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 118,
+    "rank": 117,
     "status": "hot"
   },
   {
@@ -3366,7 +3350,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 119,
+    "rank": 118,
     "status": "hot"
   },
   {
@@ -3392,7 +3376,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 120,
+    "rank": 119,
     "status": "hot"
   },
   {
@@ -3418,7 +3402,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 121,
+    "rank": 120,
     "status": "hot"
   },
   {
@@ -3444,7 +3428,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 122,
+    "rank": 121,
     "status": "hot"
   },
   {
@@ -3470,7 +3454,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 123,
+    "rank": 122,
     "status": "hot"
   },
   {
@@ -3496,7 +3480,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 124,
+    "rank": 123,
     "status": "hot"
   },
   {
@@ -3522,7 +3506,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 125,
+    "rank": 124,
     "status": "hot"
   },
   {
@@ -3548,7 +3532,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 126,
+    "rank": 125,
     "status": "hot"
   },
   {
@@ -3564,7 +3548,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 127,
+    "rank": 126,
     "status": "hot"
   },
   {
@@ -3590,7 +3574,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 128,
+    "rank": 127,
     "status": "hot"
   },
   {
@@ -3616,7 +3600,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 129,
+    "rank": 128,
     "status": "hot"
   },
   {
@@ -3642,7 +3626,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 130,
+    "rank": 129,
     "status": "hot"
   },
   {
@@ -3668,7 +3652,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 131,
+    "rank": 130,
     "status": "hot"
   },
   {
@@ -3694,7 +3678,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 132,
+    "rank": 131,
     "status": "hot"
   },
   {
@@ -3720,7 +3704,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 133,
+    "rank": 132,
     "status": "hot"
   },
   {
@@ -3746,7 +3730,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 134,
+    "rank": 133,
     "status": "hot"
   },
   {
@@ -3772,7 +3756,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 135,
+    "rank": 134,
     "status": "hot"
   },
   {
@@ -3798,7 +3782,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 136,
+    "rank": 135,
     "status": "hot"
   },
   {
@@ -3824,7 +3808,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 137,
+    "rank": 136,
     "status": "hot"
   },
   {
@@ -3850,7 +3834,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 138,
+    "rank": 137,
     "status": "hot"
   },
   {
@@ -3876,7 +3860,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 139,
+    "rank": 138,
     "status": "hot"
   },
   {
@@ -3902,7 +3886,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 140,
+    "rank": 139,
     "status": "hot"
   },
   {
@@ -3928,7 +3912,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 141,
+    "rank": 140,
     "status": "hot"
   },
   {
@@ -3954,7 +3938,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 142,
+    "rank": 141,
     "status": "hot"
   },
   {
@@ -3980,7 +3964,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 143,
+    "rank": 142,
     "status": "hot"
   },
   {
@@ -4006,7 +3990,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 144,
+    "rank": 143,
     "status": "hot"
   },
   {
@@ -4022,7 +4006,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 145,
+    "rank": 144,
     "status": "hot"
   },
   {
@@ -4048,7 +4032,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 146,
+    "rank": 145,
     "status": "hot"
   },
   {
@@ -4074,7 +4058,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 147,
+    "rank": 146,
     "status": "hot"
   },
   {
@@ -4100,7 +4084,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 148,
+    "rank": 147,
     "status": "hot"
   },
   {
@@ -4126,7 +4110,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 149,
+    "rank": 148,
     "status": "hot"
   },
   {
@@ -4152,7 +4136,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 150,
+    "rank": 149,
     "status": "hot"
   },
   {
@@ -4178,7 +4162,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 151,
+    "rank": 150,
     "status": "hot"
   },
   {
@@ -4204,7 +4188,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 152,
+    "rank": 151,
     "status": "hot"
   },
   {
@@ -4230,7 +4214,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 153,
+    "rank": 152,
     "status": "hot"
   },
   {
@@ -4256,7 +4240,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 154,
+    "rank": 153,
     "status": "hot"
   },
   {
@@ -4282,7 +4266,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 155,
+    "rank": 154,
     "status": "hot"
   },
   {
@@ -4308,7 +4292,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 156,
+    "rank": 155,
     "status": "hot"
   },
   {
@@ -4334,7 +4318,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 157,
+    "rank": 156,
     "status": "hot"
   },
   {
@@ -4360,7 +4344,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 158,
+    "rank": 157,
     "status": "hot"
   },
   {
@@ -4386,7 +4370,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 159,
+    "rank": 158,
     "status": "hot"
   },
   {
@@ -4412,7 +4396,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 160,
+    "rank": 159,
     "status": "hot"
   },
   {
@@ -4438,7 +4422,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 161,
+    "rank": 160,
     "status": "hot"
   },
   {
@@ -4464,7 +4448,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 162,
+    "rank": 161,
     "status": "hot"
   },
   {
@@ -4490,7 +4474,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 163,
+    "rank": 162,
     "status": "hot"
   },
   {
@@ -4516,7 +4500,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 164,
+    "rank": 163,
     "status": "hot"
   },
   {
@@ -4542,7 +4526,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 165,
+    "rank": 164,
     "status": "hot"
   },
   {
@@ -4568,7 +4552,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 166,
+    "rank": 165,
     "status": "hot"
   },
   {
@@ -4594,7 +4578,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 167,
+    "rank": 166,
     "status": "hot"
   },
   {
@@ -4620,7 +4604,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 168,
+    "rank": 167,
     "status": "hot"
   },
   {
@@ -4636,7 +4620,501 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
+    "rank": 168,
+    "status": "hot"
+  },
+  {
+    "id": "grounded-message-coreset-pruning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Grounded Message Coreset Pruning",
+    "term_zh": "基于地面消息的核心集剪枝方法",
+    "abbreviation": "GMC",
+    "category": "AI技术",
+    "one_liner": "一种基于模型推理逻辑的视觉序列压缩方法，通过保留集体消息中的关键Token，实现高保真、高效率的多模态模型压缩。",
+    "explanation": "GMC是一种图像压缩技术，只保留关键信息，压缩后图片质量不变，效率提升80%。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/471030.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "紫东太初推出GMC核心集剪枝方法，少80%Token仍满血保真多模态能力",
+        "link": "https://www.qbitai.com/2026/08/471030.html",
+        "source": "量子位"
+      }
+    ],
     "rank": 169,
+    "status": "hot"
+  },
+  {
+    "id": "spot",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "SPOT",
+    "term_zh": "采样策略观察树",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种用于解释深度强化学习策略的模型无关、基于采样的框架。",
+    "explanation": "SPOT是一种帮助理解深度强化学习策略的模型，通过观察采样来解释未来行为。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.09967"
+    ],
+    "matched_articles": [
+      {
+        "title": "SPOTting the Future: Lookahead Explanations for Deep Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2608.09967",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 170,
+    "status": "hot"
+  },
+  {
+    "id": "midas",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "MIDAS",
+    "term_zh": "基于不确定性的解耦互信息融合",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种用于处理不完整多模态情感分析问题的统一框架。",
+    "explanation": "MIDAS是一种智能技术，能分析不完整的多模态情感，比如从文字和图片中理解情绪。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.09986"
+    ],
+    "matched_articles": [
+      {
+        "title": "MIDAS: Mutual Information Disentanglement with Uncertainty-Aware Fusion for Incomplete Multimodal Sentiment Analysis",
+        "link": "https://arxiv.org/abs/2608.09986",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 171,
+    "status": "hot"
+  },
+  {
+    "id": "green-ai",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Green AI",
+    "term_zh": "绿色人工智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "关注人工智能环境影响的领域，旨在减少AI模型的能源消耗和碳排放。",
+    "explanation": "绿色人工智能是关注AI环境影响，减少能源消耗和碳排放的领域。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.09998"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Sustainable Artificial Intelligence: A Comprehensive Review and Comparative Analysis of Deep Learning Models' Carbon Footprint",
+        "link": "https://arxiv.org/abs/2608.09998",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 172,
+    "status": "hot"
+  },
+  {
+    "id": "green-dl",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Green DL",
+    "term_zh": "绿色深度学习",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "关注深度学习模型环境影响的领域，旨在减少DL模型的能源消耗和碳排放。",
+    "explanation": "绿色深度学习是减少深度学习模型能耗和碳排放的环保技术。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.09998"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Sustainable Artificial Intelligence: A Comprehensive Review and Comparative Analysis of Deep Learning Models' Carbon Footprint",
+        "link": "https://arxiv.org/abs/2608.09998",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 173,
+    "status": "hot"
+  },
+  {
+    "id": "concept-bottleneck-models-cbms",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Concept Bottleneck Models (CBMs)",
+    "term_zh": "概念瓶颈模型",
+    "abbreviation": "CBMs",
+    "category": "AI概念",
+    "one_liner": "一种通过将预测基于人类可理解的概念来提供可解释框架的模型。",
+    "explanation": "CBMs是一种模型，它用人类能理解的概念来预测，让人更容易理解预测结果。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10004"
+    ],
+    "matched_articles": [
+      {
+        "title": "ReCBM: Uncertainty-Gated Relational Reasoning for Concept Bottleneck Models",
+        "link": "https://arxiv.org/abs/2608.10004",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 174,
+    "status": "hot"
+  },
+  {
+    "id": "recbm",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ReCBM",
+    "term_zh": "不确定性门控关系推理",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种为概念瓶颈模型引入的不确定性门控关系推理框架。",
+    "explanation": "ReCBM是一种帮助模型处理不确定性的推理方法，用于解决概念瓶颈问题。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10004"
+    ],
+    "matched_articles": [
+      {
+        "title": "ReCBM: Uncertainty-Gated Relational Reasoning for Concept Bottleneck Models",
+        "link": "https://arxiv.org/abs/2608.10004",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 175,
+    "status": "hot"
+  },
+  {
+    "id": "self-supervised-block-coordinate-optimizer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Self-supervised Block Coordinate Optimizer",
+    "term_zh": "自监督块坐标优化器",
+    "abbreviation": "SBCO",
+    "category": "AI技术",
+    "one_liner": "一种自监督的优化器，通过近似块坐标上升法学习验证器和策略，以改进智能体的输出。",
+    "explanation": "自监督块坐标优化器，就像一个智能的教练，通过自我学习来提升智能体的表现。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10157"
+    ],
+    "matched_articles": [
+      {
+        "title": "SBCO: Self-Supervised, Verifier-Grounded Harness Optimization For Planning Agents",
+        "link": "https://arxiv.org/abs/2608.10157",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 176,
+    "status": "hot"
+  },
+  {
+    "id": "gflownets",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GFlowNets",
+    "term_zh": "GFlowNets",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于自动识别LLM漏洞的模型，通过训练攻击模型对抗指定受害者模型进行自动化红队测试。",
+    "explanation": "GFlowNets是一种自动检测大型语言模型漏洞的工具，像黑客一样测试模型安全性。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10171"
+    ],
+    "matched_articles": [
+      {
+        "title": "Generating Attacks for LLMs with GFlowNets",
+        "link": "https://arxiv.org/abs/2608.10171",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 177,
+    "status": "hot"
+  },
+  {
+    "id": "vision-wormhole",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Vision Wormhole",
+    "term_zh": "视觉虫洞",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种将视觉特征转换为通用潜在表示的方法，允许异构视觉-语言模型代理交换连续表示。",
+    "explanation": "视觉虫洞：像虫洞一样，让视觉和语言模型能互相理解对方的信息。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10198"
+    ],
+    "matched_articles": [
+      {
+        "title": "Post-Hoc Sparse Coding of Latent Communication Between Vision-Language Model Agents",
+        "link": "https://arxiv.org/abs/2608.10198",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 178,
+    "status": "hot"
+  },
+  {
+    "id": "post-hoc-sparse-coding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "post-hoc sparse coding",
+    "term_zh": "事后稀疏编码",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种在模型训练完成后，对模型输出进行稀疏编码的方法。",
+    "explanation": "事后稀疏编码是在模型训练后，对模型输出进行简化处理的技术。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10198"
+    ],
+    "matched_articles": [
+      {
+        "title": "Post-Hoc Sparse Coding of Latent Communication Between Vision-Language Model Agents",
+        "link": "https://arxiv.org/abs/2608.10198",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 179,
+    "status": "hot"
+  },
+  {
+    "id": "age-aware-training",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Age-Aware Training",
+    "term_zh": "年龄感知训练",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "针对特定年龄段的训练方法，用于优化模型在特定年龄人群上的性能。",
+    "explanation": "年龄感知训练：根据不同年龄段特点，调整模型，提高儿童语音识别准确度。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10206"
+    ],
+    "matched_articles": [
+      {
+        "title": "Edge Phoneme Recognition for Children's Speech through Age-Aware Training",
+        "link": "https://arxiv.org/abs/2608.10206",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 180,
+    "status": "hot"
+  },
+  {
+    "id": "semantic-stop-embedding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Semantic Stop Embedding",
+    "term_zh": "语义停车嵌入",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "将停车信息转换为固定语义嵌入，用于增强公交车辆控制策略。",
+    "explanation": "将公交站牌信息变成数字，帮助公交车更好地控制行驶。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10207"
+    ],
+    "matched_articles": [
+      {
+        "title": "Mitigating Bus Bunching with Reinforcement Learning Enhanced by Semantic Stop Embedding",
+        "link": "https://arxiv.org/abs/2608.10207",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 181,
+    "status": "hot"
+  },
+  {
+    "id": "evaluation-conditioned-training",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Evaluation-Conditioned Training",
+    "term_zh": "评估条件训练",
+    "abbreviation": "ECT",
+    "category": "AI技术",
+    "one_liner": "利用自然语言条件化训练样本，以改善模型在部署时的行为。",
+    "explanation": "ECT是一种训练方法，让AI模型在更严格的监管下表现更好。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10209"
+    ],
+    "matched_articles": [
+      {
+        "title": "Evaluation-Conditioned Training: Teaching Models to Generalize to Stronger Oversight Regimes",
+        "link": "https://arxiv.org/abs/2608.10209",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 182,
+    "status": "hot"
+  },
+  {
+    "id": "parametric-modularity",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Parametric Modularity",
+    "term_zh": "参数模块化",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "大型语言模型中，特定领域参数的集中表现，其移除会选择性损害特定领域。",
+    "explanation": "参数模块化是指大型语言模型中，特定领域的参数集中在一起，移除这些参数会损害该领域的表现。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10214"
+    ],
+    "matched_articles": [
+      {
+        "title": "Decodable But Not Detachable: Training Data Granularity Determines Parametric Modularity in Large Language Models",
+        "link": "https://arxiv.org/abs/2608.10214",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 183,
+    "status": "hot"
+  },
+  {
+    "id": "omnilens",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "OmniLens",
+    "term_zh": "全视域透镜",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种适用于任何模型宽度激活的单镜头家族，通过映射中间激活到输出词汇来解释大型语言模型。",
+    "explanation": "OmniLens是一种能看懂各种语言模型内部运作的透镜，能解释大型语言模型如何工作。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10260"
+    ],
+    "matched_articles": [
+      {
+        "title": "Interpreting Language Model Hidden States at Scale",
+        "link": "https://arxiv.org/abs/2608.10260",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 184,
+    "status": "hot"
+  },
+  {
+    "id": "geometric-belief-interface-gbi",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Geometric Belief Interface (GBI)",
+    "term_zh": "几何信念接口",
+    "abbreviation": "GBI",
+    "category": "AI技术",
+    "one_liner": "一种结合有限边界语义、局部狄利克雷证据和加密协议的数学和工程架构，用于安全网络电子健康记录（EHR）互操作性。",
+    "explanation": "GBI是一种数学工具，用于保护网络医疗数据安全交换。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10300"
+    ],
+    "matched_articles": [
+      {
+        "title": "Logit-Boundary Geometric Belief Interfaces and Sparse Sheaf-Enclave Protocols: A Self-Contained Substrate for Secure Network Electronic Health Record (EHR) Interoperability",
+        "link": "https://arxiv.org/abs/2608.10300",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 185,
+    "status": "hot"
+  },
+  {
+    "id": "neuroevolution-arena",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Neuroevolution Arena",
+    "term_zh": "神经进化竞技场",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个GPU加速的空间生态，由独立参数化的神经网络细胞组成，用于评估更新和继承制度。",
+    "explanation": "神经进化竞技场是一个用电脑模拟的“生态系统”，神经网络细胞在其中互相竞争，进化出更好的学习方式。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10323"
+    ],
+    "matched_articles": [
+      {
+        "title": "Neuroevolution Arena: Nested Ecological Evaluation of Update-and-Inheritance Regimes across Neural Architectures",
+        "link": "https://arxiv.org/abs/2608.10323",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 186,
+    "status": "hot"
+  },
+  {
+    "id": "value-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Value Alignment",
+    "term_zh": "价值对齐",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "确保人工智能系统与人类价值观一致的过程。",
+    "explanation": "价值对齐就是让AI的价值观和人类的价值观一样。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.10327"
+    ],
+    "matched_articles": [
+      {
+        "title": "Toward a Theory of Value in AI Alignment",
+        "link": "https://arxiv.org/abs/2608.10327",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 187,
     "status": "hot"
   }
 ]
