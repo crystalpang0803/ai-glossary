@@ -1,8 +1,8 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 288,
-    "days": 17,
+    "appear_count": 266,
+    "days": 16,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
@@ -43,8 +43,8 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 88,
-    "days": 13,
+    "appear_count": 80,
+    "days": 12,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 78,
-    "days": 17,
+    "appear_count": 70,
+    "days": 16,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -95,8 +95,8 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 51,
-    "days": 17,
+    "appear_count": 48,
+    "days": 16,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
@@ -130,39 +130,6 @@
       }
     ],
     "rank": 4,
-    "status": "hot"
-  },
-  {
-    "id": "world-model",
-    "appear_count": 42,
-    "days": 15,
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
-    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
-    "sources": [
-      "arXiv AI",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26452",
-      "https://huggingface.co/blog/barakor/pai"
-    ],
-    "matched_articles": [
-      {
-        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
-        "link": "https://arxiv.org/abs/2607.26452",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
-        "link": "https://huggingface.co/blog/barakor/pai",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 5,
     "status": "hot"
   },
   {
@@ -207,13 +174,79 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 5,
+    "status": "hot"
+  },
+  {
+    "id": "world-model",
+    "appear_count": 38,
+    "days": 14,
+    "term_en": "World Model",
+    "term_zh": "世界模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "让AI在内部模拟环境如何演变、从而做规划和预测的模型",
+    "explanation": "AI构建一个像世界一样复杂的模型，帮助它预测未来和规划行动。",
+    "sources": [
+      "arXiv AI",
+      "Hugging Face Blog"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26452",
+      "https://huggingface.co/blog/barakor/pai"
+    ],
+    "matched_articles": [
+      {
+        "title": "CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
+        "link": "https://arxiv.org/abs/2607.26452",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "AI, Physical AI, World Models, VLA, VLM, and Other Terms We Should Stop Mixing Together    barakor • May 17 •  5",
+        "link": "https://huggingface.co/blog/barakor/pai",
+        "source": "Hugging Face Blog"
+      }
+    ],
     "rank": 6,
     "status": "hot"
   },
   {
+    "id": "mixture-of-experts",
+    "appear_count": 37,
+    "days": 16,
+    "term_en": "Mixture of Experts",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
+    "category": "AI技术",
+    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
+    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
+    "sources": [
+      "Hugging Face Blog",
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
+        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
+        "source": "Hugging Face Blog"
+      },
+      {
+        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
+        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
+        "source": "NVIDIA Blog"
+      }
+    ],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
     "id": "long-context",
-    "appear_count": 38,
-    "days": 13,
+    "appear_count": 36,
+    "days": 12,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
@@ -246,46 +279,13 @@
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "mixture-of-experts",
-    "appear_count": 38,
-    "days": 17,
-    "term_en": "Mixture of Experts",
-    "term_zh": "专家混合模型",
-    "abbreviation": "MoE",
-    "category": "AI技术",
-    "one_liner": "用多个子网络(专家)分工、按输入动态激活部分专家以提升效率的模型架构",
-    "explanation": "MoE就像一个团队，每个人擅长不同的事情，根据任务自动找到最合适的团队成员，提高工作效率。",
-    "sources": [
-      "Hugging Face Blog",
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
-      "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Training a 2.7B MoE from scratch for $200, one GPU at a time    vovaRL • 5 days ago •  4",
-        "link": "https://huggingface.co/blog/vovaRL/hybernation-models-blog",
-        "source": "Hugging Face Blog"
-      },
-      {
-        "title": "Setting a World Record for MoE Pre-Training on NVIDIA GB300 NVL72",
-        "link": "https://developer.nvidia.com/blog/setting-a-world-record-for-moe-pre-training-on-nvidia-gb300-nvl72/",
-        "source": "NVIDIA Blog"
-      }
-    ],
     "rank": 8,
     "status": "hot"
   },
   {
     "id": "chain-of-thought",
-    "appear_count": 29,
-    "days": 11,
+    "appear_count": 28,
+    "days": 10,
     "term_en": "Chain of Thought",
     "term_zh": "思维链",
     "abbreviation": "CoT",
@@ -325,8 +325,8 @@
   },
   {
     "id": "speculative-decoding",
-    "appear_count": 27,
-    "days": 17,
+    "appear_count": 25,
+    "days": 16,
     "term_en": "Speculative Decoding",
     "term_zh": "推测解码",
     "abbreviation": "",
@@ -347,39 +347,6 @@
       }
     ],
     "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "group-relative-policy-optimization",
-    "appear_count": 18,
-    "days": 12,
-    "term_en": "Group Relative Policy Optimization",
-    "term_zh": "组相对策略优化",
-    "abbreviation": "GRPO",
-    "category": "AI技术",
-    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，让模型像老师一样引导学习。",
-    "sources": [
-      "arXiv CL",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.22996",
-      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Beyond Direct Answering: Aligning Educational LLMs as Socratic Guides via Heuristic Reinforcement Learning",
-        "link": "https://arxiv.org/abs/2607.22996",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  133",
-        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 11,
     "status": "hot"
   },
   {
@@ -422,65 +389,40 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 12,
+    "rank": 11,
     "status": "hot"
   },
   {
-    "id": "kv-cache",
-    "appear_count": 17,
-    "days": 10,
-    "term_en": "KV Cache",
-    "term_zh": "KV Cache",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种用于存储键值对的缓存机制，用于优化AI推理过程。",
-    "explanation": "KV Cache是一种存储键值对的缓存工具，能加快AI处理速度。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/468305.html",
-      "https://www.qbitai.com/2026/08/467840.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "openJiuwen发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
-        "link": "https://www.qbitai.com/2026/08/468305.html",
-        "source": "量子位"
-      },
-      {
-        "title": "AI SSD：大模型推理的存储范式转移",
-        "link": "https://www.qbitai.com/2026/08/467840.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "in-context-learning",
+    "id": "group-relative-policy-optimization",
     "appear_count": 16,
     "days": 11,
-    "term_en": "In-Context Learning",
-    "term_zh": "上下文学习",
-    "abbreviation": "ICL",
+    "term_en": "Group Relative Policy Optimization",
+    "term_zh": "组相对策略优化",
+    "abbreviation": "GRPO",
     "category": "AI技术",
-    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
-    "explanation": "上下文学习让AI像魔法师一样，只需少量提示就能学会新技能，无需从头开始训练。",
+    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
+    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，让模型像老师一样引导学习。",
     "sources": [
-      "NVIDIA Blog"
+      "arXiv CL",
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/"
+      "https://arxiv.org/abs/2607.22996",
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
     ],
     "matched_articles": [
       {
-        "title": "NVIDIA Ising Enables Fully Automated Quantum Computer Calibration with Enhanced In-Context Learning",
-        "link": "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/",
-        "source": "NVIDIA Blog"
+        "title": "Beyond Direct Answering: Aligning Educational LLMs as Socratic Guides via Heuristic Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2607.22996",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  133",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
       }
     ],
-    "rank": 14,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -513,33 +455,65 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 15,
+    "rank": 13,
     "status": "hot"
   },
   {
-    "id": "state-space-model",
-    "appear_count": 13,
+    "id": "in-context-learning",
+    "appear_count": 15,
     "days": 10,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
+    "term_en": "In-Context Learning",
+    "term_zh": "上下文学习",
+    "abbreviation": "ICL",
     "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一个时间旅行者，追踪序列数据的变化，特别擅长处理长序列，而且推理速度很快。",
+    "one_liner": "模型仅凭提示里的少量示例就完成新任务、无需重新训练的能力",
+    "explanation": "上下文学习让AI像魔法师一样，只需少量提示就能学会新技能，无需从头开始训练。",
     "sources": [
-      "arXiv CL"
+      "NVIDIA Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26751"
+      "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/"
     ],
     "matched_articles": [
       {
-        "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
-        "link": "https://arxiv.org/abs/2607.26751",
-        "source": "arXiv CL"
+        "title": "NVIDIA Ising Enables Fully Automated Quantum Computer Calibration with Enhanced In-Context Learning",
+        "link": "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/",
+        "source": "NVIDIA Blog"
       }
     ],
-    "rank": 16,
+    "rank": 14,
+    "status": "hot"
+  },
+  {
+    "id": "kv-cache",
+    "appear_count": 15,
+    "days": 9,
+    "term_en": "KV Cache",
+    "term_zh": "KV Cache",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于存储键值对的缓存机制，用于优化AI推理过程。",
+    "explanation": "KV Cache是一种存储键值对的缓存工具，能加快AI处理速度。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/468305.html",
+      "https://www.qbitai.com/2026/08/467840.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "openJiuwen发布业界首个企业级分布式蜂群架构，联合邮储成功落地金融生产环境",
+        "link": "https://www.qbitai.com/2026/08/468305.html",
+        "source": "量子位"
+      },
+      {
+        "title": "AI SSD：大模型推理的存储范式转移",
+        "link": "https://www.qbitai.com/2026/08/467840.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -583,91 +557,33 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 17,
+    "rank": 16,
     "status": "hot"
   },
   {
-    "id": "test-time-compute",
-    "appear_count": 12,
-    "days": 7,
-    "term_en": "Test-Time Compute",
-    "term_zh": "测试时计算",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "测试时计算就是让AI模型在给出答案时多思考几步，这样就能给出更准确的答案。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27656"
-    ],
-    "matched_articles": [
-      {
-        "title": "Looped Transformers with Source-Centered State Evolution",
-        "link": "https://arxiv.org/abs/2607.27656",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 18,
-    "status": "hot"
-  },
-  {
-    "id": "direct-preference-optimization",
+    "id": "state-space-model",
     "appear_count": 12,
     "days": 9,
-    "term_en": "Direct Preference Optimization",
-    "term_zh": "直接偏好优化",
-    "abbreviation": "DPO",
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
     "category": "AI技术",
-    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
-    "explanation": "直接偏好优化，就是不用单独的奖励模型，直接用我们给出的偏好数据来调整大语言模型的训练，让模型更符合我们的喜好。",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像一个时间旅行者，追踪序列数据的变化，特别擅长处理长序列，而且推理速度很快。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26891"
+      "https://arxiv.org/abs/2607.26751"
     ],
     "matched_articles": [
       {
-        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
-        "link": "https://arxiv.org/abs/2607.26891",
+        "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
+        "link": "https://arxiv.org/abs/2607.26751",
         "source": "arXiv CL"
       }
     ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "vision-transformer",
-    "appear_count": 12,
-    "days": 8,
-    "term_en": "Vision Transformer",
-    "term_zh": "视觉Transformer",
-    "abbreviation": "ViT",
-    "category": "AI技术",
-    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
-    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27763",
-      "https://arxiv.org/abs/2607.27835"
-    ],
-    "matched_articles": [
-      {
-        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
-        "link": "https://arxiv.org/abs/2607.27763",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
-        "link": "https://arxiv.org/abs/2607.27835",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 20,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -708,92 +624,91 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 21,
+    "rank": 18,
     "status": "hot"
   },
   {
-    "id": "reward-model",
+    "id": "vision-transformer",
     "appear_count": 11,
-    "days": 10,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
-    "abbreviation": "",
+    "days": 7,
+    "term_en": "Vision Transformer",
+    "term_zh": "视觉Transformer",
+    "abbreviation": "ViT",
     "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型是让AI学会喜欢什么、不喜欢什么，通过给AI的输出打分来帮助它学习。",
-    "sources": [
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26873",
-      "https://arxiv.org/abs/2607.26094"
-    ],
-    "matched_articles": [
-      {
-        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
-        "link": "https://arxiv.org/abs/2607.26873",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
-        "link": "https://arxiv.org/abs/2607.26094",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "mamba",
-    "appear_count": 10,
-    "days": 6,
-    "term_en": "Mamba",
-    "term_zh": "Mamba架构",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
-    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
+    "one_liner": "把图像切成小块当作序列、用Transformer处理的视觉模型",
+    "explanation": "视觉Transformer像拼图一样分析图像，让AI看懂图片内容。",
     "sources": [
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.27811"
+      "https://arxiv.org/abs/2607.27763",
+      "https://arxiv.org/abs/2607.27835"
     ],
     "matched_articles": [
       {
-        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
-        "link": "https://arxiv.org/abs/2607.27811",
+        "title": "DS@GT ARC at ImageCLEFmedical 2026: Architectural Diversity for Concept Detection and Foundation-Model Scaling for Caption Prediction in Medical Image Analysis",
+        "link": "https://arxiv.org/abs/2607.27763",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "SAFViT: Spatial Attention Fusion Gating for Vision Transformer-Based Nucleus Segmentation and Classification",
+        "link": "https://arxiv.org/abs/2607.27835",
         "source": "arXiv CV"
       }
     ],
-    "rank": 23,
+    "rank": 19,
     "status": "hot"
   },
   {
-    "id": "retrieval-augmented-reasoning",
+    "id": "direct-preference-optimization",
     "appear_count": 10,
-    "days": 10,
-    "term_en": "Retrieval-Augmented Reasoning",
-    "term_zh": "检索增强推理",
-    "abbreviation": "",
+    "days": 8,
+    "term_en": "Direct Preference Optimization",
+    "term_zh": "直接偏好优化",
+    "abbreviation": "DPO",
     "category": "AI技术",
-    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
+    "one_liner": "不需独立奖励模型、直接用偏好数据对齐大模型的训练方法",
+    "explanation": "直接偏好优化，就是不用单独的奖励模型，直接用我们给出的偏好数据来调整大语言模型的训练，让模型更符合我们的喜好。",
     "sources": [
-      "InfoQ"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
+      "https://arxiv.org/abs/2607.26891"
     ],
     "matched_articles": [
       {
-        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
-        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
-        "source": "InfoQ"
+        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
+        "link": "https://arxiv.org/abs/2607.26891",
+        "source": "arXiv CL"
       }
     ],
-    "rank": 24,
+    "rank": 20,
+    "status": "hot"
+  },
+  {
+    "id": "test-time-compute",
+    "appear_count": 10,
+    "days": 6,
+    "term_en": "Test-Time Compute",
+    "term_zh": "测试时计算",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
+    "explanation": "测试时计算就是让AI模型在给出答案时多思考几步，这样就能给出更准确的答案。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27656"
+    ],
+    "matched_articles": [
+      {
+        "title": "Looped Transformers with Source-Centered State Evolution",
+        "link": "https://arxiv.org/abs/2607.27656",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -825,7 +740,40 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 25,
+    "rank": 22,
+    "status": "hot"
+  },
+  {
+    "id": "reward-model",
+    "appear_count": 10,
+    "days": 9,
+    "term_en": "Reward Model",
+    "term_zh": "奖励模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
+    "explanation": "奖励模型是让AI学会喜欢什么、不喜欢什么，通过给AI的输出打分来帮助它学习。",
+    "sources": [
+      "arXiv CL",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26873",
+      "https://arxiv.org/abs/2607.26094"
+    ],
+    "matched_articles": [
+      {
+        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2607.26873",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
+        "link": "https://arxiv.org/abs/2607.26094",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -865,6 +813,58 @@
         "title": "CAGE: Certified Authorization under Typed-Return Uncertainty for Tool-Using Agents",
         "link": "https://arxiv.org/abs/2607.29190",
         "source": "arXiv AI"
+      }
+    ],
+    "rank": 24,
+    "status": "hot"
+  },
+  {
+    "id": "retrieval-augmented-reasoning",
+    "appear_count": 9,
+    "days": 9,
+    "term_en": "Retrieval-Augmented Reasoning",
+    "term_zh": "检索增强推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
+    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
+        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 25,
+    "status": "hot"
+  },
+  {
+    "id": "mamba",
+    "appear_count": 8,
+    "days": 5,
+    "term_en": "Mamba",
+    "term_zh": "Mamba架构",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于状态空间模型的序列架构,在长序列上比Transformer更省算力",
+    "explanation": "Mamba架构像是一个节省能源的机器，能高效处理长串信息，比其他方法更快更省力。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27811"
+    ],
+    "matched_articles": [
+      {
+        "title": "SPFM-Net: Semantic-Prior-Guided Frequency-Constrained Mamba for Invisible Watermark Attack",
+        "link": "https://arxiv.org/abs/2607.27811",
+        "source": "arXiv CV"
       }
     ],
     "rank": 26,
@@ -6243,6 +6243,110 @@
       }
     ],
     "rank": 228,
+    "status": "hot"
+  },
+  {
+    "id": "daikon-no-hana-capital",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Daikon no Hana Capital",
+    "term_zh": "萝卜花",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "“萝卜花资本”可能是一家投资公司，投资了杭州95后小伙5亿买硅谷城堡的项目。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/474245.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "杭州95后小伙，5亿买走硅谷城堡",
+        "link": "https://www.qbitai.com/2026/08/474245.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 229,
+    "status": "hot"
+  },
+  {
+    "id": "hai",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "HAI",
+    "term_zh": "以人为本人工智能研究院",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "HAI研究院专注于研究让AI更好地服务于人类，而非取代人类。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/474140.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "李飞飞最新访谈：AI咋能代替人呢？",
+        "link": "https://www.qbitai.com/2026/08/474140.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 230,
+    "status": "hot"
+  },
+  {
+    "id": "coordination-engineering",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Coordination Engineering",
+    "term_zh": "协同工程",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "协同工程是让AI助手变成你的团队伙伴，一起工作更高效。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/473972.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+        "link": "https://www.qbitai.com/2026/08/473972.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 231,
+    "status": "hot"
+  },
+  {
+    "id": "coding-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Coding Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "编码智能体，就是能执行编程任务的智能助手。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/473669.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
+        "link": "https://www.qbitai.com/2026/08/473669.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 232,
     "status": "hot"
   }
 ]
