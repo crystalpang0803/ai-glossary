@@ -132,39 +132,42 @@
     "status": "hot"
   },
   {
-    "id": "sparse-computation",
-    "appear_count": 3,
+    "id": "mixture-of-experts-moe",
+    "appear_count": 4,
     "days": 1,
-    "term_en": "Sparse Computation",
-    "term_zh": "稀疏计算",
-    "abbreviation": "",
+    "term_en": "Mixture-of-Experts (MoE)",
+    "term_zh": "专家混合模型",
+    "abbreviation": "MoE",
     "category": "AI技术",
-    "one_liner": "通过激活模型与数据中的稀疏特性，提升算力资源利用效率的计算方法。",
-    "explanation": "稀疏计算就是利用数据中信息少的特性，提高计算效率，就像只关注重要的信息一样。",
+    "one_liner": "一种通过稀疏激活提高计算效率的大型语言模型架构。",
+    "explanation": "MoE是一种高效的大语言模型，通过多个专家模块协同工作，提高处理速度。",
     "sources": [
       "arXiv AI",
+      "arXiv CV",
+      "arXiv LG",
       "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.06398",
-      "https://arxiv.org/abs/2608.06912",
-      "https://www.qbitai.com/2026/08/469454.html"
+      "https://arxiv.org/abs/2608.13565",
+      "https://arxiv.org/abs/2608.14085",
+      "https://arxiv.org/abs/2608.13911",
+      "https://www.qbitai.com/2026/08/474245.html"
     ],
     "matched_articles": [
       {
-        "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
-        "link": "https://arxiv.org/abs/2608.06398",
+        "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+        "link": "https://arxiv.org/abs/2608.13565",
         "source": "arXiv AI"
       },
       {
-        "title": "Fast LapSum: Exact Differentiable Top-k at Million Scale",
-        "link": "https://arxiv.org/abs/2608.06912",
-        "source": "arXiv AI"
+        "title": "CoDS: Robust Collaborative Perception via Expert-driven Detection and BEV Segmentation",
+        "link": "https://arxiv.org/abs/2608.14085",
+        "source": "arXiv CV"
       },
       {
-        "title": "墨芯成立稀疏计算产学研联盟，以生态协同突破产业化壁垒",
-        "link": "https://www.qbitai.com/2026/08/469454.html",
-        "source": "量子位"
+        "title": "MedMix: Specialization-Consistent Federated Sparse MoEs under Modality Heterogeneity",
+        "link": "https://arxiv.org/abs/2608.13911",
+        "source": "arXiv LG"
       }
     ],
     "rank": 4,
@@ -773,55 +776,158 @@
     "status": "hot"
   },
   {
-    "id": "multi-semantic-basis-graph-foundation-model-msb-gfm",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Multi-Semantic Basis Graph Foundation Model (MSB-GFM)",
-    "term_zh": "多语义基图基础模型",
-    "abbreviation": "MSB-GFM",
-    "category": "AI概念",
-    "one_liner": "一种用于跨领域多标签节点分类的图基础模型，通过多语义基表示学习建模多标签节点。",
-    "explanation": "这是一种图模型，能识别图中不同标签的节点，通过学习节点多种含义来分类。",
+    "id": "coordination-engineering",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Coordination Engineering",
+    "term_zh": "协同工程",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一种组织和管理复杂任务的方法，通过协调不同角色和环节提高效率。",
+    "explanation": "协同工程是一种让不同角色和环节高效合作的方法，就像AI助手变成并肩作战的团队。",
     "sources": [
-      "arXiv AI"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.06394"
+      "https://www.qbitai.com/2026/08/473972.html"
     ],
     "matched_articles": [
       {
-        "title": "Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning",
-        "link": "https://arxiv.org/abs/2608.06394",
-        "source": "arXiv AI"
+        "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+        "link": "https://www.qbitai.com/2026/08/473972.html",
+        "source": "量子位"
       }
     ],
     "rank": 26,
     "status": "hot"
   },
   {
-    "id": "entropy-aware-sparse-expert-routing",
-    "appear_count": 1,
+    "id": "modular-cognitive-architecture",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Entropy-Aware Sparse Expert Routing",
-    "term_zh": "熵感知稀疏专家路由",
+    "term_en": "Modular Cognitive Architecture",
+    "term_zh": "模块化认知架构",
     "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种基于熵感知的稀疏专家路由机制，用于动态字节补丁的Mixture-of-Experts架构。",
-    "explanation": "这种路由机制能智能选择专家，让大语言模型更高效。",
+    "category": "AI概念",
+    "one_liner": "一种在智能系统中模仿大脑功能专化的架构，通过不同网络处理不同任务。",
+    "explanation": "模块化认知架构就像大脑一样，把智能系统分成不同的模块，每个模块负责处理特定任务。",
     "sources": [
-      "arXiv AI"
+      "arXiv AI",
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.06398"
+      "https://arxiv.org/abs/2608.13567"
     ],
     "matched_articles": [
       {
-        "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
-        "link": "https://arxiv.org/abs/2608.06398",
+        "title": "Modular Cognitive Architecture Emerges in Large Language Models",
+        "link": "https://arxiv.org/abs/2608.13567",
         "source": "arXiv AI"
+      },
+      {
+        "title": "Modular Cognitive Architecture Emerges in Large Language Models",
+        "link": "https://arxiv.org/abs/2608.13567",
+        "source": "arXiv CL"
       }
     ],
     "rank": 27,
+    "status": "hot"
+  },
+  {
+    "id": "stable-miscalibration",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Stable Miscalibration",
+    "term_zh": "稳定误校准",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "在大型语言模型中，指在微小扰动下，自信的错误答案保持局部稳定的现象。",
+    "explanation": "大型语言模型在微小变化下，即使错误也保持自信，不易纠正。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13591"
+    ],
+    "matched_articles": [
+      {
+        "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
+        "link": "https://arxiv.org/abs/2608.13591",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
+        "link": "https://arxiv.org/abs/2608.13591",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 28,
+    "status": "hot"
+  },
+  {
+    "id": "misunderstanding-generation",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Misunderstanding Generation",
+    "term_zh": "误解生成",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "在沟通过程中，由于信息传递错误导致误解的产生。",
+    "explanation": "误解生成：沟通时信息传递错误，导致双方理解不一致。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13604"
+    ],
+    "matched_articles": [
+      {
+        "title": "Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents",
+        "link": "https://arxiv.org/abs/2608.13604",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents",
+        "link": "https://arxiv.org/abs/2608.13604",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "active-perception",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Active Perception",
+    "term_zh": "主动感知",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "机器人通过主动改变观察来获取信息的方法。",
+    "explanation": "主动感知就是机器人主动观察周围环境来获取信息。",
+    "sources": [
+      "arXiv AI",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13605",
+      "https://www.qbitai.com/2026/08/474518.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Active Perception for Embodied Disambiguation",
+        "link": "https://arxiv.org/abs/2608.13605",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "人形机器人开始打国球了！两台机器人完整打完11分制比赛",
+        "link": "https://www.qbitai.com/2026/08/474518.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -847,7 +953,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 28,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -873,7 +979,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 29,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -899,7 +1005,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 30,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -925,7 +1031,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 31,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -951,7 +1057,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 32,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -977,7 +1083,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1003,7 +1109,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 34,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1029,7 +1135,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1055,7 +1161,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 36,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1081,7 +1187,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 37,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1107,7 +1213,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 38,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1133,7 +1239,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 39,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1159,7 +1265,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 40,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1185,7 +1291,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 41,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1211,7 +1317,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 42,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1237,7 +1343,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1263,7 +1369,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1289,7 +1395,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 45,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1315,7 +1421,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1341,7 +1447,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1357,7 +1463,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 48,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1383,7 +1489,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 49,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1409,7 +1515,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 50,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1435,7 +1541,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 51,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1461,7 +1567,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 52,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1487,7 +1593,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1513,7 +1619,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1539,7 +1645,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1565,7 +1671,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1591,7 +1697,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1617,7 +1723,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1643,7 +1749,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1669,7 +1775,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1695,7 +1801,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1721,7 +1827,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1747,7 +1853,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1773,7 +1879,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -1799,7 +1905,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -1825,7 +1931,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 66,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -1851,7 +1957,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -1877,7 +1983,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 68,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -1903,7 +2009,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 69,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -1929,7 +2035,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 70,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -1955,7 +2061,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 71,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -1981,7 +2087,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 72,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2007,7 +2113,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 73,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2033,7 +2139,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 74,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2059,7 +2165,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 75,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2085,7 +2191,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2111,7 +2217,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 77,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2137,7 +2243,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 78,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2163,7 +2269,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 79,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2189,7 +2295,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 80,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2215,7 +2321,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 81,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2241,7 +2347,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 82,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2267,7 +2373,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 83,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2293,7 +2399,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 84,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2319,7 +2425,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 85,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2345,7 +2451,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 86,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2371,7 +2477,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 87,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2397,7 +2503,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 88,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2423,7 +2529,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2449,7 +2555,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2475,7 +2581,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2501,7 +2607,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 92,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2527,33 +2633,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 93,
-    "status": "hot"
-  },
-  {
-    "id": "coordination-engineering",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Coordination Engineering",
-    "term_zh": "协同工程",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "协同工程是让AI助手变成你的团队伙伴，一起工作更高效。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/473972.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
-        "link": "https://www.qbitai.com/2026/08/473972.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 94,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2579,7 +2659,309 @@
         "source": "量子位"
       }
     ],
-    "rank": 95,
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "workswarm",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "WorkSwarm",
+    "term_zh": "WorkSwarm蜂群办公智能体",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种办公智能体，通过协作多个AI代理（Agent）完成复杂任务。",
+    "explanation": "WorkSwarm就像一群智能助手，一起帮你完成复杂工作，像团队一样并肩作战。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/473972.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+        "link": "https://www.qbitai.com/2026/08/473972.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "reward-free-judging-rubric",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reward-Free Judging Rubric",
+    "term_zh": "无奖励评判标准",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种不依赖奖励信号，通过分析行为轨迹来评估智能体表现的评判标准。",
+    "explanation": "无奖励评判标准，就是不用奖励来评价智能体表现，而是看它的行为轨迹。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13564"
+    ],
+    "matched_articles": [
+      {
+        "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+        "link": "https://arxiv.org/abs/2608.13564",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "rubricforge",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "RubricForge",
+    "term_zh": "RubricForge",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种通过反思进化算法从标注轨迹中诱导评判标准的方法。",
+    "explanation": "RubricForge是一种通过分析标注过程自动生成评价标准的方法，用于更公正地评估智能体。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13564"
+    ],
+    "matched_articles": [
+      {
+        "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+        "link": "https://arxiv.org/abs/2608.13564",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "magnitude-based-expert-masking",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Magnitude-Based Expert Masking",
+    "term_zh": "基于幅度的专家掩码",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种基于专家权重幅度的掩码技术，用于模型压缩和敏感性分析。",
+    "explanation": "用专家权重幅度做掩码，帮助模型减肥，还能分析它对数据的敏感度。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13565"
+    ],
+    "matched_articles": [
+      {
+        "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+        "link": "https://arxiv.org/abs/2608.13565",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "llm-serving",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM Serving",
+    "term_zh": "大型语言模型服务",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "为大型语言模型提供服务的系统，用于处理和响应用户请求。",
+    "explanation": "LLM Serving就像一个超级大脑，专门处理和回应人们用语言提出的问题。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13573"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Year in LLM Serving: Workload Evolution, Caching and Load-Balancing",
+        "link": "https://arxiv.org/abs/2608.13573",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "local-first-runtime",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Local-First Runtime",
+    "term_zh": "本地优先运行时",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种运行时环境，优先考虑本地执行和状态管理。",
+    "explanation": "本地优先运行时，就是先在本地电脑上运行，不依赖远程服务器。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+        "link": "https://arxiv.org/abs/2608.13574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "tool-using-llm-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Tool-Using LLM Agents",
+    "term_zh": "使用工具的大型语言模型代理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "能够调用工具、修改本地状态并与外部协议交互的大型语言模型代理。",
+    "explanation": "AI助手能使用工具、改变状态，与外界交流。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+        "link": "https://arxiv.org/abs/2608.13574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "governance-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Governance Model",
+    "term_zh": "治理模型",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "一套管理、控制和监督智能系统行为的规则和策略。",
+    "explanation": "治理模型是管理AI行为的规则和策略，确保AI安全可靠。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+        "link": "https://arxiv.org/abs/2608.13574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "structured-event-interface",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Structured Event Interface",
+    "term_zh": "结构化事件接口",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于定义和交换结构化事件信息的接口。",
+    "explanation": "结构化事件接口，就像一个专门用来传递有序信息的快递员。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Agentao: A Governed Local-First Runtime for Tool-Using LLM Agents",
+        "link": "https://arxiv.org/abs/2608.13574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "behavioral-consistency-metric-bcm",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Behavioral Consistency Metric (BCM)",
+    "term_zh": "行为一致性指标",
+    "abbreviation": "BCM",
+    "category": "AI概念",
+    "one_liner": "用于量化语言模型代理在不同任务中行为一致性的指标。",
+    "explanation": "衡量语言模型在不同任务表现是否一致的指标。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13598"
+    ],
+    "matched_articles": [
+      {
+        "title": "Measuring Cross-Task Behavioral Consistency in Language Model Agents",
+        "link": "https://arxiv.org/abs/2608.13598",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "embodied-disambiguation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Embodied Disambiguation",
+    "term_zh": "具身消歧",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "机器人通过物理信息获取和用户意图澄清来解决问题的过程。",
+    "explanation": "机器人通过感觉和了解用户意图来准确理解问题。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.13605"
+    ],
+    "matched_articles": [
+      {
+        "title": "Active Perception for Embodied Disambiguation",
+        "link": "https://arxiv.org/abs/2608.13605",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "human-ai-teams",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Human-AI Teams",
+    "term_zh": "人机协作团队",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "由人类和人工智能系统组成的协作团队，共同完成任务。",
+    "explanation": "人机协作团队就是人和AI一起工作，互相配合完成任务。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 109,
     "status": "hot"
   }
 ]
