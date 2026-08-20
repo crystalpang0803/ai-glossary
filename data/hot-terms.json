@@ -1,5 +1,289 @@
 [
   {
+    "id": "dag",
+    "rank": 1,
+    "term_en": "DAG",
+    "term_zh": "有向无环图",
+    "abbreviation": "DAG",
+    "category": "AI技术",
+    "one_liner": "一种表示任务依赖关系的图结构。",
+    "appear_count": 3,
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16890",
+      "https://arxiv.org/abs/2608.17810",
+      "https://arxiv.org/abs/2608.17132"
+    ],
+    "matched_articles": [
+      {
+        "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
+        "link": "https://arxiv.org/abs/2608.16890",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Interpretable Humans, Alien LLMs: Expert Analysis of Latent Structures in Assessment Responses",
+        "link": "https://arxiv.org/abs/2608.17810",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Causal Discovery in Equal Variance Linear Gaussian DAGs via SURE-Tuned Ridge Regression",
+        "link": "https://arxiv.org/abs/2608.17132",
+        "source": "arXiv LG"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "DAG是一种图，用来表示任务间的先后顺序，就像做事情的步骤图。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "previs",
+    "rank": 2,
+    "term_en": "Previs",
+    "term_zh": "预演",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "影视制作中用于视觉预演的3D模型。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/475476.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”",
+        "link": "https://www.qbitai.com/2026/08/475476.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "Previs是影视制作中用3D模型提前“试演”画面，让导演和制作团队先看看效果。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "blockout",
+    "rank": 3,
+    "term_en": "Blockout",
+    "term_zh": "白模",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "影视制作中用于预演的粗略3D模型。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/475476.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”",
+        "link": "https://www.qbitai.com/2026/08/475476.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "白模是影视制作中用来预演的简单3D模型，就像提前搭好的舞台布景。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "pharmaverse",
+    "rank": 4,
+    "term_en": "Pharmaverse",
+    "term_zh": "药企领域知识库",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用于药物研发领域知识管理的数据库。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16890"
+    ],
+    "matched_articles": [
+      {
+        "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
+        "link": "https://arxiv.org/abs/2608.16890",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "药企领域知识库，帮研发人员管理药物研究信息，提高临床试验编程可靠性。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "aegis",
+    "rank": 5,
+    "term_en": "Aegis",
+    "term_zh": "盾牌系统",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "用于Agentic AI的运行时治理系统。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16891"
+    ],
+    "matched_articles": [
+      {
+        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+        "link": "https://arxiv.org/abs/2608.16891",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "盾牌系统是管理AI行为，确保AI安全可靠运行的系统。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "prompt-policy-conditioning",
+    "rank": 6,
+    "term_en": "Prompt-policy conditioning",
+    "term_zh": "提示词-策略条件化",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "通过提示词和策略来控制AI模型行为的方法。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16891"
+    ],
+    "matched_articles": [
+      {
+        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+        "link": "https://arxiv.org/abs/2608.16891",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "用提示词和策略指导AI，让它按规则行事。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "provenance-server-side",
+    "rank": 7,
+    "term_en": "Provenance server-side",
+    "term_zh": "来源服务器端",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "在服务器端验证数据来源的方法。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16891"
+    ],
+    "matched_articles": [
+      {
+        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+        "link": "https://arxiv.org/abs/2608.16891",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "来源服务器端：检查数据来源是否可靠，确保数据安全。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "fail-closed-execution",
+    "rank": 8,
+    "term_en": "Fail-closed execution",
+    "term_zh": "故障关闭执行",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "在不确定情况下停止执行的策略。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16891"
+    ],
+    "matched_articles": [
+      {
+        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+        "link": "https://arxiv.org/abs/2608.16891",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "故障关闭执行：AI遇到不确定情况时，会自动停止执行，确保安全。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "senate-style-settlement",
+    "rank": 9,
+    "term_en": "Senate-style settlement",
+    "term_zh": "参议院式解决",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "基于多数投票的授权路径。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.16891"
+    ],
+    "matched_articles": [
+      {
+        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+        "link": "https://arxiv.org/abs/2608.16891",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-08-20",
+    "status": "hot",
+    "explanation": "参议院式解决：像参议院那样，多数人同意后才能决定，确保决策更安全。",
+    "first_appeared": "2026-08-20T01:42:30.685Z",
+    "last_appeared": "2026-08-20T01:42:30.685Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
     "id": "flash-charging",
     "rank": 1,
     "term_en": "Flash Charging",
@@ -7,7 +291,7 @@
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "一种快速充电技术，可在短时间内为电池充电至较高比例。",
-    "appear_count": 4,
+    "appear_count": 3,
     "sources": [
       "量子位"
     ],
@@ -35,7 +319,7 @@
       }
     ],
     "date": "2026-08-19",
-    "status": "hot",
+    "status": "warm",
     "explanation": "快速充电技术，像闪电一样快，几分钟就能充大半电。",
     "first_appeared": "2026-08-19T01:44:16.328Z",
     "last_appeared": "2026-08-19T01:44:16.328Z",
@@ -50,7 +334,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "用于机器人训练的模型，模拟真实世界中的物理和视觉规律。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "量子位"
     ],
@@ -71,7 +355,7 @@
       }
     ],
     "date": "2026-08-19",
-    "status": "hot",
+    "status": "warm",
     "explanation": "世界模型是机器人训练时模拟真实世界的模型，帮助机器人理解物理和视觉规律。",
     "first_appeared": "2026-08-19T01:44:16.328Z",
     "last_appeared": "2026-08-19T01:44:16.328Z",
@@ -86,7 +370,7 @@
     "abbreviation": "KL散",
     "category": "AI技术",
     "one_liner": "衡量两个概率分布差异的度量。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI"
     ],
@@ -107,568 +391,8 @@
       }
     ],
     "date": "2026-08-19",
-    "status": "hot",
+    "status": "warm",
     "explanation": "KL散度就像比较两个箱子装东西的差距，看它们有多不一样。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "interactive-world-simulator",
-    "rank": 4,
-    "term_en": "Interactive World Simulator",
-    "term_zh": "交互式世界仿真器",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种用于机器人训练的仿真器，提供跨本体、多视角和力-触觉预测。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/474838.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "π0引用的中国团队，又出手了：世界仿真器新作发布",
-        "link": "https://www.qbitai.com/2026/08/474838.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "交互式世界仿真器：模拟真实世界，让机器人训练更逼真。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "physical-intelligence",
-    "rank": 5,
-    "term_en": "Physical Intelligence",
-    "term_zh": "物理智能",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "研究机器人如何通过物理交互来感知和操作环境。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/474838.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "π0引用的中国团队，又出手了：世界仿真器新作发布",
-        "link": "https://www.qbitai.com/2026/08/474838.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "物理智能就是让机器人像人一样通过触碰和操作来感知周围世界。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "action-controllability",
-    "rank": 6,
-    "term_en": "Action Controllability",
-    "term_zh": "动作可控性",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在机器人世界中，动作变化后世界也必须随之变化。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/474838.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "π0引用的中国团队，又出手了：世界仿真器新作发布",
-        "link": "https://www.qbitai.com/2026/08/474838.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "动作可控性就是机器人做动作后，周围环境也会跟着变化，就像玩游戏一样。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "mycontext",
-    "rank": 7,
-    "term_en": "MyContext",
-    "term_zh": "MyContext",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "将分散的个人工作数据加工成智能代理可理解的上下文。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/474647.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "阿里杀进Agent上下文战场：钉钉聊天、企业文档、工作数据终于要被Agent吃进去了",
-        "link": "https://www.qbitai.com/2026/08/474647.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "MyContext：把你的工作数据变成AI能懂的语言，让AI帮你处理工作。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "metacognitive-sensitivity",
-    "rank": 8,
-    "term_en": "Metacognitive Sensitivity",
-    "term_zh": "元认知敏感性",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "模型在推理过程中对证据质量和不确定性的感知能力。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14552"
-    ],
-    "matched_articles": [
-      {
-        "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
-        "link": "https://arxiv.org/abs/2608.14552",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "模型能感知推理证据好坏和不确定性。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "medical-reasoning",
-    "rank": 9,
-    "term_en": "Medical Reasoning",
-    "term_zh": "医学推理",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "在医学领域应用逻辑推理进行诊断和决策的过程。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14552"
-    ],
-    "matched_articles": [
-      {
-        "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
-        "link": "https://arxiv.org/abs/2608.14552",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "医学推理就是医生用逻辑思考来诊断疾病和做治疗决策。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "abstract-perceptual-reasoning",
-    "rank": 10,
-    "term_en": "Abstract Perceptual Reasoning",
-    "term_zh": "抽象感知推理",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "从动态、生成性过程中推断未见信息的能力。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14558"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
-        "link": "https://arxiv.org/abs/2608.14558",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "AI通过观察动态变化，推断出未见过的信息。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "acousto-kinematic-word-inference",
-    "rank": 11,
-    "term_en": "Acousto-kinematic word inference",
-    "term_zh": "声动学词汇推理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过音频笔迹和手部动作视频解码文字的能力。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14558"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
-        "link": "https://arxiv.org/abs/2608.14558",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "通过听声音和看手部动作，AI能猜出你想说的话。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "belief-distribution",
-    "rank": 12,
-    "term_en": "Belief distribution",
-    "term_zh": "信念分布",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "对潜在世界状态的信念概率分布。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14559"
-    ],
-    "matched_articles": [
-      {
-        "title": "When to Communicate: Belief Distributions and KL Divergence for Principled Gating in Multi-Agent RL",
-        "link": "https://arxiv.org/abs/2608.14559",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "信念分布是预测未来可能发生情况的概率分布。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "resource-description-framework-web-ontology-language-rdf-owl",
-    "rank": 13,
-    "term_en": "Resource Description Framework/Web Ontology Language (RDF/OWL)",
-    "term_zh": "资源描述框架/网络本体语言（RDF/OWL）",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用于描述和交换知识本体和语义信息的语言。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14562"
-    ],
-    "matched_articles": [
-      {
-        "title": "Global AI Regulations for FAIR and Ethics in High-Risk Use Cases: A Comparative Review",
-        "link": "https://arxiv.org/abs/2608.14562",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "RDF/OWL是一种描述和交换知识本体的语言，让机器能理解信息。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "shapes-constraint-language-shacl",
-    "rank": 14,
-    "term_en": "Shapes Constraint Language (SHACL)",
-    "term_zh": "形状约束语言（SHACL）",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用于验证数据模型是否符合特定形状约束的语言。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14562"
-    ],
-    "matched_articles": [
-      {
-        "title": "Global AI Regulations for FAIR and Ethics in High-Risk Use Cases: A Comparative Review",
-        "link": "https://arxiv.org/abs/2608.14562",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "SHACL是一种检查数据是否符合特定规则的语言，确保数据质量。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "provenance-ontology-prov-o",
-    "rank": 15,
-    "term_en": "Provenance Ontology (PROV-O)",
-    "term_zh": "来源本体（PROV-O）",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用于描述数据来源和变化历史的本体。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14562"
-    ],
-    "matched_articles": [
-      {
-        "title": "Global AI Regulations for FAIR and Ethics in High-Risk Use Cases: A Comparative Review",
-        "link": "https://arxiv.org/abs/2608.14562",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "PROV-O是描述数据来源和变化历史的工具，帮助了解数据“从哪来，怎么变”。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "ai-lock-in",
-    "rank": 16,
-    "term_en": "AI Lock-In",
-    "term_zh": "AI锁定",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "过度依赖AI系统导致人类技能退化，降低独立功能能力，并创造系统脆弱性的现象。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14565"
-    ],
-    "matched_articles": [
-      {
-        "title": "Position: AI Lock-In Is in Progress, and We Must Be Prepared",
-        "link": "https://arxiv.org/abs/2608.14565",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "AI锁定就像过度依赖手机，导致忘了用笔写字，还让手机容易出问题。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "credit-system",
-    "rank": 17,
-    "term_en": "Credit System",
-    "term_zh": "信用系统",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "一种通过奖励和惩罚机制激励良好行为和抑制不良行为的系统。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14571"
-    ],
-    "matched_articles": [
-      {
-        "title": "Position: Want Better ML Reviews? Stop Asking Nicely and Start Incentivizing with a Credit System",
-        "link": "https://arxiv.org/abs/2608.14571",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "信用系统就像游戏里的积分，做好事得奖励，做坏事受惩罚。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "temporal-graph-convolutional-networks-t-gcns",
-    "rank": 18,
-    "term_en": "Temporal Graph Convolutional Networks (T-GCNs)",
-    "term_zh": "时序图卷积网络",
-    "abbreviation": "T-GCNs",
-    "category": "AI技术",
-    "one_liner": "一种结合时序信息和图结构信息的神经网络。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14578"
-    ],
-    "matched_articles": [
-      {
-        "title": "Longitudinal and Graph-Augmented Prediction of Adolescent Substance Use Onset in the ABCD Study",
-        "link": "https://arxiv.org/abs/2608.14578",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "T-GCNs是一种能同时处理时间和图数据的神经网络，用于预测青少年药物使用情况。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "self-correcting-knowledge-guided-iterative-large-language-model-agent",
-    "rank": 19,
-    "term_en": "Self-correcting Knowledge-guided Iterative Large Language Model Agent",
-    "term_zh": "自纠正知识引导迭代大型语言模型智能体",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种结合自纠正机制和知识引导的迭代大型语言模型智能体。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14579"
-    ],
-    "matched_articles": [
-      {
-        "title": "SKILL: Self-correcting Knowledge-guided Iterative Large Language Model Agent for Logic Optimization",
-        "link": "https://arxiv.org/abs/2608.14579",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "这个AI智能体能自我纠正错误，还能根据知识不断改进，就像一个不断学习的超级大脑。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "pda-metrics",
-    "rank": 20,
-    "term_en": "PDA Metrics",
-    "term_zh": "PDA度量",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "用于评估逻辑优化性能的度量指标。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14579"
-    ],
-    "matched_articles": [
-      {
-        "title": "SKILL: Self-correcting Knowledge-guided Iterative Large Language Model Agent for Logic Optimization",
-        "link": "https://arxiv.org/abs/2608.14579",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "PDA度量是衡量逻辑优化效果的工具，就像用尺子量衣服合不合身。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "open-genai-stack-ogx",
-    "rank": 21,
-    "term_en": "Open GenAI Stack (OGX)",
-    "term_zh": "开放通用人工智能栈",
-    "abbreviation": "OGX",
-    "category": "AI工程",
-    "one_liner": "一个开源的通用人工智能应用服务器和Python库。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.14580"
-    ],
-    "matched_articles": [
-      {
-        "title": "OGX: An Open-Source, Vendor-Neutral Generative AI Application Server",
-        "link": "https://arxiv.org/abs/2608.14580",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "OGX是一个开源的AI应用服务器，像一套工具，方便大家用Python写AI程序。",
-    "first_appeared": "2026-08-19T01:44:16.328Z",
-    "last_appeared": "2026-08-19T01:44:16.328Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "flops",
-    "rank": 22,
-    "term_en": "α-FLOPs",
-    "term_zh": "α-FLOPs",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种用于估计模型执行时间的FLOPs改进度量。",
-    "appear_count": 1,
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "date": "2026-08-19",
-    "status": "hot",
-    "explanation": "α-FLOPs是衡量AI模型运行速度的指标，比传统FLOPs更准确。",
     "first_appeared": "2026-08-19T01:44:16.328Z",
     "last_appeared": "2026-08-19T01:44:16.328Z",
     "rank_change": null,
@@ -682,7 +406,7 @@
     "abbreviation": "MoE",
     "category": "AI技术",
     "one_liner": "一种通过稀疏激活提高计算效率的大型语言模型架构。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv AI",
       "arXiv CV",
@@ -721,151 +445,6 @@
     "is_new": true
   },
   {
-    "id": "modular-cognitive-architecture",
-    "rank": 2,
-    "term_en": "Modular Cognitive Architecture",
-    "term_zh": "模块化认知架构",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "一种在智能系统中模仿大脑功能专化的架构，通过不同网络处理不同任务。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.13567"
-    ],
-    "matched_articles": [
-      {
-        "title": "Modular Cognitive Architecture Emerges in Large Language Models",
-        "link": "https://arxiv.org/abs/2608.13567",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Modular Cognitive Architecture Emerges in Large Language Models",
-        "link": "https://arxiv.org/abs/2608.13567",
-        "source": "arXiv CL"
-      }
-    ],
-    "date": "2026-08-18",
-    "status": "warm",
-    "explanation": "模块化认知架构就像大脑一样，把智能系统分成不同的模块，每个模块负责处理特定任务。",
-    "first_appeared": "2026-08-18T01:41:34.827Z",
-    "last_appeared": "2026-08-18T01:41:34.827Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "stable-miscalibration",
-    "rank": 3,
-    "term_en": "Stable Miscalibration",
-    "term_zh": "稳定误校准",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "在大型语言模型中，指在微小扰动下，自信的错误答案保持局部稳定的现象。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.13591"
-    ],
-    "matched_articles": [
-      {
-        "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
-        "link": "https://arxiv.org/abs/2608.13591",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Stable Miscalibration in Large Language Models: A Practical View of High-Confidence Errors",
-        "link": "https://arxiv.org/abs/2608.13591",
-        "source": "arXiv CL"
-      }
-    ],
-    "date": "2026-08-18",
-    "status": "warm",
-    "explanation": "大型语言模型在微小变化下，即使错误也保持自信，不易纠正。",
-    "first_appeared": "2026-08-18T01:41:34.827Z",
-    "last_appeared": "2026-08-18T01:41:34.827Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "misunderstanding-generation",
-    "rank": 4,
-    "term_en": "Misunderstanding Generation",
-    "term_zh": "误解生成",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "在沟通过程中，由于信息传递错误导致误解的产生。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI",
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.13604"
-    ],
-    "matched_articles": [
-      {
-        "title": "Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents",
-        "link": "https://arxiv.org/abs/2608.13604",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Cross-Disciplinary Taxonomy and Modeling of Misunderstanding Generation, Amplification, and Detection, from Pragmatics to AI Agents",
-        "link": "https://arxiv.org/abs/2608.13604",
-        "source": "arXiv CL"
-      }
-    ],
-    "date": "2026-08-18",
-    "status": "warm",
-    "explanation": "误解生成：沟通时信息传递错误，导致双方理解不一致。",
-    "first_appeared": "2026-08-18T01:41:34.827Z",
-    "last_appeared": "2026-08-18T01:41:34.827Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "active-perception",
-    "rank": 5,
-    "term_en": "Active Perception",
-    "term_zh": "主动感知",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "机器人通过主动改变观察来获取信息的方法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.13605",
-      "https://www.qbitai.com/2026/08/474518.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Active Perception for Embodied Disambiguation",
-        "link": "https://arxiv.org/abs/2608.13605",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "人形机器人开始打国球了！两台机器人完整打完11分制比赛",
-        "link": "https://www.qbitai.com/2026/08/474518.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-08-18",
-    "status": "warm",
-    "explanation": "主动感知就是机器人主动观察周围环境来获取信息。",
-    "first_appeared": "2026-08-18T01:41:34.827Z",
-    "last_appeared": "2026-08-18T01:41:34.827Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
     "id": "trajectory",
     "rank": 1,
     "term_en": "Trajectory",
@@ -873,7 +452,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "监控智能代理操作的回放窗口，显示原始事件级记录。",
-    "appear_count": 9,
+    "appear_count": 8,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -921,7 +500,7 @@
     "abbreviation": "Action-Data Alignment",
     "category": "AI技术",
     "one_liner": "基于动作-触觉语义隐空间的数据泛化引擎。",
-    "appear_count": 37,
+    "appear_count": 36,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -970,7 +549,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv AI",
       "arXiv CV",
