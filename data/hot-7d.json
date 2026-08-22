@@ -1,49 +1,5 @@
 [
   {
-    "id": "trajectory",
-    "appear_count": 13,
-    "days": 1,
-    "term_en": "Trajectory",
-    "term_zh": "轨迹",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "监控智能代理操作的回放窗口，显示原始事件级记录。",
-    "explanation": "轨迹是记录智能代理操作过程的记录，就像看回放一样。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12788",
-      "https://arxiv.org/abs/2608.12847",
-      "https://arxiv.org/abs/2608.12328",
-      "https://arxiv.org/abs/2608.12331",
-      "https://arxiv.org/abs/2608.12486"
-    ],
-    "matched_articles": [
-      {
-        "title": "ARAC: Benchmarking Auto-Research's Alignment and Completeness on End-to-End Researchs",
-        "link": "https://arxiv.org/abs/2608.12788",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Beyond Retrieval: Query-Conditioned Reuse of Long-Horizon Agent Trajectories",
-        "link": "https://arxiv.org/abs/2608.12847",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "LoRA-Diffusion: Parameter-Efficient Fine-Tuning via Low-Rank Trajectory Decomposition",
-        "link": "https://arxiv.org/abs/2608.12328",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 1,
-    "status": "hot"
-  },
-  {
     "id": "mixture-of-experts-moe",
     "appear_count": 4,
     "days": 1,
@@ -82,7 +38,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 2,
+    "rank": 1,
     "status": "hot"
   },
   {
@@ -121,33 +77,48 @@
         "source": "量子位"
       }
     ],
-    "rank": 3,
+    "rank": 2,
     "status": "hot"
   },
   {
-    "id": "safety-alignment",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Safety Alignment",
-    "term_zh": "安全对齐",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "确保大型语言模型在特定场景下的决策符合安全标准。",
-    "explanation": "安全对齐就是让AI在特定情况下做出符合安全标准的选择。",
+    "id": "forget-aware-replay",
+    "appear_count": 4,
+    "days": 1,
+    "term_en": "Forget-Aware Replay",
+    "term_zh": "遗忘感知重放",
+    "abbreviation": "FAR",
+    "category": "AI技术",
+    "one_liner": "通过损失动态估计样本遗忘风险，优先重放脆弱知识的持续学习方法。",
+    "explanation": "遗忘感知重放是一种学习方法，它通过识别容易忘记的知识，优先复习，帮助学习更牢固。",
     "sources": [
-      "arXiv AI"
+      "arXiv AI",
+      "arXiv CV",
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.12373"
+      "https://arxiv.org/abs/2608.19680",
+      "https://arxiv.org/abs/2608.19583",
+      "https://arxiv.org/abs/2608.19766",
+      "https://arxiv.org/abs/2608.19808"
     ],
     "matched_articles": [
       {
-        "title": "Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese",
-        "link": "https://arxiv.org/abs/2608.12373",
+        "title": "Frequency-Aware Continual Learning for Smart Contract Vulnerability Detection with Large Language Models",
+        "link": "https://arxiv.org/abs/2608.19680",
         "source": "arXiv AI"
+      },
+      {
+        "title": "VGI-BENCH: Probing Visual Intelligence in Video Generation Models",
+        "link": "https://arxiv.org/abs/2608.19583",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Far from the Crowd: Scalable Self-Supervised Learning via Geographic Isolation",
+        "link": "https://arxiv.org/abs/2608.19766",
+        "source": "arXiv CV"
       }
     ],
-    "rank": 4,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -185,7 +156,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 5,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -225,345 +196,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 6,
-    "status": "hot"
-  },
-  {
-    "id": "mas-decstream",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "MAS-DecStream",
-    "term_zh": "多智能体调度-去中心化流处理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种结合LLM辅助的合同网协议扩展，用于移动边缘计算中的流处理调度。",
-    "explanation": "MAS-DecStream是帮手机边计算处理数据流的一种智能调度方法，有点像多个智能助手一起协作完成任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12371"
-    ],
-    "matched_articles": [
-      {
-        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
-        "link": "https://arxiv.org/abs/2608.12371",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "llm-mr-cnp",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "LLM-MR-CNP",
-    "term_zh": "LLM多轮合同网协议",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于LLM的合同网协议，通过语义CFP、渐进式上下文披露等机制进行多轮协商。",
-    "explanation": "LLM-MR-CNP是一种AI技术，能像人一样通过多轮对话协商，完成复杂任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12371"
-    ],
-    "matched_articles": [
-      {
-        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
-        "link": "https://arxiv.org/abs/2608.12371",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 8,
-    "status": "hot"
-  },
-  {
-    "id": "cognitive-alignment",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Cognitive Alignment",
-    "term_zh": "认知对齐",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "使AI系统推理方式与人类用户相似，并忠实传达其推理过程。",
-    "explanation": "认知对齐就是让AI的思考方式像人一样，让人能看懂AI是怎么想的。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12372"
-    ],
-    "matched_articles": [
-      {
-        "title": "Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning",
-        "link": "https://arxiv.org/abs/2608.12372",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 9,
-    "status": "hot"
-  },
-  {
-    "id": "dual-flow-transformer",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Dual-Flow Transformer",
-    "term_zh": "双流Transformer",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种将主要预填充路径与额外解码计算分离的Transformer架构。",
-    "explanation": "双流Transformer是一种将主要预填充路径和额外解码计算分开的Transformer架构，能更高效处理信息。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12385"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
-        "link": "https://arxiv.org/abs/2608.12385",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "governed-persistent-memory",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Governed Persistent Memory",
-    "term_zh": "受控持久内存",
-    "abbreviation": "GPM",
-    "category": "AI技术",
-    "one_liner": "一种可审计的双时间戳状态转换模型，具有源绑定、生命周期状态、当前公开屏障和故障关闭的有序释放。",
-    "explanation": "受控持久内存：一种安全可靠的内存技术，能确保数据在系统故障后依然可用。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12476"
-    ],
-    "matched_articles": [
-      {
-        "title": "Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents",
-        "link": "https://arxiv.org/abs/2608.12476",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "causal-attribution-score",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Causal Attribution Score",
-    "term_zh": "因果归因分数",
-    "abbreviation": "CAS",
-    "category": "AI技术",
-    "one_liner": "一种用于因果解释的紧凑分数架构，通过将原始结果规模效应转换为局部CAS、签名局部CAS和两种互补的全局CAS摘要。",
-    "explanation": "因果归因分数是一种评估AI决策原因的分数，能帮助我们理解AI是如何得出结果的。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12555"
-    ],
-    "matched_articles": [
-      {
-        "title": "CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence",
-        "link": "https://arxiv.org/abs/2608.12555",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "trie-automaton",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "trie automaton",
-    "term_zh": "前缀树自动机",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种利用有限集结构（共享前缀、有限深度、已知基数）的专用机制，通过Aho-Corasick多模式匹配来预计算每个节点的令牌掩码。",
-    "explanation": "trie automaton是一种高效查找工具，能快速匹配多个关键词。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12574"
-    ],
-    "matched_articles": [
-      {
-        "title": "Trie Automata for Constrained Decoding over Large Finite Sets",
-        "link": "https://arxiv.org/abs/2608.12574",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "reasoning-jury",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Reasoning Jury",
-    "term_zh": "推理陪审团",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种通过多个大型语言模型和调解机制进行推理缺陷识别的共识系统。",
-    "explanation": "推理陪审团：多个AI模型一起推理，找出推理错误，确保推理结果更可靠。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12585"
-    ],
-    "matched_articles": [
-      {
-        "title": "Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces",
-        "link": "https://arxiv.org/abs/2608.12585",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "thyroidxagent",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "ThyroidXAgent",
-    "term_zh": "甲状腺X代理",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种用于甲状腺超声诊断和报告的交互式AI系统。",
-    "explanation": "甲状腺X代理：一个能帮医生看甲状腺超声，还能自动生成报告的智能助手。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12590"
-    ],
-    "matched_articles": [
-      {
-        "title": "Auditable agentic AI for evidence-grounded thyroid ultrasound diagnosis and reporting",
-        "link": "https://arxiv.org/abs/2608.12590",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 15,
-    "status": "hot"
-  },
-  {
-    "id": "dig-bench",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "DiG-bench",
-    "term_zh": "DiG基准",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个用于测试AI在未知目标环境中发现新知识的基准。",
-    "explanation": "DiG-bench是测试AI在未知游戏环境中发现新知识的工具。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12593"
-    ],
-    "matched_articles": [
-      {
-        "title": "DiG-bench: Discovery in Games",
-        "link": "https://arxiv.org/abs/2608.12593",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "contract-ledger",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "contract ledger",
-    "term_zh": "合约账本",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个将每个约束与可执行检查器配对，记录撤销并编译净约束状态的系统。",
-    "explanation": "合约账本：记录合约执行情况的账本，确保合约约束被正确执行。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
-    "id": "sequential-ablation-probe",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "sequential ablation probe",
-    "term_zh": "顺序消除探针",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个测量每个条款遵守情况和增量行为影响的工具。",
-    "explanation": "顺序消除探针：检测每条规则影响，帮我们理解黑盒大语言模型对话中的规则作用。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 18,
-    "status": "hot"
-  },
-  {
-    "id": "repair-ladder",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "repair ladder",
-    "term_zh": "修复梯子",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个在匹配预算下进行修复的干预措施。",
-    "explanation": "修复梯子是一种在有限预算内进行修复的方法。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 19,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -589,7 +222,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 20,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -621,7 +254,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 21,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -653,7 +286,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 22,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -685,7 +318,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 23,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -718,7 +351,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -750,7 +383,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 25,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -782,7 +415,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -815,163 +448,105 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 27,
+    "rank": 13,
     "status": "hot"
   },
   {
-    "id": "deepseek-harness",
-    "appear_count": 1,
+    "id": "mora",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "DeepSeek Harness",
-    "term_zh": "DeepSeek Harness",
-    "abbreviation": "",
+    "term_en": "MoRA",
+    "term_zh": "MoRA模型架构",
+    "abbreviation": "MoRA",
     "category": "AI技术",
-    "one_liner": "一种可插拔积木式的AI工具，支持自进化与DIY。",
-    "explanation": "DeepSeek Harness就像一套可拼装的AI积木，能自己升级和改造。",
+    "one_liner": "一种Agentic-Native的具身智能模型架构。",
+    "explanation": "MoRA是一种让机器人像人一样思考的智能模型，能帮助机器人做家务。",
     "sources": [
+      "arXiv AI",
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/472208.html"
+      "https://arxiv.org/abs/2608.19215",
+      "https://www.qbitai.com/2026/08/476413.html"
     ],
     "matched_articles": [
       {
-        "title": "深度体验DeepSeek Harness，我原谅它涨价了",
-        "link": "https://www.qbitai.com/2026/08/472208.html",
+        "title": "How to Navigate Uncertainty About AI Consciousness",
+        "link": "https://arxiv.org/abs/2608.19215",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
+        "link": "https://www.qbitai.com/2026/08/476413.html",
         "source": "量子位"
       }
     ],
-    "rank": 28,
+    "rank": 14,
     "status": "hot"
   },
   {
-    "id": "g-lix-1",
-    "appear_count": 1,
+    "id": "symposium",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "GΞLIX 1",
-    "term_zh": "GΞLIX 1",
+    "term_en": "Symposium",
+    "term_zh": "Symposium",
     "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "Acrab公司推出的端侧AI芯片。",
-    "explanation": "GΞLIX 1是Acrab公司的一款AI芯片，能提升手机等设备的计算能力。",
+    "category": "AI工程",
+    "one_liner": "记录AI科学家代理操作的框架，提供可审计的研究活动历史。",
+    "explanation": "Symposium是一个记录AI科学家操作的工具，能保存操作记录，方便大家查看和信任。",
     "sources": [
+      "arXiv AI",
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/472059.html"
+      "https://arxiv.org/abs/2608.19511",
+      "https://www.qbitai.com/2026/08/476468.html"
     ],
     "matched_articles": [
       {
-        "title": "4.8亿美元砸向端侧算力！Agent芯片新贵冲出重围",
-        "link": "https://www.qbitai.com/2026/08/472059.html",
+        "title": "Symposium: Trust via Auditable Records for Communities of AI Scientist Agents",
+        "link": "https://arxiv.org/abs/2608.19511",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Jeff Dean离职后首次公开访谈火力有点猛。。。",
+        "link": "https://www.qbitai.com/2026/08/476468.html",
         "source": "量子位"
       }
     ],
-    "rank": 29,
+    "rank": 15,
     "status": "hot"
   },
   {
-    "id": "agent-box",
-    "appear_count": 1,
+    "id": "subjectivity-adaptive-soft-label-training",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Agent Box",
-    "term_zh": "个人AI中心",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "搭载GΞLIX 1芯片的个人AI设备。",
-    "explanation": "个人AI中心，像你的私人助手，用先进芯片帮你处理各种任务。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/472059.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "4.8亿美元砸向端侧算力！Agent芯片新贵冲出重围",
-        "link": "https://www.qbitai.com/2026/08/472059.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 30,
-    "status": "hot"
-  },
-  {
-    "id": "sl2t",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "SL2T",
-    "term_zh": "SL2T",
-    "abbreviation": "",
+    "term_en": "Subjectivity-Adaptive soft-Label Training",
+    "term_zh": "主观性自适应软标签训练",
+    "abbreviation": "SALT",
     "category": "AI技术",
-    "one_liner": "一种多语言手语到文本的翻译模型。",
-    "explanation": "SL2T是一种能将多种手语转换成文字的智能工具，方便聋人交流。",
-    "sources": [
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Putting sign language AI into users’ hands",
-        "link": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 31,
-    "status": "hot"
-  },
-  {
-    "id": "sign-language-to-text",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "sign-language-to-text",
-    "term_zh": "手语到文本",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "将手语转换为文本的技术。",
-    "explanation": "手语到文本技术，就是把手语动作转换成文字，方便交流。",
-    "sources": [
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Putting sign language AI into users’ hands",
-        "link": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 32,
-    "status": "hot"
-  },
-  {
-    "id": "cross-task-memory-transfer",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Cross-Task Memory Transfer",
-    "term_zh": "跨任务记忆迁移",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "将先前任务的经验作为任务无关的策略记忆存储，以促进不同任务间的知识转移。",
-    "explanation": "把之前学到的知识用到新任务上，让学习更高效。",
+    "one_liner": "一种基于主观性系数的软标签训练方法，通过调整聚合半径以适应不同输入的主观性。",
+    "explanation": "主观性自适应软标签训练，就像给AI训练时，根据不同情况调整标签的“软度”，让AI更懂人类的主观感受。",
     "sources": [
       "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.12522"
+      "https://arxiv.org/abs/2608.19689",
+      "https://arxiv.org/abs/2608.19789"
     ],
     "matched_articles": [
       {
-        "title": "$\\varepsilon$-MemEvo: Adaptive Cross-Task Memory Transfer for LLM Program Evolution",
-        "link": "https://arxiv.org/abs/2608.12522",
+        "title": "Rethinking the Evaluation and Optimization of LLM-Based Social Simulation",
+        "link": "https://arxiv.org/abs/2608.19689",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
+        "link": "https://arxiv.org/abs/2608.19789",
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -997,7 +572,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 34,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -1023,7 +598,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 35,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -1049,7 +624,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 36,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -1075,7 +650,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 37,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -1101,7 +676,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 38,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -1127,7 +702,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 39,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -1153,7 +728,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 40,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -1179,7 +754,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 41,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -1205,7 +780,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 42,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -1231,7 +806,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 43,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -1257,7 +832,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 44,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -1283,7 +858,371 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 45,
+    "rank": 28,
+    "status": "hot"
+  },
+  {
+    "id": "mas-decstream",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "MAS-DecStream",
+    "term_zh": "多智能体调度-去中心化流处理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种结合LLM辅助的合同网协议扩展，用于移动边缘计算中的流处理调度。",
+    "explanation": "MAS-DecStream是帮手机边计算处理数据流的一种智能调度方法，有点像多个智能助手一起协作完成任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12371"
+    ],
+    "matched_articles": [
+      {
+        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
+        "link": "https://arxiv.org/abs/2608.12371",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 29,
+    "status": "hot"
+  },
+  {
+    "id": "llm-mr-cnp",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM-MR-CNP",
+    "term_zh": "LLM多轮合同网协议",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于LLM的合同网协议，通过语义CFP、渐进式上下文披露等机制进行多轮协商。",
+    "explanation": "LLM-MR-CNP是一种AI技术，能像人一样通过多轮对话协商，完成复杂任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12371"
+    ],
+    "matched_articles": [
+      {
+        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
+        "link": "https://arxiv.org/abs/2608.12371",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 30,
+    "status": "hot"
+  },
+  {
+    "id": "cognitive-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cognitive Alignment",
+    "term_zh": "认知对齐",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "使AI系统推理方式与人类用户相似，并忠实传达其推理过程。",
+    "explanation": "认知对齐就是让AI的思考方式像人一样，让人能看懂AI是怎么想的。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12372"
+    ],
+    "matched_articles": [
+      {
+        "title": "Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning",
+        "link": "https://arxiv.org/abs/2608.12372",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 31,
+    "status": "hot"
+  },
+  {
+    "id": "safety-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Safety Alignment",
+    "term_zh": "安全对齐",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "确保大型语言模型在特定场景下的决策符合安全标准。",
+    "explanation": "安全对齐就是让AI在特定情况下做出符合安全标准的选择。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12373"
+    ],
+    "matched_articles": [
+      {
+        "title": "Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese",
+        "link": "https://arxiv.org/abs/2608.12373",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 32,
+    "status": "hot"
+  },
+  {
+    "id": "dual-flow-transformer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Dual-Flow Transformer",
+    "term_zh": "双流Transformer",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种将主要预填充路径与额外解码计算分离的Transformer架构。",
+    "explanation": "双流Transformer是一种将主要预填充路径和额外解码计算分开的Transformer架构，能更高效处理信息。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12385"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+        "link": "https://arxiv.org/abs/2608.12385",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 33,
+    "status": "hot"
+  },
+  {
+    "id": "governed-persistent-memory",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Governed Persistent Memory",
+    "term_zh": "受控持久内存",
+    "abbreviation": "GPM",
+    "category": "AI技术",
+    "one_liner": "一种可审计的双时间戳状态转换模型，具有源绑定、生命周期状态、当前公开屏障和故障关闭的有序释放。",
+    "explanation": "受控持久内存：一种安全可靠的内存技术，能确保数据在系统故障后依然可用。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12476"
+    ],
+    "matched_articles": [
+      {
+        "title": "Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents",
+        "link": "https://arxiv.org/abs/2608.12476",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 34,
+    "status": "hot"
+  },
+  {
+    "id": "causal-attribution-score",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Causal Attribution Score",
+    "term_zh": "因果归因分数",
+    "abbreviation": "CAS",
+    "category": "AI技术",
+    "one_liner": "一种用于因果解释的紧凑分数架构，通过将原始结果规模效应转换为局部CAS、签名局部CAS和两种互补的全局CAS摘要。",
+    "explanation": "因果归因分数是一种评估AI决策原因的分数，能帮助我们理解AI是如何得出结果的。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12555"
+    ],
+    "matched_articles": [
+      {
+        "title": "CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence",
+        "link": "https://arxiv.org/abs/2608.12555",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 35,
+    "status": "hot"
+  },
+  {
+    "id": "trie-automaton",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "trie automaton",
+    "term_zh": "前缀树自动机",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种利用有限集结构（共享前缀、有限深度、已知基数）的专用机制，通过Aho-Corasick多模式匹配来预计算每个节点的令牌掩码。",
+    "explanation": "trie automaton是一种高效查找工具，能快速匹配多个关键词。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Trie Automata for Constrained Decoding over Large Finite Sets",
+        "link": "https://arxiv.org/abs/2608.12574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 36,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-jury",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reasoning Jury",
+    "term_zh": "推理陪审团",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种通过多个大型语言模型和调解机制进行推理缺陷识别的共识系统。",
+    "explanation": "推理陪审团：多个AI模型一起推理，找出推理错误，确保推理结果更可靠。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12585"
+    ],
+    "matched_articles": [
+      {
+        "title": "Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces",
+        "link": "https://arxiv.org/abs/2608.12585",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 37,
+    "status": "hot"
+  },
+  {
+    "id": "thyroidxagent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ThyroidXAgent",
+    "term_zh": "甲状腺X代理",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种用于甲状腺超声诊断和报告的交互式AI系统。",
+    "explanation": "甲状腺X代理：一个能帮医生看甲状腺超声，还能自动生成报告的智能助手。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12590"
+    ],
+    "matched_articles": [
+      {
+        "title": "Auditable agentic AI for evidence-grounded thyroid ultrasound diagnosis and reporting",
+        "link": "https://arxiv.org/abs/2608.12590",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 38,
+    "status": "hot"
+  },
+  {
+    "id": "dig-bench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "DiG-bench",
+    "term_zh": "DiG基准",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个用于测试AI在未知目标环境中发现新知识的基准。",
+    "explanation": "DiG-bench是测试AI在未知游戏环境中发现新知识的工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12593"
+    ],
+    "matched_articles": [
+      {
+        "title": "DiG-bench: Discovery in Games",
+        "link": "https://arxiv.org/abs/2608.12593",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 39,
+    "status": "hot"
+  },
+  {
+    "id": "contract-ledger",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "contract ledger",
+    "term_zh": "合约账本",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个将每个约束与可执行检查器配对，记录撤销并编译净约束状态的系统。",
+    "explanation": "合约账本：记录合约执行情况的账本，确保合约约束被正确执行。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 40,
+    "status": "hot"
+  },
+  {
+    "id": "sequential-ablation-probe",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "sequential ablation probe",
+    "term_zh": "顺序消除探针",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个测量每个条款遵守情况和增量行为影响的工具。",
+    "explanation": "顺序消除探针：检测每条规则影响，帮我们理解黑盒大语言模型对话中的规则作用。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 41,
+    "status": "hot"
+  },
+  {
+    "id": "repair-ladder",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "repair ladder",
+    "term_zh": "修复梯子",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个在匹配预算下进行修复的干预措施。",
+    "explanation": "修复梯子是一种在有限预算内进行修复的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1309,7 +1248,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1335,7 +1274,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1361,7 +1300,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 48,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1387,7 +1326,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 49,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1413,7 +1352,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 50,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1439,7 +1378,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 51,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1465,7 +1404,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 52,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1491,7 +1430,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1517,7 +1456,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1543,7 +1482,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1569,7 +1508,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1595,7 +1534,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1621,7 +1560,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1647,7 +1586,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1673,7 +1612,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1699,7 +1638,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1725,7 +1664,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1741,7 +1680,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 63,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1767,7 +1706,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 64,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1793,7 +1732,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 65,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1819,7 +1758,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 66,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1845,7 +1784,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 67,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1871,7 +1810,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1897,7 +1836,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1923,7 +1862,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -1949,7 +1888,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -1975,7 +1914,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2001,7 +1940,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2027,7 +1966,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2053,7 +1992,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2079,7 +2018,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2105,7 +2044,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 77,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2131,7 +2070,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 78,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2157,7 +2096,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2183,7 +2122,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2209,7 +2148,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2225,7 +2164,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 82,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2251,7 +2190,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 83,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2277,7 +2216,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 84,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2303,7 +2242,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2329,7 +2268,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2355,7 +2294,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 87,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2381,7 +2320,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 88,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2407,7 +2346,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2433,7 +2372,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2459,7 +2398,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2485,7 +2424,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 92,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2511,7 +2450,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 93,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2537,7 +2476,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 94,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2563,7 +2502,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 95,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2589,7 +2528,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 96,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2615,7 +2554,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2641,7 +2580,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 98,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2667,7 +2606,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 99,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2693,7 +2632,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 100,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -2719,7 +2658,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -2745,7 +2684,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -2771,7 +2710,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 100,
     "status": "hot"
   },
   {
@@ -2797,7 +2736,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 101,
     "status": "hot"
   },
   {
@@ -2823,7 +2762,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 102,
     "status": "hot"
   },
   {
@@ -2849,7 +2788,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 103,
     "status": "hot"
   },
   {
@@ -2875,7 +2814,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 104,
     "status": "hot"
   },
   {
@@ -2901,7 +2840,439 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "system-1",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "System 1",
+    "term_zh": "系统1",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "负责执行动作的策略模型。",
+    "explanation": "系统1是负责快速执行动作的智能模型，就像家里的机器人能快速做家务。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/476413.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
+        "link": "https://www.qbitai.com/2026/08/476413.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "system-2",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "System 2",
+    "term_zh": "系统2",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "负责理解和拆解任务的机器人大脑。",
+    "explanation": "系统2是机器人大脑，能理解任务并完成家务，如收纳、补货、叠衣服。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/476413.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "WRC最忙机器人：猛干15分钟家务，收纳、补货、叠衣服…",
+        "link": "https://www.qbitai.com/2026/08/476413.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "active-inference",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Active Inference",
+    "term_zh": "主动推理",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种用于AI代理获取上下文的策略。",
+    "explanation": "AI通过主动推理，像人一样感知和理解周围环境。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19202"
+    ],
+    "matched_articles": [
+      {
+        "title": "Active Inference as Context Acquisition for AI Agents",
+        "link": "https://arxiv.org/abs/2608.19202",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "optimal-question-asking-oqa",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Optimal Question Asking (OQA)",
+    "term_zh": "最优提问",
+    "abbreviation": "OQA",
+    "category": "AI技术",
+    "one_liner": "一种在有限token预算下进行最优提问的框架。",
+    "explanation": "OQA是一种在有限字数内提问，让AI获取更多信息的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19202"
+    ],
+    "matched_articles": [
+      {
+        "title": "Active Inference as Context Acquisition for AI Agents",
+        "link": "https://arxiv.org/abs/2608.19202",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "stateful-multi-turn-pipeline",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Stateful Multi-turn Pipeline",
+    "term_zh": "有状态多轮管道",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在对话系统中，维护对话状态并支持多轮交互的管道架构。",
+    "explanation": "有状态多轮管道：对话系统中的智能管道，能记住对话内容，支持多轮交流。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19299"
+    ],
+    "matched_articles": [
+      {
+        "title": "Air Traffic Control Using Large Language Models: Prompt Engineering, Architecture, and Evaluation",
+        "link": "https://arxiv.org/abs/2608.19299",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 110,
+    "status": "hot"
+  },
+  {
+    "id": "outcome-monitors",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Outcome Monitors",
+    "term_zh": "结果监控器",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "检测任务执行结果与预期合同不一致的监控工具。",
+    "explanation": "结果监控器：像侦探一样，检查任务完成情况是否符合预期，发现潜在问题。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19303"
+    ],
+    "matched_articles": [
+      {
+        "title": "Outcome Monitors: Recovery Affordances for Silent Tool Failures",
+        "link": "https://arxiv.org/abs/2608.19303",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 111,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-progress-aware-reward-filtering",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reasoning-Progress-Aware Reward Filtering",
+    "term_zh": "推理进度感知奖励过滤",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "根据推理进度过滤奖励，以优化训练过程的算法。",
+    "explanation": "这个算法能根据推理进度调整奖励，让训练更高效。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19408"
+    ],
+    "matched_articles": [
+      {
+        "title": "Beyond Imitation: Filtering On-Policy Distillation by Reasoning Progress",
+        "link": "https://arxiv.org/abs/2608.19408",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 112,
+    "status": "hot"
+  },
+  {
+    "id": "frequency-aware-low-rank-adaptation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Frequency-Aware Low-Rank Adaptation",
+    "term_zh": "频率感知低秩自适应",
+    "abbreviation": "FA-LoRA",
+    "category": "AI技术",
+    "one_liner": "一种在傅里叶域内使用频率重要性门进行自适应的参数高效方法。",
+    "explanation": "FA-LoRA是一种利用频率重要性门在傅里叶域调整参数，提高模型学习效率的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19680"
+    ],
+    "matched_articles": [
+      {
+        "title": "Frequency-Aware Continual Learning for Smart Contract Vulnerability Detection with Large Language Models",
+        "link": "https://arxiv.org/abs/2608.19680",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 113,
+    "status": "hot"
+  },
+  {
+    "id": "anchor-protected-progressive-merging",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Anchor-Protected Progressive Merging",
+    "term_zh": "锚点保护渐进式合并",
+    "abbreviation": "APPM",
+    "category": "AI技术",
+    "one_liner": "利用FAR训练产生的非对称泛化能力，将所有适配器合并为单个模型的方法。",
+    "explanation": "APPM是一种将多个模型合并成一个的方法，能更好地识别智能合约漏洞。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19680"
+    ],
+    "matched_articles": [
+      {
+        "title": "Frequency-Aware Continual Learning for Smart Contract Vulnerability Detection with Large Language Models",
+        "link": "https://arxiv.org/abs/2608.19680",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 114,
+    "status": "hot"
+  },
+  {
+    "id": "quality-diversity-offline-skill-learning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Quality-Diversity Offline Skill learning",
+    "term_zh": "质量-多样性离线技能学习",
+    "abbreviation": "QDOS",
+    "category": "AI技术",
+    "one_liner": "一种用于鲁棒离线到在线学习的统一流程，通过优势加权质量-多样性预训练目标提取多样化和高价值的技能。",
+    "explanation": "QDOS是一种学习技能的方法，能同时掌握多样化和高质量的技能。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19684"
+    ],
+    "matched_articles": [
+      {
+        "title": "Learning Hierarchical Skill Policies with Offline Quality-Diversity Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2608.19684",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 115,
+    "status": "hot"
+  },
+  {
+    "id": "correlation-aware-memory-arbitration",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Correlation-Aware Memory Arbitration",
+    "term_zh": "相关性感知记忆仲裁",
+    "abbreviation": "CAMA",
+    "category": "AI技术",
+    "one_liner": "一种联合解耦检索记忆和恢复缺失独立证据的框架，以防止相关记忆形成虚假多数。",
+    "explanation": "CAMA是一种智能技术，能识别记忆中的关联，防止错误记忆影响判断。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19701"
+    ],
+    "matched_articles": [
+      {
+        "title": "Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration",
+        "link": "https://arxiv.org/abs/2608.19701",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 116,
+    "status": "hot"
+  },
+  {
+    "id": "branch-pair-safety-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Branch-Pair Safety Alignment",
+    "term_zh": "分支对安全对齐",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "通过从智能体自身的不安全回滚中构建分支对，对智能体进行安全对齐的方法。",
+    "explanation": "通过构建不安全回滚的分支对，让智能体更安全地行动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19729"
+    ],
+    "matched_articles": [
+      {
+        "title": "SafeBranch: Branch-Pair Safety Alignment for Embodied Agents",
+        "link": "https://arxiv.org/abs/2608.19729",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 117,
+    "status": "hot"
+  },
+  {
+    "id": "generative-matching",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Generative Matching",
+    "term_zh": "生成匹配",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "将微视图订单调度问题建模为生成匹配问题，以优化调度结果。",
+    "explanation": "生成匹配是像搭积木一样，把小订单像拼图一样优化组合，让调度更高效。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19751"
+    ],
+    "matched_articles": [
+      {
+        "title": "GenMatch: An End-to-End Generative Matching Framework for Micro-View Order-Dispatching in Ride-Hailing",
+        "link": "https://arxiv.org/abs/2608.19751",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 118,
+    "status": "hot"
+  },
+  {
+    "id": "tensor-trains",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Tensor Trains",
+    "term_zh": "张量列车",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种特殊的张量网络，用于机器学习中的高维数据表示。",
+    "explanation": "张量列车是一种高级数学工具，能高效处理复杂数据，用于机器学习中的高维数据分析。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19789"
+    ],
+    "matched_articles": [
+      {
+        "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
+        "link": "https://arxiv.org/abs/2608.19789",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 119,
+    "status": "hot"
+  },
+  {
+    "id": "singular-value-decomposition-svd",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Singular Value Decomposition (SVD)",
+    "term_zh": "奇异值分解",
+    "abbreviation": "SVD",
+    "category": "AI技术",
+    "one_liner": "一种线性代数工具，用于分解矩阵。",
+    "explanation": "奇异值分解就像把一个矩阵拆成几个简单的矩阵，方便我们理解和处理。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19789"
+    ],
+    "matched_articles": [
+      {
+        "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
+        "link": "https://arxiv.org/abs/2608.19789",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 120,
+    "status": "hot"
+  },
+  {
+    "id": "adversarial-loss",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Adversarial Loss",
+    "term_zh": "对抗损失",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在生成对抗网络中，用于衡量生成器和判别器之间差异的损失函数。",
+    "explanation": "对抗损失是衡量生成器和判别器差异的指标，用于训练生成对抗网络。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.19789"
+    ],
+    "matched_articles": [
+      {
+        "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
+        "link": "https://arxiv.org/abs/2608.19789",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 121,
+    "status": "hot"
+  },
+  {
+    "id": "acquisition-policy",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Acquisition Policy",
+    "term_zh": "获取策略",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "在材料优化中，用于选择下一个候选材料进行评估的策略。",
+    "explanation": "获取策略是选择材料评估的技巧，就像购物时挑货一样。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 122,
     "status": "hot"
   }
 ]
