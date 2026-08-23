@@ -1,8 +1,8 @@
 [
   {
     "id": "agentic-workflow",
-    "appear_count": 180,
-    "days": 11,
+    "appear_count": 160,
+    "days": 10,
     "term_en": "Agentic Workflow",
     "term_zh": "智能体工作流",
     "abbreviation": "",
@@ -43,8 +43,8 @@
   },
   {
     "id": "vision-language-model",
-    "appear_count": 50,
-    "days": 8,
+    "appear_count": 44,
+    "days": 7,
     "term_en": "Vision-Language Model",
     "term_zh": "视觉语言模型",
     "abbreviation": "VLM",
@@ -69,8 +69,8 @@
   },
   {
     "id": "multi-agent-system",
-    "appear_count": 49,
-    "days": 11,
+    "appear_count": 42,
+    "days": 10,
     "term_en": "Multi-Agent System",
     "term_zh": "多智能体系统",
     "abbreviation": "",
@@ -140,8 +140,8 @@
   },
   {
     "id": "model-context-protocol",
-    "appear_count": 41,
-    "days": 11,
+    "appear_count": 37,
+    "days": 10,
     "term_en": "Model Context Protocol",
     "term_zh": "模型上下文协议",
     "abbreviation": "MCP",
@@ -179,8 +179,8 @@
   },
   {
     "id": "long-context",
-    "appear_count": 30,
-    "days": 9,
+    "appear_count": 28,
+    "days": 8,
     "term_en": "Long Context",
     "term_zh": "长上下文",
     "abbreviation": "",
@@ -218,8 +218,8 @@
   },
   {
     "id": "mixture-of-experts",
-    "appear_count": 26,
-    "days": 11,
+    "appear_count": 23,
+    "days": 10,
     "term_en": "Mixture of Experts",
     "term_zh": "专家混合模型",
     "abbreviation": "MoE",
@@ -251,8 +251,8 @@
   },
   {
     "id": "world-model",
-    "appear_count": 21,
-    "days": 10,
+    "appear_count": 20,
+    "days": 9,
     "term_en": "World Model",
     "term_zh": "世界模型",
     "abbreviation": "",
@@ -279,73 +279,6 @@
       }
     ],
     "rank": 8,
-    "status": "hot"
-  },
-  {
-    "id": "chain-of-thought",
-    "appear_count": 20,
-    "days": 7,
-    "term_en": "Chain of Thought",
-    "term_zh": "思维链",
-    "abbreviation": "CoT",
-    "category": "AI技术",
-    "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
-    "explanation": "思维链是一种让AI像人一样逐步推理，提高复杂任务准确率的提示技巧。",
-    "sources": [
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27783",
-      "https://arxiv.org/abs/2607.28166",
-      "https://arxiv.org/abs/2607.27380",
-      "https://arxiv.org/abs/2607.27304"
-    ],
-    "matched_articles": [
-      {
-        "title": "Reasoning Consensus: Structural Ensembling of LLM Reasoning via Weighted DAG Aggregation",
-        "link": "https://arxiv.org/abs/2607.27783",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models",
-        "link": "https://arxiv.org/abs/2607.28166",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System",
-        "link": "https://arxiv.org/abs/2607.27380",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 9,
-    "status": "hot"
-  },
-  {
-    "id": "speculative-decoding",
-    "appear_count": 18,
-    "days": 11,
-    "term_en": "Speculative Decoding",
-    "term_zh": "推测解码",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
-    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
-    "sources": [
-      "NVIDIA Blog"
-    ],
-    "source_urls": [
-      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
-        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
-        "source": "NVIDIA Blog"
-      }
-    ],
-    "rank": 10,
     "status": "hot"
   },
   {
@@ -386,6 +319,73 @@
         "title": "DungeonBench: A Benchmark for Rules-Rich Tactical Reasoning in Dungeons & Dragons Combat",
         "link": "https://arxiv.org/abs/2607.29577",
         "source": "arXiv AI"
+      }
+    ],
+    "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "chain-of-thought",
+    "appear_count": 17,
+    "days": 6,
+    "term_en": "Chain of Thought",
+    "term_zh": "思维链",
+    "abbreviation": "CoT",
+    "category": "AI技术",
+    "one_liner": "让模型分步骤写出推理过程以提升复杂任务准确率的提示方法",
+    "explanation": "思维链是一种让AI像人一样逐步推理，提高复杂任务准确率的提示技巧。",
+    "sources": [
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27783",
+      "https://arxiv.org/abs/2607.28166",
+      "https://arxiv.org/abs/2607.27380",
+      "https://arxiv.org/abs/2607.27304"
+    ],
+    "matched_articles": [
+      {
+        "title": "Reasoning Consensus: Structural Ensembling of LLM Reasoning via Weighted DAG Aggregation",
+        "link": "https://arxiv.org/abs/2607.27783",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models",
+        "link": "https://arxiv.org/abs/2607.28166",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "VideoCoCo: Code-as-CoT for Physically-Consistent Video Generation via an Agentic Dual-Engine System",
+        "link": "https://arxiv.org/abs/2607.27380",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
+    "id": "speculative-decoding",
+    "appear_count": 17,
+    "days": 10,
+    "term_en": "Speculative Decoding",
+    "term_zh": "推测解码",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用小模型先草拟、大模型再校验的方式加速文本生成的技术",
+    "explanation": "通过小模型快速生成文本，再由大模型检查修正，提高文本生成速度。",
+    "sources": [
+      "NVIDIA Blog"
+    ],
+    "source_urls": [
+      "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Boost Inference Performance up to 15x on NVIDIA Blackwell Using DFlash Speculative Decoding",
+        "link": "https://developer.nvidia.com/blog/boost-inference-performance-up-to-15x-on-nvidia-blackwell-using-dflash-speculative-decoding/",
+        "source": "NVIDIA Blog"
       }
     ],
     "rank": 11,
@@ -436,39 +436,6 @@
     "status": "hot"
   },
   {
-    "id": "reasoning-model",
-    "appear_count": 12,
-    "days": 6,
-    "term_en": "Reasoning Model",
-    "term_zh": "推理模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
-    "explanation": "推理模型就像一个大侦探，能通过多步思考来解决复杂难题。",
-    "sources": [
-      "arXiv AI",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26119",
-      "https://arxiv.org/abs/2607.27594"
-    ],
-    "matched_articles": [
-      {
-        "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
-        "link": "https://arxiv.org/abs/2607.26119",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Compliance2LoRA: On-Demand Safety Alignment on Arbitrary Policy Subsets via Hypernetwork-Generated LoRA Adapters",
-        "link": "https://arxiv.org/abs/2607.27594",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
     "id": "multimodal-large-language-models",
     "appear_count": 12,
     "days": 2,
@@ -506,7 +473,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 14,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -532,7 +499,7 @@
         "source": "NVIDIA Blog"
       }
     ],
-    "rank": 15,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -574,39 +541,46 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 15,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-model",
+    "appear_count": 9,
+    "days": 5,
+    "term_en": "Reasoning Model",
+    "term_zh": "推理模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过显式多步推理(思维链)来解决复杂问题的大模型",
+    "explanation": "推理模型就像一个大侦探，能通过多步思考来解决复杂难题。",
+    "sources": [
+      "arXiv AI",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26119",
+      "https://arxiv.org/abs/2607.27594"
+    ],
+    "matched_articles": [
+      {
+        "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
+        "link": "https://arxiv.org/abs/2607.26119",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Compliance2LoRA: On-Demand Safety Alignment on Arbitrary Policy Subsets via Hypernetwork-Generated LoRA Adapters",
+        "link": "https://arxiv.org/abs/2607.27594",
+        "source": "arXiv LG"
+      }
+    ],
     "rank": 16,
     "status": "hot"
   },
   {
-    "id": "test-time-compute",
-    "appear_count": 9,
-    "days": 5,
-    "term_en": "Test-Time Compute",
-    "term_zh": "测试时计算",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
-    "explanation": "测试时计算就是让AI模型在给出答案时多思考几步，这样就能给出更准确的答案。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27656"
-    ],
-    "matched_articles": [
-      {
-        "title": "Looped Transformers with Source-Centered State Evolution",
-        "link": "https://arxiv.org/abs/2607.27656",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
     "id": "kv-cache",
-    "appear_count": 9,
-    "days": 6,
+    "appear_count": 8,
+    "days": 5,
     "term_en": "KV Cache",
     "term_zh": "KV Cache",
     "abbreviation": "",
@@ -632,66 +606,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 18,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-model",
-    "appear_count": 8,
-    "days": 7,
-    "term_en": "State Space Model",
-    "term_zh": "状态空间模型",
-    "abbreviation": "SSM",
-    "category": "AI技术",
-    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
-    "explanation": "状态空间模型就像一个时间旅行者，追踪序列数据的变化，特别擅长处理长序列，而且推理速度很快。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26751"
-    ],
-    "matched_articles": [
-      {
-        "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
-        "link": "https://arxiv.org/abs/2607.26751",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "group-relative-policy-optimization",
-    "appear_count": 8,
-    "days": 6,
-    "term_en": "Group Relative Policy Optimization",
-    "term_zh": "组相对策略优化",
-    "abbreviation": "GRPO",
-    "category": "AI技术",
-    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
-    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，让模型像老师一样引导学习。",
-    "sources": [
-      "arXiv CL",
-      "Hugging Face Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.22996",
-      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
-    ],
-    "matched_articles": [
-      {
-        "title": "Beyond Direct Answering: Aligning Educational LLMs as Socratic Guides via Heuristic Reinforcement Learning",
-        "link": "https://arxiv.org/abs/2607.22996",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  133",
-        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
-        "source": "Hugging Face Blog"
-      }
-    ],
-    "rank": 20,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -731,66 +646,40 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 21,
+    "rank": 18,
     "status": "hot"
   },
   {
-    "id": "sparse-attention",
+    "id": "group-relative-policy-optimization",
     "appear_count": 7,
-    "days": 4,
-    "term_en": "Sparse Attention",
-    "term_zh": "稀疏注意力",
-    "abbreviation": "",
+    "days": 5,
+    "term_en": "Group Relative Policy Optimization",
+    "term_zh": "组相对策略优化",
+    "abbreviation": "GRPO",
     "category": "AI技术",
-    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
-    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.27692"
-    ],
-    "matched_articles": [
-      {
-        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
-        "link": "https://arxiv.org/abs/2607.27692",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "reward-model",
-    "appear_count": 7,
-    "days": 6,
-    "term_en": "Reward Model",
-    "term_zh": "奖励模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
-    "explanation": "奖励模型是让AI学会喜欢什么、不喜欢什么，通过给AI的输出打分来帮助它学习。",
+    "one_liner": "用于训练推理模型的强化学习算法,按组内相对优劣给奖励",
+    "explanation": "GRPO是一种AI算法，通过比较同一组内不同策略的优劣来训练模型，让模型像老师一样引导学习。",
     "sources": [
       "arXiv CL",
-      "arXiv LG"
+      "Hugging Face Blog"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2607.26873",
-      "https://arxiv.org/abs/2607.26094"
+      "https://arxiv.org/abs/2607.22996",
+      "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo"
     ],
     "matched_articles": [
       {
-        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
-        "link": "https://arxiv.org/abs/2607.26873",
+        "title": "Beyond Direct Answering: Aligning Educational LLMs as Socratic Guides via Heuristic Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2607.22996",
         "source": "arXiv CL"
       },
       {
-        "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
-        "link": "https://arxiv.org/abs/2607.26094",
-        "source": "arXiv LG"
+        "title": "From GRPO to DAPO and GSPO: What, Why, and How    NormalUhr • Aug 9, 2025 •  133",
+        "link": "https://huggingface.co/blog/NormalUhr/grpo-to-dapo-and-gspo",
+        "source": "Hugging Face Blog"
       }
     ],
-    "rank": 23,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -822,7 +711,59 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 24,
+    "rank": 20,
+    "status": "hot"
+  },
+  {
+    "id": "test-time-compute",
+    "appear_count": 6,
+    "days": 4,
+    "term_en": "Test-Time Compute",
+    "term_zh": "测试时计算",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让模型在推理阶段投入更多计算(如多步思考)来换取更好答案的方法",
+    "explanation": "测试时计算就是让AI模型在给出答案时多思考几步，这样就能给出更准确的答案。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27656"
+    ],
+    "matched_articles": [
+      {
+        "title": "Looped Transformers with Source-Centered State Evolution",
+        "link": "https://arxiv.org/abs/2607.27656",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 21,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-model",
+    "appear_count": 6,
+    "days": 6,
+    "term_en": "State Space Model",
+    "term_zh": "状态空间模型",
+    "abbreviation": "SSM",
+    "category": "AI技术",
+    "one_liner": "用状态随时间演化来建模序列的架构,擅长长序列且推理高效",
+    "explanation": "状态空间模型就像一个时间旅行者，追踪序列数据的变化，特别擅长处理长序列，而且推理速度很快。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26751"
+    ],
+    "matched_articles": [
+      {
+        "title": "Phoneme- vs. Character-Level Targets and Selective State-Space Models for Intracortical Brain-to-Text",
+        "link": "https://arxiv.org/abs/2607.26751",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -852,6 +793,65 @@
         "title": "Now You Have My Healthy Attention: A U-DiT for Brain-MRI Inpainting",
         "link": "https://arxiv.org/abs/2607.27974",
         "source": "arXiv CV"
+      }
+    ],
+    "rank": 23,
+    "status": "hot"
+  },
+  {
+    "id": "reward-model",
+    "appear_count": 6,
+    "days": 5,
+    "term_en": "Reward Model",
+    "term_zh": "奖励模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "学习人类偏好、为模型输出打分以指导强化学习训练的模型",
+    "explanation": "奖励模型是让AI学会喜欢什么、不喜欢什么，通过给AI的输出打分来帮助它学习。",
+    "sources": [
+      "arXiv CL",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26873",
+      "https://arxiv.org/abs/2607.26094"
+    ],
+    "matched_articles": [
+      {
+        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2607.26873",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Meta-Learned Reward Shaping for Reinforcement Learning from Human Feedback",
+        "link": "https://arxiv.org/abs/2607.26094",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 24,
+    "status": "hot"
+  },
+  {
+    "id": "sparse-attention",
+    "appear_count": 6,
+    "days": 3,
+    "term_en": "Sparse Attention",
+    "term_zh": "稀疏注意力",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "只让每个位置关注部分相关位置以降低长序列计算成本的注意力机制",
+    "explanation": "稀疏注意力就像只关注重要的朋友，减少计算量，提高处理长信息效率。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.27692"
+    ],
+    "matched_articles": [
+      {
+        "title": "Recall Before You Rank: Similarity-Guided Top-$K$ Reuse for Efficient Long-Context Attention",
+        "link": "https://arxiv.org/abs/2607.27692",
+        "source": "arXiv CL"
       }
     ],
     "rank": 25,
@@ -1060,32 +1060,6 @@
     "status": "hot"
   },
   {
-    "id": "mixture-of-depths",
-    "appear_count": 5,
-    "days": 4,
-    "term_en": "Mixture of Depths",
-    "term_zh": "深度混合",
-    "abbreviation": "MoD",
-    "category": "AI技术",
-    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
-    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26068"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
-        "link": "https://arxiv.org/abs/2607.26068",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 31,
-    "status": "hot"
-  },
-  {
     "id": "reflexion",
     "appear_count": 5,
     "days": 4,
@@ -1108,33 +1082,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 32,
-    "status": "hot"
-  },
-  {
-    "id": "retrieval-augmented-reasoning",
-    "appear_count": 4,
-    "days": 4,
-    "term_en": "Retrieval-Augmented Reasoning",
-    "term_zh": "检索增强推理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
-    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
-    "sources": [
-      "InfoQ"
-    ],
-    "source_urls": [
-      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
-        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
-        "source": "InfoQ"
-      }
-    ],
-    "rank": 33,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1167,7 +1115,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 34,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1199,7 +1147,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 35,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1241,7 +1189,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 36,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1280,7 +1228,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 37,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1321,33 +1269,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
-    "id": "rotary-position-embedding",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Rotary Position Embedding",
-    "term_zh": "旋转位置编码",
-    "abbreviation": "RoPE",
-    "category": "AI技术",
-    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
-    "explanation": "RoPE是一种给序列加上位置信息的编码方式，像给队伍排个队，方便预测未来的变化。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2607.26369"
-    ],
-    "matched_articles": [
-      {
-        "title": "ClockRoPE: Random Fourier Rotations for Temporal Routine Modeling",
-        "link": "https://arxiv.org/abs/2607.26369",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 39,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1373,7 +1295,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 40,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1399,7 +1321,59 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 41,
+    "rank": 38,
+    "status": "hot"
+  },
+  {
+    "id": "retrieval-augmented-reasoning",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "Retrieval-Augmented Reasoning",
+    "term_zh": "检索增强推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在多步推理过程中动态检索外部知识来支撑推理的技术",
+    "explanation": "通过检索外部信息来辅助推理，就像查资料帮助解题。",
+    "sources": [
+      "InfoQ"
+    ],
+    "source_urls": [
+      "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Building Hierarchical Agentic RAG Systems: Multi-Modal Reasoning with Autonomous Error Recovery",
+        "link": "https://www.infoq.com/articles/building-hierarchical-agentic-rag-systems/",
+        "source": "InfoQ"
+      }
+    ],
+    "rank": 39,
+    "status": "hot"
+  },
+  {
+    "id": "mixture-of-depths",
+    "appear_count": 3,
+    "days": 3,
+    "term_en": "Mixture of Depths",
+    "term_zh": "深度混合",
+    "abbreviation": "MoD",
+    "category": "AI技术",
+    "one_liner": "让模型按token难度动态决定经过多少层计算以节省算力的方法",
+    "explanation": "深度混合就像给模型穿多层衣服，难词就多穿几层，简单词就少穿，这样既保暖又省电。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26068"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Human Utility Factor: A Computable Welfare Metric That Reframes AI Governance as a Constrained Optimisation Problem",
+        "link": "https://arxiv.org/abs/2607.26068",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1425,7 +1399,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 42,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1451,7 +1425,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 43,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1477,7 +1451,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1516,7 +1490,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 45,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1555,7 +1529,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 46,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1581,7 +1555,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1619,7 +1593,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 48,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1659,7 +1633,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 49,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1685,7 +1659,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 50,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1711,7 +1685,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 51,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1737,7 +1711,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 52,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1763,7 +1737,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1789,7 +1763,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1815,7 +1789,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1841,7 +1815,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1867,7 +1841,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1893,7 +1867,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1919,7 +1893,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1945,7 +1919,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1971,7 +1945,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1997,7 +1971,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 62,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -2023,7 +1997,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 63,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2049,7 +2023,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 64,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2075,7 +2049,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 65,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2101,7 +2075,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 66,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2127,7 +2101,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 67,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2153,7 +2127,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 68,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2179,7 +2153,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 69,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2205,7 +2179,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 70,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2231,7 +2205,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 71,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2257,7 +2231,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 72,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2290,7 +2264,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 73,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2316,7 +2290,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 74,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2349,7 +2323,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 75,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2381,7 +2355,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 76,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2413,7 +2387,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 77,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2439,7 +2413,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 78,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2465,7 +2439,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2491,7 +2465,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2517,7 +2491,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2543,7 +2517,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 82,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2569,7 +2543,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 83,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2595,7 +2569,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 84,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2621,7 +2595,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2647,7 +2621,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2673,7 +2647,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 87,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2699,7 +2673,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 88,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2725,7 +2699,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2751,7 +2725,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2777,7 +2751,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2803,7 +2777,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 92,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2835,7 +2809,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 93,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2867,7 +2841,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 94,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2899,7 +2873,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 95,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2932,7 +2906,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 96,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2964,7 +2938,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2997,7 +2971,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 98,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -3030,7 +3004,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 99,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -3063,7 +3037,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 100,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -3093,6 +3067,32 @@
         "title": "TT-net: Quantum Inspired Tensor Network Denoising in Conditional GANs",
         "link": "https://arxiv.org/abs/2608.19789",
         "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "rotary-position-embedding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Rotary Position Embedding",
+    "term_zh": "旋转位置编码",
+    "abbreviation": "RoPE",
+    "category": "AI技术",
+    "one_liner": "用旋转方式给序列注入位置信息、利于长上下文外推的编码方法",
+    "explanation": "RoPE是一种给序列加上位置信息的编码方式，像给队伍排个队，方便预测未来的变化。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2607.26369"
+    ],
+    "matched_articles": [
+      {
+        "title": "ClockRoPE: Random Fourier Rotations for Temporal Routine Modeling",
+        "link": "https://arxiv.org/abs/2607.26369",
+        "source": "arXiv LG"
       }
     ],
     "rank": 101,
@@ -8668,6 +8668,110 @@
     "source_urls": [],
     "matched_articles": [],
     "rank": 318,
+    "status": "hot"
+  },
+  {
+    "id": "originflow",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "OriginFlow",
+    "term_zh": "渊澈太初",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "OriginFlow（渊澈太初）是一种将人类肌肉反应转化为数字货币的技术。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/477094.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "00后清华博士生创业“神经接口”：把人类肌肉反应炼成Token",
+        "link": "https://www.qbitai.com/2026/08/477094.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 319,
+    "status": "hot"
+  },
+  {
+    "id": "deepsoma",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "DeepSoma",
+    "term_zh": "知跃灵物",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "DeepSoma（知跃灵物）是一种AI技术，能像上传果蝇大脑一样，将神经元信息直接传输到不同平台。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/477090.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Eon用LIF“上传”果蝇脑，中国团队直接上精细神经元和跨身体平台",
+        "link": "https://www.qbitai.com/2026/08/477090.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 320,
+    "status": "hot"
+  },
+  {
+    "id": "mars-lab",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "MaRS Lab",
+    "term_zh": "港大机电与机器人系统实验室",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "港大机电与机器人系统实验室，研究机器人技术，让机器人代替人去危险地方工作。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/476965.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "当机器人大脑飞上天！替人奔赴危险作业现场，对话硅羽科技",
+        "link": "https://www.qbitai.com/2026/08/476965.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 321,
+    "status": "hot"
+  },
+  {
+    "id": "current-robotics",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Current Robotics",
+    "term_zh": "元流智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "元流智能是让机器人像人一样思考，让它们更聪明地工作。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/476930.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "从模型到生产力：星海图与产业朋友圈共探具身智能的下一站",
+        "link": "https://www.qbitai.com/2026/08/476930.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 322,
     "status": "hot"
   }
 ]
