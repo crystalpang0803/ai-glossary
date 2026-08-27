@@ -1,44 +1,84 @@
 [
   {
+    "id": "vision-language-models",
+    "appear_count": 11,
+    "days": 2,
+    "term_en": "Vision-Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "视觉语言模型：能看懂图片和文字，让机器像人一样理解世界。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23978",
+      "https://arxiv.org/abs/2608.24935",
+      "https://arxiv.org/abs/2608.24966",
+      "https://arxiv.org/abs/2608.25251",
+      "https://arxiv.org/abs/2608.25299"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Seeing Is Not Enough: Benchmarking Interactive Visual Grounding in LVLMs",
+        "link": "https://arxiv.org/abs/2608.23978",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "A Lightweight Multimodal Vision-Language Framework for Early-Stage Anatomical Green Fruit Classification in Commercial Orchards",
+        "link": "https://arxiv.org/abs/2608.24935",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Targeting the Attention Heads Behind Object Hallucination in LLaVA",
+        "link": "https://arxiv.org/abs/2608.24966",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 1,
+    "status": "hot"
+  },
+  {
     "id": "multimodal-large-language-models",
-    "appear_count": 5,
-    "days": 1,
+    "appear_count": 9,
+    "days": 2,
     "term_en": "Multimodal Large Language Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "多模态大型语言模型：能理解多种信息（如图像、文字）的超级智能。",
+    "explanation": "多模态大型语言模型：能处理多种类型数据（如文本、图像）的强大AI模型。",
     "sources": [
       "arXiv AI",
       "arXiv CL",
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.20549",
-      "https://arxiv.org/abs/2608.20382",
-      "https://arxiv.org/abs/2608.20492",
-      "https://arxiv.org/abs/2608.20713",
-      "https://arxiv.org/abs/2608.20814"
+      "https://arxiv.org/abs/2608.23646",
+      "https://arxiv.org/abs/2608.23970",
+      "https://arxiv.org/abs/2608.25398",
+      "https://arxiv.org/abs/2608.24934"
     ],
     "matched_articles": [
       {
-        "title": "Volumetric Radiology AI in the Era of Multimodal Large Language Models",
-        "link": "https://arxiv.org/abs/2608.20549",
+        "title": "MolEmb: Multimodal Large Language Models Can Be Strong Molecular Embedding Models",
+        "link": "https://arxiv.org/abs/2608.23646",
         "source": "arXiv AI"
       },
       {
-        "title": "Decoupled Vision-Language System for Multimodal Understanding and Generation",
-        "link": "https://arxiv.org/abs/2608.20382",
-        "source": "arXiv CL"
+        "title": "Giraffe: A Mapping Architecture from Hidden Text Representations to Visual Embeddings for Efficient Graphic Design",
+        "link": "https://arxiv.org/abs/2608.23970",
+        "source": "arXiv AI"
       },
       {
-        "title": "Annotations as Rollouts: Efficient and Scalable Reinforcement Learning for Video MLLMs",
-        "link": "https://arxiv.org/abs/2608.20492",
-        "source": "arXiv CV"
+        "title": "OmniPhys: A Unified Multimodal Benchmark for Physics Understanding and Generation from Chinese Educational Corpora",
+        "link": "https://arxiv.org/abs/2608.25398",
+        "source": "arXiv CL"
       }
     ],
-    "rank": 1,
+    "rank": 2,
     "status": "hot"
   },
   {
@@ -79,7 +119,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 2,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -120,7 +160,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 3,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -161,7 +201,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 4,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -201,7 +241,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 5,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -241,86 +281,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 6,
-    "status": "hot"
-  },
-  {
-    "id": "dag",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "DAG",
-    "term_zh": "有向无环图",
-    "abbreviation": "DAG",
-    "category": "AI技术",
-    "one_liner": "一种表示任务依赖关系的图结构。",
-    "explanation": "DAG是一种图，用来表示任务间的先后顺序，就像做事情的步骤图。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16890",
-      "https://arxiv.org/abs/2608.17810",
-      "https://arxiv.org/abs/2608.17132"
-    ],
-    "matched_articles": [
-      {
-        "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
-        "link": "https://arxiv.org/abs/2608.16890",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Interpretable Humans, Alien LLMs: Expert Analysis of Latent Structures in Assessment Responses",
-        "link": "https://arxiv.org/abs/2608.17810",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Causal Discovery in Equal Variance Linear Gaussian DAGs via SURE-Tuned Ridge Regression",
-        "link": "https://arxiv.org/abs/2608.17132",
-        "source": "arXiv LG"
-      }
-    ],
     "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "vision-language-models",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Vision-Language Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "视觉语言模型：能看懂图片和文字，帮助理解图像内容。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.20414",
-      "https://arxiv.org/abs/2608.20699",
-      "https://arxiv.org/abs/2608.20763"
-    ],
-    "matched_articles": [
-      {
-        "title": "StateSight: Benchmarking Latent Spatial-State Reconstruction in Vision-Language Models",
-        "link": "https://arxiv.org/abs/2608.20414",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "ArtiMo: Agent-Driven Articulated Mesh Animation",
-        "link": "https://arxiv.org/abs/2608.20699",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "CARD: Diagnosing Belief to Action Routing Failures in Vision Language Models",
-        "link": "https://arxiv.org/abs/2608.20763",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 8,
     "status": "hot"
   },
   {
@@ -358,7 +319,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 9,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -391,7 +352,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 10,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -424,7 +385,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 11,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -457,7 +418,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 12,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -489,7 +450,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 13,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -522,7 +483,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 14,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -555,7 +516,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 15,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -588,7 +549,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 16,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -620,215 +581,104 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 16,
+    "status": "hot"
+  },
+  {
+    "id": "large-vision-language-model",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Large Vision-Language Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "大型视觉-语言模型：能看会说，能识别图像和文字，用于评估视频美感和生成质量。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23978",
+      "https://arxiv.org/abs/2608.25452"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Seeing Is Not Enough: Benchmarking Interactive Visual Grounding in LVLMs",
+        "link": "https://arxiv.org/abs/2608.23978",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "VGA-BenchV2: An Expanded Unified Benchmark and Multi-Model Framework for Evaluating Video Aesthetics and Generation Quality",
+        "link": "https://arxiv.org/abs/2608.25452",
+        "source": "arXiv CV"
+      }
+    ],
     "rank": 17,
     "status": "hot"
   },
   {
-    "id": "previs",
-    "appear_count": 1,
+    "id": "complex-reasoning",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Previs",
-    "term_zh": "预演",
+    "term_en": "Complex Reasoning",
+    "term_zh": "",
     "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "影视制作中用于视觉预演的3D模型。",
-    "explanation": "Previs是影视制作中用3D模型提前“试演”画面，让导演和制作团队先看看效果。",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "复杂推理是一种让AI理解并生成复杂物理现象的技术。",
     "sources": [
-      "量子位"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/475476.html"
+      "https://arxiv.org/abs/2608.25398",
+      "https://arxiv.org/abs/2608.25428"
     ],
     "matched_articles": [
       {
-        "title": "写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”",
-        "link": "https://www.qbitai.com/2026/08/475476.html",
-        "source": "量子位"
+        "title": "OmniPhys: A Unified Multimodal Benchmark for Physics Understanding and Generation from Chinese Educational Corpora",
+        "link": "https://arxiv.org/abs/2608.25398",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "DCGC: Draft-Conditioned Global Correction for Complex Reasoning with Masked Diffusion Models",
+        "link": "https://arxiv.org/abs/2608.25428",
+        "source": "arXiv CL"
       }
     ],
     "rank": 18,
     "status": "hot"
   },
   {
-    "id": "blockout",
-    "appear_count": 1,
+    "id": "physics-informed-neural-networks",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Blockout",
-    "term_zh": "白模",
+    "term_en": "Physics-Informed Neural Networks",
+    "term_zh": "",
     "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "影视制作中用于预演的粗略3D模型。",
-    "explanation": "白模是影视制作中用来预演的简单3D模型，就像提前搭好的舞台布景。",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "物理信息神经网络：结合物理规律和神经网络，提高模型预测准确性。",
     "sources": [
-      "量子位"
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/475476.html"
+      "https://arxiv.org/abs/2608.24940",
+      "https://arxiv.org/abs/2608.24970"
     ],
     "matched_articles": [
       {
-        "title": "写2000字提示词，不如先生成3D白模！AI视频创作进入“预演时代”",
-        "link": "https://www.qbitai.com/2026/08/475476.html",
-        "source": "量子位"
+        "title": "When Does Frequency Decomposition Benefit Physics-Informed Neural Networks? A Preliminary Ablation Study",
+        "link": "https://arxiv.org/abs/2608.24940",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "Physics-Informed Error Field Learning: A Post-Training Optimization Framework for Physics-Informed Neural Networks",
+        "link": "https://arxiv.org/abs/2608.24970",
+        "source": "arXiv LG"
       }
     ],
     "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "pharmaverse",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Pharmaverse",
-    "term_zh": "药企领域知识库",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用于药物研发领域知识管理的数据库。",
-    "explanation": "药企领域知识库，帮研发人员管理药物研究信息，提高临床试验编程可靠性。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16890"
-    ],
-    "matched_articles": [
-      {
-        "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
-        "link": "https://arxiv.org/abs/2608.16890",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "aegis",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Aegis",
-    "term_zh": "盾牌系统",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "用于Agentic AI的运行时治理系统。",
-    "explanation": "盾牌系统是管理AI行为，确保AI安全可靠运行的系统。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16891"
-    ],
-    "matched_articles": [
-      {
-        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-        "link": "https://arxiv.org/abs/2608.16891",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "prompt-policy-conditioning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Prompt-policy conditioning",
-    "term_zh": "提示词-策略条件化",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "通过提示词和策略来控制AI模型行为的方法。",
-    "explanation": "用提示词和策略指导AI，让它按规则行事。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16891"
-    ],
-    "matched_articles": [
-      {
-        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-        "link": "https://arxiv.org/abs/2608.16891",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "provenance-server-side",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Provenance server-side",
-    "term_zh": "来源服务器端",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "在服务器端验证数据来源的方法。",
-    "explanation": "来源服务器端：检查数据来源是否可靠，确保数据安全。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16891"
-    ],
-    "matched_articles": [
-      {
-        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-        "link": "https://arxiv.org/abs/2608.16891",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 23,
-    "status": "hot"
-  },
-  {
-    "id": "fail-closed-execution",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Fail-closed execution",
-    "term_zh": "故障关闭执行",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "在不确定情况下停止执行的策略。",
-    "explanation": "故障关闭执行：AI遇到不确定情况时，会自动停止执行，确保安全。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16891"
-    ],
-    "matched_articles": [
-      {
-        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-        "link": "https://arxiv.org/abs/2608.16891",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 24,
-    "status": "hot"
-  },
-  {
-    "id": "senate-style-settlement",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Senate-style settlement",
-    "term_zh": "参议院式解决",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "基于多数投票的授权路径。",
-    "explanation": "参议院式解决：像参议院那样，多数人同意后才能决定，确保决策更安全。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.16891"
-    ],
-    "matched_articles": [
-      {
-        "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-        "link": "https://arxiv.org/abs/2608.16891",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 25,
     "status": "hot"
   },
   {
@@ -854,7 +704,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -880,7 +730,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -906,7 +756,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 28,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -932,7 +782,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 29,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -958,7 +808,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 30,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -984,7 +834,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 31,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -1010,7 +860,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 32,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -1036,7 +886,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -1062,7 +912,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 34,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1088,7 +938,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1114,7 +964,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 36,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1140,7 +990,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 37,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1166,7 +1016,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 38,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1192,7 +1042,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 39,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1218,7 +1068,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 40,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1244,7 +1094,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 41,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1270,7 +1120,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 42,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1296,7 +1146,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1322,7 +1172,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 44,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1348,7 +1198,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 45,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1374,7 +1224,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1400,7 +1250,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1426,7 +1276,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 48,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1452,7 +1302,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 49,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1478,7 +1328,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 50,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1504,7 +1354,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 51,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1530,7 +1380,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 52,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1556,7 +1406,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1582,7 +1432,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1608,7 +1458,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1634,7 +1484,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1660,7 +1510,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1686,7 +1536,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1712,7 +1562,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1728,7 +1578,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 60,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1754,7 +1604,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 61,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1780,7 +1630,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 62,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1806,7 +1656,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 63,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1832,7 +1682,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 64,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1858,7 +1708,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1884,7 +1734,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 66,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1910,7 +1760,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1936,7 +1786,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1962,7 +1812,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1988,7 +1838,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2014,7 +1864,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2040,7 +1890,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2066,7 +1916,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2092,7 +1942,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2118,7 +1968,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2144,7 +1994,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2170,7 +2020,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 77,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2196,7 +2046,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 78,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2222,7 +2072,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2248,7 +2098,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2274,7 +2124,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 81,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2300,7 +2150,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 82,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2326,7 +2176,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 83,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2352,7 +2202,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 84,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2378,7 +2228,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 85,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2404,7 +2254,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 86,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2430,7 +2280,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 87,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2456,7 +2306,657 @@
         "source": "量子位"
       }
     ],
+    "rank": 82,
+    "status": "hot"
+  },
+  {
+    "id": "pmf",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "PMF",
+    "term_zh": "产品市场适配度",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "PMF是指产品与市场需求的匹配度，简单说就是产品是否符合市场需求。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/479895.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI视频应用井喷，美图打开新的增长空间",
+        "link": "https://www.qbitai.com/2026/08/479895.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 83,
+    "status": "hot"
+  },
+  {
+    "id": "arppu",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ARPPU",
+    "term_zh": "每付费用户平均收入",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "ARPPU就是平均每个付费用户贡献的收入，AI视频应用让美图收入增长。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/08/479895.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI视频应用井喷，美图打开新的增长空间",
+        "link": "https://www.qbitai.com/2026/08/479895.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 84,
+    "status": "hot"
+  },
+  {
+    "id": "embedding-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Embedding Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "嵌入模型：将复杂信息转换成数字表示，方便计算机处理。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23646"
+    ],
+    "matched_articles": [
+      {
+        "title": "MolEmb: Multimodal Large Language Models Can Be Strong Molecular Embedding Models",
+        "link": "https://arxiv.org/abs/2608.23646",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 85,
+    "status": "hot"
+  },
+  {
+    "id": "open-world-multi-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Open-World Multi-Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "开放世界多智能体系统，就是多个智能体在开放环境中自主探索和发现数学规律。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23691"
+    ],
+    "matched_articles": [
+      {
+        "title": "Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment",
+        "link": "https://arxiv.org/abs/2608.23691",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 86,
+    "status": "hot"
+  },
+  {
+    "id": "although-large-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Although Large Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "尽管大型语言模型（），它能用强化学习增强的智能搜索生成生物医学事实核查报告。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23811"
+    ],
+    "matched_articles": [
+      {
+        "title": "Generating Biomedical Fact-Checking Reports with RL-Enhanced Agentic Search",
+        "link": "https://arxiv.org/abs/2608.23811",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 87,
+    "status": "hot"
+  },
+  {
+    "id": "biocheck-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "BioCheck Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "BioCheck Agent是一种人工智能工具，用于生成医学事实核查报告。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23811"
+    ],
+    "matched_articles": [
+      {
+        "title": "Generating Biomedical Fact-Checking Reports with RL-Enhanced Agentic Search",
+        "link": "https://arxiv.org/abs/2608.23811",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 88,
+    "status": "hot"
+  },
+  {
+    "id": "mixed-format-paged-attention",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Mixed-Format Paged Attention",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "混合格式分页注意力机制，是一种优化缓存压缩的技术，能保留更多数据。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23834"
+    ],
+    "matched_articles": [
+      {
+        "title": "Minima-KV: Retention-Preserving KV Cache Compression with Mixed-Format Paged Attention",
+        "link": "https://arxiv.org/abs/2608.23834",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 89,
+    "status": "hot"
+  },
+  {
+    "id": "lab-protocol-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Lab Protocol Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Lab Protocol Reasoning是一种通过分析实验室操作流程来优化实验的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23898"
+    ],
+    "matched_articles": [
+      {
+        "title": "BenchBench-Protocol: Evaluating Real-World Wet-Lab Protocol Reasoning and Modification",
+        "link": "https://arxiv.org/abs/2608.23898",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 90,
+    "status": "hot"
+  },
+  {
+    "id": "better-distillation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Better Distillation",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Better Distillation是一种改进的AI模型压缩技术，能更高效地缩小模型大小。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23911"
+    ],
+    "matched_articles": [
+      {
+        "title": "PROOF-Gen: From Optimized Data to Better Distillation",
+        "link": "https://arxiv.org/abs/2608.23911",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 91,
+    "status": "hot"
+  },
+  {
+    "id": "evolutionary-recurrent-decision-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Evolutionary Recurrent Decision Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "进化循环决策模型：模拟生物进化过程，研究适应和不适应行为的模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23932"
+    ],
+    "matched_articles": [
+      {
+        "title": "Evolutionary Recurrent Decision Model in Developing Adaptive and Maladaptive Behaviors",
+        "link": "https://arxiv.org/abs/2608.23932",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 92,
+    "status": "hot"
+  },
+  {
+    "id": "recursive-agentic-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Recursive Agentic Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "递归智能推理，就像电脑自己思考，不断深入问题，找到答案。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23956"
+    ],
+    "matched_articles": [
+      {
+        "title": "Recursive Agentic Reasoning",
+        "link": "https://arxiv.org/abs/2608.23956",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 93,
+    "status": "hot"
+  },
+  {
+    "id": "mapping-architecture",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Mapping Architecture",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Mapping Architecture是一种将文字信息转换为视觉图像的技术，用于高效设计。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.23970"
+    ],
+    "matched_articles": [
+      {
+        "title": "Giraffe: A Mapping Architecture from Hidden Text Representations to Visual Embeddings for Efficient Graphic Design",
+        "link": "https://arxiv.org/abs/2608.23970",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 94,
+    "status": "hot"
+  },
+  {
+    "id": "llm-agent-networks",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM Agent Networks",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "LLM Agent Networks是一种AI网络，能像人一样传播信念，影响其他AI。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25152"
+    ],
+    "matched_articles": [
+      {
+        "title": "Belief Cascades Drive Persuasion in LLM Agent Networks",
+        "link": "https://arxiv.org/abs/2608.25152",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "State Space Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "状态空间模型：一种用于检测假新闻的数学模型，通过分析新闻内容的变化趋势来识别虚假信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25190"
+    ],
+    "matched_articles": [
+      {
+        "title": "BanglaMamba: Exploring State Space Models for Bangla Fake News Detection",
+        "link": "https://arxiv.org/abs/2608.25190",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 96,
+    "status": "hot"
+  },
+  {
+    "id": "llm-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "LLM Reasoning是一种AI技术，能自动调整以纠正大型语言模型中的偏见。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25379"
+    ],
+    "matched_articles": [
+      {
+        "title": "Adaptive Triggering for Bias Correction in LLM Reasoning",
+        "link": "https://arxiv.org/abs/2608.25379",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "unified-multimodal-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Unified Multimodal Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "统一多模态基准，就是将不同类型的数据（如图像、文本）放在一起，用于训练AI理解物理现象。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25398"
+    ],
+    "matched_articles": [
+      {
+        "title": "OmniPhys: A Unified Multimodal Benchmark for Physics Understanding and Generation from Chinese Educational Corpora",
+        "link": "https://arxiv.org/abs/2608.25398",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "masked-diffusion-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Masked Diffusion Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "用遮罩扩散模型，AI像猜谜一样学习复杂推理。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25428"
+    ],
+    "matched_articles": [
+      {
+        "title": "DCGC: Draft-Conditioned Global Correction for Complex Reasoning with Masked Diffusion Models",
+        "link": "https://arxiv.org/abs/2608.25428",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "masked-diffusion-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Masked Diffusion Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "用遮盖的方式逐步揭示图像，让AI像猜谜一样学习图像细节。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25428"
+    ],
+    "matched_articles": [
+      {
+        "title": "DCGC: Draft-Conditioned Global Correction for Complex Reasoning with Masked Diffusion Models",
+        "link": "https://arxiv.org/abs/2608.25428",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "reward-guided-dual-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reward-Guided Dual-Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Reward-Guided Dual-Agent是一种AI技术，能帮助AI在文学长篇叙述中找到线索，就像玩游戏一样，给AI奖励，让它越玩越聪明。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25531"
+    ],
+    "matched_articles": [
+      {
+        "title": "ClueWeaver: Reward-Guided Dual-Agent Evidence Reasoning for Compact LLMs on Literary Long Narratives",
+        "link": "https://arxiv.org/abs/2608.25531",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "evidence-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Evidence Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "证据推理是一种AI技术，通过分析线索来理解复杂故事。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25531"
+    ],
+    "matched_articles": [
+      {
+        "title": "ClueWeaver: Reward-Guided Dual-Agent Evidence Reasoning for Compact LLMs on Literary Long Narratives",
+        "link": "https://arxiv.org/abs/2608.25531",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "encoder-large-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Encoder Large Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "编码大型语言模型，就像一个超级翻译，能将复杂语言转换成简单易懂的信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Generative vs. Encoder Large Language Models for ASR Evaluation: A Comparative Study",
+        "link": "https://arxiv.org/abs/2608.25574",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "expert-informed-skill-prompting",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Expert-Informed Skill Prompting",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "专家指导的技能提示，就是用专家知识来指导AI学习，提高识别中文成语的准确性。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25579"
+    ],
+    "matched_articles": [
+      {
+        "title": "Cross-Dataset Stability of Expert-Informed Skill Prompting and Fine-Tuning for Chinese Metaphor Identification",
+        "link": "https://arxiv.org/abs/2608.25579",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "efficient-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Efficient Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Efficient Reasoning是一种高效推理技术，能快速找到最佳解决方案。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25583"
+    ],
+    "matched_articles": [
+      {
+        "title": "GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning",
+        "link": "https://arxiv.org/abs/2608.25583",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "jit-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "JIT-Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "JIT-Agent是一种智能体，它通过即时进化来扩展智能，就像按需学习一样。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.25593"
+    ],
+    "matched_articles": [
+      {
+        "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+        "link": "https://arxiv.org/abs/2608.25593",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "hybrid-hierarchical-multi-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Hybrid Hierarchical Multi-Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "混合分层多智能体：结合多种智能体技术，用于植物疾病诊断，让机器人更准确识别病害。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.24934"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fusing Perceptual Vision Experts with Multimodal Large Language Models for Explainable Plant Disease Diagnosis: From Benchmark Imagery to Real-World Robotic Field Validation",
+        "link": "https://arxiv.org/abs/2608.24934",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 107,
     "status": "hot"
   }
 ]
