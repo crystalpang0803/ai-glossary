@@ -109,20 +109,13 @@ async function loadGlossary() {
 }
 
 // ===== 渲染热门术语 =====
-// 去重(排除已入库)+按「新鲜度优先，同日再按频次」排序
-// 说明: 只按 appear_count 排会让历史高频老词(如 ADA)靠存量长期霸榜，
-// 导致页面顶部永远停在旧日期、看起来"不更新"。故先按 date 新鲜度降序，
-// 同一天内再按 appear_count 降序，保证当天新词优先展示。
+// 去重(排除已入库)+按出现频次(appear_count)降序排序，即页面标题「按出现频次排行」
 function prepareHot(arr) {
   const officialIds = new Set(glossaryData.map(t => t.id));
   const officialNames = new Set(glossaryData.map(t => (t.term_en || '').toLowerCase()));
   return (arr || [])
     .filter(t => t && t.term_en && !officialIds.has(t.id) && !officialNames.has((t.term_en || '').toLowerCase()))
-    .sort((a, b) => {
-      const da = a.date || '', db = b.date || '';
-      if (da !== db) return db.localeCompare(da);           // 日期新的在前
-      return (b.appear_count || 0) - (a.appear_count || 0);  // 同日按频次
-    });
+    .sort((a, b) => (b.appear_count || 0) - (a.appear_count || 0));  // 纯按出现频次降序
 }
 function findHot(id) { return currentHotData.find(t => t.id === id) || hotTermsData.find(t => t.id === id); }
 
