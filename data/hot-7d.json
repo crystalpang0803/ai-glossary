@@ -159,44 +159,6 @@
     "status": "hot"
   },
   {
-    "id": "ross-harness",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "ROSS Harness",
-    "term_zh": "ROSS Harness",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "围绕具身模型构建的工业级执行体系。",
-    "explanation": "ROSS Harness是一种工业机器人执行体系，让机器人更智能高效。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481923.html",
-      "https://www.qbitai.com/2026/08/481919.html",
-      "https://www.qbitai.com/2026/08/481750.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "滴滴自动驾驶新一代车型开启载客测试服务",
-        "link": "https://www.qbitai.com/2026/08/481923.html",
-        "source": "量子位"
-      },
-      {
-        "title": "范式与华为达成重磅算力战略合作，成为首批拥抱国产最高端算力底座的AI企业",
-        "link": "https://www.qbitai.com/2026/08/481919.html",
-        "source": "量子位"
-      },
-      {
-        "title": "全国第三，公司第二，“初创黑马”灵犀智涌用ROSS Harness把机器人送进工业具身智能第一梯队",
-        "link": "https://www.qbitai.com/2026/08/481750.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
     "id": "large-vision-language-model",
     "appear_count": 2,
     "days": 1,
@@ -226,7 +188,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 6,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -258,7 +220,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 7,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -290,7 +252,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 8,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -316,7 +278,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 9,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -342,7 +304,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 10,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -368,7 +330,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 11,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -394,29 +356,55 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 12,
+    "rank": 11,
     "status": "hot"
   },
   {
-    "id": "scirec",
+    "id": "fine-grained-adaptive-implicit-hate-speech-detection",
     "appear_count": 2,
     "days": 2,
-    "term_en": "SciReC",
-    "term_zh": "SciReC",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "模型自适应的多模态学术对话基准，用于评估多模态大型语言模型在关系推理任务上的表现。",
-    "explanation": "SciReC是一个评估多模态语言模型在理解关系上的能力工具。",
+    "term_en": "Fine-grained Adaptive Implicit Hate speech Detection",
+    "term_zh": "细粒度自适应隐式仇恨言论检测",
+    "abbreviation": "FAID",
+    "category": "AI技术",
+    "one_liner": "一种针对隐式仇恨言论的细粒度自适应检测框架。",
+    "explanation": "FAID是一种能精准识别隐晦仇恨言论的智能检测系统。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27461"
+      "https://arxiv.org/abs/2608.27462"
     ],
     "matched_articles": [
       {
-        "title": "SciReC: Diagnostic Evaluation of Multimodal, Multi-Turn Relational Reasoning with Adaptive Interaction",
-        "link": "https://arxiv.org/abs/2608.27461",
+        "title": "Sledgehammer or Scalpel? A Fine-grained Adaptive Framework for Implicit Hate Speech",
+        "link": "https://arxiv.org/abs/2608.27462",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 12,
+    "status": "hot"
+  },
+  {
+    "id": "emotional-context",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Emotional Context",
+    "term_zh": "情感上下文",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "指影响语言模型决策的情感状态。",
+    "explanation": "情感上下文是影响AI语言决策的情绪状态，比如AI在说话时的心情。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.27465"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Effect of Emotional Context on Large Language Models' Endorsement of Premature Decisions: Comparing Emotional Vulnerability Across Six Commercial Models",
+        "link": "https://arxiv.org/abs/2608.27465",
         "source": "arXiv CL"
       }
     ],
@@ -424,25 +412,25 @@
     "status": "hot"
   },
   {
-    "id": "dmra",
+    "id": "agentic-automation",
     "appear_count": 2,
     "days": 2,
-    "term_en": "DMRA",
-    "term_zh": "DMRA",
-    "abbreviation": "DMRA",
+    "term_en": "Agentic Automation",
+    "term_zh": "代理自动化",
+    "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "基于缺陷的诊断框架，用于量化不同因素对关系推理任务的影响。",
-    "explanation": "DMRA是一种诊断工具，能分析影响关系推理的因素。",
+    "one_liner": "通过代理学习实现自动化。",
+    "explanation": "代理自动化就是让机器像人一样学习，自动完成工作。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27461"
+      "https://arxiv.org/abs/2608.27466"
     ],
     "matched_articles": [
       {
-        "title": "SciReC: Diagnostic Evaluation of Multimodal, Multi-Turn Relational Reasoning with Adaptive Interaction",
-        "link": "https://arxiv.org/abs/2608.27461",
+        "title": "PACE: Publisher-Adaptive Content Extraction via Agentic Automation",
+        "link": "https://arxiv.org/abs/2608.27466",
         "source": "arXiv CL"
       }
     ],
@@ -450,25 +438,25 @@
     "status": "hot"
   },
   {
-    "id": "evoharmbench",
+    "id": "answer-first-evidence-grounding",
     "appear_count": 2,
     "days": 2,
-    "term_en": "EvoHarmBench",
-    "term_zh": "EvoHarmBench",
+    "term_en": "Answer-First Evidence Grounding",
+    "term_zh": "答案优先证据支撑",
     "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "动态对抗评估框架，用于内容审查系统的安全性评估。",
-    "explanation": "EvoHarmBench是一个测试内容审查系统安全性的工具，能发现系统漏洞。",
+    "category": "AI技术",
+    "one_liner": "一种在临床问答中，先生成候选答案再进行证据支撑的方法。",
+    "explanation": "AI先给出答案，再找证据支持，就像医生看病先说结论再查资料。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27844"
+      "https://arxiv.org/abs/2608.27467"
     ],
     "matched_articles": [
       {
-        "title": "EvoHarmBench: Breaking Content Moderation with Iterative Human-Like Evasion",
-        "link": "https://arxiv.org/abs/2608.27844",
+        "title": "UIC-AIHealth4All at ArchEHR-QA 2026: Answer-First Evidence Grounding for Clinical Question Answering",
+        "link": "https://arxiv.org/abs/2608.27467",
         "source": "arXiv CL"
       }
     ],
@@ -476,26 +464,32 @@
     "status": "hot"
   },
   {
-    "id": "stylometric-footprint",
+    "id": "sensor-fusion",
     "appear_count": 2,
-    "days": 2,
-    "term_en": "stylometric footprint",
-    "term_zh": "文体足迹",
+    "days": 1,
+    "term_en": "Sensor Fusion",
+    "term_zh": "传感器融合",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "AI生成文本在文体特征上与人类写作的区别。",
-    "explanation": "AI文体足迹：AI写作风格有固定特点，但AI编辑则不明显。",
+    "one_liner": "将多个传感器数据集成，以提高感知精度和可靠性。",
+    "explanation": "传感器融合就是将多个传感器收集的信息合并，让机器感知更准确、更可靠。",
     "sources": [
-      "arXiv CL"
+      "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27855"
+      "https://arxiv.org/abs/2608.27633",
+      "https://arxiv.org/abs/2608.27795"
     ],
     "matched_articles": [
       {
-        "title": "AI Writers Have a Consistent Stylometric Footprint, but AI Editors Do Not",
-        "link": "https://arxiv.org/abs/2608.27855",
-        "source": "arXiv CL"
+        "title": "Depth-Aware Pothole Detection Using YOLO and RT-DETR at the Edge",
+        "link": "https://arxiv.org/abs/2608.27633",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "uScenes: A Multimodal RGB and 3D Sonar Dataset for Underwater Robot Perception",
+        "link": "https://arxiv.org/abs/2608.27795",
+        "source": "arXiv CV"
       }
     ],
     "rank": 16,
@@ -506,11 +500,11 @@
     "appear_count": 2,
     "days": 1,
     "term_en": "Concept-Targeted Attribution",
-    "term_zh": "概念针对性归因",
+    "term_zh": "概念对齐归因",
     "abbreviation": "CTA",
-    "category": "AI技术",
-    "one_liner": "一种针对特定概念方向的归因图训练方法，用于解释模型内部概念表示的出现。",
-    "explanation": "CTA是一种训练模型解释概念表示的方法，帮助理解模型内部如何识别特定概念。",
+    "category": "AI概念",
+    "one_liner": "一种基于线性探针方向的归因方法，用于解释模型内部概念表示的出现。",
+    "explanation": "CTA是一种解释AI模型内部概念表示出现的方法，就像追踪模型内部概念如何产生。",
     "sources": [
       "arXiv CL"
     ],
@@ -1496,25 +1490,25 @@
     "status": "hot"
   },
   {
-    "id": "fine-grained-adaptive-implicit-hate-speech-detection",
+    "id": "scirec",
     "appear_count": 1,
     "days": 1,
-    "term_en": "Fine-grained Adaptive Implicit Hate Speech Detection",
-    "term_zh": "细粒度自适应隐式仇恨言论检测",
-    "abbreviation": "FAID",
-    "category": "AI应用",
-    "one_liner": "一个针对隐式仇恨言论检测的自适应框架，根据不同类型进行分类和调整。",
-    "explanation": "这个技术能识别和调整不同类型的隐式仇恨言论。",
+    "term_en": "SciReC",
+    "term_zh": "SciReC",
+    "abbreviation": "",
+    "category": "AI评测基准",
+    "one_liner": "一个用于评估多模态、多轮关系推理的学术对话基准。",
+    "explanation": "SciReC是一个评估学术对话中多模态和多轮推理能力的基准工具。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27462"
+      "https://arxiv.org/abs/2608.27461"
     ],
     "matched_articles": [
       {
-        "title": "Sledgehammer or Scalpel? A Fine-grained Adaptive Framework for Implicit Hate Speech",
-        "link": "https://arxiv.org/abs/2608.27462",
+        "title": "SciReC: Diagnostic Evaluation of Multimodal, Multi-Turn Relational Reasoning with Adaptive Interaction",
+        "link": "https://arxiv.org/abs/2608.27461",
         "source": "arXiv CL"
       }
     ],
@@ -1522,81 +1516,29 @@
     "status": "hot"
   },
   {
-    "id": "emotional-context",
+    "id": "dmra",
     "appear_count": 1,
     "days": 1,
-    "term_en": "Emotional Context",
-    "term_zh": "情感上下文",
+    "term_en": "DMRA",
+    "term_zh": "DMRA",
     "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "影响大型语言模型决策倾向的情感背景。",
-    "explanation": "情感上下文是影响AI决策时情感倾向的背景信息。",
+    "category": "AI技术",
+    "one_liner": "一种基于缺陷的诊断框架，用于量化不同组件对关系推理的贡献。",
+    "explanation": "DMRA是一种分析系统缺陷的框架，能评估各部件在推理中的作用。",
     "sources": [
       "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.27465"
+      "https://arxiv.org/abs/2608.27461"
     ],
     "matched_articles": [
       {
-        "title": "The Effect of Emotional Context on Large Language Models' Endorsement of Premature Decisions: Comparing Emotional Vulnerability Across Six Commercial Models",
-        "link": "https://arxiv.org/abs/2608.27465",
+        "title": "SciReC: Diagnostic Evaluation of Multimodal, Multi-Turn Relational Reasoning with Adaptive Interaction",
+        "link": "https://arxiv.org/abs/2608.27461",
         "source": "arXiv CL"
       }
     ],
     "rank": 56,
-    "status": "hot"
-  },
-  {
-    "id": "agentic-automation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Agentic Automation",
-    "term_zh": "代理自动化",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种通过代理（agent）实现自动化任务的方法。",
-    "explanation": "代理自动化就是用小助手自动完成工作。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.27466"
-    ],
-    "matched_articles": [
-      {
-        "title": "PACE: Publisher-Adaptive Content Extraction via Agentic Automation",
-        "link": "https://arxiv.org/abs/2608.27466",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 57,
-    "status": "hot"
-  },
-  {
-    "id": "answer-first-evidence-grounding",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Answer-First Evidence Grounding",
-    "term_zh": "答案优先证据支撑",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种在问答系统中，先生成候选答案再进行证据支撑的方法。",
-    "explanation": "先给出答案，再找证据支持。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.27467"
-    ],
-    "matched_articles": [
-      {
-        "title": "UIC-AIHealth4All at ArchEHR-QA 2026: Answer-First Evidence Grounding for Clinical Question Answering",
-        "link": "https://arxiv.org/abs/2608.27467",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 58,
     "status": "hot"
   },
   {
@@ -1622,7 +1564,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 59,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1648,7 +1590,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 60,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1674,7 +1616,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 61,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1700,7 +1642,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 62,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1726,7 +1668,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 63,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1752,7 +1694,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 64,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1778,7 +1720,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 65,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1804,7 +1746,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 66,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1830,7 +1772,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 67,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1856,7 +1798,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 68,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1882,6 +1824,58 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 67,
+    "status": "hot"
+  },
+  {
+    "id": "evoharmbench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "EvoHarmBench",
+    "term_zh": "EvoHarmBench",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "首个动态对抗评估框架，用于内容审查系统。",
+    "explanation": "EvoHarmBench是一个评估内容审查系统是否有效的工具，能模拟人类逃避审查的行为。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.27844"
+    ],
+    "matched_articles": [
+      {
+        "title": "EvoHarmBench: Breaking Content Moderation with Iterative Human-Like Evasion",
+        "link": "https://arxiv.org/abs/2608.27844",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 68,
+    "status": "hot"
+  },
+  {
+    "id": "stylometric-footprint",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Stylometric Footprint",
+    "term_zh": "文体足迹",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "AI生成文本和编辑文本在文体特征上的独特痕迹。",
+    "explanation": "AI生成文本有独特风格，但编辑后风格变化不大。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.27855"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI Writers Have a Consistent Stylometric Footprint, but AI Editors Do Not",
+        "link": "https://arxiv.org/abs/2608.27855",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 69,
     "status": "hot"
   },
@@ -1902,25 +1896,25 @@
     "status": "hot"
   },
   {
-    "id": "recursive-self-improvement",
+    "id": "robotaxi",
     "appear_count": 1,
     "days": 1,
-    "term_en": "Recursive Self-Improvement",
-    "term_zh": "递归自我改进",
-    "abbreviation": "RSI",
-    "category": "AI技术",
-    "one_liner": "通过循环迭代优化研究过程和实验设计。",
-    "explanation": "递归自我改进就像一个人不断学习，让研究越来越精准。",
+    "term_en": "Robotaxi",
+    "term_zh": "自动驾驶出租车",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种自动驾驶的出租车服务，提供无人驾驶的出行体验。",
+    "explanation": "自动驾驶出租车，就像无人驾驶的出租车，让你坐车不用司机。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/481475.html"
+      "https://www.qbitai.com/2026/08/481923.html"
     ],
     "matched_articles": [
       {
-        "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
-        "link": "https://www.qbitai.com/2026/08/481475.html",
+        "title": "滴滴自动驾驶新一代车型开启载客测试服务",
+        "link": "https://www.qbitai.com/2026/08/481923.html",
         "source": "量子位"
       }
     ],
@@ -1928,25 +1922,25 @@
     "status": "hot"
   },
   {
-    "id": "quantitative-trading-research-agents",
+    "id": "preparedness-framework",
     "appear_count": 1,
     "days": 1,
-    "term_en": "Quantitative Trading Research Agents",
-    "term_zh": "量化交易研究智能体",
-    "abbreviation": "QTRA",
-    "category": "AI应用",
-    "one_liner": "用于量化交易研究的智能体，能够提出假设、运行实验并决定下一步。",
-    "explanation": "量化交易研究智能体，像机器人一样，能自己提出想法、做实验，不断进步。",
+    "term_en": "Preparedness Framework",
+    "term_zh": "准备框架",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "OpenAI用于评估和确保AI模型安全性的框架。",
+    "explanation": "准备框架是OpenAI用来检查AI模型是否安全的工具。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/481475.html"
+      "https://www.qbitai.com/2026/08/481893.html"
     ],
     "matched_articles": [
       {
-        "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
-        "link": "https://www.qbitai.com/2026/08/481475.html",
+        "title": "「GPT-6」灰测demo刷屏！周四发布在即",
+        "link": "https://www.qbitai.com/2026/08/481893.html",
         "source": "量子位"
       }
     ],
@@ -1954,133 +1948,29 @@
     "status": "hot"
   },
   {
-    "id": "flashattention-2",
+    "id": "publisher-adaptive-content-extraction",
     "appear_count": 1,
     "days": 1,
-    "term_en": "FlashAttention 2",
-    "term_zh": "FlashAttention 2",
-    "abbreviation": "",
+    "term_en": "Publisher-Adaptive Content Extraction",
+    "term_zh": "出版者自适应内容提取",
+    "abbreviation": "PACE",
     "category": "AI技术",
-    "one_liner": "一种高效的注意力机制，用于大规模语言模型。",
-    "explanation": "FlashAttention 2是一种让大语言模型运行更快的技术，能减少模型依赖，提升效率。",
+    "one_liner": "一种针对特定出版者的内容提取方法。",
+    "explanation": "从特定出版者的文章中，自动提取有用信息的技术。",
     "sources": [
-      "量子位"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/481372.html"
+      "https://arxiv.org/abs/2608.27466"
     ],
     "matched_articles": [
       {
-        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-        "link": "https://www.qbitai.com/2026/08/481372.html",
-        "source": "量子位"
+        "title": "PACE: Publisher-Adaptive Content Extraction via Agentic Automation",
+        "link": "https://arxiv.org/abs/2608.27466",
+        "source": "arXiv CL"
       }
     ],
     "rank": 73,
-    "status": "hot"
-  },
-  {
-    "id": "triton-attention",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Triton Attention",
-    "term_zh": "Triton Attention",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种注意力机制，用于大规模语言模型。",
-    "explanation": "Triton Attention是让AI更懂语言的技术，能提升模型在本地运行的效果。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481372.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-        "link": "https://www.qbitai.com/2026/08/481372.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 74,
-    "status": "hot"
-  },
-  {
-    "id": "kv-cache-quantization",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "KV Cache Quantization",
-    "term_zh": "KV缓存量化",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "对大规模语言模型中的键值缓存进行量化处理。",
-    "explanation": "KV缓存量化：简化语言模型缓存，减少依赖包，让AI本地部署更顺畅。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481372.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-        "link": "https://www.qbitai.com/2026/08/481372.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 75,
-    "status": "hot"
-  },
-  {
-    "id": "robotool",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "RoboTool",
-    "term_zh": "RoboTool",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种机器人工具使用学习系统，通过分析任务目标、场景和机器人能力来生成执行代码。",
-    "explanation": "RoboTool是一种让机器人学会自己写程序的系统，它能根据任务和机器人能力自动生成代码。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481318.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "去年归国的徐梦迪，成了清华姚班班主任",
-        "link": "https://www.qbitai.com/2026/08/481318.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 76,
-    "status": "hot"
-  },
-  {
-    "id": "aar",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "AAR",
-    "term_zh": "AAR",
-    "abbreviation": "AAR",
-    "category": "AI安全",
-    "one_liner": "自动化对齐研究员系统，用于自动解决AI模型安全问题。",
-    "explanation": "AAR是自动帮AI模型找安全问题的系统，就像请个机器人研究员。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481223.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
-        "link": "https://www.qbitai.com/2026/08/481223.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 77,
     "status": "hot"
   },
   {
@@ -2088,11 +1978,11 @@
     "appear_count": 1,
     "days": 1,
     "term_en": "Speculative Decoding",
-    "term_zh": "推测性解码",
+    "term_zh": "推测解码",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "一种解码策略，通过预测去噪轨迹来提高扩散语言模型的并行生成能力。",
-    "explanation": "推测性解码就是模型预测去噪过程，让语言模型生成更快。",
+    "one_liner": "一种针对扩散语言模型的解码策略，通过预测去噪轨迹来提高并行生成效率。",
+    "explanation": "推测解码：预测去噪过程，让AI更快地生成文字。",
     "sources": [
       "arXiv CL"
     ],
@@ -2106,7 +1996,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 78,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2117,8 +2007,8 @@
     "term_zh": "字节级分块",
     "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "一种将字节分组为单词对齐块的方法，用于低资源语言的零样本迁移。",
-    "explanation": "将文字分成小段，方便低资源语言快速学习。",
+    "one_liner": "一种将字节分组为词对齐块的方法，用于低资源语言的零样本迁移学习。",
+    "explanation": "将文字分成小段，帮助低资源语言快速学习。",
     "sources": [
       "arXiv CL"
     ],
@@ -2132,85 +2022,39 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 79,
+    "rank": 75,
     "status": "hot"
   },
   {
-    "id": "openstamp",
+    "id": "l4-autonomous-driving",
     "appear_count": 1,
     "days": 1,
-    "term_en": "OpenStamp",
-    "term_zh": "OpenStamp",
-    "abbreviation": "",
+    "term_en": "L4 Autonomous Driving",
+    "term_zh": "L4级自动驾驶",
+    "abbreviation": "L4 AD",
     "category": "AI技术",
-    "one_liner": "一种直接嵌入模型权重的水印技术，用于开源语言模型。",
-    "explanation": "OpenStamp是一种给开源语言模型加“印记”的技术，方便追踪模型来源。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.27899"
-    ],
-    "matched_articles": [
-      {
-        "title": "OpenStamp: A Watermark for Open-Source Language Models",
-        "link": "https://arxiv.org/abs/2608.27899",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 80,
+    "one_liner": "完全自动驾驶，车辆在所有情况下均无需人类干预。",
+    "explanation": "L4级自动驾驶就是汽车自己开车，不需要人管。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 76,
     "status": "hot"
   },
   {
-    "id": "landingagent",
+    "id": "safety-first-development",
     "appear_count": 1,
     "days": 1,
-    "term_en": "LandingAgent",
-    "term_zh": "LandingAgent",
+    "term_en": "Safety-First Development",
+    "term_zh": "安全优先开发",
     "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "针对着陆页生成的一个参考标注数据集和智能生成框架。",
-    "explanation": "LandingAgent是一个用于制作着陆页的智能工具，能自动生成标注好的数据集。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.27902"
-    ],
-    "matched_articles": [
-      {
-        "title": "LandingAgent: A Reference-Annotated Dataset and Agentic Generation Framework for Landing Pages",
-        "link": "https://arxiv.org/abs/2608.27902",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 81,
-    "status": "hot"
-  },
-  {
-    "id": "landingbench",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "LandingBench",
-    "term_zh": "LandingBench",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一个将真实着陆页抽象为序列、布局模式、语气描述符、视觉重点和CTA结构的参考配置文件数据集。",
-    "explanation": "LandingBench是一个用于分析着陆页的数据库，帮助理解网页布局和设计。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.27902"
-    ],
-    "matched_articles": [
-      {
-        "title": "LandingAgent: A Reference-Annotated Dataset and Agentic Generation Framework for Landing Pages",
-        "link": "https://arxiv.org/abs/2608.27902",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 82,
+    "category": "AI安全",
+    "one_liner": "在AI模型开发过程中，将安全性置于首位。",
+    "explanation": "安全优先开发就是AI开发时，先把安全放在第一位，确保AI模型安全可靠。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 77,
     "status": "hot"
   }
 ]
