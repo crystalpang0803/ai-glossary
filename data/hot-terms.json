@@ -1,5 +1,95 @@
 [
   {
+    "id": "in-context-causal-learning",
+    "rank": 1,
+    "term_en": "In-Context Causal Learning",
+    "term_zh": "上下文因果学习",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "模型在特定上下文中学习因果关系，以改善动作生成。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/09/482337.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "自进化WAM来了！清华AIR联手域变换提出具身In-Context Causal Learning",
+        "link": "https://www.qbitai.com/2026/09/482337.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-09-02",
+    "status": "hot",
+    "explanation": "上下文因果学习就像在特定情境下，模型学会如何根据情况做出正确决策。",
+    "first_appeared": "2026-09-02T04:05:48.094Z",
+    "last_appeared": "2026-09-02T04:05:48.094Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "agentic-video-understanding",
+    "rank": 2,
+    "term_en": "Agentic Video Understanding",
+    "term_zh": "代理视频理解",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "结合代码执行与视频理解，提高视频分析准确性和效率。",
+    "appear_count": 1,
+    "sources": [
+      "DeepMind Blog"
+    ],
+    "source_urls": [
+      "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Introducing agentic video understanding with Gemini",
+        "link": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+        "source": "DeepMind Blog"
+      }
+    ],
+    "date": "2026-09-02",
+    "status": "hot",
+    "explanation": "代理视频理解就是让电脑像人一样看懂视频，分析得更准更快。",
+    "first_appeared": "2026-09-02T04:05:48.094Z",
+    "last_appeared": "2026-09-02T04:05:48.094Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "hypergraph-structured-state-serialization",
+    "rank": 3,
+    "term_en": "Hypergraph-Structured State Serialization",
+    "term_zh": "超图结构状态序列化",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "使用超图结构组织状态描述，提升文本世界模型学习效果。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.00002"
+    ],
+    "matched_articles": [
+      {
+        "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+        "link": "https://arxiv.org/abs/2609.00002",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-09-02",
+    "status": "hot",
+    "explanation": "超图结构状态序列化：用超图组织描述，让AI学文本世界更高效。",
+    "first_appeared": "2026-09-02T04:05:48.094Z",
+    "last_appeared": "2026-09-02T04:05:48.094Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
     "id": "shape",
     "rank": 1,
     "term_en": "SHAPE",
@@ -7,7 +97,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "分析数学推理中思维链轨迹的框架。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv AI",
       "arXiv CV",
@@ -36,7 +126,7 @@
       }
     ],
     "date": "2026-09-01",
-    "status": "hot",
+    "status": "warm",
     "explanation": "SHAPE框架是分析数学推理思维轨迹的工具，帮助理解数学问题解决过程。",
     "first_appeared": "2026-09-01T04:44:32.852Z",
     "last_appeared": "2026-09-01T04:44:32.852Z",
@@ -51,7 +141,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "围绕具身模型构建的工业级执行体系，实现工业级自进化。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "量子位"
     ],
@@ -78,7 +168,7 @@
       }
     ],
     "date": "2026-09-01",
-    "status": "hot",
+    "status": "warm",
     "explanation": "ROSS Harness是一种工业机器人执行体系，能自动升级，让机器人更智能。",
     "first_appeared": "2026-09-01T04:44:32.852Z",
     "last_appeared": "2026-09-01T04:44:32.852Z",
@@ -93,7 +183,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "通过量化KV缓存来降低模型推理的计算成本。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv LG",
       "量子位"
@@ -115,7 +205,7 @@
       }
     ],
     "date": "2026-09-01",
-    "status": "hot",
+    "status": "warm",
     "explanation": "KV缓存量化就是给缓存里的数据缩小范围，让计算更省电省时间。",
     "first_appeared": "2026-09-01T04:44:32.852Z",
     "last_appeared": "2026-09-01T04:44:32.852Z",
@@ -130,7 +220,7 @@
     "abbreviation": "GNN",
     "category": "AI技术",
     "one_liner": "一种用于处理图结构数据的神经网络。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI",
       "arXiv LG"
@@ -152,645 +242,10 @@
       }
     ],
     "date": "2026-09-01",
-    "status": "hot",
+    "status": "warm",
     "explanation": "图神经网络是专门处理像社交网络这样的图数据的智能算法。",
     "first_appeared": "2026-09-01T04:44:32.852Z",
     "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "recursive-self-improvement",
-    "rank": 5,
-    "term_en": "Recursive Self-Improvement",
-    "term_zh": "递归自我改进",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过不断迭代实验和验证，使研究Agent持续进化的方法。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481475.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
-        "link": "https://www.qbitai.com/2026/08/481475.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "递归自我改进就像一个人不断学习、进步，让AI越来越聪明。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "quantitative-trading-research-agents",
-    "rank": 6,
-    "term_en": "Quantitative Trading Research Agents",
-    "term_zh": "量化交易研究代理",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "用于量化交易研究的智能代理，能够提出假设、运行实验并决定下一步。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481475.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
-        "link": "https://www.qbitai.com/2026/08/481475.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "量化交易研究代理：像人一样思考的AI，能提出交易想法、做实验，让交易策略更可靠。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "flashattention-2",
-    "rank": 7,
-    "term_en": "FlashAttention 2",
-    "term_zh": "FlashAttention 2",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种高效的注意力机制，用于加速大模型推理。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481372.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-        "link": "https://www.qbitai.com/2026/08/481372.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "FlashAttention 2是一种让大模型推理更快的技术，能提高AI运行速度。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "triton-attention",
-    "rank": 8,
-    "term_en": "Triton Attention",
-    "term_zh": "Triton Attention",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种注意力后端实现，用于优化大模型推理。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481372.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-        "link": "https://www.qbitai.com/2026/08/481372.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "Triton Attention是一种优化大模型推理的技术，能提升AI本地部署效果。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "robotool",
-    "rank": 9,
-    "term_en": "RoboTool",
-    "term_zh": "机器人工具",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种机器人编程工具，通过提供任务目标、场景和机器人能力等信息，自动生成机器人执行代码。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481318.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "去年归国的徐梦迪，成了清华姚班班主任",
-        "link": "https://www.qbitai.com/2026/08/481318.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "RoboTool是帮机器人写程序的“神器”，输入任务和场景，它就能自动生成代码。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "automation-researcher-aar",
-    "rank": 10,
-    "term_en": "Automation Researcher (AAR)",
-    "term_zh": "自动化研究员",
-    "abbreviation": "AAR",
-    "category": "AI技术",
-    "one_liner": "一种自动化AI安全研究员系统，用于搜索、设计、测试和改进AI模型。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/481223.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
-        "link": "https://www.qbitai.com/2026/08/481223.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "自动化研究员是AI助手，能自动研究AI模型，比人类研究员还快还便宜。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "expert-validated-stem-qa",
-    "rank": 11,
-    "term_en": "Expert-validated STEM QA",
-    "term_zh": "专家验证的STEM问答",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一个由领域专家创建的高质量STEM问答数据集，用于评估AI模型在STEM领域的表现。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28591"
-    ],
-    "matched_articles": [
-      {
-        "title": "Expert-validated STEM QA",
-        "link": "https://arxiv.org/abs/2608.28591",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "专家验证的STEM问答，是专家们编写的科学、技术、工程和数学领域问题集，用来测试AI在这些领域的表现。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "oncology-decision-boundary-benchmark",
-    "rank": 12,
-    "term_en": "Oncology Decision Boundary Benchmark",
-    "term_zh": "肿瘤决策边界基准",
-    "abbreviation": "ODBB",
-    "category": "AI评测基准",
-    "one_liner": "用于评估前沿大型语言模型在肿瘤决策中的表现和盲点的基准。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28592"
-    ],
-    "matched_articles": [
-      {
-        "title": "A collective capability boundary in frontier large language models on guideline-conformant and case-specific oncology decision-making",
-        "link": "https://arxiv.org/abs/2608.28592",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "ODBB是评估AI在肿瘤治疗决策中表现和不足的基准。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "statutory-ai",
-    "rank": 13,
-    "term_en": "Statutory AI",
-    "term_zh": "法定AI",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "利用法律文本作为宪法框架，使AI系统能够根据既定规范自主审查和修改输出的方法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28593"
-    ],
-    "matched_articles": [
-      {
-        "title": "Statutory AI: Aligning Large Language Models With Legal Norms",
-        "link": "https://arxiv.org/abs/2608.28593",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "法定AI就是用法律规则训练AI，让它能自己检查和改正输出内容。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "domain-expert-skills",
-    "rank": 14,
-    "term_en": "Domain-Expert Skills",
-    "term_zh": "领域专家技能",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种可插拔的领域专家技能抽象，用于在分析系统中提供特定领域的专业知识。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28594"
-    ],
-    "matched_articles": [
-      {
-        "title": "From Question-First to Analyst-First: Domain-Expert Skills and Verified Knowledge Compilation for Proactive Enterprise Analytics",
-        "link": "https://arxiv.org/abs/2608.28594",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "领域专家技能就像一个可插入的专家大脑，让分析系统更懂特定领域的知识。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "knowledge-compilation",
-    "rank": 15,
-    "term_en": "Knowledge Compilation",
-    "term_zh": "知识编译",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种离线知识编译循环，用于在数据分析系统中构建和验证持久的知识库。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28594"
-    ],
-    "matched_articles": [
-      {
-        "title": "From Question-First to Analyst-First: Domain-Expert Skills and Verified Knowledge Compilation for Proactive Enterprise Analytics",
-        "link": "https://arxiv.org/abs/2608.28594",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "知识编译就像把专家的知识变成电脑能理解的语言，方便以后随时用。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "spell-correction-reliability-layer",
-    "rank": 16,
-    "term_en": "Spell-correction Reliability Layer",
-    "term_zh": "拼写校正可靠性层",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种保守的、可审计的拼写校正可靠性层，用于在生物医学文本分类中减少错误。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28595"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Signal in the Noise: An Auditable Reliability Layer for Biomedical Text Classification",
-        "link": "https://arxiv.org/abs/2608.28595",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "拼写校正可靠性层：一种减少生物医学文本分类错误的保守、可审计技术。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "collaborative-agent-reasoning-engineering-care",
-    "rank": 17,
-    "term_en": "Collaborative Agent Reasoning Engineering (CARE)",
-    "term_zh": "协作智能体推理工程",
-    "abbreviation": "CARE",
-    "category": "AI技术",
-    "one_liner": "一种用于科学论文生成的协作智能体推理工程方法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28596"
-    ],
-    "matched_articles": [
-      {
-        "title": "Paper Pilot: A Human-in-the-Loop Expert System for Evidence-Traceable Scientific Manuscript Generation in Applied Sciences",
-        "link": "https://arxiv.org/abs/2608.28596",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "CARE是一种让计算机和人类一起写科学论文的方法，能追踪论文证据来源。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "counterfactual-advantage-based-credit-assignment",
-    "rank": 18,
-    "term_en": "Counterfactual Advantage-based Credit Assignment",
-    "term_zh": "基于反事实优势的信用分配",
-    "abbreviation": "Counterfactual Advantage-based Credit Assignment",
-    "category": "AI技术",
-    "one_liner": "一种用于成本感知序列医疗诊断的信用分配方法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28599"
-    ],
-    "matched_articles": [
-      {
-        "title": "CDPR: Counterfactual Advantage-based Credit Assignment for Cost-Aware Sequential Medical Diagnosis",
-        "link": "https://arxiv.org/abs/2608.28599",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "这种方法通过比较不同假设下的结果，来合理分配医疗诊断中的信用。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "tabu-search",
-    "rank": 19,
-    "term_en": "Tabu Search",
-    "term_zh": "禁忌搜索",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种用于解决组合优化问题的启发式搜索算法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28627"
-    ],
-    "matched_articles": [
-      {
-        "title": "Machine Learning-Enhanced Tabu Search for Tactical Wireless Network Design",
-        "link": "https://arxiv.org/abs/2608.28627",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "禁忌搜索是一种像玩游戏一样寻找最佳方案的算法，能帮你找到无线网络设计的最佳配置。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "compound-drought-to-extreme-precipitation-cdep-events",
-    "rank": 20,
-    "term_en": "Compound drought-to-extreme-precipitation (CDEP) events",
-    "term_zh": "复合干旱-极端降水事件",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "指干旱和极端降水同时发生的气候事件。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28628"
-    ],
-    "matched_articles": [
-      {
-        "title": "CDEP Agent: Connecting Meteorologically Detected Temporal Compound Events to Real-World Documentary Evidence",
-        "link": "https://arxiv.org/abs/2608.28628",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "复合干旱-极端降水事件，就是干旱和暴雨同时发生的天气现象。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "llm-agent-framework",
-    "rank": 21,
-    "term_en": "LLM-agent framework",
-    "term_zh": "大型语言模型代理框架",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种结合大型语言模型和代理技术的框架。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28628"
-    ],
-    "matched_articles": [
-      {
-        "title": "CDEP Agent: Connecting Meteorologically Detected Temporal Compound Events to Real-World Documentary Evidence",
-        "link": "https://arxiv.org/abs/2608.28628",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "这是一个结合了超级智能语言模型和自动化技术的框架，能连接天气事件和真实世界证据。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "crossaudit",
-    "rank": 22,
-    "term_en": "CrossAudit",
-    "term_zh": "跨审计",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "一种用于监督自主研究流程的协议。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28631"
-    ],
-    "matched_articles": [
-      {
-        "title": "CrossAudit: A Git-Native, Cross-Vendor Audit Loop for Agentic Science",
-        "link": "https://arxiv.org/abs/2608.28631",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "跨审计是一种监督研究过程的协议，确保研究透明和安全。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "autoscientist-quant",
-    "rank": 23,
-    "term_en": "AutoScientist-Quant",
-    "term_zh": "自动科学家-量化",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种用于自动进行量化投资研究的自我进化的编码代理。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.28632"
-    ],
-    "matched_articles": [
-      {
-        "title": "AutoScientist-Quant: Self-Evolving Coding Agents for Automatic Research in Quantitative Investment",
-        "link": "https://arxiv.org/abs/2608.28632",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "自动科学家-量化：一种能自动研究投资，不断进化的智能程序。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "data-science-automation-harness",
-    "rank": 24,
-    "term_en": "Data-Science Automation Harness",
-    "term_zh": "数据科学自动化工具包",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "一种数据科学自动化工具包，通过分解工具包为数据、工作流、执行和评估四个可复用层，提高数据科学自动化流程的可重复性、可比较性和可靠性。",
-    "appear_count": 1,
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "date": "2026-09-01",
-    "status": "hot",
-    "explanation": "数据科学自动化工具包，像一套工具箱，让数据科学家重复使用工具，让数据分析更高效可靠。",
-    "first_appeared": "2026-09-01T04:44:32.852Z",
-    "last_appeared": "2026-09-01T04:44:32.852Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "vision-language-models",
-    "rank": 1,
-    "term_en": "Vision-Language Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.23978",
-      "https://arxiv.org/abs/2608.24935",
-      "https://arxiv.org/abs/2608.24966",
-      "https://arxiv.org/abs/2608.25251",
-      "https://arxiv.org/abs/2608.25299"
-    ],
-    "matched_articles": [
-      {
-        "title": "When Seeing Is Not Enough: Benchmarking Interactive Visual Grounding in LVLMs",
-        "link": "https://arxiv.org/abs/2608.23978",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "A Lightweight Multimodal Vision-Language Framework for Early-Stage Anatomical Green Fruit Classification in Commercial Orchards",
-        "link": "https://arxiv.org/abs/2608.24935",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Targeting the Attention Heads Behind Object Hallucination in LLaVA",
-        "link": "https://arxiv.org/abs/2608.24966",
-        "source": "arXiv CV"
-      }
-    ],
-    "date": "2026-08-27",
-    "status": "warm",
-    "explanation": "视觉语言模型：能看懂图片和文字，让机器像人一样理解世界。",
-    "first_appeared": "2026-08-27T08:48:12.161Z",
-    "last_appeared": "2026-08-27T08:48:12.161Z",
     "rank_change": null,
     "is_new": true
   },
@@ -802,7 +257,7 @@
     "abbreviation": "Action-Data Alignment",
     "category": "AI技术",
     "one_liner": "基于动作-触觉语义隐空间的数据泛化引擎。",
-    "appear_count": 22,
+    "appear_count": 21,
     "sources": [
       "arXiv AI",
       "arXiv CL",
