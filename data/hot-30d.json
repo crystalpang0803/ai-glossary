@@ -1,30 +1,30 @@
 [
   {
     "id": "vision-language-models",
-    "appear_count": 25,
-    "days": 6,
-    "term_en": "Vision Language Models",
+    "appear_count": 27,
+    "days": 7,
+    "term_en": "Vision-Language Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "视觉语言模型：能看图说话的AI，能识别图片中的物体和文字。",
+    "explanation": "视觉语言模型：能看懂图片和文字的AI，用于医疗图像异常检测和几何推理。",
     "sources": [
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.11022",
-      "https://arxiv.org/abs/2609.11126"
+      "https://arxiv.org/abs/2609.12454",
+      "https://arxiv.org/abs/2609.12509"
     ],
     "matched_articles": [
       {
-        "title": "New Evidence, Same Choice: Testing Physical Experiment Selection in Vision Language Models",
-        "link": "https://arxiv.org/abs/2609.11022",
+        "title": "Bridging Vision Foundation Model Priors with CLIP for Spatial-aware Few-shot Anomaly Detection in Medical Images",
+        "link": "https://arxiv.org/abs/2609.12454",
         "source": "arXiv CV"
       },
       {
-        "title": "Beyond Benchmarks: Using VLMs to Reveal Systematic Classification Failures Under Real World Conditions",
-        "link": "https://arxiv.org/abs/2609.11126",
+        "title": "ChitraMiti: Benchmarking Visual Grounding and Modality Reliance in Bengali Geometric Reasoning",
+        "link": "https://arxiv.org/abs/2609.12509",
         "source": "arXiv CV"
       }
     ],
@@ -32,83 +32,84 @@
     "status": "hot"
   },
   {
-    "id": "llm-agents",
-    "appear_count": 14,
+    "id": "rsi",
+    "appear_count": 25,
     "days": 3,
-    "term_en": "LLM Agents",
-    "term_zh": "",
+    "term_en": "RSI",
+    "term_zh": "递归自我改进",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "LLM Agents是使用大型语言模型构建的智能体，能在金融市场等复杂环境中进行决策。",
+    "explanation": "RSI是一种AI技术，能让模型自己学习改进，就像人一样不断进步。",
     "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.04373",
-      "https://arxiv.org/abs/2609.04444",
-      "https://arxiv.org/abs/2609.04611",
-      "https://arxiv.org/abs/2609.04667"
-    ],
-    "matched_articles": [
-      {
-        "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
-        "link": "https://arxiv.org/abs/2609.04373",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals",
-        "link": "https://arxiv.org/abs/2609.04444",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "$\\tau^\\tau$-Bench: An Environment for End-To-End, Realistic Agent Construction",
-        "link": "https://arxiv.org/abs/2609.04611",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 2,
-    "status": "hot"
-  },
-  {
-    "id": "trajectory",
-    "appear_count": 13,
-    "days": 1,
-    "term_en": "Trajectory",
-    "term_zh": "轨迹",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "监控智能代理操作的回放窗口，显示原始事件级记录。",
-    "explanation": "轨迹是记录智能代理操作过程的记录，就像看回放一样。",
-    "sources": [
-      "arXiv AI",
       "arXiv CL",
       "arXiv CV",
       "arXiv LG",
       "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2608.12788",
-      "https://arxiv.org/abs/2608.12847",
-      "https://arxiv.org/abs/2608.12328",
-      "https://arxiv.org/abs/2608.12331",
-      "https://arxiv.org/abs/2608.12486"
+      "https://arxiv.org/abs/2609.12127",
+      "https://arxiv.org/abs/2609.12243",
+      "https://arxiv.org/abs/2609.12341",
+      "https://arxiv.org/abs/2609.12353",
+      "https://arxiv.org/abs/2609.12469"
     ],
     "matched_articles": [
       {
-        "title": "ARAC: Benchmarking Auto-Research's Alignment and Completeness on End-to-End Researchs",
-        "link": "https://arxiv.org/abs/2608.12788",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Beyond Retrieval: Query-Conditioned Reuse of Long-Horizon Agent Trajectories",
-        "link": "https://arxiv.org/abs/2608.12847",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "LoRA-Diffusion: Parameter-Efficient Fine-Tuning via Low-Rank Trajectory Decomposition",
-        "link": "https://arxiv.org/abs/2608.12328",
+        "title": "Local Edits, Global Ripples: Replay-Informed Policy Adaptation for Workflow Synthesis",
+        "link": "https://arxiv.org/abs/2609.12127",
         "source": "arXiv CL"
+      },
+      {
+        "title": "Chopthin-Consensus Power Sampling: A Diversity-Preserving Approach to LLM Decoding",
+        "link": "https://arxiv.org/abs/2609.12243",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "I Am No One: Style-Aware Paraphrasing for Text Anonymization",
+        "link": "https://arxiv.org/abs/2609.12341",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 2,
+    "status": "hot"
+  },
+  {
+    "id": "llm-agents",
+    "appear_count": 18,
+    "days": 4,
+    "term_en": "LLM Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "LLM Agents是利用大型语言模型（LLM）的智能体，能学习任务并适应不同场景。",
+    "sources": [
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12191",
+      "https://arxiv.org/abs/2609.12655",
+      "https://arxiv.org/abs/2609.12517",
+      "https://arxiv.org/abs/2609.11957"
+    ],
+    "matched_articles": [
+      {
+        "title": "GAUGE: When Not to Trust LLM-as-a-Judge in User-Simulated Evaluation of Task-Oriented Agents",
+        "link": "https://arxiv.org/abs/2609.12191",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "LifeMem: Enabling Lifelong Experience Reuse for LLM Agents",
+        "link": "https://arxiv.org/abs/2609.12655",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "One Skill Does Not Fit All: Automatic Discovery and Taxonomy-Guided Routing of Frame-Selection Skills for Long-Video Question Answering",
+        "link": "https://arxiv.org/abs/2609.12517",
+        "source": "arXiv CV"
       }
     ],
     "rank": 3,
@@ -214,6 +215,32 @@
     "status": "hot"
   },
   {
+    "id": "vision-transformer",
+    "appear_count": 7,
+    "days": 4,
+    "term_en": "Vision Transformer",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Vision Transformer是一种AI技术，能像人眼一样识别图片中的物体，用于检测农作物病虫害。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12169"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Ground-Truth Fidelity Matters: An Orchestrated UAS Framework for Wheat Streak Mosaic Virus Detection Using Vision Transformers and Machine Learning",
+        "link": "https://arxiv.org/abs/2609.12169",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
     "id": "vision-language-model",
     "appear_count": 7,
     "days": 1,
@@ -250,44 +277,6 @@
         "title": "FPCO-Dialog: A Multi-Turn False-Premise Benchmark for Correction and Cooperation in Vision-Language Models",
         "link": "https://arxiv.org/abs/2609.03331",
         "source": "arXiv CL"
-      }
-    ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "rsi",
-    "appear_count": 7,
-    "days": 2,
-    "term_en": "RSI",
-    "term_zh": "递归自我改进",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "RSI是一种AI技术，能让机器人像人一样不断学习和进步。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/488380.html",
-      "https://www.qbitai.com/2026/09/487796.html",
-      "https://www.qbitai.com/2026/09/487752.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "OpenAI年内不上市了！奥特曼支持对手Dario呼吁：AI该踩刹车了",
-        "link": "https://www.qbitai.com/2026/09/488380.html",
-        "source": "量子位"
-      },
-      {
-        "title": "A社承认Claude安全对齐存在缺陷，但“尚无解决方案”",
-        "link": "https://www.qbitai.com/2026/09/487796.html",
-        "source": "量子位"
-      },
-      {
-        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
-        "link": "https://www.qbitai.com/2026/09/487752.html",
-        "source": "量子位"
       }
     ],
     "rank": 8,
@@ -391,32 +380,26 @@
     "status": "hot"
   },
   {
-    "id": "vision-transformer",
-    "appear_count": 6,
-    "days": 3,
-    "term_en": "Vision Transformer",
+    "id": "clinical-reasoning",
+    "appear_count": 5,
+    "days": 4,
+    "term_en": "Clinical Reasoning",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "Vision Transformer是一种AI技术，能通过图像识别植物生长，还能识别多尺度纹理。",
+    "explanation": "临床推理是医生根据患者病历，像侦探一样分析问题，找出最佳治疗方案的过程。",
     "sources": [
-      "arXiv CV"
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.10749",
-      "https://arxiv.org/abs/2609.10917"
+      "https://arxiv.org/abs/2609.12277"
     ],
     "matched_articles": [
       {
-        "title": "Meta-Learning for Data-Efficient Plant Growth Estimation via Vision Transformers and Fuzzy Clustering",
-        "link": "https://arxiv.org/abs/2609.10749",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "HiPerViT: A Hierarchical Perceiver-Vision Transformer Architecture for Multi-Scale Texture Recognition",
-        "link": "https://arxiv.org/abs/2609.10917",
-        "source": "arXiv CV"
+        "title": "Reinforcement Learning over Patient Trajectories for Clinical Reasoning in EHR Foundation Models",
+        "link": "https://arxiv.org/abs/2609.12277",
+        "source": "arXiv LG"
       }
     ],
     "rank": 12,
@@ -586,32 +569,6 @@
     "status": "hot"
   },
   {
-    "id": "clinical-reasoning",
-    "appear_count": 4,
-    "days": 3,
-    "term_en": "Clinical Reasoning",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "临床推理是医生根据经验和知识，分析病情做出诊断的过程。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.04598"
-    ],
-    "matched_articles": [
-      {
-        "title": "PetQA: Benchmarking Veterinary Knowledge and Clinical Reasoning",
-        "link": "https://arxiv.org/abs/2609.04598",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
     "id": "singularity",
     "appear_count": 4,
     "days": 1,
@@ -647,7 +604,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 18,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -688,7 +645,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 19,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -720,7 +677,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 20,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -757,6 +714,32 @@
         "title": "趋境科技与摩尔线程达成战略合作，高品质 AI Token 国产异构方案性价比超越国际先进算力",
         "link": "https://www.qbitai.com/2026/09/484547.html",
         "source": "量子位"
+      }
+    ],
+    "rank": 20,
+    "status": "hot"
+  },
+  {
+    "id": "vision-foundation-models",
+    "appear_count": 4,
+    "days": 2,
+    "term_en": "Vision Foundation Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "用CLIP技术连接视觉基础模型，帮助医学图像进行空间感知的少量样本异常检测。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12454"
+    ],
+    "matched_articles": [
+      {
+        "title": "Bridging Vision Foundation Model Priors with CLIP for Spatial-aware Few-shot Anomaly Detection in Medical Images",
+        "link": "https://arxiv.org/abs/2609.12454",
+        "source": "arXiv CV"
       }
     ],
     "rank": 21,
@@ -802,32 +785,6 @@
     "status": "hot"
   },
   {
-    "id": "safety-alignment",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Safety Alignment",
-    "term_zh": "安全对齐",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "确保大型语言模型在特定场景下的决策符合安全标准。",
-    "explanation": "安全对齐就是让AI在特定情况下做出符合安全标准的选择。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12373"
-    ],
-    "matched_articles": [
-      {
-        "title": "Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese",
-        "link": "https://arxiv.org/abs/2608.12373",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 23,
-    "status": "hot"
-  },
-  {
     "id": "embodied-intelligence",
     "appear_count": 3,
     "days": 1,
@@ -862,7 +819,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -902,7 +859,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 25,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -928,7 +885,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -954,7 +911,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -992,7 +949,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 28,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -1032,7 +989,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 29,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1070,7 +1027,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 30,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1108,7 +1065,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 31,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1147,7 +1104,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 32,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1186,7 +1143,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 33,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1225,45 +1182,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 34,
-    "status": "hot"
-  },
-  {
-    "id": "vision-foundation-models",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Vision Foundation Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Vision Foundation Models：一种用于识别物体和场景的AI模型，能像人眼一样看世界。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.04381",
-      "https://arxiv.org/abs/2609.04555",
-      "https://arxiv.org/abs/2609.04846"
-    ],
-    "matched_articles": [
-      {
-        "title": "Where Appearance Fails, Geometry Recognizes: A CAD-Free 3D Shape Prior That Complements Vision Foundation Models",
-        "link": "https://arxiv.org/abs/2609.04381",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "DART: Depth-as-Target Pretraining for Surgical Vision Foundation Models",
-        "link": "https://arxiv.org/abs/2609.04555",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "LetOccVote: Learning Weakly Supervised 3D Occupancy through Consensus",
-        "link": "https://arxiv.org/abs/2609.04846",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 35,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1301,7 +1220,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 36,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1327,345 +1246,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 37,
-    "status": "hot"
-  },
-  {
-    "id": "mas-decstream",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "MAS-DecStream",
-    "term_zh": "多智能体调度-去中心化流处理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种结合LLM辅助的合同网协议扩展，用于移动边缘计算中的流处理调度。",
-    "explanation": "MAS-DecStream是帮手机边计算处理数据流的一种智能调度方法，有点像多个智能助手一起协作完成任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12371"
-    ],
-    "matched_articles": [
-      {
-        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
-        "link": "https://arxiv.org/abs/2608.12371",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
-    "id": "llm-mr-cnp",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "LLM-MR-CNP",
-    "term_zh": "LLM多轮合同网协议",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "基于LLM的合同网协议，通过语义CFP、渐进式上下文披露等机制进行多轮协商。",
-    "explanation": "LLM-MR-CNP是一种AI技术，能像人一样通过多轮对话协商，完成复杂任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12371"
-    ],
-    "matched_articles": [
-      {
-        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
-        "link": "https://arxiv.org/abs/2608.12371",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 39,
-    "status": "hot"
-  },
-  {
-    "id": "cognitive-alignment",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Cognitive Alignment",
-    "term_zh": "认知对齐",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "使AI系统推理方式与人类用户相似，并忠实传达其推理过程。",
-    "explanation": "认知对齐就是让AI的思考方式像人一样，让人能看懂AI是怎么想的。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12372"
-    ],
-    "matched_articles": [
-      {
-        "title": "Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning",
-        "link": "https://arxiv.org/abs/2608.12372",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 40,
-    "status": "hot"
-  },
-  {
-    "id": "dual-flow-transformer",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Dual-Flow Transformer",
-    "term_zh": "双流Transformer",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种将主要预填充路径与额外解码计算分离的Transformer架构。",
-    "explanation": "双流Transformer是一种将主要预填充路径和额外解码计算分开的Transformer架构，能更高效处理信息。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12385"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
-        "link": "https://arxiv.org/abs/2608.12385",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 41,
-    "status": "hot"
-  },
-  {
-    "id": "governed-persistent-memory",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Governed Persistent Memory",
-    "term_zh": "受控持久内存",
-    "abbreviation": "GPM",
-    "category": "AI技术",
-    "one_liner": "一种可审计的双时间戳状态转换模型，具有源绑定、生命周期状态、当前公开屏障和故障关闭的有序释放。",
-    "explanation": "受控持久内存：一种安全可靠的内存技术，能确保数据在系统故障后依然可用。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12476"
-    ],
-    "matched_articles": [
-      {
-        "title": "Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents",
-        "link": "https://arxiv.org/abs/2608.12476",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 42,
-    "status": "hot"
-  },
-  {
-    "id": "causal-attribution-score",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Causal Attribution Score",
-    "term_zh": "因果归因分数",
-    "abbreviation": "CAS",
-    "category": "AI技术",
-    "one_liner": "一种用于因果解释的紧凑分数架构，通过将原始结果规模效应转换为局部CAS、签名局部CAS和两种互补的全局CAS摘要。",
-    "explanation": "因果归因分数是一种评估AI决策原因的分数，能帮助我们理解AI是如何得出结果的。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12555"
-    ],
-    "matched_articles": [
-      {
-        "title": "CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence",
-        "link": "https://arxiv.org/abs/2608.12555",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 43,
-    "status": "hot"
-  },
-  {
-    "id": "trie-automaton",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "trie automaton",
-    "term_zh": "前缀树自动机",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种利用有限集结构（共享前缀、有限深度、已知基数）的专用机制，通过Aho-Corasick多模式匹配来预计算每个节点的令牌掩码。",
-    "explanation": "trie automaton是一种高效查找工具，能快速匹配多个关键词。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12574"
-    ],
-    "matched_articles": [
-      {
-        "title": "Trie Automata for Constrained Decoding over Large Finite Sets",
-        "link": "https://arxiv.org/abs/2608.12574",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 44,
-    "status": "hot"
-  },
-  {
-    "id": "reasoning-jury",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Reasoning Jury",
-    "term_zh": "推理陪审团",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种通过多个大型语言模型和调解机制进行推理缺陷识别的共识系统。",
-    "explanation": "推理陪审团：多个AI模型一起推理，找出推理错误，确保推理结果更可靠。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12585"
-    ],
-    "matched_articles": [
-      {
-        "title": "Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces",
-        "link": "https://arxiv.org/abs/2608.12585",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 45,
-    "status": "hot"
-  },
-  {
-    "id": "thyroidxagent",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "ThyroidXAgent",
-    "term_zh": "甲状腺X代理",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种用于甲状腺超声诊断和报告的交互式AI系统。",
-    "explanation": "甲状腺X代理：一个能帮医生看甲状腺超声，还能自动生成报告的智能助手。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12590"
-    ],
-    "matched_articles": [
-      {
-        "title": "Auditable agentic AI for evidence-grounded thyroid ultrasound diagnosis and reporting",
-        "link": "https://arxiv.org/abs/2608.12590",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 46,
-    "status": "hot"
-  },
-  {
-    "id": "dig-bench",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "DiG-bench",
-    "term_zh": "DiG基准",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个用于测试AI在未知目标环境中发现新知识的基准。",
-    "explanation": "DiG-bench是测试AI在未知游戏环境中发现新知识的工具。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12593"
-    ],
-    "matched_articles": [
-      {
-        "title": "DiG-bench: Discovery in Games",
-        "link": "https://arxiv.org/abs/2608.12593",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 47,
-    "status": "hot"
-  },
-  {
-    "id": "contract-ledger",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "contract ledger",
-    "term_zh": "合约账本",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个将每个约束与可执行检查器配对，记录撤销并编译净约束状态的系统。",
-    "explanation": "合约账本：记录合约执行情况的账本，确保合约约束被正确执行。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 48,
-    "status": "hot"
-  },
-  {
-    "id": "sequential-ablation-probe",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "sequential ablation probe",
-    "term_zh": "顺序消除探针",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个测量每个条款遵守情况和增量行为影响的工具。",
-    "explanation": "顺序消除探针：检测每条规则影响，帮我们理解黑盒大语言模型对话中的规则作用。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 49,
-    "status": "hot"
-  },
-  {
-    "id": "repair-ladder",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "repair ladder",
-    "term_zh": "修复梯子",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个在匹配预算下进行修复的干预措施。",
-    "explanation": "修复梯子是一种在有限预算内进行修复的方法。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12599"
-    ],
-    "matched_articles": [
-      {
-        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
-        "link": "https://arxiv.org/abs/2608.12599",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 50,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1691,7 +1272,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 51,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1717,7 +1298,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 52,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1749,7 +1330,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 53,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1781,7 +1362,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 54,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1813,7 +1394,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 55,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1846,7 +1427,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 56,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1878,7 +1459,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1911,7 +1492,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 58,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1944,7 +1525,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 59,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1977,7 +1558,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 60,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -2009,7 +1590,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -2042,7 +1623,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 62,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -2075,7 +1656,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 63,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -2107,7 +1688,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 64,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -2139,7 +1720,59 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 65,
+    "rank": 50,
+    "status": "hot"
+  },
+  {
+    "id": "masked-diffusion-models",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Masked Diffusion Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "遮蔽扩散模型：一种通过遮蔽部分信息来训练模型，使其能更好地理解和生成数据的AI技术。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12382"
+    ],
+    "matched_articles": [
+      {
+        "title": "Representation-based Masked Diffusion Model",
+        "link": "https://arxiv.org/abs/2609.12382",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 51,
+    "status": "hot"
+  },
+  {
+    "id": "masked-diffusion-model",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Masked Diffusion Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这是一种AI模型，通过遮盖部分信息来训练，能更好地理解数据。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12382"
+    ],
+    "matched_articles": [
+      {
+        "title": "Representation-based Masked Diffusion Model",
+        "link": "https://arxiv.org/abs/2609.12382",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -2165,7 +1798,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 66,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -2191,7 +1824,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 67,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -2217,7 +1850,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 68,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -2243,7 +1876,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 69,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -2276,7 +1909,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 70,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -2309,7 +1942,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 71,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -2335,7 +1968,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 72,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -2367,7 +2000,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -2399,7 +2032,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 74,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -2431,7 +2064,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 75,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2463,7 +2096,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 76,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2495,7 +2128,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 77,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2527,7 +2160,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 78,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2560,7 +2193,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 79,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2592,7 +2225,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 80,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2618,7 +2251,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 81,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2644,7 +2277,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 82,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2670,7 +2303,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 83,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2696,7 +2329,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 84,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2728,7 +2361,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 85,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2760,7 +2393,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 86,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2792,7 +2425,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 87,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2825,7 +2458,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 88,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2858,7 +2491,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 89,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2890,7 +2523,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2922,7 +2555,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 91,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2954,7 +2587,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 92,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2980,7 +2613,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 93,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -3013,7 +2646,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 94,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -3046,7 +2679,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 95,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -3078,7 +2711,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 96,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -3104,7 +2737,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 97,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -3130,163 +2763,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 98,
-    "status": "hot"
-  },
-  {
-    "id": "deepseek-harness",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "DeepSeek Harness",
-    "term_zh": "DeepSeek Harness",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种可插拔积木式的AI工具，支持自进化与DIY。",
-    "explanation": "DeepSeek Harness就像一套可拼装的AI积木，能自己升级和改造。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/472208.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "深度体验DeepSeek Harness，我原谅它涨价了",
-        "link": "https://www.qbitai.com/2026/08/472208.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 99,
-    "status": "hot"
-  },
-  {
-    "id": "g-lix-1",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "GΞLIX 1",
-    "term_zh": "GΞLIX 1",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "Acrab公司推出的端侧AI芯片。",
-    "explanation": "GΞLIX 1是Acrab公司的一款AI芯片，能提升手机等设备的计算能力。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/472059.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "4.8亿美元砸向端侧算力！Agent芯片新贵冲出重围",
-        "link": "https://www.qbitai.com/2026/08/472059.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 100,
-    "status": "hot"
-  },
-  {
-    "id": "agent-box",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Agent Box",
-    "term_zh": "个人AI中心",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "搭载GΞLIX 1芯片的个人AI设备。",
-    "explanation": "个人AI中心，像你的私人助手，用先进芯片帮你处理各种任务。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/472059.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "4.8亿美元砸向端侧算力！Agent芯片新贵冲出重围",
-        "link": "https://www.qbitai.com/2026/08/472059.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 101,
-    "status": "hot"
-  },
-  {
-    "id": "sl2t",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "SL2T",
-    "term_zh": "SL2T",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种多语言手语到文本的翻译模型。",
-    "explanation": "SL2T是一种能将多种手语转换成文字的智能工具，方便聋人交流。",
-    "sources": [
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Putting sign language AI into users’ hands",
-        "link": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 102,
-    "status": "hot"
-  },
-  {
-    "id": "sign-language-to-text",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "sign-language-to-text",
-    "term_zh": "手语到文本",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "将手语转换为文本的技术。",
-    "explanation": "手语到文本技术，就是把手语动作转换成文字，方便交流。",
-    "sources": [
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Putting sign language AI into users’ hands",
-        "link": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 103,
-    "status": "hot"
-  },
-  {
-    "id": "cross-task-memory-transfer",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Cross-Task Memory Transfer",
-    "term_zh": "跨任务记忆迁移",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "将先前任务的经验作为任务无关的策略记忆存储，以促进不同任务间的知识转移。",
-    "explanation": "把之前学到的知识用到新任务上，让学习更高效。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.12522"
-    ],
-    "matched_articles": [
-      {
-        "title": "$\\varepsilon$-MemEvo: Adaptive Cross-Task Memory Transfer for LLM Program Evolution",
-        "link": "https://arxiv.org/abs/2608.12522",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 104,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -3312,7 +2789,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 105,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -3338,7 +2815,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 106,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -3364,7 +2841,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 107,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -3390,7 +2867,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 108,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -3416,7 +2893,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 109,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -3442,7 +2919,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 110,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -3468,7 +2945,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 111,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -3494,7 +2971,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 112,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -3520,7 +2997,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 113,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -3546,7 +3023,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 114,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -3572,7 +3049,371 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 115,
+    "rank": 96,
+    "status": "hot"
+  },
+  {
+    "id": "mas-decstream",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "MAS-DecStream",
+    "term_zh": "多智能体调度-去中心化流处理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种结合LLM辅助的合同网协议扩展，用于移动边缘计算中的流处理调度。",
+    "explanation": "MAS-DecStream是帮手机边计算处理数据流的一种智能调度方法，有点像多个智能助手一起协作完成任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12371"
+    ],
+    "matched_articles": [
+      {
+        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
+        "link": "https://arxiv.org/abs/2608.12371",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "llm-mr-cnp",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM-MR-CNP",
+    "term_zh": "LLM多轮合同网协议",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于LLM的合同网协议，通过语义CFP、渐进式上下文披露等机制进行多轮协商。",
+    "explanation": "LLM-MR-CNP是一种AI技术，能像人一样通过多轮对话协商，完成复杂任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12371"
+    ],
+    "matched_articles": [
+      {
+        "title": "Multi-Agent Scheduling with LLM-Assisted Contract Net Negotiation for Stream Processing in Mobile Edge Computing",
+        "link": "https://arxiv.org/abs/2608.12371",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "cognitive-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cognitive Alignment",
+    "term_zh": "认知对齐",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "使AI系统推理方式与人类用户相似，并忠实传达其推理过程。",
+    "explanation": "认知对齐就是让AI的思考方式像人一样，让人能看懂AI是怎么想的。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12372"
+    ],
+    "matched_articles": [
+      {
+        "title": "Position: We Need Practical AI Alignment Methods to Mirror Human Reasoning",
+        "link": "https://arxiv.org/abs/2608.12372",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "safety-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Safety Alignment",
+    "term_zh": "安全对齐",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "确保大型语言模型在特定场景下的决策符合安全标准。",
+    "explanation": "安全对齐就是让AI在特定情况下做出符合安全标准的选择。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12373"
+    ],
+    "matched_articles": [
+      {
+        "title": "Don't Want Your LLM to Recommend Nuclear Strike? Try Asking It in Japanese",
+        "link": "https://arxiv.org/abs/2608.12373",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "dual-flow-transformer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Dual-Flow Transformer",
+    "term_zh": "双流Transformer",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种将主要预填充路径与额外解码计算分离的Transformer架构。",
+    "explanation": "双流Transformer是一种将主要预填充路径和额外解码计算分开的Transformer架构，能更高效处理信息。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12385"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dual-Flow Transformers: Decoupling the Primary Prefill Path from Additional Decode Computation",
+        "link": "https://arxiv.org/abs/2608.12385",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "governed-persistent-memory",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Governed Persistent Memory",
+    "term_zh": "受控持久内存",
+    "abbreviation": "GPM",
+    "category": "AI技术",
+    "one_liner": "一种可审计的双时间戳状态转换模型，具有源绑定、生命周期状态、当前公开屏障和故障关闭的有序释放。",
+    "explanation": "受控持久内存：一种安全可靠的内存技术，能确保数据在系统故障后依然可用。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12476"
+    ],
+    "matched_articles": [
+      {
+        "title": "Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents",
+        "link": "https://arxiv.org/abs/2608.12476",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "causal-attribution-score",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Causal Attribution Score",
+    "term_zh": "因果归因分数",
+    "abbreviation": "CAS",
+    "category": "AI技术",
+    "one_liner": "一种用于因果解释的紧凑分数架构，通过将原始结果规模效应转换为局部CAS、签名局部CAS和两种互补的全局CAS摘要。",
+    "explanation": "因果归因分数是一种评估AI决策原因的分数，能帮助我们理解AI是如何得出结果的。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12555"
+    ],
+    "matched_articles": [
+      {
+        "title": "CAS: A Causal Attribution Score for Local and Global Explainable Artificial Intelligence",
+        "link": "https://arxiv.org/abs/2608.12555",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "trie-automaton",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "trie automaton",
+    "term_zh": "前缀树自动机",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种利用有限集结构（共享前缀、有限深度、已知基数）的专用机制，通过Aho-Corasick多模式匹配来预计算每个节点的令牌掩码。",
+    "explanation": "trie automaton是一种高效查找工具，能快速匹配多个关键词。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12574"
+    ],
+    "matched_articles": [
+      {
+        "title": "Trie Automata for Constrained Decoding over Large Finite Sets",
+        "link": "https://arxiv.org/abs/2608.12574",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-jury",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reasoning Jury",
+    "term_zh": "推理陪审团",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种通过多个大型语言模型和调解机制进行推理缺陷识别的共识系统。",
+    "explanation": "推理陪审团：多个AI模型一起推理，找出推理错误，确保推理结果更可靠。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12585"
+    ],
+    "matched_articles": [
+      {
+        "title": "Reasoning Jury: Multi-Model Consensus for Evaluating Reasoning Traces",
+        "link": "https://arxiv.org/abs/2608.12585",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "thyroidxagent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ThyroidXAgent",
+    "term_zh": "甲状腺X代理",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种用于甲状腺超声诊断和报告的交互式AI系统。",
+    "explanation": "甲状腺X代理：一个能帮医生看甲状腺超声，还能自动生成报告的智能助手。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12590"
+    ],
+    "matched_articles": [
+      {
+        "title": "Auditable agentic AI for evidence-grounded thyroid ultrasound diagnosis and reporting",
+        "link": "https://arxiv.org/abs/2608.12590",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "dig-bench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "DiG-bench",
+    "term_zh": "DiG基准",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个用于测试AI在未知目标环境中发现新知识的基准。",
+    "explanation": "DiG-bench是测试AI在未知游戏环境中发现新知识的工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12593"
+    ],
+    "matched_articles": [
+      {
+        "title": "DiG-bench: Discovery in Games",
+        "link": "https://arxiv.org/abs/2608.12593",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "contract-ledger",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "contract ledger",
+    "term_zh": "合约账本",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个将每个约束与可执行检查器配对，记录撤销并编译净约束状态的系统。",
+    "explanation": "合约账本：记录合约执行情况的账本，确保合约约束被正确执行。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "sequential-ablation-probe",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "sequential ablation probe",
+    "term_zh": "顺序消除探针",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个测量每个条款遵守情况和增量行为影响的工具。",
+    "explanation": "顺序消除探针：检测每条规则影响，帮我们理解黑盒大语言模型对话中的规则作用。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "repair-ladder",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "repair ladder",
+    "term_zh": "修复梯子",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个在匹配预算下进行修复的干预措施。",
+    "explanation": "修复梯子是一种在有限预算内进行修复的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2608.12599"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues",
+        "link": "https://arxiv.org/abs/2608.12599",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 110,
     "status": "hot"
   },
   {
@@ -3598,7 +3439,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 116,
+    "rank": 111,
     "status": "hot"
   },
   {
@@ -3624,7 +3465,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 117,
+    "rank": 112,
     "status": "hot"
   },
   {
@@ -3650,7 +3491,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 118,
+    "rank": 113,
     "status": "hot"
   },
   {
@@ -3676,7 +3517,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 119,
+    "rank": 114,
     "status": "hot"
   },
   {
@@ -3702,7 +3543,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 120,
+    "rank": 115,
     "status": "hot"
   },
   {
@@ -3728,7 +3569,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 121,
+    "rank": 116,
     "status": "hot"
   },
   {
@@ -3754,7 +3595,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 122,
+    "rank": 117,
     "status": "hot"
   },
   {
@@ -3780,7 +3621,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 123,
+    "rank": 118,
     "status": "hot"
   },
   {
@@ -3806,7 +3647,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 124,
+    "rank": 119,
     "status": "hot"
   },
   {
@@ -3832,7 +3673,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 125,
+    "rank": 120,
     "status": "hot"
   },
   {
@@ -3858,7 +3699,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 126,
+    "rank": 121,
     "status": "hot"
   },
   {
@@ -3884,7 +3725,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 127,
+    "rank": 122,
     "status": "hot"
   },
   {
@@ -3910,7 +3751,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 128,
+    "rank": 123,
     "status": "hot"
   },
   {
@@ -3936,7 +3777,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 129,
+    "rank": 124,
     "status": "hot"
   },
   {
@@ -3962,7 +3803,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 130,
+    "rank": 125,
     "status": "hot"
   },
   {
@@ -3988,7 +3829,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 131,
+    "rank": 126,
     "status": "hot"
   },
   {
@@ -4014,7 +3855,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 132,
+    "rank": 127,
     "status": "hot"
   },
   {
@@ -4030,7 +3871,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 133,
+    "rank": 128,
     "status": "hot"
   },
   {
@@ -4056,7 +3897,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 134,
+    "rank": 129,
     "status": "hot"
   },
   {
@@ -4082,7 +3923,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 135,
+    "rank": 130,
     "status": "hot"
   },
   {
@@ -4108,7 +3949,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 136,
+    "rank": 131,
     "status": "hot"
   },
   {
@@ -4134,7 +3975,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 137,
+    "rank": 132,
     "status": "hot"
   },
   {
@@ -4160,7 +4001,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 138,
+    "rank": 133,
     "status": "hot"
   },
   {
@@ -4186,7 +4027,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 139,
+    "rank": 134,
     "status": "hot"
   },
   {
@@ -4212,7 +4053,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 140,
+    "rank": 135,
     "status": "hot"
   },
   {
@@ -4238,7 +4079,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 141,
+    "rank": 136,
     "status": "hot"
   },
   {
@@ -4264,7 +4105,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 142,
+    "rank": 137,
     "status": "hot"
   },
   {
@@ -4290,7 +4131,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 143,
+    "rank": 138,
     "status": "hot"
   },
   {
@@ -4316,7 +4157,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 144,
+    "rank": 139,
     "status": "hot"
   },
   {
@@ -4342,7 +4183,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 145,
+    "rank": 140,
     "status": "hot"
   },
   {
@@ -4368,7 +4209,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 146,
+    "rank": 141,
     "status": "hot"
   },
   {
@@ -4394,7 +4235,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 147,
+    "rank": 142,
     "status": "hot"
   },
   {
@@ -4420,7 +4261,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 148,
+    "rank": 143,
     "status": "hot"
   },
   {
@@ -4446,7 +4287,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 149,
+    "rank": 144,
     "status": "hot"
   },
   {
@@ -4472,7 +4313,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 150,
+    "rank": 145,
     "status": "hot"
   },
   {
@@ -4498,7 +4339,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 151,
+    "rank": 146,
     "status": "hot"
   },
   {
@@ -4514,7 +4355,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 152,
+    "rank": 147,
     "status": "hot"
   },
   {
@@ -4540,7 +4381,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 153,
+    "rank": 148,
     "status": "hot"
   },
   {
@@ -4566,7 +4407,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 154,
+    "rank": 149,
     "status": "hot"
   },
   {
@@ -4592,7 +4433,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 155,
+    "rank": 150,
     "status": "hot"
   },
   {
@@ -4618,7 +4459,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 156,
+    "rank": 151,
     "status": "hot"
   },
   {
@@ -4644,7 +4485,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 157,
+    "rank": 152,
     "status": "hot"
   },
   {
@@ -4670,7 +4511,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 158,
+    "rank": 153,
     "status": "hot"
   },
   {
@@ -4696,7 +4537,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 159,
+    "rank": 154,
     "status": "hot"
   },
   {
@@ -4722,7 +4563,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 160,
+    "rank": 155,
     "status": "hot"
   },
   {
@@ -4748,7 +4589,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 161,
+    "rank": 156,
     "status": "hot"
   },
   {
@@ -4774,7 +4615,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 162,
+    "rank": 157,
     "status": "hot"
   },
   {
@@ -4800,7 +4641,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 163,
+    "rank": 158,
     "status": "hot"
   },
   {
@@ -4826,7 +4667,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 164,
+    "rank": 159,
     "status": "hot"
   },
   {
@@ -4852,7 +4693,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 165,
+    "rank": 160,
     "status": "hot"
   },
   {
@@ -4878,7 +4719,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 166,
+    "rank": 161,
     "status": "hot"
   },
   {
@@ -4904,7 +4745,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 167,
+    "rank": 162,
     "status": "hot"
   },
   {
@@ -4930,7 +4771,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 168,
+    "rank": 163,
     "status": "hot"
   },
   {
@@ -4956,7 +4797,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 169,
+    "rank": 164,
     "status": "hot"
   },
   {
@@ -4982,7 +4823,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 170,
+    "rank": 165,
     "status": "hot"
   },
   {
@@ -5008,7 +4849,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 171,
+    "rank": 166,
     "status": "hot"
   },
   {
@@ -5034,7 +4875,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 172,
+    "rank": 167,
     "status": "hot"
   },
   {
@@ -5060,7 +4901,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 173,
+    "rank": 168,
     "status": "hot"
   },
   {
@@ -5086,7 +4927,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 174,
+    "rank": 169,
     "status": "hot"
   },
   {
@@ -5112,7 +4953,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 175,
+    "rank": 170,
     "status": "hot"
   },
   {
@@ -5138,7 +4979,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 176,
+    "rank": 171,
     "status": "hot"
   },
   {
@@ -5164,7 +5005,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 177,
+    "rank": 172,
     "status": "hot"
   },
   {
@@ -5190,7 +5031,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 178,
+    "rank": 173,
     "status": "hot"
   },
   {
@@ -5216,7 +5057,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 179,
+    "rank": 174,
     "status": "hot"
   },
   {
@@ -5242,7 +5083,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 180,
+    "rank": 175,
     "status": "hot"
   },
   {
@@ -5268,7 +5109,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 181,
+    "rank": 176,
     "status": "hot"
   },
   {
@@ -5294,7 +5135,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 182,
+    "rank": 177,
     "status": "hot"
   },
   {
@@ -5320,7 +5161,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 183,
+    "rank": 178,
     "status": "hot"
   },
   {
@@ -5346,7 +5187,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 184,
+    "rank": 179,
     "status": "hot"
   },
   {
@@ -5372,7 +5213,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 185,
+    "rank": 180,
     "status": "hot"
   },
   {
@@ -5398,7 +5239,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 186,
+    "rank": 181,
     "status": "hot"
   },
   {
@@ -5424,7 +5265,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 187,
+    "rank": 182,
     "status": "hot"
   },
   {
@@ -5450,7 +5291,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 188,
+    "rank": 183,
     "status": "hot"
   },
   {
@@ -5476,7 +5317,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 189,
+    "rank": 184,
     "status": "hot"
   },
   {
@@ -5502,7 +5343,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 190,
+    "rank": 185,
     "status": "hot"
   },
   {
@@ -5528,7 +5369,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 191,
+    "rank": 186,
     "status": "hot"
   },
   {
@@ -5554,7 +5395,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 192,
+    "rank": 187,
     "status": "hot"
   },
   {
@@ -5580,7 +5421,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 193,
+    "rank": 188,
     "status": "hot"
   },
   {
@@ -5606,7 +5447,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 194,
+    "rank": 189,
     "status": "hot"
   },
   {
@@ -5622,7 +5463,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 195,
+    "rank": 190,
     "status": "hot"
   },
   {
@@ -5648,7 +5489,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 196,
+    "rank": 191,
     "status": "hot"
   },
   {
@@ -5674,7 +5515,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 197,
+    "rank": 192,
     "status": "hot"
   },
   {
@@ -5700,7 +5541,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 198,
+    "rank": 193,
     "status": "hot"
   },
   {
@@ -5726,7 +5567,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 199,
+    "rank": 194,
     "status": "hot"
   },
   {
@@ -5752,7 +5593,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 200,
+    "rank": 195,
     "status": "hot"
   },
   {
@@ -5778,7 +5619,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 201,
+    "rank": 196,
     "status": "hot"
   },
   {
@@ -5804,7 +5645,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 202,
+    "rank": 197,
     "status": "hot"
   },
   {
@@ -5830,7 +5671,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 203,
+    "rank": 198,
     "status": "hot"
   },
   {
@@ -5856,7 +5697,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 204,
+    "rank": 199,
     "status": "hot"
   },
   {
@@ -5882,7 +5723,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 205,
+    "rank": 200,
     "status": "hot"
   },
   {
@@ -5908,7 +5749,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 206,
+    "rank": 201,
     "status": "hot"
   },
   {
@@ -5934,7 +5775,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 207,
+    "rank": 202,
     "status": "hot"
   },
   {
@@ -5960,7 +5801,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 208,
+    "rank": 203,
     "status": "hot"
   },
   {
@@ -5986,7 +5827,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 209,
+    "rank": 204,
     "status": "hot"
   },
   {
@@ -6012,7 +5853,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 210,
+    "rank": 205,
     "status": "hot"
   },
   {
@@ -6038,7 +5879,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 211,
+    "rank": 206,
     "status": "hot"
   },
   {
@@ -6064,7 +5905,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 212,
+    "rank": 207,
     "status": "hot"
   },
   {
@@ -6090,7 +5931,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 213,
+    "rank": 208,
     "status": "hot"
   },
   {
@@ -6116,7 +5957,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 214,
+    "rank": 209,
     "status": "hot"
   },
   {
@@ -6142,7 +5983,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 215,
+    "rank": 210,
     "status": "hot"
   },
   {
@@ -6168,7 +6009,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 216,
+    "rank": 211,
     "status": "hot"
   },
   {
@@ -6194,7 +6035,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 217,
+    "rank": 212,
     "status": "hot"
   },
   {
@@ -6220,7 +6061,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 218,
+    "rank": 213,
     "status": "hot"
   },
   {
@@ -6246,7 +6087,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 219,
+    "rank": 214,
     "status": "hot"
   },
   {
@@ -6272,7 +6113,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 220,
+    "rank": 215,
     "status": "hot"
   },
   {
@@ -6298,7 +6139,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 221,
+    "rank": 216,
     "status": "hot"
   },
   {
@@ -6324,7 +6165,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 222,
+    "rank": 217,
     "status": "hot"
   },
   {
@@ -6350,7 +6191,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 223,
+    "rank": 218,
     "status": "hot"
   },
   {
@@ -6376,7 +6217,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 224,
+    "rank": 219,
     "status": "hot"
   },
   {
@@ -6402,7 +6243,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 225,
+    "rank": 220,
     "status": "hot"
   },
   {
@@ -6428,7 +6269,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 226,
+    "rank": 221,
     "status": "hot"
   },
   {
@@ -6454,7 +6295,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 227,
+    "rank": 222,
     "status": "hot"
   },
   {
@@ -6480,7 +6321,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 228,
+    "rank": 223,
     "status": "hot"
   },
   {
@@ -6506,7 +6347,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 229,
+    "rank": 224,
     "status": "hot"
   },
   {
@@ -6532,7 +6373,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 230,
+    "rank": 225,
     "status": "hot"
   },
   {
@@ -6558,7 +6399,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 231,
+    "rank": 226,
     "status": "hot"
   },
   {
@@ -6584,7 +6425,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 232,
+    "rank": 227,
     "status": "hot"
   },
   {
@@ -6610,7 +6451,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 233,
+    "rank": 228,
     "status": "hot"
   },
   {
@@ -6636,7 +6477,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 234,
+    "rank": 229,
     "status": "hot"
   },
   {
@@ -6662,7 +6503,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 235,
+    "rank": 230,
     "status": "hot"
   },
   {
@@ -6688,7 +6529,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 236,
+    "rank": 231,
     "status": "hot"
   },
   {
@@ -6714,7 +6555,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 237,
+    "rank": 232,
     "status": "hot"
   },
   {
@@ -6740,59 +6581,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 238,
-    "status": "hot"
-  },
-  {
-    "id": "masked-diffusion-models",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Masked Diffusion Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "用遮罩扩散模型，AI像猜谜一样学习复杂推理。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.25428"
-    ],
-    "matched_articles": [
-      {
-        "title": "DCGC: Draft-Conditioned Global Correction for Complex Reasoning with Masked Diffusion Models",
-        "link": "https://arxiv.org/abs/2608.25428",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 239,
-    "status": "hot"
-  },
-  {
-    "id": "masked-diffusion-model",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Masked Diffusion Model",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "用遮盖的方式逐步揭示图像，让AI像猜谜一样学习图像细节。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.25428"
-    ],
-    "matched_articles": [
-      {
-        "title": "DCGC: Draft-Conditioned Global Correction for Complex Reasoning with Masked Diffusion Models",
-        "link": "https://arxiv.org/abs/2608.25428",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 240,
+    "rank": 233,
     "status": "hot"
   },
   {
@@ -6818,7 +6607,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 241,
+    "rank": 234,
     "status": "hot"
   },
   {
@@ -6844,7 +6633,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 242,
+    "rank": 235,
     "status": "hot"
   },
   {
@@ -6870,7 +6659,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 243,
+    "rank": 236,
     "status": "hot"
   },
   {
@@ -6896,7 +6685,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 244,
+    "rank": 237,
     "status": "hot"
   },
   {
@@ -6922,7 +6711,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 245,
+    "rank": 238,
     "status": "hot"
   },
   {
@@ -6948,7 +6737,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 246,
+    "rank": 239,
     "status": "hot"
   },
   {
@@ -6974,7 +6763,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 247,
+    "rank": 240,
     "status": "hot"
   },
   {
@@ -7000,7 +6789,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 248,
+    "rank": 241,
     "status": "hot"
   },
   {
@@ -7026,7 +6815,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 249,
+    "rank": 242,
     "status": "hot"
   },
   {
@@ -7052,7 +6841,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 250,
+    "rank": 243,
     "status": "hot"
   },
   {
@@ -7078,7 +6867,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 251,
+    "rank": 244,
     "status": "hot"
   },
   {
@@ -7104,7 +6893,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 252,
+    "rank": 245,
     "status": "hot"
   },
   {
@@ -7130,7 +6919,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 253,
+    "rank": 246,
     "status": "hot"
   },
   {
@@ -7156,7 +6945,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 254,
+    "rank": 247,
     "status": "hot"
   },
   {
@@ -7182,7 +6971,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 255,
+    "rank": 248,
     "status": "hot"
   },
   {
@@ -7208,7 +6997,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 256,
+    "rank": 249,
     "status": "hot"
   },
   {
@@ -7234,7 +7023,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 257,
+    "rank": 250,
     "status": "hot"
   },
   {
@@ -7260,7 +7049,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 258,
+    "rank": 251,
     "status": "hot"
   },
   {
@@ -7286,7 +7075,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 259,
+    "rank": 252,
     "status": "hot"
   },
   {
@@ -7312,7 +7101,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 260,
+    "rank": 253,
     "status": "hot"
   },
   {
@@ -7338,7 +7127,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 261,
+    "rank": 254,
     "status": "hot"
   },
   {
@@ -7364,7 +7153,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 262,
+    "rank": 255,
     "status": "hot"
   },
   {
@@ -7390,7 +7179,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 263,
+    "rank": 256,
     "status": "hot"
   },
   {
@@ -7416,7 +7205,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 264,
+    "rank": 257,
     "status": "hot"
   },
   {
@@ -7442,7 +7231,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 265,
+    "rank": 258,
     "status": "hot"
   },
   {
@@ -7468,7 +7257,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 266,
+    "rank": 259,
     "status": "hot"
   },
   {
@@ -7494,7 +7283,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 267,
+    "rank": 260,
     "status": "hot"
   },
   {
@@ -7520,7 +7309,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 268,
+    "rank": 261,
     "status": "hot"
   },
   {
@@ -7546,7 +7335,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 269,
+    "rank": 262,
     "status": "hot"
   },
   {
@@ -7572,7 +7361,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 270,
+    "rank": 263,
     "status": "hot"
   },
   {
@@ -7598,7 +7387,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 271,
+    "rank": 264,
     "status": "hot"
   },
   {
@@ -7624,7 +7413,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 272,
+    "rank": 265,
     "status": "hot"
   },
   {
@@ -7650,7 +7439,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 273,
+    "rank": 266,
     "status": "hot"
   },
   {
@@ -7676,7 +7465,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 274,
+    "rank": 267,
     "status": "hot"
   },
   {
@@ -7692,7 +7481,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 275,
+    "rank": 268,
     "status": "hot"
   },
   {
@@ -7718,7 +7507,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 276,
+    "rank": 269,
     "status": "hot"
   },
   {
@@ -7744,7 +7533,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 277,
+    "rank": 270,
     "status": "hot"
   },
   {
@@ -7770,7 +7559,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 278,
+    "rank": 271,
     "status": "hot"
   },
   {
@@ -7796,7 +7585,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 279,
+    "rank": 272,
     "status": "hot"
   },
   {
@@ -7822,7 +7611,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 280,
+    "rank": 273,
     "status": "hot"
   },
   {
@@ -7848,7 +7637,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 281,
+    "rank": 274,
     "status": "hot"
   },
   {
@@ -7874,7 +7663,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 282,
+    "rank": 275,
     "status": "hot"
   },
   {
@@ -7900,7 +7689,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 283,
+    "rank": 276,
     "status": "hot"
   },
   {
@@ -7926,7 +7715,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 284,
+    "rank": 277,
     "status": "hot"
   },
   {
@@ -7952,7 +7741,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 285,
+    "rank": 278,
     "status": "hot"
   },
   {
@@ -7978,7 +7767,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 286,
+    "rank": 279,
     "status": "hot"
   },
   {
@@ -8004,7 +7793,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 287,
+    "rank": 280,
     "status": "hot"
   },
   {
@@ -8030,7 +7819,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 288,
+    "rank": 281,
     "status": "hot"
   },
   {
@@ -8056,7 +7845,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 289,
+    "rank": 282,
     "status": "hot"
   },
   {
@@ -8082,7 +7871,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 290,
+    "rank": 283,
     "status": "hot"
   },
   {
@@ -8108,7 +7897,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 291,
+    "rank": 284,
     "status": "hot"
   },
   {
@@ -8134,7 +7923,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 292,
+    "rank": 285,
     "status": "hot"
   },
   {
@@ -8160,7 +7949,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 293,
+    "rank": 286,
     "status": "hot"
   },
   {
@@ -8176,7 +7965,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 294,
+    "rank": 287,
     "status": "hot"
   },
   {
@@ -8202,7 +7991,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 295,
+    "rank": 288,
     "status": "hot"
   },
   {
@@ -8228,7 +8017,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 296,
+    "rank": 289,
     "status": "hot"
   },
   {
@@ -8254,7 +8043,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 297,
+    "rank": 290,
     "status": "hot"
   },
   {
@@ -8280,7 +8069,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 298,
+    "rank": 291,
     "status": "hot"
   },
   {
@@ -8306,7 +8095,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 299,
+    "rank": 292,
     "status": "hot"
   },
   {
@@ -8332,7 +8121,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 300,
+    "rank": 293,
     "status": "hot"
   },
   {
@@ -8358,7 +8147,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 301,
+    "rank": 294,
     "status": "hot"
   },
   {
@@ -8384,7 +8173,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 302,
+    "rank": 295,
     "status": "hot"
   },
   {
@@ -8410,7 +8199,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 303,
+    "rank": 296,
     "status": "hot"
   },
   {
@@ -8436,7 +8225,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 304,
+    "rank": 297,
     "status": "hot"
   },
   {
@@ -8462,7 +8251,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 305,
+    "rank": 298,
     "status": "hot"
   },
   {
@@ -8488,7 +8277,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 306,
+    "rank": 299,
     "status": "hot"
   },
   {
@@ -8514,7 +8303,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 307,
+    "rank": 300,
     "status": "hot"
   },
   {
@@ -8540,7 +8329,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 308,
+    "rank": 301,
     "status": "hot"
   },
   {
@@ -8566,7 +8355,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 309,
+    "rank": 302,
     "status": "hot"
   },
   {
@@ -8592,7 +8381,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 310,
+    "rank": 303,
     "status": "hot"
   },
   {
@@ -8618,7 +8407,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 311,
+    "rank": 304,
     "status": "hot"
   },
   {
@@ -8644,7 +8433,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 312,
+    "rank": 305,
     "status": "hot"
   },
   {
@@ -8670,7 +8459,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 313,
+    "rank": 306,
     "status": "hot"
   },
   {
@@ -8696,7 +8485,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 314,
+    "rank": 307,
     "status": "hot"
   },
   {
@@ -8722,7 +8511,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 315,
+    "rank": 308,
     "status": "hot"
   },
   {
@@ -8748,7 +8537,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 316,
+    "rank": 309,
     "status": "hot"
   },
   {
@@ -8774,7 +8563,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 317,
+    "rank": 310,
     "status": "hot"
   },
   {
@@ -8800,7 +8589,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 318,
+    "rank": 311,
     "status": "hot"
   },
   {
@@ -8826,7 +8615,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 319,
+    "rank": 312,
     "status": "hot"
   },
   {
@@ -8852,7 +8641,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 320,
+    "rank": 313,
     "status": "hot"
   },
   {
@@ -8878,7 +8667,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 321,
+    "rank": 314,
     "status": "hot"
   },
   {
@@ -8904,7 +8693,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 322,
+    "rank": 315,
     "status": "hot"
   },
   {
@@ -8930,7 +8719,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 323,
+    "rank": 316,
     "status": "hot"
   },
   {
@@ -8956,7 +8745,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 324,
+    "rank": 317,
     "status": "hot"
   },
   {
@@ -8982,7 +8771,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 325,
+    "rank": 318,
     "status": "hot"
   },
   {
@@ -9008,7 +8797,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 326,
+    "rank": 319,
     "status": "hot"
   },
   {
@@ -9034,7 +8823,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 327,
+    "rank": 320,
     "status": "hot"
   },
   {
@@ -9060,7 +8849,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 328,
+    "rank": 321,
     "status": "hot"
   },
   {
@@ -9086,7 +8875,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 329,
+    "rank": 322,
     "status": "hot"
   },
   {
@@ -9112,7 +8901,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 330,
+    "rank": 323,
     "status": "hot"
   },
   {
@@ -9138,7 +8927,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 331,
+    "rank": 324,
     "status": "hot"
   },
   {
@@ -9164,7 +8953,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 332,
+    "rank": 325,
     "status": "hot"
   },
   {
@@ -9190,7 +8979,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 333,
+    "rank": 326,
     "status": "hot"
   },
   {
@@ -9216,7 +9005,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 334,
+    "rank": 327,
     "status": "hot"
   },
   {
@@ -9242,7 +9031,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 335,
+    "rank": 328,
     "status": "hot"
   },
   {
@@ -9268,7 +9057,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 336,
+    "rank": 329,
     "status": "hot"
   },
   {
@@ -9294,7 +9083,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 337,
+    "rank": 330,
     "status": "hot"
   },
   {
@@ -9320,7 +9109,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 338,
+    "rank": 331,
     "status": "hot"
   },
   {
@@ -9346,7 +9135,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 339,
+    "rank": 332,
     "status": "hot"
   },
   {
@@ -9372,7 +9161,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 340,
+    "rank": 333,
     "status": "hot"
   },
   {
@@ -9398,7 +9187,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 341,
+    "rank": 334,
     "status": "hot"
   },
   {
@@ -9414,7 +9203,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 342,
+    "rank": 335,
     "status": "hot"
   },
   {
@@ -9430,7 +9219,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 343,
+    "rank": 336,
     "status": "hot"
   },
   {
@@ -9456,7 +9245,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 344,
+    "rank": 337,
     "status": "hot"
   },
   {
@@ -9482,7 +9271,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 345,
+    "rank": 338,
     "status": "hot"
   },
   {
@@ -9508,7 +9297,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 346,
+    "rank": 339,
     "status": "hot"
   },
   {
@@ -9534,7 +9323,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 347,
+    "rank": 340,
     "status": "hot"
   },
   {
@@ -9560,7 +9349,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 348,
+    "rank": 341,
     "status": "hot"
   },
   {
@@ -9586,7 +9375,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 349,
+    "rank": 342,
     "status": "hot"
   },
   {
@@ -9612,7 +9401,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 350,
+    "rank": 343,
     "status": "hot"
   },
   {
@@ -9638,7 +9427,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 351,
+    "rank": 344,
     "status": "hot"
   },
   {
@@ -9664,7 +9453,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 352,
+    "rank": 345,
     "status": "hot"
   },
   {
@@ -9680,7 +9469,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 353,
+    "rank": 346,
     "status": "hot"
   },
   {
@@ -9706,7 +9495,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 354,
+    "rank": 347,
     "status": "hot"
   },
   {
@@ -9732,7 +9521,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 355,
+    "rank": 348,
     "status": "hot"
   },
   {
@@ -9758,7 +9547,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 356,
+    "rank": 349,
     "status": "hot"
   },
   {
@@ -9784,7 +9573,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 357,
+    "rank": 350,
     "status": "hot"
   },
   {
@@ -9810,7 +9599,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 358,
+    "rank": 351,
     "status": "hot"
   },
   {
@@ -9836,7 +9625,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 359,
+    "rank": 352,
     "status": "hot"
   },
   {
@@ -9862,7 +9651,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 360,
+    "rank": 353,
     "status": "hot"
   },
   {
@@ -9888,7 +9677,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 361,
+    "rank": 354,
     "status": "hot"
   },
   {
@@ -9914,7 +9703,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 362,
+    "rank": 355,
     "status": "hot"
   },
   {
@@ -9940,7 +9729,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 363,
+    "rank": 356,
     "status": "hot"
   },
   {
@@ -9966,7 +9755,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 364,
+    "rank": 357,
     "status": "hot"
   },
   {
@@ -9992,7 +9781,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 365,
+    "rank": 358,
     "status": "hot"
   },
   {
@@ -10018,7 +9807,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 366,
+    "rank": 359,
     "status": "hot"
   },
   {
@@ -10044,7 +9833,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 367,
+    "rank": 360,
     "status": "hot"
   },
   {
@@ -10070,7 +9859,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 368,
+    "rank": 361,
     "status": "hot"
   },
   {
@@ -10096,7 +9885,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 369,
+    "rank": 362,
     "status": "hot"
   },
   {
@@ -10122,7 +9911,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 370,
+    "rank": 363,
     "status": "hot"
   },
   {
@@ -10148,7 +9937,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 371,
+    "rank": 364,
     "status": "hot"
   },
   {
@@ -10174,7 +9963,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 372,
+    "rank": 365,
     "status": "hot"
   },
   {
@@ -10200,7 +9989,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 373,
+    "rank": 366,
     "status": "hot"
   },
   {
@@ -10226,7 +10015,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 374,
+    "rank": 367,
     "status": "hot"
   },
   {
@@ -10242,7 +10031,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 375,
+    "rank": 368,
     "status": "hot"
   },
   {
@@ -10258,7 +10047,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 376,
+    "rank": 369,
     "status": "hot"
   },
   {
@@ -10274,7 +10063,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 377,
+    "rank": 370,
     "status": "hot"
   },
   {
@@ -10300,7 +10089,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 378,
+    "rank": 371,
     "status": "hot"
   },
   {
@@ -10326,7 +10115,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 379,
+    "rank": 372,
     "status": "hot"
   },
   {
@@ -10352,7 +10141,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 380,
+    "rank": 373,
     "status": "hot"
   },
   {
@@ -10378,7 +10167,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 381,
+    "rank": 374,
     "status": "hot"
   },
   {
@@ -10404,7 +10193,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 382,
+    "rank": 375,
     "status": "hot"
   },
   {
@@ -10430,7 +10219,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 383,
+    "rank": 376,
     "status": "hot"
   },
   {
@@ -10456,7 +10245,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 384,
+    "rank": 377,
     "status": "hot"
   },
   {
@@ -10482,7 +10271,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 385,
+    "rank": 378,
     "status": "hot"
   },
   {
@@ -10508,7 +10297,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 386,
+    "rank": 379,
     "status": "hot"
   },
   {
@@ -10534,7 +10323,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 387,
+    "rank": 380,
     "status": "hot"
   },
   {
@@ -10560,7 +10349,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 388,
+    "rank": 381,
     "status": "hot"
   },
   {
@@ -10586,7 +10375,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 389,
+    "rank": 382,
     "status": "hot"
   },
   {
@@ -10612,7 +10401,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 390,
+    "rank": 383,
     "status": "hot"
   },
   {
@@ -10638,7 +10427,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 391,
+    "rank": 384,
     "status": "hot"
   },
   {
@@ -10664,7 +10453,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 392,
+    "rank": 385,
     "status": "hot"
   },
   {
@@ -10690,7 +10479,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 393,
+    "rank": 386,
     "status": "hot"
   },
   {
@@ -10716,7 +10505,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 394,
+    "rank": 387,
     "status": "hot"
   },
   {
@@ -10742,7 +10531,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 395,
+    "rank": 388,
     "status": "hot"
   },
   {
@@ -10768,7 +10557,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 396,
+    "rank": 389,
     "status": "hot"
   },
   {
@@ -10794,7 +10583,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 397,
+    "rank": 390,
     "status": "hot"
   },
   {
@@ -10820,7 +10609,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 398,
+    "rank": 391,
     "status": "hot"
   },
   {
@@ -10846,7 +10635,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 399,
+    "rank": 392,
     "status": "hot"
   },
   {
@@ -10872,7 +10661,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 400,
+    "rank": 393,
     "status": "hot"
   },
   {
@@ -10898,7 +10687,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 401,
+    "rank": 394,
     "status": "hot"
   },
   {
@@ -10924,7 +10713,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 402,
+    "rank": 395,
     "status": "hot"
   },
   {
@@ -10950,7 +10739,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 403,
+    "rank": 396,
     "status": "hot"
   },
   {
@@ -10976,7 +10765,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 404,
+    "rank": 397,
     "status": "hot"
   },
   {
@@ -11002,7 +10791,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 405,
+    "rank": 398,
     "status": "hot"
   },
   {
@@ -11028,7 +10817,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 406,
+    "rank": 399,
     "status": "hot"
   },
   {
@@ -11054,7 +10843,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 407,
+    "rank": 400,
     "status": "hot"
   },
   {
@@ -11080,7 +10869,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 408,
+    "rank": 401,
     "status": "hot"
   },
   {
@@ -11106,7 +10895,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 409,
+    "rank": 402,
     "status": "hot"
   },
   {
@@ -11132,7 +10921,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 410,
+    "rank": 403,
     "status": "hot"
   },
   {
@@ -11158,7 +10947,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 411,
+    "rank": 404,
     "status": "hot"
   },
   {
@@ -11184,7 +10973,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 412,
+    "rank": 405,
     "status": "hot"
   },
   {
@@ -11210,7 +10999,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 413,
+    "rank": 406,
     "status": "hot"
   },
   {
@@ -11236,7 +11025,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 414,
+    "rank": 407,
     "status": "hot"
   },
   {
@@ -11262,7 +11051,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 415,
+    "rank": 408,
     "status": "hot"
   },
   {
@@ -11288,7 +11077,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 416,
+    "rank": 409,
     "status": "hot"
   },
   {
@@ -11314,7 +11103,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 417,
+    "rank": 410,
     "status": "hot"
   },
   {
@@ -11340,7 +11129,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 418,
+    "rank": 411,
     "status": "hot"
   },
   {
@@ -11366,7 +11155,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 419,
+    "rank": 412,
     "status": "hot"
   },
   {
@@ -11392,7 +11181,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 420,
+    "rank": 413,
     "status": "hot"
   },
   {
@@ -11418,7 +11207,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 421,
+    "rank": 414,
     "status": "hot"
   },
   {
@@ -11444,7 +11233,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 422,
+    "rank": 415,
     "status": "hot"
   },
   {
@@ -11470,7 +11259,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 423,
+    "rank": 416,
     "status": "hot"
   },
   {
@@ -11496,7 +11285,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 424,
+    "rank": 417,
     "status": "hot"
   },
   {
@@ -11522,7 +11311,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 425,
+    "rank": 418,
     "status": "hot"
   },
   {
@@ -11548,7 +11337,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 426,
+    "rank": 419,
     "status": "hot"
   },
   {
@@ -11574,7 +11363,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 427,
+    "rank": 420,
     "status": "hot"
   },
   {
@@ -11600,7 +11389,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 428,
+    "rank": 421,
     "status": "hot"
   },
   {
@@ -11626,7 +11415,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 429,
+    "rank": 422,
     "status": "hot"
   },
   {
@@ -11652,7 +11441,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 430,
+    "rank": 423,
     "status": "hot"
   },
   {
@@ -11678,7 +11467,579 @@
         "source": "量子位"
       }
     ],
+    "rank": 424,
+    "status": "hot"
+  },
+  {
+    "id": "task-oriented-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Task-Oriented Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "任务导向型智能体：像帮手一样，专门完成特定任务的智能系统。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12191"
+    ],
+    "matched_articles": [
+      {
+        "title": "GAUGE: When Not to Trust LLM-as-a-Judge in User-Simulated Evaluation of Task-Oriented Agents",
+        "link": "https://arxiv.org/abs/2609.12191",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 425,
+    "status": "hot"
+  },
+  {
+    "id": "chopthin-consensus-power-sampling",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Chopthin-Consensus Power Sampling",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Chopthin-Consensus Power Sampling是一种让大型语言模型解码时保持多样性的方法。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12243"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chopthin-Consensus Power Sampling: A Diversity-Preserving Approach to LLM Decoding",
+        "link": "https://arxiv.org/abs/2609.12243",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 426,
+    "status": "hot"
+  },
+  {
+    "id": "llm-decoding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM Decoding",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "LLM Decoding是一种让大型语言模型生成更多样化输出的方法。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12243"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chopthin-Consensus Power Sampling: A Diversity-Preserving Approach to LLM Decoding",
+        "link": "https://arxiv.org/abs/2609.12243",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 427,
+    "status": "hot"
+  },
+  {
+    "id": "stronger-byte-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Stronger Byte Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "强字节模型：一种更小但更强大的AI模型，能突破传统模型大小限制。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12303"
+    ],
+    "matched_articles": [
+      {
+        "title": "Breaking the Token Ceiling: Distilling Smaller, Stronger Byte Models",
+        "link": "https://arxiv.org/abs/2609.12303",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 428,
+    "status": "hot"
+  },
+  {
+    "id": "meddies-pii-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Meddies-PII-Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Meddies-PII-Model是一种用于从临床数据中提取个人隐私信息的多语言框架。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12544"
+    ],
+    "matched_articles": [
+      {
+        "title": "Meddies-PII: A Multilingual Framework for Personally Identifiable Information Extraction in Clinical De-identification",
+        "link": "https://arxiv.org/abs/2609.12544",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 429,
+    "status": "hot"
+  },
+  {
+    "id": "multimodal-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multimodal Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "多模态语言模型：能理解文字和图片的语言AI，能像人一样联想文化背景。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12575"
+    ],
+    "matched_articles": [
+      {
+        "title": "Calibrated Ambiguity in Multimodal Language Models: Humans reach for cultural references, while models describe the picture",
+        "link": "https://arxiv.org/abs/2609.12575",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 430,
+    "status": "hot"
+  },
+  {
+    "id": "long-horizon-procedural-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Long-Horizon Procedural Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "长周期程序推理，是让AI像人一样，能理解并执行复杂、长期的任务。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13005"
+    ],
+    "matched_articles": [
+      {
+        "title": "Tasks over Application Manuals: Revealing Gaps in Long-Horizon Procedural Reasoning for Language Models",
+        "link": "https://arxiv.org/abs/2609.13005",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 431,
+    "status": "hot"
+  },
+  {
+    "id": "physics-aware-multimodal-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Physics-Aware Multimodal Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "物理感知多模态推理，就是让AI像物理学家一样，结合多种信息来理解量子材料。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12202"
+    ],
+    "matched_articles": [
+      {
+        "title": "QuPAINT: Physics-Aware Multimodal Reasoning for Quantum Material Characterization",
+        "link": "https://arxiv.org/abs/2609.12202",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 432,
+    "status": "hot"
+  },
+  {
+    "id": "physics-informed-attention",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Physics-Informed Attention",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Physics-Informed Attention是一种结合物理原理和注意力机制的AI技术，用于量子材料特性分析。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12202"
+    ],
+    "matched_articles": [
+      {
+        "title": "QuPAINT: Physics-Aware Multimodal Reasoning for Quantum Material Characterization",
+        "link": "https://arxiv.org/abs/2609.12202",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 433,
+    "status": "hot"
+  },
+  {
+    "id": "segmentation-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Segmentation Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Segmentation Benchmark是用于评估玉米实例分割算法的标准测试集。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12350"
+    ],
+    "matched_articles": [
+      {
+        "title": "EgoMaize: A First-Person Maize Instance Segmentation Benchmark under Severe Field Occlusion",
+        "link": "https://arxiv.org/abs/2609.12350",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 434,
+    "status": "hot"
+  },
+  {
+    "id": "omni-condition-alignment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Omni-Condition Alignment",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Omni-Condition Alignment是一种技术，用于在多模态图像生成中确保不同条件下的图像质量一致。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12397"
+    ],
+    "matched_articles": [
+      {
+        "title": "UFO: Chain-of-Evaluation for Omni-Condition Alignment in Multi-Modal Image Generation",
+        "link": "https://arxiv.org/abs/2609.12397",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 435,
+    "status": "hot"
+  },
+  {
+    "id": "structural-adapter",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Structural Adapter",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "结构适配器是一种技术，能帮助3D场景理解保持在不同分割下的一致性。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12473"
+    ],
+    "matched_articles": [
+      {
+        "title": "Partition-Invariant Tuning for 3D Scene Understanding",
+        "link": "https://arxiv.org/abs/2609.12473",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 436,
+    "status": "hot"
+  },
+  {
+    "id": "bengali-geometric-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Bengali Geometric Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "孟加拉几何推理是研究孟加拉语中图像与文字关系的AI技术。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12509"
+    ],
+    "matched_articles": [
+      {
+        "title": "ChitraMiti: Benchmarking Visual Grounding and Modality Reliance in Bengali Geometric Reasoning",
+        "link": "https://arxiv.org/abs/2609.12509",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 437,
+    "status": "hot"
+  },
+  {
+    "id": "taxonomy-guided-routing",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Taxonomy-Guided Routing",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Taxonomy-Guided Routing是一种智能路由技术，根据视频内容分类来优化问答匹配。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12517"
+    ],
+    "matched_articles": [
+      {
+        "title": "One Skill Does Not Fit All: Automatic Discovery and Taxonomy-Guided Routing of Frame-Selection Skills for Long-Video Question Answering",
+        "link": "https://arxiv.org/abs/2609.12517",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 438,
+    "status": "hot"
+  },
+  {
+    "id": "polar-gated-mamba-network",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Polar-Gated Mamba Network",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这是一种用于视网膜血管分割的AI网络，能更清晰地识别血管。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12574"
+    ],
+    "matched_articles": [
+      {
+        "title": "An Ultra-Widefield Swept-Source OCTA Dataset and a Polar-Gated Mamba Network for Retinal Vessel Segmentation",
+        "link": "https://arxiv.org/abs/2609.12574",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 439,
+    "status": "hot"
+  },
+  {
+    "id": "stable-diffusion",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Stable Diffusion",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Stable Diffusion：一种让AI根据文字描述生成稳定图像的技术。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12691"
+    ],
+    "matched_articles": [
+      {
+        "title": "Semantically Aligned Gradient-Driven Context-Preserving Image Editing",
+        "link": "https://arxiv.org/abs/2609.12691",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 440,
+    "status": "hot"
+  },
+  {
+    "id": "concept-integrated-transformer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Concept-Integrated Transformer",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "概念集成Transformer，是一种AI技术，能从手机感应数据中，通过整合相关概念来解释预测结果。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.11995"
+    ],
+    "matched_articles": [
+      {
+        "title": "Explainable Prediction from Mobile Sensing Data through LLM-guided Concept Integration",
+        "link": "https://arxiv.org/abs/2609.11995",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 441,
+    "status": "hot"
+  },
+  {
+    "id": "block-diffusion",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Block Diffusion",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "块扩散是一种AI技术，通过固定大小的缓存，在大型数据中实现高效信息传播。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.11998"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+        "link": "https://arxiv.org/abs/2609.11998",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 442,
+    "status": "hot"
+  },
+  {
+    "id": "quantum-transformer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Quantum Transformer",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "量子变压器是一种利用量子计算技术来分析情感的工具。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12011"
+    ],
+    "matched_articles": [
+      {
+        "title": "QTrans: A Quantum Transformer for Sentiment Classification",
+        "link": "https://arxiv.org/abs/2609.12011",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 443,
+    "status": "hot"
+  },
+  {
+    "id": "image-diffusion-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Image Diffusion Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "图像扩散模型：一种让AI根据文字描述生成图片的技术。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12163"
+    ],
+    "matched_articles": [
+      {
+        "title": "Certifying Concept Unlearning in Text-to-Image Diffusion Models",
+        "link": "https://arxiv.org/abs/2609.12163",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 444,
+    "status": "hot"
+  },
+  {
+    "id": "residual-network",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Residual Network",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "残差网络是一种特殊的神经网络，能更好地学习复杂数据，提高模型性能。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12244"
+    ],
+    "matched_articles": [
+      {
+        "title": "CRFCAN: A Complex-Valued Cross-Domain Residual Network for Joint Channel and Phase Noise Estimation in Sub-THz OFDM Systems",
+        "link": "https://arxiv.org/abs/2609.12244",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 445,
+    "status": "hot"
+  },
+  {
+    "id": "ehr-foundation-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "EHR Foundation Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "EHR基础模型是利用强化学习，从患者病历中学习临床推理的AI模型。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.12277"
+    ],
+    "matched_articles": [
+      {
+        "title": "Reinforcement Learning over Patient Trajectories for Clinical Reasoning in EHR Foundation Models",
+        "link": "https://arxiv.org/abs/2609.12277",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 446,
     "status": "hot"
   }
 ]
