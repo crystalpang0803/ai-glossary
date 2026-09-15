@@ -1,5 +1,49 @@
 [
   {
+    "id": "rds",
+    "appear_count": 26,
+    "days": 1,
+    "term_en": "RDS",
+    "term_zh": "递归科学发现",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "RDS（递归科学发现）是一种通过递归方法不断优化和改进科学发现过程的技术。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13396",
+      "https://arxiv.org/abs/2609.13406",
+      "https://arxiv.org/abs/2609.13457",
+      "https://arxiv.org/abs/2609.13463",
+      "https://arxiv.org/abs/2609.13535"
+    ],
+    "matched_articles": [
+      {
+        "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
+        "link": "https://arxiv.org/abs/2609.13396",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
+        "link": "https://arxiv.org/abs/2609.13406",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models",
+        "link": "https://arxiv.org/abs/2609.13457",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 1,
+    "status": "hot"
+  },
+  {
     "id": "rsi",
     "appear_count": 21,
     "days": 2,
@@ -37,45 +81,6 @@
         "title": "I Am No One: Style-Aware Paraphrasing for Text Anonymization",
         "link": "https://arxiv.org/abs/2609.12341",
         "source": "arXiv CL"
-      }
-    ],
-    "rank": 1,
-    "status": "hot"
-  },
-  {
-    "id": "physical-ai",
-    "appear_count": 4,
-    "days": 1,
-    "term_en": "Physical AI",
-    "term_zh": "物理AI",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "将人工智能与物理世界机理深度融合，实现AI在真实物理环境中的感知、预测、决策与控制。",
-    "explanation": "物理AI就是让AI像人一样在真实世界中感知、决策和控制。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/485784.html",
-      "https://www.qbitai.com/2026/09/485064.html",
-      "https://www.qbitai.com/2026/09/485056.html",
-      "https://www.qbitai.com/2026/09/485046.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "深度智控获宁德时代、沙特阿美战投等重磅加码，加速打造物理AI时代算力与能源底座",
-        "link": "https://www.qbitai.com/2026/09/485784.html",
-        "source": "量子位"
-      },
-      {
-        "title": "国内首份办公Agent用户行为报告发布：北京用户量全国居首，海外用户占比超12%",
-        "link": "https://www.qbitai.com/2026/09/485064.html",
-        "source": "量子位"
-      },
-      {
-        "title": "原生全模态技术战略闭环，智象（HiDream.ai）发布具身世界模型HiDream-O1-Embodied",
-        "link": "https://www.qbitai.com/2026/09/485056.html",
-        "source": "量子位"
       }
     ],
     "rank": 2,
@@ -155,39 +160,6 @@
     "status": "hot"
   },
   {
-    "id": "embodied-ai",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Embodied AI",
-    "term_zh": "具身智能",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种使机器人具备人类感知和行动能力的AI技术。",
-    "explanation": "具身智能是让机器人像人一样看、听、动，像超市机器人一样盘点货物的AI技术。",
-    "sources": [
-      "arXiv CV",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.09396",
-      "https://www.qbitai.com/2026/09/486280.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "VANTAGE-Bench: Evaluating the Infrastructure AI Gap in Vision-Language Models",
-        "link": "https://arxiv.org/abs/2609.09396",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "具身机器人能搞定超市盘点吗？全球七万门店正在给出答案",
-        "link": "https://www.qbitai.com/2026/09/486280.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
     "id": "multimodal-reasoning",
     "appear_count": 3,
     "days": 2,
@@ -210,7 +182,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 6,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -236,7 +208,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 7,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -260,6 +232,39 @@
         "title": "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome",
         "link": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
         "source": "DeepMind Blog"
+      }
+    ],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
+    "id": "embodied-ai",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Embodied AI",
+    "term_zh": "具身智能",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种使机器人具备人类感知和行动能力的AI技术。",
+    "explanation": "具身智能是让机器人像人一样看、听、动，像超市机器人一样盘点货物的AI技术。",
+    "sources": [
+      "arXiv CV",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.09396",
+      "https://www.qbitai.com/2026/09/486280.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "VANTAGE-Bench: Evaluating the Infrastructure AI Gap in Vision-Language Models",
+        "link": "https://arxiv.org/abs/2609.09396",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "具身机器人能搞定超市盘点吗？全球七万门店正在给出答案",
+        "link": "https://www.qbitai.com/2026/09/486280.html",
+        "source": "量子位"
       }
     ],
     "rank": 8,
@@ -416,25 +421,25 @@
     "status": "hot"
   },
   {
-    "id": "phyai-engine",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "PhyAI Engine",
-    "term_zh": "PhyAI引擎",
-    "abbreviation": "PhyAI",
-    "category": "AI技术",
-    "one_liner": "物理AI引擎，用于让AI理解物理世界，实现感知、预测、决策与实时控制。",
-    "explanation": "PhyAI引擎是让AI懂物理世界的工具，能感知、预测、决策并控制。",
+    "id": "wam",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "WAM",
+    "term_zh": "世界动作模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "WAM是一种让机器人通过学习模仿人类动作的模型，它能帮助机器人自我进化。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/09/485784.html"
+      "https://www.qbitai.com/2026/09/489037.html"
     ],
     "matched_articles": [
       {
-        "title": "深度智控获宁德时代、沙特阿美战投等重磅加码，加速打造物理AI时代算力与能源底座",
-        "link": "https://www.qbitai.com/2026/09/485784.html",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "link": "https://www.qbitai.com/2026/09/489037.html",
         "source": "量子位"
       }
     ],
@@ -442,25 +447,25 @@
     "status": "hot"
   },
   {
-    "id": "routing-harness",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Routing Harness",
-    "term_zh": "路由器",
-    "abbreviation": "RH",
-    "category": "AI技术",
-    "one_liner": "用于在智能体（Agent）运行过程中进行细粒度路由、模型切换和多模型协作的系统。",
-    "explanation": "路由器/RH：帮助智能体在不同模型间切换和协作的系统。",
+    "id": "ac-wm",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "AC-WM",
+    "term_zh": "条件动作世界模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "AC-WM是一种让机器人通过学习环境中的条件动作来不断进化的模型。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/09/485555.html"
+      "https://www.qbitai.com/2026/09/489037.html"
     ],
     "matched_articles": [
       {
-        "title": "王云鹤创业后交出首个模型",
-        "link": "https://www.qbitai.com/2026/09/485555.html",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "link": "https://www.qbitai.com/2026/09/489037.html",
         "source": "量子位"
       }
     ],
@@ -468,25 +473,25 @@
     "status": "hot"
   },
   {
-    "id": "integrated-direct-drive",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Integrated Direct Drive",
-    "term_zh": "一体化直驱",
-    "abbreviation": "IDD",
-    "category": "AI工程",
-    "one_liner": "直接驱动电机，无需减速器，降低损耗、噪音和寿命折损。",
-    "explanation": "一体化直驱电机，像直接用手指转风扇一样，省去了中间的减速器，更省电、更安静、更耐用。",
+    "id": "action-first",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Action-first",
+    "term_zh": "动作优先",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "动作优先：机器人先行动，再学习，像人类一样边做边学。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/09/485525.html"
+      "https://www.qbitai.com/2026/09/489037.html"
     ],
     "matched_articles": [
       {
-        "title": "3秒变身！会合体的机器人，卖到全球50国",
-        "link": "https://www.qbitai.com/2026/09/485525.html",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "link": "https://www.qbitai.com/2026/09/489037.html",
         "source": "量子位"
       }
     ],
@@ -494,50 +499,99 @@
     "status": "hot"
   },
   {
-    "id": "agent-native-model",
-    "appear_count": 1,
+    "id": "world-models",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Agent-Native Model",
-    "term_zh": "Agent原生模型",
-    "abbreviation": "ANM",
-    "category": "AI技术",
-    "one_liner": "专为智能体（Agent）设计的模型，提升Agent的数据利用效率和训练效果。",
-    "explanation": "Agent原生模型就像为智能体量身定做的软件，能帮它更快更好地学习和处理信息。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
+    "term_en": "World Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "世界模型：AI构建的模拟现实世界的模型，用于训练和测试智能体行为。",
+    "sources": [
+      "arXiv CV",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13257",
+      "https://arxiv.org/abs/2609.13194"
+    ],
+    "matched_articles": [
+      {
+        "title": "Sampling headroom is not selection gain: a compute-value audit of test-time scaling for video world models",
+        "link": "https://arxiv.org/abs/2609.13257",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Diagnosing Faults in Reinforcement Learning Simulators and World Models with Canonical Polynomial Invariants",
+        "link": "https://arxiv.org/abs/2609.13194",
+        "source": "arXiv LG"
+      }
+    ],
     "rank": 17,
     "status": "hot"
   },
   {
-    "id": "agent-execution-signal",
-    "appear_count": 1,
+    "id": "web-agents",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Agent Execution Signal",
-    "term_zh": "智能体执行信号",
-    "abbreviation": "AES",
-    "category": "AI技术",
-    "one_liner": "智能体在执行任务过程中产生的信号，用于构建面向Agent后训练的数据体系。",
-    "explanation": "智能体执行信号是AI在完成任务时发出的信号，帮助训练AI更聪明。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
+    "term_en": "Web Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Web Agents是互联网上的小助手，能根据你的行为自动完成任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13491",
+      "https://arxiv.org/abs/2609.13548"
+    ],
+    "matched_articles": [
+      {
+        "title": "Token Efficient Task Execution via Application Behavior Modeling for Web Agents",
+        "link": "https://arxiv.org/abs/2609.13491",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "AutoTailor: Automatic, User-Aligned Capability Selection and Adaptation for Web Agents",
+        "link": "https://arxiv.org/abs/2609.13548",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 18,
     "status": "hot"
   },
   {
-    "id": "body-agnostic-ai",
-    "appear_count": 1,
+    "id": "machine-learning-models",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Body-Agnostic AI",
-    "term_zh": "身体无关AI",
-    "abbreviation": "BAI",
+    "term_en": "Machine Learning Models",
+    "term_zh": "",
+    "abbreviation": "",
     "category": "AI概念",
-    "one_liner": "不依赖于特定物理形态的AI技术，使AI能够在不同物理形态上实现。",
-    "explanation": "Body-Agnostic AI就是不用特定身体就能工作的AI，能在各种形态上用。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
+    "one_liner": "",
+    "explanation": "机器学习模型：像人一样学习的计算机程序，用于预测和决策。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13192",
+      "https://arxiv.org/abs/2609.13514"
+    ],
+    "matched_articles": [
+      {
+        "title": "Evaluating LLM-Generated Rules for Heart Disease Prediction",
+        "link": "https://arxiv.org/abs/2609.13192",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "Operational Range Bounding in Spectroscopy: A Safety Cage Framework for Machine Learning Models",
+        "link": "https://arxiv.org/abs/2609.13514",
+        "source": "arXiv LG"
+      }
+    ],
     "rank": 19,
     "status": "hot"
   },
@@ -1920,84 +1974,6 @@
     "status": "hot"
   },
   {
-    "id": "wam",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "WAM",
-    "term_zh": "世界动作模型",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "WAM是一种让机器人模仿人类动作的模型，能帮助机器人自我进化。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/487752.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
-        "link": "https://www.qbitai.com/2026/09/487752.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 73,
-    "status": "hot"
-  },
-  {
-    "id": "ac-wm",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "AC-WM",
-    "term_zh": "条件动作世界模型",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "AC-WM是一种让机器人通过学习环境中的规则来自我进化的模型。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/487752.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
-        "link": "https://www.qbitai.com/2026/09/487752.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 74,
-    "status": "hot"
-  },
-  {
-    "id": "action-first",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Action-first",
-    "term_zh": "动作优先",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "动作优先就是让机器人先行动，再学习，像人一样边做边学。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/487752.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
-        "link": "https://www.qbitai.com/2026/09/487752.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 75,
-    "status": "hot"
-  },
-  {
     "id": "task-oriented-agents",
     "appear_count": 1,
     "days": 1,
@@ -2020,7 +1996,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 76,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2046,7 +2022,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 77,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2072,7 +2048,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 78,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2098,7 +2074,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 79,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2124,7 +2100,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 80,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2150,7 +2126,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 81,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2176,7 +2152,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 82,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2202,7 +2178,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 83,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2228,7 +2204,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 84,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2254,7 +2230,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 85,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2280,7 +2256,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 86,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2306,7 +2282,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 87,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2332,7 +2308,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 88,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2358,7 +2334,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 89,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2384,7 +2360,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 90,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2410,7 +2386,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 91,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2436,7 +2412,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 92,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2462,7 +2438,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 93,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2488,7 +2464,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 94,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2514,7 +2490,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 95,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2540,7 +2516,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 96,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2566,7 +2542,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 97,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2592,7 +2568,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 98,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2618,7 +2594,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 99,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2644,7 +2620,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 100,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -2670,7 +2646,605 @@
         "source": "arXiv LG"
       }
     ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "extremely-efficient-foundation-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Extremely Efficient Foundation Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这是一个超级高效的数学和智能搜索基础模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13356"
+    ],
+    "matched_articles": [
+      {
+        "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+        "link": "https://arxiv.org/abs/2609.13356",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "professional-patent-drafting-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Professional Patent-Drafting Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "专业专利撰写代理，是评估大型语言模型在撰写专利文件方面的能力。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13422"
+    ],
+    "matched_articles": [
+      {
+        "title": "Vibe Patenting: Evaluating LLM Judges for Professional Patent-Drafting Agents",
+        "link": "https://arxiv.org/abs/2609.13422",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "eliciting-compositional-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Eliciting Compositional Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Eliciting Compositional Reasoning：让大型语言模型像拼图一样理解时间序列数据。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13457"
+    ],
+    "matched_articles": [
+      {
+        "title": "TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models",
+        "link": "https://arxiv.org/abs/2609.13457",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "timeseries-large-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Timeseries Large Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "时间序列大型语言模型，能理解并生成时间序列数据的文本。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13457"
+    ],
+    "matched_articles": [
+      {
+        "title": "TimeThink: Eliciting Compositional Reasoning in Timeseries Large Language Models",
+        "link": "https://arxiv.org/abs/2609.13457",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "long-horizon-clinical-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Long-Horizon Clinical Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "长周期临床智能体：像医生一样，能长期观察病人，不断学习，为病人提供个性化治疗建议。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13543"
+    ],
+    "matched_articles": [
+      {
+        "title": "Asclepius: An Adaptive Harness for Long-Horizon Clinical Agents",
+        "link": "https://arxiv.org/abs/2609.13543",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "carbon-aware-routing",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Carbon-Aware Routing",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "碳感知路由是一种智能路由技术，能根据碳排放量选择路径，减少边缘云计算系统中的碳足迹。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13559"
+    ],
+    "matched_articles": [
+      {
+        "title": "Carbon-Aware Routing for Function Calling in Edge-Cloud LLM Systems",
+        "link": "https://arxiv.org/abs/2609.13559",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "adaptive-knowledge-distillation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Adaptive Knowledge Distillation",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Adaptive Knowledge Distillation：一种智能的“知识传授”方法，让大模型在无线网络中高效传输。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13580"
+    ],
+    "matched_articles": [
+      {
+        "title": "FLoKD: Adaptive Knowledge Distillation for Federated Low-Rank LLM over Wireless Networks",
+        "link": "https://arxiv.org/abs/2609.13580",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "wireless-networks",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Wireless Networks",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "无线网络：通过无线电波连接设备，实现数据传输的网络。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13580"
+    ],
+    "matched_articles": [
+      {
+        "title": "FLoKD: Adaptive Knowledge Distillation for Federated Low-Rank LLM over Wireless Networks",
+        "link": "https://arxiv.org/abs/2609.13580",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "deployed-ai-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Deployed AI Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "部署的AI代理，就是已经上线并开始工作的智能机器人。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13637"
+    ],
+    "matched_articles": [
+      {
+        "title": "Identity Is More Than Recall: A Benchmark for Persistent Identity in Deployed AI Agents",
+        "link": "https://arxiv.org/abs/2609.13637",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "long-horizon-ai-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Long-Horizon AI Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "长周期AI智能体：能长期学习和适应的AI，像人一样能从经验中恢复和成长。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13672"
+    ],
+    "matched_articles": [
+      {
+        "title": "Recoverability as a System Primitive for Long-Horizon AI Agents",
+        "link": "https://arxiv.org/abs/2609.13672",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "fine-tuning-instruct-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Fine-Tuning Instruct Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "微调指令模型：像给模型穿新衣服，让它更适应特定任务。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13680"
+    ],
+    "matched_articles": [
+      {
+        "title": "Drift-Constrained Optimization: Only Direction Matters in Fine-Tuning Instruct Models",
+        "link": "https://arxiv.org/abs/2609.13680",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "eeg-foundation-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "EEG Foundation Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "EEG基础模型：利用脑电波数据训练的AI模型，用于分析大脑活动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13717"
+    ],
+    "matched_articles": [
+      {
+        "title": "MANAS-2: Constrained Reconstruction for EEG Foundation Models",
+        "link": "https://arxiv.org/abs/2609.13717",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 110,
+    "status": "hot"
+  },
+  {
+    "id": "systematic-study-across-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Systematic Study Across Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "解读：这个术语指的是对多语言语音识别模型在不同规模和微调方面的系统研究。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13151"
+    ],
+    "matched_articles": [
+      {
+        "title": "Token Merging for Multilingual Speech Recognition: A Systematic Study Across Model Scale and Fine-Tuning",
+        "link": "https://arxiv.org/abs/2609.13151",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 111,
+    "status": "hot"
+  },
+  {
+    "id": "document-level-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Document-Level Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "文档级推理是AI理解整篇文档意思的能力，就像人看懂一整篇文章一样。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13158"
+    ],
+    "matched_articles": [
+      {
+        "title": "TestHallVQA: Exploring LVLMs' Document-Level Reasoning under Redundant Contexts from Scientific Exams",
+        "link": "https://arxiv.org/abs/2609.13158",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 112,
+    "status": "hot"
+  },
+  {
+    "id": "clinical-temporal-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Clinical Temporal Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "临床时间推理是AI在医疗领域根据时间顺序分析数据，判断病情变化的技术。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13454"
+    ],
+    "matched_articles": [
+      {
+        "title": "Hindsight Bias in Clinical Temporal Reasoning: How Future Data Exposure Affects Large Language Model Judgment",
+        "link": "https://arxiv.org/abs/2609.13454",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 113,
+    "status": "hot"
+  },
+  {
+    "id": "affects-large-language-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Affects Large Language Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "AI模型受未来数据影响，判断会偏差。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13454"
+    ],
+    "matched_articles": [
+      {
+        "title": "Hindsight Bias in Clinical Temporal Reasoning: How Future Data Exposure Affects Large Language Model Judgment",
+        "link": "https://arxiv.org/abs/2609.13454",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 114,
+    "status": "hot"
+  },
+  {
+    "id": "while-large-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "While Large Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这个术语指的是一种大型的语言模型，用于评估语言模型的效果。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13520"
+    ],
+    "matched_articles": [
+      {
+        "title": "From Token Probabilities to Semantic Constraints: Towards Declarative Probabilistic Evaluation of Language Models",
+        "link": "https://arxiv.org/abs/2609.13520",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 115,
+    "status": "hot"
+  },
+  {
+    "id": "specialist-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Specialist Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "专家模型：针对特定领域训练的AI模型，能更精准地处理特定任务。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13556"
+    ],
+    "matched_articles": [
+      {
+        "title": "Domain-Specific Jargon in Large Language Models: A Comparative Analysis between General-Purpose and Specialist Models",
+        "link": "https://arxiv.org/abs/2609.13556",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 116,
+    "status": "hot"
+  },
+  {
+    "id": "whereas-large-language-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Whereas Large Language Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这个术语指的是一种大型语言模型，用于从医院出院总结中提取关键信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13581"
+    ],
+    "matched_articles": [
+      {
+        "title": "Toward Complete Hospital Discharge Summarization with Abstract Meaning Representation",
+        "link": "https://arxiv.org/abs/2609.13581",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 117,
+    "status": "hot"
+  },
+  {
+    "id": "early-safety-signal-distillation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Early Safety Signal Distillation",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "早期安全信号提炼，就像在电影上映前，提前发现可能的安全问题。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13737"
+    ],
+    "matched_articles": [
+      {
+        "title": "ForeSight: Enhancing Risk Monitoring via Early Safety Signal Distillation",
+        "link": "https://arxiv.org/abs/2609.13737",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 118,
+    "status": "hot"
+  },
+  {
+    "id": "symbolic-language-enhanced-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Symbolic-Language-Enhanced Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这是一种结合符号语言和关联检索的推理方法，用于检测零样本有害模因。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13794"
+    ],
+    "matched_articles": [
+      {
+        "title": "SyRHM: Symbolic-Language-Enhanced Reasoning with Associative Retrieval for Zero-shot Harmful Meme Detection",
+        "link": "https://arxiv.org/abs/2609.13794",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 119,
+    "status": "hot"
+  },
+  {
+    "id": "associative-retrieval",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Associative Retrieval",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "关联检索：通过关键词关联找到相关内容，用于识别有害表情包。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13794"
+    ],
+    "matched_articles": [
+      {
+        "title": "SyRHM: Symbolic-Language-Enhanced Reasoning with Associative Retrieval for Zero-shot Harmful Meme Detection",
+        "link": "https://arxiv.org/abs/2609.13794",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 120,
+    "status": "hot"
+  },
+  {
+    "id": "dialectical-agentic-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Dialectical Agentic Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "DARE是一种AI方法，用于检查结构化知识中的事实是否正确。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.13808"
+    ],
+    "matched_articles": [
+      {
+        "title": "DARE: Dialectical Agentic Reasoning for Structured Knowledge Fact Checking",
+        "link": "https://arxiv.org/abs/2609.13808",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 121,
     "status": "hot"
   }
 ]
