@@ -1,37 +1,40 @@
 [
   {
     "id": "vision-language-models",
-    "appear_count": 48,
-    "days": 10,
+    "appear_count": 53,
+    "days": 11,
     "term_en": "Vision-Language Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "视觉-语言模型：能看图说话的AI，能识别动作、检测伪造、理解场景。",
+    "explanation": "视觉-语言模型：能看图说话的AI，能理解图片和文字的关系。",
     "sources": [
+      "arXiv AI",
+      "arXiv CL",
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.19354",
-      "https://arxiv.org/abs/2609.19693",
-      "https://arxiv.org/abs/2609.19812",
-      "https://arxiv.org/abs/2609.19815"
+      "https://arxiv.org/abs/2609.21755",
+      "https://arxiv.org/abs/2609.22162",
+      "https://arxiv.org/abs/2609.22293",
+      "https://arxiv.org/abs/2609.22302",
+      "https://arxiv.org/abs/2609.22588"
     ],
     "matched_articles": [
       {
-        "title": "Can Vision-Language Models Judge Olympic Diving? From Reasoning to Scores in Zero-Shot Action Quality Assessment",
-        "link": "https://arxiv.org/abs/2609.19354",
-        "source": "arXiv CV"
+        "title": "ECG Mirage: Revealing and Mitigating the Underutilisation of ECGs in Vision-Language Models for Clinical Prediction",
+        "link": "https://arxiv.org/abs/2609.21755",
+        "source": "arXiv AI"
       },
       {
-        "title": "IMFD: End-to-end Multi-Face Forgery Detection through Instruction-based Large Vision-Language Models",
-        "link": "https://arxiv.org/abs/2609.19693",
-        "source": "arXiv CV"
+        "title": "Beyond Raw Context Transfer: Representation-based Federated Retrieval-Augmented Generation",
+        "link": "https://arxiv.org/abs/2609.22162",
+        "source": "arXiv CL"
       },
       {
-        "title": "Absence is Presence: Understanding Visual Scene Negative Events Under Safety Cognitive Constraint",
-        "link": "https://arxiv.org/abs/2609.19812",
+        "title": "Validating, Not Sampling: Region-Level Robustness of Vision-Language and Vision-Language-Action Models",
+        "link": "https://arxiv.org/abs/2609.22293",
         "source": "arXiv CV"
       }
     ],
@@ -40,40 +43,39 @@
   },
   {
     "id": "llm-agents",
-    "appear_count": 26,
-    "days": 6,
+    "appear_count": 29,
+    "days": 7,
     "term_en": "LLM Agents",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "LLM Agents是能进行对话的AI，能搜索网页、选择数据，还能对抗幻觉。",
+    "explanation": "LLM Agents是能处理复杂任务的AI模型，通过优化和压缩提高效率。",
     "sources": [
       "arXiv AI",
+      "arXiv CL",
       "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.19244",
-      "https://arxiv.org/abs/2609.19425",
-      "https://arxiv.org/abs/2609.19754",
-      "https://arxiv.org/abs/2609.19830",
-      "https://arxiv.org/abs/2609.19801"
+      "https://arxiv.org/abs/2609.21267",
+      "https://arxiv.org/abs/2609.22090",
+      "https://arxiv.org/abs/2609.22158"
     ],
     "matched_articles": [
       {
-        "title": "Characterizing Web Search by Conversational LLM Agents: From Search Decisions and Strategies to Results and Responses",
-        "link": "https://arxiv.org/abs/2609.19244",
+        "title": "Efficient Benchmarking in Production: A Study of an Evolving LLM Agent",
+        "link": "https://arxiv.org/abs/2609.21267",
         "source": "arXiv AI"
       },
       {
-        "title": "Closed-World Resolution Against Tool Hallucination in LLM Agents",
-        "link": "https://arxiv.org/abs/2609.19425",
-        "source": "arXiv AI"
+        "title": "Recognition, Simulation, and Refusal: A Contamination-Aware Study of Classic Psychological Effects in LLM Agents",
+        "link": "https://arxiv.org/abs/2609.22090",
+        "source": "arXiv CL"
       },
       {
-        "title": "AutoData: Agentic Search for Pre-training Data Selection",
-        "link": "https://arxiv.org/abs/2609.19754",
-        "source": "arXiv AI"
+        "title": "StepKV: Step-Aware KV Cache Compression for LLM Agents",
+        "link": "https://arxiv.org/abs/2609.22158",
+        "source": "arXiv LG"
       }
     ],
     "rank": 2,
@@ -212,44 +214,152 @@
   },
   {
     "id": "multimodal-large-language-models",
-    "appear_count": 16,
-    "days": 5,
+    "appear_count": 19,
+    "days": 6,
     "term_en": "Multimodal Large Language Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "多模态大型语言模型：能理解多种信息（如文字、图片、视频）的强大AI模型。",
+    "explanation": "多模态大型语言模型，能理解多种信息（如图文），用于决策支持、设计评估等。",
     "sources": [
       "arXiv AI",
-      "arXiv CV",
-      "arXiv LG"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.16722",
-      "https://arxiv.org/abs/2609.16795",
-      "https://arxiv.org/abs/2609.16012",
-      "https://arxiv.org/abs/2609.16601",
-      "https://arxiv.org/abs/2609.16057"
+      "https://arxiv.org/abs/2609.21390",
+      "https://arxiv.org/abs/2609.21493",
+      "https://arxiv.org/abs/2609.22206"
     ],
     "matched_articles": [
       {
-        "title": "VideoMM: Adaptive Macro-Micro Inference for Efficient Video MLLMs",
-        "link": "https://arxiv.org/abs/2609.16722",
+        "title": "Offline Multimodal Large Language Models for Decision Support in Air Operations",
+        "link": "https://arxiv.org/abs/2609.21390",
         "source": "arXiv AI"
       },
       {
-        "title": "Layers, Sinks, and Scaling: Adaptive Evidence Selection for Multimodal Large Language Models",
-        "link": "https://arxiv.org/abs/2609.16795",
+        "title": "PolyBridgeBench: Benchmarking Multimodal LLMs for Physics-Grounded Bridge Design",
+        "link": "https://arxiv.org/abs/2609.21493",
         "source": "arXiv AI"
       },
       {
-        "title": "MechReason: Benchmarking Multi-Image Multi-Hop Reasoning in Mechanical Engineering",
-        "link": "https://arxiv.org/abs/2609.16012",
-        "source": "arXiv CV"
+        "title": "Dissecting Training-Free Uncertainty Estimation in Multimodal Large Language Models",
+        "link": "https://arxiv.org/abs/2609.22206",
+        "source": "arXiv CL"
       }
     ],
     "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "vision-transformer",
+    "appear_count": 10,
+    "days": 5,
+    "term_en": "Vision Transformer",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Vision Transformer是一种AI模型，能像人一样看图，用于识别图像中的信息。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21061",
+      "https://arxiv.org/abs/2609.22271",
+      "https://arxiv.org/abs/2609.22506"
+    ],
+    "matched_articles": [
+      {
+        "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+        "link": "https://arxiv.org/abs/2609.21061",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Enabling Vision and Cross-Modal Learning for Multimodal Stroke Recurrence Prediction: An Interpretable Two-Step Framework",
+        "link": "https://arxiv.org/abs/2609.22271",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Rethinking Vision Architectures with Gated Linear Attention and KAN",
+        "link": "https://arxiv.org/abs/2609.22506",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 7,
+    "status": "hot"
+  },
+  {
+    "id": "graph-neural-network",
+    "appear_count": 8,
+    "days": 2,
+    "term_en": "Graph Neural Network",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "图神经网络：像拼图一样，通过图结构学习数据关系，用于电路建模和异常检测。",
+    "sources": [
+      "arXiv AI",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21519",
+      "https://arxiv.org/abs/2609.22165",
+      "https://arxiv.org/abs/2609.22166",
+      "https://arxiv.org/abs/2609.22167"
+    ],
+    "matched_articles": [
+      {
+        "title": "Learning-to-Optimize as the Missing Architectural Layer of AI-Native Networks",
+        "link": "https://arxiv.org/abs/2609.21519",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "TARGet: Topology-Aware Fusion-based Radio Frequency Circuit Functional Modeling using Graph Neural Networks",
+        "link": "https://arxiv.org/abs/2609.22165",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "Clustering-Based Collective Anomaly Detection in IoT Systems: A Graph Neural Network Approach",
+        "link": "https://arxiv.org/abs/2609.22166",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 8,
+    "status": "hot"
+  },
+  {
+    "id": "graph-neural-networks",
+    "appear_count": 8,
+    "days": 3,
+    "term_en": "Graph Neural Networks",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "图神经网络是一种能从图中学习信息的AI技术，用于分析电路和化学反应等复杂结构。",
+    "sources": [
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22165",
+      "https://arxiv.org/abs/2609.22167"
+    ],
+    "matched_articles": [
+      {
+        "title": "TARGet: Topology-Aware Fusion-based Radio Frequency Circuit Functional Modeling using Graph Neural Networks",
+        "link": "https://arxiv.org/abs/2609.22165",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "Role-Aware Morgan Fingerprints for Reaction Yield Prediction",
+        "link": "https://arxiv.org/abs/2609.22167",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -282,33 +392,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 7,
-    "status": "hot"
-  },
-  {
-    "id": "vision-transformer",
-    "appear_count": 7,
-    "days": 4,
-    "term_en": "Vision Transformer",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Vision Transformer是一种AI技术，能像人眼一样识别图片中的物体，用于检测农作物病虫害。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.12169"
-    ],
-    "matched_articles": [
-      {
-        "title": "When Ground-Truth Fidelity Matters: An Orchestrated UAS Framework for Wheat Streak Mosaic Virus Detection Using Vision Transformers and Machine Learning",
-        "link": "https://arxiv.org/abs/2609.12169",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 8,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -350,7 +434,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 9,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -391,40 +475,49 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 10,
+    "rank": 12,
     "status": "hot"
   },
   {
-    "id": "graph-neural-networks",
-    "appear_count": 6,
-    "days": 2,
-    "term_en": "Graph Neural Networks",
-    "term_zh": "",
+    "id": "flash",
+    "appear_count": 7,
+    "days": 1,
+    "term_en": "Flash",
+    "term_zh": "详见技术博客",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "图神经网络：像人一样，通过关系推理信息，用于知识图谱和比特币地址聚类等。",
+    "explanation": "Flash是一种技术，用于加速大型语言模型处理长文本，让AI生成文本更快速、准确。",
     "sources": [
+      "arXiv AI",
       "arXiv CL",
-      "arXiv LG"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2609.02056",
-      "https://arxiv.org/abs/2609.01942"
+      "https://arxiv.org/abs/2609.20971",
+      "https://arxiv.org/abs/2609.21293",
+      "https://arxiv.org/abs/2609.22127",
+      "https://arxiv.org/abs/2609.22188",
+      "https://www.qbitai.com/2026/09/493629.html"
     ],
     "matched_articles": [
       {
-        "title": "HyGRAIL: Cost-Aware and Evidence-Grounded Scientific Hypothesis Discovery over Knowledge Graphs",
-        "link": "https://arxiv.org/abs/2609.02056",
-        "source": "arXiv CL"
+        "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+        "link": "https://arxiv.org/abs/2609.20971",
+        "source": "arXiv AI"
       },
       {
-        "title": "Refining Heuristic-Based Bitcoin Address Clustering with Graph Neural Networks",
-        "link": "https://arxiv.org/abs/2609.01942",
-        "source": "arXiv LG"
+        "title": "GameASG-Bench: Benchmarking Autonomous Software Generation for Game Development",
+        "link": "https://arxiv.org/abs/2609.21293",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Beyond Accuracy and Surface Fluency: Risk-Sensitive Evaluation of LLMs for Legal Clause Generation",
+        "link": "https://arxiv.org/abs/2609.22127",
+        "source": "arXiv CL"
       }
     ],
-    "rank": 11,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -456,7 +549,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 12,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -488,7 +581,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 13,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -521,7 +614,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 14,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -561,7 +654,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 15,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -587,7 +680,33 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 16,
+    "rank": 18,
+    "status": "hot"
+  },
+  {
+    "id": "skyproduction",
+    "appear_count": 5,
+    "days": 3,
+    "term_en": "SkyProduction",
+    "term_zh": "天工工作台",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "天工工作台是一个提供超值视频剪辑服务的平台，现在有优惠活动。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/09/493268.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "SkyProduction天工工作台中秋国庆特惠第二波：Seedance 2.5 720P 低至 0.27 元/秒，全网地板价！",
+        "link": "https://www.qbitai.com/2026/09/493268.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -625,48 +744,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
-    "id": "graph-neural-network",
-    "appear_count": 4,
-    "days": 1,
-    "term_en": "Graph Neural Network",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "图神经网络：像玩拼图一样，用图结构处理复杂关系数据。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.20738",
-      "https://arxiv.org/abs/2608.20376",
-      "https://arxiv.org/abs/2608.20758",
-      "https://arxiv.org/abs/2608.20980"
-    ],
-    "matched_articles": [
-      {
-        "title": "Continuous-Time Quantum Walks based Graph Neural Network",
-        "link": "https://arxiv.org/abs/2608.20738",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "TH-GNN: Heterogeneous Temporal Graph Neural Networks for LLM-Agent Shilling Attack Detection",
-        "link": "https://arxiv.org/abs/2608.20376",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Hidden Axis of Uncertainty: Latent-Posterior Alignment in Graph Neural Networks with Bayesian Output Layers",
-        "link": "https://arxiv.org/abs/2608.20758",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 18,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -705,33 +783,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
-    "status": "hot"
-  },
-  {
-    "id": "skyproduction",
-    "appear_count": 4,
-    "days": 2,
-    "term_en": "SkyProduction",
-    "term_zh": "天工工作台",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "天工工作台是一个可以制作和发布内容的平台，联合火山引擎给用户送福利。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/09/491147.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "首购积分加赠70%：SkyProduction天工工作台联合火山引擎推出中秋国庆三重福利",
-        "link": "https://www.qbitai.com/2026/09/491147.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 20,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -763,7 +815,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -802,7 +854,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 22,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -828,7 +880,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 23,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -867,7 +919,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -893,7 +945,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 25,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -919,7 +971,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -957,7 +1009,40 @@
         "source": "量子位"
       }
     ],
-    "rank": 27,
+    "rank": 28,
+    "status": "hot"
+  },
+  {
+    "id": "state-space-models",
+    "appear_count": 3,
+    "days": 2,
+    "term_en": "State Space Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "状态空间模型：一种分析动态系统变化的数学工具，用于预测和推荐。",
+    "sources": [
+      "arXiv AI",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21548",
+      "https://arxiv.org/abs/2609.22160"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dual-Interest Sequential Product Recommendation With Multi-Granular SSM",
+        "link": "https://arxiv.org/abs/2609.21548",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Uncertainty and Business-Aware Remaining Useful Life Estimation for Semiconductor Manufacturing",
+        "link": "https://arxiv.org/abs/2609.22160",
+        "source": "arXiv LG"
+      }
+    ],
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -997,7 +1082,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 28,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1035,7 +1120,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 29,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1074,7 +1159,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 30,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1113,7 +1198,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 31,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1152,7 +1237,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 32,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1190,7 +1275,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 33,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1216,7 +1301,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 34,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1249,7 +1334,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 35,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1275,7 +1360,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 36,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1301,7 +1386,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 37,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1327,7 +1412,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 38,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1365,7 +1450,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 39,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1398,7 +1483,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 40,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1431,7 +1516,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 41,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1463,7 +1548,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 42,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1495,7 +1580,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 43,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1521,7 +1606,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 44,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1547,7 +1632,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 45,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1573,7 +1658,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 46,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1599,7 +1684,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 47,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1625,7 +1710,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 48,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1651,7 +1736,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 49,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1677,7 +1762,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 50,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1710,7 +1795,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 51,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1743,7 +1828,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 52,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1769,7 +1854,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 53,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1801,7 +1886,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1833,7 +1918,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 55,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1865,7 +1950,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 56,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1897,7 +1982,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 57,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1929,7 +2014,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 58,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1955,7 +2040,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 59,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1988,7 +2073,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 60,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2020,7 +2105,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 61,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2046,7 +2131,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 62,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2072,7 +2157,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 63,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2098,7 +2183,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 64,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2124,7 +2209,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 65,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2150,7 +2235,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 66,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2182,7 +2267,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 67,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2214,7 +2299,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 68,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2246,7 +2331,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 69,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2279,7 +2364,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 70,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2312,7 +2397,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 71,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2344,7 +2429,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2376,7 +2461,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 73,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2408,7 +2493,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 74,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2434,7 +2519,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 75,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2467,7 +2552,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 76,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2500,7 +2585,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 77,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2532,7 +2617,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 78,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2558,7 +2643,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 79,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2584,7 +2669,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 80,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2610,7 +2695,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 81,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2636,7 +2721,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 82,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2662,7 +2747,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 83,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2694,7 +2779,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 84,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2726,7 +2811,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 85,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2759,7 +2844,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 86,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2792,7 +2877,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 87,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2825,7 +2910,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 88,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2857,7 +2942,33 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 89,
+    "rank": 91,
+    "status": "hot"
+  },
+  {
+    "id": "large-reasoning-models",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Large Reasoning Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "大型推理模型：一种能像人一样思考、推理的超级智能模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21677"
+    ],
+    "matched_articles": [
+      {
+        "title": "GUARD: Natural Forgetting in Large Reasoning Models via Guided Answer-Reasoning Distillation",
+        "link": "https://arxiv.org/abs/2609.21677",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2890,7 +3001,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 90,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2923,111 +3034,59 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 91,
-    "status": "hot"
-  },
-  {
-    "id": "originflow",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "OriginFlow",
-    "term_zh": "渊澈太初",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "OriginFlow（渊澈太初）是一种将人类肌肉反应转化为数字货币的技术。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/477094.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "00后清华博士生创业“神经接口”：把人类肌肉反应炼成Token",
-        "link": "https://www.qbitai.com/2026/08/477094.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 92,
-    "status": "hot"
-  },
-  {
-    "id": "deepsoma",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "DeepSoma",
-    "term_zh": "知跃灵物",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "DeepSoma（知跃灵物）是一种AI技术，能像上传果蝇大脑一样，将神经元信息直接传输到不同平台。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/477090.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Eon用LIF“上传”果蝇脑，中国团队直接上精细神经元和跨身体平台",
-        "link": "https://www.qbitai.com/2026/08/477090.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 93,
-    "status": "hot"
-  },
-  {
-    "id": "mars-lab",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "MaRS Lab",
-    "term_zh": "港大机电与机器人系统实验室",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "港大机电与机器人系统实验室，研究机器人技术，让机器人代替人去危险地方工作。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/08/476965.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "当机器人大脑飞上天！替人奔赴危险作业现场，对话硅羽科技",
-        "link": "https://www.qbitai.com/2026/08/476965.html",
-        "source": "量子位"
-      }
-    ],
     "rank": 94,
     "status": "hot"
   },
   {
-    "id": "current-robotics",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Current Robotics",
-    "term_zh": "元流智能",
+    "id": "rbs-attention",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "RBS-Attention",
+    "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "元流智能是让机器人像人一样思考，让它们更聪明地工作。",
+    "explanation": "RBS-Attention是一种让大型语言模型处理长文本时更高效的技术，就像给模型装了个快速查找工具。",
     "sources": [
-      "量子位"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/08/476930.html"
+      "https://arxiv.org/abs/2609.20971"
     ],
     "matched_articles": [
       {
-        "title": "从模型到生产力：星海图与产业朋友圈共探具身智能的下一站",
-        "link": "https://www.qbitai.com/2026/08/476930.html",
-        "source": "量子位"
+        "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+        "link": "https://arxiv.org/abs/2609.20971",
+        "source": "arXiv AI"
       }
     ],
     "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "attention-aware-routing",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Attention-Aware Routing",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "AI路由新方法，结合关注点，让信息传递更精准。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.20974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+        "link": "https://arxiv.org/abs/2609.20974",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -3053,7 +3112,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 96,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -3079,7 +3138,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -3105,7 +3164,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 98,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -3131,7 +3190,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 99,
+    "rank": 100,
     "status": "hot"
   },
   {
@@ -3157,7 +3216,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 100,
+    "rank": 101,
     "status": "hot"
   },
   {
@@ -3183,7 +3242,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 102,
     "status": "hot"
   },
   {
@@ -3209,7 +3268,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 103,
     "status": "hot"
   },
   {
@@ -3235,7 +3294,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 104,
     "status": "hot"
   },
   {
@@ -3261,7 +3320,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 105,
     "status": "hot"
   },
   {
@@ -3287,7 +3346,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 106,
     "status": "hot"
   },
   {
@@ -3313,7 +3372,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 107,
     "status": "hot"
   },
   {
@@ -3339,7 +3398,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 108,
     "status": "hot"
   },
   {
@@ -3365,7 +3424,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 108,
+    "rank": 109,
     "status": "hot"
   },
   {
@@ -3391,7 +3450,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 109,
+    "rank": 110,
     "status": "hot"
   },
   {
@@ -3417,7 +3476,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 110,
+    "rank": 111,
     "status": "hot"
   },
   {
@@ -3443,7 +3502,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 111,
+    "rank": 112,
     "status": "hot"
   },
   {
@@ -3469,7 +3528,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 112,
+    "rank": 113,
     "status": "hot"
   },
   {
@@ -3495,7 +3554,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 113,
+    "rank": 114,
     "status": "hot"
   },
   {
@@ -3521,7 +3580,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 114,
+    "rank": 115,
     "status": "hot"
   },
   {
@@ -3547,7 +3606,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 115,
+    "rank": 116,
     "status": "hot"
   },
   {
@@ -3573,7 +3632,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 116,
+    "rank": 117,
     "status": "hot"
   },
   {
@@ -3599,7 +3658,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 117,
+    "rank": 118,
     "status": "hot"
   },
   {
@@ -3625,7 +3684,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 118,
+    "rank": 119,
     "status": "hot"
   },
   {
@@ -3651,7 +3710,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 119,
+    "rank": 120,
     "status": "hot"
   },
   {
@@ -3677,7 +3736,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 120,
+    "rank": 121,
     "status": "hot"
   },
   {
@@ -3703,7 +3762,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 121,
+    "rank": 122,
     "status": "hot"
   },
   {
@@ -3729,7 +3788,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 122,
+    "rank": 123,
     "status": "hot"
   },
   {
@@ -3755,7 +3814,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 123,
+    "rank": 124,
     "status": "hot"
   },
   {
@@ -3781,7 +3840,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 124,
+    "rank": 125,
     "status": "hot"
   },
   {
@@ -3807,7 +3866,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 125,
+    "rank": 126,
     "status": "hot"
   },
   {
@@ -3833,7 +3892,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 126,
+    "rank": 127,
     "status": "hot"
   },
   {
@@ -3859,7 +3918,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 127,
+    "rank": 128,
     "status": "hot"
   },
   {
@@ -3885,7 +3944,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 128,
+    "rank": 129,
     "status": "hot"
   },
   {
@@ -3911,7 +3970,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 129,
+    "rank": 130,
     "status": "hot"
   },
   {
@@ -3937,7 +3996,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 130,
+    "rank": 131,
     "status": "hot"
   },
   {
@@ -3960,32 +4019,6 @@
       {
         "title": "Belief Cascades Drive Persuasion in LLM Agent Networks",
         "link": "https://arxiv.org/abs/2608.25152",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 131,
-    "status": "hot"
-  },
-  {
-    "id": "state-space-models",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "State Space Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "状态空间模型：一种用于检测假新闻的数学模型，通过分析新闻内容的变化趋势来识别虚假信息。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2608.25190"
-    ],
-    "matched_articles": [
-      {
-        "title": "BanglaMamba: Exploring State Space Models for Bangla Fake News Detection",
-        "link": "https://arxiv.org/abs/2608.25190",
         "source": "arXiv CL"
       }
     ],
@@ -11479,32 +11512,6 @@
     "status": "hot"
   },
   {
-    "id": "large-reasoning-models",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Large Reasoning Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "大型推理模型：能处理大量数据的智能模型，能高效进行复杂推理。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.19671"
-    ],
-    "matched_articles": [
-      {
-        "title": "When2Think: Learning Difficulty-Aware Length Control for Efficient Hybrid Reasoning Models",
-        "link": "https://arxiv.org/abs/2609.19671",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 424,
-    "status": "hot"
-  },
-  {
     "id": "self-evolving-multi-agent",
     "appear_count": 1,
     "days": 1,
@@ -11527,7 +11534,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 425,
+    "rank": 424,
     "status": "hot"
   },
   {
@@ -11553,7 +11560,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 426,
+    "rank": 425,
     "status": "hot"
   },
   {
@@ -11579,7 +11586,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 427,
+    "rank": 426,
     "status": "hot"
   },
   {
@@ -11605,7 +11612,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 428,
+    "rank": 427,
     "status": "hot"
   },
   {
@@ -11631,7 +11638,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 429,
+    "rank": 428,
     "status": "hot"
   },
   {
@@ -11657,7 +11664,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 430,
+    "rank": 429,
     "status": "hot"
   },
   {
@@ -11673,7 +11680,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 431,
+    "rank": 430,
     "status": "hot"
   },
   {
@@ -11689,7 +11696,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 432,
+    "rank": 431,
     "status": "hot"
   },
   {
@@ -11705,7 +11712,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 433,
+    "rank": 432,
     "status": "hot"
   },
   {
@@ -11721,7 +11728,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 434,
+    "rank": 433,
     "status": "hot"
   },
   {
@@ -11737,7 +11744,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 435,
+    "rank": 434,
     "status": "hot"
   },
   {
@@ -11763,7 +11770,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 436,
+    "rank": 435,
     "status": "hot"
   },
   {
@@ -11789,7 +11796,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 437,
+    "rank": 436,
     "status": "hot"
   },
   {
@@ -11815,7 +11822,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 438,
+    "rank": 437,
     "status": "hot"
   },
   {
@@ -11841,7 +11848,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 439,
+    "rank": 438,
     "status": "hot"
   },
   {
@@ -11867,7 +11874,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 440,
+    "rank": 439,
     "status": "hot"
   },
   {
@@ -11893,7 +11900,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 441,
+    "rank": 440,
     "status": "hot"
   },
   {
@@ -11919,7 +11926,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 442,
+    "rank": 441,
     "status": "hot"
   },
   {
@@ -11945,59 +11952,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 443,
-    "status": "hot"
-  },
-  {
-    "id": "rbs-attention",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "RBS-Attention",
-    "term_zh": "RBS-Attention",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种基于半径限制的稀疏预填充方法，用于长上下文大语言模型。",
-    "explanation": "RBS-Attention是一种让大语言模型处理长文本时更高效的方法，通过限制关注范围来减少计算量。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.20971"
-    ],
-    "matched_articles": [
-      {
-        "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-        "link": "https://arxiv.org/abs/2609.20971",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 444,
-    "status": "hot"
-  },
-  {
-    "id": "attention-aware-routing",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Attention-Aware Routing",
-    "term_zh": "注意力感知路由",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种在混合专家语言模型中结合路由和注意力的方法。",
-    "explanation": "注意力感知路由：像导航一样，模型在处理信息时，会优先关注重要部分。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.20974"
-    ],
-    "matched_articles": [
-      {
-        "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-        "link": "https://arxiv.org/abs/2609.20974",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 445,
+    "rank": 442,
     "status": "hot"
   },
   {
@@ -12023,7 +11978,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 446,
+    "rank": 443,
     "status": "hot"
   },
   {
@@ -12049,7 +12004,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 447,
+    "rank": 444,
     "status": "hot"
   },
   {
@@ -12075,7 +12030,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 448,
+    "rank": 445,
     "status": "hot"
   },
   {
@@ -12101,7 +12056,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 449,
+    "rank": 446,
     "status": "hot"
   },
   {
@@ -12127,7 +12082,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 450,
+    "rank": 447,
     "status": "hot"
   },
   {
@@ -12153,7 +12108,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 451,
+    "rank": 448,
     "status": "hot"
   },
   {
@@ -12179,7 +12134,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 452,
+    "rank": 449,
     "status": "hot"
   },
   {
@@ -12205,7 +12160,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 453,
+    "rank": 450,
     "status": "hot"
   },
   {
@@ -12231,7 +12186,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 454,
+    "rank": 451,
     "status": "hot"
   },
   {
@@ -12257,7 +12212,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 455,
+    "rank": 452,
     "status": "hot"
   },
   {
@@ -12283,7 +12238,475 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 453,
+    "status": "hot"
+  },
+  {
+    "id": "aicc",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "AICC",
+    "term_zh": "人工智能计算大会",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "AICC是人工智能领域的盛会，聚焦AI计算技术，探讨如何突破算力瓶颈。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/09/493363.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI算力之争不靠堆卡！浪潮信息捅破智算「能力天花板」，还瓦解了「产能焦虑」",
+        "link": "https://www.qbitai.com/2026/09/493363.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 454,
+    "status": "hot"
+  },
+  {
+    "id": "coupling-routing",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Coupling Routing",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "耦合路由是一种智能路由技术，结合了注意力机制，让信息传递更高效。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.20974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+        "link": "https://arxiv.org/abs/2609.20974",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 455,
+    "status": "hot"
+  },
+  {
+    "id": "robust-diffusion-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Robust Diffusion Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Robust Diffusion Reasoning是一种让AI更可靠地推理扩散信息的算法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.20981"
+    ],
+    "matched_articles": [
+      {
+        "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+        "link": "https://arxiv.org/abs/2609.20981",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 456,
+    "status": "hot"
+  },
+  {
+    "id": "dinov3-vision-transformer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "DINOv3 Vision Transformer",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "DINOv3是一种AI模型，结合了Transformer和视觉信息，用于图像识别。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21061"
+    ],
+    "matched_articles": [
+      {
+        "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+        "link": "https://arxiv.org/abs/2609.21061",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 457,
+    "status": "hot"
+  },
+  {
+    "id": "pretrained-attention",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Pretrained Attention",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "预训练注意力：先在大量数据上训练，再用于特定任务，提高效率。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21139"
+    ],
+    "matched_articles": [
+      {
+        "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+        "link": "https://arxiv.org/abs/2609.21139",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 458,
+    "status": "hot"
+  },
+  {
+    "id": "contact-diff-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Contact-Diff Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "接触-差异推理，是AI在分子优化中，通过分析分子接触和差异来提高其结合特异性的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21165"
+    ],
+    "matched_articles": [
+      {
+        "title": "SpecOpt: Contact-Diff Reasoning for Agentic Molecule Optimization Toward Binding Specificity",
+        "link": "https://arxiv.org/abs/2609.21165",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 459,
+    "status": "hot"
+  },
+  {
+    "id": "ai-native-networks",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "AI-Native Networks",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "AI原生网络，就像专为AI设计的电路板，让AI学习更高效。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21519"
+    ],
+    "matched_articles": [
+      {
+        "title": "Learning-to-Optimize as the Missing Architectural Layer of AI-Native Networks",
+        "link": "https://arxiv.org/abs/2609.21519",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 460,
+    "status": "hot"
+  },
+  {
+    "id": "although-state-space-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Although State Space Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "虽然状态空间模型（SSM）听起来复杂，但它是用来分析推荐系统如何根据用户行为推荐商品的一种方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21548"
+    ],
+    "matched_articles": [
+      {
+        "title": "Dual-Interest Sequential Product Recommendation With Multi-Granular SSM",
+        "link": "https://arxiv.org/abs/2609.21548",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 461,
+    "status": "hot"
+  },
+  {
+    "id": "guided-answer-reasoning-distillation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Guided Answer-Reasoning Distillation",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "通过引导答案推理蒸馏，让大型推理模型学会忘记不重要的信息。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.21677"
+    ],
+    "matched_articles": [
+      {
+        "title": "GUARD: Natural Forgetting in Large Reasoning Models via Guided Answer-Reasoning Distillation",
+        "link": "https://arxiv.org/abs/2609.21677",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 462,
+    "status": "hot"
+  },
+  {
+    "id": "personal-memory-retrieval",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Personal Memory Retrieval",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "个人记忆检索：就像电脑搜索文件，帮你快速找到存储在记忆中的信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22091"
+    ],
+    "matched_articles": [
+      {
+        "title": "Memory That Looks Forward: A Zero-Inference Prospective Term for Personal Memory Retrieval",
+        "link": "https://arxiv.org/abs/2609.22091",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 463,
+    "status": "hot"
+  },
+  {
+    "id": "content-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Content Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "内容模型：一种用于理解和评估多模态内容的技术，能帮助识别和过滤不当信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22094"
+    ],
+    "matched_articles": [
+      {
+        "title": "Summarize, Judge, Refine: Decoupled Content Understanding and Policy Learning for Multimodal Content Moderation",
+        "link": "https://arxiv.org/abs/2609.22094",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 464,
+    "status": "hot"
+  },
+  {
+    "id": "policy-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Policy Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "政策模型：用于内容审核的AI模型，能自动总结、判断和优化审核策略。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22094"
+    ],
+    "matched_articles": [
+      {
+        "title": "Summarize, Judge, Refine: Decoupled Content Understanding and Policy Learning for Multimodal Content Moderation",
+        "link": "https://arxiv.org/abs/2609.22094",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 465,
+    "status": "hot"
+  },
+  {
+    "id": "semi-autoregressive-speculative-decoding",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Semi-Autoregressive Speculative Decoding",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "半自动预测解码，像猜谜语一样，机器先猜一部分，再根据反馈调整，逐步猜出结果。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22098"
+    ],
+    "matched_articles": [
+      {
+        "title": "TreeSpark: Calibrated, Load-Adaptive Draft Trees for Semi-Autoregressive Speculative Decoding",
+        "link": "https://arxiv.org/abs/2609.22098",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 466,
+    "status": "hot"
+  },
+  {
+    "id": "long-context-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Long-Context Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "长文本语言模型，能处理长篇内容，但可能受极端值影响。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22101"
+    ],
+    "matched_articles": [
+      {
+        "title": "Context Poisoning as Extreme-Value Attention Interference in Long-Context Language Models",
+        "link": "https://arxiv.org/abs/2609.22101",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 467,
+    "status": "hot"
+  },
+  {
+    "id": "base-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Base Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "基础语言模型是训练好的大型语言模型，用于评估和改进特定领域（如母婴和疫苗接种）的应用。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22110"
+    ],
+    "matched_articles": [
+      {
+        "title": "Evaluating Fine-Tuned and Base Language Models in Maternal and Vaccination Healthcare for African Settings",
+        "link": "https://arxiv.org/abs/2609.22110",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 468,
+    "status": "hot"
+  },
+  {
+    "id": "multi-turn-coding-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multi-Turn Coding Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "多轮编码代理：AI在对话中能连续多轮交流，理解上下文。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22114"
+    ],
+    "matched_articles": [
+      {
+        "title": "An Empirical Cost Attribution of Context-Compression Gateways in Multi-Turn Coding Agents",
+        "link": "https://arxiv.org/abs/2609.22114",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 469,
+    "status": "hot"
+  },
+  {
+    "id": "balancing-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Balancing Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "平衡推理：在处理乌克兰多领域文档时，既要考虑硬件限制，又要合理运用推理方法。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22124"
+    ],
+    "matched_articles": [
+      {
+        "title": "Balancing Reasoning and Hardware Constraints in RAG Pipelines for Ukrainian Multi-Domain Document Understanding",
+        "link": "https://arxiv.org/abs/2609.22124",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 470,
+    "status": "hot"
+  },
+  {
+    "id": "cross-encoder",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cross-Encoder",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Cross-Encoder是一种AI技术，能平衡推理和硬件限制，帮助理解乌克兰多领域文档。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2609.22124"
+    ],
+    "matched_articles": [
+      {
+        "title": "Balancing Reasoning and Hardware Constraints in RAG Pipelines for Ukrainian Multi-Domain Document Understanding",
+        "link": "https://arxiv.org/abs/2609.22124",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 471,
     "status": "hot"
   }
 ]
