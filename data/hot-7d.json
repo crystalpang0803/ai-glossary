@@ -45,119 +45,83 @@
   },
   {
     "id": "llm-agents",
-    "appear_count": 12,
+    "appear_count": 11,
     "days": 2,
     "term_en": "LLM Agents",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "LLM Agents是利用大型语言模型进行决策和行动的智能体。",
+    "explanation": "LLM Agents是能自我进化的AI，用于信贷流程，能按时高效完成任务。",
     "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv LG"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.02523",
-      "https://arxiv.org/abs/2610.02654",
-      "https://arxiv.org/abs/2610.02425",
-      "https://arxiv.org/abs/2610.02702",
-      "https://arxiv.org/abs/2610.02413"
+      "https://arxiv.org/abs/2610.10629",
+      "https://arxiv.org/abs/2610.10833",
+      "https://arxiv.org/abs/2610.10906",
+      "https://arxiv.org/abs/2610.11007",
+      "https://arxiv.org/abs/2610.11188"
     ],
     "matched_articles": [
       {
-        "title": "Hypothesis-guided discovery of cognitive algorithms via program refinement",
-        "link": "https://arxiv.org/abs/2610.02523",
+        "title": "The Harness as the Only Mutable Surface: Compliance-Bounded Self-Evolution of LLM Agents in Credit Pipelines, with a Measured Admission Gate",
+        "link": "https://arxiv.org/abs/2610.10629",
         "source": "arXiv AI"
       },
       {
-        "title": "Coherence-Driven Belief Formation and Population Dynamics of Contagion in LLM Agents",
-        "link": "https://arxiv.org/abs/2610.02654",
+        "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
+        "link": "https://arxiv.org/abs/2610.10833",
         "source": "arXiv AI"
       },
       {
-        "title": "Finding the Move Is Not Winning the Game: XiangqiBench for Closed-Loop Evaluation of LLM Agents",
-        "link": "https://arxiv.org/abs/2610.02425",
-        "source": "arXiv CL"
+        "title": "Reading the Room: Foundations, Design, and Challenges of Normative Competence in LLMs",
+        "link": "https://arxiv.org/abs/2610.10906",
+        "source": "arXiv AI"
       }
     ],
     "rank": 2,
     "status": "hot"
   },
   {
-    "id": "multi-agent",
-    "appear_count": 7,
-    "days": 1,
-    "term_en": "Multi-Agent",
+    "id": "policy-distillation",
+    "appear_count": 9,
+    "days": 2,
+    "term_en": "Policy Distillation",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "多智能体系统：多个智能体协同工作，共同完成任务。",
+    "explanation": "Policy Distillation就像把一个复杂的老师（AI模型）的知识，简化成简单的学生（AI模型）也能学会的版本。",
     "sources": [
-      "arXiv AI",
       "arXiv CL",
-      "arXiv LG",
-      "量子位"
+      "arXiv LG"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.00349",
-      "https://arxiv.org/abs/2610.00583",
-      "https://arxiv.org/abs/2610.00668",
-      "https://arxiv.org/abs/2609.38660",
-      "https://arxiv.org/abs/2609.38816"
+      "https://arxiv.org/abs/2610.10878",
+      "https://arxiv.org/abs/2610.11291",
+      "https://arxiv.org/abs/2610.11332",
+      "https://arxiv.org/abs/2610.11451",
+      "https://arxiv.org/abs/2610.10623"
     ],
     "matched_articles": [
       {
-        "title": "Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation",
-        "link": "https://arxiv.org/abs/2610.00349",
-        "source": "arXiv AI"
+        "title": "Stochastic Teacher Intervention for Agentic On-Policy Distillation",
+        "link": "https://arxiv.org/abs/2610.10878",
+        "source": "arXiv CL"
       },
       {
-        "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
-        "link": "https://arxiv.org/abs/2610.00583",
-        "source": "arXiv AI"
+        "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+        "link": "https://arxiv.org/abs/2610.11291",
+        "source": "arXiv CL"
       },
       {
-        "title": "A Simple Doxastic Deontic Logic for Norm-Guided Decision Making",
-        "link": "https://arxiv.org/abs/2610.00668",
-        "source": "arXiv AI"
+        "title": "ReCal: Calibrating Structured Pruning for On-Policy Distillation Recovery",
+        "link": "https://arxiv.org/abs/2610.11332",
+        "source": "arXiv CL"
       }
     ],
     "rank": 3,
-    "status": "hot"
-  },
-  {
-    "id": "poc",
-    "appear_count": 7,
-    "days": 2,
-    "term_en": "PoC",
-    "term_zh": "概念验证",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "PoC（概念验证）就是用最小可行性产品测试一个想法是否可行。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/499663.html",
-      "https://www.qbitai.com/2026/09/499605.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
-        "link": "https://www.qbitai.com/2026/10/499663.html",
-        "source": "量子位"
-      },
-      {
-        "title": "直播回顾：工业AI的下一个机会在哪？",
-        "link": "https://www.qbitai.com/2026/09/499605.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 4,
     "status": "hot"
   },
   {
@@ -199,48 +163,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
-    "id": "vision-language-models",
-    "appear_count": 6,
-    "days": 1,
-    "term_en": "Vision-Language Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "视觉语言模型：能看图说话的AI，能理解图片和文字的关系。",
-    "sources": [
-      "arXiv CL",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38802",
-      "https://arxiv.org/abs/2610.00302",
-      "https://arxiv.org/abs/2610.00559",
-      "https://arxiv.org/abs/2610.00623",
-      "https://arxiv.org/abs/2610.00666"
-    ],
-    "matched_articles": [
-      {
-        "title": "Uncovering Uncontrolled Repetition through Residual Stream Dynamics",
-        "link": "https://arxiv.org/abs/2609.38802",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Decoding the Disaster: Multi-Task Geospatial Reasoning with Vision-Language Models and Crowdsourced Imagery for Disaster Mapping",
-        "link": "https://arxiv.org/abs/2610.00302",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "PhysVista: Benchmarking Physical Intelligence in VLMs via a Perception-Reasoning-Assessment Loop",
-        "link": "https://arxiv.org/abs/2610.00559",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 6,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -280,7 +203,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 7,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -319,7 +242,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 8,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -359,7 +282,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 9,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -402,7 +325,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 10,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -443,7 +366,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 11,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -483,47 +406,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "policy-distillation",
-    "appear_count": 4,
-    "days": 1,
-    "term_en": "Policy Distillation",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Policy Distillation是一种让AI更简单易懂的技术，就像教孩子骑自行车，用简单的方法让他们学会。",
-    "sources": [
-      "arXiv AI",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.02678",
-      "https://arxiv.org/abs/2610.02324",
-      "https://arxiv.org/abs/2610.02359",
-      "https://arxiv.org/abs/2610.02381"
-    ],
-    "matched_articles": [
-      {
-        "title": "Spend Teacher Tokens Where They Matter: Success-Referenced On-Policy Distillation",
-        "link": "https://arxiv.org/abs/2610.02678",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Slow-Fast Multi-Teacher On-Policy Distillation for Capability Preservation",
-        "link": "https://arxiv.org/abs/2610.02324",
-        "source": "arXiv LG"
-      },
-      {
-        "title": "Lexicographic Multi-Objective On-Policy Distillation",
-        "link": "https://arxiv.org/abs/2610.02359",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 13,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -563,111 +446,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "speculative-decoding",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Speculative Decoding",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "猜测解码：AI根据已有信息，预测并生成可能的未来内容。",
-    "sources": [
-      "arXiv CL",
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38510",
-      "https://arxiv.org/abs/2609.38795",
-      "https://arxiv.org/abs/2610.00623"
-    ],
-    "matched_articles": [
-      {
-        "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
-        "link": "https://arxiv.org/abs/2609.38510",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Recovering Off-Policy Supervision for Speculative Decoding",
-        "link": "https://arxiv.org/abs/2609.38795",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
-        "link": "https://arxiv.org/abs/2610.00623",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 15,
-    "status": "hot"
-  },
-  {
-    "id": "vision-transformer",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Vision Transformer",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Vision Transformer是一种AI技术，能像人一样看图识别物体。",
-    "sources": [
-      "arXiv CV",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00006",
-      "https://arxiv.org/abs/2610.00294",
-      "https://arxiv.org/abs/2609.38348"
-    ],
-    "matched_articles": [
-      {
-        "title": "Emergent Object Binding Has a Finite Spatial Horizon",
-        "link": "https://arxiv.org/abs/2610.00006",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "LENS-GRF: Permutation-Invariant Lesion Evidence Network with Gated Residual Fusion for Acne Severity Grading and Multi-Rater Clinical Oracle Analysis",
-        "link": "https://arxiv.org/abs/2610.00294",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Function-Space Transformer with Adaptive Anchors",
-        "link": "https://arxiv.org/abs/2609.38348",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "argon-agent",
-    "appear_count": 3,
-    "days": 2,
-    "term_en": "Argon Agent",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Argon Agent：谷歌Gemini 4新推出的AI助手，能处理复杂任务。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/499663.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
-        "link": "https://www.qbitai.com/2026/10/499663.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 17,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -706,7 +485,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 18,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -739,131 +518,39 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
+    "rank": 13,
     "status": "hot"
   },
   {
-    "id": "clinical-agents",
+    "id": "poc",
     "appear_count": 2,
     "days": 1,
-    "term_en": "Clinical Agents",
-    "term_zh": "",
+    "term_en": "PoC",
+    "term_zh": "概念验证",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "临床智能体：模拟医生决策的智能系统，用于个性化医疗和患者数据管理。",
-    "sources": [
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38490",
-      "https://arxiv.org/abs/2609.38193"
-    ],
-    "matched_articles": [
-      {
-        "title": "Personalized State-Transition-Aware Memory for Clinical Agents",
-        "link": "https://arxiv.org/abs/2609.38490",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "EHR2Trace: Auditable EHR Data Infrastructure for Patient World Models and Clinical Agents",
-        "link": "https://arxiv.org/abs/2609.38193",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 20,
-    "status": "hot"
-  },
-  {
-    "id": "self-distillation",
-    "appear_count": 2,
-    "days": 1,
-    "term_en": "Self-Distillation",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Self-Distillation是一种AI技术，通过自我学习提升模型性能，就像让AI自己教自己。",
-    "sources": [
-      "arXiv CL",
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38792",
-      "https://arxiv.org/abs/2609.38342"
-    ],
-    "matched_articles": [
-      {
-        "title": "Training LLM Judges from Language Feedback via Position-Selective Self-Distillation",
-        "link": "https://arxiv.org/abs/2609.38792",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Activation-Conditioned Self-Distillation",
-        "link": "https://arxiv.org/abs/2609.38342",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 21,
-    "status": "hot"
-  },
-  {
-    "id": "representation-alignment",
-    "appear_count": 2,
-    "days": 1,
-    "term_en": "Representation Alignment",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Representation Alignment指的是让预测结果与数据表示相匹配，就像让猜的答案和实际答案一样。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00483",
-      "https://arxiv.org/abs/2610.00600"
-    ],
-    "matched_articles": [
-      {
-        "title": "PixelDense: Dense Prediction as Representation Alignment for Pixel Diffusion",
-        "link": "https://arxiv.org/abs/2610.00483",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Just Align $\\bm{x}$: Aligning Predictions, Not Representations",
-        "link": "https://arxiv.org/abs/2610.00600",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 22,
-    "status": "hot"
-  },
-  {
-    "id": "oee",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "OEE",
-    "term_zh": "设备综合效率",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "OEE是衡量工厂设备效率的指标，包括设备可用性、性能和品质。",
+    "explanation": "PoC（概念验证）就是用最小可行性产品测试一个想法是否可行。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
+      "https://www.qbitai.com/2026/10/499663.html",
       "https://www.qbitai.com/2026/09/499605.html"
     ],
     "matched_articles": [
+      {
+        "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+        "link": "https://www.qbitai.com/2026/10/499663.html",
+        "source": "量子位"
+      },
       {
         "title": "直播回顾：工业AI的下一个机会在哪？",
         "link": "https://www.qbitai.com/2026/09/499605.html",
         "source": "量子位"
       }
     ],
-    "rank": 23,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -895,7 +582,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 24,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -921,7 +608,33 @@
         "source": "量子位"
       }
     ],
-    "rank": 25,
+    "rank": 16,
+    "status": "hot"
+  },
+  {
+    "id": "stable-diffusion",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Stable Diffusion",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Stable Diffusion：一种稳定扩散模型，用于个性化图像生成。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10550"
+    ],
+    "matched_articles": [
+      {
+        "title": "Diffu-LoRA: A Novel Low-Rank Adaptation for Personalized Diffusion Models",
+        "link": "https://arxiv.org/abs/2610.10550",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -954,7 +667,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 26,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -987,7 +700,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 27,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -1019,7 +732,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 28,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -1051,7 +764,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 29,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -1083,7 +796,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 30,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -1115,7 +828,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 31,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -1141,7 +854,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 32,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -1167,7 +880,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 33,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -1193,7 +906,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 34,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -1225,7 +938,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 35,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -1257,7 +970,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 36,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1289,7 +1002,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 37,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1315,7 +1028,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 38,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1341,7 +1054,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 39,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1367,7 +1080,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 40,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1393,7 +1106,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 41,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1419,7 +1132,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 42,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1445,501 +1158,132 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 35,
     "status": "hot"
   },
   {
-    "id": "long-horizon-language-agents",
-    "appear_count": 1,
+    "id": "frontier-models",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Long-Horizon Language Agents",
+    "term_en": "Frontier Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "长周期语言代理：AI模型能理解并处理长篇对话，就像人一样。",
+    "explanation": "Frontier Models是一种先进的AI模型，能根据数据生成交互式用户界面，比传统模型更强大。",
     "sources": [
-      "arXiv AI"
+      "arXiv AI",
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.00010"
+      "https://arxiv.org/abs/2610.11123",
+      "https://arxiv.org/abs/2610.10827"
     ],
     "matched_articles": [
       {
-        "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents",
-        "link": "https://arxiv.org/abs/2610.00010",
+        "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
+        "link": "https://arxiv.org/abs/2610.11123",
         "source": "arXiv AI"
-      }
-    ],
-    "rank": 44,
-    "status": "hot"
-  },
-  {
-    "id": "tail-world-model",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Tail World Model",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Tail World Model是一种AI模型，擅长处理长距离时间序列数据，比如语言理解。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00010"
-    ],
-    "matched_articles": [
+      },
       {
-        "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents",
-        "link": "https://arxiv.org/abs/2610.00010",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 45,
-    "status": "hot"
-  },
-  {
-    "id": "scientific-agents",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Scientific Agents",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "科学代理：模拟科学家进行科研任务的AI程序。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00084"
-    ],
-    "matched_articles": [
-      {
-        "title": "Scientific Agents: Evaluating Profession-Specific System Prompts on Scientific Tasks",
-        "link": "https://arxiv.org/abs/2610.00084",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 46,
-    "status": "hot"
-  },
-  {
-    "id": "multi-user-multi-agent",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Multi-User Multi-Agent",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "多人多智能体系统：多个智能体共同协作，但效果可能不如预期。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00583"
-    ],
-    "matched_articles": [
-      {
-        "title": "Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams",
-        "link": "https://arxiv.org/abs/2610.00583",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 47,
-    "status": "hot"
-  },
-  {
-    "id": "llm-driven-agents",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "LLM-Driven Agents",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "LLM驱动的智能体，通过空间策略而非具体行动来决策。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00613"
-    ],
-    "matched_articles": [
-      {
-        "title": "Spatial Strategies, Not Actions: Vector-Quantized Geodesics as Tools for LLM-Driven Agents",
-        "link": "https://arxiv.org/abs/2610.00613",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 48,
-    "status": "hot"
-  },
-  {
-    "id": "evaluating-llm-reasoning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Evaluating LLM Reasoning",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "评估大型语言模型推理能力，就是测试AI在科学领域推理问题的表现。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00682"
-    ],
-    "matched_articles": [
-      {
-        "title": "Ontology-Grounded, Reasoner-Verified Benchmarks for Evaluating LLM Reasoning in Scientific AI",
-        "link": "https://arxiv.org/abs/2610.00682",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 49,
-    "status": "hot"
-  },
-  {
-    "id": "joseph-health-network",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Joseph Health Network",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Joseph Health Network是一种利用大型语言模型进行健康预测的网络系统。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38181"
-    ],
-    "matched_articles": [
-      {
-        "title": "Large Language Models are Approximate Survival Estimators",
-        "link": "https://arxiv.org/abs/2609.38181",
+        "title": "Grammar Concept Annotation at Scale: Deployed Fine-Tuned Small Language Models Outperform Prompted Frontier Models",
+        "link": "https://arxiv.org/abs/2610.10827",
         "source": "arXiv CL"
       }
     ],
-    "rank": 50,
+    "rank": 36,
     "status": "hot"
   },
   {
-    "id": "centered-kernel-alignment",
-    "appear_count": 1,
+    "id": "latent-reasoning",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Centered Kernel Alignment",
+    "term_en": "Latent Reasoning",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "中心核对齐：一种让AI模型计算更准确的技术，通过调整模型参数来提升性能。",
+    "explanation": "Latent Reasoning是一种隐藏的推理方法，用于处理时间序列和视觉推理问题。",
     "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38205"
-    ],
-    "matched_articles": [
-      {
-        "title": "The System Prompt Illusion: How Instruction Preambles Modify Computation in Language Models",
-        "link": "https://arxiv.org/abs/2609.38205",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 51,
-    "status": "hot"
-  },
-  {
-    "id": "value-alignment",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Value Alignment",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "价值对齐是指AI模型的目标与人类价值观保持一致，确保AI行为符合人类期望。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38260"
-    ],
-    "matched_articles": [
-      {
-        "title": "ContextAdapt: Evaluating Contextual Adaptation and Value Alignment in LLMs",
-        "link": "https://arxiv.org/abs/2609.38260",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 52,
-    "status": "hot"
-  },
-  {
-    "id": "composing-frozen-language-models",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Composing Frozen Language Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "将多个冻结的语言模型通过共享的潜在空间组合起来，就像拼图一样。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38261"
-    ],
-    "matched_articles": [
-      {
-        "title": "NinaXander: Feasibility and Limits of Composing Frozen Language Models Across Architecture Families via a Shared Latent Space",
-        "link": "https://arxiv.org/abs/2609.38261",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 53,
-    "status": "hot"
-  },
-  {
-    "id": "interactive-intent-alignment",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Interactive Intent Alignment",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "解读：互动意图对齐是让AI更好地理解用户意图的技术。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38604"
-    ],
-    "matched_articles": [
-      {
-        "title": "Beyond Oracle Communication: Benchmarking Interactive Intent Alignment Under Miscommunication and Evolving User Intent",
-        "link": "https://arxiv.org/abs/2609.38604",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 54,
-    "status": "hot"
-  },
-  {
-    "id": "self-evolving-multi-agent",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Self-Evolving Multi-Agent",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "自我进化的多智能体系统，就像一群能自己学习和成长的机器人，一起翻译长篇字幕。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38660"
-    ],
-    "matched_articles": [
-      {
-        "title": "Breaking Babel: A Self-Evolving Multi-Agent System for Long-Form Subtitle Translation",
-        "link": "https://arxiv.org/abs/2609.38660",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 55,
-    "status": "hot"
-  },
-  {
-    "id": "position-selective-self-distillation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Position-Selective Self-Distillation",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "通过特定位置筛选，自我蒸馏训练大型语言模型，提升其判断能力。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38792"
-    ],
-    "matched_articles": [
-      {
-        "title": "Training LLM Judges from Language Feedback via Position-Selective Self-Distillation",
-        "link": "https://arxiv.org/abs/2609.38792",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 56,
-    "status": "hot"
-  },
-  {
-    "id": "brainstorming-alignment",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Brainstorming Alignment",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "“脑力激荡对齐”，就是将不同观点和想法整合起来，共同解决阿拉伯方言分类任务。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38820"
-    ],
-    "matched_articles": [
-      {
-        "title": "BARRAC: Adaptation of an English Aspect-based Sentiment Analysis Approach for Classification Tasks in Arabic Dialects",
-        "link": "https://arxiv.org/abs/2609.38820",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 57,
-    "status": "hot"
-  },
-  {
-    "id": "native-sparse-attention",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Native Sparse Attention",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "原生稀疏注意力是一种AI技术，能高效处理信息，就像只关注重要信息一样。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2609.38832"
-    ],
-    "matched_articles": [
-      {
-        "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
-        "link": "https://arxiv.org/abs/2609.38832",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 58,
-    "status": "hot"
-  },
-  {
-    "id": "hiddenmass-benchmark",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "HiddenMass Benchmark",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "隐藏质量基准，用于估算物体隐藏质量，通过模拟技术实现。",
-    "sources": [
+      "arXiv CL",
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.00003"
+      "https://arxiv.org/abs/2610.11111",
+      "https://arxiv.org/abs/2610.10563"
     ],
     "matched_articles": [
       {
-        "title": "STATERA: Hidden Mass Estimation via Zero-Shot Sim-to-Real Kinematics using Frozen Temporal Tubelets",
-        "link": "https://arxiv.org/abs/2610.00003",
+        "title": "Lapras: Latent Reasoning for Time Series Language Models",
+        "link": "https://arxiv.org/abs/2610.11111",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "SLVR: Structured Latent Visual Reasoning via Human-like Reasoning Flows",
+        "link": "https://arxiv.org/abs/2610.10563",
         "source": "arXiv CV"
       }
     ],
-    "rank": 59,
+    "rank": 37,
     "status": "hot"
   },
   {
-    "id": "decomposing-vision-language-model",
-    "appear_count": 1,
+    "id": "image-diffusion-models",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Decomposing Vision-Language Model",
+    "term_en": "Image Diffusion Models",
     "term_zh": "",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "分解视觉-语言模型：研究如何分析视觉和语言模型中的缺陷，提高模型性能。",
+    "explanation": "图像扩散模型：通过算法让图像逐渐变化，用于个性化图像生成和偏好驱动的图像学习。",
     "sources": [
+      "arXiv CL",
       "arXiv CV"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.00024"
+      "https://arxiv.org/abs/2610.10550",
+      "https://arxiv.org/abs/2610.10859"
     ],
     "matched_articles": [
       {
-        "title": "Encoded but Disconnected: Decomposing Vision-Language Model Failures under a Patching Null",
-        "link": "https://arxiv.org/abs/2610.00024",
+        "title": "Diffu-LoRA: A Novel Low-Rank Adaptation for Personalized Diffusion Models",
+        "link": "https://arxiv.org/abs/2610.10550",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Enabling Preference-driven Unlearning in Few-step Distilled Text-to-Image Diffusion Models",
+        "link": "https://arxiv.org/abs/2610.10859",
         "source": "arXiv CV"
       }
     ],
-    "rank": 60,
+    "rank": 38,
     "status": "hot"
   },
   {
-    "id": "decoupled-reasoning",
+    "id": "oee",
     "appear_count": 1,
     "days": 1,
-    "term_en": "Decoupled Reasoning",
-    "term_zh": "",
+    "term_en": "OEE",
+    "term_zh": "设备综合效率",
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "explanation": "Decoupled Reasoning是一种将推理过程拆分成独立模块的技术，用于更高效地处理复杂问题。",
+    "explanation": "OEE是衡量工厂设备效率的指标，包括设备可用性、性能和品质。",
     "sources": [
-      "arXiv CV"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.00040"
+      "https://www.qbitai.com/2026/09/499605.html"
     ],
     "matched_articles": [
       {
-        "title": "DSSR-3D: Decoupled Reasoning for View-Dependent Referring in 3D Gaussians",
-        "link": "https://arxiv.org/abs/2610.00040",
-        "source": "arXiv CV"
+        "title": "直播回顾：工业AI的下一个机会在哪？",
+        "link": "https://www.qbitai.com/2026/09/499605.html",
+        "source": "量子位"
       }
     ],
-    "rank": 61,
-    "status": "hot"
-  },
-  {
-    "id": "work-environment-model",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Work Environment Model",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "工作环境模型：研究如何通过时间分割和语义抽象，让AI理解自身和周围环境。",
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00069"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Framework for Egocentric and Exocentric Procedural Understanding via Temporal Segmentation and Semantic Abstraction",
-        "link": "https://arxiv.org/abs/2610.00069",
-        "source": "arXiv CV"
-      }
-    ],
-    "rank": 62,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1965,7 +1309,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 63,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1991,7 +1335,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 64,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -2017,7 +1361,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 65,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -2043,7 +1387,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 66,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -2069,33 +1413,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 67,
-    "status": "hot"
-  },
-  {
-    "id": "stable-diffusion",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Stable Diffusion",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Stable Diffusion是一种AI技术，能让机器生成稳定、高质量的图像。",
-    "sources": [
-      "arXiv LG"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.00251"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Null Is the Hard Part: Exact Tests for Memorization in Generative Models",
-        "link": "https://arxiv.org/abs/2610.00251",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 68,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -2121,7 +1439,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 69,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -2147,7 +1465,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 70,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -2173,7 +1491,33 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 71,
+    "rank": 47,
+    "status": "hot"
+  },
+  {
+    "id": "argon-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Argon Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "Argon Agent：谷歌Gemini 4新推出的AI助手，能处理复杂任务。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/499663.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+        "link": "https://www.qbitai.com/2026/10/499663.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -2199,7 +1543,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 72,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -2225,7 +1569,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 73,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -2251,7 +1595,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 74,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -2277,7 +1621,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 75,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -2303,7 +1647,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 76,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -2329,7 +1673,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 77,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -2355,7 +1699,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 78,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -2381,7 +1725,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 79,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -2407,7 +1751,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -2433,7 +1777,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -2459,7 +1803,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 82,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -2485,7 +1829,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 83,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -2511,7 +1855,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 84,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -2537,7 +1881,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2563,7 +1907,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2589,7 +1933,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 87,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2615,7 +1959,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 88,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2641,7 +1985,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 89,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2667,7 +2011,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2693,7 +2037,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2719,7 +2063,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 92,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2745,7 +2089,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 93,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2771,7 +2115,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 94,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2797,7 +2141,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 95,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2823,7 +2167,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 96,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2849,7 +2193,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 97,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2875,7 +2219,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 98,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2891,7 +2235,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 99,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2917,7 +2261,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 100,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2943,7 +2287,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 101,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2969,7 +2313,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2995,7 +2339,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -3021,7 +2365,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -3047,7 +2391,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -3073,7 +2417,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -3089,7 +2433,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 107,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -3115,7 +2459,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 108,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -3141,7 +2485,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 109,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -3167,7 +2511,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 110,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -3193,7 +2537,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 111,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -3219,7 +2563,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 112,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -3245,7 +2589,631 @@
         "source": "arXiv AI"
       }
     ],
+    "rank": 90,
+    "status": "hot"
+  },
+  {
+    "id": "frozen-aerial-vln-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Frozen Aerial VLN Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "冻结空中视觉语言导航智能体，是能理解并执行导航指令的智能机器人。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10635"
+    ],
+    "matched_articles": [
+      {
+        "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
+        "link": "https://arxiv.org/abs/2610.10635",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 91,
+    "status": "hot"
+  },
+  {
+    "id": "diffusion-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Diffusion Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "扩散语言模型：一种能预测文本、辅助决策的AI模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10786"
+    ],
+    "matched_articles": [
+      {
+        "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+        "link": "https://arxiv.org/abs/2610.10786",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 92,
+    "status": "hot"
+  },
+  {
+    "id": "training-autonomous-operator-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Training Autonomous Operator Agents",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "训练自主操作代理，就是让AI像人一样自主操作。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10942"
+    ],
+    "matched_articles": [
+      {
+        "title": "StoreBench: A Live-Commerce Environment for Evaluating and Training Autonomous Operator Agents",
+        "link": "https://arxiv.org/abs/2610.10942",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 93,
+    "status": "hot"
+  },
+  {
+    "id": "cross-language-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Cross-Language Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "跨语言基准，用于比较不同语言模型拒绝回答故事情节的能力。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11005"
+    ],
+    "matched_articles": [
+      {
+        "title": "How Narrative Wrapping Affects LLM Refusal: A Cross-Language Benchmark and Defense",
+        "link": "https://arxiv.org/abs/2610.11005",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 94,
+    "status": "hot"
+  },
+  {
+    "id": "capacitated-assortment-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Capacitated Assortment Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "这个模型是用于优化选择，就像超市里如何合理搭配商品，让顾客满意。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11007"
+    ],
+    "matched_articles": [
+      {
+        "title": "Curating Always-Loaded Context for LLM Agents: A Capacitated Assortment Model with Censored Feedback",
+        "link": "https://arxiv.org/abs/2610.11007",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "tool-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Tool Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "工具代理：一种能根据数据生成用户界面的智能工具，能主动与用户互动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11123"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
+        "link": "https://arxiv.org/abs/2610.11123",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 96,
+    "status": "hot"
+  },
+  {
+    "id": "gui-coder-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GUI Coder Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "GUI Coder Agent是一种AI，能自动生成用户界面代码，让界面更智能互动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11123"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
+        "link": "https://arxiv.org/abs/2610.11123",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "unified-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Unified Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "统一基准，用于评估AI生成游戏解说质量的标准。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11129"
+    ],
+    "matched_articles": [
+      {
+        "title": "GameCommBench: A Unified Benchmark and Type-Aware Evaluation for AI-Generated Game Commentary",
+        "link": "https://arxiv.org/abs/2610.11129",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "low-bit-llm-quantization",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Low-Bit LLM Quantization",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "低比特LLM量化：降低AI模型计算量，但可能导致重建损失增加。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11226"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
+        "link": "https://arxiv.org/abs/2610.11226",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "distributionally-robust-quantization",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Distributionally Robust Quantization",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "分布鲁棒量化：一种在低比特量化中，即使重建损失较低也能保证模型性能的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11226"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Lower Reconstruction Loss Hurts: Distributionally Robust Refinement for Low-Bit LLM Quantization",
+        "link": "https://arxiv.org/abs/2610.11226",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "small-vision-language-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Small Vision-Language Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "小型视觉-语言模型：一种能理解图像和文字的小型AI模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11231"
+    ],
+    "matched_articles": [
+      {
+        "title": "Harness Compilation: Which Decisions Should a Small Vision-Language Model Keep?",
+        "link": "https://arxiv.org/abs/2610.11231",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "mechanistic-world-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Mechanistic World Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "机制世界模型：研究世界运作原理的AI模型，通过实验发现事物运行规律。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11253"
+    ],
+    "matched_articles": [
+      {
+        "title": "LLM-IDEA: Identifiability-Driven Experimental Agent for Autonomous Discovery of Mechanistic World Models",
+        "link": "https://arxiv.org/abs/2610.11253",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "possibilistic-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Possibilistic Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "可能性推理，就像猜谜一样，通过多种可能性来猜测答案。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11289"
+    ],
+    "matched_articles": [
+      {
+        "title": "Open-ended Scientific Discovery with Possibilistic Reasoning",
+        "link": "https://arxiv.org/abs/2610.11289",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "full-duplex-voice-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Full-Duplex Voice Agent",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "全双工语音代理：能同时听和说的智能助手，能像人一样对话。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11299"
+    ],
+    "matched_articles": [
+      {
+        "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+        "link": "https://arxiv.org/abs/2610.11299",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "personalized-diffusion-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Personalized Diffusion Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "个性化扩散模型：像定制衣服一样，为每个人量身打造扩散模型。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10550"
+    ],
+    "matched_articles": [
+      {
+        "title": "Diffu-LoRA: A Novel Low-Rank Adaptation for Personalized Diffusion Models",
+        "link": "https://arxiv.org/abs/2610.10550",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "temporally-bounded-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Temporally Bounded Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "时间限制语言模型：训练时限制在特定时间内的文本，用于生成那个时代的语言风格。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10592"
+    ],
+    "matched_articles": [
+      {
+        "title": "Wieszcz-XIX: A 3.1-Billion-Word Corpus of Pre-1918 Polish and Temporally Bounded Language Models Trained From Scratch",
+        "link": "https://arxiv.org/abs/2610.10592",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "matrix-approximation-sparse-attention",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Matrix Approximation Sparse Attention",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "矩阵近似稀疏注意力：通过近似方法，用更少的参数来关注重要信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10871"
+    ],
+    "matched_articles": [
+      {
+        "title": "Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values",
+        "link": "https://arxiv.org/abs/2610.10871",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "evaluating-large-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Evaluating Large Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "评估大型语言模型，就是测试这些模型在处理火灾相关任务时的表现。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10946"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI4Fire: Evaluating Large Language Models on Wildfire Tasks",
+        "link": "https://arxiv.org/abs/2610.10946",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "claim-level-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Claim-Level Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "“法律幻觉检测的基准，用于评估引用是否误导。”",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10971"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Citations Mislead? A Claim-Level Benchmark for Legal Hallucination Detection",
+        "link": "https://arxiv.org/abs/2610.10971",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "time-series-language-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Time Series Language Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "时间序列语言模型：像看懂天气预报一样，让机器理解时间序列数据。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11111"
+    ],
+    "matched_articles": [
+      {
+        "title": "Lapras: Latent Reasoning for Time Series Language Models",
+        "link": "https://arxiv.org/abs/2610.11111",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 110,
+    "status": "hot"
+  },
+  {
+    "id": "multilingual-speech-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multilingual Speech Models",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "多语言语音模型：能识别多种语言语音的AI模型。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11275"
+    ],
+    "matched_articles": [
+      {
+        "title": "Phonological Interference in Multilingual Speech Models",
+        "link": "https://arxiv.org/abs/2610.11275",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 111,
+    "status": "hot"
+  },
+  {
+    "id": "sparse-attention-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Sparse Attention Model",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "稀疏注意力模型是一种只关注重要信息的AI模型，用于处理生物医学文本中的长距离依赖关系。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.11430"
+    ],
+    "matched_articles": [
+      {
+        "title": "BioBigBird: A Sparse Attention Model for Long-Range Dependency Processing in Biomedical Text",
+        "link": "https://arxiv.org/abs/2610.11430",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 112,
+    "status": "hot"
+  },
+  {
+    "id": "structured-latent-visual-reasoning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Structured Latent Visual Reasoning",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "通过类似人类的推理流程，让AI理解并处理结构化视觉信息。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10563"
+    ],
+    "matched_articles": [
+      {
+        "title": "SLVR: Structured Latent Visual Reasoning via Human-like Reasoning Flows",
+        "link": "https://arxiv.org/abs/2610.10563",
+        "source": "arXiv CV"
+      }
+    ],
     "rank": 113,
+    "status": "hot"
+  },
+  {
+    "id": "multi-source-benchmark",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multi-Source Benchmark",
+    "term_zh": "",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "",
+    "explanation": "多源基准，就是用多个数据来源来评估眼镜反光去除算法的效果。",
+    "sources": [
+      "arXiv CV"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.10703"
+    ],
+    "matched_articles": [
+      {
+        "title": "Seeing Through the Glare: A Multi-Source Benchmark and Ocular-Adaptive Pixel MeanFlow for Eyeglass Reflection Removal",
+        "link": "https://arxiv.org/abs/2610.10703",
+        "source": "arXiv CV"
+      }
+    ],
+    "rank": 114,
     "status": "hot"
   }
 ]
