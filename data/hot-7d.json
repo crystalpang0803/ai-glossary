@@ -45,51 +45,6 @@
     "status": "hot"
   },
   {
-    "id": "multimodal",
-    "appear_count": 24,
-    "days": 1,
-    "term_en": "Multimodal",
-    "term_zh": "多模态",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "指同时处理多种类型数据的系统或模型。",
-    "explanation": "多模态AI能同时处理文字、图片等多种信息。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "arXiv CV",
-      "arXiv LG",
-      "量子位",
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20679",
-      "https://arxiv.org/abs/2610.20965",
-      "https://arxiv.org/abs/2610.20632",
-      "https://arxiv.org/abs/2610.21062",
-      "https://arxiv.org/abs/2610.20731"
-    ],
-    "matched_articles": [
-      {
-        "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
-        "link": "https://arxiv.org/abs/2610.20679",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "MSP: Modality Self-Play for Training Multimodal LLMs Without Paired Cross-Modal Data",
-        "link": "https://arxiv.org/abs/2610.20965",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "MeddeX: A Retrieval-Augmented LLaMA-3 System with Gemini Vision for Evidence-Backed Medical Report Analysis",
-        "link": "https://arxiv.org/abs/2610.20632",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 2,
-    "status": "hot"
-  },
-  {
     "id": "llm-agents",
     "appear_count": 15,
     "days": 2,
@@ -127,7 +82,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 3,
+    "rank": 2,
     "status": "hot"
   },
   {
@@ -171,7 +126,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 4,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -210,7 +165,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 5,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -254,7 +209,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 6,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -295,7 +250,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 7,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -336,7 +291,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 8,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -376,89 +331,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 9,
-    "status": "hot"
-  },
-  {
-    "id": "model-capabilities",
-    "appear_count": 4,
-    "days": 1,
-    "term_en": "Model Capabilities",
-    "term_zh": "模型能力",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "模型在特定任务上执行的能力。",
-    "explanation": "模型能力就是模型在特定任务上表现出来的能力。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CV",
-      "arXiv LG",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20667",
-      "https://arxiv.org/abs/2610.20731",
-      "https://arxiv.org/abs/2610.20638",
-      "https://www.qbitai.com/2026/10/503843.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Evaluating Model Capabilities After Benchmark Saturation",
-        "link": "https://arxiv.org/abs/2610.20667",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "WorldCast: Exploring Intelligent Visual Generation in World State Prediction",
-        "link": "https://arxiv.org/abs/2610.20731",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Feature Elicitation for SAE Steering of Deceptive Behaviour in Small LLMs",
-        "link": "https://arxiv.org/abs/2610.20638",
-        "source": "arXiv LG"
-      }
-    ],
-    "rank": 10,
-    "status": "hot"
-  },
-  {
-    "id": "gemini-4-argon",
-    "appear_count": 4,
-    "days": 1,
-    "term_en": "Gemini 4 Argon",
-    "term_zh": "Gemini 4 Argon",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种由DeepMind开发的通用物理推理模型，用于加速机器人领域的发展。",
-    "explanation": "Gemini 4 Argon是DeepMind开发的物理推理模型，能帮助机器人更快发展。",
-    "sources": [
-      "量子位",
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/503701.html",
-      "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-      "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-      "https://deepmind.google/blog/introducing-gemini-4-argon/"
-    ],
-    "matched_articles": [
-      {
-        "title": "刚刚，Gemini 4终于来了：谷歌重回御三家，API限时半价",
-        "link": "https://www.qbitai.com/2026/10/503701.html",
-        "source": "量子位"
-      },
-      {
-        "title": "Developing Gemini 4 Argon responsibly and safely",
-        "link": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
-        "source": "DeepMind Blog"
-      },
-      {
-        "title": "Gemini 4 Argon for Robotics",
-        "link": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 11,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -498,7 +371,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 12,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -531,7 +404,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 13,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -570,7 +443,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 14,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -608,7 +481,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 15,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -641,7 +514,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 16,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -680,7 +553,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 17,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -713,7 +586,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 18,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -746,7 +619,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 19,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -772,7 +645,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 20,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -804,7 +677,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 21,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -830,7 +703,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 22,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -862,7 +735,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 23,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -895,7 +768,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -928,7 +801,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 25,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -960,7 +833,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -992,7 +865,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -1024,501 +897,103 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 28,
+    "rank": 25,
     "status": "hot"
   },
   {
-    "id": "amr",
-    "appear_count": 1,
+    "id": "physical-ai",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "AMR",
-    "term_zh": "移动机器人",
-    "abbreviation": "AMR",
-    "category": "AI应用",
-    "one_liner": "一种能够在环境中自主移动的机器人。",
-    "explanation": "AMR是能自己移动的机器人，就像会打羽毛球的机器人一样聪明。",
+    "term_en": "Physical AI",
+    "term_zh": "物理人工智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "让AI理解物理环境，并通过机器人完成实际任务的人工智能领域。",
+    "explanation": "物理人工智能就是让AI像人一样理解世界，用机器人做实际工作。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/10/503756.html"
+      "https://www.qbitai.com/2026/10/504800.html",
+      "https://www.qbitai.com/2026/10/504730.html"
     ],
     "matched_articles": [
       {
-        "title": "中国机器人羽毛球连打1452拍！拿下吉尼斯，波士顿动力大佬被硬控",
-        "link": "https://www.qbitai.com/2026/10/503756.html",
+        "title": "谁在给OpenAI供应具身数据？",
+        "link": "https://www.qbitai.com/2026/10/504800.html",
+        "source": "量子位"
+      },
+      {
+        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+        "link": "https://www.qbitai.com/2026/10/504730.html",
         "source": "量子位"
       }
     ],
-    "rank": 29,
+    "rank": 26,
     "status": "hot"
   },
   {
-    "id": "embodied-reasoning-erqa",
-    "appear_count": 1,
+    "id": "city-noa",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Embodied Reasoning (ERQA)",
-    "term_zh": "具身推理（ERQA）",
-    "abbreviation": "ERQA",
-    "category": "AI评测基准",
-    "one_liner": "评估模型在3D环境中理解和解决物理、空间问题的能力。",
-    "explanation": "具身推理（ERQA）是评估AI在3D环境中解决物理问题能力的测试。",
-    "sources": [
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://deepmind.google/blog/gemini-4-argon-for-robotics/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Gemini 4 Argon for Robotics",
-        "link": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 30,
-    "status": "hot"
-  },
-  {
-    "id": "realtimebench",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "RealtimeBench",
-    "term_zh": "实时基准",
-    "abbreviation": "",
-    "category": "AI评测基准",
-    "one_liner": "一个包含180个任务、六种游戏类型的实时基准，用于评估智能体在游戏运行中的表现。",
-    "explanation": "实时基准测试，用于衡量AI在游戏中即时反应能力。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20665"
-    ],
-    "matched_articles": [
-      {
-        "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
-        "link": "https://arxiv.org/abs/2610.20665",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 31,
-    "status": "hot"
-  },
-  {
-    "id": "two-timescale-offline-recursive-self-improvement-torsi",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Two-Timescale Offline Recursive Self-Improvement (TORSI)",
-    "term_zh": "双时间尺度离线递归自我改进（TORSI）",
-    "abbreviation": "TORSI",
+    "term_en": "City NOA",
+    "term_zh": "城市NOA",
+    "abbreviation": "CNOA",
     "category": "AI技术",
-    "one_liner": "一种慢速教师通过学习失败和测试修正，为快速学生编写可重用指令的方法。",
-    "explanation": "TORSI是一种方法，让一个慢速老师通过学习失败和测试，帮快速学生编写好用的指令。",
+    "one_liner": "城市导航辅助驾驶，一种自动驾驶技术。",
+    "explanation": "城市NOA是自动驾驶技术，让车辆在城市里像人一样导航，特斯拉等品牌正努力实现。",
     "sources": [
-      "arXiv AI"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.20665"
+      "https://www.qbitai.com/2026/10/504841.html",
+      "https://www.qbitai.com/2026/10/504638.html"
     ],
     "matched_articles": [
       {
-        "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
-        "link": "https://arxiv.org/abs/2610.20665",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 32,
-    "status": "hot"
-  },
-  {
-    "id": "benchmark-saturation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Benchmark Saturation",
-    "term_zh": "基准饱和",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "当多个模型在基准测试中接近完美分数时，该基准失去区分它们的能力。",
-    "explanation": "基准饱和就是多个模型在测试中表现太接近，导致测试无法区分它们的好坏。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20667"
-    ],
-    "matched_articles": [
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "link": "https://www.qbitai.com/2026/10/504841.html",
+        "source": "量子位"
+      },
       {
-        "title": "Evaluating Model Capabilities After Benchmark Saturation",
-        "link": "https://arxiv.org/abs/2610.20667",
-        "source": "arXiv AI"
+        "title": "量智齐飞！4个月9款车落地，轻舟城市NOA击穿10-20万体验天花板",
+        "link": "https://www.qbitai.com/2026/10/504638.html",
+        "source": "量子位"
       }
     ],
-    "rank": 33,
+    "rank": 27,
     "status": "hot"
   },
   {
-    "id": "sequential-monte-carlo-smc",
-    "appear_count": 1,
+    "id": "high-grade-driver-assistance",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "Sequential Monte Carlo (SMC)",
-    "term_zh": "序列蒙特卡洛（SMC）",
-    "abbreviation": "SMC",
+    "term_en": "High-Grade Driver Assistance",
+    "term_zh": "高阶辅助驾驶",
+    "abbreviation": "HGA",
     "category": "AI技术",
-    "one_liner": "一种基于随机采样和蒙特卡洛方法的统计推断技术。",
-    "explanation": "SMC是一种用随机采样来推断统计数据的AI技术。",
+    "one_liner": "提供高级别自动驾驶功能的辅助系统。",
+    "explanation": "高阶辅助驾驶，就是让汽车自己帮忙开车的高级技术。",
     "sources": [
-      "arXiv AI"
+      "量子位"
     ],
     "source_urls": [
-      "https://arxiv.org/abs/2610.20669"
+      "https://www.qbitai.com/2026/10/504841.html",
+      "https://www.qbitai.com/2026/10/504638.html"
     ],
     "matched_articles": [
       {
-        "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
-        "link": "https://arxiv.org/abs/2610.20669",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 34,
-    "status": "hot"
-  },
-  {
-    "id": "value-informed-schedule-trimming-vista",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Value-Informed Schedule Trimming (VISTA)",
-    "term_zh": "价值信息调度修剪（VISTA）",
-    "abbreviation": "VISTA",
-    "category": "AI技术",
-    "one_liner": "一种自动选择指导时间步长的训练免费方法。",
-    "explanation": "VISTA是一种自动调整训练时间的方法，能更快完成训练任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20669"
-    ],
-    "matched_articles": [
+        "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+        "link": "https://www.qbitai.com/2026/10/504841.html",
+        "source": "量子位"
+      },
       {
-        "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
-        "link": "https://arxiv.org/abs/2610.20669",
-        "source": "arXiv AI"
+        "title": "量智齐飞！4个月9款车落地，轻舟城市NOA击穿10-20万体验天花板",
+        "link": "https://www.qbitai.com/2026/10/504638.html",
+        "source": "量子位"
       }
     ],
-    "rank": 35,
-    "status": "hot"
-  },
-  {
-    "id": "verifiable-reasoning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Verifiable Reasoning",
-    "term_zh": "可验证推理",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "确保推理过程和结果可被验证的推理。",
-    "explanation": "确保推理过程和结果像数学题一样，可以被人检查对错的推理方法。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20675"
-    ],
-    "matched_articles": [
-      {
-        "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
-        "link": "https://arxiv.org/abs/2610.20675",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 36,
-    "status": "hot"
-  },
-  {
-    "id": "alphadiana",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "AlphaDiana",
-    "term_zh": "AlphaDiana",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "一个用于可验证推理任务的测量系统。",
-    "explanation": "AlphaDiana是一个评估推理准确性的工具，帮助判断推理结果是否可靠。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20675"
-    ],
-    "matched_articles": [
-      {
-        "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
-        "link": "https://arxiv.org/abs/2610.20675",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 37,
-    "status": "hot"
-  },
-  {
-    "id": "phase-separated-completeness-auditing",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Phase-Separated Completeness Auditing",
-    "term_zh": "相分离完整性审计",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "一种在Verus系统中进行的审计，旨在发现违反预期行为的程序。",
-    "explanation": "相分离完整性审计：Verus系统里的特殊审计，用来检测程序是否按预期工作。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20676"
-    ],
-    "matched_articles": [
-      {
-        "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
-        "link": "https://arxiv.org/abs/2610.20676",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
-    "id": "operator-induction",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Operator Induction",
-    "term_zh": "算子归纳",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过迭代发现并创建新的算子以扩展计算能力的方法。",
-    "explanation": "算子归纳是AI自己创造新工具，增强计算能力的方法。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20809"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Self-Improving Agent that Grows its Own DSL: Oracle-Free Operator Induction for Exact Question Answering",
-        "link": "https://arxiv.org/abs/2610.20809",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 39,
-    "status": "hot"
-  },
-  {
-    "id": "temporal-specification-guidance-tsg",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Temporal Specification Guidance (TSG)",
-    "term_zh": "时序规范引导",
-    "abbreviation": "TSG",
-    "category": "AI技术",
-    "one_liner": "将时序规范转换为可执行目标，以指导视频生成过程。",
-    "explanation": "TSG是指导视频制作的规则，让文字变成视频更顺畅。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20822"
-    ],
-    "matched_articles": [
-      {
-        "title": "Temporal Specification Guidance for Text-to-Video Generation",
-        "link": "https://arxiv.org/abs/2610.20822",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 40,
-    "status": "hot"
-  },
-  {
-    "id": "evaluator-guided-test-time-reasoning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Evaluator-Guided Test-Time Reasoning",
-    "term_zh": "评估者引导的测试时推理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过计算感知的三行动作控制器进行推理，以优化推理过程中的资源分配。",
-    "explanation": "评估者引导推理，像有经验的裁判一样，边看边调整推理过程，让推理更高效。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20836"
-    ],
-    "matched_articles": [
-      {
-        "title": "Confidence-Calibrated Inference Expansion for Evaluator-Guided Test-Time Reasoning",
-        "link": "https://arxiv.org/abs/2610.20836",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 41,
-    "status": "hot"
-  },
-  {
-    "id": "skill-policy-co-evolution-trap",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Skill-Policy Co-evolution Trap",
-    "term_zh": "技能-策略协同进化陷阱",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在自我改进智能体中，技能库的漂移可能导致策略模型变得脆弱。",
-    "explanation": "技能和策略一起进化时，可能会陷入一个互相削弱、无法进步的困境。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20845"
-    ],
-    "matched_articles": [
-      {
-        "title": "Evolving Together, Failing Apart: The Skill-Policy Co-evolution Trap in Self-Improving Agents",
-        "link": "https://arxiv.org/abs/2610.20845",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 42,
-    "status": "hot"
-  },
-  {
-    "id": "co-evolution-drift-audit-coda",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "CO-evolution Drift Audit (CODA)",
-    "term_zh": "协同进化漂移审计",
-    "abbreviation": "CODA",
-    "category": "AI技术",
-    "one_liner": "模拟技能漂移的部署导向评估协议，评估策略模型在漂移技能库上的表现。",
-    "explanation": "CODA是一种评估AI模型在技能变化时表现好坏的方法，就像检查AI是否还在正确做事。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20845"
-    ],
-    "matched_articles": [
-      {
-        "title": "Evolving Together, Failing Apart: The Skill-Policy Co-evolution Trap in Self-Improving Agents",
-        "link": "https://arxiv.org/abs/2610.20845",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 43,
-    "status": "hot"
-  },
-  {
-    "id": "asp-model",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "ASP Model",
-    "term_zh": "ASP模型",
-    "abbreviation": "ASP",
-    "category": "AI技术",
-    "one_liner": "一种用于描述交互运动轨迹动态的抽象状态空间模型。",
-    "explanation": "ASP模型是一种描述物体运动轨迹变化的模型，能预测物体如何互动。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20867"
-    ],
-    "matched_articles": [
-      {
-        "title": "Anticipatory Commonsense with Moving Objects: An ASP-Based Framework for Predictive Reasoning with Interacting Trajectories",
-        "link": "https://arxiv.org/abs/2610.20867",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 44,
-    "status": "hot"
-  },
-  {
-    "id": "multi-tiered-ai-accessibility-model-maiam",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Multi-Tiered AI Accessibility Model (MAIAM)",
-    "term_zh": "多层级AI可访问性模型",
-    "abbreviation": "MAIAM",
-    "category": "AI安全",
-    "one_liner": "一种基于能力、安全和风险比例分配AI系统访问权限的模型。",
-    "explanation": "MAIAM是一种AI权限分配模型，根据能力、安全和风险来限制谁可以访问AI系统。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20921"
-    ],
-    "matched_articles": [
-      {
-        "title": "A Multi-Tiered AI Accessibility Model (MAIAM): Proportionate Access and Capability Limits for Comprehensive Frontier AI Safety",
-        "link": "https://arxiv.org/abs/2610.20921",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 45,
-    "status": "hot"
-  },
-  {
-    "id": "compositional-structure",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Compositional Structure",
-    "term_zh": "组合结构",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "当部分组合在一起时，揭示出单独建模时无法捕捉到的共享结构。",
-    "explanation": "组合结构就像拼图，单独看每块都简单，但拼在一起就能看出隐藏的图案。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20922"
-    ],
-    "matched_articles": [
-      {
-        "title": "Defining and Generating Compositional Structure",
-        "link": "https://arxiv.org/abs/2610.20922",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 46,
-    "status": "hot"
-  },
-  {
-    "id": "skillneo",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "SkillNEO",
-    "term_zh": "SkillNEO",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种非精英主义的进化优化方法，用于提升智能体技能。",
-    "explanation": "SkillNEO是一种让智能体技能提升的非精英进化方法，就像让所有人都有机会变强。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.20926"
-    ],
-    "matched_articles": [
-      {
-        "title": "SkillNEO: Non-Elitist Evolutionary Optimization of Agent Skills",
-        "link": "https://arxiv.org/abs/2610.20926",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 47,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1544,7 +1019,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 48,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1570,7 +1045,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 49,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1596,7 +1071,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 50,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1622,7 +1097,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 51,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1648,7 +1123,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 52,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1674,7 +1149,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 53,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1700,7 +1175,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 54,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1726,7 +1201,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 55,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1752,7 +1227,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 56,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1778,7 +1253,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 57,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1804,7 +1279,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1830,7 +1305,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1856,7 +1331,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1882,7 +1357,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1908,7 +1383,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1934,7 +1409,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1960,7 +1435,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1986,7 +1461,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -2012,7 +1487,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 66,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -2038,7 +1513,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -2064,7 +1539,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -2090,7 +1565,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -2116,7 +1591,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -2142,7 +1617,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -2168,7 +1643,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -2194,7 +1669,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 73,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -2220,7 +1695,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 74,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -2246,7 +1721,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 75,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -2272,7 +1747,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 76,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -2298,7 +1773,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 77,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -2324,7 +1799,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 78,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -2350,7 +1825,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 79,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -2376,7 +1851,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 80,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -2402,7 +1877,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 81,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2428,7 +1903,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 82,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2454,7 +1929,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 83,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2480,7 +1955,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 84,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2506,7 +1981,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 85,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2532,7 +2007,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 86,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2558,7 +2033,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 87,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2584,7 +2059,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 88,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2610,7 +2085,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 89,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2636,7 +2111,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 90,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2662,7 +2137,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 91,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2688,7 +2163,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 92,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2714,7 +2189,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 93,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2740,7 +2215,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 94,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2766,7 +2241,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 95,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2792,7 +2267,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 96,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2818,7 +2293,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 97,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2844,7 +2319,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 98,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2860,7 +2335,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 99,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2886,7 +2361,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 100,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2912,7 +2387,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2938,7 +2413,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2964,7 +2439,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2990,7 +2465,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -3016,7 +2491,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -3042,7 +2517,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -3068,7 +2543,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -3094,7 +2569,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 108,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -3120,7 +2595,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 109,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -3146,7 +2621,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 110,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -3172,7 +2647,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 111,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -3198,7 +2673,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 112,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -3224,7 +2699,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 113,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -3250,7 +2725,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 114,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -3276,7 +2751,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 115,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -3302,7 +2777,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 116,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -3328,7 +2803,253 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 117,
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "egocentric-data",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Egocentric Data",
+    "term_zh": "第一人称视角数据",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "记录第一人称视角的交互过程，用于训练具身AI模型的数据集。",
+    "explanation": "记录自己视角交互的数据，用于训练能模拟人类体验的AI。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504800.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "谁在给OpenAI供应具身数据？",
+        "link": "https://www.qbitai.com/2026/10/504800.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "multidisciplinary-human-agent-collaboration",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multidisciplinary Human-Agent Collaboration",
+    "term_zh": "多学科人机协同",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "不同专长AI分身协同工作，辅助医生进行复杂病例诊断。",
+    "explanation": "多学科AI分身联手，像医生助手一样，帮医生诊断疑难杂症。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504734.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+        "link": "https://www.qbitai.com/2026/10/504734.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "motubrain",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Motubrain",
+    "term_zh": "摩图脑",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "生数科技研发的具身模型，为机器人构建具备通用能力的‘大脑’。",
+    "explanation": "摩图脑是给机器人装上的“大脑”，能帮助机器人学习各种技能。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504730.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+        "link": "https://www.qbitai.com/2026/10/504730.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "polibrain",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Polibrain",
+    "term_zh": "普利脑",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "千诀科技开发的预测式世界模型，让机器人拥有预测和规划物理世界的能力。",
+    "explanation": "普利脑是一种让机器人能预测和规划周围世界的智能模型。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504653.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
+        "link": "https://www.qbitai.com/2026/10/504653.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "predictive-world-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Predictive World Model",
+    "term_zh": "预测式世界模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "让机器人理解物理世界变化规律，进行预测和规划的世界模型。",
+    "explanation": "预测式世界模型：让机器人像人一样理解世界，预测未来，规划行动。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504653.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
+        "link": "https://www.qbitai.com/2026/10/504653.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "ota-upgrade",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "OTA Upgrade",
+    "term_zh": "OTA升级",
+    "abbreviation": "OTA",
+    "category": "AI工程",
+    "one_liner": "通过无线网络进行的软件更新。",
+    "explanation": "OTA升级就是不用拆车，通过手机网络给车升级软件。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504638.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "量智齐飞！4个月9款车落地，轻舟城市NOA击穿10-20万体验天花板",
+        "link": "https://www.qbitai.com/2026/10/504638.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "forest-typology",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Forest Typology",
+    "term_zh": "森林类型学",
+    "abbreviation": "ForTy",
+    "category": "AI应用",
+    "one_liner": "对地球上的森林进行分类的全球地图。",
+    "explanation": "森林类型学是种地图，它把地球上的森林分成不同种类。",
+    "sources": [
+      "DeepMind Blog"
+    ],
+    "source_urls": [
+      "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Beyond tree cover: mapping the world’s forest types",
+        "link": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/",
+        "source": "DeepMind Blog"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "end-to-end-safety",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "End-to-End Safety",
+    "term_zh": "端到端安全",
+    "abbreviation": "E2E Safety",
+    "category": "AI安全",
+    "one_liner": "确保从数据输入到决策输出的全流程安全。",
+    "explanation": "确保从输入数据到最终决策全过程的安全，就像从起点到终点都加了锁。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "safety-first-design",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Safety-First Design",
+    "term_zh": "安全优先设计",
+    "abbreviation": "SFD",
+    "category": "AI工程",
+    "one_liner": "在系统设计中将安全置于首位。",
+    "explanation": "安全优先设计就是先考虑安全，把安全放在设计最重要的位置。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "carbon-sequestration",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Carbon Sequestration",
+    "term_zh": "碳封存",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "将大气中的二氧化碳转化为固态或液态的过程。",
+    "explanation": "碳封存就是将空气中的二氧化碳变成固体或液体，防止它造成气候变暖。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "carbon-dioxide-removal-cdr",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Carbon Dioxide Removal (CDR)",
+    "term_zh": "二氧化碳去除",
+    "abbreviation": "CDR",
+    "category": "AI应用",
+    "one_liner": "从大气中移除二氧化碳的技术。",
+    "explanation": "CDR技术就像给地球“吸霾”，把空气中的二氧化碳移走。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 109,
     "status": "hot"
   }
 ]
