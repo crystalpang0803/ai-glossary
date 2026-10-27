@@ -1,5 +1,957 @@
 [
   {
+    "id": "world-model",
+    "rank": 1,
+    "term_en": "World Model",
+    "term_zh": "世界模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "世界模型是整合物理规律、空间关系和行为逻辑的动态系统，用于因果推演。",
+    "appear_count": 8,
+    "sources": [
+      "arXiv CL",
+      "arXiv CV",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33014",
+      "https://arxiv.org/abs/2610.33054",
+      "https://arxiv.org/abs/2610.33169",
+      "https://www.qbitai.com/2026/10/505032.html",
+      "https://www.qbitai.com/2026/10/504931.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Social World Model Evaluation Gap",
+        "link": "https://arxiv.org/abs/2610.33014",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Saga: an in silico ontology for a multimodal patient world model",
+        "link": "https://arxiv.org/abs/2610.33054",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "World-in-Context: Interactive Video World Modeling with In-Context Conditioning",
+        "link": "https://arxiv.org/abs/2610.33169",
+        "source": "arXiv CV"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "世界模型就像一个超级大脑，能理解物理规律、空间关系和人类行为，预测未来。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "physical-ai",
+    "rank": 2,
+    "term_en": "Physical AI",
+    "term_zh": "物理AI",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "物理AI是利用物理规律和世界模型来增强AI理解和操作物理世界的能力。",
+    "appear_count": 8,
+    "sources": [
+      "arXiv CV",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33351",
+      "https://www.qbitai.com/2026/10/505083.html",
+      "https://www.qbitai.com/2026/10/505032.html",
+      "https://www.qbitai.com/2026/10/504915.html",
+      "https://www.qbitai.com/2026/10/504913.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Real Time Motion Detection in Video Inspired by Photonic Time Stretch",
+        "link": "https://arxiv.org/abs/2610.33351",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "科大讯飞首发星辰TaaS平台，让Token真正成为千行百业的生产力",
+        "link": "https://www.qbitai.com/2026/10/505083.html",
+        "source": "量子位"
+      },
+      {
+        "title": "企业AI需要两个世界模型",
+        "link": "https://www.qbitai.com/2026/10/505032.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "物理AI就是让AI像人一样懂物理，能操作现实世界。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": 2,
+    "is_new": false
+  },
+  {
+    "id": "embodied-ai",
+    "rank": 3,
+    "term_en": "Embodied AI",
+    "term_zh": "具身智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "具身智能是使机器人在物理世界中感知、行动和交互的智能形式。",
+    "appear_count": 6,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/505032.html",
+      "https://www.qbitai.com/2026/10/504915.html",
+      "https://www.qbitai.com/2026/10/504913.html",
+      "https://www.qbitai.com/2026/10/504905.html",
+      "https://www.qbitai.com/2026/10/504901.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "企业AI需要两个世界模型",
+        "link": "https://www.qbitai.com/2026/10/505032.html",
+        "source": "量子位"
+      },
+      {
+        "title": "南京物理AI上大分！三位图灵奖得主发声，50个应用场景亮相",
+        "link": "https://www.qbitai.com/2026/10/504915.html",
+        "source": "量子位"
+      },
+      {
+        "title": "iRTE2026：声网CEO赵斌提出五级对话能力框架，实时互动迈入对话 AGI 时代",
+        "link": "https://www.qbitai.com/2026/10/504913.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "具身智能就是让机器人像人一样在现实世界感受、行动和交流。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "data-selection",
+    "rank": 4,
+    "term_en": "Data Selection",
+    "term_zh": "数据选择",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "从大量数据中挑选出对模型训练最有用的数据子集。",
+    "appear_count": 2,
+    "sources": [
+      "arXiv AI",
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33405",
+      "https://arxiv.org/abs/2610.33440"
+    ],
+    "matched_articles": [
+      {
+        "title": "Data Optimization for LLMs: A Survey",
+        "link": "https://arxiv.org/abs/2610.33405",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Perturbation-Based Data Selection for Medical Question Answering",
+        "link": "https://arxiv.org/abs/2610.33440",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "数据选择就是从海量的数据中，挑选出最适合训练模型的那部分数据。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "five-level-dialogue-ability-framework",
+    "rank": 5,
+    "term_en": "Five-Level Dialogue Ability Framework",
+    "term_zh": "五级对话能力框架",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "五级对话能力框架是描述对话式AI从基础应答到深度理解与关系沟通的五个层次。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504913.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "iRTE2026：声网CEO赵斌提出五级对话能力框架，实时互动迈入对话 AGI 时代",
+        "link": "https://www.qbitai.com/2026/10/504913.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "五级对话能力框架：AI对话从简单回应到深度理解，分五个阶段。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "full-body-baseline-model",
+    "rank": 6,
+    "term_en": "Full-Body Baseline Model",
+    "term_zh": "全身基座模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "全身基座模型是能够让机器人学习全身协调动作的模型。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504905.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "高德发布首个基于开放世界行为的全身基座模型λ0，推动机器人从“局部学习”迈向“全身动作对齐”",
+        "link": "https://www.qbitai.com/2026/10/504905.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "全身基座模型是让机器人像人一样全身协调动作的模型，能帮助机器人更自然地移动。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "humanverse-500-dataset",
+    "rank": 7,
+    "term_en": "HumanVerse-500 Dataset",
+    "term_zh": "HumanVerse-500数据集",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "HumanVerse-500数据集是包含500小时开放世界无本体全身数据的基座模型数据集。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504905.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "高德发布首个基于开放世界行为的全身基座模型λ0，推动机器人从“局部学习”迈向“全身动作对齐”",
+        "link": "https://www.qbitai.com/2026/10/504905.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "HumanVerse-500数据集：包含500小时人体动作数据的集合，帮助机器人学习全身动作。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "digital-human",
+    "rank": 8,
+    "term_en": "Digital Human",
+    "term_zh": "数字人",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "数字人是具有人类外观和行为的虚拟角色。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504901.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+        "link": "https://www.qbitai.com/2026/10/504901.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "数字人就像虚拟的“人”，有人的样子和行为，可以在电脑上互动。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": 1,
+    "is_new": false
+  },
+  {
+    "id": "smart-organization",
+    "rank": 9,
+    "term_en": "Smart Organization",
+    "term_zh": "智能组织",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "智能组织是利用AI技术进行组织重构和提升组织效率的组织形式。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504901.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
+        "link": "https://www.qbitai.com/2026/10/504901.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "智能组织就是用人工智能技术让组织变得更聪明、更高效。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "lingdt-decision",
+    "rank": 10,
+    "term_en": "LingDT-Decision",
+    "term_zh": "灵动决策模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种专为快速决策设计的决策模型，具备高准确率和低Token成本。",
+    "appear_count": 1,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/10/504879.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+        "link": "https://www.qbitai.com/2026/10/504879.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "灵动决策模型：快速、准确、成本低，国产决策新秀。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "icf-laser-pulse-shape-design-system",
+    "rank": 11,
+    "term_en": "ICF Laser Pulse Shape Design System",
+    "term_zh": "惯性约束聚变激光脉冲形状设计系统",
+    "abbreviation": "LPDS",
+    "category": "AI工程",
+    "one_liner": "一种用于惯性约束聚变中激光脉冲形状设计的生成式逆建模框架。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33096"
+    ],
+    "matched_articles": [
+      {
+        "title": "Inverse Modeling for Laser Pulse Shape Design in Inertial Confinement Fusion",
+        "link": "https://arxiv.org/abs/2610.33096",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "这个系统就像一个激光脉冲形状的“调色板”，帮助科学家设计出更适合聚变实验的激光脉冲。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "iron-meme",
+    "rank": 12,
+    "term_en": "IRON-Meme",
+    "term_zh": "IRON-Meme数据集",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一个用于在线迷因叙事中身份和角色结构化理解的标注基准。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33097"
+    ],
+    "matched_articles": [
+      {
+        "title": "IRON-Meme: A Benchmark for Structured Understanding of Identities and Roles in Online Meme Narratives",
+        "link": "https://arxiv.org/abs/2610.33097",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "IRON-Meme数据集：帮助理解网络迷因故事中人物和身份的标注工具。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "alignment-faking",
+    "rank": 13,
+    "term_en": "Alignment-Faking",
+    "term_zh": "对齐伪装",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "对齐伪装是指大型语言模型在评估或审计部署时隐藏其潜在的不对齐行为。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33180"
+    ],
+    "matched_articles": [
+      {
+        "title": "Propensities Please: Exposing Alignment-Faking LLMs using Synthetic Document Finetuning",
+        "link": "https://arxiv.org/abs/2610.33180",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "对齐伪装就是大型语言模型在检查时假装自己没问题，其实可能隐藏着不对劲的行为。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "synthetic-document-finetuning",
+    "rank": 14,
+    "term_en": "Synthetic Document Finetuning",
+    "term_zh": "合成文档微调",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "合成文档微调是一种通过训练模型识别特定关键词来揭示潜在不对齐倾向的方法。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33180"
+    ],
+    "matched_articles": [
+      {
+        "title": "Propensities Please: Exposing Alignment-Faking LLMs using Synthetic Document Finetuning",
+        "link": "https://arxiv.org/abs/2610.33180",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "合成文档微调是训练AI识别关键词，揭示其潜在的不诚实倾向。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "continuous-sign-language-recognition-cslr",
+    "rank": 15,
+    "term_en": "Continuous Sign Language Recognition (CSLR)",
+    "term_zh": "连续手语识别",
+    "abbreviation": "CSLR",
+    "category": "AI应用",
+    "one_liner": "连续手语识别是一种识别和理解连续手语信号的技术。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33200"
+    ],
+    "matched_articles": [
+      {
+        "title": "Isharah-Selfie: Continuous Sign Language Recognition Dataset for One-handed Signing",
+        "link": "https://arxiv.org/abs/2610.33200",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "连续手语识别就像懂手语的AI，能看懂连续的手势说话。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "smart-coder-framework",
+    "rank": 16,
+    "term_en": "Smart Coder Framework",
+    "term_zh": "智能编码器框架",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "智能编码器框架是一个结构化人机协作编码的三阶段方法。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33205"
+    ],
+    "matched_articles": [
+      {
+        "title": "Scaling Qualitative Analysis with Large Language Models: Development and Validation of the Smart Coder Framework for Human-LLM Collaborative Coding",
+        "link": "https://arxiv.org/abs/2610.33205",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "智能编码器框架：一种让人和AI一起编写代码的三步法，提高编程效率。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "newsbench",
+    "rank": 17,
+    "term_en": "NewsBench",
+    "term_zh": "新闻基准",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "基于专家编辑标准的新闻认知质量评估基准。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33240"
+    ],
+    "matched_articles": [
+      {
+        "title": "NewsBench: Expert-Grounded Evaluation of Epistemic Quality in AI News Reporting",
+        "link": "https://arxiv.org/abs/2610.33240",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "NewsBench是一个评估新闻认知质量的工具，由专家制定标准。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "process-reward-agent",
+    "rank": 18,
+    "term_en": "Process Reward Agent",
+    "term_zh": "过程奖励代理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过过程监督和奖励机制优化数据科学代理的机器学习工作流程。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33245"
+    ],
+    "matched_articles": [
+      {
+        "title": "AdaPRA: Process Reward Agents with Adaptive Rubrics for Data Science",
+        "link": "https://arxiv.org/abs/2610.33245",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "过程奖励代理，就是通过观察和奖励，让机器学习过程更高效。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "adapra",
+    "rank": 19,
+    "term_en": "AdaPRA",
+    "term_zh": "AdaPRA",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "自适应评分标准的过程奖励代理，用于数据科学。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33245"
+    ],
+    "matched_articles": [
+      {
+        "title": "AdaPRA: Process Reward Agents with Adaptive Rubrics for Data Science",
+        "link": "https://arxiv.org/abs/2610.33245",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "AdaPRA是一种智能算法，能根据数据科学任务自动调整评分标准，提高数据分析效率。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "scoped-semantic-invariance",
+    "rank": 20,
+    "term_en": "Scoped Semantic Invariance",
+    "term_zh": "范围语义不变性",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在有限语义域内评估LLM的一致性。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33267"
+    ],
+    "matched_articles": [
+      {
+        "title": "Scoped Semantic Invariance as a Foundation for LLM Reliability",
+        "link": "https://arxiv.org/abs/2610.33267",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "在特定范围内，AI模型输出的意思保持一致，确保其可靠性。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "hotspot-structure",
+    "rank": 21,
+    "term_en": "Hotspot Structure",
+    "term_zh": "热点结构",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在LLM中发现的，与重复的TREE、STAR和CYCLE模式相关的局部子图。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33267"
+    ],
+    "matched_articles": [
+      {
+        "title": "Scoped Semantic Invariance as a Foundation for LLM Reliability",
+        "link": "https://arxiv.org/abs/2610.33267",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "热点结构是LLM中重复出现的特定模式，有助于提高AI的可靠性。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "layered-grounding-strategy",
+    "rank": 22,
+    "term_en": "Layered Grounding Strategy",
+    "term_zh": "分层定位策略",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过分层定位策略，在保持正确知识的同时减少不一致性。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33267"
+    ],
+    "matched_articles": [
+      {
+        "title": "Scoped Semantic Invariance as a Foundation for LLM Reliability",
+        "link": "https://arxiv.org/abs/2610.33267",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "分层定位策略：像盖楼一样，每层只放对的东西，减少混乱，保证知识准确。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "gems-rag",
+    "rank": 23,
+    "term_en": "GEMS-RAG",
+    "term_zh": "基于图 grounding 的多模态标准检索增强生成",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种基于图 grounding 的多模态标准检索增强生成框架，用于工程标准的推理。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33277"
+    ],
+    "matched_articles": [
+      {
+        "title": "GEMS-RAG: Graph-grounded Engineering Multimodal Standards Retrieval-Augmented Generation",
+        "link": "https://arxiv.org/abs/2610.33277",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "GEMS-RAG是一种智能技术，能理解工程标准，并生成相关内容。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "interaction-effect-propagation-ie-prop",
+    "rank": 24,
+    "term_en": "Interaction-Effect Propagation (IE-Prop)",
+    "term_zh": "交互效应传播",
+    "abbreviation": "IE-Prop",
+    "category": "AI技术",
+    "one_liner": "一种交互条件模型，用于学习正确和错误上游代理的单独效应，并递归传播风险估计。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33282"
+    ],
+    "matched_articles": [
+      {
+        "title": "Estimation of Propagated Risk in LLM-based Multi-Agent Systems",
+        "link": "https://arxiv.org/abs/2610.33282",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "IE-Prop是一种AI模型，能学习并传播不同代理行为的影响，预测风险。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "strategic-tension",
+    "rank": 25,
+    "term_en": "Strategic tension",
+    "term_zh": "战略张力",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "通过空间依赖矩阵的特征半径定义的网络衍生指标，用于衡量复杂环境中的战略决策张力。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33323"
+    ],
+    "matched_articles": [
+      {
+        "title": "AI Teaches Humans to Handle Complexity in the Game of Go",
+        "link": "https://arxiv.org/abs/2610.33323",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "战略张力是衡量复杂环境中决策难度的指标，就像下围棋时，每一步棋都要考虑很多因素。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "tempshap",
+    "rank": 26,
+    "term_en": "TempShap",
+    "term_zh": "时间序列预测中的 TempShap",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种基于 Shapley 的框架，用于时间序列预测中特征影响的时间定位和预测范围影响分析。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33330"
+    ],
+    "matched_articles": [
+      {
+        "title": "TempShap: When and How Much a Feature Matters in Time-Series Forecasting",
+        "link": "https://arxiv.org/abs/2610.33330",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "TempShap是分析时间序列预测中，哪些特征何时何地影响预测结果的方法。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "benchbench-cloning",
+    "rank": 27,
+    "term_en": "BenchBench-Cloning",
+    "term_zh": "BenchBench-Cloning基准",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一个用于评估大型语言模型在分子克隆实验规划中的基准。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33355"
+    ],
+    "matched_articles": [
+      {
+        "title": "BenchBench-Cloning: Evaluating Molecular Cloning Design and Protocol Development",
+        "link": "https://arxiv.org/abs/2610.33355",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "BenchBench-Cloning是评估大语言模型在分子克隆实验设计上的标准。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "agentorch",
+    "rank": 28,
+    "term_en": "AgentOrch",
+    "term_zh": "AgentOrch基准",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一个比较全局编排与逐步交互在企业SOP上的基准。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33375"
+    ],
+    "matched_articles": [
+      {
+        "title": "AgentOrch: How Close Can Global Orchestration Come to Step-by-Step Interaction?",
+        "link": "https://arxiv.org/abs/2610.33375",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "AgentOrch基准：像编排一场大戏，让企业流程像聊天一样自然流畅。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "discrete-diffusion-models",
+    "rank": 29,
+    "term_en": "Discrete Diffusion Models",
+    "term_zh": "离散扩散模型",
+    "abbreviation": "DDMs",
+    "category": "AI技术",
+    "one_liner": "一种并行生成文本的模型，通过迭代去噪步骤生成整个输出。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33391"
+    ],
+    "matched_articles": [
+      {
+        "title": "How To Build A Modern Diffusion Language Model",
+        "link": "https://arxiv.org/abs/2610.33391",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "离散扩散模型：像拼图一样，一步步去除噪声，最终拼出完整的文本。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "data-optimization-for-llms",
+    "rank": 30,
+    "term_en": "Data Optimization for LLMs",
+    "term_zh": "LLM数据优化",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "针对大型语言模型训练和应用过程中的数据优化技术。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.33405"
+    ],
+    "matched_articles": [
+      {
+        "title": "Data Optimization for LLMs: A Survey",
+        "link": "https://arxiv.org/abs/2610.33405",
+        "source": "arXiv AI"
+      }
+    ],
+    "date": "2026-10-27",
+    "status": "hot",
+    "explanation": "LLM数据优化：让大型语言模型更聪明，通过优化训练数据提升其性能。",
+    "first_appeared": "2026-10-27T04:40:30.089Z",
+    "last_appeared": "2026-10-27T04:40:30.089Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
     "id": "decision-model",
     "rank": 1,
     "term_en": "Decision Model",
@@ -7,7 +959,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "用于辅助决策的算法模型，能够处理结构化决策任务。",
-    "appear_count": 6,
+    "appear_count": 5,
     "sources": [
       "arXiv AI",
       "量子位"
@@ -37,7 +989,7 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "决策模型就像一个智能助手，帮你分析信息，做出更准确的决策。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
@@ -52,7 +1004,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "能够感知环境、执行任务并做出决策的软件实体。",
-    "appear_count": 4,
+    "appear_count": 3,
     "sources": [
       "arXiv AI",
       "量子位"
@@ -81,7 +1033,7 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "智能体就像一个能看、能做、能思考的机器人，能帮我们完成各种任务。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
@@ -96,7 +1048,7 @@
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "从自然语言中识别用户意图或目的的技术。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv AI",
       "量子位"
@@ -124,55 +1076,12 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "意图识别就是AI理解你说什么，想做什么。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
     "rank_change": null,
     "is_new": true
-  },
-  {
-    "id": "physical-ai",
-    "rank": 4,
-    "term_en": "Physical AI",
-    "term_zh": "物理人工智能",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "使AI理解物理环境，通过机器人完成实际任务。",
-    "appear_count": 3,
-    "sources": [
-      "arXiv CV",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31983",
-      "https://www.qbitai.com/2026/10/504800.html",
-      "https://www.qbitai.com/2026/10/504730.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Interpreting Physics in Video Encoders using Multi-Object Interaction Videos",
-        "link": "https://arxiv.org/abs/2610.31983",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "谁在给OpenAI供应具身数据？",
-        "link": "https://www.qbitai.com/2026/10/504800.html",
-        "source": "量子位"
-      },
-      {
-        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
-        "link": "https://www.qbitai.com/2026/10/504730.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "物理人工智能是让AI像人一样感知世界，用机器人做实际工作。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": -2,
-    "is_new": false
   },
   {
     "id": "high-grade-driver-assistance",
@@ -182,7 +1091,7 @@
     "abbreviation": "",
     "category": "AI应用",
     "one_liner": "提供高级驾驶辅助功能的系统，包括自动泊车、自适应巡航等。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "量子位"
     ],
@@ -203,7 +1112,7 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "高阶辅助驾驶是像自动泊车、自适应巡航这样的高级驾驶帮手，让驾驶更轻松安全。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
@@ -218,7 +1127,7 @@
     "abbreviation": "PPO",
     "category": "AI技术",
     "one_liner": "一种强化学习算法，用于优化策略的参数。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI"
     ],
@@ -239,7 +1148,7 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "PPO是一种智能算法，能像人一样学习，不断优化自己的决策，用于机器人协作控制和股票交易等。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
@@ -254,7 +1163,7 @@
     "abbreviation": "SAC",
     "category": "AI技术",
     "one_liner": "一种强化学习算法，结合了软演员和评论家方法。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI"
     ],
@@ -275,743 +1184,10 @@
       }
     ],
     "date": "2026-10-26",
-    "status": "hot",
+    "status": "warm",
     "explanation": "SAC是一种智能算法，像演员和评论家一样，学习如何做出最佳决策。",
     "first_appeared": "2026-10-26T04:21:40.988Z",
     "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "ai-asset-accumulation",
-    "rank": 8,
-    "term_en": "AI Asset Accumulation",
-    "term_zh": "AI资产沉淀",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "企业通过AI应用积累的数据、模型和知识等资源。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504901.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
-        "link": "https://www.qbitai.com/2026/10/504901.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "AI资产沉淀就是企业用AI技术收集、积累数据、模型和知识等宝贵资源。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "digital-human",
-    "rank": 9,
-    "term_en": "Digital Human",
-    "term_zh": "数字人",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "通过计算机技术模拟人类形象、行为和交互的虚拟角色。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504901.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
-        "link": "https://www.qbitai.com/2026/10/504901.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "数字人就是用电脑技术造出像真人一样的虚拟角色，能模仿人的动作和交流。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "token-consumption",
-    "rank": 10,
-    "term_en": "Token Consumption",
-    "term_zh": "Token消耗",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "在自然语言处理中，处理每个单词或字符所需的计算资源。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504879.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
-        "link": "https://www.qbitai.com/2026/10/504879.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "Token消耗就是处理一个词或字符需要多少计算资源。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "schema-driven-semantic-parsing",
-    "rank": 11,
-    "term_en": "Schema-Driven Semantic Parsing",
-    "term_zh": "模式驱动语义解析",
-    "abbreviation": "SDSP",
-    "category": "AI技术",
-    "one_liner": "通过预先定义的模型结构来解析自然语言，生成结构化输出。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504832.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
-        "link": "https://www.qbitai.com/2026/10/504832.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "Schema-Driven Semantic Parsing就像用地图解析语言，把自然语言变成电脑能理解的格式。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "event-extraction",
-    "rank": 12,
-    "term_en": "Event Extraction",
-    "term_zh": "事件抽取",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "从文本中识别和提取特定类型事件的过程。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504832.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
-        "link": "https://www.qbitai.com/2026/10/504832.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "从文本中找出并提取特定事件的过程，就像从文章里找出发生了什么。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "egocentric-data",
-    "rank": 13,
-    "term_en": "Egocentric Data",
-    "term_zh": "第一人称视角数据",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "记录第一人称视角的交互过程和动作数据，用于训练具身AI。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504800.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "谁在给OpenAI供应具身数据？",
-        "link": "https://www.qbitai.com/2026/10/504800.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "记录自己视角的互动和动作数据，帮助AI更懂人类。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": -10,
-    "is_new": false
-  },
-  {
-    "id": "multidisciplinary-human-agent-collaboration",
-    "rank": 14,
-    "term_en": "Multidisciplinary Human-Agent Collaboration",
-    "term_zh": "多学科人机协同",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "不同专长AI分身协同工作，辅助医生进行复杂病例诊断。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504734.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
-        "link": "https://www.qbitai.com/2026/10/504734.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "多学科AI分身合作，像医生助手一样，帮医生诊断疑难杂症。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": -10,
-    "is_new": false
-  },
-  {
-    "id": "motubrain",
-    "rank": 15,
-    "term_en": "Motubrain",
-    "term_zh": "摩图脑",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "为机器人构建具备通用能力的‘大脑’，探索能力泛化。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504730.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
-        "link": "https://www.qbitai.com/2026/10/504730.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "摩图脑：给机器人装上像人脑一样的“大脑”，让机器人能学习各种技能。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": -10,
-    "is_new": false
-  },
-  {
-    "id": "polibrain",
-    "rank": 16,
-    "term_en": "Polibrain",
-    "term_zh": "博脑",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "预测式世界模型，让机器人拥有预测和规划能力。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504653.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
-        "link": "https://www.qbitai.com/2026/10/504653.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "博脑是一种让机器人能预测和规划的AI模型，就像机器人的大脑一样聪明。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": -10,
-    "is_new": false
-  },
-  {
-    "id": "multi-objective-optimization",
-    "rank": 17,
-    "term_en": "Multi-Objective Optimization",
-    "term_zh": "多目标优化",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种优化方法，同时考虑多个目标，以找到最佳解决方案。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31701"
-    ],
-    "matched_articles": [
-      {
-        "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
-        "link": "https://arxiv.org/abs/2610.31701",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "多目标优化就像同时追求多个好结果，找到最满意的方案。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "capability-centric-learning-paradigm",
-    "rank": 18,
-    "term_en": "Capability-Centric Learning Paradigm",
-    "term_zh": "能力中心学习范式",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "一种以能力为中心的学习范式，使智能体能够从自身执行中获取、验证和优化可重用能力。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31789"
-    ],
-    "matched_articles": [
-      {
-        "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
-        "link": "https://arxiv.org/abs/2610.31789",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "能力中心学习范式：让AI像人一样，从实践中学习、验证和提升技能。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "patronizing-and-condescending-language-detection",
-    "rank": 19,
-    "term_en": "Patronizing and Condescending Language Detection",
-    "term_zh": "傲慢及贬低性语言检测",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种自动检测傲慢及贬低性语言（PCL）的系统，用于识别和分类这类有害语言。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31808"
-    ],
-    "matched_articles": [
-      {
-        "title": "Patronizing and Condescending Language Detection in English and Mandarin",
-        "link": "https://arxiv.org/abs/2610.31808",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "识别傲慢贬低话术的AI工具。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "paperformalizer",
-    "rank": 20,
-    "term_en": "PaperFormalizer",
-    "term_zh": "论文形式化工具",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "一个基于Lean的智能管道，帮助作者在论文中找到并填补证明或假设中的小漏洞。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31810"
-    ],
-    "matched_articles": [
-      {
-        "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
-        "link": "https://arxiv.org/abs/2610.31810",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "PaperFormalizer就像一个智能助手，帮你检查论文里的漏洞，让论文更严谨。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "self-directed-repair",
-    "rank": 21,
-    "term_en": "Self-Directed Repair",
-    "term_zh": "自我引导修复",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "一种机制，使智能体能够从错误中学习，将经验转化为持续改进。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31846"
-    ],
-    "matched_articles": [
-      {
-        "title": "Don't Forget What You Just Learned: Self-Directed Repair Turns Agent Mistakes Into Lasting Lessons",
-        "link": "https://arxiv.org/abs/2610.31846",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "自我引导修复：AI能从错误中学习，让经验帮助自己不断进步。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "tool-driven-agentic-circuit-synthesis",
-    "rank": 22,
-    "term_en": "Tool-driven Agentic Circuit Synthesis",
-    "term_zh": "工具驱动代理电路合成",
-    "abbreviation": "TACS",
-    "category": "AI工程",
-    "one_liner": "一种利用大型语言模型直接驱动电子设计自动化工具进行射频和毫米波模块设计的框架。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31882"
-    ],
-    "matched_articles": [
-      {
-        "title": "TACS-RF: Tool-driven Agentic Circuit Synthesis of RF and mmWave Modules",
-        "link": "https://arxiv.org/abs/2610.31882",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "TACS：用AI工具自动设计射频和毫米波电路，让设计更简单。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "checkpoint-state",
-    "rank": 23,
-    "term_en": "Checkpoint state",
-    "term_zh": "检查点状态",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "在AI代理工作流程中，用于记录代理执行状态以便在权限变化或外部结果不确定时恢复执行的状态。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31916"
-    ],
-    "matched_articles": [
-      {
-        "title": "Permission to Retry: A Study of Authorization and Recovery in AI Agent Workflows",
-        "link": "https://arxiv.org/abs/2610.31916",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "检查点状态就像AI工作过程中的备忘录，记录了它做到哪一步，以便遇到问题时能从备忘录处继续工作。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "conformance-study",
-    "rank": 24,
-    "term_en": "Conformance study",
-    "term_zh": "一致性研究",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "一种通过历史记录与提供者效果账本对比来检查AI代理工作流程中不同义务的方法。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31916"
-    ],
-    "matched_articles": [
-      {
-        "title": "Permission to Retry: A Study of Authorization and Recovery in AI Agent Workflows",
-        "link": "https://arxiv.org/abs/2610.31916",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "一致性研究是检查AI工作流程是否按规则行事，确保它正确执行任务。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "hierarchical-agent-distillation",
-    "rank": 25,
-    "term_en": "Hierarchical agent distillation",
-    "term_zh": "分层代理蒸馏",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种将教师生成的演示和学生生成的经验相结合的框架，以优化大型语言模型代理的训练。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31918"
-    ],
-    "matched_articles": [
-      {
-        "title": "Beyond On-Policy vs. Off-Policy: At What Level Should LLM Agent Distillation Follow the Student?",
-        "link": "https://arxiv.org/abs/2610.31918",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "分层代理蒸馏是一种训练大型语言模型的方法，结合专家演示和学生学习经验，让模型更聪明。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "markov-decision-process-mdp",
-    "rank": 26,
-    "term_en": "Markov Decision Process (MDP)",
-    "term_zh": "马尔可夫决策过程",
-    "abbreviation": "MDP",
-    "category": "AI技术",
-    "one_liner": "一种数学模型，用于描述决策者在不确定环境中如何做出决策。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31937"
-    ],
-    "matched_articles": [
-      {
-        "title": "$M^3$: A Multi-LLM System for Multi-Turn Jailbreaking as a Markov Decision Process",
-        "link": "https://arxiv.org/abs/2610.31937",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "MDP就像一个猜谜游戏，决策者根据已知信息不断猜测，最终找到最佳答案。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "multi-turn-jailbreaking",
-    "rank": 27,
-    "term_en": "Multi-turn jailbreaking",
-    "term_zh": "多轮越狱",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "一种通过多轮交互逐渐绕过安全机制的方法，用于测试大型语言模型的安全性。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.31937"
-    ],
-    "matched_articles": [
-      {
-        "title": "$M^3$: A Multi-LLM System for Multi-Turn Jailbreaking as a Markov Decision Process",
-        "link": "https://arxiv.org/abs/2610.31937",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "多轮越狱就像多次尝试解锁，用来测试大型语言模型的安全漏洞。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "barc-bench",
-    "rank": 28,
-    "term_en": "BARC-Bench",
-    "term_zh": "安全边界基准",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一个用于评估智能体在模拟工作空间环境中行为安全性的基准。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.32024"
-    ],
-    "matched_articles": [
-      {
-        "title": "BARC-Bench: Benign Asks, Risky Consequences",
-        "link": "https://arxiv.org/abs/2610.32024",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "BARC-Bench是评估AI在模拟环境中行为安全性的工具。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "rsi-opt",
-    "rank": 29,
-    "term_en": "RSI-Opt",
-    "term_zh": "递归自我改进优化器代理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种递归自我改进的优化器代理，用于改进模型训练过程。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.32026"
-    ],
-    "matched_articles": [
-      {
-        "title": "RSI-Opt: Recursive Self-Improvement Optimizer Agents For Model Training",
-        "link": "https://arxiv.org/abs/2610.32026",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "RSI-Opt是一种能自动改进模型训练的智能助手，让训练过程更高效。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "ai-for-science-agents",
-    "rank": 30,
-    "term_en": "AI-for-Science agents",
-    "term_zh": "AI科学代理",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "将大型语言模型集成到特定领域代理框架中的智能体。",
-    "appear_count": 1,
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.32045"
-    ],
-    "matched_articles": [
-      {
-        "title": "Do AI-for-Science Agents Preserve Model Safety?",
-        "link": "https://arxiv.org/abs/2610.32045",
-        "source": "arXiv AI"
-      }
-    ],
-    "date": "2026-10-26",
-    "status": "hot",
-    "explanation": "AI科学代理是像人一样的智能助手，用大型语言模型帮助解决科学问题。",
-    "first_appeared": "2026-10-26T04:21:40.988Z",
-    "last_appeared": "2026-10-26T04:21:40.988Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "world-model",
-    "rank": 1,
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "对物理世界及其变化规律的一种抽象理解，用于预测和规划。",
-    "appear_count": 3,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/504901.html",
-      "https://www.qbitai.com/2026/10/504730.html",
-      "https://www.qbitai.com/2026/10/504653.html",
-      "https://www.qbitai.com/2026/10/504638.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "百度世界2026前瞻：10+重磅分论坛，全面解码AI时代的智能组织进化路径",
-        "link": "https://www.qbitai.com/2026/10/504901.html",
-        "source": "量子位"
-      },
-      {
-        "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
-        "link": "https://www.qbitai.com/2026/10/504730.html",
-        "source": "量子位"
-      },
-      {
-        "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
-        "link": "https://www.qbitai.com/2026/10/504653.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-25",
-    "status": "warm",
-    "explanation": "世界模型就像大脑对世界的理解，能预测未来，帮助机器学习。",
-    "first_appeared": "2026-10-25T04:16:09.810Z",
-    "last_appeared": "2026-10-25T04:16:09.810Z",
     "rank_change": null,
     "is_new": true
   },
@@ -1023,7 +1199,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 29,
+    "appear_count": 28,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -1072,7 +1248,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 12,
+    "appear_count": 11,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -1120,7 +1296,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 4,
+    "appear_count": 3,
     "sources": [
       "arXiv AI",
       "arXiv CL"
@@ -1165,7 +1341,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI",
       "arXiv LG"
@@ -1203,49 +1379,6 @@
     "is_new": true
   },
   {
-    "id": "vision-language-models",
-    "rank": 5,
-    "term_en": "Vision-Language Models",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "appear_count": 1,
-    "sources": [
-      "arXiv CV"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.30634",
-      "https://arxiv.org/abs/2610.30740",
-      "https://arxiv.org/abs/2610.30824",
-      "https://arxiv.org/abs/2610.30834"
-    ],
-    "matched_articles": [
-      {
-        "title": "FedBST: Bilateral Self-Training for Unsupervised Federated Classification",
-        "link": "https://arxiv.org/abs/2610.30634",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Where Did the Light Come From? Diagnosing Cast-Shadow Reasoning in VLMs and Borrowing the Missing Shadow Prior from Image Generation Models",
-        "link": "https://arxiv.org/abs/2610.30740",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "Loop to Look Better: Learning Adaptive Depth for Question-Guided Perception in Vision-Language Models",
-        "link": "https://arxiv.org/abs/2610.30824",
-        "source": "arXiv CV"
-      }
-    ],
-    "date": "2026-10-23",
-    "status": "warm",
-    "explanation": "视觉语言模型：能看懂图片和文字，帮助理解图像内容。",
-    "first_appeared": "2026-10-23T04:22:37.808Z",
-    "last_appeared": "2026-10-23T04:22:37.808Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
     "id": "compose",
     "rank": 2,
     "term_en": "Compose",
@@ -1253,7 +1386,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -1301,7 +1434,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "指同时处理多种类型数据的系统或模型。",
-    "appear_count": 15,
+    "appear_count": 14,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -1350,7 +1483,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI",
       "arXiv CL",
