@@ -1,5 +1,501 @@
 [
   {
+    "id": "npu",
+    "rank": 1,
+    "term_en": "NPU",
+    "term_zh": "神经网络处理器",
+    "abbreviation": "NPU",
+    "category": "AI技术",
+    "one_liner": "专门用于加速神经网络计算任务的处理器。",
+    "appear_count": 22,
+    "sources": [
+      "arXiv CL",
+      "arXiv CV",
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.41292",
+      "https://arxiv.org/abs/2610.41391",
+      "https://arxiv.org/abs/2610.41661",
+      "https://arxiv.org/abs/2610.41704",
+      "https://arxiv.org/abs/2610.41883"
+    ],
+    "matched_articles": [
+      {
+        "title": "From Transcription to Reformulation: Defining and Benchmarking Grounded Generative Speech Recognition",
+        "link": "https://arxiv.org/abs/2610.41292",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Comparative Evaluation of LLM-Based Review Paradigms for Academic Paper Quality Assessment",
+        "link": "https://arxiv.org/abs/2610.41391",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "When Steering Shifts Discourse: Identifying and Intervening on Discourse-Level Changes due to Activation Steering in LLMs",
+        "link": "https://arxiv.org/abs/2610.41661",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "NPU是加速神经网络计算的处理器，让AI更聪明。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "world-model",
+    "rank": 2,
+    "term_en": "World Model",
+    "term_zh": "世界模型",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "用于预测现实世界下一个状态的人工智能模型。",
+    "appear_count": 12,
+    "sources": [
+      "arXiv CV",
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40935",
+      "https://arxiv.org/abs/2610.40947",
+      "https://arxiv.org/abs/2610.41030",
+      "https://arxiv.org/abs/2610.41022",
+      "https://arxiv.org/abs/2610.41041"
+    ],
+    "matched_articles": [
+      {
+        "title": "Let LiDAR Decide Where to Look: Geometry-Measured Token Selection for Efficient Sparse Latent World Models",
+        "link": "https://arxiv.org/abs/2610.40935",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "UFMF: Radar-Guided Kinematic Priors for Real-Time 4D Occupancy Forecasting",
+        "link": "https://arxiv.org/abs/2610.40947",
+        "source": "arXiv CV"
+      },
+      {
+        "title": "Dreams Are Cheaper Than Flights: Curated World-Model Data Improves Aerial Detection",
+        "link": "https://arxiv.org/abs/2610.41030",
+        "source": "arXiv CV"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "世界模型：AI预测现实世界未来状态的模型，像看透未来的魔法。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "fp32",
+    "rank": 3,
+    "term_en": "FP32",
+    "term_zh": "单精度浮点数",
+    "abbreviation": "FP32",
+    "category": "AI技术",
+    "one_liner": "一种浮点数表示格式，用于表示单精度浮点数。",
+    "appear_count": 2,
+    "sources": [
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.41073",
+      "https://www.qbitai.com/2026/10/506866.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "bf16 Rounding Silently Discards Most RL Policy Updates: A Hidden Training-Inference Mismatch and an Unbiased One-Line Fix",
+        "link": "https://arxiv.org/abs/2610.41073",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+        "link": "https://www.qbitai.com/2026/10/506866.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "FP32是电脑存储和处理小数的一种方式，就像用32位长的尺子量小数大小。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "algebraic-world-model",
+    "rank": 4,
+    "term_en": "Algebraic World Model",
+    "term_zh": "代数世界模型",
+    "abbreviation": "AWM",
+    "category": "AI技术",
+    "one_liner": "通过代数方法构建和探索虚拟世界的人工智能模型。",
+    "appear_count": 2,
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507031.html",
+      "https://www.qbitai.com/2026/11/506922.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+        "link": "https://www.qbitai.com/2026/11/507031.html",
+        "source": "量子位"
+      },
+      {
+        "title": "Jev新成果，再次引爆开源",
+        "link": "https://www.qbitai.com/2026/11/506922.html",
+        "source": "量子位"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "代数世界模型是AI用数学公式构建虚拟世界，像牛顿一样思考。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "asynchronous-reinforcement-learning-asynchronous-rl",
+    "rank": 5,
+    "term_en": "Asynchronous Reinforcement Learning (Asynchronous RL)",
+    "term_zh": "异步强化学习",
+    "abbreviation": "Asynchronous RL",
+    "category": "AI技术",
+    "one_liner": "一种强化学习范式，通过异步更新模型来提高训练效率。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40726"
+    ],
+    "matched_articles": [
+      {
+        "title": "Li$^{2}$SAO: Lifting Light Singl-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+        "link": "https://arxiv.org/abs/2610.40726",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "异步强化学习就像多个人同时练习，各自进步，然后一起提高效率。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "group-relative-actor-critic-bootstrapping",
+    "rank": 6,
+    "term_en": "Group-Relative Actor-Critic Bootstrapping",
+    "term_zh": "组相对演员-评论家引导",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种强化学习技术，通过组相对优势训练演员和评论家，以提高学习效率。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40726"
+    ],
+    "matched_articles": [
+      {
+        "title": "Li$^{2}$SAO: Lifting Light Singl-Rollout Asynchronous RL Optimization via Group-Relative Actor-Critic Bootstrapping",
+        "link": "https://arxiv.org/abs/2610.40726",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "组相对演员-评论家引导：一种让AI更快学会的新技术，通过比较不同AI的表现来提升效率。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "hybrid-cua",
+    "rank": 7,
+    "term_en": "Hybrid CUA",
+    "term_zh": "混合计算机使用代理",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "能够结合视觉GUI交互、代码和终端执行的计算机使用代理。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40747"
+    ],
+    "matched_articles": [
+      {
+        "title": "Mage-VL-Cowork: A Full Training Recipe to Learn Hybrid Computer Use From Evolved Harnesses",
+        "link": "https://arxiv.org/abs/2610.40747",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "混合计算机使用代理，就像一个多面手，能看、能写代码、能操作终端，帮助人们更方便地使用电脑。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "multimodally-aligned-checkpoint",
+    "rank": 8,
+    "term_en": "Multimodally Aligned Checkpoint",
+    "term_zh": "多模态对齐检查点",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种包含多模态数据的预训练模型检查点。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40747"
+    ],
+    "matched_articles": [
+      {
+        "title": "Mage-VL-Cowork: A Full Training Recipe to Learn Hybrid Computer Use From Evolved Harnesses",
+        "link": "https://arxiv.org/abs/2610.40747",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "多模态对齐检查点：一种能处理多种类型数据的预训练模型，能从不同数据中学习。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "skill-conditioned-generation-workflows",
+    "rank": 9,
+    "term_en": "Skill-Conditioned Generation Workflows",
+    "term_zh": "技能条件生成工作流程",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种根据特定技能生成工作流程的方法。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40747"
+    ],
+    "matched_articles": [
+      {
+        "title": "Mage-VL-Cowork: A Full Training Recipe to Learn Hybrid Computer Use From Evolved Harnesses",
+        "link": "https://arxiv.org/abs/2610.40747",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "根据特定技能自动生成工作流程，就像按图索骥一样方便。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "ndcg-10",
+    "rank": 10,
+    "term_en": "nDCG@10",
+    "term_zh": "nDCG@10",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在检索任务中，衡量检索结果相关性的指标，计算检索结果中前10个文档的相关度。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40966"
+    ],
+    "matched_articles": [
+      {
+        "title": "Better Retrievers, Worse Labels: How Incomplete Relevance Judgments Distort Abstention Evaluation in Conversational RAG",
+        "link": "https://arxiv.org/abs/2610.40966",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "nDCG@10是评估搜索结果好坏的指标，看前10个搜索结果有多相关。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "verbatim-memorisation",
+    "rank": 11,
+    "term_en": "Verbatim Memorisation",
+    "term_zh": "逐字记忆",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "模型在生成内容时，直接复制训练数据中的文本。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+        "link": "https://arxiv.org/abs/2610.40974",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "逐字记忆就是AI像照相机一样，直接复制训练时的文字内容。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "attention-heads",
+    "rank": 12,
+    "term_en": "Attention Heads",
+    "term_zh": "注意力头",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在神经网络中，用于处理不同输入数据的独立注意力机制。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+        "link": "https://arxiv.org/abs/2610.40974",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "注意力头就像神经网络里的多个小助手，各自专注于处理不同的信息。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "memorisation-capacity",
+    "rank": 13,
+    "term_en": "Memorisation Capacity",
+    "term_zh": "记忆容量",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "模型在记忆和复现训练数据中的文本方面的能力。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+        "link": "https://arxiv.org/abs/2610.40974",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "模型能记住并准确复现学过的文本信息。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "redundant-attention-heads",
+    "rank": 14,
+    "term_en": "Redundant Attention Heads",
+    "term_zh": "冗余注意力头",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在神经网络中，对模型性能提升没有贡献的注意力头。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.40974"
+    ],
+    "matched_articles": [
+      {
+        "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+        "link": "https://arxiv.org/abs/2610.40974",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "冗余注意力头是神经网络中不重要的部分，去掉它们可以让模型更高效。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
+    "id": "conformity-bias",
+    "rank": 15,
+    "term_en": "Conformity Bias",
+    "term_zh": "从众偏差",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "模型在检索增强生成任务中，受到多数误导性证据影响，降低对错误信息的检测能力。",
+    "appear_count": 1,
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2610.41012"
+    ],
+    "matched_articles": [
+      {
+        "title": "Language Models Show Conformity Bias in RAG: When the Majority Endorses a Poisoned Claim",
+        "link": "https://arxiv.org/abs/2610.41012",
+        "source": "arXiv CL"
+      }
+    ],
+    "date": "2026-11-02",
+    "status": "hot",
+    "explanation": "模型容易受多数错误信息影响，判断力下降。",
+    "first_appeared": "2026-11-02T05:37:20.845Z",
+    "last_appeared": "2026-11-02T05:37:20.845Z",
+    "rank_change": null,
+    "is_new": true
+  },
+  {
     "id": "minimax-h3",
     "rank": 1,
     "term_en": "MiniMax H3",
@@ -7,7 +503,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "Utopai Studios使用的定制视频模型。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "量子位"
     ],
@@ -34,78 +530,8 @@
       }
     ],
     "date": "2026-11-01",
-    "status": "hot",
+    "status": "warm",
     "explanation": "MiniMax H3是Utopai Studios的视频模型，能提升视频质量，支持4K重生成。",
-    "first_appeared": "2026-11-01T05:38:12.400Z",
-    "last_appeared": "2026-11-01T05:38:12.400Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "flashmla-prefill",
-    "rank": 2,
-    "term_en": "FlashMLA Prefill",
-    "term_zh": "FlashMLA预填充",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "DeepSeek开源的注意力核心算子库中的一个算子。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/506785.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "AI零帧起手写算子，反超DeepSeek人类手写巅峰：快了9.8%！",
-        "link": "https://www.qbitai.com/2026/10/506785.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-11-01",
-    "status": "hot",
-    "explanation": "FlashMLA预填充是DeepSeek库里的一个算子，能让AI更快识别图像，比人类写的还快9.8%。",
-    "first_appeared": "2026-11-01T05:38:12.400Z",
-    "last_appeared": "2026-11-01T05:38:12.400Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "ai-mirror",
-    "rank": 3,
-    "term_en": "AI Mirror",
-    "term_zh": "AI镜",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "结合AI技术，提供智能交互功能的镜子。",
-    "appear_count": 1,
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "date": "2026-11-01",
-    "status": "hot",
-    "explanation": "AI镜就是带大脑的镜子，能和你聊天互动。",
-    "first_appeared": "2026-11-01T05:38:12.400Z",
-    "last_appeared": "2026-11-01T05:38:12.400Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
-    "id": "pai-production-ai",
-    "rank": 4,
-    "term_en": "PAI (Production AI)",
-    "term_zh": "PAI（制片AI）",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "Utopai Studios的自研制片智能系统。",
-    "appear_count": 1,
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "date": "2026-11-01",
-    "status": "hot",
-    "explanation": "PAI（制片AI）是Utopai Studios开发的智能制片系统，能自动管理影视制作流程。",
     "first_appeared": "2026-11-01T05:38:12.400Z",
     "last_appeared": "2026-11-01T05:38:12.400Z",
     "rank_change": null,
@@ -119,7 +545,7 @@
     "abbreviation": "LLMs",
     "category": "AI技术",
     "one_liner": "一种能够处理和生成人类语言数据的复杂机器学习模型。",
-    "appear_count": 8,
+    "appear_count": 7,
     "sources": [
       "arXiv AI"
     ],
@@ -163,7 +589,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "将硬件、软件和服务打包，通过互联网提供按需使用的服务。",
-    "appear_count": 4,
+    "appear_count": 3,
     "sources": [
       "量子位"
     ],
@@ -207,7 +633,7 @@
     "abbreviation": "RSI",
     "category": "AI技术",
     "one_liner": "AI系统通过不断改进自身来提升性能的过程。",
-    "appear_count": 2,
+    "appear_count": 1,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -246,52 +672,6 @@
     "is_new": true
   },
   {
-    "id": "world-model",
-    "rank": 1,
-    "term_en": "World Model",
-    "term_zh": "世界模型",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "世界模型是整合物理规律、空间关系和行为逻辑的动态系统，用于因果推演。",
-    "appear_count": 3,
-    "sources": [
-      "arXiv CL",
-      "arXiv CV",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.33014",
-      "https://arxiv.org/abs/2610.33054",
-      "https://arxiv.org/abs/2610.33169",
-      "https://www.qbitai.com/2026/10/505032.html",
-      "https://www.qbitai.com/2026/10/504931.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "The Social World Model Evaluation Gap",
-        "link": "https://arxiv.org/abs/2610.33014",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "Saga: an in silico ontology for a multimodal patient world model",
-        "link": "https://arxiv.org/abs/2610.33054",
-        "source": "arXiv CV"
-      },
-      {
-        "title": "World-in-Context: Interactive Video World Modeling with In-Context Conditioning",
-        "link": "https://arxiv.org/abs/2610.33169",
-        "source": "arXiv CV"
-      }
-    ],
-    "date": "2026-10-27",
-    "status": "warm",
-    "explanation": "世界模型就像一个超级大脑，能理解物理规律、空间关系和人类行为，预测未来。",
-    "first_appeared": "2026-10-27T04:40:30.089Z",
-    "last_appeared": "2026-10-27T04:40:30.089Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
     "id": "physical-ai",
     "rank": 2,
     "term_en": "Physical AI",
@@ -299,7 +679,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "物理AI是利用物理规律和世界模型来增强AI理解和操作物理世界的能力。",
-    "appear_count": 3,
+    "appear_count": 2,
     "sources": [
       "arXiv CV",
       "量子位"
@@ -337,50 +717,6 @@
     "is_new": false
   },
   {
-    "id": "embodied-ai",
-    "rank": 3,
-    "term_en": "Embodied AI",
-    "term_zh": "具身智能",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "具身智能是使机器人在物理世界中感知、行动和交互的智能形式。",
-    "appear_count": 1,
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/505032.html",
-      "https://www.qbitai.com/2026/10/504915.html",
-      "https://www.qbitai.com/2026/10/504913.html",
-      "https://www.qbitai.com/2026/10/504905.html",
-      "https://www.qbitai.com/2026/10/504901.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "企业AI需要两个世界模型",
-        "link": "https://www.qbitai.com/2026/10/505032.html",
-        "source": "量子位"
-      },
-      {
-        "title": "南京物理AI上大分！三位图灵奖得主发声，50个应用场景亮相",
-        "link": "https://www.qbitai.com/2026/10/504915.html",
-        "source": "量子位"
-      },
-      {
-        "title": "iRTE2026：声网CEO赵斌提出五级对话能力框架，实时互动迈入对话 AGI 时代",
-        "link": "https://www.qbitai.com/2026/10/504913.html",
-        "source": "量子位"
-      }
-    ],
-    "date": "2026-10-27",
-    "status": "warm",
-    "explanation": "具身智能就是让机器人像人一样在现实世界感受、行动和交流。",
-    "first_appeared": "2026-10-27T04:40:30.089Z",
-    "last_appeared": "2026-10-27T04:40:30.089Z",
-    "rank_change": null,
-    "is_new": true
-  },
-  {
     "id": "rsi",
     "rank": 1,
     "term_en": "RSI",
@@ -388,7 +724,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 23,
+    "appear_count": 22,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -437,7 +773,7 @@
     "abbreviation": "",
     "category": "AI概念",
     "one_liner": "",
-    "appear_count": 6,
+    "appear_count": 5,
     "sources": [
       "arXiv AI",
       "arXiv CL",
@@ -485,7 +821,7 @@
     "abbreviation": "",
     "category": "AI技术",
     "one_liner": "指同时处理多种类型数据的系统或模型。",
-    "appear_count": 9,
+    "appear_count": 8,
     "sources": [
       "arXiv AI",
       "arXiv CL",
