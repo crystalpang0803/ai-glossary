@@ -43,6 +43,48 @@
     "status": "hot"
   },
   {
+    "id": "large-language-models",
+    "appear_count": 19,
+    "days": 1,
+    "term_en": "Large Language Models",
+    "term_zh": "大型语言模型",
+    "abbreviation": "LLMs",
+    "category": "AI概念",
+    "one_liner": "能够理解和生成人类语言的大型神经网络模型。",
+    "explanation": "大型语言模型就像能听懂人话的超级大脑，能理解和创造各种语言内容。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "arXiv LG"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05392",
+      "https://arxiv.org/abs/2611.05393",
+      "https://arxiv.org/abs/2611.05459",
+      "https://arxiv.org/abs/2611.05759",
+      "https://arxiv.org/abs/2611.05841"
+    ],
+    "matched_articles": [
+      {
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "link": "https://arxiv.org/abs/2611.05392",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+        "link": "https://arxiv.org/abs/2611.05393",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "Can Large Language Models Review the Scientific Literature? A Test Against a 102-Article Benchmark",
+        "link": "https://arxiv.org/abs/2611.05459",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 2,
+    "status": "hot"
+  },
+  {
     "id": "world-model",
     "appear_count": 12,
     "days": 1,
@@ -81,7 +123,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 2,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -121,7 +163,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 3,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -161,83 +203,79 @@
         "source": "量子位"
       }
     ],
-    "rank": 4,
-    "status": "hot"
-  },
-  {
-    "id": "energy-brain",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Energy Brain",
-    "term_zh": "能源大脑",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种用于能源管理与优化的人工智能模型。",
-    "explanation": "能源大脑就像能源管理的智能大脑，能帮我们更高效地使用能源。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/505928.html",
-      "https://www.qbitai.com/2026/10/505687.html",
-      "https://www.qbitai.com/2026/10/505635.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019",
-        "link": "https://www.qbitai.com/2026/10/505928.html",
-        "source": "量子位"
-      },
-      {
-        "title": "做能源与算力的“搭桥人”：达卯科技以能源大脑定义算电协同 | CPE 2026",
-        "link": "https://www.qbitai.com/2026/10/505687.html",
-        "source": "量子位"
-      },
-      {
-        "title": "OXR强势开源！1.3B横扫全球三榜第一，速度快过Paddle、MinerU，RSI让它卷出新高度",
-        "link": "https://www.qbitai.com/2026/10/505635.html",
-        "source": "量子位"
-      }
-    ],
     "rank": 5,
     "status": "hot"
   },
   {
-    "id": "optical-everything-recognition-oxr",
-    "appear_count": 3,
+    "id": "benchmarking",
+    "appear_count": 4,
     "days": 1,
-    "term_en": "Optical Everything Recognition (OXR)",
-    "term_zh": "全光识别",
-    "abbreviation": "OXR",
+    "term_en": "Benchmarking",
+    "term_zh": "基准测试",
+    "abbreviation": "",
     "category": "AI技术",
-    "one_liner": "一种能够解析多种文档元素的光学识别技术。",
-    "explanation": "OXR是一种能快速识别各种文档的技术，就像用扫描仪一样，但识别速度更快。",
+    "one_liner": "用于评估系统性能或比较不同系统的方法。",
+    "explanation": "基准测试是评估系统性能或比较不同系统的一种方法。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05450",
+      "https://arxiv.org/abs/2611.05512",
+      "https://arxiv.org/abs/2611.05524",
+      "https://arxiv.org/abs/2611.05827"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+        "link": "https://arxiv.org/abs/2611.05450",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "SlackBench: Benchmarking Agents on Collaborative Projects Grounded in Real Code Repositories",
+        "link": "https://arxiv.org/abs/2611.05512",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
+        "link": "https://arxiv.org/abs/2611.05524",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "ontology",
+    "appear_count": 3,
+    "days": 2,
+    "term_en": "Ontology",
+    "term_zh": "本体",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种描述知识结构的方法，用于构建知识库。",
+    "explanation": "本体是描述知识结构的方法，就像知识库的蓝图，帮助构建智能系统。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/10/505928.html",
-      "https://www.qbitai.com/2026/10/505687.html",
-      "https://www.qbitai.com/2026/10/505635.html"
+      "https://www.qbitai.com/2026/11/507696.html",
+      "https://www.qbitai.com/2026/11/507574.html"
     ],
     "matched_articles": [
       {
-        "title": "Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019",
-        "link": "https://www.qbitai.com/2026/10/505928.html",
+        "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+        "link": "https://www.qbitai.com/2026/11/507696.html",
         "source": "量子位"
       },
       {
-        "title": "做能源与算力的“搭桥人”：达卯科技以能源大脑定义算电协同 | CPE 2026",
-        "link": "https://www.qbitai.com/2026/10/505687.html",
-        "source": "量子位"
-      },
-      {
-        "title": "OXR强势开源！1.3B横扫全球三榜第一，速度快过Paddle、MinerU，RSI让它卷出新高度",
-        "link": "https://www.qbitai.com/2026/10/505635.html",
+        "title": "超维动力全栈矩阵亮相2026香港金融科技周，具身智能硬科技引爆全场",
+        "link": "https://www.qbitai.com/2026/11/507574.html",
         "source": "量子位"
       }
     ],
-    "rank": 6,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -275,7 +313,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 7,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -301,7 +339,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 8,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -327,7 +365,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 9,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -353,7 +391,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 10,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -379,7 +417,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 11,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -412,7 +450,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 12,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -444,7 +482,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 13,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -476,91 +514,39 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "energy-driven-ai-data-center-e-aidc",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Energy-Driven AI Data Center (E-AIDC)",
-    "term_zh": "能源驱动型人工智能数据中心",
-    "abbreviation": "E-AIDC",
-    "category": "AI应用",
-    "one_liner": "一种以能源效率为核心的人工智能数据中心。",
-    "explanation": "能源驱动型人工智能数据中心，就是用节能技术让数据中心更高效。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/10/505687.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "做能源与算力的“搭桥人”：达卯科技以能源大脑定义算电协同 | CPE 2026",
-        "link": "https://www.qbitai.com/2026/10/505687.html",
-        "source": "量子位"
-      }
-    ],
     "rank": 15,
     "status": "hot"
   },
   {
-    "id": "world-simulation",
-    "appear_count": 1,
+    "id": "conformal-prediction",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "World Simulation",
-    "term_zh": "世界模拟",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种模拟现实世界的人工智能模型。",
-    "explanation": "世界模拟就像用电脑玩游戏，让AI在虚拟世界里体验现实世界。",
+    "term_en": "Conformal Prediction",
+    "term_zh": "一致性预测",
+    "abbreviation": "Conformal Pred",
+    "category": "AI技术",
+    "one_liner": "一种提供有限样本、无分布覆盖保证的预测方法。",
+    "explanation": "一致性预测是一种即使样本少，也能保证预测准确性的方法。",
     "sources": [
-      "DeepMind Blog"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      "https://arxiv.org/abs/2611.05392",
+      "https://arxiv.org/abs/2611.05703"
     ],
     "matched_articles": [
       {
-        "title": "Genie 4: A new generation of world simulation",
-        "link": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
-        "source": "DeepMind Blog"
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "link": "https://arxiv.org/abs/2611.05392",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "From Type to Token: Petri Nets, Individual Token Philosophy, and Individualized Causal Effects",
+        "link": "https://arxiv.org/abs/2611.05703",
+        "source": "arXiv AI"
       }
     ],
     "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "fusion-inference-and-game-intelligence-fusionigi",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Fusion Inference and Game Intelligence (FusionIGI)",
-    "term_zh": "融合推理与博弈智能",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种结合推理和博弈策略的人工智能技术。",
-    "explanation": "融合推理与博弈智能，就是让AI像玩游戏一样，边推理边决策。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "rank": 17,
-    "status": "hot"
-  },
-  {
-    "id": "secure-code-generation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Secure Code Generation",
-    "term_zh": "安全代码生成",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种生成安全代码的人工智能技术。",
-    "explanation": "安全代码生成：AI技术自动写出更安全的代码，防止软件漏洞。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "rank": 18,
     "status": "hot"
   },
   {
@@ -586,7 +572,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -612,7 +598,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 20,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -638,7 +624,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 21,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -664,7 +650,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 22,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -690,7 +676,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 23,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -716,7 +702,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 24,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -742,7 +728,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 25,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -768,7 +754,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 26,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -794,7 +780,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -820,7 +806,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 28,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -846,7 +832,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 29,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -872,7 +858,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 30,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -898,7 +884,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 31,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -924,7 +910,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 32,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -950,33 +936,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
-    "status": "hot"
-  },
-  {
-    "id": "ontology",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Ontology",
-    "term_zh": "本体",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "用于描述知识结构的形式化框架。",
-    "explanation": "本体是描述知识结构的框架，就像知识地图，帮助AI理解世界。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.37809"
-    ],
-    "matched_articles": [
-      {
-        "title": "What Does an Ontology Catch? Curated, LLM-Generated and Data-Derived Ontologies as Checkers of LLM Agents over Knowledge Graphs",
-        "link": "https://arxiv.org/abs/2610.37809",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 34,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1002,7 +962,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1028,7 +988,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 36,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1054,7 +1014,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 37,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1080,7 +1040,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 38,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1106,7 +1066,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 39,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1132,7 +1092,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 40,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1158,7 +1118,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 41,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1184,7 +1144,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 42,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1210,7 +1170,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1236,7 +1196,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1262,7 +1222,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 45,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1288,7 +1248,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1314,7 +1274,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 47,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1330,7 +1290,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 48,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1346,7 +1306,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 49,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1372,7 +1332,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 50,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1398,7 +1358,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 51,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1424,7 +1384,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 52,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1450,7 +1410,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 53,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1476,7 +1436,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 54,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1502,7 +1462,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 55,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1528,7 +1488,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 56,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1554,7 +1514,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 57,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1580,7 +1540,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 58,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1606,7 +1566,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 59,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1632,7 +1592,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 60,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1658,7 +1618,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 61,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1684,7 +1644,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 62,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1710,7 +1670,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1736,7 +1696,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1762,7 +1722,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1788,7 +1748,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 66,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1814,7 +1774,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1840,7 +1800,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1866,7 +1826,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1892,7 +1852,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -1918,7 +1878,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -1944,7 +1904,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -1960,7 +1920,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 73,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -1986,7 +1946,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 74,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2012,7 +1972,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 75,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2038,7 +1998,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 76,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2064,7 +2024,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 77,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2090,7 +2050,683 @@
         "source": "量子位"
       }
     ],
+    "rank": 75,
+    "status": "hot"
+  },
+  {
+    "id": "data-agent",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Data Agent",
+    "term_zh": "数据智能体",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "专门用于数据收集和处理的智能体。",
+    "explanation": "数据智能体：像机器人一样，自动收集和处理数据的“小助手”。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507696.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+        "link": "https://www.qbitai.com/2026/11/507696.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 76,
+    "status": "hot"
+  },
+  {
+    "id": "scout-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Scout agents",
+    "term_zh": "侦察兵智能体",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于侦察和分析的AI智能体。",
+    "explanation": "侦察兵智能体：像侦察兵一样，AI智能体去探索和发现系统漏洞。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507697.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Linux内核被挖出948个漏洞！OpenAI花120万美元找到的",
+        "link": "https://www.qbitai.com/2026/11/507697.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 77,
+    "status": "hot"
+  },
+  {
+    "id": "analyst-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Analyst agents",
+    "term_zh": "分析师智能体",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于分析代码寻找潜在漏洞的AI智能体。",
+    "explanation": "分析师智能体：像侦探一样，自动检查代码，找出可能的安全问题。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507697.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Linux内核被挖出948个漏洞！OpenAI花120万美元找到的",
+        "link": "https://www.qbitai.com/2026/11/507697.html",
+        "source": "量子位"
+      }
+    ],
     "rank": 78,
+    "status": "hot"
+  },
+  {
+    "id": "exploitdev-agents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ExploitDev agents",
+    "term_zh": "攻击手智能体",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于攻击和利用漏洞的AI智能体。",
+    "explanation": "攻击手智能体：像黑客一样，自动寻找并利用电脑漏洞的AI。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507697.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Linux内核被挖出948个漏洞！OpenAI花120万美元找到的",
+        "link": "https://www.qbitai.com/2026/11/507697.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 79,
+    "status": "hot"
+  },
+  {
+    "id": "uncertainty-aware-resource-orchestration",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Uncertainty-Aware Resource Orchestration",
+    "term_zh": "不确定性感知资源编排",
+    "abbreviation": "Uncertainty-Aware RO",
+    "category": "AI工程",
+    "one_liner": "一种在不确定环境下优化资源分配的方法。",
+    "explanation": "在不确定情况下，智能系统自动调整资源分配，提高效率。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05392"
+    ],
+    "matched_articles": [
+      {
+        "title": "Uncertainty-Aware Resource Orchestration for Agentic AI Systems",
+        "link": "https://arxiv.org/abs/2611.05392",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 80,
+    "status": "hot"
+  },
+  {
+    "id": "meta-agent-supervision",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Meta-Agent Supervision",
+    "term_zh": "元智能体监督",
+    "abbreviation": "Meta-Agent Sup",
+    "category": "AI技术",
+    "one_liner": "一种通过元智能体提供监督以改进多智能体推理的方法。",
+    "explanation": "元智能体监督就像一个教练，帮助多个智能体在医疗推理中更聪明地学习。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05393"
+    ],
+    "matched_articles": [
+      {
+        "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+        "link": "https://arxiv.org/abs/2611.05393",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 81,
+    "status": "hot"
+  },
+  {
+    "id": "challenge-aware-knowledge-recruitment",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Challenge-Aware Knowledge Recruitment",
+    "term_zh": "挑战感知知识招募",
+    "abbreviation": "Challenge-Aware KR",
+    "category": "AI技术",
+    "one_liner": "一种根据推理过程中的挑战动态招募知识的方法。",
+    "explanation": "AI在推理难题时，像找帮手一样，根据挑战动态招募相关知识。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05393"
+    ],
+    "matched_articles": [
+      {
+        "title": "Challenge-Aware Knowledge Recruitment with Meta-Agent Supervision for Medical Multi-Agent Reasoning",
+        "link": "https://arxiv.org/abs/2611.05393",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 82,
+    "status": "hot"
+  },
+  {
+    "id": "tiered-llm-inference",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Tiered LLM Inference",
+    "term_zh": "分层LLM推理",
+    "abbreviation": "Tiered LLM Inf",
+    "category": "AI技术",
+    "one_liner": "一种将LLM推理分布在多个设备层级上的方法。",
+    "explanation": "分层LLM推理就像把大任务拆成小任务，分别在不同电脑上处理，提高效率。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05394"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+        "link": "https://arxiv.org/abs/2611.05394",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 83,
+    "status": "hot"
+  },
+  {
+    "id": "confidence-gated-tiered-llm-inference",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Confidence-Gated Tiered LLM Inference",
+    "term_zh": "置信度门控分层LLM推理",
+    "abbreviation": "Confidence-Gated Tiered LLM Inf",
+    "category": "AI技术",
+    "one_liner": "一种基于置信度信号的门控分层LLM推理方法。",
+    "explanation": "这是一种智能推理方法，根据置信度信号决定推理层次，提高推理准确性。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05394"
+    ],
+    "matched_articles": [
+      {
+        "title": "A Feasibility Condition for Confidence-Gated Tiered LLM Inference",
+        "link": "https://arxiv.org/abs/2611.05394",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 84,
+    "status": "hot"
+  },
+  {
+    "id": "experience-lifecycle",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Experience Lifecycle",
+    "term_zh": "经验生命周期",
+    "abbreviation": "Exp. Lifecycle",
+    "category": "AI概念",
+    "one_liner": "智能体在环境中学习、应用和更新经验的过程。",
+    "explanation": "AI通过在环境中学习、使用和更新经验来成长。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05450"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+        "link": "https://arxiv.org/abs/2611.05450",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 85,
+    "status": "hot"
+  },
+  {
+    "id": "rescopebench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ReScopeBench",
+    "term_zh": "ReScopeBench",
+    "abbreviation": "ReScopeBench",
+    "category": "AI工程",
+    "one_liner": "一个用于评估智能体在动态环境中经验生命周期的基准。",
+    "explanation": "ReScopeBench是一个测试智能体在变化环境中学习能力的工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05450"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Robust Long-Lived Agents: Benchmarking Experience Lifecycles in Evolving Environments",
+        "link": "https://arxiv.org/abs/2611.05450",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 86,
+    "status": "hot"
+  },
+  {
+    "id": "safediffuser",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "SafeDiffuser",
+    "term_zh": "安全扩散器",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种基于扩散概率模型的安全多智能体规划方法。",
+    "explanation": "安全扩散器：一种让多个智能体安全合作规划的方法，像扩散气体一样，确保每个智能体都能安全行动。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05524"
+    ],
+    "matched_articles": [
+      {
+        "title": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
+        "link": "https://arxiv.org/abs/2611.05524",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 87,
+    "status": "hot"
+  },
+  {
+    "id": "multi-agent-planning",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multi-Agent Planning",
+    "term_zh": "多智能体规划",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "协调多个智能体以实现共同目标的过程。",
+    "explanation": "多智能体规划就是让多个智能体一起合作，达成共同目标的方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05524"
+    ],
+    "matched_articles": [
+      {
+        "title": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
+        "link": "https://arxiv.org/abs/2611.05524",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 88,
+    "status": "hot"
+  },
+  {
+    "id": "diffusion-probabilistic-models",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Diffusion Probabilistic Models",
+    "term_zh": "扩散概率模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过模拟扩散过程来建模和生成数据的概率模型。",
+    "explanation": "扩散概率模型：模拟扩散过程，生成类似数据的概率模型。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05524"
+    ],
+    "matched_articles": [
+      {
+        "title": "MA-SafeDiffuser: Safe Multi-Agent Planning with Diffusion Probabilistic Models",
+        "link": "https://arxiv.org/abs/2611.05524",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 89,
+    "status": "hot"
+  },
+  {
+    "id": "whole-page-ranking",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Whole Page Ranking",
+    "term_zh": "全页排名",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "优化页面布局，平衡广告和有机内容的排名。",
+    "explanation": "全页排名是优化网页布局，让广告和内容都排在前面。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05542"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Efficient Whole Page Ranking with One-Pass Inference",
+        "link": "https://arxiv.org/abs/2611.05542",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 90,
+    "status": "hot"
+  },
+  {
+    "id": "one-pass-inference",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "One-Pass Inference",
+    "term_zh": "单次推理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在单个推理步骤中完成所有计算的过程。",
+    "explanation": "单次推理就是一次计算就能得出结果，就像算一道数学题只算一遍就知道了答案。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05542"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Efficient Whole Page Ranking with One-Pass Inference",
+        "link": "https://arxiv.org/abs/2611.05542",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 91,
+    "status": "hot"
+  },
+  {
+    "id": "multi-item-scoring",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Multi-Item Scoring",
+    "term_zh": "多项目评分",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种前缀感知的非自回归式框架，用于高效的多项目评分。",
+    "explanation": "多项目评分，就像给多个商品打分，快速又准确。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05542"
+    ],
+    "matched_articles": [
+      {
+        "title": "Towards Efficient Whole Page Ranking with One-Pass Inference",
+        "link": "https://arxiv.org/abs/2611.05542",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 92,
+    "status": "hot"
+  },
+  {
+    "id": "data-science-project",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "data science project",
+    "term_zh": "数据科学项目",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "涉及数据收集、处理、分析和解释的项目。",
+    "explanation": "数据科学项目就是用计算机处理和分析数据，从中找出有用信息的项目。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05548"
+    ],
+    "matched_articles": [
+      {
+        "title": "Iterated creation, grading, and revision of data science projects by language models",
+        "link": "https://arxiv.org/abs/2611.05548",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 93,
+    "status": "hot"
+  },
+  {
+    "id": "structured-focus-group",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "structured focus group",
+    "term_zh": "结构化焦点小组",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一种定性研究方法，通过引导讨论收集数据。",
+    "explanation": "结构化焦点小组：像开班会一样，引导一群人讨论，收集他们的想法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05549"
+    ],
+    "matched_articles": [
+      {
+        "title": "Whose Transparency is it Anyway? Understanding Generative AI Transparency Needs and Gaps Across Stakeholders",
+        "link": "https://arxiv.org/abs/2611.05549",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 94,
+    "status": "hot"
+  },
+  {
+    "id": "virtualtrialharness",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "VirtualTrialHarness",
+    "term_zh": "虚拟试验协调框架",
+    "abbreviation": "VTHarness",
+    "category": "AI工程",
+    "one_liner": "协调虚拟试验操作化的智能体框架。",
+    "explanation": "虚拟试验协调框架，就像一个智能的指挥家，让复杂的临床试验像玩游戏一样轻松进行。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05551"
+    ],
+    "matched_articles": [
+      {
+        "title": "VirtualTrialHarness: Coordinating Agentic Operationalization of Virtual Trial Protocols Across Complex Clinical Schemas",
+        "link": "https://arxiv.org/abs/2611.05551",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "procedural-skills",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "procedural skills",
+    "term_zh": "程序技能",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在特定工作流程阶段可重用的操作技能。",
+    "explanation": "程序技能：像组装玩具一样，按步骤重复操作完成任务的能力。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05551"
+    ],
+    "matched_articles": [
+      {
+        "title": "VirtualTrialHarness: Coordinating Agentic Operationalization of Virtual Trial Protocols Across Complex Clinical Schemas",
+        "link": "https://arxiv.org/abs/2611.05551",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 96,
+    "status": "hot"
+  },
+  {
+    "id": "agora",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "AGORA",
+    "term_zh": "AGORA聚合器",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "基于项目响应理论的可靠性感知的LLM评分聚合器。",
+    "explanation": "AGORA是一种智能评分工具，能准确聚合多个AI评分结果。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05556"
+    ],
+    "matched_articles": [
+      {
+        "title": "AGORA: Reliability-Aware Aggregation of LLM Judges via Item-Response Theory",
+        "link": "https://arxiv.org/abs/2611.05556",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "item-response-theory",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "item-response theory",
+    "term_zh": "项目响应理论",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于评估测试或问卷中项目难度的统计理论。",
+    "explanation": "项目响应理论是评估测试难度的统计方法，用于分析问卷或考试题目。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05556"
+    ],
+    "matched_articles": [
+      {
+        "title": "AGORA: Reliability-Aware Aggregation of LLM Judges via Item-Response Theory",
+        "link": "https://arxiv.org/abs/2611.05556",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "vibench-2-0",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ViBench 2.0",
+    "term_zh": "ViBench 2.0",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种用于评估长期软件构建的基准测试。",
+    "explanation": "ViBench 2.0是评估软件长期构建效率的测试工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05620"
+    ],
+    "matched_articles": [
+      {
+        "title": "ViBench 2.0: A Benchmark for Long-Horizon Software Building",
+        "link": "https://arxiv.org/abs/2611.05620",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "assurance-conditioned-continuous-authorization-acca",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Assurance-Conditioned Continuous Authorization (ACCA)",
+    "term_zh": "保证条件连续授权",
+    "abbreviation": "ACCA",
+    "category": "AI安全",
+    "one_liner": "一种独立于工具的授权方法，用于维持根据当前正当性所拥有的操作权限。",
+    "explanation": "ACCA是一种确保AI操作权限始终合法的授权方式，不依赖具体工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05632"
+    ],
+    "matched_articles": [
+      {
+        "title": "Assurance-Conditioned Continuous Authorization for Autonomous AI Agents",
+        "link": "https://arxiv.org/abs/2611.05632",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "on-policy-self-distillation-opsd",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "on-policy self-distillation (OPSD)",
+    "term_zh": "策略内自蒸馏",
+    "abbreviation": "OPSD",
+    "category": "AI技术",
+    "one_liner": "一种训练策略，通过从教师模型中训练一个无上下文的学生模型来提高权重记忆的长期事实存储能力。",
+    "explanation": "OPSD是一种训练方法，用教师模型训练学生模型，增强学生模型记忆长期事实的能力。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.05636"
+    ],
+    "matched_articles": [
+      {
+        "title": "Route to Remember: Adaptive Memory Selection for LLM Agents",
+        "link": "https://arxiv.org/abs/2611.05636",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 101,
     "status": "hot"
   }
 ]
