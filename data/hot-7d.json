@@ -87,6 +87,46 @@
     "status": "hot"
   },
   {
+    "id": "instruction-tuned-large-language-models-llms",
+    "appear_count": 13,
+    "days": 1,
+    "term_en": "Instruction-tuned large language models (LLMs)",
+    "term_zh": "指令微调的大型语言模型",
+    "abbreviation": "LLMs",
+    "category": "AI技术",
+    "one_liner": "通过指令微调来提高语言模型在特定任务上的性能。",
+    "explanation": "指令微调让大型语言模型更擅长特定任务，就像训练狗狗做特定动作。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08639",
+      "https://arxiv.org/abs/2611.08683",
+      "https://arxiv.org/abs/2611.08711",
+      "https://arxiv.org/abs/2611.08780",
+      "https://arxiv.org/abs/2611.08967"
+    ],
+    "matched_articles": [
+      {
+        "title": "Forcing a Letter Suppresses Refusal: Mechanistic Evidence from WMDP",
+        "link": "https://arxiv.org/abs/2611.08639",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "Compression of Emotion in Language Model Representations",
+        "link": "https://arxiv.org/abs/2611.08683",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "RL-ATTACK: A Generalized Black-Box Adversarial Attack on Language Models via Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2611.08711",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 3,
+    "status": "hot"
+  },
+  {
     "id": "complexity",
     "appear_count": 6,
     "days": 1,
@@ -126,7 +166,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 3,
+    "rank": 4,
     "status": "hot"
   },
   {
@@ -158,7 +198,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 4,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -196,7 +236,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 5,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -237,7 +277,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 6,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -278,7 +318,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 7,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -318,7 +358,46 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 8,
+    "rank": 9,
+    "status": "hot"
+  },
+  {
+    "id": "team-agent",
+    "appear_count": 4,
+    "days": 1,
+    "term_en": "Team Agent",
+    "term_zh": "团队代理",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种能够与多人协作完成任务的智能代理。",
+    "explanation": "团队代理就像一个智能助手，能和多人一起高效完成任务。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/508694.html",
+      "https://www.qbitai.com/2026/11/508690.html",
+      "https://www.qbitai.com/2026/11/508603.html",
+      "https://www.qbitai.com/2026/11/508566.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "千问办公2.0发布，首个支持多人与Agent协作的Team Agent来了",
+        "link": "https://www.qbitai.com/2026/11/508694.html",
+        "source": "量子位"
+      },
+      {
+        "title": "叙事奔涌，何以为锚?丨第 20 届中国投资年会·有限合伙人峰会即将启幕",
+        "link": "https://www.qbitai.com/2026/11/508690.html",
+        "source": "量子位"
+      },
+      {
+        "title": "基元律动发布NeoHorse-1.5-Flash Preview，Agent模型RSI进入第二轮迭代",
+        "link": "https://www.qbitai.com/2026/11/508603.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -351,7 +430,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 9,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -390,7 +469,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 10,
+    "rank": 12,
     "status": "hot"
   },
   {
@@ -428,39 +507,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "agent-harness",
-    "appear_count": 2,
-    "days": 1,
-    "term_en": "Agent Harness",
-    "term_zh": "代理 harness",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "围绕大型语言模型的支撑基础设施，决定模型能做什么以及如何失败。",
-    "explanation": "代理 harness 是控制大型语言模型行为和失败方式的工具。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40906",
-      "https://arxiv.org/abs/2610.40917"
-    ],
-    "matched_articles": [
-      {
-        "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
-        "link": "https://arxiv.org/abs/2610.40906",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "Towards Portable Specification of the Agent Harness",
-        "link": "https://arxiv.org/abs/2610.40917",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 12,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -492,7 +539,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 13,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -518,7 +565,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 14,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -544,7 +591,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 15,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -570,7 +617,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 16,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -596,7 +643,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 17,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -628,7 +675,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 18,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -660,7 +707,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -686,7 +733,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 20,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -712,7 +759,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -745,7 +792,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 22,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -778,7 +825,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 23,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -810,7 +857,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 24,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -842,335 +889,33 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 25,
-    "status": "hot"
-  },
-  {
-    "id": "chat-based-drug-design",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Chat-based drug design",
-    "term_zh": "基于对话的药物设计",
-    "abbreviation": "ChatDD",
-    "category": "AI应用",
-    "one_liner": "通过自然语言对话，让专家参与药物研发任务规划、执行与结果修正的过程。",
-    "explanation": "通过聊天让专家参与设计新药，就像聊天一样轻松研发药物。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/11/507150.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
-        "link": "https://www.qbitai.com/2026/11/507150.html",
-        "source": "量子位"
-      }
-    ],
     "rank": 26,
     "status": "hot"
   },
   {
-    "id": "vibe-coding-working",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Vibe Coding/Working",
-    "term_zh": "情绪编码/工作",
+    "id": "reasoning-distillation",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Reasoning Distillation",
+    "term_zh": "推理蒸馏",
     "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种结合情绪价值与实用价值的AI硬件交互方式。",
-    "explanation": "情绪编码工作就是用AI让机器能理解我们的情绪，像小米的便宜AI小玩意儿一样，让机器更懂人。",
+    "category": "AI技术",
+    "one_liner": "通过将大型教师模型的推理解决方案训练小型语言模型，以转移数学推理能力的方法。",
+    "explanation": "推理蒸馏就像把大模型的推理能力，通过训练，转移到小模型上，让小模型也能做数学推理。",
     "sources": [
-      "量子位"
+      "arXiv CL"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/507107.html"
+      "https://arxiv.org/abs/2611.09042"
     ],
     "matched_articles": [
       {
-        "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
-        "link": "https://www.qbitai.com/2026/11/507107.html",
-        "source": "量子位"
+        "title": "Failure Profiling and Reachable Trajectory Selection for Reasoning Distillation",
+        "link": "https://arxiv.org/abs/2611.09042",
+        "source": "arXiv CL"
       }
     ],
     "rank": 27,
-    "status": "hot"
-  },
-  {
-    "id": "self-evolving-agents",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Self-evolving agents",
-    "term_zh": "自进化智能体",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "能够根据反馈重新编写持久状态的智能体。",
-    "explanation": "自进化智能体就像能自我学习的机器人，能根据经验不断改进自己。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40758"
-    ],
-    "matched_articles": [
-      {
-        "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
-        "link": "https://arxiv.org/abs/2610.40758",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 28,
-    "status": "hot"
-  },
-  {
-    "id": "curriculum-of-latent-rules",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Curriculum of Latent Rules",
-    "term_zh": "潜在规则课程",
-    "abbreviation": "CLR-Bench",
-    "category": "AI技术",
-    "one_liner": "一种包含潜在规则的课程，用于评估自进化智能体的学习效果。",
-    "explanation": "潜在规则课程是让AI学习隐藏规则的课程，用来测试AI学习效果。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40758"
-    ],
-    "matched_articles": [
-      {
-        "title": "More Rules, Longer Lists? Benchmarking Self-Evolving Agents on a Hidden-Rule Curriculum",
-        "link": "https://arxiv.org/abs/2610.40758",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 29,
-    "status": "hot"
-  },
-  {
-    "id": "recursive-knowledge-construction",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Recursive Knowledge Construction",
-    "term_zh": "递归知识构建",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "通过检索证据、构建中间状态和判断状态是否包含足够信息来递归构建知识的过程。",
-    "explanation": "递归知识构建就是像搭积木一样，一层层地积累信息，直到得到完整的知识。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40906"
-    ],
-    "matched_articles": [
-      {
-        "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
-        "link": "https://arxiv.org/abs/2610.40906",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 30,
-    "status": "hot"
-  },
-  {
-    "id": "consensus-scientific-claim-verification",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Consensus Scientific Claim Verification",
-    "term_zh": "共识科学声明验证",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "从开放文献中建立声明共识立场的系统。",
-    "explanation": "通过分析公开文献，系统性地确认科学声明是否达成共识。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40906"
-    ],
-    "matched_articles": [
-      {
-        "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
-        "link": "https://arxiv.org/abs/2610.40906",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 31,
-    "status": "hot"
-  },
-  {
-    "id": "proclaim-eval",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "ProClaim-eval",
-    "term_zh": "ProClaim-eval数据集",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "包含来自分子生物学、核物理学和天文学五个专家编纂数据库的718个声明的数据集。",
-    "explanation": "ProClaim-eval数据集：包含多个领域专家编写的718个科学声明，用于训练AI验证科学共识。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40906"
-    ],
-    "matched_articles": [
-      {
-        "title": "Does Recursive Knowledge Construction Help Agents Verify Consensus Claims in Science?",
-        "link": "https://arxiv.org/abs/2610.40906",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 32,
-    "status": "hot"
-  },
-  {
-    "id": "agentic-world-modeling-awm",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Agentic World Modeling (AWM)",
-    "term_zh": "代理世界建模(AWM)",
-    "abbreviation": "AWM",
-    "category": "AI技术",
-    "one_liner": "将下一观察预测重新定义为多轮证据获取任务。",
-    "explanation": "代理世界建模是让AI通过多轮提问来预测未来，就像玩游戏时不断获取信息来做出决策。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40927"
-    ],
-    "matched_articles": [
-      {
-        "title": "Agentic World Modeling for Agent Test-time Scaling without Environment Replica",
-        "link": "https://arxiv.org/abs/2610.40927",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 33,
-    "status": "hot"
-  },
-  {
-    "id": "diraft",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "DiRAFT",
-    "term_zh": "DiRAFT",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "从聚合一阶转移中提取金融概念图并记录概念首次引入的顺序。",
-    "explanation": "DiRAFT是一种技术，能从金融对话中提取概念图，记录概念首次出现顺序，同时保护隐私。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.40938"
-    ],
-    "matched_articles": [
-      {
-        "title": "DiRAFT: Privacy-Aware Financial Transcript Synthesis from Aggregate Discourse Priors",
-        "link": "https://arxiv.org/abs/2610.40938",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 34,
-    "status": "hot"
-  },
-  {
-    "id": "replayrca",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "ReplayRCA",
-    "term_zh": "回放RCA",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种通过干预而非与注释一致来评估诊断的基准，通过将环境恢复到选择步骤之前的状态，用建议的动作替换代理自己的动作，并让相同的代理继续进行。",
-    "explanation": "回放RCA是一种评估诊断的方法，通过模拟重做来检查系统错误。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.41025"
-    ],
-    "matched_articles": [
-      {
-        "title": "ReplayRCA: Measuring Post-hoc Diagnosis and Live Oversight of Agent Failures by Counterfactual Replay",
-        "link": "https://arxiv.org/abs/2610.41025",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 35,
-    "status": "hot"
-  },
-  {
-    "id": "capability-grounded-agentic-planning",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Capability-Grounded Agentic Planning",
-    "term_zh": "能力基础代理规划",
-    "abbreviation": "CGAP",
-    "category": "AI技术",
-    "one_liner": "一种通过推理请求所需的内容和工具提供的内容来规划的方法，使用经典规划器解决PDDL模型。",
-    "explanation": "CGAP是一种AI规划方法，通过推理所需工具和内容来规划，用经典规划器解决PDDL模型。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.41040"
-    ],
-    "matched_articles": [
-      {
-        "title": "Capability-Grounded Agentic Planning",
-        "link": "https://arxiv.org/abs/2610.41040",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 36,
-    "status": "hot"
-  },
-  {
-    "id": "lang-2-0",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "LanG 2.0",
-    "term_zh": "LanG 2.0",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种半自动化安全操作的代理AI系统，旨在以经济实惠的方式使用小型本地模型代替前沿模型。",
-    "explanation": "LanG 2.0是一种用小模型代替大模型，自动帮我们做安全检查的AI系统。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2610.41072"
-    ],
-    "matched_articles": [
-      {
-        "title": "LanG 2.0: Energy-Efficient Agentic AI for Semi-Automated Security Operations at Scale",
-        "link": "https://arxiv.org/abs/2610.41072",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 37,
-    "status": "hot"
-  },
-  {
-    "id": "perimeter-defense-simulation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Perimeter Defense Simulation",
-    "term_zh": "周界防御模拟",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "一种模拟，用于比较集中式指挥官、基于拍卖的共识团队和独立代理在网络条件下的表现。",
-    "explanation": "周界防御模拟，就像玩电脑游戏，测试不同团队在网络攻击下的防守能力。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "rank": 38,
     "status": "hot"
   },
   {
@@ -1196,7 +941,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 39,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1222,7 +967,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 40,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1248,7 +993,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 41,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1274,7 +1019,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 42,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1300,7 +1045,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 43,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1326,7 +1071,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1352,7 +1097,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 45,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -1378,7 +1123,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -1404,7 +1149,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1430,7 +1175,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 48,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1456,7 +1201,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 49,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1482,7 +1227,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 50,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1508,7 +1253,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 51,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1534,7 +1279,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 52,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1560,7 +1305,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 53,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1586,7 +1331,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1612,7 +1357,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1638,7 +1383,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1664,7 +1409,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 57,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1690,7 +1435,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 58,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1716,7 +1461,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 59,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1742,7 +1487,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1768,7 +1513,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1794,7 +1539,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1820,7 +1565,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1846,7 +1591,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1872,7 +1617,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1898,7 +1643,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 66,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1924,7 +1669,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 67,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1950,7 +1695,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 68,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1976,7 +1721,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -2002,7 +1747,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 70,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -2028,7 +1773,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 71,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -2054,7 +1799,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 72,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -2080,7 +1825,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -2106,7 +1851,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -2132,7 +1877,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -2158,7 +1903,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -2184,7 +1929,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 77,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -2210,7 +1955,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 78,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -2236,7 +1981,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 79,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -2262,7 +2007,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 80,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2288,7 +2033,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 81,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2314,7 +2059,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 82,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2340,7 +2085,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 83,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2366,7 +2111,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 84,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2392,7 +2137,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 85,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2418,7 +2163,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 86,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2444,7 +2189,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 87,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2470,7 +2215,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 88,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2496,7 +2241,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 89,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2522,7 +2267,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 90,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2548,7 +2293,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 91,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2574,7 +2319,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 92,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2600,33 +2345,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 93,
-    "status": "hot"
-  },
-  {
-    "id": "reasoning-distillation",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Reasoning Distillation",
-    "term_zh": "",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "Reasoning Distillation是一种技术，就像把复杂的大脑思考过程简化成简单的步骤，让机器也能学会。",
-    "sources": [
-      "arXiv CL"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.09042"
-    ],
-    "matched_articles": [
-      {
-        "title": "Failure Profiling and Reachable Trajectory Selection for Reasoning Distillation",
-        "link": "https://arxiv.org/abs/2611.09042",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 94,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2652,7 +2371,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 95,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2678,7 +2397,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 96,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2704,7 +2423,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 97,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2730,7 +2449,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 98,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2756,7 +2475,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 99,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2782,7 +2501,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 100,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2808,7 +2527,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 101,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2834,7 +2553,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 102,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2860,7 +2579,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 103,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2886,7 +2605,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 104,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2912,7 +2631,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 105,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2938,7 +2657,709 @@
         "source": "arXiv CV"
       }
     ],
+    "rank": 94,
+    "status": "hot"
+  },
+  {
+    "id": "co-design",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Co-Design",
+    "term_zh": "联合设计",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一种涉及不同利益相关者共同参与设计过程的方法。",
+    "explanation": "联合设计就是不同人一起商量设计，像腾讯和合作伙伴一起打造强大的人工智能模型。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507843.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "腾讯混元跻身最强开源模型！一手实测Hy4：搭配WorkBuddy，多模态Agent交付力拉满",
+        "link": "https://www.qbitai.com/2026/11/507843.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 95,
+    "status": "hot"
+  },
+  {
+    "id": "tokenhub",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "TokenHub",
+    "term_zh": "Token中心",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一个用于管理、存储和分发Token的平台。",
+    "explanation": "TokenHub就像一个仓库，专门存放和管理各种数字货币（Token）。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/507843.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "腾讯混元跻身最强开源模型！一手实测Hy4：搭配WorkBuddy，多模态Agent交付力拉满",
+        "link": "https://www.qbitai.com/2026/11/507843.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 96,
+    "status": "hot"
+  },
+  {
+    "id": "mcq",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "MCQ",
+    "term_zh": "多项选择题",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种测试形式，包含多个选项，要求选择一个正确答案。",
+    "explanation": "MCQ是多项选择题，有多个选项，只选一个正确答案。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08639"
+    ],
+    "matched_articles": [
+      {
+        "title": "Forcing a Letter Suppresses Refusal: Mechanistic Evidence from WMDP",
+        "link": "https://arxiv.org/abs/2611.08639",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 97,
+    "status": "hot"
+  },
+  {
+    "id": "weapons-of-mass-destruction-proxy",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Weapons of Mass Destruction Proxy",
+    "term_zh": "大规模杀伤性武器代理数据集",
+    "abbreviation": "WMDP",
+    "category": "AI安全",
+    "one_liner": "用于评估大型语言模型安全性的数据集，模拟大规模杀伤性武器的相关内容。",
+    "explanation": "WMDP是测试AI安全性的数据集，模拟大规模杀伤性武器信息，帮助识别潜在风险。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08639"
+    ],
+    "matched_articles": [
+      {
+        "title": "Forcing a Letter Suppresses Refusal: Mechanistic Evidence from WMDP",
+        "link": "https://arxiv.org/abs/2611.08639",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 98,
+    "status": "hot"
+  },
+  {
+    "id": "tuned-lens-technique",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "tuned lens technique",
+    "term_zh": "调谐透镜技术",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于分析模型内部决策过程的技术，通过调整模型参数来观察其行为。",
+    "explanation": "调谐透镜技术就像调整相机镜头，让模型像人脑一样思考，观察它怎么做出决策。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08639"
+    ],
+    "matched_articles": [
+      {
+        "title": "Forcing a Letter Suppresses Refusal: Mechanistic Evidence from WMDP",
+        "link": "https://arxiv.org/abs/2611.08639",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 99,
+    "status": "hot"
+  },
+  {
+    "id": "prompt-optimizer",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "prompt optimizer",
+    "term_zh": "提示优化器",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "用于优化模型提示（prompt）的算法，以提高模型性能。",
+    "explanation": "提示优化器：像调教宠物一样，让AI模型更聪明，提高它完成任务的能力。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08643"
+    ],
+    "matched_articles": [
+      {
+        "title": "FinEvolveKG: Controlled and Attributable Prompt Evolution for Financial Knowledge Graph Construction",
+        "link": "https://arxiv.org/abs/2611.08643",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 100,
+    "status": "hot"
+  },
+  {
+    "id": "finevolvekg",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "FinEvolveKG",
+    "term_zh": "金融知识图谱构建工具",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "一个用于构建金融知识图谱的工具，通过控制提示的演变来保证知识图谱的准确性和可追溯性。",
+    "explanation": "FinEvolveKG是一种构建金融知识图谱的工具，能确保图谱准确且可追溯。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08643"
+    ],
+    "matched_articles": [
+      {
+        "title": "FinEvolveKG: Controlled and Attributable Prompt Evolution for Financial Knowledge Graph Construction",
+        "link": "https://arxiv.org/abs/2611.08643",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 101,
+    "status": "hot"
+  },
+  {
+    "id": "goemotions",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GoEmotions",
+    "term_zh": "Go情感",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种用于情感分析的英语Reddit数据集，包含27种细粒度情感类别及中性类别。",
+    "explanation": "Go情感：一种分析Reddit用户情感的工具，能识别27种情绪类型。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08683"
+    ],
+    "matched_articles": [
+      {
+        "title": "Compression of Emotion in Language Model Representations",
+        "link": "https://arxiv.org/abs/2611.08683",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 102,
+    "status": "hot"
+  },
+  {
+    "id": "overcompression",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "overcompression",
+    "term_zh": "过度压缩",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在情感分类中，模型内部组织情感区分的方式相对于细粒度分类存在过度压缩现象。",
+    "explanation": "模型在情感分类时，把细节情感压缩得太紧，导致分类不够精细。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08683"
+    ],
+    "matched_articles": [
+      {
+        "title": "Compression of Emotion in Language Model Representations",
+        "link": "https://arxiv.org/abs/2611.08683",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 103,
+    "status": "hot"
+  },
+  {
+    "id": "black-box-adversarial-attack",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "black-box adversarial attack",
+    "term_zh": "黑盒对抗攻击",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "一种针对语言模型的黑盒攻击方法，通过强化学习生成对抗变换。",
+    "explanation": "黑盒对抗攻击是利用强化学习，对语言模型进行攻击，使其输出错误信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08711"
+    ],
+    "matched_articles": [
+      {
+        "title": "RL-ATTACK: A Generalized Black-Box Adversarial Attack on Language Models via Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2611.08711",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 104,
+    "status": "hot"
+  },
+  {
+    "id": "rl-attack",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "RL-ATTACK",
+    "term_zh": "RL-ATTACK",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "一种基于强化学习的黑盒对抗攻击框架，用于攻击语言模型。",
+    "explanation": "RL-ATTACK是一种用强化学习攻击语言模型的黑盒攻击方法。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08711"
+    ],
+    "matched_articles": [
+      {
+        "title": "RL-ATTACK: A Generalized Black-Box Adversarial Attack on Language Models via Reinforcement Learning",
+        "link": "https://arxiv.org/abs/2611.08711",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 105,
+    "status": "hot"
+  },
+  {
+    "id": "digital-twin",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "digital twin",
+    "term_zh": "数字孪生",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种基于LLM的技术，通过个体先前响应的表示来预测其在新环境中的响应。",
+    "explanation": "数字孪生就像一个虚拟的“双胞胎”，能预测物体在新环境中的表现。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08730"
+    ],
+    "matched_articles": [
+      {
+        "title": "Structuring Survey Histories for LLM Digital Twins: A Controlled Study of Background, Decision Procedure, and Evaluation Profiles",
+        "link": "https://arxiv.org/abs/2611.08730",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 106,
+    "status": "hot"
+  },
+  {
+    "id": "background-decision-procedure-and-evaluation-bde",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Background, Decision procedure, and Evaluation (BDE)",
+    "term_zh": "背景、决策过程和评估（BDE）",
+    "abbreviation": "BDE",
+    "category": "AI技术",
+    "one_liner": "一种固定表示方法，将每个受访者的调查历史组织为背景、决策过程和评估。",
+    "explanation": "BDE是一种方法，把调查历史分成背景、决策过程和评估三部分，方便分析。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08730"
+    ],
+    "matched_articles": [
+      {
+        "title": "Structuring Survey Histories for LLM Digital Twins: A Controlled Study of Background, Decision Procedure, and Evaluation Profiles",
+        "link": "https://arxiv.org/abs/2611.08730",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "semantic-conditional-similarity",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Semantic Conditional Similarity",
+    "term_zh": "语义条件相似度",
+    "abbreviation": "SCS",
+    "category": "AI概念",
+    "one_liner": "一种通过消除共享语义元素来计算文档间相似度的方法。",
+    "explanation": "SCS是一种计算文档相似度的方法，通过去掉共同意思来比较。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08778"
+    ],
+    "matched_articles": [
+      {
+        "title": "Semantic Conditional Similarity (SCS): A Formal Mathematical Framework",
+        "link": "https://arxiv.org/abs/2611.08778",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "guardrail-erosion",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Guardrail Erosion",
+    "term_zh": "安全边界侵蚀",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "在模型微调过程中，安全保护措施减弱的现象。",
+    "explanation": "模型微调时，安全保护措施变弱，可能导致风险。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08780"
+    ],
+    "matched_articles": [
+      {
+        "title": "Guardrail Erosion in Domain Fine-Tuned Large Language Models: A Paired Audit of Knowledge-Centric Abstention in Biomedical LLMs",
+        "link": "https://arxiv.org/abs/2611.08780",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "renyi-entropy",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Renyi Entropy",
+    "term_zh": "Renyi 熵",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种描述信息不确定性的度量，用于衡量随机变量或概率分布的不确定性。",
+    "explanation": "Renyi 熵是衡量信息不确定性的指标，用于判断随机事件的不确定性程度。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08892"
+    ],
+    "matched_articles": [
+      {
+        "title": "Richness Is Not Evenness: Ordered Renyi Crossings under Self-Training",
+        "link": "https://arxiv.org/abs/2611.08892",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 110,
+    "status": "hot"
+  },
+  {
+    "id": "self-training",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Self-Training",
+    "term_zh": "自训练",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种通过使用模型自己的输出作为训练数据来进一步训练模型的方法。",
+    "explanation": "自训练就是让模型用自己的预测结果来学习，变得更聪明。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08892"
+    ],
+    "matched_articles": [
+      {
+        "title": "Richness Is Not Evenness: Ordered Renyi Crossings under Self-Training",
+        "link": "https://arxiv.org/abs/2611.08892",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 111,
+    "status": "hot"
+  },
+  {
+    "id": "universal-identifiability",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Universal Identifiability",
+    "term_zh": "通用可识别性",
+    "abbreviation": "uID",
+    "category": "AI概念",
+    "one_liner": "在给定观察和/或干预分布的情况下，识别因果效应的能力。",
+    "explanation": "通用可识别性：在特定条件下，我们能识别出某个干预对结果的影响。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08916"
+    ],
+    "matched_articles": [
+      {
+        "title": "On the Incompleteness of do-calculus for Universal Identifiability",
+        "link": "https://arxiv.org/abs/2611.08916",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 112,
+    "status": "hot"
+  },
+  {
+    "id": "do-calculus",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "do-calculus",
+    "term_zh": "do-演算",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于因果推断的图形规则系统。",
+    "explanation": "do-演算是一种帮助分析事物因果关系的图形规则系统。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08916"
+    ],
+    "matched_articles": [
+      {
+        "title": "On the Incompleteness of do-calculus for Universal Identifiability",
+        "link": "https://arxiv.org/abs/2611.08916",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 113,
+    "status": "hot"
+  },
+  {
+    "id": "named-entity-recognition-ner",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Named entity recognition (NER)",
+    "term_zh": "命名实体识别",
+    "abbreviation": "NER",
+    "category": "AI应用",
+    "one_liner": "识别文本中的命名实体，如人名、地点等。",
+    "explanation": "NER是AI技术，能从文本中识别人名、地点等特定信息。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08967"
+    ],
+    "matched_articles": [
+      {
+        "title": "Using an LLM to Tackle Difficult Cases in NER for Nepali Tweets",
+        "link": "https://arxiv.org/abs/2611.08967",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 114,
+    "status": "hot"
+  },
+  {
+    "id": "entropy-gated-logits-processor",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Entropy-gated logits processor",
+    "term_zh": "熵门控的logits处理器",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种用于控制生成文本长度的处理机制。",
+    "explanation": "熵门控的logits处理器，就像一个智能开关，能控制生成文本的长度。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08975"
+    ],
+    "matched_articles": [
+      {
+        "title": "Beyond Truncation? Entailment-Licensed Elision and the Limits of Semantic Preservation in LLM Decoding",
+        "link": "https://arxiv.org/abs/2611.08975",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 115,
+    "status": "hot"
+  },
+  {
+    "id": "entailment-licensed-in-decoding-elision-elide",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Entailment-Licensed In-Decoding Elision (ELIDE)",
+    "term_zh": "蕴涵许可的解码省略（ELIDE）",
+    "abbreviation": "ELIDE",
+    "category": "AI技术",
+    "one_liner": "一种基于自然语言推理模型的文本生成优化方法。",
+    "explanation": "ELIDE是一种让AI在生成文本时省略部分内容，但保证意思不变的技术。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.08975"
+    ],
+    "matched_articles": [
+      {
+        "title": "Beyond Truncation? Entailment-Licensed Elision and the Limits of Semantic Preservation in LLM Decoding",
+        "link": "https://arxiv.org/abs/2611.08975",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 116,
+    "status": "hot"
+  },
+  {
+    "id": "brain-aligned-geometry",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Brain-aligned Geometry",
+    "term_zh": "脑对齐几何",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "语言模型中与人类大脑处理语言相似的几何结构。",
+    "explanation": "脑对齐几何：模仿大脑处理语言的几何结构，让AI更懂人类语言。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.09027"
+    ],
+    "matched_articles": [
+      {
+        "title": "Language, Not Code Abstraction: Natural-language Training Shapes Brain-aligned Geometry",
+        "link": "https://arxiv.org/abs/2611.09027",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 117,
+    "status": "hot"
+  },
+  {
+    "id": "failure-profiling-and-reachable-trajectory-selection-fprt",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Failure Profiling and Reachable Trajectory Selection (FPRT)",
+    "term_zh": "故障分析及可达轨迹选择",
+    "abbreviation": "FPRT",
+    "category": "AI技术",
+    "one_liner": "一种通过分析学生模型的故障行为，并选择可复现的纠正步骤来训练语言模型的方法。",
+    "explanation": "FPRT是一种通过分析学生错误，选择可复现步骤来训练语言模型的技术。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.09042"
+    ],
+    "matched_articles": [
+      {
+        "title": "Failure Profiling and Reachable Trajectory Selection for Reasoning Distillation",
+        "link": "https://arxiv.org/abs/2611.09042",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 118,
+    "status": "hot"
+  },
+  {
+    "id": "reasoning-oriented-post-training",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reasoning-oriented post-training",
+    "term_zh": "以推理为导向的微调",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "针对推理能力进行优化的语言模型微调过程。",
+    "explanation": "针对推理能力提升的语言模型微调，让AI更会思考。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.09061"
+    ],
+    "matched_articles": [
+      {
+        "title": "Does Reasoning Improve Psychological Depth in Large Language Models?",
+        "link": "https://arxiv.org/abs/2611.09061",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 119,
+    "status": "hot"
+  },
+  {
+    "id": "llm-as-a-judge",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LLM-as-a-Judge",
+    "term_zh": "作为评判者的LLM",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "将大型语言模型作为评判者进行故事创作质量评估的方法。",
+    "explanation": "大型语言模型像法官一样，评判故事好坏。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.09061"
+    ],
+    "matched_articles": [
+      {
+        "title": "Does Reasoning Improve Psychological Depth in Large Language Models?",
+        "link": "https://arxiv.org/abs/2611.09061",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 120,
+    "status": "hot"
+  },
+  {
+    "id": "romanized-indic-generation",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Romanized Indic Generation",
+    "term_zh": "罗马化印度语生成",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "使用罗马字母系统生成印度语言的文本。",
+    "explanation": "用罗马字母写印度语，但有时自动评分却不能准确反映其质量。",
+    "sources": [
+      "arXiv CL"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.09085"
+    ],
+    "matched_articles": [
+      {
+        "title": "The Invisible Gap: Romanized Indic Generation Fails Where Automatic Metrics Succeed",
+        "link": "https://arxiv.org/abs/2611.09085",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 121,
     "status": "hot"
   }
 ]
