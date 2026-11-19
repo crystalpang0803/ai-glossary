@@ -1,5 +1,46 @@
 [
   {
+    "id": "chain-of-thought-cot",
+    "appear_count": 7,
+    "days": 2,
+    "term_en": "Chain-of-Thought (CoT)",
+    "term_zh": "思维链（CoT）",
+    "abbreviation": "CoT",
+    "category": "AI概念",
+    "one_liner": "人工智能在推理过程中逐步构建的内部思维过程。",
+    "explanation": "思维链（CoT）是AI在推理时像人一样逐步思考的过程。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21799",
+      "https://arxiv.org/abs/2611.22039",
+      "https://arxiv.org/abs/2611.22188",
+      "https://www.qbitai.com/2026/11/510811.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "link": "https://arxiv.org/abs/2611.21799",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "RLDE: A Reinforcement Learning Framework for Interpretable Iterative Document Editing",
+        "link": "https://arxiv.org/abs/2611.22039",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "From Imperfective Paradox to Moorean Absurdity: Single-Chain Reasoning Lock-In and Multi-Candidate Verbalization Across Aspectual and Pragmatic Ambiguity",
+        "link": "https://arxiv.org/abs/2611.22188",
+        "source": "arXiv CL"
+      }
+    ],
+    "rank": 1,
+    "status": "hot"
+  },
+  {
     "id": "agentic-workflows",
     "appear_count": 4,
     "days": 3,
@@ -22,7 +63,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 1,
+    "rank": 2,
     "status": "hot"
   },
   {
@@ -59,45 +100,6 @@
         "title": "真勇啊！00后团队参加具身挑战赛，仅48小时竟敢从零手搓数据，还夺冠了！",
         "link": "https://www.qbitai.com/2026/11/510610.html",
         "source": "量子位"
-      }
-    ],
-    "rank": 2,
-    "status": "hot"
-  },
-  {
-    "id": "fact",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "FACT",
-    "term_zh": "环境事实",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "环境事实是AI在特定环境中观察到的真实信息，帮助AI更好地理解世界。",
-    "sources": [
-      "量子位",
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/11/508998.html",
-      "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-      "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
-        "link": "https://www.qbitai.com/2026/11/508998.html",
-        "source": "量子位"
-      },
-      {
-        "title": "Gemini 4 Carbon is now available",
-        "link": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
-        "source": "DeepMind Blog"
-      },
-      {
-        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-        "link": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-        "source": "DeepMind Blog"
       }
     ],
     "rank": 3,
@@ -142,79 +144,6 @@
     "status": "hot"
   },
   {
-    "id": "chain-of-thought-cot",
-    "appear_count": 3,
-    "days": 1,
-    "term_en": "Chain-of-Thought (CoT)",
-    "term_zh": "思维链",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "AI在推理过程中逐步构建的中间思维步骤。",
-    "explanation": "AI在思考时，像串联珠子一样一步步想出答案。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21799",
-      "https://arxiv.org/abs/2611.22039",
-      "https://www.qbitai.com/2026/11/510811.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
-        "link": "https://arxiv.org/abs/2611.21799",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "RLDE: A Reinforcement Learning Framework for Interpretable Iterative Document Editing",
-        "link": "https://arxiv.org/abs/2611.22039",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "思维链一作Jason Wei离职！怎么去Meta待一年都跑路",
-        "link": "https://www.qbitai.com/2026/11/510811.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 5,
-    "status": "hot"
-  },
-  {
-    "id": "tip",
-    "appear_count": 2,
-    "days": 1,
-    "term_en": "TIP",
-    "term_zh": "条件式技巧",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "TIP是一种AI技巧，让机器能像人一样学习和适应。",
-    "sources": [
-      "量子位",
-      "DeepMind Blog"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/11/508998.html",
-      "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
-    ],
-    "matched_articles": [
-      {
-        "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
-        "link": "https://www.qbitai.com/2026/11/508998.html",
-        "source": "量子位"
-      },
-      {
-        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-        "link": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-        "source": "DeepMind Blog"
-      }
-    ],
-    "rank": 6,
-    "status": "hot"
-  },
-  {
     "id": "carbon",
     "appear_count": 2,
     "days": 1,
@@ -243,7 +172,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 7,
+    "rank": 5,
     "status": "hot"
   },
   {
@@ -275,7 +204,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 8,
+    "rank": 6,
     "status": "hot"
   },
   {
@@ -301,7 +230,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 9,
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -327,7 +256,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 10,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -353,7 +282,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 11,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -379,107 +308,159 @@
         "source": "量子位"
       }
     ],
+    "rank": 10,
+    "status": "hot"
+  },
+  {
+    "id": "nebench-r1",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "NEBench R1",
+    "term_zh": "NEBench R1",
+    "abbreviation": "",
+    "category": "AI评测基准",
+    "one_liner": "用于评估大型语言模型在核工程领域推理能力的基准。",
+    "explanation": "NEBench R1是评估大型语言模型在核工程推理能力的测试工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21682"
+    ],
+    "matched_articles": [
+      {
+        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+        "link": "https://arxiv.org/abs/2611.21682",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 11,
+    "status": "hot"
+  },
+  {
+    "id": "monitorability",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Monitorability",
+    "term_zh": "可监控性",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "评估AI代理推理过程是否容易被监控的能力。",
+    "explanation": "AI的可监控性就是看AI的思考过程能不能被轻松观察。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21799"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "link": "https://arxiv.org/abs/2611.21799",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 12,
     "status": "hot"
   },
   {
-    "id": "pathfinder-i",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "PathFinder-I",
-    "term_zh": "探路者一号",
+    "id": "webagents",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "WebAgents",
+    "term_zh": "Web代理",
     "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "探路者一号是一种智能设备，帮助无人拖拉机在农田里导航，实现精准耕作。",
+    "category": "AI技术",
+    "one_liner": "一种解耦代理创建、托管和执行的角色，通过携带可移植工作流程、技能、模式和资源要求的signed agent.pkg。",
+    "explanation": "Web代理就像一个可以自由移动的助手，带着自己的任务和资源，在不同网站间工作。",
     "sources": [
-      "量子位"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/509052.html"
+      "https://arxiv.org/abs/2611.21978"
     ],
     "matched_articles": [
       {
-        "title": "无人拖拉机真正下地了！新疆大田深翻30+厘米，丘沃智能开物™系统首次完整曝光",
-        "link": "https://www.qbitai.com/2026/11/509052.html",
-        "source": "量子位"
+        "title": "WebAgents: Unbundling Agent Creation, Hosting, and Execution for an Agent-Native Web",
+        "link": "https://arxiv.org/abs/2611.21978",
+        "source": "arXiv AI"
       }
     ],
     "rank": 13,
     "status": "hot"
   },
   {
-    "id": "system-1",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "System 1",
-    "term_zh": "快系统",
+    "id": "kv-ltm",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "KV-LTM",
+    "term_zh": "持久会话键值缓存",
     "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "快系统（System 1）是一种快速、直觉的思考方式，就像我们下意识做出的判断。",
+    "category": "AI技术",
+    "one_liner": "一种存储每个会话的原始文本及其键值缓存的内存层级，作为个人助手的长期记忆。",
+    "explanation": "KV-LTM是个人助手用来长期记住你对话内容的存储方式。",
     "sources": [
-      "量子位"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/509032.html"
+      "https://arxiv.org/abs/2611.21998"
     ],
     "matched_articles": [
       {
-        "title": "英伟达机器人开源撞上Fable 5.2发布！Jim Fan：不是寒冬是夏天",
-        "link": "https://www.qbitai.com/2026/11/509032.html",
-        "source": "量子位"
+        "title": "KV-LTM: Persistent Per-Session KV Caches as Long-Term Memory for Personal Assistants",
+        "link": "https://arxiv.org/abs/2611.21998",
+        "source": "arXiv AI"
       }
     ],
     "rank": 14,
     "status": "hot"
   },
   {
-    "id": "coding-agent",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Coding Agent",
-    "term_zh": "",
+    "id": "skillbuffbench",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "SkillBuffBench",
+    "term_zh": "技能缓冲基准",
     "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "“Coding Agent”是一种能帮你写代码的人工智能助手。",
+    "category": "AI技术",
+    "one_liner": "一个基准和配对评估协议，评估代理技能在不同工具、模型、技能访问模式和记忆中的贡献。",
+    "explanation": "SkillBuffBench是衡量AI在不同工具、模型和记忆中技能贡献的基准。",
     "sources": [
-      "量子位"
+      "arXiv AI"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/509146.html"
+      "https://arxiv.org/abs/2611.22017"
     ],
     "matched_articles": [
       {
-        "title": "双11直播间爆改AI秀场，罗永浩上手TRAE，秒变AI Coding的大众嘴替",
-        "link": "https://www.qbitai.com/2026/11/509146.html",
-        "source": "量子位"
+        "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
+        "link": "https://arxiv.org/abs/2611.22017",
+        "source": "arXiv AI"
       }
     ],
     "rank": 15,
     "status": "hot"
   },
   {
-    "id": "qbitai-agent",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "QbitAI Agent",
-    "term_zh": "",
+    "id": "embodied-ai",
+    "appear_count": 2,
+    "days": 2,
+    "term_en": "Embodied AI",
+    "term_zh": "具身智能",
     "abbreviation": "",
     "category": "AI概念",
-    "one_liner": "",
-    "explanation": "QbitAI Agent：一种能自我进化的AI智能体，像人一样学习和成长。",
+    "one_liner": "将人工智能与物理世界交互结合的技术。",
+    "explanation": "具身智能就是让AI像人一样能感知、行动，就像给AI装上了“身体”。",
     "sources": [
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/508998.html"
+      "https://www.qbitai.com/2026/11/510821.html"
     ],
     "matched_articles": [
       {
-        "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
-        "link": "https://www.qbitai.com/2026/11/508998.html",
+        "title": "英伟达AMD首次联手押注！Genesis完成A轮融资，估值超230亿",
+        "link": "https://www.qbitai.com/2026/11/510821.html",
         "source": "量子位"
       }
     ],
@@ -487,29 +468,69 @@
     "status": "hot"
   },
   {
-    "id": "llm-agents",
-    "appear_count": 1,
+    "id": "safety-and-alignment",
+    "appear_count": 2,
     "days": 1,
-    "term_en": "LLM Agents",
-    "term_zh": "",
+    "term_en": "Safety and Alignment",
+    "term_zh": "安全与对齐",
     "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "",
-    "explanation": "LLM Agents：类似人类的智能体，能自我学习和进化，就像会自我成长的机器人。",
+    "category": "AI安全",
+    "one_liner": "确保AI模型行为符合人类价值观和预期。",
+    "explanation": "确保AI行为不偏离人类期望，防止意外伤害。",
     "sources": [
+      "arXiv AI",
       "量子位"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/508998.html"
+      "https://arxiv.org/abs/2611.21832",
+      "https://www.qbitai.com/2026/11/510914.html"
     ],
     "matched_articles": [
       {
-        "title": "Agent自演进驶入“双轨时代”！openJiuwen首发TTSE经验学习框架",
-        "link": "https://www.qbitai.com/2026/11/508998.html",
+        "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+        "link": "https://arxiv.org/abs/2611.21832",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "GPT-6.2难产！OpenAI怕了",
+        "link": "https://www.qbitai.com/2026/11/510914.html",
         "source": "量子位"
       }
     ],
     "rank": 17,
+    "status": "hot"
+  },
+  {
+    "id": "multimodal-data",
+    "appear_count": 2,
+    "days": 1,
+    "term_en": "Multimodal Data",
+    "term_zh": "多模态数据",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "包含多种类型数据的集合，如文本、图像、声音等。",
+    "explanation": "多模态数据就是将文字、图片、声音等多种信息放在一起的数据集合。",
+    "sources": [
+      "arXiv LG",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.23684",
+      "https://www.qbitai.com/2026/11/510821.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Variable Length Diffuse Everything: Arbitrary Length Generative Modeling on Arbitrary State Spaces",
+        "link": "https://arxiv.org/abs/2611.23684",
+        "source": "arXiv LG"
+      },
+      {
+        "title": "英伟达AMD首次联手押注！Genesis完成A轮融资，估值超230亿",
+        "link": "https://www.qbitai.com/2026/11/510821.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -535,7 +556,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 18,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -561,7 +582,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -587,7 +608,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 20,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -613,7 +634,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 21,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -639,7 +660,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 22,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -665,7 +686,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 23,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -691,7 +712,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 24,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -717,7 +738,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 25,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -743,7 +764,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 26,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -769,7 +790,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 27,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -795,7 +816,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 28,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -821,7 +842,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 29,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -847,7 +868,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 30,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -873,7 +894,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 31,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -899,7 +920,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 32,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -925,7 +946,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 33,
+    "rank": 34,
     "status": "hot"
   },
   {
@@ -951,7 +972,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 34,
+    "rank": 35,
     "status": "hot"
   },
   {
@@ -977,7 +998,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 35,
+    "rank": 36,
     "status": "hot"
   },
   {
@@ -1003,7 +1024,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 36,
+    "rank": 37,
     "status": "hot"
   },
   {
@@ -1029,7 +1050,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 37,
+    "rank": 38,
     "status": "hot"
   },
   {
@@ -1055,7 +1076,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 38,
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1071,7 +1092,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 39,
+    "rank": 40,
     "status": "hot"
   },
   {
@@ -1087,7 +1108,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 40,
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1103,7 +1124,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 41,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1119,7 +1140,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 42,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1145,7 +1166,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 43,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1171,7 +1192,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 44,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1197,7 +1218,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 45,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1213,7 +1234,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 46,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1229,7 +1250,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 47,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1245,7 +1266,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 48,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1261,7 +1282,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 49,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1277,7 +1298,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 50,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1293,7 +1314,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 51,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1319,7 +1340,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 52,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1345,7 +1366,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 53,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1371,7 +1392,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 54,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1397,7 +1418,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 55,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1423,7 +1444,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 56,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1439,7 +1460,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 57,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1455,7 +1476,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 58,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1481,7 +1502,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 59,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1507,7 +1528,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 60,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1533,7 +1554,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 61,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1559,7 +1580,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 62,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1585,7 +1606,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 63,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1611,111 +1632,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
-    "status": "hot"
-  },
-  {
-    "id": "nebench-r1",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "NEBench R1",
-    "term_zh": "NEBench R1",
-    "abbreviation": "",
-    "category": "AI工程",
-    "one_liner": "用于评估大型语言模型在核工程领域推理能力的基准。",
-    "explanation": "NEBench R1是评估大型语言模型在核工程推理能力的测试工具。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21682"
-    ],
-    "matched_articles": [
-      {
-        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
-        "link": "https://arxiv.org/abs/2611.21682",
-        "source": "arXiv AI"
-      }
-    ],
     "rank": 65,
-    "status": "hot"
-  },
-  {
-    "id": "monitorability",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Monitorability",
-    "term_zh": "可监控性",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "评估AI推理过程是否容易被监控的能力。",
-    "explanation": "AI的思考过程是否容易被观察和追踪。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21799"
-    ],
-    "matched_articles": [
-      {
-        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
-        "link": "https://arxiv.org/abs/2611.21799",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 66,
-    "status": "hot"
-  },
-  {
-    "id": "webagents",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "WebAgents",
-    "term_zh": "Web代理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种解耦代理创建、托管和执行角色的技术，通过携带可移植工作流程、技能、模式和资源要求的签名agent.pkg实现。",
-    "explanation": "Web代理就像一个可以移动的助手，它带着自己的任务和资源，可以在不同的地方执行任务。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21978"
-    ],
-    "matched_articles": [
-      {
-        "title": "WebAgents: Unbundling Agent Creation, Hosting, and Execution for an Agent-Native Web",
-        "link": "https://arxiv.org/abs/2611.21978",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 67,
-    "status": "hot"
-  },
-  {
-    "id": "kv-ltm",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "KV-LTM",
-    "term_zh": "持久会话键值缓存",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种用于个人助手的长期记忆系统，存储每个会话的原始文本及其键值缓存。",
-    "explanation": "KV-LTM是个人助手用来长期记住对话内容的关键词和信息的系统。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21998"
-    ],
-    "matched_articles": [
-      {
-        "title": "KV-LTM: Persistent Per-Session KV Caches as Long-Term Memory for Personal Assistants",
-        "link": "https://arxiv.org/abs/2611.21998",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 68,
     "status": "hot"
   },
   {
@@ -1741,49 +1658,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
-    "status": "hot"
-  },
-  {
-    "id": "skillbuffbench",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "SkillBuffBench",
-    "term_zh": "技能缓冲基准",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个基准和配对评估协议，用于衡量代理技能在不同工具、模型、技能访问模式和记忆中的贡献。",
-    "explanation": "SkillBuffBench是衡量AI在不同工具、模型和记忆中技能贡献的基准。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.22017"
-    ],
-    "matched_articles": [
-      {
-        "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
-        "link": "https://arxiv.org/abs/2611.22017",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 70,
-    "status": "hot"
-  },
-  {
-    "id": "embodied-ai",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Embodied AI",
-    "term_zh": "具身AI",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "将人工智能与物理环境结合，使AI能够感知和交互物理世界。",
-    "explanation": "具身AI就像一个能感知和操作现实世界的机器人，不再是冷冰冰的屏幕。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "rank": 71,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1799,7 +1674,337 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
+    "rank": 67,
+    "status": "hot"
+  },
+  {
+    "id": "inclusionmed-atlas",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "InclusionMed Atlas",
+    "term_zh": "InclusionMed图谱",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "医疗AI评测图谱，用于评估医疗AI模型的能力。",
+    "explanation": "InclusionMed图谱是评估医疗AI模型能力的工具，就像给AI医生打分。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/510916.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "全球首个医疗健康AI独立评测与分析平台InclusionMed正式上线",
+        "link": "https://www.qbitai.com/2026/11/510916.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 68,
+    "status": "hot"
+  },
+  {
+    "id": "inclusionmed-index",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "InclusionMed Index",
+    "term_zh": "InclusionMed指数",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "医疗AI评测指数，综合评估医疗AI模型的表现。",
+    "explanation": "InclusionMed指数是衡量医疗AI模型表现好坏的指数。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/510916.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "全球首个医疗健康AI独立评测与分析平台InclusionMed正式上线",
+        "link": "https://www.qbitai.com/2026/11/510916.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 69,
+    "status": "hot"
+  },
+  {
+    "id": "healthbench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "HealthBench",
+    "term_zh": "HealthBench",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "用于评估AI在医疗健康领域应用能力的基准。",
+    "explanation": "HealthBench是评估AI在医疗健康应用能力的标准测试。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/510811.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "思维链一作Jason Wei离职！怎么去Meta待一年都跑路",
+        "link": "https://www.qbitai.com/2026/11/510811.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 70,
+    "status": "hot"
+  },
+  {
+    "id": "conjunctive-counterfactual-explanations",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Conjunctive Counterfactual Explanations",
+    "term_zh": "合取反事实解释",
+    "abbreviation": "CFXps",
+    "category": "AI概念",
+    "one_liner": "一种反事实前件，限制为特征文字的合取，保证预测变化。",
+    "explanation": "合取反事实解释，就是用文字描述，说明预测结果变化的原因。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22010"
+    ],
+    "matched_articles": [
+      {
+        "title": "On Formal Counterfactual Explanations",
+        "link": "https://arxiv.org/abs/2611.22010",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 71,
+    "status": "hot"
+  },
+  {
+    "id": "reversibility-classes",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Reversibility Classes",
+    "term_zh": "可逆性类别",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种用于描述AI代理操作可逆性的五级词汇体系，包含敏感规则和默认设置。",
+    "explanation": "可逆性类别：AI操作能否撤销的五个等级，帮我们判断AI行为是否可逆。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22075"
+    ],
+    "matched_articles": [
+      {
+        "title": "Can You Undo It? Reversibility Classes for AI Agent Actions",
+        "link": "https://arxiv.org/abs/2611.22075",
+        "source": "arXiv AI"
+      }
+    ],
     "rank": 72,
+    "status": "hot"
+  },
+  {
+    "id": "correction-audit",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Correction Audit",
+    "term_zh": "修正审计",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "一种可重复的评估协议，用于分离概念修正的有用性和危害。",
+    "explanation": "修正审计是一种检查概念修正是否正确且有益的评估方法。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22084"
+    ],
+    "matched_articles": [
+      {
+        "title": "When Lower Harm Misleads: Auditing Concept Corrections",
+        "link": "https://arxiv.org/abs/2611.22084",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 73,
+    "status": "hot"
+  },
+  {
+    "id": "atlas-finance",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "ATLAS-Finance",
+    "term_zh": "ATLAS-Finance",
+    "abbreviation": "",
+    "category": "AI基准",
+    "one_liner": "一个用于评估AI代理在模拟银行环境中的投资银行任务的基准。",
+    "explanation": "ATLAS-Finance是一个测试AI在银行投资任务中表现好坏的基准。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22085"
+    ],
+    "matched_articles": [
+      {
+        "title": "ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments",
+        "link": "https://arxiv.org/abs/2611.22085",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 74,
+    "status": "hot"
+  },
+  {
+    "id": "evodisco",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "EvoDisco",
+    "term_zh": "EvoDisco",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种将代理记忆进化作为进化策略发现的方法，用于更新记忆。",
+    "explanation": "EvoDisco是一种通过进化代理记忆来发现策略的方法，帮助更新记忆。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22102"
+    ],
+    "matched_articles": [
+      {
+        "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+        "link": "https://arxiv.org/abs/2611.22102",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 75,
+    "status": "hot"
+  },
+  {
+    "id": "semantic-operators",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Semantic Operators",
+    "term_zh": "语义操作符",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一组用于处理和重组记忆的语义操作符，包括抽象、细化、桥接和重构。",
+    "explanation": "语义操作符是帮我们整理记忆的工具，能让我们更好地理解和运用知识。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22102"
+    ],
+    "matched_articles": [
+      {
+        "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+        "link": "https://arxiv.org/abs/2611.22102",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 76,
+    "status": "hot"
+  },
+  {
+    "id": "flash-lite-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Flash-Lite Model",
+    "term_zh": "Flash-Lite模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种轻量级的AI模型，用于快速部署和低资源消耗场景。",
+    "explanation": "Flash-Lite模型：一种轻巧的AI模型，适合快速使用，对资源要求不高。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 77,
+    "status": "hot"
+  },
+  {
+    "id": "agent-task",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Agent Task",
+    "term_zh": "智能体任务",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "智能体执行的具体任务，如代码编写、网络安全等。",
+    "explanation": "智能体任务就是AI执行的具体工作，比如写代码、保护网络安全等。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 78,
+    "status": "hot"
+  },
+  {
+    "id": "generative-analysis-aa",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Generative Analysis (AA)",
+    "term_zh": "生成性分析",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "利用AI生成数据进行分析，用于医疗健康领域。",
+    "explanation": "生成性分析是AI生成数据后进行分析的技术，帮助医疗健康领域发现新知识。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 79,
+    "status": "hot"
+  },
+  {
+    "id": "data-noise",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Data Noise",
+    "term_zh": "数据噪声",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "数据中不相关的、干扰模型学习的信息。",
+    "explanation": "数据噪声就像电话里的杂音，会干扰我们听清楚对方说话，影响模型学习。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 80,
+    "status": "hot"
+  },
+  {
+    "id": "gene-model",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "GENE Model",
+    "term_zh": "GENE模型",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种共享权重的通用操作能力模型。",
+    "explanation": "GENE模型就像一个万能工具，可以重复使用相同的“零件”来处理各种任务。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 81,
+    "status": "hot"
+  },
+  {
+    "id": "full-stack-approach",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Full-stack Approach",
+    "term_zh": "全栈方法",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "在数据、模型、评测和本体等方面构建紧密耦合的闭环系统。",
+    "explanation": "全栈方法就像一个完整的房子，从地基到屋顶，每个部分都紧密相连，共同工作。",
+    "sources": [],
+    "source_urls": [],
+    "matched_articles": [],
+    "rank": 82,
     "status": "hot"
   }
 ]
