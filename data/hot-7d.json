@@ -85,47 +85,6 @@
     "status": "hot"
   },
   {
-    "id": "chain-of-thought-cot",
-    "appear_count": 7,
-    "days": 2,
-    "term_en": "Chain-of-Thought (CoT)",
-    "term_zh": "思维链（CoT）",
-    "abbreviation": "CoT",
-    "category": "AI概念",
-    "one_liner": "人工智能在推理过程中逐步构建的内部思维过程。",
-    "explanation": "思维链（CoT）是AI在推理时像人一样逐步思考的过程。",
-    "sources": [
-      "arXiv AI",
-      "arXiv CL",
-      "量子位"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21799",
-      "https://arxiv.org/abs/2611.22039",
-      "https://arxiv.org/abs/2611.22188",
-      "https://www.qbitai.com/2026/11/510811.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
-        "link": "https://arxiv.org/abs/2611.21799",
-        "source": "arXiv AI"
-      },
-      {
-        "title": "RLDE: A Reinforcement Learning Framework for Interpretable Iterative Document Editing",
-        "link": "https://arxiv.org/abs/2611.22039",
-        "source": "arXiv CL"
-      },
-      {
-        "title": "From Imperfective Paradox to Moorean Absurdity: Single-Chain Reasoning Lock-In and Multi-Candidate Verbalization Across Aspectual and Pragmatic Ambiguity",
-        "link": "https://arxiv.org/abs/2611.22188",
-        "source": "arXiv CL"
-      }
-    ],
-    "rank": 3,
-    "status": "hot"
-  },
-  {
     "id": "world-model",
     "appear_count": 7,
     "days": 1,
@@ -164,7 +123,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 4,
+    "rank": 3,
     "status": "hot"
   },
   {
@@ -206,46 +165,127 @@
         "source": "arXiv CL"
       }
     ],
+    "rank": 4,
+    "status": "hot"
+  },
+  {
+    "id": "chain-of-thought-cot",
+    "appear_count": 4,
+    "days": 1,
+    "term_en": "Chain-of-Thought (CoT)",
+    "term_zh": "思维链（CoT）",
+    "abbreviation": "CoT",
+    "category": "AI概念",
+    "one_liner": "人工智能在推理过程中逐步构建的内部思维过程。",
+    "explanation": "思维链（CoT）是AI在推理时像人一样逐步思考的过程。",
+    "sources": [
+      "arXiv AI",
+      "arXiv CL",
+      "量子位"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21799",
+      "https://arxiv.org/abs/2611.22039",
+      "https://arxiv.org/abs/2611.22188",
+      "https://www.qbitai.com/2026/11/510811.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "link": "https://arxiv.org/abs/2611.21799",
+        "source": "arXiv AI"
+      },
+      {
+        "title": "RLDE: A Reinforcement Learning Framework for Interpretable Iterative Document Editing",
+        "link": "https://arxiv.org/abs/2611.22039",
+        "source": "arXiv CL"
+      },
+      {
+        "title": "From Imperfective Paradox to Moorean Absurdity: Single-Chain Reasoning Lock-In and Multi-Candidate Verbalization Across Aspectual and Pragmatic Ambiguity",
+        "link": "https://arxiv.org/abs/2611.22188",
+        "source": "arXiv CL"
+      }
+    ],
     "rank": 5,
     "status": "hot"
   },
   {
-    "id": "recursive-self-improvement-rsi",
+    "id": "agents",
     "appear_count": 4,
     "days": 1,
-    "term_en": "Recursive Self-Improvement (RSI)",
-    "term_zh": "递归自我改进",
-    "abbreviation": "RSI",
-    "category": "AI技术",
-    "one_liner": "通过迭代改进模型，使其在特定任务上表现更优。",
-    "explanation": "递归自我改进就像AI不断学习，让自己变得更聪明。",
+    "term_en": "Agents",
+    "term_zh": "智能体",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "能够感知环境并采取行动以实现目标的实体。",
+    "explanation": "智能体就像能感知周围环境并行动的小机器人，帮助完成特定任务。",
     "sources": [
-      "量子位"
+      "量子位",
+      "DeepMind Blog"
     ],
     "source_urls": [
-      "https://www.qbitai.com/2026/11/510821.html",
-      "https://www.qbitai.com/2026/11/510688.html",
-      "https://www.qbitai.com/2026/11/510610.html",
-      "https://www.qbitai.com/2026/11/510592.html"
+      "https://www.qbitai.com/2026/11/512478.html",
+      "https://www.qbitai.com/2026/11/512451.html",
+      "https://www.qbitai.com/2026/11/512411.html",
+      "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
     ],
     "matched_articles": [
       {
-        "title": "英伟达AMD首次联手押注！Genesis完成A轮融资，估值超230亿",
-        "link": "https://www.qbitai.com/2026/11/510821.html",
+        "title": "Claude Opus 5.6灰测效果来了",
+        "link": "https://www.qbitai.com/2026/11/512478.html",
         "source": "量子位"
       },
       {
-        "title": "李沐加盟的Aimotion，是一家什么AI公司？",
-        "link": "https://www.qbitai.com/2026/11/510688.html",
+        "title": "蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险",
+        "link": "https://www.qbitai.com/2026/11/512451.html",
         "source": "量子位"
       },
       {
-        "title": "真勇啊！00后团队参加具身挑战赛，仅48小时竟敢从零手搓数据，还夺冠了！",
-        "link": "https://www.qbitai.com/2026/11/510610.html",
+        "title": "最新议程与嘉宾阵容公布！2027中国AIoT产业年会，11月27日深圳见",
+        "link": "https://www.qbitai.com/2026/11/512411.html",
         "source": "量子位"
       }
     ],
     "rank": 6,
+    "status": "hot"
+  },
+  {
+    "id": "real-time-reshaping",
+    "appear_count": 4,
+    "days": 1,
+    "term_en": "Real-time Reshaping",
+    "term_zh": "实时重塑",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "在AI物理世界中，根据用户指令实时调整世界状态的能力。",
+    "explanation": "实时重塑就是AI能根据你的指令，立刻改变虚拟世界里的东西。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/512454.html",
+      "https://www.qbitai.com/2026/11/512451.html",
+      "https://www.qbitai.com/2026/11/512387.html",
+      "https://www.qbitai.com/2026/11/512370.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "高德发布世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界",
+        "link": "https://www.qbitai.com/2026/11/512454.html",
+        "source": "量子位"
+      },
+      {
+        "title": "蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险",
+        "link": "https://www.qbitai.com/2026/11/512451.html",
+        "source": "量子位"
+      },
+      {
+        "title": "叙事时代丨第20届中国投资年会·有限合伙人峰会在沪成功举办",
+        "link": "https://www.qbitai.com/2026/11/512387.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 7,
     "status": "hot"
   },
   {
@@ -284,7 +324,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 7,
+    "rank": 8,
     "status": "hot"
   },
   {
@@ -323,7 +363,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 8,
+    "rank": 9,
     "status": "hot"
   },
   {
@@ -362,7 +402,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 9,
+    "rank": 10,
     "status": "hot"
   },
   {
@@ -400,7 +440,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 10,
+    "rank": 11,
     "status": "hot"
   },
   {
@@ -438,163 +478,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 11,
-    "status": "hot"
-  },
-  {
-    "id": "nebench-r1",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "NEBench R1",
-    "term_zh": "NEBench R1",
-    "abbreviation": "",
-    "category": "AI评测基准",
-    "one_liner": "用于评估大型语言模型在核工程领域推理能力的基准。",
-    "explanation": "NEBench R1是评估大型语言模型在核工程推理能力的测试工具。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21682"
-    ],
-    "matched_articles": [
-      {
-        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
-        "link": "https://arxiv.org/abs/2611.21682",
-        "source": "arXiv AI"
-      }
-    ],
     "rank": 12,
-    "status": "hot"
-  },
-  {
-    "id": "monitorability",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Monitorability",
-    "term_zh": "可监控性",
-    "abbreviation": "",
-    "category": "AI安全",
-    "one_liner": "评估AI代理推理过程是否容易被监控的能力。",
-    "explanation": "AI的可监控性就是看AI的思考过程能不能被轻松观察。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21799"
-    ],
-    "matched_articles": [
-      {
-        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
-        "link": "https://arxiv.org/abs/2611.21799",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 13,
-    "status": "hot"
-  },
-  {
-    "id": "webagents",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "WebAgents",
-    "term_zh": "Web代理",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种解耦代理创建、托管和执行的角色，通过携带可移植工作流程、技能、模式和资源要求的signed agent.pkg。",
-    "explanation": "Web代理就像一个可以自由移动的助手，带着自己的任务和资源，在不同网站间工作。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21978"
-    ],
-    "matched_articles": [
-      {
-        "title": "WebAgents: Unbundling Agent Creation, Hosting, and Execution for an Agent-Native Web",
-        "link": "https://arxiv.org/abs/2611.21978",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 14,
-    "status": "hot"
-  },
-  {
-    "id": "kv-ltm",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "KV-LTM",
-    "term_zh": "持久会话键值缓存",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一种存储每个会话的原始文本及其键值缓存的内存层级，作为个人助手的长期记忆。",
-    "explanation": "KV-LTM是个人助手用来长期记住你对话内容的存储方式。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21998"
-    ],
-    "matched_articles": [
-      {
-        "title": "KV-LTM: Persistent Per-Session KV Caches as Long-Term Memory for Personal Assistants",
-        "link": "https://arxiv.org/abs/2611.21998",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 15,
-    "status": "hot"
-  },
-  {
-    "id": "skillbuffbench",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "SkillBuffBench",
-    "term_zh": "技能缓冲基准",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "一个基准和配对评估协议，评估代理技能在不同工具、模型、技能访问模式和记忆中的贡献。",
-    "explanation": "SkillBuffBench是衡量AI在不同工具、模型和记忆中技能贡献的基准。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.22017"
-    ],
-    "matched_articles": [
-      {
-        "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
-        "link": "https://arxiv.org/abs/2611.22017",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 16,
-    "status": "hot"
-  },
-  {
-    "id": "embodied-ai",
-    "appear_count": 2,
-    "days": 2,
-    "term_en": "Embodied AI",
-    "term_zh": "具身智能",
-    "abbreviation": "",
-    "category": "AI概念",
-    "one_liner": "将人工智能与物理世界交互结合的技术。",
-    "explanation": "具身智能就是让AI像人一样能感知、行动，就像给AI装上了“身体”。",
-    "sources": [
-      "量子位"
-    ],
-    "source_urls": [
-      "https://www.qbitai.com/2026/11/510821.html"
-    ],
-    "matched_articles": [
-      {
-        "title": "英伟达AMD首次联手押注！Genesis完成A轮融资，估值超230亿",
-        "link": "https://www.qbitai.com/2026/11/510821.html",
-        "source": "量子位"
-      }
-    ],
-    "rank": 17,
     "status": "hot"
   },
   {
@@ -627,7 +511,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 18,
+    "rank": 13,
     "status": "hot"
   },
   {
@@ -660,7 +544,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 19,
+    "rank": 14,
     "status": "hot"
   },
   {
@@ -692,7 +576,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 20,
+    "rank": 15,
     "status": "hot"
   },
   {
@@ -718,7 +602,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 21,
+    "rank": 16,
     "status": "hot"
   },
   {
@@ -750,7 +634,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 22,
+    "rank": 17,
     "status": "hot"
   },
   {
@@ -782,7 +666,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 23,
+    "rank": 18,
     "status": "hot"
   },
   {
@@ -815,7 +699,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 24,
+    "rank": 19,
     "status": "hot"
   },
   {
@@ -848,7 +732,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 25,
+    "rank": 20,
     "status": "hot"
   },
   {
@@ -881,7 +765,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 26,
+    "rank": 21,
     "status": "hot"
   },
   {
@@ -914,7 +798,7 @@
         "source": "arXiv LG"
       }
     ],
-    "rank": 27,
+    "rank": 22,
     "status": "hot"
   },
   {
@@ -940,7 +824,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 28,
+    "rank": 23,
     "status": "hot"
   },
   {
@@ -966,7 +850,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 29,
+    "rank": 24,
     "status": "hot"
   },
   {
@@ -992,7 +876,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 30,
+    "rank": 25,
     "status": "hot"
   },
   {
@@ -1018,7 +902,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 31,
+    "rank": 26,
     "status": "hot"
   },
   {
@@ -1044,7 +928,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 32,
+    "rank": 27,
     "status": "hot"
   },
   {
@@ -1070,7 +954,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 33,
+    "rank": 28,
     "status": "hot"
   },
   {
@@ -1096,7 +980,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 34,
+    "rank": 29,
     "status": "hot"
   },
   {
@@ -1122,7 +1006,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 35,
+    "rank": 30,
     "status": "hot"
   },
   {
@@ -1148,75 +1032,7 @@
         "source": "arXiv CL"
       }
     ],
-    "rank": 36,
-    "status": "hot"
-  },
-  {
-    "id": "nuclear-domain-competence",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Nuclear Domain Competence",
-    "term_zh": "核领域能力",
-    "abbreviation": "",
-    "category": "AI应用",
-    "one_liner": "在核工程领域内，AI模型所需具备的知识和技能。",
-    "explanation": "核领域能力是指AI在核工程领域所需的专业知识和技能。",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.21682"
-    ],
-    "matched_articles": [
-      {
-        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
-        "link": "https://arxiv.org/abs/2611.21682",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 37,
-    "status": "hot"
-  },
-  {
-    "id": "conjunctive-counterfactual-explanations-cfxps",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Conjunctive Counterfactual Explanations (CFXps)",
-    "term_zh": "合取反事实解释",
-    "abbreviation": "CFXps",
-    "category": "AI概念",
-    "one_liner": "一种反事实解释，限制为特征文字的合取，保证预测变化。",
-    "explanation": "解释预测变化，用合取条件看“如果...那么...”",
-    "sources": [
-      "arXiv AI"
-    ],
-    "source_urls": [
-      "https://arxiv.org/abs/2611.22010"
-    ],
-    "matched_articles": [
-      {
-        "title": "On Formal Counterfactual Explanations",
-        "link": "https://arxiv.org/abs/2611.22010",
-        "source": "arXiv AI"
-      }
-    ],
-    "rank": 38,
-    "status": "hot"
-  },
-  {
-    "id": "self-collected-data",
-    "appear_count": 1,
-    "days": 1,
-    "term_en": "Self-collected Data",
-    "term_zh": "自采集数据",
-    "abbreviation": "",
-    "category": "AI技术",
-    "one_liner": "由AI系统自主采集，用于训练或测试的数据。",
-    "explanation": "AI自己收集的数据，用于学习和测试。",
-    "sources": [],
-    "source_urls": [],
-    "matched_articles": [],
-    "rank": 39,
+    "rank": 31,
     "status": "hot"
   },
   {
@@ -1242,7 +1058,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 40,
+    "rank": 32,
     "status": "hot"
   },
   {
@@ -1268,7 +1084,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 41,
+    "rank": 33,
     "status": "hot"
   },
   {
@@ -1294,7 +1110,137 @@
         "source": "量子位"
       }
     ],
-    "rank": 42,
+    "rank": 34,
+    "status": "hot"
+  },
+  {
+    "id": "embodied-ai",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Embodied AI",
+    "term_zh": "具身智能",
+    "abbreviation": "",
+    "category": "AI概念",
+    "one_liner": "将人工智能与物理世界交互结合的技术。",
+    "explanation": "具身智能就是让AI像人一样能感知、行动，就像给AI装上了“身体”。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/510821.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "英伟达AMD首次联手押注！Genesis完成A轮融资，估值超230亿",
+        "link": "https://www.qbitai.com/2026/11/510821.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 35,
+    "status": "hot"
+  },
+  {
+    "id": "nebench-r1",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "NEBench R1",
+    "term_zh": "NEBench R1",
+    "abbreviation": "",
+    "category": "AI评测基准",
+    "one_liner": "用于评估大型语言模型在核工程领域推理能力的基准。",
+    "explanation": "NEBench R1是评估大型语言模型在核工程推理能力的测试工具。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21682"
+    ],
+    "matched_articles": [
+      {
+        "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+        "link": "https://arxiv.org/abs/2611.21682",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 36,
+    "status": "hot"
+  },
+  {
+    "id": "monitorability",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Monitorability",
+    "term_zh": "可监控性",
+    "abbreviation": "",
+    "category": "AI安全",
+    "one_liner": "评估AI代理推理过程是否容易被监控的能力。",
+    "explanation": "AI的可监控性就是看AI的思考过程能不能被轻松观察。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21799"
+    ],
+    "matched_articles": [
+      {
+        "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+        "link": "https://arxiv.org/abs/2611.21799",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 37,
+    "status": "hot"
+  },
+  {
+    "id": "webagents",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "WebAgents",
+    "term_zh": "Web代理",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种解耦代理创建、托管和执行的角色，通过携带可移植工作流程、技能、模式和资源要求的signed agent.pkg。",
+    "explanation": "Web代理就像一个可以自由移动的助手，带着自己的任务和资源，在不同网站间工作。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21978"
+    ],
+    "matched_articles": [
+      {
+        "title": "WebAgents: Unbundling Agent Creation, Hosting, and Execution for an Agent-Native Web",
+        "link": "https://arxiv.org/abs/2611.21978",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 38,
+    "status": "hot"
+  },
+  {
+    "id": "kv-ltm",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "KV-LTM",
+    "term_zh": "持久会话键值缓存",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种存储每个会话的原始文本及其键值缓存的内存层级，作为个人助手的长期记忆。",
+    "explanation": "KV-LTM是个人助手用来长期记住你对话内容的存储方式。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.21998"
+    ],
+    "matched_articles": [
+      {
+        "title": "KV-LTM: Persistent Per-Session KV Caches as Long-Term Memory for Personal Assistants",
+        "link": "https://arxiv.org/abs/2611.21998",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 39,
     "status": "hot"
   },
   {
@@ -1320,7 +1266,33 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 43,
+    "rank": 40,
+    "status": "hot"
+  },
+  {
+    "id": "skillbuffbench",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "SkillBuffBench",
+    "term_zh": "技能缓冲基准",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一个基准和配对评估协议，评估代理技能在不同工具、模型、技能访问模式和记忆中的贡献。",
+    "explanation": "SkillBuffBench是衡量AI在不同工具、模型和记忆中技能贡献的基准。",
+    "sources": [
+      "arXiv AI"
+    ],
+    "source_urls": [
+      "https://arxiv.org/abs/2611.22017"
+    ],
+    "matched_articles": [
+      {
+        "title": "SkillBuffBench: Measuring What Agent Skills Contribute across Harnesses, Models, Skill Access Modes and Memory",
+        "link": "https://arxiv.org/abs/2611.22017",
+        "source": "arXiv AI"
+      }
+    ],
+    "rank": 41,
     "status": "hot"
   },
   {
@@ -1346,7 +1318,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 44,
+    "rank": 42,
     "status": "hot"
   },
   {
@@ -1372,7 +1344,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 45,
+    "rank": 43,
     "status": "hot"
   },
   {
@@ -1398,7 +1370,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 46,
+    "rank": 44,
     "status": "hot"
   },
   {
@@ -1424,7 +1396,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 47,
+    "rank": 45,
     "status": "hot"
   },
   {
@@ -1450,7 +1422,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 48,
+    "rank": 46,
     "status": "hot"
   },
   {
@@ -1466,7 +1438,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 49,
+    "rank": 47,
     "status": "hot"
   },
   {
@@ -1482,7 +1454,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 50,
+    "rank": 48,
     "status": "hot"
   },
   {
@@ -1498,7 +1470,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 51,
+    "rank": 49,
     "status": "hot"
   },
   {
@@ -1514,7 +1486,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 52,
+    "rank": 50,
     "status": "hot"
   },
   {
@@ -1530,7 +1502,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 53,
+    "rank": 51,
     "status": "hot"
   },
   {
@@ -1546,7 +1518,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 54,
+    "rank": 52,
     "status": "hot"
   },
   {
@@ -1572,7 +1544,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 55,
+    "rank": 53,
     "status": "hot"
   },
   {
@@ -1598,7 +1570,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 56,
+    "rank": 54,
     "status": "hot"
   },
   {
@@ -1624,7 +1596,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 57,
+    "rank": 55,
     "status": "hot"
   },
   {
@@ -1650,7 +1622,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 58,
+    "rank": 56,
     "status": "hot"
   },
   {
@@ -1676,7 +1648,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 59,
+    "rank": 57,
     "status": "hot"
   },
   {
@@ -1702,7 +1674,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 60,
+    "rank": 58,
     "status": "hot"
   },
   {
@@ -1728,7 +1700,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 61,
+    "rank": 59,
     "status": "hot"
   },
   {
@@ -1754,7 +1726,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 62,
+    "rank": 60,
     "status": "hot"
   },
   {
@@ -1780,7 +1752,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 63,
+    "rank": 61,
     "status": "hot"
   },
   {
@@ -1806,7 +1778,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 64,
+    "rank": 62,
     "status": "hot"
   },
   {
@@ -1832,7 +1804,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 65,
+    "rank": 63,
     "status": "hot"
   },
   {
@@ -1858,7 +1830,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 66,
+    "rank": 64,
     "status": "hot"
   },
   {
@@ -1884,7 +1856,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 67,
+    "rank": 65,
     "status": "hot"
   },
   {
@@ -1910,7 +1882,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 68,
+    "rank": 66,
     "status": "hot"
   },
   {
@@ -1936,7 +1908,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 69,
+    "rank": 67,
     "status": "hot"
   },
   {
@@ -1962,7 +1934,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 70,
+    "rank": 68,
     "status": "hot"
   },
   {
@@ -1988,7 +1960,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 71,
+    "rank": 69,
     "status": "hot"
   },
   {
@@ -2014,7 +1986,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 72,
+    "rank": 70,
     "status": "hot"
   },
   {
@@ -2040,7 +2012,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 73,
+    "rank": 71,
     "status": "hot"
   },
   {
@@ -2066,7 +2038,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 74,
+    "rank": 72,
     "status": "hot"
   },
   {
@@ -2092,7 +2064,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 75,
+    "rank": 73,
     "status": "hot"
   },
   {
@@ -2118,7 +2090,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 76,
+    "rank": 74,
     "status": "hot"
   },
   {
@@ -2144,7 +2116,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 77,
+    "rank": 75,
     "status": "hot"
   },
   {
@@ -2170,7 +2142,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 78,
+    "rank": 76,
     "status": "hot"
   },
   {
@@ -2196,7 +2168,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 79,
+    "rank": 77,
     "status": "hot"
   },
   {
@@ -2222,7 +2194,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 80,
+    "rank": 78,
     "status": "hot"
   },
   {
@@ -2248,7 +2220,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 81,
+    "rank": 79,
     "status": "hot"
   },
   {
@@ -2274,7 +2246,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 82,
+    "rank": 80,
     "status": "hot"
   },
   {
@@ -2300,7 +2272,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 83,
+    "rank": 81,
     "status": "hot"
   },
   {
@@ -2316,7 +2288,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 84,
+    "rank": 82,
     "status": "hot"
   },
   {
@@ -2332,7 +2304,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 85,
+    "rank": 83,
     "status": "hot"
   },
   {
@@ -2348,7 +2320,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 86,
+    "rank": 84,
     "status": "hot"
   },
   {
@@ -2364,7 +2336,7 @@
     "sources": [],
     "source_urls": [],
     "matched_articles": [],
-    "rank": 87,
+    "rank": 85,
     "status": "hot"
   },
   {
@@ -2390,7 +2362,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 88,
+    "rank": 86,
     "status": "hot"
   },
   {
@@ -2416,7 +2388,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 89,
+    "rank": 87,
     "status": "hot"
   },
   {
@@ -2442,7 +2414,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 90,
+    "rank": 88,
     "status": "hot"
   },
   {
@@ -2468,7 +2440,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 91,
+    "rank": 89,
     "status": "hot"
   },
   {
@@ -2494,7 +2466,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 92,
+    "rank": 90,
     "status": "hot"
   },
   {
@@ -2520,7 +2492,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 93,
+    "rank": 91,
     "status": "hot"
   },
   {
@@ -2546,7 +2518,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 94,
+    "rank": 92,
     "status": "hot"
   },
   {
@@ -2572,7 +2544,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 95,
+    "rank": 93,
     "status": "hot"
   },
   {
@@ -2598,7 +2570,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 96,
+    "rank": 94,
     "status": "hot"
   },
   {
@@ -2624,7 +2596,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 97,
+    "rank": 95,
     "status": "hot"
   },
   {
@@ -2650,7 +2622,7 @@
         "source": "DeepMind Blog"
       }
     ],
-    "rank": 98,
+    "rank": 96,
     "status": "hot"
   },
   {
@@ -2676,7 +2648,7 @@
         "source": "量子位"
       }
     ],
-    "rank": 99,
+    "rank": 97,
     "status": "hot"
   },
   {
@@ -2702,7 +2674,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 100,
+    "rank": 98,
     "status": "hot"
   },
   {
@@ -2728,7 +2700,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 101,
+    "rank": 99,
     "status": "hot"
   },
   {
@@ -2754,7 +2726,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 102,
+    "rank": 100,
     "status": "hot"
   },
   {
@@ -2780,7 +2752,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 103,
+    "rank": 101,
     "status": "hot"
   },
   {
@@ -2806,7 +2778,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 104,
+    "rank": 102,
     "status": "hot"
   },
   {
@@ -2832,7 +2804,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 105,
+    "rank": 103,
     "status": "hot"
   },
   {
@@ -2858,7 +2830,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 106,
+    "rank": 104,
     "status": "hot"
   },
   {
@@ -2884,7 +2856,7 @@
         "source": "arXiv AI"
       }
     ],
-    "rank": 107,
+    "rank": 105,
     "status": "hot"
   },
   {
@@ -2910,7 +2882,7 @@
         "source": "arXiv CV"
       }
     ],
-    "rank": 108,
+    "rank": 106,
     "status": "hot"
   },
   {
@@ -2936,7 +2908,163 @@
         "source": "量子位"
       }
     ],
+    "rank": 107,
+    "status": "hot"
+  },
+  {
+    "id": "spatial-physical-ai",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Spatial Physical AI",
+    "term_zh": "空间与物理AI",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "一种专注于空间和物理信息表达与处理的AI基础模型。",
+    "explanation": "空间与物理AI，就是让AI像人一样理解空间和物理世界。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/512498.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "华人计算机视觉泰斗二次创业！离开苹果下场，专注下一代空间与物理AI",
+        "link": "https://www.qbitai.com/2026/11/512498.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 108,
+    "status": "hot"
+  },
+  {
+    "id": "data-scaling",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Data Scaling",
+    "term_zh": "数据规模化扩展",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "通过扩展数据规模来提高模型性能的方法。",
+    "explanation": "数据规模化扩展就是让AI模型用更多数据训练，让AI更聪明。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/512454.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "高德发布世界模型ABot-World 0.5，支持构建音画同步、可实时重塑的AI物理世界",
+        "link": "https://www.qbitai.com/2026/11/512454.html",
+        "source": "量子位"
+      }
+    ],
     "rank": 109,
+    "status": "hot"
+  },
+  {
+    "id": "lingsante-pulse",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "LingSante Pulse",
+    "term_zh": "LingSante Pulse",
+    "abbreviation": "",
+    "category": "AI应用",
+    "one_liner": "一种基于睡眠数据预测未来六年150种疾病风险的医疗健康预测模型。",
+    "explanation": "这个模型能通过分析你的睡眠，预测未来六年可能得150种病的风险。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/512451.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "蚂蚁开源医疗健康预测模型，根据睡眠数据可预测未来六年150种疾病风险",
+        "link": "https://www.qbitai.com/2026/11/512451.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 110,
+    "status": "hot"
+  },
+  {
+    "id": "edge-superpod",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Edge SuperPOD",
+    "term_zh": "端侧超节点",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "端侧AI设备协同计算的组织形式，通过优化任务编排和信息整合提升算力。",
+    "explanation": "端侧超节点是让AI设备像团队一样一起计算，让AI计算速度提升270%，无需换芯片或模型。",
+    "sources": [
+      "量子位"
+    ],
+    "source_urls": [
+      "https://www.qbitai.com/2026/11/512362.html"
+    ],
+    "matched_articles": [
+      {
+        "title": "业界首提“端侧超节点”，让端侧AI组队计算：AI效率暴涨270%，不用换芯片或模型",
+        "link": "https://www.qbitai.com/2026/11/512362.html",
+        "source": "量子位"
+      }
+    ],
+    "rank": 111,
+    "status": "hot"
+  },
+  {
+    "id": "formal-verification",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Formal Verification",
+    "term_zh": "形式化验证",
+    "abbreviation": "",
+    "category": "AI工程",
+    "one_liner": "使用数学方法证明软件或硬件系统正确性的过程。",
+    "explanation": "用数学公式检查软件或硬件是否正确，确保没有错误。",
+    "sources": [
+      "DeepMind Blog"
+    ],
+    "source_urls": [
+      "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Finding faster quantum algorithms with agents and formal verification",
+        "link": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "source": "DeepMind Blog"
+      }
+    ],
+    "rank": 112,
+    "status": "hot"
+  },
+  {
+    "id": "quantum-algorithms",
+    "appear_count": 1,
+    "days": 1,
+    "term_en": "Quantum Algorithms",
+    "term_zh": "量子算法",
+    "abbreviation": "",
+    "category": "AI技术",
+    "one_liner": "利用量子力学原理设计的算法，用于解决特定问题。",
+    "explanation": "量子算法：像量子力学一样运作的超级计算方法，能更快解决某些难题。",
+    "sources": [
+      "DeepMind Blog"
+    ],
+    "source_urls": [
+      "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+    ],
+    "matched_articles": [
+      {
+        "title": "Finding faster quantum algorithms with agents and formal verification",
+        "link": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "source": "DeepMind Blog"
+      }
+    ],
+    "rank": 113,
     "status": "hot"
   }
 ]
